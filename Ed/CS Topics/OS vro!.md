@@ -1,4 +1,3 @@
-\> [!caution] This page contained a drawing which was not converted.   
 
 **Process states in OS**
  
@@ -61,7 +60,7 @@ fork();
 printf("Hello");  
 return 0;  
 }
- 
+```
 Now we consider child as 0 and parent as +ve.  
 In the above Hello is printed 4 times becoz,  
 P-\> P, C1  

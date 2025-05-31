@@ -292,6 +292,4 @@ git rebase -i <commit_id> (squashing commits)
 
 ==**References**==
 
----
-
 [https://www.digitalocean.com/community/tutorials/linux-commands#the-cat-echo-and-less-commands](https://www.digitalocean.com/community/tutorials/linux-commands#the-cat-echo-and-less-commands)

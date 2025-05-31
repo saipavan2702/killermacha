@@ -1,1 +1,0 @@
-The Inorder transversal gives sorted list of the given BST.
