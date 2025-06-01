@@ -1,4 +1,3 @@
-  
 
 iDB protocol is an **i**ntelligent **D**ata**B**ase protocol which is the heart of the Exadata. It is used to do communication between Database node and cell storage. It transfers data between cell storage  and Database Node. Also it's provides interconnection bandwidth aggregation and failover.
 

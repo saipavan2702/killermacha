@@ -1,96 +1,44 @@
-==**Vim**==
-
----
-
 h, j, k, l - cursor movement
-
 shift+h - jump to top of screen
-
 shift+l - jump to bottom of screen
-
 shift+m - middle of the screen
-
 shift+j - joins next line to current line with space
-
 shift+k - searches and turns up manual/help fro the word
-
-  
-
 **i -** Inserting before the cursor
-
 **I -** inserting at the beginning of a line
-
 **a -** inserting after the cursor
-
 **A -** inserting at the end of the line
-
-  
-
-  
-
 **w -** Jumping to start of nxt word (shift+w also works but slight diff)
-
 **e -** Jumping to end of nxt word
-
 b - jumping to start of prev word (shift+b works but slight diff)
-
-  
-
-  
-
 gg - goes to first line
-
 dd - cuts the line
-
 shift+G - goes to last line ( 1 shift g - goes to first line, 8 shift g - goes to 8th line )
-
 yy - copy line (2yy copies 2 lines and so on)
-
 dd - delete line / cut line (2dd cuts 2 lines and vice-versa)
-
 p - paste the lines
-
 u - undo
-
 ctrl + r - redo
-
-f-jumps → f + ‘char’ goes to that next char and to move forward - ; backward. - ,
-
+f-jumps → f + ‘char’ goes to that next char and to move forward - ; backward - ,
 y+i+b(block) or any char yanks text inside the char, and using y+a yanks along with char
-
-  
-  
 c+i+w changes word under our cursor  
 . → replays what we done previously  
 
 %s/<word>/<word_need_to_replace>/gc
-
 v+i+w select word visually; y - yanks(copies); p-paste
-
 :reg to know the contents of register in vim
-
 use type command in the list and “ + <no> + p to paste the reg content
-
 now to yank them go to visual mode, select text, “ + <reg_no> + y
-
 also, use * reg to throughout accessibility “ + * + y
-
 to paste file name “ + % + y
-
 let @*=@% gives file name to global clipboard
-
 to record a macro use q + <any_variable> and record and q to end; now @<any_variable> to use again, 5+@+<variable> does 5 times
-
 to make same changes for multiple lines at the start or end - v(visual mode) + :norm + I(shift + i insert at start) or A(shift +a insert and end) + type what needs to be appended.  
-  
 :bd! to delete buffer  
-
 or we can use ctrl + v to select each first line and then shift+i to insert at first position and esc to apply changes  
 or :1,10 normal I text_to_append  
 or select in visual mode and : s/^/text_to_append/  
 press $ sign to select full line  
-  
-:set nu, set rnu  
 
 you can inc/dec num value using C-x,C-a  
 you can select some lines with numbers and use C-a to increment all of them by 1, or press G and C-a to cumulatively increase them by 1  
@@ -100,14 +48,10 @@ o for switching selection direction
 v+i+“ - selecting inside quotes only, v+a+” - selecting quotes too  
 w- next limited char  
 W- next white space  
-  
 select in visual mode and in command mode : !jq . prettifies json  
 same we can use ! sort ! uniq bash commands in vim  
-
 C-o (backkward in jumplist)
-
 C-i (forward in jumplist)
-
 Click * on a word and you can search for that word  
   
   

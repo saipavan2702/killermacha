@@ -1,3 +1,5 @@
+- KMP algo
+
 ```cpp
 #include <iostream>
 #include <vector>
@@ -59,6 +61,7 @@ int strStr(string haystack, string needle) {
 
 ```
 
+- Robin-Karp
 ```cpp
 #include <iostream>
 #include <climits>
