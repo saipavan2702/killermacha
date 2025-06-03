@@ -1,6 +1,4 @@
-  
-
-==**Basics**==
+**Basics**
 
 ```SQL
 -- Knowing structure of table --
@@ -34,7 +32,7 @@ SELECT COUNT(DISTINCT manager_id) "Number of Managers" FROM employees;
 
 ```
 
-==**Intermediate**==
+**Intermediate**
 
 ```SQL
 -- Taking prompt from user using & --
@@ -56,16 +54,11 @@ SELECT manager_id, MIN(salary) FROM employees WHERE manager_id IS NOT NULL GROUP
 --  --
 ```
 
-  
-
-  
 
 - **Notes**
     
-    ==% Represents zero or more characters  
+    % Represents zero or more characters  
     _ Represents a single character  
-    [] Represents any single character within the brackets *  
-    ^ Represents any character not in the brackets *  
-    - Represents any single character within the specified range *  
-    {} Represents any escaped character **  
-    ==
+    [] Represents any single character within the brackets 
+    ^ Represents any character not in the brackets 
+    {} Represents any escaped character 

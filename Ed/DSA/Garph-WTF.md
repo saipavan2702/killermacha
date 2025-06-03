@@ -153,7 +153,7 @@ vector<int> bellman_ford(int V, vector<vector<int>>& E, int S) {
 - **Topological Sort BFS**
 
 We calculate indegrees for every node and we push the nodes having indegree as 0 into queue and iterate through its neighbours.
-    - ![Exported image](Exported%20image%2020250529160058-0.png)
+    - ![[Exported image 20250529160058-0.png|700]]
 - We use simple bfs with distance array 
 ```cpp
 #include <bits/stdc++.h>
@@ -242,7 +242,7 @@ vector<int> topoSort(int V, vector<int> adj[]) {
 }
 ```
 
-- ![Exported image](Exported%20image%2020250529160101-1.png)
+- ![[Exported image 20250529160101-1.png|700]]
 - We use union find to solve this problem 
 ```cpp
 #include <bits/stdc++.h>
@@ -292,7 +292,7 @@ int main() {
 }
 ```
               
-- ![Exported image](Exported%20image%2020250529160104-2.png)
+- ![[Exported image 20250529160104-2.png|700]]
 - The logic is if 1-\>n have shortest distance then n-\>node and 1-\>node should sum up to shortest distance. 
 ```cpp
 #include <bits/stdc++.h>
@@ -359,10 +359,10 @@ int main() {
 }
 ```
 
- - ![Exported image](Exported%20image%2020250529160106-3.png)
+ - ![[Exported image 20250529160106-3.png|700]]]
 - We use 3D dp to solve this problem in an optimised way 
 ```cpp
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
 int dp[1005][1005][20];

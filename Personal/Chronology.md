@@ -1,5 +1,3 @@
-  
-
 **Casio**
 
 - [G-shock 5000u](https://www.amazon.in/G-Shock-GW-5000U-1JF-Resistant-GW-5000-Shipped/dp/B098DGF6CM)
@@ -19,6 +17,10 @@
 - [Regalia Premium](https://www.flipkart.com/titan-regalia-premium-analog-watch-men/p/itm4aa7b291255fd?pid=WATGMQNNBRK9GG76&lid=LSTWATGMQNNBRK9GG768MHHUD&marketplace=FLIPKART&q=watches+for+men&store=r18%2Ff13&srno=s_3_100&otracker=search&otracker1=search&fm=Search&iid=7ed82dd1-9686-430b-9a00-8d16fcbd5214.WATGMQNNBRK9GG76.SEARCH&ppt=sp&ppn=sp&ssid=1cqvsqkvoq5o9xxc1720101873082&qH=959e134ef548e173)
 - [Classique multi](https://www.flipkart.com/titan-classique-slim-multifuction-analog-watch-men/p/itm154ff66735509?pid=WATGZ6SZYYXKWQN2&lid=LSTWATGZ6SZYYXKWQN2ONWJDR&marketplace=FLIPKART&q=watches+for+men&store=r18%2Ff13&srno=s_3_102&otracker=search&otracker1=search&fm=Search&iid=7ed82dd1-9686-430b-9a00-8d16fcbd5214.WATGZ6SZYYXKWQN2.SEARCH&ppt=sp&ppn=sp&ssid=1cqvsqkvoq5o9xxc1720101873082&qH=959e134ef548e173)
 - [Regalia stellar](https://www.flipkart.com/titan-regallia-stellar-quartz-multifunction-analog-watch-men/p/itmdeb1b2b56f315?pid=WATGUC4G2Q3CCY2Y&lid=LSTWATGUC4G2Q3CCY2YBC9AEP&marketplace=FLIPKART&q=watches+for+men&store=r18%2Ff13&srno=s_3_101&otracker=search&otracker1=search&fm=Search&iid=7ed82dd1-9686-430b-9a00-8d16fcbd5214.WATGUC4G2Q3CCY2Y.SEARCH&ppt=sp&ppn=sp&ssid=1cqvsqkvoq5o9xxc1720101873082&qH=959e134ef548e173)
-    ==**Fossil**==
-    
+   
+**Fossil**
+
 - [Nate JR](https://www.amazon.in/Fossil-Nate-Chronograph-Black-Watch-JR1401/dp/B008AXYWHQ/ref=sr_1_301?crid=3LOS8XY43ODUF&dib=eyJ2IjoiMSJ9.g49mr9GGcvD1jjunoowQgZs1q5tLKu9BMpw5F223aMnpdoG72vU7Z-U4haEO1uQDAvxNYuiR9FLz_ik_YA6K_xAraSfiayc7UF-NHfn6hVMW-jYK4nnbaJdve1ar8fgzuYJzomZqL4vuQAka0lxicfxgCZkHkv_jgaLdicl8-RLyb1MyWn_tSj0nebzKiXikBHyiU4X4PcY6ZDnOwQOtTr6oMgGLZi2Q-B5WbEW_MUha3J-U3xNGSE_VKTrR3GeEQM0FqG6izV-IKvukc6JtoZVKxbF02NRkYB-aBWesSRs.rdKodDM0O6K8YCm8JZJC7yUEw3aAz4XgifpYlJUd7Gs&dib_tag=se&keywords=watches+for+men&qid=1721477948&refinements=p_123%3A179010%7C230208%7C230542%7C235696%7C258694&rnid=91049095031&s=watches&sprefix=watches%2Caps%2C773&sr=1-301) + [variant](https://www.amazon.in/Fossil-Nate-Chronograph-Grey-Watch-JR1437/dp/B009LSKPYI/ref=sr_1_341?crid=3LOS8XY43ODUF&dib=eyJ2IjoiMSJ9.t9s9iZ79cvFtvwrivSdt0jn8DUJXPfZ0hDXNAxfujJIKr31uN3_jJuW0-1nXe0nB9nlbtM5HpvyeQMRe6Ma1UV41jfIhoaO7eNY07fwmyF9GITi1xXwK0smFIuTy-Xe6nBC7CFp_o4CgGZKwVMkAw2n7ieatRoJqYmv7kxvpN2sAmdBo1sy_75KT549wPYIwNcIFdK77EcT-Vy2HJCxMlldCaR7Tr5f7P1T4M5f296ETS0rb79kpa5UmXwaAVbJKeQtqrKZfbr6ISfytKjf2c0R83Be5fqVeOGG6vkh7VY0.SPQulBWaIyXPaFes6WAc19C3bJgj-Iu0-f0RDXzisbI&dib_tag=se&keywords=watches+for+men&qid=1721478004&refinements=p_123%3A179010%7C230208%7C230542%7C235696%7C258694&rnid=91049095031&s=watches&sprefix=watches%2Caps%2C773&sr=1-341)
+
+#personal
+#ref

@@ -83,4 +83,3 @@ But as for threads, they are created by sharing same code and data but they have
 User level threads are managed by user level library. These are typically fast. Context switching is faster too. If a user level thread is blocked then entire process gets blocked.
  
 But for kernel level they are managed by operating system and accessed via system call. Context switching is slower compared to user level.
-```
