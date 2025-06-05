@@ -4,7 +4,6 @@
 - [G-shock 2100](https://www.casio.com/in/watches/gshock/products/analog-digital/ga-2100/)
 - [ECB 900db](https://www.flipkart.com/casio-ecb-900db-1bdr-analog-digital-watch-men/p/itmf827d0285938e?pid=WATFJWXYZPX75H4A&lid=LSTWATFJWXYZPX75H4ATLEVNS&marketplace=FLIPKART&q=watches+for+men&store=r18%2Ff13&srno=s_2_51&otracker=search&otracker1=search&fm=Search&iid=f55a9be8-6769-4aaf-a5f6-04c03f2190a2.WATFJWXYZPX75H4A.SEARCH&ppt=sp&ppn=sp&ssid=1cqvsqkvoq5o9xxc1720101873082&qH=959e134ef548e173)
 - [Edifice collection](https://www.casio.com/in/watches/edifice/)
-- [EFV-650D](https://www.flipkart.com/casio-efv-650d-3avudf-edifice-analog-watch-men/p/itm77b594d297ff2?pid=WATGWH8RGAANHNMY&lid=LSTWATGWH8RGAANHNMYFBRKIL&marketplace=FLIPKART&q=men+wrist+watches&store=r18%2Ff13&srno=s_1_20&otracker=AS_Query_HistoryAutoSuggest_4_0&otracker1=AS_Query_HistoryAutoSuggest_4_0&fm=Search&iid=fe26cbe6-242d-4133-ad96-56d743607249.WATGWH8RGAANHNMY.SEARCH&ppt=sp&ppn=sp&ssid=cezjia24y24vhatc1720104999488&qH=21074c52d6bfdb0b)
 
 **Timex**
 
@@ -13,10 +12,7 @@
 **Titan**
 
 - [TItanium minimal](https://www.flipkart.com/titan-titanium-analog-watch-men/p/itm3e1e216ef3bdb?pid=WATGVJM8GTHNAGG6&lid=LSTWATGVJM8GTHNAGG6XRZNEB&marketplace=FLIPKART&q=watches+for+men&store=r18%2Ff13&srno=s_1_34&otracker=search&otracker1=search&fm=Search&iid=254f1001-5616-42bb-84e7-6e4550f43121.WATGVJM8GTHNAGG6.SEARCH&ppt=sp&ppn=sp&ssid=1cqvsqkvoq5o9xxc1720101873082&qH=959e134ef548e173)
-- [Analog KD03](https://www.flipkart.com/titan-90090kd03-dm762-titan-quartet-analog-watch-men/p/itm4e8649cece5d6?pid=WATGN8A6G2CHGKME&lid=LSTWATGN8A6G2CHGKMERGRNDK&marketplace=FLIPKART&q=watches+for+men&store=r18%2Ff13&srno=s_2_61&otracker=search&otracker1=search&fm=Search&iid=f55a9be8-6769-4aaf-a5f6-04c03f2190a2.WATGN8A6G2CHGKME.SEARCH&ppt=sp&ppn=sp&ssid=1cqvsqkvoq5o9xxc1720101873082&qH=959e134ef548e173)
 - [Regalia Premium](https://www.flipkart.com/titan-regalia-premium-analog-watch-men/p/itm4aa7b291255fd?pid=WATGMQNNBRK9GG76&lid=LSTWATGMQNNBRK9GG768MHHUD&marketplace=FLIPKART&q=watches+for+men&store=r18%2Ff13&srno=s_3_100&otracker=search&otracker1=search&fm=Search&iid=7ed82dd1-9686-430b-9a00-8d16fcbd5214.WATGMQNNBRK9GG76.SEARCH&ppt=sp&ppn=sp&ssid=1cqvsqkvoq5o9xxc1720101873082&qH=959e134ef548e173)
-- [Classique multi](https://www.flipkart.com/titan-classique-slim-multifuction-analog-watch-men/p/itm154ff66735509?pid=WATGZ6SZYYXKWQN2&lid=LSTWATGZ6SZYYXKWQN2ONWJDR&marketplace=FLIPKART&q=watches+for+men&store=r18%2Ff13&srno=s_3_102&otracker=search&otracker1=search&fm=Search&iid=7ed82dd1-9686-430b-9a00-8d16fcbd5214.WATGZ6SZYYXKWQN2.SEARCH&ppt=sp&ppn=sp&ssid=1cqvsqkvoq5o9xxc1720101873082&qH=959e134ef548e173)
-- [Regalia stellar](https://www.flipkart.com/titan-regallia-stellar-quartz-multifunction-analog-watch-men/p/itmdeb1b2b56f315?pid=WATGUC4G2Q3CCY2Y&lid=LSTWATGUC4G2Q3CCY2YBC9AEP&marketplace=FLIPKART&q=watches+for+men&store=r18%2Ff13&srno=s_3_101&otracker=search&otracker1=search&fm=Search&iid=7ed82dd1-9686-430b-9a00-8d16fcbd5214.WATGUC4G2Q3CCY2Y.SEARCH&ppt=sp&ppn=sp&ssid=1cqvsqkvoq5o9xxc1720101873082&qH=959e134ef548e173)
    
 **Fossil**
 

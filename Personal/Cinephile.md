@@ -27,7 +27,7 @@
 - [ ] Truman show
 - [ ] Wicked minds
 - [ ] Dark series
-- [ ] Grown ups
+- [x] Grown ups ✅ 2025-06-04
 - [ ] 22nd jump street
 - [ ] Shogun
 - [ ] Amores Perros
@@ -40,7 +40,7 @@
 - [ ] Infinite
 - [ ] Julia Benson-actress
 - [ ] Incendies
-- [ ] The Unbearable Weight of Massive Talent
+- [x] The Unbearable Weight of Massive Talent ✅ 2025-06-03
 
 
 ## Watched
@@ -51,5 +51,7 @@
 - Dead poets society
 - Eyes wide shut
 - Serendipity
+- The Unbearable Weight of Massive Talent
+- Grown ups
 
 #personal 

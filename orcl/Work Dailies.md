@@ -71,9 +71,3 @@ mvn clean install -s $MAVEN_SETTING -DskipCodeOwnersCheck=true -DODOenv=true -Ds
 
 ssh -o "ProxyCommand=nc --proxy www-proxy.us.oracle.com:80 %h %p" -i intumt-key.txt opc@129.213.202.57
 
-
-
-LDAP - Dengistha_12
-Kerbereos - EDITH_z_12
-OCNA - _j_tQ74WWuef!TT
-#pswds  
