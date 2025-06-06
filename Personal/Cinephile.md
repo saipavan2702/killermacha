@@ -5,7 +5,7 @@
 - [ ] Shiva
 - [ ] Godavari
 - [ ] Raktha charitra
-- [ ] Uttama villian
+- [ ] Uttama villain
 - [ ] Ozhivudivasathe Kali
 
 - Holly   
@@ -41,6 +41,38 @@
 - [ ] Julia Benson-actress
 - [ ] Incendies
 - [x] The Unbearable Weight of Massive Talent ✅ 2025-06-03
+- [ ] The Worst Person in the World
+- [ ] Frances Ha
+- [ ] Brooklyn
+- [ ] Ratatouille
+- [ ] The Invitation
+- [ ] Old Boy
+- [ ] Time of gypsies
+- [ ] Birdman
+- [ ] Happy as Lazzaro
+- [ ] The Humans
+- [ ] Good Bad Ugly
+- [ ] Few Dollars More
+- [ ] Fistful Dollars
+- [ ] World's End
+- [ ] Hot Fuzz
+- [ ] Shaun of the Dead
+- [ ] Silence of the Lambs
+- [ ] Wind River
+- [ ] Project X
+- [ ] Invincible sereis
+- [ ] The Boys series
+- [ ] Jack Ryan series
+- [ ] LOTR
+- [ ] House MD series
+- [ ] Shameless sereis
+- [ ] 13 going on 30
+- [ ] Crazy stupid Love
+- [ ] The Proposal
+- [ ] When harry met sally
+- [ ] Love and other drugs
+- [ ] Nothing Hill
+
 
 
 ## Watched
