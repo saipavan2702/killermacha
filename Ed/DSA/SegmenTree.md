@@ -84,3 +84,202 @@ public:
 };
 
 ```
+
+- Using array rather than tree
+```cpp
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+vector<int>A;
+vector<int>tree;
+void build(int node, int start, int end)
+{
+    if(start == end)
+    {
+        // Leaf node will have a single element
+        tree[node] = A[start];
+    }
+    else
+    {
+        int mid = (start + end) / 2;
+        build(2*node, start, mid);
+        build(2*node+1, mid+1, end);
+        // Internal node will have the sum of both of its children
+        tree[node] = tree[2*node] + tree[2*node+1];
+    }
+}
+
+void update(int node, int start, int end, int idx, int val)
+{
+    if(start == end)
+    {
+        // Leaf node
+        A[idx] = val;
+        tree[node] = val;
+    }
+    else
+    {
+        int mid = (start + end) / 2;
+        if(start <= idx and idx <= mid)
+        {
+            // If idx is in the left child, recurse on the left child
+            update(2*node, start, mid, idx, val);
+        }
+        else
+        {
+            // if idx is in the right child, recurse on the right child
+            update(2*node+1, mid+1, end, idx, val);
+        }
+        // Internal node will have the sum of both of its children
+        tree[node] = tree[2*node] + tree[2*node+1];
+    }
+}
+
+int query(int node, int start, int end, int l, int r)
+{
+    if(r < start or end < l)
+    {
+        // range represented by a node is completely outside the given range
+        return 0;
+    }
+    if(l <= start and end <= r)
+    {
+        // range represented by a node is completely inside the given range
+        return tree[node];
+    }
+    // range represented by a node is partially inside and partially outside the given range
+    int mid = (start + end) / 2;
+    int p1 = query(2*node, start, mid, l, r);
+    int p2 = query(2*node+1, mid+1, end, l, r);
+    return (p1 + p2);
+}
+
+
+int main(){
+	int n;cin>>n;
+	A.resize(n);
+	tree.resize(4 * n); 
+	for(int &i:A)cin>>i;
+
+	build(1,0,n-1); //since in query we are using 1-indexing
+	query(1, 0, n-1, 1, 3);
+    update(1, 0, n-1, 2, 5);
+	query(1, 0, n-1, 1, 3);
+
+	return 0;	
+}
+
+```
+
+
+- Beats
+```cpp
+
+/*
+Two conditons tagCondition, breakCondition
+
+tagCondition - (l <= start and end <= r)
+breakCondition - (r < start or end < l)
+
+Let's try for a query where we need to update whole array with the modulo op by x, means every lement get's A[0,..,n-1]%=x;
+For this
+
+We need to optimise the SegmenTree there comes this beats,
+
+for, breakCondition - if a number is less than x then no need to traverse. (max[seg]<x)
+	 tagCondition - 
+
+
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<int> A;
+vector<int> tree;
+vector<int> max_tree;  
+
+void build(int node, int start, int end) {
+    if(start == end) {
+        tree[node] = A[start];
+        max_tree[node] = A[start];
+    } else {
+        int mid = (start + end) / 2;
+        build(2*node + 1, start, mid);
+        build(2*node + 2, mid+1, end);
+        tree[node] = tree[2*node + 1] + tree[2*node + 2];
+        max_tree[node] = max(max_tree[2*node + 1], max_tree[2*node + 2]);
+    }
+}
+
+void range_mod(int node, int start, int end, int l, int r, int mod) {
+    if(max_tree[node] < mod) return;
+    
+    if(start == end) {
+        A[start] %= mod;
+        tree[node] = A[start];
+        max_tree[node] = A[start];
+        return;
+    }
+    
+    int mid = (start + end) / 2;
+    if(l <= mid) range_mod(2*node + 1, start, mid, l, r, mod);
+    if(r > mid) range_mod(2*node + 2, mid+1, end, l, r, mod);
+    
+    tree[node] = tree[2*node + 1] + tree[2*node + 2];
+    max_tree[node] = max(max_tree[2*node + 1], max_tree[2*node + 2]);
+}
+
+
+/*
+void updateFromChildren(int v) {
+	tree[v].sum = tree[2 * v].sum + tree[2 * v + 1].sum;
+	tree[v].max = max(tree[2 * v].max, tree[2 * v + 1].max);
+}
+    
+void updateModEq(int v, int l, int r, int ql, int qr, int val) {
+	if (qr <= l || r <= ql || tree[v].max < val) {
+		return;
+	}
+	if (l + 1 == r) {
+		tree[v].max %= val;
+		tree[v].sum = tree[v].max;
+		return;
+	}
+	int mid = (r + l) / 2;
+	updateModEq(2 * v, l, mid, ql, qr, val);
+	updateModEq(2 * v + 1, mid, r, ql, qr, val);
+	updateFromChildren(v);
+}*/
+
+int main() {
+    int n; cin >> n;
+    A.resize(n);
+    tree.resize(4*n);
+    max_tree.resize(4*n);
+    
+    for(int i = 0; i < n; i++) cin >> A[i];
+    build(0, 0, n-1);
+    
+    range_mod(0, 0, n-1, 1, 4, 3);
+       
+    return 0;
+}
+
+
+```
+
+
+_References_
+https://www.hackerearth.com/practice/data-structures/advanced-data-structures/trie-keyword-tree/practice-problems/
+https://medium.com/@florian_algo/fenwick-tree-binary-indexed-tree-explained-2347c9e1b1f8
+https://codeforces.com/blog/entry/57319
+https://codeforces.com/blog/entry/18051
+https://cp-algorithms.com/data_structures/segment_tree.html
+https://pastebin.com/wabDfjKi
+https://pastebin.com/bEEQsDr7
+https://pastebin.com/UJhuFA3a
+https://pastebin.com/jDMC5R2T
+#ref

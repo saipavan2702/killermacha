@@ -1,30 +1,34 @@
 
-Weekly Status Update  24th May 2025 - 30th May 2025
+Weekly Status Update  31st May 2025 - 06th June 2025
 
 Hi Rajeev,
 I  hope this email finds you well.
  
-Please find below the status update for the period from 24–May-2025 to 30-May-2025: 
+Please find below the status update for the period from 31–May-2025 to 06-June-2025: 
 
-1. This PR deals with adding verification for updated free form tags in long running DB canary. Testing is in progress, apart from that code changes are done, will complete this by end of this week. 
-   PR : https://bitbucket.oci.oraclecorp.com/projects/ECS/repos/escs-sm/pull-requests/5209/overview  
+1. This PR deals with adding verification for updated free form tags in long running DB canary. Completed testing too, got a clean CI-run will merge it on monday.
    Jira : https://jira.oci.oraclecorp.com/browse/EXASCALECS-32619  
-2. Added code changes for manually retrying DB failures for smdbedvconn, smdbvltconn, and some other load running canaries. This is because initially the DB connection was getting terminated and later we added changes in SQL command for making retries, but it didn’t give desired results. So now adding these retries manually. Code changes are done, testing is to be started. 
+   PR : https://bitbucket.oci.oraclecorp.com/projects/ECS/repos/escs-sm/pull-requests/5209/overview  
+
+2. Working on adding volume group tests in IT2802 file, we are using EXT4 file system instead of ACFS file system as this is not being supported below 23gi DB, made changes on mounting the EXT4 file system. Testing is in progress.
+   Jira : https://jira.oci.oraclecorp.com/browse/EXASCALECS-32871
+   PR : https://bitbucket.oci.oraclecorp.com/projects/ECS/repos/escs-sm/pull-requests/5258/overview
+   
+3. Added code changes for manually retrying DB failures for smdbedvconn, smdbvltconn, and some other load running canaries. This is because initially the DB connection was getting terminated and later we added changes in SQL command for making retries, but it didn’t give desired results. So now adding these retries manually. Testing is in progress.
    Jira : https://jira.oci.oraclecorp.com/browse/EXASCALECS-32753  
    PR : https://bitbucket.oci.oraclecorp.com/projects/ECS/repos/escs-sm/pull-requests/5243/overview  
-3. Making fabric name changes while using vault selection API, the requirement was to discard the usage of faultDomain, and use fabricName, I made the changes, but still need some insights on making changes for canaries as there we use faultDomain to fetch fabricName, so we can’t use fabricName instead of faultDomain. Will get some more info and insights this week. 
+   
+4. Making fabric name changes while using vault selection API, the requirement was to discard the usage of faultDomain, and use fabricName, I made the code changes. Testing is in progress.
    PR : https://bitbucket.oci.oraclecorp.com/projects/ECS/repos/escs-sm/pull-requests/5246/overview 
    Jira : https://jira.oci.oraclecorp.com/browse/EXASCALECS-32516  
-4. Helped Adweta in completing the maven installation, cloning repos, gave KT about basics of ESCS, explained briefly about escs ops-ui, assigned a task regarding adding changes in log-parser in TS1 runner. 
 
-Merged 	
-1. This PR deals with adding ssh-retries to vm nodes after scale down/up operation in smdbvlt2n4c canary, as after the scaling operation the vms are going unreachable/offline.  
-   Jira : https://jira.oci.oraclecorp.com/browse/EXASCALECS-29700  
-   PR : https://bitbucket.oci.oraclecorp.com/projects/ECS/repos/escs-sm/pull-requests/5213/overview  
-2. Created a individual summary log file for the TS1 runs, where we can check the test run time for each method of test classes in PR-build. These details are being directed to a file called individual_summary.log file. 
-   Jira : https://jira.oci.oraclecorp.com/browse/EXASCALECS-32300  
-   PR : https://bitbucket.oci.oraclecorp.com/projects/ECS/repos/escs-sm/pull-requests/5147/overview  
+5. This PR is related to executing DB load test after the creation of lngdbvault/lngdbedv significant changes are made in this PR that's why testing needed time as after ravi merged a PR for upgrading to 23.8 db, we had to run the test on new database, now we need a CI-run to finish the testing, there was shephered applying failure today, will see through the details.
+   Jira : https://jira.oci.oraclecorp.com/browse/EXASCALECS-31437
+   PR : https://bitbucket.oci.oraclecorp.com/projects/ECS/repos/escs-sm/pull-requests/5001/overview
 
+6. Helped adweta in understanding the canaries like smdbvlt2n4c, lngdbvault etc, assigned some basic tasks in order for him to understand the work.
+   
+   
 Happy Weekend !!
  
 Thanks and Regards,
