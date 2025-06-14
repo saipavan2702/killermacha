@@ -73,20 +73,14 @@
 - [ ] Love and other drugs
 - [ ] Nothing Hill
 - [x] Possession ✅ 2025-06-06
-- [ ] Pride and Prejudice
+- [x] Pride and Prejudice ✅ 2025-06-12
+- [x] Kumbalangi Nights ✅ 2025-06-12
+- [x] Requiem for a Dream ✅ 2025-06-12
+- [x] The Internship ✅ 2025-06-12
+- [x] Dead poets society ✅ 2025-06-12
+- [x] Eyes wide shut ✅ 2025-06-12
+- [x] Serendipity ✅ 2025-06-12
 
 
-
-## Watched
-
-- Kumbalangi Nights
-- Requiem for a Dream
-- The Internship
-- Dead poets society
-- Eyes wide shut
-- Serendipity
-- The Unbearable Weight of Massive Talent
-- Grown ups
-- Possession
 
 #personal 
