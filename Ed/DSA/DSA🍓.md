@@ -2,9 +2,6 @@
 
 [[Sliding window🍃]] is used to obtain results from a subarray or part of data structure.
 
-[[Trees🌳]] 
-
-[[Dyno-mic Programming🦖]] is used to memorize the redundant recursion calls and optimize the functionality of code.
 
 [[Stacks & Queues🎍]] 
 [[Hashing🗺️]]

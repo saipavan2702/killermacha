@@ -22,7 +22,7 @@
 - [ ] Irreversible
 - [ ] Midnight in Paris
 - [ ] Lord of the rings
-- [ ] Memories of murder
+- [x] Memories of murder ✅ 2025-06-26
 - [ ] Prisoners
 - [ ] Truman show
 - [ ] Wicked minds
@@ -66,7 +66,7 @@
 - [ ] LOTR
 - [ ] House MD series
 - [ ] Shameless sereis
-- [ ] 13 going on 30
+- [x] 13 going on 30 ✅ 2025-06-26
 - [ ] Crazy stupid Love
 - [ ] The Proposal
 - [ ] When harry met sally

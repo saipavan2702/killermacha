@@ -257,8 +257,8 @@ void updateModEq(int v, int l, int r, int ql, int qr, int val) {
 int main() {
     int n; cin >> n;
     A.resize(n);
-    tree.resize(4*n);
-    max_tree.resize(4*n);
+    tree.resize(4*n+1);
+    max_tree.resize(4*n+1);
     
     for(int i = 0; i < n; i++) cin >> A[i];
     build(0, 0, n-1);
