@@ -50,7 +50,7 @@ P-\> P, C1
 C2,P C3,C1
  
 Que on fork() system call  
-```cpp
+```c
 #include\<stdio.h\>  
 #include\<unistd.h\>  
 int main()  
