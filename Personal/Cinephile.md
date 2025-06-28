@@ -80,7 +80,12 @@
 - [x] Dead poets society ✅ 2025-06-12
 - [x] Eyes wide shut ✅ 2025-06-12
 - [x] Serendipity ✅ 2025-06-12
-
+- [ ] Creature Commandos (anime)
+- [ ] Atlantis the Lost empire (anime)
+- [ ] Treasure planet (anime)
+- [ ] Anastasia (anime)
+- [ ] The Princess and Frog (anime)
+- [ ] Mulan (anime)
 
 
 #personal 
