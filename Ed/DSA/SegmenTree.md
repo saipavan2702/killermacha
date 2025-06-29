@@ -124,32 +124,22 @@ void update(int node, int start, int end, int idx, int val)
         int mid = (start + end) / 2;
         if(start <= idx and idx <= mid)
         {
-            // If idx is in the left child, recurse on the left child
             update(2*node, start, mid, idx, val);
         }
         else
         {
-            // if idx is in the right child, recurse on the right child
             update(2*node+1, mid+1, end, idx, val);
         }
-        // Internal node will have the sum of both of its children
         tree[node] = tree[2*node] + tree[2*node+1];
     }
 }
 
 int query(int node, int start, int end, int l, int r)
 {
-    if(r < start or end < l)
-    {
-        // range represented by a node is completely outside the given range
-        return 0;
-    }
-    if(l <= start and end <= r)
-    {
-        // range represented by a node is completely inside the given range
-        return tree[node];
-    }
-    // range represented by a node is partially inside and partially outside the given range
+    if(r < start or end < l) return 0;
+    
+    if(l <= start and end <= r) return tree[node];
+    
     int mid = (start + end) / 2;
     int p1 = query(2*node, start, mid, l, r);
     int p2 = query(2*node+1, mid+1, end, l, r);
@@ -271,6 +261,83 @@ int main() {
 
 ```
 
+
+**Lazy Propagation**
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const int N = 1e5;  
+int tree[4 * N];    
+int lazy[4 * N];    
+
+void build(int node, int start, int end) {
+    if (start == end) {
+        tree[node] = 0; 
+    } else {
+        int mid = (start + end) / 2;
+        build(2 * node, start, mid);
+        build(2 * node + 1, mid + 1, end);
+        tree[node] = tree[2 * node] + tree[2 * node + 1];
+    }
+}
+
+void propagate(int node, int start, int end) {
+    if (lazy[node] != 0) {
+        tree[node] += (end - start + 1) * lazy[node];
+
+        if (start != end) {
+            lazy[2 * node] += lazy[node];
+            lazy[2 * node + 1] += lazy[node];
+        }
+
+        lazy[node] = 0;  
+    }
+}
+
+void update(int node, int start, int end, int l, int r, int val) {
+    propagate(node, start, end);
+
+    if (r < start || end < l)
+        return;  
+
+    if (l <= start && end <= r) {
+        lazy[node] += val;
+        propagate(node, start, end);
+        return;
+    }
+
+    int mid = (start + end) / 2;
+    update(2 * node, start, mid, l, r, val);
+    update(2 * node + 1, mid + 1, end, l, r, val);
+    tree[node] = tree[2 * node] + tree[2 * node + 1];
+}
+
+int query(int node, int start, int end, int l, int r) {
+    propagate(node, start, end);
+
+    if (r < start || end < l)
+        return 0;  
+
+    if (l <= start && end <= r)
+        return tree[node];  
+
+    int mid = (start + end) / 2;
+    int sum1 = query(2 * node, start, mid, l, r);
+    int sum2 = query(2 * node + 1, mid + 1, end, l, r);
+    return sum1 + sum2;
+}
+
+int main() {
+    int n = 10; 
+    build(1, 0, n - 1);
+    update(1, 0, n - 1, 0, 3, 5); 
+    cout << query(1, 0, n - 1, 2, 5);   
+
+    return 0;
+}
+
+```
 
 _References_
 https://www.hackerearth.com/practice/data-structures/advanced-data-structures/trie-keyword-tree/practice-problems/
