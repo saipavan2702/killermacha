@@ -48,3 +48,7 @@ https://github.com/pqrs-org/Karabiner-Elements/issues/3354
 
 **Reddit**
 https://www.reddit.com/r/zlibrary/wiki/index/access/
+
+
+DSA
+https://letuskode.blogspot.com/2013/01/segtrees.html
