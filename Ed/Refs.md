@@ -14,6 +14,7 @@ https://github.com/ghostty-org/ghostty/discussions/3527
 https://www.reddit.com/r/Zig/comments/1hod58j/how_i_configure_ghostty/
 https://github.com/JanDeDobbeleer/oh-my-posh/discussions/5578
 https://github.com/pkazmier/ghostty-config/blob/main/config
+https://github.com/StevenJPx2/dotfiles
 
 #terminal 
 
@@ -52,3 +53,7 @@ https://www.reddit.com/r/zlibrary/wiki/index/access/
 
 DSA
 https://letuskode.blogspot.com/2013/01/segtrees.html
+
+
+DEV
+https://raster.saran13raj.com/
