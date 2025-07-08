@@ -1,8 +1,8 @@
 LDAP - Inf_std_ios_2702
 Kerberos - Dengistha_12
-OCNA -  `_j_tQ74WWuef!TT`
-OCNA - Inf_std_ios_2702
+OCNA - Zaq_cruise_2702
 WSL - EDITH_z_27
+BugDB - EDITH_z_2702
 
 
 
@@ -19,7 +19,6 @@ For updating distro
 sudo apt update
 sudo apt dist-upgrade
 ```
-
 
 
 
