@@ -12,18 +12,13 @@ https://www.youtube.com/watch?v=AaCVP7zqOMU
 **Ghostty**
 https://github.com/ghostty-org/ghostty/discussions/3527
 https://www.reddit.com/r/Zig/comments/1hod58j/how_i_configure_ghostty/
-https://github.com/JanDeDobbeleer/oh-my-posh/discussions/5578
 https://github.com/pkazmier/ghostty-config/blob/main/config
 https://github.com/StevenJPx2/dotfiles
 
 #terminal 
 
 **ZSH**
-https://github.com/ghostty-org/ghostty/discussions/3527
-https://www.reddit.com/r/Zig/comments/1hod58j/how_i_configure_ghostty/
 https://github.com/JanDeDobbeleer/oh-my-posh/discussions/5578
-https://github.com/pkazmier/ghostty-config/blob/main/config
-
 
 #terminal
 
@@ -31,7 +26,7 @@ https://github.com/pkazmier/ghostty-config/blob/main/config
 DotFiles
 https://github.com/josean-dev/dev-environment-files 
 https://github.com/bashbunni
-
+https://github.com/Darkkal44/Cozytile
 #dotfiles  
 
 

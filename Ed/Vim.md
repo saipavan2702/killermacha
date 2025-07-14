@@ -466,5 +466,4 @@ Use built-in file browsing inside Vim:
 
 
 _**References**_
-[cat vs less](https://www.digitalocean.com/community/tutorials/linux-commands#the-cat-echo-and-less-commands)
 #ref 
