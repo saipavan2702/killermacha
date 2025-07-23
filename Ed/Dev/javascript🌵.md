@@ -410,6 +410,30 @@ console.log(mergedUsers);
 { name: 'Andrew', age: 22, location: 'Philadelphia' }
 ```
 
+### Async event example
+
+```js
+
+console.log('Start');
+function asyncFunc(callback) {
+  console.log('Executing asyncFunc');
+  setTimeout(() => {
+    callback('Hello from asyncFunc');
+  }, 1000);
+}
+asyncFunc((result) => {
+  console.log(result);
+});
+console.log('End');
+
+/*
+Output: 
+Start
+End
+Executing asyncFunc
+Hello from asyncFunc
+*/
+```
 
 #ref 
 [oops](https://www.freecodecamp.org/news/object-oriented-javascript-for-beginners/#some-things-to-keep-in-mind-about-inheritance-)
@@ -420,8 +444,4 @@ console.log(mergedUsers);
 [event-loop-ii](https://www.builder.io/blog/visual-guide-to-nodejs-event-loop)
 [debounce](https://www.30secondsofcode.org/js/s/debounce-function/#:~:text=Debouncing%20is%20a%20technique%20used,artificially%20create%20the%20necessary%20delay.)
 [throttling](https://javascript.plainenglish.io/debouncing-and-throttling-in-javascript-3c8f8cf5e645)
-
-
-
-
-
+[faq1](https://freedium.cfd/https%3A%2F%2Fmedium.com%2F%40lelianto.eko%2Fsome-questions-for-senior-frontend-developer-2d61d28ba456%3Fsource%3Demail-f55e20219663-1690517461724-digest.reader--2d61d28ba456----2-98------------------c70ead38_609e_4fe8_b1ff_f95b24ed7a7a-1)

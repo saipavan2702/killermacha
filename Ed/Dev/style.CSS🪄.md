@@ -148,6 +148,51 @@ div{
 }
 ```
 
+Inbuilt counters
+
+```css
+<h3>C/C++</h3>
+<h3>JavaScript</h3>
+<h3>Zig</h3>
+
+body {
+  counter-reset: my-counter;
+}
+
+h3::before {
+  content: "Section " counter(my-counter) ": ";
+  counter-increment: my-counter;
+}
+```
+
+Exploring scope feature in css
+
+```html
+<div>
+  <style>
+    @scope {
+      :scope {
+        margin-bottom: 10px;
+      }
+      .title {
+        background-color: #eb9b34;
+        padding: 10px;
+      }
+
+      .body {
+        background-color: #ddd;
+        border-bottom: 2px solid #eb9b34;
+        padding: 10px;
+      }
+    }
+  </style>
+  <div class="title">Lorem ipsum dolor sit amet</div>
+  <div class="body">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas justo ante, eu accumsan sem vulputate sit amet. Nulla facilisi. Maecenas ac mattis turpis.
+  </div>
+</div>
+```
+
 
 #ref
 [fluid mediaQueries in css](https://www.smashingmagazine.com/2022/01/modern-fluid-typography-css-clamp/)

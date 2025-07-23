@@ -59,7 +59,7 @@
 - [ ] Shaun of the Dead
 - [ ] Silence of the Lambs
 - [ ] Wind River
-- [ ] Project X
+- [x] Project X ✅ 2025-07-23
 - [ ] Invincible sereis
 - [ ] The Boys series
 - [ ] Jack Ryan series

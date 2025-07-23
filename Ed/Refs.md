@@ -7,7 +7,7 @@ https://www.youtube.com/watch?v=AaCVP7zqOMU
 ---
 ## Git's
 
-[github_discussion](https://gist.github.com/bashbunni/f6b04fc4703903a71ce9f70c58345106)
+[bashbunni_terminal_notifier](https://gist.github.com/bashbunni/f6b04fc4703903a71ce9f70c58345106)
 
 **Ghostty**
 https://github.com/ghostty-org/ghostty/discussions/3527
@@ -28,6 +28,10 @@ https://github.com/josean-dev/dev-environment-files
 https://github.com/bashbunni
 https://github.com/Darkkal44/Cozytile
 https://github.com/webpro/awesome-dotfiles
+https://github.com/gpanders/dotfiles/tree/master
+https://github.com/ianchesal/dotfiles
+https://github.com/codeopshq/dotfiles
+
 #dotfiles  
 
 
@@ -53,3 +57,20 @@ https://letuskode.blogspot.com/2013/01/segtrees.html
 
 DEV
 https://raster.saran13raj.com/
+
+
+Misc
+https://www.programmingfonts.org/#maple
+https://github.com/roigoatzzz/Wallsync
+
+---
+
+Web's
+
+https://transform.tools/
+https://ray.so/
+https://devhints.io/
+https://smalldev.tools/
+https://explainshell.com/
+
+[free_resources](https://freedium.cfd/https%3A%2F%2Fmedium.com%2F%40dev.shefali7%2F100-free-resources-every-web-developer-must-try-2fa9fa499ef5%3Fsource%3Demail-f55e20219663-1715403283605-digest.reader-d1baaa8417a4-2fa9fa499ef5----0-99------------------49eecb04_6275_4777_ba35_a6f1bdd3fe96-1)
