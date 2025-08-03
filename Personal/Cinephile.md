@@ -25,7 +25,7 @@
 - [x] Memories of murder ✅ 2025-06-26
 - [ ] Prisoners
 - [ ] Truman show
-- [ ] Wicked minds
+- [x] Wicked minds ✅ 2025-07-24
 - [ ] Dark series
 - [x] Grown ups ✅ 2025-06-04
 - [ ] 22nd jump street
@@ -86,6 +86,7 @@
 - [ ] Anastasia (anime)
 - [ ] The Princess and Frog (anime)
 - [ ] Mulan (anime)
+- [ ] The Usual Suspects
 
 
 #personal 
