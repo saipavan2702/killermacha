@@ -2,7 +2,7 @@
 
 https://www.youtube.com/watch?v=cgOPg5cCr2g
 https://www.youtube.com/watch?v=AaCVP7zqOMU
-
+https://www.youtube.com/watch?v=6CJiM3E2mAA
 
 ---
 ## Git's
@@ -74,3 +74,4 @@ https://smalldev.tools/
 https://explainshell.com/
 
 [free_resources](https://freedium.cfd/https%3A%2F%2Fmedium.com%2F%40dev.shefali7%2F100-free-resources-every-web-developer-must-try-2fa9fa499ef5%3Fsource%3Demail-f55e20219663-1715403283605-digest.reader-d1baaa8417a4-2fa9fa499ef5----0-99------------------49eecb04_6275_4777_ba35_a6f1bdd3fe96-1)
+[vim_shorts](https://freedium.cfd/https%3A%2F%2Fmedium.com%2F%40sebastiancarlos%2F50-vim-mode-tips-for-ide-users-f7b525a794b3%3Fsource%3Demail-f55e20219663-1717307780365-digest.reader-d0b105d10f0a-f7b525a794b3----0-102------------------64b30a5d_4964_40b9_b674_80513292f7cb-1)

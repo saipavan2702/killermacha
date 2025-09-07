@@ -1,6 +1,4 @@
-## Want to Watch
-
-- Not holly
+##  Not holly
 
 - [ ] Shiva
 - [ ] Godavari
@@ -8,7 +6,7 @@
 - [ ] Uttama villain
 - [ ] Ozhivudivasathe Kali
 
-- Holly   
+## Holly   
 
 - [ ] Schindler's list
 - [ ] Source Code
@@ -36,7 +34,6 @@
 - [ ] The accountant
 - [ ] Girls to Buy
 - [ ] Lady Voyeur
-- [ ] The next 365 days
 - [ ] Infinite
 - [ ] Julia Benson-actress
 - [ ] Incendies
@@ -87,6 +84,12 @@
 - [ ] The Princess and Frog (anime)
 - [ ] Mulan (anime)
 - [ ] The Usual Suspects
+- [x] Scarface ✅ 2025-08-27
+- [ ] In the mood for love
+- [ ] 8 1/2
+- [ ] Nymphomaniac
+- [ ] Doctor Zhivago
+- [ ] The Bridge on the River Kwai
 
 
 #personal 

@@ -29,6 +29,5 @@ public:
 };
 ```
 
-## Hands-on📜
 
 
