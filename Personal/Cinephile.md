@@ -83,7 +83,7 @@
 - [ ] Anastasia (anime)
 - [ ] The Princess and Frog (anime)
 - [ ] Mulan (anime)
-- [ ] The Usual Suspects
+- [x] The Usual Suspects ✅ 2025-09-08
 - [x] Scarface ✅ 2025-08-27
 - [ ] In the mood for love
 - [ ] 8 1/2
