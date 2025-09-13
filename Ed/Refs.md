@@ -31,6 +31,14 @@ https://github.com/webpro/awesome-dotfiles
 https://github.com/gpanders/dotfiles/tree/master
 https://github.com/ianchesal/dotfiles
 https://github.com/codeopshq/dotfiles
+https://github.com/binoymanoj/dotfiles
+https://github.com/omerxx/dotfiles
+https://github.com/leviFrosty/dotfiles
+https://github.com/codingjerk/dotfiles
+https://github.com/mehd-io/dotfiles
+https://github.com/yutkat/dotfiles
+https://github.com/marcogreiveldinger/.dotfiles
+https://github.com/Sin-cy/dotfiles
 
 #dotfiles  
 
