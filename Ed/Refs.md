@@ -7,7 +7,9 @@ https://www.youtube.com/watch?v=6CJiM3E2mAA
 ---
 ## Git's
 
+**QoL**
 [bashbunni_terminal_notifier](https://gist.github.com/bashbunni/f6b04fc4703903a71ce9f70c58345106)
+https://github.com/serhii-londar/open-source-mac-os-apps
 
 **Ghostty**
 https://github.com/ghostty-org/ghostty/discussions/3527
@@ -21,6 +23,11 @@ https://github.com/StevenJPx2/dotfiles
 https://github.com/JanDeDobbeleer/oh-my-posh/discussions/5578
 
 #terminal
+
+**NVIM**
+https://github.com/CodeAmbient/video-guides/tree/main/01-turning-vscode-into-neovim
+https://github.com/MeanderingProgrammer/render-markdown.nvim
+https://github.com/axieax/urlview.nvim
 
 
 DotFiles
@@ -61,6 +68,7 @@ https://www.reddit.com/r/zlibrary/wiki/index/access/
 
 DSA
 https://letuskode.blogspot.com/2013/01/segtrees.html
+https://freedium.cfd/https%3A%2F%2Fmedium.com%2F%40himanshusingour7%2Fnot-kidding-one-line-of-sql-brought-down-our-query-time-from-3s-to-300ms-6b1ed80c94ac%3Fsource%3Demail-f55e20219663-1757648611489-digest.reader--6b1ed80c94ac----1-99------------------6878a965_4d87_485b_9665_58a91aeb775f-1
 
 
 DEV
