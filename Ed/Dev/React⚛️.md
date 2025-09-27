@@ -63,7 +63,6 @@ Hooks are the functional components provided by react to simplify the developer 
 - #### useCallback
 - #### useContext
 
-
 [[Next.js🌱]] uses React server components architecture introduced by react.
 
 *Canvas API* is a html5 It provides a means for drawing graphics via `jsx or js` and can be interpreted via react too. It can be used for animation, game graphics, and real-time video processing.
@@ -85,13 +84,78 @@ function onRender({values}){
 If any component takes extra time rendering its components or, any large component that had to be rendered multiple times, we can simply memorize it using `React.memo(component)`, or using `useMemo` hooks.
 
 
+---
+## LWC Lifecycle Execution Order (Parent → Child)
 
+1. **Parent constructor**  
+   - JavaScript creates the parent instance.
 
+2. **Parent connectedCallback()**  
+   - Parent is inserted into the DOM.  
+   - LWC starts rendering its template.
 
+3. **Child constructor**  
+   - While parsing the parent’s template, LWC encounters `<c-child>` and creates the child instance.
 
+4. **Child connectedCallback()**  
+   - Child is inserted into the DOM.
 
+5. **Child render()**  
+   - Framework calls `render()` to build the child’s HTML.
 
+6. **Child renderedCallback()**  
+   - After child’s DOM is in place, this hook runs.  
+   - ⚠️ This may run multiple times if reactive properties change.
 
+7. **Parent renderedCallback()**  
+   - Only after **all children finish rendering**, the parent’s `renderedCallback()` executes.
+
+## Key Takeaways
+
+- **Constructors** run first (parent → child).  
+- **connectedCallback** runs when inserted into DOM.  
+- **render() → renderedCallback** ensures DOM is ready.  
+- Parent’s `renderedCallback` always fires *after* all children’s rendering completes.  
+
+---
+
+### useMemo
+
+```jsx
+
+const expensiveComputation = (a, b) => {
+  // 🧮 Perform a computationally expensive operation here
+  return a + b;
+};
+
+const MemoizedValue = ({ a, b }) => {
+  const result = useMemo(() => expensiveComputation(a, b), [a, b]);
+  return <div>🎉 Result: {result}</div>;
+};
+```
+
+This code example defines an expensiveComputation function that takes in two parameters, a and b, and returns their sum.
+
+The MemoizedValue function takes in two props, a and b, and returns a div element that displays the memoized result of calling expensiveComputation with the a and b props.
+
+useMemo is used to memoize the result of calling expensiveComputation with the a and b props as dependencies. This ensures that the expensive computation is only performed when the a or b props change. If the a and b props haven't changed since the last render, useMemo returns the cached value without recomputing it, optimizing performance.
+
+### Memo
+
+memo is a higher-order component (HOC) used to optimize the rendering of PureComponent in React. memo improves rendering performance of functional components by performing a shallow comparison of their props. If the props haven't changed, memo prevents the component from re-rendering, thus improving performance. memo is particularly useful when a component's output is primarily determined by its props and the component has complex rendering logic. Let's see an example with emojis:
+
+```jsx
+const ComplexComponent = ({ emoji, count }) => {
+  // 🎨 Complex rendering logic here
+  return (
+    <div>
+      {emoji.repeat(count)}
+    </div>
+  );
+};
+
+const MemoizedComplexComponent = React.memo(ComplexComponent);
+```
 
 
 

@@ -10,7 +10,7 @@ A custom `not-found.tsx` page can be made using that syntax. Also, wrapping fold
 
 Metadata is an API provided by nextjs. We can create page lvl metadata and page lvl metadata an overwrite root lvl as it is read downwards.
 
-For title metadata we can customize for various situations and scenarios by giving it some props.
+For title metadata we can customise for various situations and scenarios by giving it some props.
 
 ```tsx
 import {Metadata} from "next"
@@ -26,6 +26,53 @@ export const metadata:Metadata={
 
 We use Link component to allow client side rendering. Also. `template.tsx` is a something nextjs offers where data does not persists but template will be preserved.
 
+Now let's take a look at its usage, kind of whole image.
+
+```jsx
+import items from '../../../data/items.json';
+
+export default function handler(req, res) {
+  const { search, page = 1, limit = 10, sort, filter } = req.query;
+
+  let filteredItems = items;
+
+  // 🔍 Search
+  if (search) {
+    filteredItems = filteredItems.filter(item =>
+      item.name.toLowerCase().includes(search.toLowerCase())
+    );
+  }
+
+  // 🏷️ Filter
+  if (filter) {
+    const filters = filter.split(',');
+    filteredItems = filteredItems.filter(item =>
+      filters.includes(item.category)
+    );
+  }
+
+  // 🔃 Sort
+  if (sort) {
+    const [key, order] = sort.split(':'); // Example: sort=name:asc
+    filteredItems.sort((a, b) => {
+      if (order === 'asc') return a[key].localeCompare(b[key]);
+      if (order === 'desc') return b[key].localeCompare(a[key]);
+      return 0;
+    });
+  }
+
+  // 📑 Pagination
+  const startIndex = (page - 1) * limit;
+  const paginatedItems = filteredItems.slice(startIndex, startIndex + Number(limit));
+
+  res.status(200).json({
+    data: paginatedItems,
+    total: filteredItems.length,
+    page: Number(page),
+    limit: Number(limit),
+  });
+}
+```
 
 
 
