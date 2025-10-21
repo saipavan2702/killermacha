@@ -118,11 +118,18 @@ If any component takes extra time rendering its components or, any large compone
 - Parent’s `renderedCallback` always fires *after* all children’s rendering completes.  
 
 ---
+## `useMemo` Hook
 
-### useMemo
+`useMemo` is a React hook that **memoizes the result of expensive computations**. It caches the computed value and only recalculates when its dependencies change.
+
+### When to use `useMemo`:
+- When you have computationally expensive calculations
+- When you want to avoid recalculating values on every render
+- When the calculation depends on specific props or state values
+
+### Basic Example:
 
 ```jsx
-
 const expensiveComputation = (a, b) => {
   // 🧮 Perform a computationally expensive operation here
   return a + b;
@@ -134,15 +141,24 @@ const MemoizedValue = ({ a, b }) => {
 };
 ```
 
-This code example defines an expensiveComputation function that takes in two parameters, a and b, and returns their sum.
+**How it works:**
+- The `expensiveComputation` function takes two parameters `a` and `b`
+- `useMemo` memoizes the result with `[a, b]` as dependencies
+- The computation only runs when `a` or `b` changes
+- If props haven't changed, it returns the cached value
 
-The MemoizedValue function takes in two props, a and b, and returns a div element that displays the memoized result of calling expensiveComputation with the a and b props.
+---
 
-useMemo is used to memoize the result of calling expensiveComputation with the a and b props as dependencies. This ensures that the expensive computation is only performed when the a or b props change. If the a and b props haven't changed since the last render, useMemo returns the cached value without recomputing it, optimizing performance.
+## `memo` Higher-Order Component
 
-### Memo
+`memo` is a higher-order component (HOC) that **optimizes component re-rendering** by performing shallow comparison of props. It prevents unnecessary re-renders when props haven't changed.
 
-memo is a higher-order component (HOC) used to optimize the rendering of PureComponent in React. memo improves rendering performance of functional components by performing a shallow comparison of their props. If the props haven't changed, memo prevents the component from re-rendering, thus improving performance. memo is particularly useful when a component's output is primarily determined by its props and the component has complex rendering logic. Let's see an example with emojis:
+### When to use `memo`:
+- When a component has complex rendering logic
+- When the component's output depends primarily on its props
+- When you want to prevent re-renders due to parent component updates
+
+### Basic Example:
 
 ```jsx
 const ComplexComponent = ({ emoji, count }) => {
@@ -157,7 +173,159 @@ const ComplexComponent = ({ emoji, count }) => {
 const MemoizedComplexComponent = React.memo(ComplexComponent);
 ```
 
+**How it works:**
+- `React.memo` wraps the component
+- Performs shallow comparison of current and previous props
+- Only re-renders if props have actually changed
+- Prevents unnecessary renders when parent re-renders
 
+---
+
+## Complete Example: Fibonacci Grid
+
+Here's a comprehensive example showing both `useMemo` and `memo` in action:
+
+```tsx
+import React, { useState, useMemo } from "react";
+
+// Expensive computation function
+const fibonacci = (n: number): number => {
+  if (n <= 1) {
+    return n;
+  }
+  return fibonacci(n - 1) + fibonacci(n - 2);
+};
+
+// Component using useMemo for expensive calculation
+const ColorCell: React.FC<{ color: string; n: number }> = ({ color, n }) => {
+  const cellStyle = {
+    backgroundColor: color,
+    width: "50px",
+    height: "50px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    color: "white"
+  };
+
+  // 🧮 useMemo prevents recalculating fibonacci on every render
+  const fibNumber = useMemo(() => fibonacci(n), [n]);
+
+  return <div style={cellStyle}>{fibNumber}</div>;
+};
+
+// Component for rendering a row of colored cells
+const ColorRow: React.FC<{ colors: string[]; rowIndex: number }> = ({
+  colors,
+  rowIndex
+}) => {
+  return (
+    <div style={{ display: "flex" }}>
+      {colors.map((color, colIndex) => (
+        <ColorCell
+          key={colIndex}
+          color={color}
+          n={rowIndex * colors.length + colIndex}
+        />
+      ))}
+    </div>
+  );
+};
+
+// Grid component that could benefit from memo
+const ColorGrid: React.FC<{
+  colors: string[];
+  numRows: number;
+  numCols: number;
+}> = ({ colors, numRows, numCols }) => {
+  const rows = [];
+  for (let i = 0; i < numRows; i++) {
+    const rowColors = colors.slice(i * numCols, (i + 1) * numCols);
+    rows.push(<ColorRow key={i} colors={rowColors} rowIndex={i} />);
+  }
+
+  return <div>{rows}</div>;
+};
+
+// 🎨 memo prevents ColorGrid from re-rendering when props haven't changed
+const MemoizedColorGrid = React.memo(ColorGrid);
+
+// Main App component
+const App: React.FC = () => {
+  const [colors, setColors] = useState([
+    "#FF5733",
+    "#33FF57",
+    "#3357FF",
+    "#FF33F5",
+    "#F5FF33",
+    "#33F5FF",
+    "#FF3333",
+    "#33FF33",
+    "#3333FF",
+    "#FFAF7A",
+    "#C70039",
+    "#900C3F",
+    "#581845",
+    "#F0E68C",
+    "#B22222",
+    "#FFD700",
+    "#FFA07A",
+    "#20B2AA"
+  ]);
+
+  const numRows = 5;
+  const numCols = 2;
+
+  const handleShuffleColors = () => {
+    setColors((prevColors) => {
+      const shuffledColors = [...prevColors];
+      for (let i = shuffledColors.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledColors[i], shuffledColors[j]] = [
+          shuffledColors[j],
+          shuffledColors[i]
+        ];
+      }
+      return shuffledColors;
+    });
+  };
+
+  return (
+    <div>
+      <button onClick={handleShuffleColors}>🎲 Shuffle Colors</button>
+      <MemoizedColorGrid colors={colors} numRows={numRows} numCols={numCols} />
+    </div>
+  );
+};
+
+export default App;
+```
+
+---
+
+## Key Differences
+
+| Aspect | `useMemo` | `memo` |
+|--------|-----------|--------|
+| **Type** | React Hook | Higher-Order Component |
+| **Purpose** | Memoizes computed values | Memoizes entire component |
+| **Usage** | Inside functional components | Wraps functional components |
+| **What it prevents** | Expensive recalculations | Unnecessary re-renders |
+| **Dependencies** | Explicit dependency array | Automatic prop comparison |
+
+## When to Use Each
+
+### Use `useMemo` when:
+- You have expensive calculations that depend on props/state
+- You want to cache derived data
+- The computation result is used multiple times
+
+### Use `memo` when:
+- Component has complex rendering logic
+- Component receives the same props frequently
+- Parent component re-renders often but child props rarely change
+
+---
 
 
 

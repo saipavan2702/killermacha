@@ -1,5 +1,5 @@
-Channels are Go’s way of letting **goroutines communicate safely** with each other.  
-Think of a channel as a **pipe**: one goroutine sends values into it, another goroutine receives values from it.
+Channels are Go’s way of letting **go routines communicate safely** with each other.  
+Think of a channel as a **pipe**: one go-routine sends values into it, another go routine receives values from it.
 
 ---
 
