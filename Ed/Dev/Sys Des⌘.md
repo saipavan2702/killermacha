@@ -1,24 +1,3 @@
-## Table of Contents
-1. [Why Study System Design?](#why-study-system-design)
-2. [Fundamentals: Servers, Latency & Throughput](#fundamentals)
-3. [Scaling Strategies](#scaling-strategies)
-4. [CAP Theorem](#cap-theorem)
-5. [Database Scaling Techniques](#database-scaling)
-6. [SQL vs NoSQL](#sql-vs-nosql)
-7. [Microservices Architecture](#microservices)
-8. [Load Balancers](#load-balancers)
-9. [Caching with Redis](#caching)
-10. [Blob Storage & CDN](#blob-storage-cdn)
-11. [Message Brokers & Kafka](#message-brokers)
-12. [Event-Driven Architecture](#event-driven-architecture)
-13. [Distributed Systems](#distributed-systems)
-14. [Consistency Models](#consistency)
-15. [Proxy Servers](#proxy-servers)
-
----
-
-## Why Study System Design? {#why-study-system-design}
-
 Most college projects work fine with a simple architecture:
 
 ```
@@ -35,9 +14,6 @@ But in the real world with millions or billions of users, this breaks down. You 
 **System Design teaches you how to build systems that work at scale.**
 
 ---
-
-## Fundamentals: Servers, Latency & Throughput {#fundamentals}
-
 ### What is a Server?
 
 A server is just a physical machine running your application code. When you develop locally:
@@ -58,9 +34,9 @@ https://abc.com = 35.154.33.64:443
 
 ### Latency vs Throughput
 
-| Metric | Definition | Measurement | Goal |
-|--------|------------|-------------|------|
-| **Latency** | Time for ONE request to complete | Milliseconds (ms) | Lower is better |
+| Metric         | Definition                            | Measurement               | Goal             |
+| -------------- | ------------------------------------- | ------------------------- | ---------------- |
+| **Latency**    | Time for ONE request to complete      | Milliseconds (ms)         | Lower is better  |
 | **Throughput** | Number of requests handled per second | RPS (Requests Per Second) | Higher is better |
 
 **Real-World Example:**
@@ -70,9 +46,6 @@ https://abc.com = 35.154.33.64:443
 **Ideal System**: Low latency + High throughput
 
 ---
-
-## Scaling Strategies {#scaling-strategies}
-
 ### 1. Vertical Scaling (Scale Up/Down)
 
 **Increase specs of the SAME machine** (more RAM, CPU, storage)

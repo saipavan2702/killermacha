@@ -73,6 +73,7 @@ https://freedium.cfd/https%3A%2F%2Fmedium.com%2F%40himanshusingour7%2Fnot-kiddin
 
 DEV
 https://raster.saran13raj.com/
+https://medium.com/@shivambhadani_
 
 
 Misc
@@ -81,7 +82,7 @@ https://github.com/roigoatzzz/Wallsync
 
 ---
 
-Web's
+## Web's
 
 https://transform.tools/
 https://ray.so/
