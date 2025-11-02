@@ -47,6 +47,7 @@ https://github.com/yutkat/dotfiles
 https://github.com/marcogreiveldinger/.dotfiles
 https://github.com/Sin-cy/dotfiles
 
+
 #dotfiles  
 
 
@@ -69,12 +70,12 @@ https://www.reddit.com/r/zlibrary/wiki/index/access/
 DSA
 https://letuskode.blogspot.com/2013/01/segtrees.html
 https://freedium.cfd/https%3A%2F%2Fmedium.com%2F%40himanshusingour7%2Fnot-kidding-one-line-of-sql-brought-down-our-query-time-from-3s-to-300ms-6b1ed80c94ac%3Fsource%3Demail-f55e20219663-1757648611489-digest.reader--6b1ed80c94ac----1-99------------------6878a965_4d87_485b_9665_58a91aeb775f-1
+https://github.com/ruppysuppy/Daily-Coding-Problem-Solutions
 
 
 DEV
 https://raster.saran13raj.com/
-https://medium.com/@shivambhadani_
-
+https://micahkepe.com/blog/tmux-config/#preview-of-changes
 
 Misc
 https://www.programmingfonts.org/#maple
