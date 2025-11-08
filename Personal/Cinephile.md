@@ -90,6 +90,7 @@
 - [ ] Nymphomaniac
 - [ ] Doctor Zhivago
 - [ ] The Bridge on the River Kwai
+- [x] Vanilla Sky ✅ 2025-11-08
 
 
 #personal 
