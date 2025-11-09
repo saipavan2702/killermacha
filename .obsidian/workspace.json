@@ -144,8 +144,19 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
+          },
+          {
+            "id": "223b20e17abc186d",
+            "type": "leaf",
+            "state": {
+              "type": "notebook-navigator",
+              "state": {},
+              "icon": "notebook",
+              "title": "Notebook Navigator"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -269,10 +280,11 @@
       "command-palette:Open command palette": false,
       "daily-notes:Open today's daily note": false,
       "obsidian-importer:Open Importer": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "d86c14a98541e886",
+  "active": "223b20e17abc186d",
   "lastOpenFiles": [
     "Ed/DSA/GoLang🪼.md",
     "Personal/Cinephile.md",
