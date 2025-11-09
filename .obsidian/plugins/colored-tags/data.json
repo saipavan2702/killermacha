@@ -1,0 +1,29 @@
+{
+  "palette": {
+    "seed": 6,
+    "selected": "adaptive-soft",
+    "custom": "e12729-f37324-f8cc1b-72b043-007f4e"
+  },
+  "mixColors": true,
+  "transition": true,
+  "accessibility": {
+    "highTextContrast": false
+  },
+  "knownTags": {
+    "basic": 1,
+    "personal": 2,
+    "ref": 3,
+    "basicop": 4,
+    "pswds": 5,
+    "repos": 6,
+    "re": 7,
+    "terminal": 8,
+    "yts": 9,
+    "tips": 10,
+    "vim": 11,
+    "typescript": 12,
+    "excalidraw": 13,
+    "dotfiles": 14
+  },
+  "_version": 3
+}

@@ -1,0 +1,10 @@
+{
+  "cssTheme": "Minimal",
+  "theme": "system",
+  "baseFontSize": 14,
+  "translucency": true,
+  "baseFontSizeAction": true,
+  "interfaceFontFamily": "Rubik",
+  "textFontFamily": "Karla",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font"
+}
