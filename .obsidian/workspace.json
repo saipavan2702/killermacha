@@ -62,37 +62,9 @@
               "icon": "lucide-file",
               "title": "Refs"
             }
-          },
-          {
-            "id": "d86c14a98541e886",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ed/Vim.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Vim"
-            }
-          },
-          {
-            "id": "80b78782fa4282f7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ed/Misc.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Misc"
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -271,6 +243,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-map-view:Open map view": false,
       "bases:Create new base": false,
       "graph:Open graph view": false,
       "obsidian-git:Open Git source control": false,
@@ -284,16 +257,17 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "223b20e17abc186d",
+  "active": "3ede7d824aa25705",
   "lastOpenFiles": [
     "Ed/DSA/GoLang🪼.md",
-    "Personal/Cinephile.md",
-    "orcl/Weekly report.md",
-    "Ed/Dev/Sys Des⌘.md",
     "Ed/DSA/SegmenTree.md",
     "Ed/Refs.md",
-    "Ed/Vim.md",
+    "2025-11-12.md",
     "Ed/Misc.md",
+    "orcl/Weekly report.md",
+    "Ed/Vim.md",
+    "Personal/Cinephile.md",
+    "Ed/Dev/Sys Des⌘.md",
     "Ed/DSA/DSA🍓.md",
     "Ed/DSA/Java ☕.md",
     "Untitled.md",
@@ -311,7 +285,6 @@
     "Ed/Mock Int.md",
     "Ed/Dev/Redux⛓️.md",
     "Ed/DSA/Algos.md",
-    "Ed/Dev/Excalidraw/React basics🎭.md",
     "Ed/Dev/Attachments/Pasted Image 20231213104704_082.png",
     "Ed/Dev/Attachments/Pasted Image 20231213104704_203.png",
     "Ed/Dev/Attachments/Pasted Image 20231213104704_187.png",
