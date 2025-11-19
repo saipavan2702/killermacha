@@ -28,6 +28,7 @@ https://github.com/JanDeDobbeleer/oh-my-posh/discussions/5578
 https://github.com/CodeAmbient/video-guides/tree/main/01-turning-vscode-into-neovim
 https://github.com/MeanderingProgrammer/render-markdown.nvim
 https://github.com/axieax/urlview.nvim
+https://github.com/SvenBroeckling/nvim-0.12-config
 
 
 DotFiles

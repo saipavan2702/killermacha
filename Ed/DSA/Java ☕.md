@@ -225,3 +225,206 @@ System.out.println(result); // Output: Happy Tuesday
 2. **Arrow syntax (`->`)** prevents fall-through
 3. **Expressions** require `yield` instead of `break`
 4. **Expressions must be exhaustive** (all cases covered)
+
+
+Got it — you want **all important Java data structures + how to initialize and use them**.
+Here is a clean, complete cheat sheet. 🚀
+
+---
+
+## 1️⃣ **Arrays****
+
+```java
+// Fixed-size array
+int[] nums = new int[5];             // default values = 0
+String[] names = {"Alice", "Bob"};   // initialized with values
+```
+
+---
+
+## 2️⃣ **List (Ordered, allows duplicates)**
+
+### **ArrayList**
+
+```java
+import java.util.ArrayList;
+List<String> list = new ArrayList<>();
+list.add("apple");
+list.add("banana");
+```
+
+### **LinkedList**
+
+```java
+import java.util.LinkedList;
+List<Integer> linkedList = new LinkedList<>();
+linkedList.add(10);
+linkedList.add(20);
+```
+
+### **Immutable List (Java 9+)**
+
+```java
+List<String> fixedList = List.of("a", "b", "c");
+```
+
+---
+
+## 3️⃣ **Set (Unique elements, no duplicates)**
+
+### **HashSet (no order guarantee)**
+
+```java
+import java.util.HashSet;
+Set<String> set = new HashSet<>();
+set.add("a");
+set.add("b");
+```
+
+### **LinkedHashSet (maintains insertion order)**
+
+```java
+import java.util.LinkedHashSet;
+Set<String> linkedSet = new LinkedHashSet<>();
+```
+
+### **TreeSet (sorted order)**
+
+```java
+import java.util.TreeSet;
+Set<Integer> treeSet = new TreeSet<>();
+treeSet.add(3);
+treeSet.add(1);
+treeSet.add(2);
+```
+
+---
+
+## 4️⃣ **Map (key-value pairs)**
+
+### **HashMap (no order guarantee)**
+
+```java
+import java.util.HashMap;
+Map<String, Integer> map = new HashMap<>();
+map.put("ram", 25);
+map.put("sam", 30);
+```
+
+### **LinkedHashMap (preserves insertion order)**
+
+```java
+import java.util.LinkedHashMap;
+Map<Integer, String> linkedMap = new LinkedHashMap<>();
+```
+
+### **TreeMap (sorted by key)**
+
+```java
+import java.util.TreeMap;
+Map<String, Integer> sortedMap = new TreeMap<>();
+```
+
+---
+
+## 5️⃣ **Queue & Deque**
+
+### **Queue using LinkedList**
+
+```java
+import java.util.Queue;
+import java.util.LinkedList;
+
+Queue<String> queue = new LinkedList<>();
+queue.add("A");
+queue.add("B");
+queue.poll(); // removes head
+```
+
+### **PriorityQueue (min-heap)**
+
+```java
+import java.util.PriorityQueue;
+Queue<Integer> pq = new PriorityQueue<>();
+pq.add(10);
+pq.add(1);
+```
+
+### **Deque using ArrayDeque**
+
+```java
+import java.util.ArrayDeque;
+Deque<String> dq = new ArrayDeque<>();
+dq.addFirst("X");
+dq.addLast("Y");
+```
+
+---
+
+## 6️⃣ **Stack**
+
+> Java’s `Stack` is legacy — prefer `ArrayDeque`
+
+```java
+Deque<String> stack = new ArrayDeque<>();
+stack.push("A");
+stack.push("B");
+stack.pop(); // B
+```
+
+---
+
+## 7️⃣ **LinkedList (as list + queue + deque)**
+
+```java
+LinkedList<String> ll = new LinkedList<>();
+ll.add("one");
+ll.addFirst("zero");
+```
+
+---
+
+## 8️⃣ **Concurrent / Thread-Safe Structures**
+
+```java
+import java.util.concurrent.ConcurrentHashMap;
+Map<String, String> chm = new ConcurrentHashMap<>();
+
+import java.util.concurrent.CopyOnWriteArrayList;
+List<String> cowList = new CopyOnWriteArrayList<>();
+```
+
+---
+
+## 🔥 Bonus: Pre-fill shortcuts
+
+```java
+List<Integer> nums = new ArrayList<>(List.of(1, 2, 3));
+Set<String> fruits = new HashSet<>(Set.of("apple", "banana"));
+Map<Integer, String> studentMap = new HashMap<>(Map.of(1, "John", 2, "Sara"));
+```
+
+---
+
+## 🧠 Quick Choosing Guide
+
+| Requirement                 | Best Choice             |
+| --------------------------- | ----------------------- |
+| Frequent random access      | ArrayList               |
+| Frequent insertion/deletion | LinkedList              |
+| Unique, fast lookup         | HashSet                 |
+| Sorted unique data          | TreeSet                 |
+| Key/value lookup            | HashMap                 |
+| Sorted key/value            | TreeMap                 |
+| LIFO                        | ArrayDeque              |
+| FIFO                        | LinkedList / ArrayDeque |
+
+---
+
+If you'd like, I can also give:
+✔ time & space complexities
+✔ comparison table
+✔ real-world examples
+✔ thread-safe variants
+
+Want any?

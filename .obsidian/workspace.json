@@ -8,49 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e309d2f2c9dce159",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ed/DSA/GoLang🪼.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "GoLang🪼"
-            }
-          },
-          {
             "id": "4e38aa201be05ab2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ed/Dev/Sys Des⌘.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sys Des⌘"
-            }
-          },
-          {
-            "id": "170ce01b93a027b8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ed/DSA/SegmenTree.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SegmenTree"
-            }
-          },
-          {
-            "id": "3ede7d824aa25705",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -62,9 +20,36 @@
               "icon": "lucide-file",
               "title": "Refs"
             }
+          },
+          {
+            "id": "170ce01b93a027b8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Personal/Cinephile.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Cinephile"
+            }
+          },
+          {
+            "id": "018063284e8c2945",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Time.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Time"
+            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -254,23 +239,28 @@
       "daily-notes:Open today's daily note": false,
       "obsidian-importer:Open Importer": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "notebook-navigator:Notebook Navigator": false
+      "notebook-navigator:Notebook Navigator": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "3ede7d824aa25705",
+  "active": "4e38aa201be05ab2",
   "lastOpenFiles": [
-    "Ed/DSA/GoLang🪼.md",
-    "Ed/DSA/SegmenTree.md",
+    "Time.md",
+    "Personal/Cinephile.md",
     "Ed/Refs.md",
+    "new-book-template-clipper.json",
+    "new-post-video-template-clipper.json",
+    "Clippings/obsidian.md",
+    "Ed/Dev/Sys Des⌘.md",
+    "Clippings",
+    "Ed/DSA/Java ☕.md",
+    "Ed/DSA/GoLang🪼.md",
+    "orcl/Weekly report.md",
+    "Ed/DSA/SegmenTree.md",
     "2025-11-12.md",
     "Ed/Misc.md",
-    "orcl/Weekly report.md",
     "Ed/Vim.md",
-    "Personal/Cinephile.md",
-    "Ed/Dev/Sys Des⌘.md",
     "Ed/DSA/DSA🍓.md",
-    "Ed/DSA/Java ☕.md",
-    "Untitled.md",
     "Ed/Dev/Backend📡.md",
     "Ed/Dev/Framer-Motion🌀.md",
     "Ed/Dev/Docker🐳.md",
@@ -283,8 +273,6 @@
     "Ed/Dev/typescript🐉.md",
     "Ed/Dev/javascript🌵.md",
     "Ed/Mock Int.md",
-    "Ed/Dev/Redux⛓️.md",
-    "Ed/DSA/Algos.md",
     "Ed/Dev/Attachments/Pasted Image 20231213104704_082.png",
     "Ed/Dev/Attachments/Pasted Image 20231213104704_203.png",
     "Ed/Dev/Attachments/Pasted Image 20231213104704_187.png",
@@ -303,9 +291,6 @@
     "Exported image 20250529160058-0.png",
     "Untitled.canvas",
     "Lingo",
-    "untitled folder",
-    "Untitled 1.canvas",
-    "Notion/Fun/Tasks",
-    "Notion/Fun"
+    "Untitled 1.canvas"
   ]
 }
