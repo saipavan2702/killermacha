@@ -109594,6 +109594,8 @@ var TimekeepMarkdownView = class extends import_obsidian9.MarkdownRenderChild {
     __publicField(this, "root");
     // Path to the file the timekeep is within
     __publicField(this, "fileSourcePath");
+    __publicField(this, "restoreScrollTimeout", null);
+    __publicField(this, "restoreScrollInfo", null);
     this.app = app;
     this.settingsStore = settingsStore;
     this.customOutputFormats = customOutputFormats;
@@ -109655,6 +109657,24 @@ var TimekeepMarkdownView = class extends import_obsidian9.MarkdownRenderChild {
   onunload() {
     this.root.unmount();
   }
+  saveEditorScroll() {
+    const activeEditor = this.app.workspace.activeEditor;
+    if (!activeEditor) return;
+    const editor = activeEditor.editor;
+    if (!editor) return;
+    this.restoreScrollInfo = editor.getScrollInfo();
+  }
+  restoreEditorScroll() {
+    if (this.restoreScrollInfo === null) return;
+    const activeEditor = this.app.workspace.activeEditor;
+    if (!activeEditor) return;
+    const editor = activeEditor.editor;
+    if (!editor) return;
+    editor.scrollTo(
+      this.restoreScrollInfo.left,
+      this.restoreScrollInfo.top
+    );
+  }
   /**
    * Attempts to save the file normally, if this fails it also attempts
    * to save a fallback file
@@ -109663,6 +109683,7 @@ var TimekeepMarkdownView = class extends import_obsidian9.MarkdownRenderChild {
    * @returns Promise of a boolean indicating weather the save was a success
    */
   async trySave(timekeep) {
+    this.saveEditorScroll();
     try {
       await this.save(timekeep);
       return true;
@@ -109674,6 +109695,11 @@ var TimekeepMarkdownView = class extends import_obsidian9.MarkdownRenderChild {
         console.error("Couldn't save timekeep fallback", e2);
       }
       return false;
+    } finally {
+      this.restoreScrollTimeout = setTimeout(
+        this.restoreEditorScroll.bind(this),
+        50
+      );
     }
   }
   /**
