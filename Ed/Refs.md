@@ -4,6 +4,9 @@ https://www.youtube.com/watch?v=cgOPg5cCr2g
 https://www.youtube.com/watch?v=AaCVP7zqOMU
 https://www.youtube.com/watch?v=6CJiM3E2mAA
 
+ZSH
+https://www.youtube.com/watch?v=eKkFbvanlP8
+
 ---
 ## Git's
 
@@ -77,6 +80,9 @@ https://github.com/ruppysuppy/Daily-Coding-Problem-Solutions
 DEV
 https://raster.saran13raj.com/
 https://micahkepe.com/blog/tmux-config/#preview-of-changes
+https://medium.com/@Smyekh/tuning-my-terminal-how-zinit-made-my-zsh-setup-fast-flexible-and-actually-fun-5f6450589003
+https://scottspence.com/posts/speeding-up-my-zsh-shell
+https://blog.askesis.pl/post/2017/04/how-to-debug-zsh-startup-time.html
 
 Misc
 https://www.programmingfonts.org/#maple
