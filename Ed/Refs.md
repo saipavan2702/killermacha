@@ -1,11 +1,19 @@
 ## YT's
 
-https://www.youtube.com/watch?v=cgOPg5cCr2g
-https://www.youtube.com/watch?v=AaCVP7zqOMU
+Project-ideas
 https://www.youtube.com/watch?v=6CJiM3E2mAA
+https://www.youtube.com/watch?v=muJf6SwEaa0
+https://www.youtube.com/watch?v=9i1gQ7w2V24
+
+Sources
+https://www.youtube.com/watch?v=cgOPg5cCr2g
 
 ZSH
 https://www.youtube.com/watch?v=eKkFbvanlP8
+
+Others
+https://www.youtube.com/watch?v=AaCVP7zqOMU
+https://www.youtube.com/watch?v=SRavkMUYWzo
 
 ---
 ## Git's
@@ -50,6 +58,7 @@ https://github.com/mehd-io/dotfiles
 https://github.com/yutkat/dotfiles
 https://github.com/marcogreiveldinger/.dotfiles
 https://github.com/Sin-cy/dotfiles
+https://github.com/ThePrimeagen
 
 
 #dotfiles  
@@ -57,6 +66,13 @@ https://github.com/Sin-cy/dotfiles
 
 DSA
 https://github.com/kunal-kushwaha/DSA-Bootcamp-Java
+
+Projects
+https://github.com/perghosh/Data-oriented-design
+https://gitlab.com/users/avey.dev/projects
+
+Others
+https://github.com/rodgzilla/epstein_email_obsidian_vault/
 
 ---
 
@@ -87,6 +103,17 @@ https://blog.askesis.pl/post/2017/04/how-to-debug-zsh-startup-time.html
 Misc
 https://www.programmingfonts.org/#maple
 https://github.com/roigoatzzz/Wallsync
+
+Project-ideas
+
+>[!info]
+>1. Dioxus - cross-platform app framework for Rust.
+>2. Servo - lightweight browser engine for IoT.
+>3. DNS blocklist.
+>4. Pocketbase - Auth, DB, Admin Dashboard and more in one file.
+>5. Betafish - AI to compile information about something across many social platforms.
+
+
 
 ---
 
