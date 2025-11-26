@@ -59,6 +59,7 @@ https://github.com/yutkat/dotfiles
 https://github.com/marcogreiveldinger/.dotfiles
 https://github.com/Sin-cy/dotfiles
 https://github.com/ThePrimeagen
+https://github.com/ForrestKnight
 
 
 #dotfiles  
@@ -70,9 +71,11 @@ https://github.com/kunal-kushwaha/DSA-Bootcamp-Java
 Projects
 https://github.com/perghosh/Data-oriented-design
 https://gitlab.com/users/avey.dev/projects
+https://github.com/itcodehery
 
 Others
 https://github.com/rodgzilla/epstein_email_obsidian_vault/
+https://github.com/nikitabobko/AeroSpace
 
 ---
 
