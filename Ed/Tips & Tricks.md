@@ -56,3 +56,40 @@ disown -a
 exit
 
 ```
+
+| `jobs`         | Lists all background tasks.                             |
+| -------------- | ------------------------------------------------------- |
+| `fg %<number>` | Brings a background job (e.g., `%3`) to the foreground. |
+| `lsof -i`      | Shows which process is using a specific network port.   |
+
+| `df -H`           | Shows disk usage in human-readable units (GB/MB).        |
+| ----------------- | -------------------------------------------------------- |
+| `du -sh`          | Shows size of each file/folder in the current directory. |
+| `free -h`         | Displays memory (RAM) usage in human-readable format.    |
+| `uname -a`        | Prints detailed system information.                      |
+| `whoami`          | Shows the current logged-in user.                        |
+| `id`              | Shows user ID, group ID, and groups.                     |
+| `uptime`          | Shows how long the system has been running.              |
+| `ping <host>`     | Basic network connectivity test.                         |
+| `wget <url>`      | Downloads a file from the internet.                      |
+| `curl <url>`      | Transfers data (commonly HTTP requests).                 |
+| `which <program>` | Shows the full path of an executable.                    |
+
+| `echo "<message>"`           | Prints a message; widely used in scripts.       |
+| ---------------------------- | ----------------------------------------------- |
+| `useradd <name>`             | Creates a new user.                             |
+| `su <user>`                  | Switches to another user.                       |
+| `sudo`                       | Runs a command with superuser privileges.       |
+| `systemctl status <service>` | Shows service status.                           |
+| `systemctl start <service>`  | Starts a service.                               |
+| `systemctl enable <service>` | Enables service to start on boot.               |
+| `journalctl -u <service>`    | Shows logs for a systemd service.               |
+| `history`                    | Shows recently executed commands.               |
+| `crontab -e`                 | Edit cron jobs.                                 |
+| `crontab -l`                 | List cron jobs.                                 |
+| `!!`                         | Re-runs the previous command.                   |
+| `Ctrl + R`                   | Reverse-search your command history.            |
+| `man <command>`              | Shows documentation/manual for a command.       |
+| `ssh-keygen`                 | Generates an SSH key pair.                      |
+| `awk`                        | Text processing (e.g., extract columns).        |
+| `sed`                        | Stream editing (e.g., find & replace in files). |

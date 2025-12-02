@@ -12,13 +12,13 @@
 - [ ] Source Code
 - [ ] Hackers
 - [ ] Pirates of Silicon Valley
-- [ ] The Darjeeling Limited
+- [x] The Darjeeling Limited ✅ 2025-12-02
 - [ ] The Great Hack
 - [ ] Under the Tuscan Sun
 - [ ] Prisoners
 - [ ] Scent of a woman
 - [ ] Irreversible
-- [ ] Midnight in Paris
+- [x] Midnight in Paris ✅ 2025-12-02
 - [ ] Lord of the rings
 - [x] Memories of murder ✅ 2025-06-26
 - [ ] Prisoners
@@ -93,4 +93,6 @@
 - [x] Vanilla Sky ✅ 2025-11-08
 
 
+https://nothing-to-watch.port80.ch/
+#ref 
 #personal 

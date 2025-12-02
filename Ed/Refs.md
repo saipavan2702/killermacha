@@ -60,6 +60,7 @@ https://github.com/marcogreiveldinger/.dotfiles
 https://github.com/Sin-cy/dotfiles
 https://github.com/ThePrimeagen
 https://github.com/ForrestKnight
+https://github.com/jblais493/nixos-config
 
 
 #dotfiles  
@@ -102,6 +103,7 @@ https://micahkepe.com/blog/tmux-config/#preview-of-changes
 https://medium.com/@Smyekh/tuning-my-terminal-how-zinit-made-my-zsh-setup-fast-flexible-and-actually-fun-5f6450589003
 https://scottspence.com/posts/speeding-up-my-zsh-shell
 https://blog.askesis.pl/post/2017/04/how-to-debug-zsh-startup-time.html
+https://joshblais.com/blog/
 
 Misc
 https://www.programmingfonts.org/#maple
@@ -115,6 +117,15 @@ Project-ideas
 >3. DNS blocklist.
 >4. Pocketbase - Auth, DB, Admin Dashboard and more in one file.
 >5. Betafish - AI to compile information about something across many social platforms.
+>6. Create single-page templates for different domains such as e-commerce, health, education and so on.
+>7. Create sample APIs using Chat GPT and open-source it
+> 8.  Create authentication and basic CRUD APIs and document them
+> 9.  Some Web3 projects, for example, add Wallet authentication using third parties to showcase that you know web3
+> 10.  Code sandboxes of working Firebase, Supabase and Appwrite databases in both the backend and frontend
+> 11.  Build NFTs marketplace using sample data and Moralis
+> 12.  Build Web3 apps using Thirdweb
+> 13.  Develop food recipes using Food APIs
+> 14.  Develop real-time trains detection using real-time APIs
 
 
 
@@ -130,3 +141,8 @@ https://explainshell.com/
 
 [free_resources](https://freedium.cfd/https%3A%2F%2Fmedium.com%2F%40dev.shefali7%2F100-free-resources-every-web-developer-must-try-2fa9fa499ef5%3Fsource%3Demail-f55e20219663-1715403283605-digest.reader-d1baaa8417a4-2fa9fa499ef5----0-99------------------49eecb04_6275_4777_ba35_a6f1bdd3fe96-1)
 [vim_shorts](https://freedium.cfd/https%3A%2F%2Fmedium.com%2F%40sebastiancarlos%2F50-vim-mode-tips-for-ide-users-f7b525a794b3%3Fsource%3Demail-f55e20219663-1717307780365-digest.reader-d0b105d10f0a-f7b525a794b3----0-102------------------64b30a5d_4964_40b9_b674_80513292f7cb-1)
+https://archimg.cc/
+https://www.commandlinefu.com/commands/browse
+https://github.com/dylanaraps/pure-sh-bible
+https://overthewire.org/wargames/
+https://github.com/sindresorhus/awesome

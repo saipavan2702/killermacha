@@ -34,6 +34,20 @@
               "icon": "lucide-file",
               "title": "Tips & Tricks"
             }
+          },
+          {
+            "id": "447ea1822dcf32c8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ed/Vim.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Vim"
+            }
           }
         ]
       }
@@ -228,15 +242,17 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "3c9abc6e4908ddc9",
+  "active": "14517261e54eeb4c",
   "lastOpenFiles": [
-    "Ed/Vim.md",
     "Ed/Tips & Tricks.md",
+    "Ed/Vim.md",
     "Ed/Refs.md",
     "Ed/Mock Int.md",
     "Ed/Misc.md",
+    "Personal/Things.md",
     "Time.md",
     "2025-11-12.md",
+    "Personal/Cinephile.md",
     "attachments/Exported image 20250529160058-0.png",
     "Ed/Dev/Excalidraw/React basics🎭.md",
     "attachments/Exported image 20250529160106-3.png",
@@ -251,7 +267,6 @@
     "Untitled.base",
     "orcl/Weekly report.md",
     "Ed/CS Topics/OS vro!.md",
-    "Personal/Cinephile.md",
     "new-book-template-clipper.json",
     "new-post-video-template-clipper.json",
     "Clippings/obsidian.md",
@@ -269,7 +284,6 @@
     "Ed/Dev/Next.js🌱.md",
     "Ed/Dev/React⚛️.md",
     "Ed/Dev/Socket.io🔌.md",
-    "Ed/Dev/style.CSS🪄.md",
     "Ed/Dev/Attachments/Pasted Image 20231213104704_203.png",
     "Ed/Dev/Attachments",
     "Ed/Dev/Excalidraw",
