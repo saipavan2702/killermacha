@@ -1,13 +1,13 @@
 {
   "palette": {
-    "seed": 6,
-    "selected": "adaptive-soft",
+    "seed": 2,
+    "selected": "adaptive-bright",
     "custom": "e12729-f37324-f8cc1b-72b043-007f4e"
   },
   "mixColors": true,
   "transition": true,
   "accessibility": {
-    "highTextContrast": false
+    "highTextContrast": true
   },
   "knownTags": {
     "basic": 1,
@@ -24,7 +24,9 @@
     "typescript": 12,
     "excalidraw": 13,
     "dotfiles": 14,
-    "clippings": 15
+    "clippings": 15,
+    "project": 16,
+    "idea": 17
   },
   "_version": 3
 }

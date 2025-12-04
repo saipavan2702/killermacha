@@ -7,5 +7,6 @@
   "autoConvertHtml": false,
   "livePreview": true,
   "attachmentFolderPath": "attachments",
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "propertiesInDocument": "visible"
 }

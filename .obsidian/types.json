@@ -16,7 +16,6 @@
     "TQ_show_id": "checkbox",
     "TQ_show_on_completion": "checkbox",
     "TQ_show_postpone_button": "checkbox",
-    "TQ_show_priority": "checkbox",
     "TQ_show_recurrence_rule": "checkbox",
     "TQ_show_scheduled_date": "checkbox",
     "TQ_show_start_date": "checkbox",
@@ -24,6 +23,6 @@
     "TQ_show_task_count": "checkbox",
     "TQ_show_tree": "checkbox",
     "TQ_show_urgency": "checkbox",
-    "location": "multitext"
+    "TQ_show_priority": "checkbox"
   }
 }
