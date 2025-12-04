@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "[\"TQ_show_postpone_button\"]",
+                "query": "tag:basicop",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,8 +84,7 @@
               "title": "Notebook Navigator"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -209,7 +208,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 343.5
+    "width": 343.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -228,7 +228,7 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "d304384b01ee7674",
+  "active": "3c9abc6e4908ddc9",
   "lastOpenFiles": [
     "upskill/DSA/Garph-WTF.md",
     "2025-11-12.md",
