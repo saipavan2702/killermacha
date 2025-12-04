@@ -6,7 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "FabReact"
+      "LiSquareStack",
+      "FabLinux",
+      "BoBxImages",
+      "FabDev",
+      "LiFolderCode"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -29,5 +33,24 @@
     "lucideIconPackType": "native",
     "debugMode": false,
     "useInternalPlugins": false
-  }
+  },
+  "mmacha": "FabSpeakap",
+  "orcl": "LiOctagonAlert",
+  "Eśpanol": "LiLanguages",
+  "mmacha/watches.md": "BoBxsTime",
+  "mmacha/aesthetic.md": "LiBean",
+  "mmacha/cc.md": "BoBxsCreditCard",
+  "mmacha/movies.md": "BoBxMoviePlay",
+  "mmacha/pswds.md": "BoBxsUserAccount",
+  "upskill": "LiArrowUpDown",
+  "upskill/CS Topics": "LiComputer",
+  "upskill/Dev/frontend-stack": "BoBxlRedux",
+  "upskill/Dev/backend-stack": "BoBxsServer",
+  "upskill/Dev/Excalidraw": "BoBxDizzy",
+  "upskill/Dev": "FabDev",
+  "upskill/DSA": "LiWorkflow",
+  "upskill/DSA/languages": "LiFolderCode",
+  "attachments": "BoBxImages",
+  "upskill/DSA/linux": "FabLinux",
+  "upskill/DSA/Algos": "LiSquareStack"
 }

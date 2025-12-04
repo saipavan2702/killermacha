@@ -21,5 +21,14 @@
   "encore-settings@@encore-translucency": true,
   "encore-settings@@encore-translucency-strength": 0.1,
   "encore-settings@@encore-translucency-blur-amount": 5,
-  "encore-settings@@encore-disable-grain": true
+  "encore-settings@@encore-disable-grain": true,
+  "Appearance-dark@@theme-dark-style-select": "theme-dark-background-default",
+  "Editor@@line-hover-indicator": false,
+  "Components@@tab-autohide": false,
+  "Components@@Ribbon-autohide": true,
+  "Components@@status-bar-autohide": true,
+  "Components@@tab-title-bar-autohide": false,
+  "Components@@nav-header-autohide": false,
+  "Components@@vault-profile-autohide": false,
+  "Appearance-dark@@card-layout-open-dark": false
 }
