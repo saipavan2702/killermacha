@@ -1,19 +1,3 @@
-- Find count of subarrays with sum equal to target
-
-```cpp
-int curr = 0;       // Current prefix sum
-int cnt = 0;        // Count of subarrays with sum == s
-unordered_map<int, int> freq;  
-freq[0] = 1;        // Base case: prefix sum 0 occurs once
-
-for (int i = 0; i < n; i++) {
-    curr += a[i];
-    cnt += freq[curr - s];
-    freq[curr]++;
-}
-```
-
-- Line-sweep Algorithm 
 The below problem will give the maximum lines are intersected when we sweep a line across the segments.
  ```cpp
 #include <vector>
