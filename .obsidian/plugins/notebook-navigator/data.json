@@ -1,6 +1,4 @@
 {
-  "fileVisibility": "supported",
-  "hiddenTags": [],
   "vaultProfiles": [
     {
       "id": "default",
@@ -13,7 +11,6 @@
       "shortcuts": []
     }
   ],
-  "vaultProfile": "default",
   "autoRevealActiveFile": true,
   "autoRevealIgnoreRightSidebar": true,
   "multiSelectModifier": "cmdCtrl",
@@ -24,17 +21,17 @@
   "showTooltips": false,
   "showTooltipPath": true,
   "desktopBackground": "separate",
-  "desktopScale": 1,
   "mobileBackground": "primary",
   "mobileScale": 1,
   "preventInvalidCharacters": true,
   "dateFormat": "MMM d, yyyy",
   "timeFormat": "h:mm a",
-  "skipAutoScroll": false,
+  "pinRecentNotesWithShortcuts": false,
   "collapseBehavior": "all",
   "smartCollapse": true,
   "showSectionIcons": true,
   "showShortcuts": true,
+  "skipAutoScroll": false,
   "showRecentNotes": true,
   "recentNotesCount": 5,
   "colorIconOnly": false,
@@ -76,7 +73,6 @@
   "showTagIcons": true,
   "showAllTagsFolder": true,
   "showUntagged": false,
-  "tagSortOrder": "alpha-asc",
   "keepEmptyTagsProperty": false,
   "defaultListMode": "standard",
   "defaultFolderSort": "modified-desc",
@@ -129,7 +125,6 @@
   "forceSquareFeatureImage": true,
   "useEmbeddedImageFallback": true,
   "externalIconProviders": {},
-  "searchProvider": "internal",
   "keyboardShortcuts": {
     "pane:move-up": [
       {
@@ -321,11 +316,8 @@
     "#64748b",
     "#78716c"
   ],
-  "recentColors": [],
   "lastShownVersion": "",
-  "latestKnownRelease": "1.9.0",
   "lastAnnouncedRelease": "1.8.6",
-  "lastReleaseCheckAt": 1764952618970,
   "rootFolderOrder": [],
   "rootTagOrder": [],
   "iconizeFormat": false

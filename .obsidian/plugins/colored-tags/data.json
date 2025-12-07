@@ -10,23 +10,16 @@
     "highTextContrast": true
   },
   "knownTags": {
-    "basic": 1,
-    "personal": 2,
-    "ref": 3,
     "basicop": 4,
-    "pswds": 5,
-    "repos": 6,
-    "re": 7,
-    "terminal": 8,
-    "yts": 9,
-    "tips": 10,
-    "vim": 11,
-    "typescript": 12,
-    "excalidraw": 13,
     "dotfiles": 14,
-    "clippings": 15,
-    "project": 16,
-    "idea": 17
+    "excalidraw": 13,
+    "personal": 2,
+    "pswds": 5,
+    "ref": 3,
+    "terminal": 8,
+    "tips": 10,
+    "typescript": 12
   },
-  "_version": 3
+  "tagColors": {},
+  "_version": 4
 }

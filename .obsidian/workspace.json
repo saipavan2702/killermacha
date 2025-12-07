@@ -20,8 +20,37 @@
               "icon": "lucide-file",
               "title": "Python"
             }
+          },
+          {
+            "id": "97d37ed10c1535a2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upskill/QoL configs/tmux.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "tmux"
+            }
+          },
+          {
+            "id": "687c69c9c4ee776d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upskill/DSA/languages/Java.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Java"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -213,6 +242,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "random-note:Open random note": false,
       "obsidian-map-view:Open map view": false,
       "bases:Create new base": false,
       "graph:Open graph view": false,
@@ -228,36 +258,37 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "be20d08ac3cee863",
+  "active": "687c69c9c4ee776d",
   "lastOpenFiles": [
-    "upskill/DSA/languages/Java.md",
-    "upskill/DSA/languages/GoLang.md",
-    "upskill/DSA/languages/Python.md",
+    "mmacha/aesthetic.md",
+    "mmacha/pswds.md",
+    "upskill/DSA/Misc.md",
+    "upskill/DSA/Garph.md",
+    "upskill/DSA/Algos/Line Sweep.md",
+    "upskill/DSA/SegmenTree.md",
+    "Eśpanol/Sentences.md",
     "upskill/Refs.md",
+    "upskill/QoL configs/tmux.md",
+    "upskill/QoL configs/aerospace.md",
+    "upskill/DSA/BackTrack.md",
+    "upskill/DSA/Linked List.md",
+    "upskill/linux/Vim.md",
+    "upskill/DSA/languages/Java.md",
+    "upskill/QoL configs",
+    "upskill/DSA/languages/Python.md",
+    "upskill/DSA/languages/GoLang.md",
     "upskill/Dev/backend-stack/Backend.md",
     "upskill/Dev/system design/Sys Des.md",
     "upskill/Mock Int.md",
     "upskill/DSA/Tree.md",
     "upskill/DSA/Sql.md",
-    "upskill/DSA/SegmenTree.md",
-    "upskill/DSA/BackTrack.md",
     "upskill/DSA/DSA.md",
-    "upskill/DSA/Garph.md",
-    "upskill/DSA/Linked List.md",
     "upskill/DSA/Oops!.md",
-    "upskill/DSA/Misc.md",
     "upskill/DSA/Algos/Misc.md",
-    "upskill/DSA/Algos/Line Sweep.md",
     "upskill/DSA/Algos/Binary search.md",
     "upskill/DSA/Algos/Sliding window.md",
-    "2025-11-12.md",
-    "mmacha/aesthetic.md",
-    "Hello.md",
-    "upskill/Dev/Excalidraw/React basics.md",
-    "upskill/DSA/linux/Tips & Tricks.md",
-    "upskill/CS Topics/Operating Sys.md",
     "upskill/DSA/Algos",
-    "upskill/DSA/linux",
+    "upskill/linux",
     "upskill/DSA/languages",
     "upskill/Dev/system design",
     "attachments/Pasted Image 20231213104704_065.png",
@@ -274,7 +305,6 @@
     "attachments",
     "Untitled.base",
     "new-book-template-clipper.json",
-    "new-post-video-template-clipper.json",
     "attachments/Pasted Image 20231213104704_203.png",
     "Untitled.canvas",
     "Untitled 1.canvas"

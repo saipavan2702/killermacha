@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "FabPython",
-      "FabJava",
-      "FabGolang",
-      "LiRepeat2",
-      "LiMonitorCheck"
+      "SiThealgorithms",
+      "TiArrowBackUp",
+      "SiCoop",
+      "SiVim",
+      "LiLayoutDashboard"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -51,17 +51,16 @@
   "upskill/DSA": "LiWorkflow",
   "upskill/DSA/languages": "LiFolderCode",
   "attachments": "BoBxImages",
-  "upskill/DSA/linux": "FabLinux",
-  "upskill/DSA/Algos": "LiSquareStack",
+  "upskill/DSA/Algos": "SiThealgorithms",
   "upskill/DSA/Algos/Line Sweep.md": "BoBxsNetworkChart",
   "upskill/DSA/Algos/Sliding window.md": "LiFileSliders",
   "upskill/DSA/Algos/Binary search.md": "LiBinary",
   "upskill/DSA/Algos/Misc.md": "LiArchiveRestore",
   "upskill/DSA/Misc.md": "LiArchiveRestore",
-  "upskill/DSA/Oops!.md": "LiArrowUpLeftFromCircle",
+  "upskill/DSA/Oops!.md": "SiCoop",
   "upskill/DSA/Linked List.md": "FiLink",
   "upskill/DSA/Garph.md": "LiGitGraph",
-  "upskill/DSA/BackTrack.md": "LiSendToBack",
+  "upskill/DSA/BackTrack.md": "TiArrowBackUp",
   "upskill/DSA/SegmenTree.md": "BoBxStrikethrough",
   "upskill/DSA/Sql.md": "BoBxlPostgresql",
   "upskill/DSA/Tree.md": "LiTrees",
@@ -69,5 +68,9 @@
   "upskill/Refs.md": "LiRepeat2",
   "upskill/DSA/languages/GoLang.md": "FabGolang",
   "upskill/DSA/languages/Java.md": "FabJava",
-  "upskill/DSA/languages/Python.md": "FabPython"
+  "upskill/DSA/languages/Python.md": "FabPython",
+  "upskill/linux": "FabLinux",
+  "upskill/QoL configs/tmux.md": "SiTmux",
+  "upskill/QoL configs/aerospace.md": "LiLayoutDashboard",
+  "upskill/linux/Vim.md": "SiVim"
 }
