@@ -2,6 +2,8 @@
 title: Tips
 tags:
   - tips
+  - "#bash"
+date: 2025-12-07
 ---
 
 

@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "CoMovingDesk",
       "SiSocketdotio",
       "TiNetwork",
       "RiReactjsLine",
-      "BoBxlTypescript",
-      "SiCss3"
+      "BoBxlTypescript"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -65,17 +65,12 @@
   "upskill/DSA/Sql.md": "BoBxlPostgresql",
   "upskill/DSA/Tree.md": "LiTrees",
   "upskill/Mock Int.md": "LiMonitorCheck",
-  "upskill/Refs.md": "LiRepeat2",
   "upskill/DSA/languages/GoLang.md": "FabGolang",
   "upskill/DSA/languages/Java.md": "FabJava",
   "upskill/DSA/languages/Python.md": "FabPython",
   "upskill/linux": "FabLinux",
-  "upskill/QoL configs/tmux.md": "SiTmux",
-  "upskill/QoL configs/aerospace.md": "LiLayoutDashboard",
   "upskill/linux/Vim.md": "SiVim",
-  "upskill/QoL configs/Nvim.md": "SiNeovim",
   "upskill/Projects": "RiProjectorLine",
-  "upskill/QoL configs": "SiQualys",
   "upskill/Projects/Ideas.md": "LiLightbulb",
   "upskill/Dev/system design": "SiDwavesystems",
   "upskill/Dev/system design/Sys Des.md": "TiGlassFull",
@@ -89,5 +84,9 @@
   "upskill/Dev/frontend-stack/typescript.md": "BoBxlTypescript",
   "upskill/Dev/Excalidraw/React basics.md": "RiReactjsLine",
   "upskill/Dev/backend-stack/Backend.md": "TiNetwork",
-  "upskill/Dev/backend-stack/Socket.io.md": "SiSocketdotio"
+  "upskill/Dev/backend-stack/Socket.io.md": "SiSocketdotio",
+  "upskill/QoL": "SiQualys",
+  "upskill/QoL/Workspace Improve.md": "CoMovingDesk",
+  "upskill/QoL/Configs.md": "LiLayoutDashboard",
+  "upskill/QoL/Refs.md": "LiRepeat2"
 }
