@@ -27,30 +27,58 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "upskill/QoL configs/tmux.md",
+                "file": "upskill/linux/Vim.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tmux"
+              "title": "Vim"
             }
           },
           {
-            "id": "687c69c9c4ee776d",
+            "id": "b34424a4496cb8e6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "upskill/DSA/languages/Java.md",
+                "file": "upskill/QoL configs/aerospace.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Java"
+              "title": "aerospace"
+            }
+          },
+          {
+            "id": "fed111b33fd962e1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upskill/Refs.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Refs"
+            }
+          },
+          {
+            "id": "4f944cf0aef1548b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "orcl/Weekly report.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Weekly report"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -254,39 +282,39 @@
       "daily-notes:Open today's daily note": false,
       "obsidian-importer:Open Importer": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "notebook-navigator:Notebook Navigator": false,
-      "omnisearch:Omnisearch": false
+      "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "687c69c9c4ee776d",
+  "active": "4f944cf0aef1548b",
   "lastOpenFiles": [
-    "mmacha/aesthetic.md",
-    "mmacha/pswds.md",
-    "upskill/DSA/Misc.md",
-    "upskill/DSA/Garph.md",
-    "upskill/DSA/Algos/Line Sweep.md",
-    "upskill/DSA/SegmenTree.md",
-    "Eśpanol/Sentences.md",
+    "orcl/ora-info.md",
     "upskill/Refs.md",
-    "upskill/QoL configs/tmux.md",
     "upskill/QoL configs/aerospace.md",
-    "upskill/DSA/BackTrack.md",
-    "upskill/DSA/Linked List.md",
-    "upskill/linux/Vim.md",
-    "upskill/DSA/languages/Java.md",
-    "upskill/QoL configs",
     "upskill/DSA/languages/Python.md",
-    "upskill/DSA/languages/GoLang.md",
+    "upskill/linux/Vim.md",
+    "upskill/Dev/backend-stack/Socket.io.md",
     "upskill/Dev/backend-stack/Backend.md",
+    "upskill/Dev/Excalidraw/React basics.md",
+    "upskill/Dev/frontend-stack/typescript.md",
+    "upskill/Dev/frontend-stack/style.CSS.md",
+    "upskill/Dev/frontend-stack/Redux.md",
+    "upskill/Dev/frontend-stack/React.md",
+    "upskill/Dev/frontend-stack/Next.js.md",
+    "upskill/Dev/frontend-stack/javascript.md",
+    "upskill/Dev/frontend-stack/Framer-Motion.md",
+    "upskill/linux/Tips & Tricks.md",
     "upskill/Dev/system design/Sys Des.md",
-    "upskill/Mock Int.md",
-    "upskill/DSA/Tree.md",
-    "upskill/DSA/Sql.md",
-    "upskill/DSA/DSA.md",
-    "upskill/DSA/Oops!.md",
-    "upskill/DSA/Algos/Misc.md",
-    "upskill/DSA/Algos/Binary search.md",
-    "upskill/DSA/Algos/Sliding window.md",
+    "upskill/CS Topics/Operating Sys.md",
+    "mmacha/pswds.md",
+    "upskill/Projects/Ideas.md",
+    "upskill/QoL configs/tmux.md",
+    "upskill/QoL configs/Nvim.md",
+    "upskill/Projects",
+    "mmacha/movies.md",
+    "upskill/DSA/languages/Java.md",
+    "mmacha/aesthetic.md",
+    "upskill/DSA/Misc.md",
+    "upskill/QoL configs",
     "upskill/DSA/Algos",
     "upskill/linux",
     "upskill/DSA/languages",
@@ -304,7 +332,6 @@
     "attachments/Pasted Image 20231213104704_082.png",
     "attachments",
     "Untitled.base",
-    "new-book-template-clipper.json",
     "attachments/Pasted Image 20231213104704_203.png",
     "Untitled.canvas",
     "Untitled 1.canvas"

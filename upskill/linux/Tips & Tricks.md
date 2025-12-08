@@ -1,3 +1,10 @@
+---
+title: Tips
+tags:
+  - tips
+---
+
+
 ```bash
 # Some tips and tricks I've picked up along the way
 # these are some things I use almost everyday

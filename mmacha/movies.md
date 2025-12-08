@@ -91,6 +91,10 @@
 - [ ] Doctor Zhivago
 - [ ] The Bridge on the River Kwai
 - [x] Vanilla Sky ✅ 2025-11-08
+- [ ] Lisa Frankenstein
+- [ ] Sleepless in Seattle
+- [ ] My Old ass
+- [ ] 10 things I hate about you
 
 
 https://nothing-to-watch.port80.ch/

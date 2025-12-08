@@ -1,7 +1,5 @@
 {
-  "editor:open-search": [],
-  "global-search:open": [],
-  "omnisearch:show-modal-infile": [
+  "editor:open-search": [
     {
       "modifiers": [
         "Mod"
@@ -9,7 +7,7 @@
       "key": "F"
     }
   ],
-  "omnisearch:show-modal": [
+  "global-search:open": [
     {
       "modifiers": [
         "Mod",

@@ -1,10 +1,5 @@
 ## YT's
 
-Project-ideas
-https://www.youtube.com/watch?v=6CJiM3E2mAA
-https://www.youtube.com/watch?v=muJf6SwEaa0
-https://www.youtube.com/watch?v=9i1gQ7w2V24
-
 Sources
 https://www.youtube.com/watch?v=cgOPg5cCr2g
 
@@ -35,13 +30,6 @@ https://github.com/JanDeDobbeleer/oh-my-posh/discussions/5578
 
 #terminal
 
-**NVIM**
-https://github.com/CodeAmbient/video-guides/tree/main/01-turning-vscode-into-neovim
-https://github.com/MeanderingProgrammer/render-markdown.nvim
-https://github.com/axieax/urlview.nvim
-https://github.com/SvenBroeckling/nvim-0.12-config
-
-
 DotFiles
 https://github.com/josean-dev/dev-environment-files 
 https://github.com/bashbunni
@@ -71,15 +59,10 @@ https://gitlab.com/theblackdon/black-don-os
 DSA
 https://github.com/kunal-kushwaha/DSA-Bootcamp-Java
 
-Projects
-https://github.com/perghosh/Data-oriented-design
-https://gitlab.com/users/avey.dev/projects
-https://github.com/itcodehery
-https://github.com/Mahi12333
+
 
 Others
 https://github.com/rodgzilla/epstein_email_obsidian_vault/
-https://github.com/nikitabobko/AeroSpace
 
 ---
 
@@ -102,7 +85,6 @@ https://github.com/ruppysuppy/Daily-Coding-Problem-Solutions
 
 DEV
 https://raster.saran13raj.com/
-https://micahkepe.com/blog/tmux-config/#preview-of-changes
 https://medium.com/@Smyekh/tuning-my-terminal-how-zinit-made-my-zsh-setup-fast-flexible-and-actually-fun-5f6450589003
 https://scottspence.com/posts/speeding-up-my-zsh-shell
 https://blog.askesis.pl/post/2017/04/how-to-debug-zsh-startup-time.html
@@ -111,24 +93,6 @@ https://joshblais.com/blog/
 Misc
 https://www.programmingfonts.org/#maple
 https://github.com/roigoatzzz/Wallsync
-
-Project-ideas
-
->[!info]
->1. Dioxus - cross-platform app framework for Rust.
->2. Servo - lightweight browser engine for IoT.
->3. DNS blocklist.
->4. Pocketbase - Auth, DB, Admin Dashboard and more in one file.
->5. Betafish - AI to compile information about something across many social platforms.
->6. Create single-page templates for different domains such as e-commerce, health, education and so on.
->7. Create sample APIs using Chat GPT and open-source it
-> 8.  Create authentication and basic CRUD APIs and document them
-> 9.  Some Web3 projects, for example, add Wallet authentication using third parties to showcase that you know web3
-> 10.  Code sandboxes of working Firebase, Supabase and Appwrite databases in both the backend and frontend
-> 11.  Build NFTs marketplace using sample data and Moralis
-> 12.  Build Web3 apps using Thirdweb
-> 13.  Develop food recipes using Food APIs
-> 14.  Develop real-time trains detection using real-time APIs
 
 
 
@@ -149,3 +113,34 @@ https://www.commandlinefu.com/commands/browse
 https://github.com/dylanaraps/pure-sh-bible
 https://overthewire.org/wargames/
 https://github.com/sindresorhus/awesome
+
+```css
+/* Set node colors in graph view */
+
+/* Node colors for dark  mode */
+.theme-dark .graph-view.color-fill {
+    color: green;
+    opacity: 1.0;
+}
+.theme-dark .graph-view.color-fill-unresolved {
+    color: red;
+    opacity: 1.0;
+}
+.theme-dark .graph-view.color-fill-tag {
+    color: yellow; 
+    opacity: 1.0;
+}
+/* Node colors for light mode */
+.theme-light .graph-view.color-fill {
+    color: green;
+    opacity: 1.0;
+}
+.theme-light .graph-view.color-fill-unresolved {
+    color: red;
+    opacity: 1.0;
+}
+.theme-light .graph-view.color-fill-tag {
+    color: blue;
+    opacity: 1.0;
+}
+```
