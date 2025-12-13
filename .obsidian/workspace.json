@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "upskill/DSA/languages/Python.md",
+                "file": "upskill/DSA/languages/GoLang.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Python"
+              "title": "GoLang"
             }
           },
           {
@@ -67,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "gitla",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -244,21 +244,22 @@
   },
   "active": "be20d08ac3cee863",
   "lastOpenFiles": [
-    "upskill/linux/Tips & Tricks.md",
-    "upskill/linux/Vim.md",
-    "upskill/QoL/Configs.md",
-    "upskill/Mock Int.md",
     "upskill/QoL/Workspace Improve.md",
-    "2025-11-12.md",
-    "2025-12-09.md",
     "upskill/QoL/Refs.md",
+    "upskill/linux/Vim.md",
+    "2025-12-09.md",
+    "2025-11-12.md",
+    "upskill/Projects/Ideas.md",
+    "upskill/QoL/Configs.md",
+    "upskill/DSA/languages/Python.md",
+    "upskill/linux/Tips & Tricks.md",
+    "upskill/Mock Int.md",
     "upskill/DSA/DSA.md",
     "upskill/QoL configs/Untitled",
     "upskill/QoL configs/Nvim.md",
     "upskill/QoL configs/tmux.md",
     "orcl/Weekly report.md",
     "orcl/ora-info.md",
-    "upskill/DSA/languages/Python.md",
     "upskill/Dev/backend-stack/Socket.io.md",
     "upskill/Dev/backend-stack/Backend.md",
     "upskill/Dev/Excalidraw/React basics.md",
@@ -270,7 +271,6 @@
     "upskill/Dev/frontend-stack/javascript.md",
     "upskill/Dev/frontend-stack/Framer-Motion.md",
     "upskill/Dev/system design/Sys Des.md",
-    "upskill/CS Topics/Operating Sys.md",
     "upskill/Projects",
     "upskill/QoL",
     "upskill/DSA/Algos",

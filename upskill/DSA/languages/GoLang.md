@@ -1,10 +1,6 @@
 Channels are Go’s way of letting **go routines communicate safely** with each other.  
 Think of a channel as a **pipe**: one go-routine sends values into it, another go routine receives values from it.
 
----
-
-## 🔹 Declaring Channels
-
 ```go
 // Unbuffered channel
 c := make(chan int)
@@ -15,10 +11,6 @@ c := make(chan string, 5)
 
 - **Unbuffered**: send blocks until a receive happens.  
 - **Buffered**: can hold up to `N` values before blocking.
-
----
-
-## 🔹 Sending & Receiving
 
 ```go
 c := make(chan int)
@@ -31,18 +23,12 @@ x := <-c
 fmt.Println(x) // 42
 ```
 
-📌 **Visualization**
-
 ```
 [ Goroutine A ] --42--> [ Channel ] --> [ Goroutine B ]
 ```
 
 - `c <- 42` puts `42` into the channel.  
 - `<-c` pulls the value out.
-
----
-
-## 🔹 Example: Unbuffered Channel
 
 ```go
 package main
@@ -67,16 +53,10 @@ func main() {
 }
 ```
 
-⏱ Timeline:
-
 ```
 Main goroutine  ──────── wait <─┐
 Worker goroutine ── send "Hello" ─┘
 ```
-
----
-
-## 🔹 Example: Buffered Channel
 
 ```go
 c := make(chan int, 2)
@@ -87,20 +67,12 @@ c <- 2   // still okay (buffer size = 2)
 // Receive
 fmt.Println(<-c) // 1
 fmt.Println(<-c) // 2
-```
 
-📌 **Visualization**
-
-```
 Channel buffer [ 1 | 2 ]  (capacity 2)
 ```
 
 - Sender can place 2 values before blocking.  
 - Once buffer is full, sender **blocks** until a receiver consumes.
-
----
-
-## 🔹 Closing Channels
 
 ```go
 c := make(chan int)
@@ -115,18 +87,12 @@ go func() {
 for v := range c {
     fmt.Println(v) // 0 1 2
 }
-```
 
-📌 **Visualization**
-
-```
 [ Sender ] → 0 → 1 → 2 → [close]
 [ Receiver ] reads until channel is closed
 ```
 
----
-
-## 🔹 Select Statement (Multiple Channels)
+##  Select Statement (Multiple Channels)
 
 ```go
 c1 := make(chan string)
@@ -145,17 +111,12 @@ case <-time.After(1 * time.Second):
 }
 ```
 
-📌 **Visualization**
-
 ```
 Wait for whichever channel responds first:
    ┌── c1 → "from c1"
    ├── c2 → "from c2"
    └── timeout (1s)
 ```
-
----
-
 ## 🔹 Channels in Your Crawler
 
 ```go
@@ -164,17 +125,11 @@ c := make(chan []byte)
 go fetchPage(url, c)   // worker fetches the page
 content := <-c         // main goroutine waits here
 parseHTML(url, content, &queue, &crawled, &db)
+
+// [ fetchPage goroutine ] → (HTML []byte) → [ channel ] → [ main goroutine ]
 ```
 
-📌 **Flow**
-
-```
-[ fetchPage goroutine ] → (HTML []byte) → [ channel ] → [ main goroutine ]
-```
-
-This ensures the main goroutine only parses once the page is fully fetched.
-
----
+This ensures the main go routine only parses once the page is fully fetched.
 
 ## ✅ Key Takeaways
 
