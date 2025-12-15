@@ -74,7 +74,6 @@
   "upskill/Projects/Ideas.md": "LiLightbulb",
   "upskill/Dev/system design": "SiDwavesystems",
   "upskill/Dev/system design/Sys Des.md": "TiGlassFull",
-  "upskill/linux/Tips & Tricks.md": "TiTooltip",
   "upskill/Dev/frontend-stack/Framer-Motion.md": "LiFramer",
   "upskill/Dev/frontend-stack/javascript.md": "RiJavascriptFill",
   "upskill/Dev/frontend-stack/Next.js.md": "SiNextdotjs",
@@ -88,5 +87,6 @@
   "upskill/QoL": "SiQualys",
   "upskill/QoL/Workspace Improve.md": "CoMovingDesk",
   "upskill/QoL/Configs.md": "LiLayoutDashboard",
-  "upskill/QoL/Refs.md": "LiRepeat2"
+  "upskill/QoL/Refs.md": "LiRepeat2",
+  "upskill/linux/Tips.md": "TiTooltip"
 }
