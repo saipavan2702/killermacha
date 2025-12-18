@@ -5,6 +5,7 @@
 - [ ] Raktha charitra
 - [ ] Uttama villain
 - [ ] Ozhivudivasathe Kali
+- [ ] Mahanadhi
 
 ## Holly   
 
@@ -68,7 +69,7 @@
 - [ ] The Proposal
 - [ ] When harry met sally
 - [ ] Love and other drugs
-- [ ] Nothing Hill
+- [x] Notting Hill
 - [x] Possession ✅ 2025-06-06
 - [x] Pride and Prejudice ✅ 2025-06-12
 - [x] Kumbalangi Nights ✅ 2025-06-12

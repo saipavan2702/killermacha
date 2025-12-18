@@ -8,7 +8,8 @@
       "hiddenTags": [],
       "hiddenFiles": [],
       "navigationBanner": null,
-      "shortcuts": []
+      "shortcuts": [],
+      "hiddenFileNamePatterns": []
     }
   ],
   "autoRevealActiveFile": true,
@@ -23,7 +24,6 @@
   "desktopBackground": "separate",
   "mobileBackground": "primary",
   "mobileScale": 1,
-  "preventInvalidCharacters": true,
   "dateFormat": "MMM d, yyyy",
   "timeFormat": "h:mm a",
   "pinRecentNotesWithShortcuts": false,
@@ -114,6 +114,7 @@
   "showFilePreview": true,
   "skipHeadingsInPreview": true,
   "skipCodeBlocksInPreview": true,
+  "stripHtmlInPreview": true,
   "previewProperties": [],
   "previewRows": 2,
   "showFeatureImage": true,
