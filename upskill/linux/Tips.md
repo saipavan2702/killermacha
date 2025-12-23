@@ -102,3 +102,109 @@ exit
 | `ssh-keygen`                 | Generates an SSH key pair.                      |
 | `awk`                        | Text processing (e.g., extract columns).        |
 | `sed`                        | Stream editing (e.g., find & replace in files). |
+
+##  Git CLI Quick Reference
+
+```bash
+git add .                    # Stage all changes
+git restore --staged <file>  # Unstage file
+git log                      # View commit log
+git reset <commit>           # Reset to commit
+git stash                    # Stash current changes
+git stash pop                # Reapply stashed changes
+git stash clear              # Delete all stashes
+
+git remote add origin <url>  # Add remote repo
+git push origin master       # Push to remote master
+
+git fetch --all --prune      # Fetch & clean old branches
+git pull upstream main       # Pull latest from upstream
+git reset --hard upstream/main  # Reset to upstream state
+
+git rebase -i <commit>       # Interactive rebase (e.g., squash commits)
+```
+
+
+
+### `<(command)` - Input Substitution (Read From)
+
+```bash
+# Creates a **readable pseudo-file** containing command output.
+diff <(sort file1) <(sort file2)
+```
+### `>(command)` - Output Substitution (Write To)
+
+```bash
+# Creates a **writable pseudo-file** that feeds into a command.
+./myprogram 2> >(tee errors.log)
+```
+
+| Syntax   | Direction         | Purpose                              | Mental Model                  |
+| -------- | ----------------- | ------------------------------------ | ----------------------------- |
+| `<(cmd)` | **Output → File** | Read command output as a file        | "Give me a file to read from" |
+| `>(cmd)` | **File → Input**  | Write to a file that feeds a command | "Give me a file to write to"  |
+
+**Old way:**
+```bash
+wget https://example.com/config.txt
+vi config.txt
+rm config.txt  # cleanup
+```
+
+**Cool way:**
+```bash
+vi <(curl https://example.com/config.txt)
+```
+
+Opens in Vim as editable buffer. Save with `:w myconfig.txt`. No download clutter.
+
+**Old way:**
+```bash
+sort file1 > /tmp/sorted1
+sort file2 > /tmp/sorted2
+diff /tmp/sorted1 /tmp/sorted2
+rm /tmp/sorted1 /tmp/sorted2
+```
+
+**Cool way:**
+```bash
+diff <(sort file1) <(sort file2)
+```
+
+```bash
+diff original.txt <(sed 's/rabbit/groundhog/I' original.txt)
+```
+
+Shows exactly what changes without touching `original.txt`. Safe experimentation FTW.
+
+
+```bash
+./myprogram 2> >(tee errors.log) | less
+```
+
+```bash
+tar cf - mydir | tee >(ssh server1 "tar xf -") >(ssh server2 "tar xf -") > /dev/null
+```
+
+**The breakdown:**
+- `tar cf -` → Archive to stdout (not a file)
+- `tee` → Split stream to multiple destinations
+- `>(ssh server1 "tar xf -")` → Appears as writable file, actually pipes over SSH
+- Both servers extract **in parallel** while receiving
+- `> /dev/null` → Discard the final copy (already went everywhere)
+
+
+```bash
+cat file1 file2 | vi -  # Opens as stdin buffer, awkward to save
+```
+
+**Process substitution (smooth):**
+```bash
+vi <(cat file1 file2)
+```
+Vim sees a "real file" it can edit and save normally. Full editor powers unlocked.
+
+- **Where they live:** `/dev/fd/11`, `/proc/self/fd/12` (temporary virtual files)
+- **Shell support:** Bash, Zsh, Ksh ✅ | POSIX sh ❌
+- **Lifetime:** Exists only during command execution
+- **Cleanup:** Automatic—no orphaned files

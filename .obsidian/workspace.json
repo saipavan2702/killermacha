@@ -13,15 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "orcl/Weekly report.md",
+                "file": "upskill/linux/Tips.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Weekly report"
+              "title": "Tips"
+            }
+          },
+          {
+            "id": "214a4709f689681e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upskill/linux/Vim.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Vim"
+            }
+          },
+          {
+            "id": "4599c604fc79c543",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upskill/DSA/DSA.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DSA"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -53,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "gitla",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -97,7 +126,7 @@
       {
         "id": "c863ad5af3f261ba",
         "type": "tabs",
-        "dimension": 61.90053285968028,
+        "dimension": 56.776263031275064,
         "children": [
           {
             "id": "e8a4823d28971416",
@@ -153,13 +182,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2025-11-12.md",
-                "followCursor": false,
+                "file": "upskill/QoL/Configs.md",
+                "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2025-11-12"
+              "title": "Outline of Configs"
             }
           },
           {
@@ -192,7 +221,7 @@
       {
         "id": "68bab7e96406684e",
         "type": "tabs",
-        "dimension": 38.09946714031972,
+        "dimension": 43.22373696872494,
         "children": [
           {
             "id": "677bd9dbbd89460a",
@@ -208,8 +237,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 343.5,
-    "collapsed": true
+    "width": 343.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -228,9 +256,17 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "e194cf15d6daf2d3",
+  "active": "214a4709f689681e",
   "lastOpenFiles": [
+    "upskill/DSA/DSA.md",
     "upskill/linux/Vim.md",
+    "upskill/Projects/Ideas.md",
+    "upskill/Mock Int.md",
+    "upskill/QoL/Configs.md",
+    "upskill/QoL/Workspace Improve.md",
+    "upskill/QoL/Refs.md",
+    "upskill/linux/Tips.md",
+    "orcl/Weekly report.md",
     "upskill/CS Topics/Operating Sys.md",
     "attachments/Pasted Image 20231213104704_187.png",
     "orcl/ora-info.md",
@@ -249,21 +285,13 @@
     "orcl/Work Dailies.md",
     "upskill/DSA/Sql.md",
     "upskill/DSA/SegmenTree.md",
-    "upskill/DSA/DSA.md",
     "upskill/DSA/Garph.md",
     "upskill/DSA/Linked List.md",
     "upskill/DSA/Misc.md",
     "upskill/DSA/Tree.md",
     "2025-12-09.md",
-    "upskill/Mock Int.md",
     "upskill/DSA/Oops!.md",
-    "upskill/QoL/Configs.md",
-    "upskill/QoL/Refs.md",
-    "upskill/QoL/Workspace Improve.md",
-    "upskill/linux/Tips.md",
     "upskill/DSA/languages/GoLang.md",
-    "orcl/Weekly report.md",
-    "upskill/DSA/Untitled.md",
     "upskill/QoL configs/Untitled",
     "upskill/Projects",
     "upskill/QoL",

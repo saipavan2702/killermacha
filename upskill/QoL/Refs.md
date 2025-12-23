@@ -59,6 +59,7 @@ https://www.youtube.com/watch?v=SRavkMUYWzo
 https://github.com/rodgzilla/epstein_email_obsidian_vault/
 https://stephango.com/vault
 https://forum.obsidian.md/t/my-home-base-tutorial/108759
+https://github.com/jrcasey/RSS_Agent
 
 Macos
 [bashbunni_terminal_notifier](https://gist.github.com/bashbunni/f6b04fc4703903a71ce9f70c58345106)

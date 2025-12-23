@@ -1,3 +1,11 @@
+---
+title: Vim
+tags:
+  - vim
+  - bash
+  - ref
+date: 2025-12-23
+---
 ## 🔀  Cursor Movement
 
 - `h` → move left
@@ -126,16 +134,6 @@ y+i+b(block) or any char yanks text inside the char, and using y+a yanks along w
 - Visual select number list, press `g Ctrl + a` to increment each line cumulatively
 
 ---
-
-## 📎 External Commands from Vim
-
-- `:!jq .` → Prettify JSON content  
-- `:!sort` → Sort selected lines  
-- `:!uniq` → Remove duplicate lines  
-- `:!<bash command>` → Run any terminal command
-
----
-
 ## ✨ Multiline Editing
 
 **Method 1: Using `:norm`**
@@ -297,32 +295,9 @@ zw              " Mark word as incorrect
 ```vim
 vim file1 file2
 :bn / :bp                " Switch buffer
-ggVGy                   " Copy entire file1
+ggVGy                    " Copy entire file1
 :e file2.txt             " Open target file
 p                        " Paste content
-```
-
----
-
-# 🧬 Git CLI Quick Reference
-
-```bash
-git add .                    # Stage all changes
-git restore --staged <file>  # Unstage file
-git log                      # View commit log
-git reset <commit>           # Reset to commit
-git stash                    # Stash current changes
-git stash pop                # Reapply stashed changes
-git stash clear              # Delete all stashes
-
-git remote add origin <url>  # Add remote repo
-git push origin master       # Push to remote master
-
-git fetch --all --prune      # Fetch & clean old branches
-git pull upstream main       # Pull latest from upstream
-git reset --hard upstream/main  # Reset to upstream state
-
-git rebase -i <commit>       # Interactive rebase (e.g., squash commits)
 ```
 
 ---
@@ -423,7 +398,6 @@ cwnew<Esc>   " Changes the current word to 'new'
 ```
 
 ---
-
 ### 🎯 The Power of `g` Commands
 
 - `g~` → Toggle case  
@@ -440,20 +414,15 @@ g~i"    " Toggle case inside double quotes
 ```
 
 ---
-
 ### 💾 Session Management
 
 Save and restore your Vim session easily:
-
+Perfect for picking up right where you left off.
 ```vim
 :mksession! ~/mysession.vim   " Save current session
 vim -S ~/mysession.vim        " Load session later
 ```
-
-Perfect for picking up right where you left off.
-
 ---
-
 ### 📁 File Explorer Shortcuts
 
 Use built-in file browsing inside Vim:
@@ -462,8 +431,468 @@ Use built-in file browsing inside Vim:
 - `:Vex` — Open in vertical split  
 - `:Sex` — Open in horizontal split  
 
-> 🚀 Tip: Use these to quickly navigate and open files without leaving Vim!
+---
+### Vim Shell 
+- **`!{motion}`** - Filter text through a shell command in normal mode
+- **`!`** (in visual mode) - Filter selected text through a shell command
+- **`x`** - Delete selected text (useful before filtering)
+- **`gv`** - Reselect the last visual selection
+- **`!nl`** - Number lines using the `nl` (number lines) command
+- **`!nl -w1 -s.`** - Custom formatting: width of 1, dot separator (e.g., `1.`, `2.`)
+- **`:%!uniq`** - Remove duplicate consecutive lines across entire file (`%`)
+- Note: `uniq` requires sorted input to work properly; for unsorted files, use `sort | uniq`
+- **`:r !{command}`** - Read (insert) output of shell command at cursor position
+- **`:0r !{command}`** - Insert at beginning of file
+- **`:-1r !{command}`** - Insert above current line
+#### Date/Time Insertion
+- **`:r !date`** - Insert current date and time
+- **`:r !date +%F`** - Insert date in YYYY-MM-DD format
+- **`:r !date '+%Y-%m-%d %H:%M:%S'`** - Custom timestamp format
+
+#### File Statistics
+- **`:r !wc -l -w -m filename.txt`** - Insert line count, word count, and character count
+  - `-l` = lines
+  - `-w` = words  
+  - `-m` = characters
+- **`:r !wc -l *.txt | sort -n`** - Count lines in multiple files and sort numerically
+
+#### Other Useful Examples
+- **`:r !ls -la`** - Insert directory listing
+- **`:r !whoami`** - Insert current username
+- **`:r !pwd`** - Insert current working directory
 
 
-_**References**_
-#ref 
+- **`:sort`** - Sort lines alphabetically
+- **`:sort u`** - Sort lines and remove duplicates  similar to **`:%!sort | uniq`**
+- **`:sort n`** - Sort numerically
+- **`:%s/\s\+/ /g`** - Replace multiple consecutive spaces with a single space
+  - `%` = entire file
+  - `\s\+` = one or more whitespace characters
+  - `/g` = global (all occurrences on each line)
+#### Column Command
+- **`:%!column -t`** - Format text into aligned columns
+- **`:%!column -t -s' '`** - Use space as delimiter
+  - `-t` = create table
+  - `-s' '` = set delimiter to space
+  - Aligns columns at first character of each word
+
+**Before:**
+```
+Name Age City
+John 25 NYC
+Jane 30 LA
+```
+
+**After `:%!column -t -s' '`:**
+```
+Name  Age  City
+John  25   NYC
+Jane  30   LA
+```
+You can chain shell commands using pipes:
+```vim
+:%!sort | uniq                    " Sort and remove duplicates
+:%!grep "pattern" | wc -l         " Count matching lines
+:%!cut -d',' -f1,3 | column -t    " Extract CSV columns and format
+```
+### Range-Based Operations
+- **`:10,20!sort`** - Sort lines 10-20 only
+- **`:.,.+5!nl`** - Number current line plus next 5 lines
+- **`:'<,'>!column -t`** - Format visual selection as table
+
+| Command Pattern | Purpose                 | Example                   |
+| --------------- | ----------------------- | ------------------------- |
+| `!{motion}`     | Filter through shell    | `!}sort` (sort paragraph) |
+| `:%!{cmd}`      | Filter entire file      | `:%!uniq`                 |
+| `:r !{cmd}`     | Read command output     | `:r !date`                |
+| `:'<,'>!{cmd}`  | Filter visual selection | `:'<,'>!column -t`        |
+| `gv`            | Reselect last selection | After `x`, use `gv!nl`    |
+###  Filter a visual selection through a shell command
+* `-w1` → number width = 1
+* `-s.` → separator is a dot (`1.` instead of `1\t`)
+###  Insert word/line/character count of files
+```vim
+:r !wc -l -w -m path/to/file
+```
+Outputs:
+```
+lines  words  characters  filename
+```
+
+```vim
+:r !wc -l *.txt | sort -n
+```
+**Explanation**
+* `-t` → create table
+* `-s' '` → split columns on spaces
+```vim
+!command      " filter selection
+gv            " reselect last visual
+:%!command    " run on entire file
+:r !command   " insert command output
+```
+
+Here are your polished examples for using stdin/stdout with Vim commands:
+
+## Piping Text Through External Commands
+
+**Basic Concept:**
+Lines passed as a text blob to stdin (newlines preserved)
+- Same as: `echo "line1\nline2\nline3" | cmd`
+- Command reads stdin however it wants
+- stdout (with newlines) replaces selection
+
+## Practical Examples
+
+**Quick Reference Lookups:**
+```vim
+:!tldr <C-r><C-w>
+```
+Get tldr documentation for word under cursor
+
+```vim
+:!man <C-r><C-w>
+```
+Open man page for word under cursor
+
+```vim
+:!curl cht.sh/<C-r><C-w>
+```
+Fetch cheat.sh lookup for word under cursor
+
+**Insert Current Date:**
+```vim
+:r !date
+```
+Insert current date at cursor position
+
+**Key Mapping:**
+- `<C-r><C-w>` - Insert word under cursor into command line
+
+---
+
+**Pro Tip:** This works with ANY command-line tool that reads from stdin and writes to stdout—perfect for text transformation, formatting, or quick lookups without leaving Vim!
+
+| Command        | What It Does                                | Use Case                                 |
+| -------------- | ------------------------------------------- | ---------------------------------------- |
+| `:!cmd`        | Run command, show output (pauses Vim)       | Quick shell access without leaving Vim   |
+| `:r !cmd`      | Insert command output below cursor          | Embed external data into your file       |
+| `:.!cmd`       | Filter current line through command         | Transform single line in-place           |
+| `:%!cmd`       | Filter entire buffer through command        | Apply transformation to whole file       |
+| `!!cmd`        | Filter current line (normal mode shortcut)  | Quick single-line filtering              |
+| `!{motion}cmd` | Filter motion range through command         | Transform text blocks (paragraphs, etc.) |
+| `:.w !cmd`     | Send current line to command (preview only) | Test command without modifying file      |
+| `:'<,'>w !cmd` | Send visual selection to command (preview)  | Preview transformation before applying   |
+
+---
+
+## 1. Execute and View: `:!cmd`
+
+### Syntax
+```vim
+:!cmd
+```
+
+### What It Does
+- Runs a shell command
+- Shows output in a separate screen
+- **Does not modify your file**
+- Pauses Vim until you press Enter
+- Returns you to editing afterward
+
+### Examples
+```vim
+:!ls -la                    " List directory contents
+:!git status                " Check git status
+:!python script.py          " Run a Python script
+:!make                      " Compile your project
+:!grep "TODO" *.txt         " Search across files
+```
+
+### 💡 Use When
+- Checking file system state
+- Running tests or builds
+- Quick shell command execution
+- Verifying external state before editing
+
+---
+
+## 2. Insert Output: `:r !cmd`
+
+### Syntax
+```vim
+:r !cmd         " Insert below current line
+:0r !cmd        " Insert at top of file
+:-1r !cmd       " Insert above current line
+```
+
+### What It Does
+- Executes shell command
+- **Inserts output into your buffer** at cursor position
+- Does not replace existing text
+
+### Examples
+```vim
+:r !date                           " Insert current timestamp
+:r !date +\%Y-\%m-\%d              " Insert formatted date
+:r !ls -1                          " Insert file listing
+:r !cat header.txt                 " Insert contents of another file
+:r !curl -s api.example.com/data   " Insert API response
+:r !seq 1 10                       " Insert numbers 1-10
+:r !figlet "Hello"                 " Insert ASCII art banner
+```
+
+### 💡 Use When
+- Adding timestamps to logs
+- Importing data from external sources
+- Generating boilerplate content
+- Embedding command output in documentation
+
+---
+
+## 3. Filter Single Line: `:.!cmd`
+
+### Syntax
+```vim
+:.!cmd          " Filter current line
+:5!cmd          " Filter line 5
+```
+
+### What It Does
+- Sends current line to shell command
+- **Replaces line with command output**
+- Works on specific line numbers
+
+### Examples
+```vim
+:.!tr '[:lower:]' '[:upper:]'      " Convert line to UPPERCASE
+:.!sort                             " Sort words on current line
+:.!rev                              " Reverse characters in line
+:.!base64                           " Encode line in base64
+:.!jq .                             " Format JSON on current line
+```
+
+### 💡 Use When
+- Quick single-line transformations
+- Testing filters before applying to larger ranges
+- Processing one record at a time
+
+---
+
+## 4. Filter Entire File: `:%!cmd`
+
+### Syntax
+```vim
+:%!cmd
+```
+
+### What It Does
+- Sends **entire buffer** to shell command
+- Replaces all content with command output
+- The `%` represents all lines (1 to $)
+
+### Examples
+```vim
+:%!sort                    " Sort all lines alphabetically
+:%!sort -u                 " Sort and remove duplicates
+:%!uniq                    " Remove consecutive duplicate lines
+:%!column -t               " Format as aligned table
+:%!jq .                    " Pretty-print entire JSON file
+:%!xmllint --format -      " Format XML document
+:%!python -m json.tool     " Format JSON using Python
+:%!tr -d '\r'              " Remove Windows carriage returns
+```
+
+### 💡 Use When
+- Reformatting entire documents
+- Sorting configuration files
+- Cleaning up data files
+- Applying global transformations
+
+---
+
+## 5. Quick Filter (Normal Mode): `!!cmd`
+
+### Syntax
+```vim
+!!cmd
+```
+
+### What It Does
+- **Normal mode shortcut** for `:.!cmd`
+- Filters current line through command
+- Faster than typing the colon commands
+
+### Examples
+```vim
+!!sort          " Sort current line
+!!uniq          " Remove duplicates from line
+!!rev           " Reverse the line
+!!nl            " Number the current line
+```
+
+### 💡 Use When
+- Quick line filtering in normal mode
+- Repetitive single-line operations
+- When your fingers are already on home row
+
+---
+
+## 6. Filter by Motion: `!{motion}cmd`
+
+### Syntax
+```vim
+!{motion}cmd
+```
+
+### What It Does
+- Filters text defined by a Vim motion
+- Powerful for operating on logical text blocks
+- Combines Vim's movement with shell power
+
+### Common Motions
+| Motion | What It Selects |
+|--------|----------------|
+| `ip` | Inner paragraph |
+| `}` | Until next blank line |
+| `G` | From cursor to end of file |
+| `gg` | From cursor to start of file |
+| `5j` | Current line + 5 lines down |
+
+### Examples
+```vim
+!ipsort              " Sort current paragraph
+!}column -t          " Format next paragraph as table
+!Gsort               " Sort from here to end of file
+!5jnl                " Number next 5 lines
+!ggtr 'a-z' 'A-Z'    " Uppercase from cursor to top
+```
+
+### 💡 Use When
+- Operating on logical code/text blocks
+- Filtering paragraphs or sections
+- Combining Vim's precise text selection with shell tools
+
+---
+
+## 7. Preview Without Replace: `:.w !cmd`
+
+### Syntax
+```vim
+:.w !cmd              " Preview current line
+:5,10w !cmd           " Preview lines 5-10
+```
+
+### What It Does
+- **Sends line to command but doesn't modify buffer**
+- Output appears below (like `:!cmd`)
+- Perfect for testing commands before applying them
+
+### Examples
+```vim
+:.w !wc -w                    " Count words in current line
+:.w !python                   " Test Python code on current line
+:.w !bash                     " Execute current line as shell script
+:1,10w !grep "error"          " Preview grep results on first 10 lines
+:.w !column -t                " See how table formatting would look
+```
+
+### 💡 Use When
+- Testing transformations before committing
+- Debugging complex shell commands
+- Checking command output without risk
+
+---
+
+## 8. Preview Selection: `:'<,'>w !cmd`
+
+### Syntax
+```vim
+:'<,'>w !cmd
+```
+
+### What It Does
+- Sends **visual selection** to command
+- Shows output without modifying buffer
+- The `'<,'>` automatically appears when you type `:` in visual mode
+
+### Examples
+```vim
+" Select text with v, V, or Ctrl-v, then:
+:'<,'>w !wc -l                " Count selected lines
+:'<,'>w !sort | uniq -c       " Preview sort + count duplicates
+:'<,'>w !python3              " Test selected Python code
+:'<,'>w !jq .                 " Preview JSON formatting
+:'<,'>w !column -t            " Preview table alignment
+```
+
+### 💡 Use When
+- Testing filters on specific text sections
+- Validating transformations before applying
+- Running selected code snippets
+
+---
+
+## Quick Reference: Filter vs Preview
+
+| Want to... | Command Pattern | Example |
+|------------|----------------|---------|
+| **Replace** single line | `:.!cmd` or `!!cmd` | `:.!sort` |
+| **Replace** entire file | `:%!cmd` | `:%!jq .` |
+| **Replace** selection | `:'<,'>!cmd` | Select text, then `:'<,'>!sort` |
+| **Replace** by motion | `!{motion}cmd` | `!ipsort` |
+| **Preview** single line | `:.w !cmd` | `:.w !wc -w` |
+| **Preview** selection | `:'<,'>w !cmd` | Select, then `:'<,'>w !column -t` |
+
+---
+
+## Practical Workflows
+
+### Workflow 1: Safe Table Formatting
+```vim
+" 1. Preview how it will look
+:'<,'>w !column -t
+
+" 2. If good, apply it
+:'<,'>!column -t
+```
+
+### Workflow 2: Test Then Apply JSON Formatting
+```vim
+" 1. Preview formatting
+:.w !jq .
+
+" 2. Apply to entire file
+:%!jq .
+```
+
+### Workflow 3: Sort Paragraph
+```vim
+" Position cursor in paragraph, then:
+!ipsort
+```
+
+---
+
+## Pro Tips
+
+✨ **The Difference Between `!` and `w !`**
+- `!` = **Filter** (replace text with output)
+- `w !` = **Preview** (send text to command, show output, keep original)
+
+✨ **Repeat Last Command**
+- After using any `!` command, press `.` to repeat it
+
+✨ **Undo is Your Friend**
+- All filter operations can be undone with `u`
+
+✨ **Use `gv` After Filtering**
+- Reselects the last visual selection for further operations
+
+✨ **Combine Commands with Pipes**
+```vim
+:%!sort | uniq -c | sort -rn    " Sort, count, then sort by frequency
+```
+
+
+#ref #vim

@@ -2,7 +2,7 @@
   "palette": {
     "seed": 2,
     "selected": "custom",
-    "custom": "000000-0d0d0d-1a1a1a-262626-333333-404040-4d4d4d-595959-666666-737373-808080-8c8c8c-999999-a6a6a6-b3b3b3-c0c0c0-cdcdcd-d9d9d9-e6e6e6-ffffff"
+    "custom": "5ccfe6-ffd173-d5ff80-95e6cb-f28799-ffad66-ffdfb3-dfbfff-f29e74-87d96c-80bfff-f27983-cccac2"
   },
   "mixColors": true,
   "transition": true,
@@ -23,6 +23,7 @@
     "ref": 3,
     "tips": 10,
     "typescript": 12,
+    "vim": 17,
     "workspace": 16
   },
   "tagColors": {},

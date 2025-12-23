@@ -78,6 +78,8 @@ https://github.com/CodeAmbient/video-guides/tree/main/01-turning-vscode-into-neo
 https://github.com/MeanderingProgrammer/render-markdown.nvim
 https://github.com/axieax/urlview.nvim
 https://github.com/SvenBroeckling/nvim-0.12-config
+https://github.com/Piotr1215/dotfiles
+https://github.com/JazzyGrim/dotfiles
 
 ---
 
