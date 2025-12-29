@@ -1,4 +1,10 @@
-
+---
+title: Python
+tags:
+  - lang
+  - "#python"
+date: 2025-12-24
+---
 In Python, default arguments are evaluated **once**, at function definition time.
 So this part  `list=[]` creates **one single list** that is shared across **all calls** of the function.
 ### Example of the bug:

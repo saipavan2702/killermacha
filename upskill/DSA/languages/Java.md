@@ -1,3 +1,10 @@
+---
+title: Java
+tags:
+  - "#lang"
+  - "#java"
+date: 2025-12-24
+---
 ## 🔒 Access Modifiers
 Access modifiers describe the **visibility** of classes, variables, and methods.
 
@@ -227,20 +234,13 @@ System.out.println(result); // Output: Happy Tuesday
 4. **Expressions must be exhaustive** (all cases covered)
 
 
-Got it — you want **all important Java data structures + how to initialize and use them**.
-Here is a clean, complete cheat sheet. 🚀
-
----
-
-## 1️⃣ **Arrays****
+## 1️⃣ **Arrays**
 
 ```java
 // Fixed-size array
 int[] nums = new int[5];             // default values = 0
 String[] names = {"Alice", "Bob"};   // initialized with values
 ```
-
----
 
 ## 2️⃣ **List (Ordered, allows duplicates)**
 
@@ -267,8 +267,6 @@ linkedList.add(20);
 ```java
 List<String> fixedList = List.of("a", "b", "c");
 ```
-
----
 
 ## 3️⃣ **Set (Unique elements, no duplicates)**
 
@@ -298,8 +296,6 @@ treeSet.add(1);
 treeSet.add(2);
 ```
 
----
-
 ## 4️⃣ **Map (key-value pairs)**
 
 ### **HashMap (no order guarantee)**
@@ -324,8 +320,6 @@ Map<Integer, String> linkedMap = new LinkedHashMap<>();
 import java.util.TreeMap;
 Map<String, Integer> sortedMap = new TreeMap<>();
 ```
-
----
 
 ## 5️⃣ **Queue & Deque**
 
@@ -359,8 +353,6 @@ dq.addFirst("X");
 dq.addLast("Y");
 ```
 
----
-
 ## 6️⃣ **Stack**
 
 > Java’s `Stack` is legacy — prefer `ArrayDeque`
@@ -372,8 +364,6 @@ stack.push("B");
 stack.pop(); // B
 ```
 
----
-
 ## 7️⃣ **LinkedList (as list + queue + deque)**
 
 ```java
@@ -381,8 +371,6 @@ LinkedList<String> ll = new LinkedList<>();
 ll.add("one");
 ll.addFirst("zero");
 ```
-
----
 
 ## 8️⃣ **Concurrent / Thread-Safe Structures**
 
@@ -393,8 +381,6 @@ Map<String, String> chm = new ConcurrentHashMap<>();
 import java.util.concurrent.CopyOnWriteArrayList;
 List<String> cowList = new CopyOnWriteArrayList<>();
 ```
-
----
 
 ## 🔥 Bonus: Pre-fill shortcuts
 

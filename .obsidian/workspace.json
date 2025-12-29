@@ -41,16 +41,72 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "upskill/DSA/DSA.md",
+                "file": "upskill/DSA/languages/GoLang.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DSA"
+              "title": "GoLang"
+            }
+          },
+          {
+            "id": "0dbaebaa927c3100",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upskill/DSA/languages/Python.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Python"
+            }
+          },
+          {
+            "id": "63c73292c642c325",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upskill/DSA/languages/Java.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Java"
+            }
+          },
+          {
+            "id": "9bcbd021562d0006",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upskill/QoL/Digi Tools.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Digi Tools"
+            }
+          },
+          {
+            "id": "76a105ea645f80fd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upskill/QoL/Configs.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Configs"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -182,13 +238,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "upskill/QoL/Configs.md",
+                "file": "upskill/QoL/Refs.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Configs"
+              "title": "Outline of Refs"
             }
           },
           {
@@ -256,16 +312,19 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "214a4709f689681e",
+  "active": "9bcbd021562d0006",
   "lastOpenFiles": [
-    "upskill/DSA/DSA.md",
+    "upskill/QoL/Configs.md",
+    "upskill/QoL/Refs.md",
+    "upskill/QoL/Digi Tools.md",
+    "upskill/DSA/languages/Java.md",
+    "upskill/DSA/languages/Python.md",
+    "upskill/DSA/languages/GoLang.md",
     "upskill/linux/Vim.md",
+    "upskill/linux/Tips.md",
+    "upskill/DSA/DSA.md",
     "upskill/Projects/Ideas.md",
     "upskill/Mock Int.md",
-    "upskill/QoL/Configs.md",
-    "upskill/QoL/Workspace Improve.md",
-    "upskill/QoL/Refs.md",
-    "upskill/linux/Tips.md",
     "orcl/Weekly report.md",
     "upskill/CS Topics/Operating Sys.md",
     "attachments/Pasted Image 20231213104704_187.png",
@@ -289,9 +348,6 @@
     "upskill/DSA/Linked List.md",
     "upskill/DSA/Misc.md",
     "upskill/DSA/Tree.md",
-    "2025-12-09.md",
-    "upskill/DSA/Oops!.md",
-    "upskill/DSA/languages/GoLang.md",
     "upskill/QoL configs/Untitled",
     "upskill/Projects",
     "upskill/QoL",

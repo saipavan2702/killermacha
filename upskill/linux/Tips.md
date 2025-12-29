@@ -3,6 +3,7 @@ title: Tips
 tags:
   - tips
   - "#bash"
+  - "#ref"
 date: 2025-12-07
 ---
 

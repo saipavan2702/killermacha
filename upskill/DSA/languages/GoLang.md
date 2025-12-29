@@ -1,3 +1,10 @@
+---
+title: Golang
+tags:
+  - "#lang"
+  - "#golang"
+date: 2025-12-24
+---
 Channels are Go’s way of letting **go routines communicate safely** with each other.  
 Think of a channel as a **pipe**: one go-routine sends values into it, another go routine receives values from it.
 
@@ -117,7 +124,7 @@ Wait for whichever channel responds first:
    ├── c2 → "from c2"
    └── timeout (1s)
 ```
-## 🔹 Channels in Your Crawler
+##  Channels in Your Crawler
 
 ```go
 c := make(chan []byte)

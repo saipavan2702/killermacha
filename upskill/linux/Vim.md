@@ -583,17 +583,9 @@ Insert current date at cursor position
 | `!{motion}cmd` | Filter motion range through command         | Transform text blocks (paragraphs, etc.) |
 | `:.w !cmd`     | Send current line to command (preview only) | Test command without modifying file      |
 | `:'<,'>w !cmd` | Send visual selection to command (preview)  | Preview transformation before applying   |
-
----
-
-## 1. Execute and View: `:!cmd`
-
-### Syntax
 ```vim
 :!cmd
 ```
-
-### What It Does
 - Runs a shell command
 - Shows output in a separate screen
 - **Does not modify your file**
@@ -609,24 +601,11 @@ Insert current date at cursor position
 :!grep "TODO" *.txt         " Search across files
 ```
 
-### 💡 Use When
-- Checking file system state
-- Running tests or builds
-- Quick shell command execution
-- Verifying external state before editing
-
----
-
-## 2. Insert Output: `:r !cmd`
-
-### Syntax
 ```vim
 :r !cmd         " Insert below current line
 :0r !cmd        " Insert at top of file
 :-1r !cmd       " Insert above current line
 ```
-
-### What It Does
 - Executes shell command
 - **Inserts output into your buffer** at cursor position
 - Does not replace existing text
@@ -642,23 +621,10 @@ Insert current date at cursor position
 :r !figlet "Hello"                 " Insert ASCII art banner
 ```
 
-### 💡 Use When
-- Adding timestamps to logs
-- Importing data from external sources
-- Generating boilerplate content
-- Embedding command output in documentation
-
----
-
-## 3. Filter Single Line: `:.!cmd`
-
-### Syntax
 ```vim
 :.!cmd          " Filter current line
 :5!cmd          " Filter line 5
 ```
-
-### What It Does
 - Sends current line to shell command
 - **Replaces line with command output**
 - Works on specific line numbers
@@ -672,21 +638,9 @@ Insert current date at cursor position
 :.!jq .                             " Format JSON on current line
 ```
 
-### 💡 Use When
-- Quick single-line transformations
-- Testing filters before applying to larger ranges
-- Processing one record at a time
-
----
-
-## 4. Filter Entire File: `:%!cmd`
-
-### Syntax
 ```vim
 :%!cmd
 ```
-
-### What It Does
 - Sends **entire buffer** to shell command
 - Replaces all content with command output
 - The `%` represents all lines (1 to $)
@@ -703,22 +657,9 @@ Insert current date at cursor position
 :%!tr -d '\r'              " Remove Windows carriage returns
 ```
 
-### 💡 Use When
-- Reformatting entire documents
-- Sorting configuration files
-- Cleaning up data files
-- Applying global transformations
-
----
-
-## 5. Quick Filter (Normal Mode): `!!cmd`
-
-### Syntax
 ```vim
 !!cmd
 ```
-
-### What It Does
 - **Normal mode shortcut** for `:.!cmd`
 - Filters current line through command
 - Faster than typing the colon commands
@@ -731,33 +672,20 @@ Insert current date at cursor position
 !!nl            " Number the current line
 ```
 
-### 💡 Use When
-- Quick line filtering in normal mode
-- Repetitive single-line operations
-- When your fingers are already on home row
-
----
-
-## 6. Filter by Motion: `!{motion}cmd`
-
-### Syntax
 ```vim
 !{motion}cmd
 ```
-
-### What It Does
 - Filters text defined by a Vim motion
 - Powerful for operating on logical text blocks
 - Combines Vim's movement with shell power
 
-### Common Motions
-| Motion | What It Selects |
-|--------|----------------|
-| `ip` | Inner paragraph |
-| `}` | Until next blank line |
-| `G` | From cursor to end of file |
-| `gg` | From cursor to start of file |
-| `5j` | Current line + 5 lines down |
+| Motion | What It Selects              |
+| ------ | ---------------------------- |
+| `ip`   | Inner paragraph              |
+| `}`    | Until next blank line        |
+| `G`    | From cursor to end of file   |
+| `gg`   | From cursor to start of file |
+| `5j`   | Current line + 5 lines down  |
 
 ### Examples
 ```vim
@@ -768,22 +696,10 @@ Insert current date at cursor position
 !ggtr 'a-z' 'A-Z'    " Uppercase from cursor to top
 ```
 
-### 💡 Use When
-- Operating on logical code/text blocks
-- Filtering paragraphs or sections
-- Combining Vim's precise text selection with shell tools
-
----
-
-## 7. Preview Without Replace: `:.w !cmd`
-
-### Syntax
 ```vim
 :.w !cmd              " Preview current line
 :5,10w !cmd           " Preview lines 5-10
 ```
-
-### What It Does
 - **Sends line to command but doesn't modify buffer**
 - Output appears below (like `:!cmd`)
 - Perfect for testing commands before applying them
@@ -797,21 +713,9 @@ Insert current date at cursor position
 :.w !column -t                " See how table formatting would look
 ```
 
-### 💡 Use When
-- Testing transformations before committing
-- Debugging complex shell commands
-- Checking command output without risk
-
----
-
-## 8. Preview Selection: `:'<,'>w !cmd`
-
-### Syntax
 ```vim
 :'<,'>w !cmd
 ```
-
-### What It Does
 - Sends **visual selection** to command
 - Shows output without modifying buffer
 - The `'<,'>` automatically appears when you type `:` in visual mode
@@ -826,29 +730,14 @@ Insert current date at cursor position
 :'<,'>w !column -t            " Preview table alignment
 ```
 
-### 💡 Use When
-- Testing filters on specific text sections
-- Validating transformations before applying
-- Running selected code snippets
-
----
-
-## Quick Reference: Filter vs Preview
-
-| Want to... | Command Pattern | Example |
-|------------|----------------|---------|
-| **Replace** single line | `:.!cmd` or `!!cmd` | `:.!sort` |
-| **Replace** entire file | `:%!cmd` | `:%!jq .` |
-| **Replace** selection | `:'<,'>!cmd` | Select text, then `:'<,'>!sort` |
-| **Replace** by motion | `!{motion}cmd` | `!ipsort` |
-| **Preview** single line | `:.w !cmd` | `:.w !wc -w` |
-| **Preview** selection | `:'<,'>w !cmd` | Select, then `:'<,'>w !column -t` |
-
----
-
-## Practical Workflows
-
-### Workflow 1: Safe Table Formatting
+| Want to...              | Command Pattern     | Example                           |
+| ----------------------- | ------------------- | --------------------------------- |
+| **Replace** single line | `:.!cmd` or `!!cmd` | `:.!sort`                         |
+| **Replace** entire file | `:%!cmd`            | `:%!jq .`                         |
+| **Replace** selection   | `:'<,'>!cmd`        | Select text, then `:'<,'>!sort`   |
+| **Replace** by motion   | `!{motion}cmd`      | `!ipsort`                         |
+| **Preview** single line | `:.w !cmd`          | `:.w !wc -w`                      |
+| **Preview** selection   | `:'<,'>w !cmd`      | Select, then `:'<,'>w !column -t` |
 ```vim
 " 1. Preview how it will look
 :'<,'>w !column -t
@@ -857,7 +746,6 @@ Insert current date at cursor position
 :'<,'>!column -t
 ```
 
-### Workflow 2: Test Then Apply JSON Formatting
 ```vim
 " 1. Preview formatting
 :.w !jq .
@@ -866,15 +754,11 @@ Insert current date at cursor position
 :%!jq .
 ```
 
-### Workflow 3: Sort Paragraph
 ```vim
 " Position cursor in paragraph, then:
 !ipsort
 ```
 
----
-
-## Pro Tips
 
 ✨ **The Difference Between `!` and `w !`**
 - `!` = **Filter** (replace text with output)
@@ -882,12 +766,6 @@ Insert current date at cursor position
 
 ✨ **Repeat Last Command**
 - After using any `!` command, press `.` to repeat it
-
-✨ **Undo is Your Friend**
-- All filter operations can be undone with `u`
-
-✨ **Use `gv` After Filtering**
-- Reselects the last visual selection for further operations
 
 ✨ **Combine Commands with Pipes**
 ```vim

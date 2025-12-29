@@ -4,6 +4,7 @@ tags:
   - "#dsa"
   - "#project"
   - "#qol"
+  - "#ref"
 date: 2025-12-08
 ---
 ## DSA
@@ -25,6 +26,8 @@ https://github.com/afazio1/http-server-c/blob/main/src/main.c
 https://github.com/SelfMadeEngineerCode/ride-sharing
 https://github.com/AmanTahiliani/PeerNotes/blob/main/file_peer/peer_service.py
 https://github.com/devhulk/simple-colly-example/blob/main/crawler/crawler.go
+https://github.com/progFilthi
+https://github.com/mingodando
 
 
 ---
@@ -36,6 +39,7 @@ https://www.youtube.com/watch?v=cgOPg5cCr2g
 Git's
 https://github.com/sindresorhus/awesome
 https://github.com/dylanaraps/pure-sh-bible
+https://github.com/indently/zed_setup/tree/main
 
 Web's
 https://www.commandlinefu.com/commands/browse
