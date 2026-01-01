@@ -382,3 +382,4 @@ if __name__ == "__main__":
     complete_monitoring_workflow()
 ```
 
+[[Design Patterns]] showcases the information related to the design principles needs to be followed while writing clean code.

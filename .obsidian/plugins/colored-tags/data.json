@@ -28,6 +28,7 @@
     "qol": 16,
     "ref": 3,
     "sql": 20,
+    "sysdes": 21,
     "tips": 10,
     "typescript": 12,
     "vim": 17,

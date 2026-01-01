@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "TiGridPattern",
       "TiBrandFunimation",
       "SiMyanimelist",
       "CoMovingDesk",
-      "SiSocketdotio",
-      "TiNetwork"
+      "SiSocketdotio"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -71,8 +71,6 @@
   "upskill/linux/Vim.md": "SiVim",
   "upskill/Projects": "RiProjectorLine",
   "upskill/Projects/Ideas.md": "LiLightbulb",
-  "upskill/Dev/system design": "SiDwavesystems",
-  "upskill/Dev/system design/Sys Des.md": "TiGlassFull",
   "upskill/Dev/frontend-stack/Framer-Motion.md": "LiFramer",
   "upskill/Dev/frontend-stack/javascript.md": "RiJavascriptFill",
   "upskill/Dev/frontend-stack/Next.js.md": "SiNextdotjs",
@@ -89,5 +87,8 @@
   "upskill/linux/Tips.md": "TiTooltip",
   "upskill/QoL/Digi Tools.md": "CoMovingDesk",
   "upskill/DSA/Sql.md": "BoBxlPostgresql",
-  "mmacha/anime.md": "TiBrandFunimation"
+  "mmacha/anime.md": "TiBrandFunimation",
+  "upskill/system design": "SiDwavesystems",
+  "upskill/system design/Sys Des.md": "TiGlassFull",
+  "upskill/system design/Design Patterns.md": "TiGridPattern"
 }
