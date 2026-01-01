@@ -23,6 +23,7 @@ https://www.youtube.com/watch?v=eKkFbvanlP8
 Git's
 https://github.com/JanDeDobbeleer/oh-my-posh/discussions/5578
 https://github.com/vraravam/dotfiles/tree/master
+https://gist.github.com/elliottminns/09a598082d77f795c88e93f7f73dba61
 
 Blogs
 https://medium.com/@Smyekh/tuning-my-terminal-how-zinit-made-my-zsh-setup-fast-flexible-and-actually-fun-5f6450589003

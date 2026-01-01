@@ -10,6 +10,7 @@
     "highTextContrast": true
   },
   "knownTags": {
+    "anime": 1,
     "bash": 1,
     "basicop": 4,
     "dotfiles": 14,
@@ -19,15 +20,18 @@
     "java": 17,
     "jot": 16,
     "lang": 17,
+    "movies": 18,
     "personal": 2,
     "project": 15,
     "pswds": 5,
     "python": 18,
     "qol": 16,
     "ref": 3,
+    "sql": 20,
     "tips": 10,
     "typescript": 12,
     "vim": 17,
+    "watchlist": 21,
     "workspace": 16
   },
   "tagColors": {},

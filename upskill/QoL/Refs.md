@@ -18,6 +18,12 @@ https://github.com/ruppysuppy/Daily-Coding-Problem-Solutions
 Git's
 https://github.com/kunal-kushwaha/DSA-Bootcamp-Java
 
+
+Web's
+https://docs.google.com/document/d/181iDfp5IjOikFSL7bHNNaq-n99Rld9mJ-c-asKf4Bks/edit?pli=1&tab=t.0#heading=h.5ym0riqyzk
+https://www.notion.so/SELF-TEACHING-JAVA-SPRING-26f82d2afbac807f8edeed9b17f9b6b3#26f82d2afbac8097a98cfdc0d83763aa
+
+
 ---
 ## Projects 
 
@@ -30,6 +36,7 @@ https://github.com/progFilthi
 https://github.com/mingodando
 
 
+
 ---
 ## Helpers 
 
@@ -40,6 +47,8 @@ Git's
 https://github.com/sindresorhus/awesome
 https://github.com/dylanaraps/pure-sh-bible
 https://github.com/indently/zed_setup/tree/main
+https://github.com/ossu/computer-science
+https://github.com/kamranahmedse/developer-roadmap
 
 Web's
 https://www.commandlinefu.com/commands/browse
@@ -81,6 +90,7 @@ https://github.com/roigoatzzz/Wallsync
 
 Books
 https://www.reddit.com/r/zlibrary/wiki/index/access/
+https://craftinginterpreters.com/
 
 Tools
 https://transform.tools/
@@ -88,6 +98,9 @@ https://ray.so/
 https://devdocs.io/
 https://devhints.io/
 https://raster.saran13raj.com/
+
+Channel stream
+https://github.com/iptv-org/iptv
 
 ---
 

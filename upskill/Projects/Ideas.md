@@ -10,6 +10,7 @@ https://github.com/perghosh/Data-oriented-design
 https://gitlab.com/users/avey.dev/projects
 https://github.com/itcodehery
 https://github.com/Mahi12333
+https://github.com/florinpop17/app-ideas
 
 YT's
 https://www.youtube.com/watch?v=6CJiM3E2mAA

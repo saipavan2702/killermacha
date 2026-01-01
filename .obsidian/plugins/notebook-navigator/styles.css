@@ -290,6 +290,12 @@ body {
     border: none;
 }
 
+/* Obsidian 1.11+ iOS: view container background */
+/* Targets Obsidian's `.view-content` wrapper to ensure the area behind the navigator matches the mobile pane background. */
+.view-content.notebook-navigator.notebook-navigator-obsidian-1-11-plus-ios {
+    background-color: var(--nn-theme-mobile-bg);
+}
+
 /* Main container - establishes the plugin's layout foundation */
 .notebook-navigator {
     height: 100%;
@@ -388,15 +394,27 @@ body {
     color: var(--text-on-accent);
     padding: 10px 16px;
     border-radius: 10px;
+    border: none;
+    cursor: pointer;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
+    font: inherit;
+    text-align: left;
     opacity: 1;
     transition:
         opacity 0.4s ease,
         transform 0.4s ease;
+}
+
+.nn-update-banner:focus-visible {
+    outline: none;
+    box-shadow:
+        0 0 0 2px var(--background-primary),
+        0 0 0 4px var(--interactive-accent),
+        0 8px 18px rgba(0, 0, 0, 0.18);
 }
 
 .nn-update-banner.fade-out {
@@ -1320,7 +1338,7 @@ body {
     left: 20%;
     right: 20%;
     bottom: 3px;
-    height: 6px;
+    height: 5px;
     background-color: var(--nn-theme-divider-border-color);
     border-radius: 3px;
     pointer-events: none;
@@ -4094,10 +4112,23 @@ body.nn-resizing {
     --nn-mobile-safe-area-bottom: env(safe-area-inset-bottom, 8px);
 }
 
+/* Obsidian 1.11+ iOS: bottom padding inside the navigator viewport */
+/* Applied to the internal split container so the bottom edge doesn't touch the view chrome and the toolbar shadow can render into the padding (8px matches the top spacer). */
+.notebook-navigator-obsidian-1-11-plus-ios .nn-split-container {
+    padding-bottom: 8px;
+    box-sizing: border-box;
+}
+
 /* iOS (Obsidian 1.11+) bottom fade gradient - overlays list content behind the toolbar */
 .notebook-navigator-obsidian-1-11-plus-ios .nn-navigation-pane,
 .notebook-navigator-obsidian-1-11-plus-ios .nn-list-pane {
     position: relative;
+}
+
+/* Allow the iOS glass toolbar shadow to render into the split container padding */
+.notebook-navigator-obsidian-1-11-plus-ios .nn-navigation-pane,
+.notebook-navigator-obsidian-1-11-plus-ios .nn-list-pane {
+    overflow: visible;
 }
 
 .notebook-navigator-obsidian-1-11-plus-ios .nn-navigation-pane {
@@ -6065,6 +6096,8 @@ settings:
         format: hex
         default-light: '#'
         default-dark: '#'
+    -
+    -
         id: nn-theme-list-separator-color
         title: List separator color
         description: Divider line color between files.

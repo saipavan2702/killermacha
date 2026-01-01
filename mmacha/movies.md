@@ -1,3 +1,11 @@
+---
+title: movie watchlist
+date: 2026-01-01
+tags:
+  - movies
+  - "#watchlist"
+  - "#personal"
+---
 ##  Not holly
 
 - [ ] Shiva
@@ -7,7 +15,7 @@
 - [ ] Ozhivudivasathe Kali
 - [ ] Mahanadhi
 
-## Holly   
+## Holly 
 
 - [ ] Schindler's list
 - [ ] Source Code
@@ -78,12 +86,6 @@
 - [x] Dead poets society ✅ 2025-06-12
 - [x] Eyes wide shut ✅ 2025-06-12
 - [x] Serendipity ✅ 2025-06-12
-- [ ] Creature Commandos (anime)
-- [ ] Atlantis the Lost empire (anime)
-- [ ] Treasure planet (anime)
-- [ ] Anastasia (anime)
-- [ ] The Princess and Frog (anime)
-- [ ] Mulan (anime)
 - [x] The Usual Suspects ✅ 2025-09-08
 - [x] Scarface ✅ 2025-08-27
 - [ ] In the mood for love
@@ -96,8 +98,60 @@
 - [ ] Sleepless in Seattle
 - [ ] My Old ass
 - [ ] 10 things I hate about you
+- [ ] Amelia
+- [ ] Honey Don’t
+- [ ] The Talented Mr. Ripley
+- [ ] Dog Day Afternoon
+- [ ] Blue Valentine
+- [ ] The Philadelphia Story
+- [ ] Princess Bride
+- [ ] Alfred Hitchcock Vertigo
+- [ ] The Silence of the Lambs
+- [ ] Probably all that jazz
+- [ ] Harikiri
+- [ ] Seven Samurai
+- [ ] Magnificent seven
+- [ ] Onibaba
+- [ ] Red beard
+- [ ] Love exposure
+- [ ] Battle royale
+- [ ] The Return
+- [ ] Conclave
+- [ ] 28 years later
+- [ ] The substance
+- [ ] Gangster Squad
+- [ ] The fighter
+- [ ] Her
+- [ ] Goodfellas
+- [ ] The Irishman
+- [ ] Manchester by the sea
+- [ ] AfterSun
+- [ ] The Lobster
+- [ ] Magnolia
+- [ ] Ikiru
+- [ ] Million Dollar Baby
+- [ ] Primal Fear
+- [ ] The Machinist
+- [ ] End of Watch
+- [ ] Full Metal Jacket
+- [ ] 12 angry men
+- [ ] Stalker
+- [ ] Whiplash
+- [ ] Contact
+- [ ] La Haine
+- [ ] Triangle
+
+## Series
+
+- [ ] Good doctor
+- [ ] Breaking bad
+- [ ] Better call Saul
+- [ ] Shogun
+- [ ] The Boys
+- [ ] The Office
 
 
 https://nothing-to-watch.port80.ch/
 #ref 
 #personal 
+#movies
