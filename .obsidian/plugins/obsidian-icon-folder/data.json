@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "SiPopos",
       "TiGridPattern",
       "TiBrandFunimation",
       "SiMyanimelist",
-      "CoMovingDesk",
-      "SiSocketdotio"
+      "CoMovingDesk"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -90,5 +90,6 @@
   "mmacha/anime.md": "TiBrandFunimation",
   "upskill/system design": "SiDwavesystems",
   "upskill/system design/Sys Des.md": "TiGlassFull",
-  "upskill/system design/Design Patterns.md": "TiGridPattern"
+  "upskill/system design/Design Patterns.md": "TiGridPattern",
+  "upskill/CS Topics/Operating Sys.md": "SiPopos"
 }
