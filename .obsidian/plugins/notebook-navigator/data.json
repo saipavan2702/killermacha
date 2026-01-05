@@ -12,6 +12,7 @@
       "hiddenFileNamePatterns": []
     }
   ],
+  "vaultTitle": "navigation",
   "autoRevealActiveFile": true,
   "autoRevealIgnoreRightSidebar": true,
   "multiSelectModifier": "cmdCtrl",
@@ -39,7 +40,6 @@
   "colorIconOnly": false,
   "toolbarVisibility": {
     "navigation": {
-      "shortcuts": true,
       "expandCollapse": true,
       "hiddenItems": true,
       "rootReorder": true,

@@ -83,3 +83,77 @@ But as for threads, they are created by sharing same code and data but they have
 User level threads are managed by user level library. These are typically fast. Context switching is faster too. If a user level thread is blocked then entire process gets blocked.
  
 But for kernel level they are managed by operating system and accessed via system call. Context switching is slower compared to user level.
+
+## OSI Model
+
+To explain how the **OSI (Open Systems Interconnection)** model maps to a modern **Operating System (OS)**, it is helpful to divide the system into two main regions: **User Space** (where your apps live) and **Kernel Space** (the "engine" of the OS).
+
+In a typical OS like Windows or Linux, the "lower" layers are handled by the hardware and kernel for speed and security, while the "higher" layers are handled by application code and libraries.
+
+### **The User Space Layers (Software Layers)**
+
+These layers are typically handled by the application itself or high-level libraries (like OpenSSL or Chrome's rendering engine).
+
+#### **Layer 7: Application**
+
+* **OS Role:** Provides the interface for the user. The OS provides **System Calls** (like `socket()`) that allow apps to reach the network.
+* **Example:** A web browser (Google Chrome) using the **HTTP** protocol to request a webpage.
+
+#### **Layer 6: Presentation**
+
+* **OS Role:** Ensures data is in a readable format. The OS often provides shared libraries for encryption and compression.
+* **Example:** **SSL/TLS** encryption. When you see "HTTPS," this layer is turning your private data into an unreadable "cypher" before it leaves your computer.
+
+#### **Layer 5: Session**
+
+* **OS Role:** Manages the "dialogue" between two computers. It starts, stops, and restarts connections.
+* **Example:** **NetBIOS** or **RPC** (Remote Procedure Call). If your Wi-Fi momentarily drops while downloading a file, this layer handles the "checkpoint" so the download can resume where it left off.
+
+---
+
+### **The Kernel Space Layers (The Heart of the OS)**
+
+These layers are almost entirely managed by the OS Kernel. They are "low-level" and run in a privileged mode to prevent crashes and security breaches.
+
+#### **Layer 4: Transport**
+
+* **OS Role:** Handles end-to-end communication and error checking. This is the first layer where data is "chopped up" into segments.
+* **Example:** **TCP** (Transmission Control Protocol). The OS ensures that if a packet is lost, it is re-sent. It also manages **Port Numbers** (e.g., Port 80 for web).
+
+#### **Layer 3: Network**
+
+* **OS Role:** Routes the data. It decides which physical path a packet should take to reach its destination.
+* **Example:** **IP** (Internet Protocol). This is where your **IP Address** is attached to the data packet. The OS looks at its "Routing Table" to see which gateway to use.
+
+---
+
+### **The Hardware Layers (Media Layers)**
+
+These layers are a mix of OS **Device Drivers** and actual physical hardware (the NIC - Network Interface Card).
+
+#### **Layer 2: Data Link**
+
+* **OS Role:** Handles communication between two devices on the *same* local network.
+* **Example:** **Ethernet** or **Wi-Fi**. This is where your **MAC Address** is used. The OS **Network Driver** interacts with the physical card to frame the data.
+
+#### **Layer 1: Physical**
+
+* **OS Role:** Very little; this is mostly hardware. It is the actual electrical or optical signal.
+* **Example:** The **Copper Wire** (RJ45), **Fiber Optics**, or **Radio Waves**. It is the raw "bits" (1s and 0s) being pulsed across a cable.
+
+---
+
+### **Summary Table: Where does the OS sit?**
+
+| OSI Layer | Responsibility | Handled By | Typical Example |
+| --- | --- | --- | --- |
+| **7. Application** | Human-Computer Interaction | User Application | HTTP, FTP, SMTP |
+| **6. Presentation** | Encryption & Formatting | Libraries (User Space) | SSL/TLS, JPEG, ASCII |
+| **5. Session** | Connection Management | OS / Libraries | NetBIOS, Sockets |
+| **4. Transport** | Reliability & Flow Control | **OS Kernel** | TCP, UDP |
+| **3. Network** | Routing & IP Addressing | **OS Kernel** | IP, ICMP |
+| **2. Data Link** | MAC Addressing & Framing | **Device Drivers** | Ethernet, 802.11 (Wi-Fi) |
+| **1. Physical** | Binary Transmission | **Hardware (NIC)** | Cables, Hubs, Volts |
+
+Would you like me to explain how a specific action—like sending a WhatsApp message—travels through these layers from top to bottom?
+
