@@ -329,7 +329,6 @@ q: - Browse command history
 - Press `Ctrl-a` to increment it by 1.
 - Press `Ctrl-x` to decrement it.
 
----
 ## 🚚 Moving Lines with `:m`
 
 Use the `:m` command to move lines:
@@ -771,6 +770,112 @@ Insert current date at cursor position
 ```vim
 :%!sort | uniq -c | sort -rn    " Sort, count, then sort by frequency
 ```
+
+
+A collection of powerful Neovim features that require no plugins.
+### Shell Filters (`!`)
+**Insert command output:**
+- `!!date` - Replace current line with date output
+- `!!jq .` - Format JSON on current line
+
+**Filter text through commands:**
+- `!ip sort` - Sort current paragraph
+- `!<motion> <command>` - Filter any text object through a command
+### Sequential Numbering
+**Steps:**
+1. Visually select lines
+2. `:norm I0. ` - Insert "0. " at start of each line
+3. `gv` - Reselect previous selection
+4. `g Ctrl-a` - Auto-increment numbers (1, 2, 3...)
+
+### Global Command (`:g`)
+Execute commands on lines matching a pattern.
+**Syntax:** `:g/pattern/command`
+
+**Examples:**
+- `:g/TODO/d` - Delete all lines containing "TODO"
+- `:g/^func/norm A;` - Append semicolon to lines starting with "func"
+- `:'a,'bs/old/new/g` - Substitute between marks 'a' and 'b'
+### Special Registers
+
+Access dynamic content with `Ctrl-r`.
+**In command mode:**
+- `Ctrl-r Ctrl-w` - Paste word under cursor
+
+**In insert mode:**
+- `Ctrl-r =` - Expression register (evaluate math)
+  - Example: `Ctrl-r =` then type `9-9` → inserts `0`
+### Normal Command (`:norm`)
+Execute normal mode keystrokes on ranges/selections.
+
+**Examples:**
+- `:norm I- ` - Add bullet points to selected lines
+- `:norm A;` - Append semicolon to each line
+- `:'a,'b norm I// ` - Comment out lines between marks
+### Navigation with `g`
+Quick jumps and selection recovery.
+
+- `gi` - Jump to last insert position and enter insert mode
+- `gv` - Reselect last visual selection
+### Marks and Jump Points
+Automatic bookmarks for efficient navigation.
+
+**Jump commands:**
+- ` `` ` (backtick backtick) - Jump to exact character of last edit
+- `'.` (backtick dot) - Jump to line of last edit
+- `'"` (backtick quote) - Jump to cursor position when file was last closed
+
+**Named marks:**
+- `ma` - Set mark 'a'
+- `` `a `` - Jump to mark 'a'
+- `:'a,'b<command>` - Execute command between marks
+
+### Command-Line Window
+Edit command history like a buffer.
+
+**Access:**
+- `q:` - Open command history window (normal mode)
+- `Ctrl-f` - Open while in command-line mode
+
+**Usage:**
+- Navigate with normal mode motions
+- Edit any command
+- Press `Enter` to execute
+
+### Substitution Preview
+Real-time preview of search and replace.
+
+**Setup:** `:set inccommand=nosplit`
+**Effect:**
+- When typing `:s/fox/cat`, changes preview live in buffer
+- See results before confirming
+
+### Copy and Move Commands
+Efficient line manipulation.
+
+**Copy (`:t`):**
+- `:t.` - Duplicate current line below
+- `:1t$` - Copy line 1 to end of file
+- `:5t10` - Copy line 5 to after line 10
+
+**Move (`:m`):**
+- `:m+1` - Move current line down one position
+- `:1m+1` - Swap line 1 with line 2
+- `:5m10` - Move line 5 to after line 10
+
+### Bonus: Remote Neovim
+Control Neovim from external scripts/terminals.
+
+**Start as server:**
+```bash
+nvim --listen /tmp/nvimsocket
+```
+
+**Send commands remotely:**
+```bash
+nvim --server /tmp/nvimsocket --remote-send "ggI# Remote<Esc>"
+```
+This allows AI tools or scripts to control your editor instance.
 
 
 #ref #vim

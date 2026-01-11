@@ -140,6 +140,7 @@ tags:
 - [ ] Contact
 - [ ] La Haine
 - [ ] Triangle
+- [ ] Warrior
 
 ## Series
 

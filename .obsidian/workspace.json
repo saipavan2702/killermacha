@@ -8,34 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e194cf15d6daf2d3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "upskill/linux/Tips.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Tips"
-            }
-          },
-          {
-            "id": "214a4709f689681e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "upskill/linux/Vim.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Vim"
-            }
-          },
-          {
             "id": "4599c604fc79c543",
             "type": "leaf",
             "state": {
@@ -50,17 +22,31 @@
             }
           },
           {
-            "id": "0dbaebaa927c3100",
+            "id": "7cecb0287986af9b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "upskill/DSA/languages/Python.md",
+                "file": "upskill/QoL/Configs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Python"
+              "title": "Configs"
+            }
+          },
+          {
+            "id": "4142e14d2dcf0227",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upskill/QoL/Refs.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Refs"
             }
           },
           {
@@ -77,8 +63,7 @@
               "title": "Operating Sys"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -145,7 +130,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 292.5
+    "width": 326.5
   },
   "right": {
     "id": "e5d2ad9fec6d31d0",
@@ -285,26 +270,27 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "3c9abc6e4908ddc9",
+  "active": "4599c604fc79c543",
   "lastOpenFiles": [
-    "upskill/CS Topics/Operating Sys.md",
+    "upskill/QoL/Configs.md",
     "upskill/DSA/languages/Python.md",
+    "upskill/CS Topics/Operating Sys.md",
+    "upskill/QoL/Refs.md",
+    "upskill/DSA/languages/GoLang.md",
+    "upskill/linux/Tips.md",
+    "upskill/linux/Vim.md",
+    "mmacha/anime.md",
+    "mmacha/movies.md",
+    "2026-01-06.md",
     "upskill/system design/API Build.md",
     "upskill/DSA/Sql.md",
     "upskill/DSA/Misc.md",
     "upskill/system design/Design Patterns.md",
     "upskill/DSA/languages/Java.md",
     "upskill/system design/Sys Des.md",
-    "upskill/DSA/languages/GoLang.md",
-    "upskill/linux/Tips.md",
-    "upskill/linux/Vim.md",
-    "upskill/QoL/Configs.md",
     "upskill/QoL/Digi Tools.md",
-    "mmacha/anime.md",
-    "mmacha/movies.md",
     "mmacha/pswds.md",
     "mmacha/aesthetic.md",
-    "upskill/QoL/Refs.md",
     "upskill/Projects/Ideas.md",
     "upskill/DSA/DSA.md",
     "upskill/Mock Int.md",
@@ -320,7 +306,6 @@
     "attachments/Exported image 20250529160058-0.png",
     "attachments/Exported image 20250529160101-1.png",
     "2025-11-12.md",
-    "orcl/Work Dailies.md",
     "upskill/QoL configs/Untitled",
     "upskill/Projects",
     "upskill/QoL",

@@ -66,6 +66,7 @@ https://github.com/ForrestKnight
 https://github.com/jblais493/nixos-config
 https://github.com/end-4/dots-hyprland
 https://gitlab.com/theblackdon/black-don-os
+https://github.com/joshmedeski/dotfiles
 
 
 Blogs
@@ -81,6 +82,9 @@ https://github.com/axieax/urlview.nvim
 https://github.com/SvenBroeckling/nvim-0.12-config
 https://github.com/Piotr1215/dotfiles
 https://github.com/JazzyGrim/dotfiles
+
+Blogs
+https://pastebin.com/LBMtvCiC
 
 ---
 

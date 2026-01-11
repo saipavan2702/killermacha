@@ -41,3 +41,6 @@ tags:
 - [ ] Wild Robot
 - [ ] Arcane
 - [ ] X-Men'97
+- [ ] Up
+- [ ] Monster inc.
+- [ ] Hachi: A Dog's Tale

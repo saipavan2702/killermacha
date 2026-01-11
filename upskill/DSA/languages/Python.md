@@ -57,7 +57,6 @@ Why it crashes:
 
 Increasing the limit can postpone the crash—but not fix the underlying issue.
 
----
 We can make file reading more efficient in Python using generators.
 
 ```python
@@ -99,8 +98,8 @@ def compare_memory_usage(filename, num_lines=100000):
         count += 1
 ```
 
----
 For any kind of debugging in Python we shud use logging, strace, and watchdog for more information about errors.
+
 ```python
 # =============================================================================
 # STEP 1: LOGGING - Your Black Box Recorder
@@ -149,7 +148,7 @@ def process_file(filename):
             data = f.read()
             logger.info(f"Successfully read {len(data)} characters")
             return data
-            
+        
     except FileNotFoundError:
         logger.error(f"ERROR: File '{filename}' not found!")
         logger.error("Check if the file path is correct")
@@ -335,6 +334,7 @@ def complete_monitoring_workflow():
         # Step 3: Do your actual work with exception handling
         logger.info("Processing files...")
         result = process_file("data.txt")
+        time.sleep(2)
         if result:
             logger.info("✓ File processed successfully")
         else:
@@ -381,5 +381,8 @@ if __name__ == "__main__":
     
     complete_monitoring_workflow()
 ```
+
+
+
 
 [[Design Patterns]] showcases the information related to the design principles needs to be followed while writing clean code.

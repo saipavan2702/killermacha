@@ -84,6 +84,19 @@ https://www.programmingfonts.org/#maple
 Wallpapers
 https://archimg.cc/
 https://github.com/roigoatzzz/Wallsync
+https://github.com/krishna4a6av/Wallpapers/tree/master
+
+
+Windows
+https://github.com/swopnil7/Windots/tree/main
+
+Influencer Blogs
+https://colecaccamise.com/
+https://nicknisi.com/
+
+
+MonkeyType
+https://monkeytype-wrapped.vercel.app/
 
 ---
 ## Piracy
@@ -101,6 +114,9 @@ https://raster.saran13raj.com/
 
 Channel stream
 https://github.com/iptv-org/iptv
+
+Web's
+https://fmhy.net/
 
 ---
 

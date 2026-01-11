@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "SiNeovim",
       "SiPopos",
       "TiGridPattern",
       "TiBrandFunimation",
-      "SiMyanimelist",
-      "CoMovingDesk"
+      "SiMyanimelist"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -68,7 +68,7 @@
   "upskill/DSA/languages/Java.md": "FabJava",
   "upskill/DSA/languages/Python.md": "FabPython",
   "upskill/linux": "FabLinux",
-  "upskill/linux/Vim.md": "SiVim",
+  "upskill/linux/Vim.md": "SiNeovim",
   "upskill/Projects": "RiProjectorLine",
   "upskill/Projects/Ideas.md": "LiLightbulb",
   "upskill/Dev/frontend-stack/Framer-Motion.md": "LiFramer",
