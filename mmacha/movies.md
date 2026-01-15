@@ -94,7 +94,7 @@ tags:
 - [ ] Doctor Zhivago
 - [ ] The Bridge on the River Kwai
 - [x] Vanilla Sky ✅ 2025-11-08
-- [ ] Lisa Frankenstein
+- [x] Lisa Frankenstein ✅ 2026-01-14
 - [ ] Sleepless in Seattle
 - [ ] My Old ass
 - [ ] 10 things I hate about you

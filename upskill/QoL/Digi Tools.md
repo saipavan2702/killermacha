@@ -18,7 +18,7 @@ https://www.youtube.com/watch?v=lvbRqstwnX8
 https://www.youtube.com/watch?v=ZFMhKhU2yuw
 https://www.youtube.com/watch?v=PXSdy3NluWE
 https://www.youtube.com/watch?v=QGKvyaTpy34
-
+https://www.youtube.com/watch?v=5GwfNTYI14I
 
 Web's
 https://www.amazon.in/Dell-S2721QS-Ultra-Thin-DisplayPort-Certified/dp/B08DQWG3JG
