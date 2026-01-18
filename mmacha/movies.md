@@ -69,7 +69,7 @@ tags:
 - [ ] Invincible sereis
 - [ ] The Boys series
 - [ ] Jack Ryan series
-- [ ] LOTR
+- [x] LOTR ✅ 2026-01-18
 - [ ] House MD series
 - [ ] Shameless sereis
 - [x] 13 going on 30 ✅ 2025-06-26
@@ -141,6 +141,9 @@ tags:
 - [ ] La Haine
 - [ ] Triangle
 - [ ] Warrior
+- [x] Materialists ✅ 2026-01-15
+- [ ] The Others
+
 
 ## Series
 

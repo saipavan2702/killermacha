@@ -22,7 +22,13 @@ https://github.com/kunal-kushwaha/DSA-Bootcamp-Java
 Web's
 https://docs.google.com/document/d/181iDfp5IjOikFSL7bHNNaq-n99Rld9mJ-c-asKf4Bks/edit?pli=1&tab=t.0#heading=h.5ym0riqyzk
 https://www.notion.so/SELF-TEACHING-JAVA-SPRING-26f82d2afbac807f8edeed9b17f9b6b3#26f82d2afbac8097a98cfdc0d83763aa
-
+https://cses.fi/problemset/
+https://takeuforward.org/dsa/strivers-a2z-sheet-learn-dsa-a-to-z
+https://acodedaily.com/
+https://ashhad.in/list/
+https://seanprashad.com/leetcode-patterns/
+https://usaco.guide/
+https://cp-algorithms.com/index.html
 
 ---
 ## Projects 
@@ -34,8 +40,6 @@ https://github.com/AmanTahiliani/PeerNotes/blob/main/file_peer/peer_service.py
 https://github.com/devhulk/simple-colly-example/blob/main/crawler/crawler.go
 https://github.com/progFilthi
 https://github.com/mingodando
-
-
 
 ---
 ## Helpers 
