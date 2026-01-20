@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "upskill/QoL/Configs.md",
+                "file": "2025-11-12.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Configs"
+              "title": "2025-11-12"
             }
           },
           {
@@ -260,13 +260,14 @@
   "active": "9c582335f832bf27",
   "lastOpenFiles": [
     "upskill/QoL/Refs.md",
+    "2025-11-12.md",
+    "upskill/QoL/Configs.md",
+    "upskill/CS Topics/Operating Sys.md",
+    "orcl/Weekly report.md",
     "upskill/DSA/DSA.md",
     "mmacha/anime.md",
     "mmacha/movies.md",
-    "upskill/CS Topics/Operating Sys.md",
     "upskill/QoL/Digi Tools.md",
-    "2025-11-12.md",
-    "upskill/QoL/Configs.md",
     "upskill/system design/API Build.md",
     "2026-01-06.md",
     "2025-12-09.md",
@@ -283,7 +284,6 @@
     "mmacha/aesthetic.md",
     "upskill/Projects/Ideas.md",
     "upskill/Mock Int.md",
-    "orcl/Weekly report.md",
     "attachments/Pasted Image 20231213104704_187.png",
     "orcl/ora-info.md",
     "attachments/Exported image 20250529160106-3.png",
