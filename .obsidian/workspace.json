@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2025-11-12.md",
+                "file": "upskill/QoL/Configs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-11-12"
+              "title": "Configs"
+            }
+          },
+          {
+            "id": "edd8aa48c78c468f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upskill/linux/Vim.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Vim"
             }
           },
           {
@@ -49,8 +63,7 @@
               "title": "Operating Sys"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -257,17 +270,18 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "9c582335f832bf27",
+  "active": "7cecb0287986af9b",
   "lastOpenFiles": [
-    "upskill/QoL/Refs.md",
-    "2025-11-12.md",
+    "upskill/linux/Vim.md",
     "upskill/QoL/Configs.md",
     "upskill/CS Topics/Operating Sys.md",
-    "orcl/Weekly report.md",
     "upskill/DSA/DSA.md",
-    "mmacha/anime.md",
     "mmacha/movies.md",
     "upskill/QoL/Digi Tools.md",
+    "2025-11-12.md",
+    "upskill/QoL/Refs.md",
+    "orcl/Weekly report.md",
+    "mmacha/anime.md",
     "upskill/system design/API Build.md",
     "2026-01-06.md",
     "2025-12-09.md",
@@ -275,7 +289,6 @@
     "upskill/DSA/Misc.md",
     "upskill/DSA/languages/Python.md",
     "upskill/linux/Tips.md",
-    "upskill/linux/Vim.md",
     "upskill/DSA/Sql.md",
     "upskill/system design/Design Patterns.md",
     "upskill/DSA/languages/Java.md",

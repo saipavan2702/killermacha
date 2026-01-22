@@ -143,6 +143,8 @@ tags:
 - [ ] Warrior
 - [x] Materialists ✅ 2026-01-15
 - [ ] The Others
+- [ ] Never look away
+- [x] The Ugly Truth ✅ 2026-01-22
 
 
 ## Series
@@ -153,6 +155,7 @@ tags:
 - [ ] Shogun
 - [ ] The Boys
 - [ ] The Office
+- [ ] Midnight Mass
 
 
 https://nothing-to-watch.port80.ch/

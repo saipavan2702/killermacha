@@ -13,6 +13,8 @@ https://github.com/ghostty-org/ghostty/discussions/3527
 https://www.reddit.com/r/Zig/comments/1hod58j/how_i_configure_ghostty/
 https://github.com/pkazmier/ghostty-config/blob/main/config
 https://github.com/StevenJPx2/dotfiles
+https://github.com/KroneCorylus/ghostty-shader-playground
+https://github.com/0xhckr/ghostty-shaders
 
 ---
 ## ZSH
@@ -71,6 +73,7 @@ https://github.com/joshmedeski/dotfiles
 
 Blogs
 https://micahkepe.com/blog/tmux-config/#preview-of-changes
+https://raine.dev/blog/my-tmux-setup/
 
 ---
 ## Nvim
@@ -82,6 +85,7 @@ https://github.com/axieax/urlview.nvim
 https://github.com/SvenBroeckling/nvim-0.12-config
 https://github.com/Piotr1215/dotfiles
 https://github.com/JazzyGrim/dotfiles
+https://github.com/dgox16/dotfiles/blob/main/.config/nvim/lua/configs/lualine.lua
 
 Blogs
 https://pastebin.com/LBMtvCiC
