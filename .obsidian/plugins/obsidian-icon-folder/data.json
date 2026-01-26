@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "SiStackbit",
       "TiApi",
       "SiNeovim",
       "SiPopos",
-      "TiGridPattern",
-      "TiBrandFunimation"
+      "TiGridPattern"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -92,5 +92,6 @@
   "upskill/system design/Sys Des.md": "TiGlassFull",
   "upskill/system design/Design Patterns.md": "TiGridPattern",
   "upskill/CS Topics/Operating Sys.md": "SiPopos",
-  "upskill/system design/API Build.md": "TiApi"
+  "upskill/system design/API Build.md": "TiApi",
+  "upskill/DSA/Algos/BitMask.md": "SiStackbit"
 }

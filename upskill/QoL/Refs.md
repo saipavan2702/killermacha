@@ -81,6 +81,7 @@ https://github.com/jrcasey/RSS_Agent
 Macos
 [bashbunni_terminal_notifier](https://gist.github.com/bashbunni/f6b04fc4703903a71ce9f70c58345106)
 https://github.com/serhii-londar/open-source-mac-os-apps
+https://www.youtube.com/watch?v=0vFErGxD2QY&t=6s
 
 Fonts
 https://www.programmingfonts.org/#maple
