@@ -86,6 +86,7 @@ https://github.com/SvenBroeckling/nvim-0.12-config
 https://github.com/Piotr1215/dotfiles
 https://github.com/JazzyGrim/dotfiles
 https://github.com/dgox16/dotfiles/blob/main/.config/nvim/lua/configs/lualine.lua
+https://github.com/fitiavana07/.vim/blob/main/vimrc
 
 Blogs
 https://pastebin.com/LBMtvCiC

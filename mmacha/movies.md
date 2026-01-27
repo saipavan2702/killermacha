@@ -145,6 +145,9 @@ tags:
 - [ ] The Others
 - [ ] Never look away
 - [x] The Ugly Truth ✅ 2026-01-22
+- [ ] Anora
+- [ ] Parasite
+- [ ] The Menu
 
 
 ## Series

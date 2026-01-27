@@ -24,6 +24,9 @@ tags:
 - [ ] K project
 - [ ] Orb
 - [ ] Invincible
+- [ ] Pluto
+- [ ] ACCA-13
+- [ ] Nura: rise of yokai clan
 
 
 ## Movies
@@ -45,3 +48,10 @@ tags:
 - [ ] Monster inc.
 - [ ] Hachi: A Dog's Tale
 - [ ] Entergalactic
+- [ ] Tim Burton's  The nightmare before christmas
+- [ ] Fantasia
+- [ ] Beauty and the Beast
+- [ ] Moana
+- [ ] ghost in the shell
+- [ ] Spirited away
+- [ ] Boy and the Heron
