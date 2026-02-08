@@ -87,6 +87,7 @@ https://github.com/Piotr1215/dotfiles
 https://github.com/JazzyGrim/dotfiles
 https://github.com/dgox16/dotfiles/blob/main/.config/nvim/lua/configs/lualine.lua
 https://github.com/fitiavana07/.vim/blob/main/vimrc
+https://github.com/craftzdog/dotfiles-public
 
 Blogs
 https://pastebin.com/LBMtvCiC
