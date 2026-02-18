@@ -70,6 +70,7 @@ https://github.com/end-4/dots-hyprland
 https://gitlab.com/theblackdon/black-don-os
 https://github.com/joshmedeski/dotfiles
 https://github.com/tom-delalande/setup/tree/main
+https://github.com/BreadOnPenguins/dots
 
 Blogs
 https://micahkepe.com/blog/tmux-config/#preview-of-changes

@@ -20,6 +20,34 @@
               "icon": "lucide-file",
               "title": "SegmenTree"
             }
+          },
+          {
+            "id": "ddc852e861659cc8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upskill/QoL/Configs.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Configs"
+            }
+          },
+          {
+            "id": "eaf5922838ac36e7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upskill/DSA/Sql.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sql"
+            }
           }
         ]
       }
@@ -230,6 +258,11 @@
   },
   "active": "4b8294d06da73418",
   "lastOpenFiles": [
+    "upskill/QoL/Configs.md",
+    "upskill/DSA/Sql.md",
+    "upskill/linux/Vim.md",
+    "orcl/Weekly report.md",
+    "upskill/DSA/SegmenTree.md",
     "upskill/DSA/Algos/BitMask.md",
     "upskill/DSA/Algos/Line Sweep.md",
     "upskill/DSA/Algos/Binary search.md",
@@ -239,10 +272,8 @@
     "upskill/DSA/Algos/Sliding window.md",
     "upskill/DSA/languages/GoLang.md",
     "upskill/DSA/Tree.md",
-    "upskill/DSA/Sql.md",
     "upskill/DSA/Garph.md",
     "upskill/DSA/Linked List.md",
-    "upskill/DSA/SegmenTree.md",
     "upskill/system design/Sys Des.md",
     "upskill/system design/Design Patterns.md",
     "upskill/system design/API Build.md",
@@ -251,11 +282,8 @@
     "2026-02-10.md",
     "upskill/DSA/Algos/Misc.md",
     "upskill/DSA/DSA.md",
-    "upskill/linux/Vim.md",
     "mmacha/pswds.md",
-    "upskill/QoL/Configs.md",
     "2025-11-12.md",
-    "2025-12-09.md",
     "attachments/Pasted Image 20231213104704_187.png",
     "attachments/Exported image 20250529160106-3.png",
     "attachments/Pasted Image 20231213104704_082.png",
