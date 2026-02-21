@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "upskill/DSA/SegmenTree.md",
+                "file": "upskill/DSA/Algos/BitMask.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SegmenTree"
+              "title": "BitMask"
             }
           },
           {
@@ -258,11 +258,11 @@
   },
   "active": "4b8294d06da73418",
   "lastOpenFiles": [
+    "upskill/DSA/SegmenTree.md",
     "upskill/QoL/Configs.md",
     "upskill/DSA/Sql.md",
     "upskill/linux/Vim.md",
     "orcl/Weekly report.md",
-    "upskill/DSA/SegmenTree.md",
     "upskill/DSA/Algos/BitMask.md",
     "upskill/DSA/Algos/Line Sweep.md",
     "upskill/DSA/Algos/Binary search.md",
