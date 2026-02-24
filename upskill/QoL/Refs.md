@@ -17,6 +17,7 @@ https://github.com/ruppysuppy/Daily-Coding-Problem-Solutions
 
 Git's
 https://github.com/kunal-kushwaha/DSA-Bootcamp-Java
+https://github.com/yash7xm/cp_notes
 
 
 Web's
@@ -78,6 +79,10 @@ https://stephango.com/vault
 https://forum.obsidian.md/t/my-home-base-tutorial/108759
 https://github.com/jrcasey/RSS_Agent
 https://snippets.page/posts/sync-obsidian-notes-between-pc-and-android-with-syncthing/
+https://github.com/greyboy-59/Greys-Obsidian-Vault
+https://github.com/frogpal/PenguinVault/
+https://github.com/frogpal/web-clipper-templates/
+https://github.com/CyanVoxel
 
 Macos
 [bashbunni_terminal_notifier](https://gist.github.com/bashbunni/f6b04fc4703903a71ce9f70c58345106)

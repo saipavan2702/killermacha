@@ -71,10 +71,13 @@ https://gitlab.com/theblackdon/black-don-os
 https://github.com/joshmedeski/dotfiles
 https://github.com/tom-delalande/setup/tree/main
 https://github.com/BreadOnPenguins/dots
+https://github.com/jmarcelomb/.dotfiles/blob/main/.config/tmux/tmux.conf
+
 
 Blogs
 https://micahkepe.com/blog/tmux-config/#preview-of-changes
 https://raine.dev/blog/my-tmux-setup/
+https://marceloborges.dev/posts/4/
 
 ---
 ## Nvim

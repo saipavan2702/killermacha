@@ -45,6 +45,84 @@ bool isOn = mask & (1 << 1); // Check bulb at position 1
 | Toggle bit 0 | `mask ^ (1<<0)`  | `0101 ^ 0001`  | `0100` | Bulb 0 flipped    |
 | Check bit 1  | `mask & (1<<1)`  | `0110 & 0010`  | `0010` | Yes, it's ON!     |
 
+> [!abstract] Overview
+> Bit manipulation allows for high-performance operations by treating data at the binary level. In Competitive Programming, these tricks can reduce time complexity and simplify logic.
+## ⚡ Quick Reference: One-Liner Hacks
+
+| Operation | Code Snippet | Result |
+| --- | --- | --- |
+| **Parity Check** | `x & 1` | `1` if odd, `0` if even |
+| **Clear Lowest Set Bit** | `x & (x - 1)` | Removes the rightmost `1` bit |
+| **Extract Lowest Set Bit** | `x & -x` | Isolates the rightmost `1` bit |
+| **Power of 2 Check** | `x && !(x & (x - 1))` | Returns `true` if  |
+| **Divide by 2** | `x >> 1` | Integer division by 2 |
+| **Multiply by 2** | `x << 1` | Multiplication by 2 |
+| **Upper to Lower** | `ch | ' '` | Sets 5th bit (e.g., 'A' → 'a') |
+| **Lower to Upper** | `ch & '_'` | Clears 5th bit (e.g., 'a' → 'A') |
+
+## 🎯 Manipulating the -th Bit
+
+*Note: Using 1-based indexing for .*
+
+> [!tip] Logic
+> To target a specific bit, use a **mask**: `(1 << (k - 1))`.
+
+* **Check if -th bit is set:** `(n & (1 << (k - 1))) != 0`
+* **Turn ON -th bit:** `n | (1 << (k - 1))`
+* **Turn OFF -th bit:** `n & ~(1 << (k - 1))`
+* **Toggle -th bit:** `n ^ (1 << (k - 1))`
+
+## 🧹 Clearing Ranges
+
+* **Clear LSB to -th bit:**
+```cpp
+mask = ~((1 << (i + 1)) - 1);
+x &= mask;
+
+```
+
+* **Clear MSB to -th bit:**
+```cpp
+mask = (1 << i) - 1;
+x &= mask;
+
+```
+
+### 1. Brian Kernighan’s Algorithm (Count Set Bits)
+
+Repeatedly clears the lowest set bit until the number becomes zero.
+```cpp
+int countSetBits(int x) {
+    int count = 0;
+    while (x) {
+        x &= (x - 1); 
+        count++;
+    }
+    return count;
+}
+
+```
+
+### 2. Find Log base 2 (Integer)
+
+```cpp
+int log2(int x) {
+    int res = 0;
+    while (x >>= 1) res++;
+    return res;
+}
+
+```
+## 💡 Important Logic Notes
+
+* **Negative Numbers:** In C++, `-x` is represented as 2's complement (`~x + 1`). This is why `x & -x` extracts the lowest set bit.
+* **LSB (Least Significant Bit):** The rightmost bit.
+* **MSB (Most Significant Bit):** The leftmost bit.
+* **Built-in Functions (GCC):**
+* `__builtin_popcount(x)`: Counts set bits.
+* `__builtin_clz(x)`: Counts leading zeros.
+* `__builtin_ctz(x)`: Counts trailing zeros.
+
 ```cpp
 #include <iostream>
 using namespace std;
@@ -253,5 +331,6 @@ Solution: https://youtu.be/lPLhmuWMRag
 **References** 
 https://codeforces.com/blog/entry/18169
 https://codeforces.com/blog/entry/81516
+https://github.com/yash7xm/cp_notes
 
 #ref #dsa 
