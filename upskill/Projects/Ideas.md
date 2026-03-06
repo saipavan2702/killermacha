@@ -16,6 +16,8 @@ YT's
 https://www.youtube.com/watch?v=6CJiM3E2mAA
 https://www.youtube.com/watch?v=muJf6SwEaa0
 https://www.youtube.com/watch?v=9i1gQ7w2V24
+https://www.youtube.com/watch?v=NULWyn8Hqs8
+https://www.youtube.com/watch?v=3GJcskn5mAg
 
 
 >[!info]
