@@ -49,16 +49,16 @@ bool isOn = mask & (1 << 1); // Check bulb at position 1
 > Bit manipulation allows for high-performance operations by treating data at the binary level. In Competitive Programming, these tricks can reduce time complexity and simplify logic.
 ## ⚡ Quick Reference: One-Liner Hacks
 
-| Operation | Code Snippet | Result |
-| --- | --- | --- |
-| **Parity Check** | `x & 1` | `1` if odd, `0` if even |
-| **Clear Lowest Set Bit** | `x & (x - 1)` | Removes the rightmost `1` bit |
-| **Extract Lowest Set Bit** | `x & -x` | Isolates the rightmost `1` bit |
-| **Power of 2 Check** | `x && !(x & (x - 1))` | Returns `true` if  |
-| **Divide by 2** | `x >> 1` | Integer division by 2 |
-| **Multiply by 2** | `x << 1` | Multiplication by 2 |
-| **Upper to Lower** | `ch | ' '` | Sets 5th bit (e.g., 'A' → 'a') |
-| **Lower to Upper** | `ch & '_'` | Clears 5th bit (e.g., 'a' → 'A') |
+| Operation                  | Code Snippet          | Result                           |                                |
+| -------------------------- | --------------------- | -------------------------------- | ------------------------------ |
+| **Parity Check**           | `x & 1`               | `1` if odd, `0` if even          |                                |
+| **Clear Lowest Set Bit**   | `x & (x - 1)`         | Removes the rightmost `1` bit    |                                |
+| **Extract Lowest Set Bit** | `x & -x`              | Isolates the rightmost `1` bit   |                                |
+| **Power of 2 Check**       | `x && !(x & (x - 1))` | Returns `true` if                |                                |
+| **Divide by 2**            | `x >> 1`              | Integer division by 2            |                                |
+| **Multiply by 2**          | `x << 1`              | Multiplication by 2              |                                |
+| **Upper to Lower**         | `ch                   | ' '`                             | Sets 5th bit (e.g., 'A' → 'a') |
+| **Lower to Upper**         | `ch & '_'`            | Clears 5th bit (e.g., 'a' → 'A') |                                |
 
 ## 🎯 Manipulating the -th Bit
 

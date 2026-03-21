@@ -92,9 +92,13 @@ https://github.com/JazzyGrim/dotfiles
 https://github.com/dgox16/dotfiles/blob/main/.config/nvim/lua/configs/lualine.lua
 https://github.com/fitiavana07/.vim/blob/main/vimrc
 https://github.com/craftzdog/dotfiles-public
+https://github.com/SalarAlo/neovim-configuration/tree/main
 
 Blogs
 https://pastebin.com/LBMtvCiC
+
+YT's
+https://www.youtube.com/watch?v=FcQhRkAbg2Q
 
 ---
 

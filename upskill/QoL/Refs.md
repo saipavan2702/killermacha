@@ -47,6 +47,7 @@ https://github.com/mingodando
 
 YT's
 https://www.youtube.com/watch?v=cgOPg5cCr2g
+https://www.youtube.com/watch?v=XLVY6jr3JTw
 
 Git's
 https://github.com/sindresorhus/awesome
@@ -100,6 +101,7 @@ https://github.com/krishna4a6av/Wallpapers/tree/master
 
 Windows
 https://github.com/swopnil7/Windots/tree/main
+https://github.com/SleepyCatHey/Ultimate-Win11-Setup
 
 Influencer Blogs
 https://colecaccamise.com/

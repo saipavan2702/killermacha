@@ -333,67 +333,9388 @@ https://github.com/isaacs/node-mkdirp
 	THE SOFTWARE.
 */
 
-"use strict";var la=Object.create;var Sn=Object.defineProperty;var aa=Object.getOwnPropertyDescriptor;var ca=Object.getOwnPropertyNames;var ua=Object.getPrototypeOf,fa=Object.prototype.hasOwnProperty;var da=(i,e,t)=>e in i?Sn(i,e,{enumerable:!0,configurable:!0,writable:!0,value:t}):i[e]=t;var it=(i,e)=>()=>(e||i((e={exports:{}}).exports,e),e.exports),pa=(i,e)=>{for(var t in e)Sn(i,t,{get:e[t],enumerable:!0})},$o=(i,e,t,n)=>{if(e&&typeof e=="object"||typeof e=="function")for(let r of ca(e))!fa.call(i,r)&&r!==t&&Sn(i,r,{get:()=>e[r],enumerable:!(n=aa(e,r))||n.enumerable});return i};var ga=(i,e,t)=>(t=i!=null?la(ua(i)):{},$o(e||!i||!i.__esModule?Sn(t,"default",{value:i,enumerable:!0}):t,i)),ma=i=>$o(Sn({},"__esModule",{value:!0}),i);var K=(i,e,t)=>(da(i,typeof e!="symbol"?e+"":e,t),t),ha=(i,e,t)=>{if(!e.has(i))throw TypeError("Cannot "+t)};var br=(i,e,t)=>{if(e.has(i))throw TypeError("Cannot add the same private member more than once");e instanceof WeakSet?e.add(i):e.set(i,t)};var ri=(i,e,t)=>(ha(i,e,"access private method"),t);var kr=it(At=>{"use strict";Object.defineProperty(At,"__esModule",{value:!0});At.FORMAT_PLAIN=At.FORMAT_HTML=At.FORMATS=void 0;var No="html";At.FORMAT_HTML=No;var Ao="plain";At.FORMAT_PLAIN=Ao;var va=[No,Ao];At.FORMATS=va});var Po=it(nt=>{"use strict";Object.defineProperty(nt,"__esModule",{value:!0});nt.UNIT_WORDS=nt.UNIT_WORD=nt.UNIT_SENTENCES=nt.UNIT_SENTENCE=nt.UNIT_PARAGRAPHS=nt.UNIT_PARAGRAPH=nt.UNITS=void 0;var Do="words";nt.UNIT_WORDS=Do;var jo="word";nt.UNIT_WORD=jo;var Eo="sentences";nt.UNIT_SENTENCES=Eo;var Fo="sentence";nt.UNIT_SENTENCE=Fo;var zo="paragraphs";nt.UNIT_PARAGRAPHS=zo;var Oo="paragraph";nt.UNIT_PARAGRAPH=Oo;var wa=[Do,jo,Eo,Fo,zo,Oo];nt.UNITS=wa});var xr=it(li=>{"use strict";Object.defineProperty(li,"__esModule",{value:!0});li.WORDS=void 0;var ka=["ad","adipisicing","aliqua","aliquip","amet","anim","aute","cillum","commodo","consectetur","consequat","culpa","cupidatat","deserunt","do","dolor","dolore","duis","ea","eiusmod","elit","enim","esse","est","et","eu","ex","excepteur","exercitation","fugiat","id","in","incididunt","ipsum","irure","labore","laboris","laborum","Lorem","magna","minim","mollit","nisi","non","nostrud","nulla","occaecat","officia","pariatur","proident","qui","quis","reprehenderit","sint","sit","sunt","tempor","ullamco","ut","velit","veniam","voluptate"];li.WORDS=ka});var Ro=it(ai=>{"use strict";Object.defineProperty(ai,"__esModule",{value:!0});ai.LINE_ENDINGS=void 0;var xa={POSIX:`
-`,WIN32:`\r
-`};ai.LINE_ENDINGS=xa});var Bo=it(ci=>{"use strict";Object.defineProperty(ci,"__esModule",{value:!0});ci.default=void 0;var Ca=function(e){var t=e.trim();return t.charAt(0).toUpperCase()+t.slice(1)},Ia=Ca;ci.default=Ia});var Go=it((ui,Cr)=>{"use strict";Object.defineProperty(ui,"__esModule",{value:!0});ui.default=void 0;var Ma=function(){return typeof Cr!="undefined"&&!!Cr.exports},Sa=Ma;ui.default=Sa});var Zo=it(fi=>{"use strict";Object.defineProperty(fi,"__esModule",{value:!0});fi.default=void 0;var $a=function(){var e=!1;try{e=navigator.product==="ReactNative"}catch(t){e=!1}return e},Ta=$a;fi.default=Ta});var Wo=it(di=>{"use strict";Object.defineProperty(di,"__esModule",{value:!0});di.SUPPORTED_PLATFORMS=void 0;var La={DARWIN:"darwin",LINUX:"linux",WIN32:"win32"};di.SUPPORTED_PLATFORMS=La});var Qo=it(pi=>{"use strict";Object.defineProperty(pi,"__esModule",{value:!0});pi.default=void 0;var Na=Wo(),Aa=function(){var e=!1;try{e=process.platform===Na.SUPPORTED_PLATFORMS.WIN32}catch(t){e=!1}return e},Da=Aa;pi.default=Da});var Ir=it(gi=>{"use strict";Object.defineProperty(gi,"__esModule",{value:!0});gi.default=void 0;var ja=function(){var e=arguments.length>0&&arguments[0]!==void 0?arguments[0]:0;return Array.apply(null,Array(e)).map(function(t,n){return n})},Ea=ja;gi.default=Ea});var Yo=it(mi=>{"use strict";Object.defineProperty(mi,"__esModule",{value:!0});mi.default=void 0;var Fa=za(Ir());function za(i){return i&&i.__esModule?i:{default:i}}var Oa=function(e,t){var n=(0,Fa.default)(e);return n.map(function(){return t()})},Pa=Oa;mi.default=Pa});var Mr=it(Dt=>{"use strict";Object.defineProperty(Dt,"__esModule",{value:!0});Object.defineProperty(Dt,"capitalize",{enumerable:!0,get:function(){return Ra.default}});Object.defineProperty(Dt,"isNode",{enumerable:!0,get:function(){return Ba.default}});Object.defineProperty(Dt,"isReactNative",{enumerable:!0,get:function(){return Ga.default}});Object.defineProperty(Dt,"isWindows",{enumerable:!0,get:function(){return Za.default}});Object.defineProperty(Dt,"makeArrayOfLength",{enumerable:!0,get:function(){return Wa.default}});Object.defineProperty(Dt,"makeArrayOfStrings",{enumerable:!0,get:function(){return Qa.default}});var Ra=un(Bo()),Ba=un(Go()),Ga=un(Zo()),Za=un(Qo()),Wa=un(Ir()),Qa=un(Yo());function un(i){return i&&i.__esModule?i:{default:i}}});var Jo=it(_i=>{"use strict";Object.defineProperty(_i,"__esModule",{value:!0});_i.default=void 0;var Ya=xr(),Sr=Mr();function Ua(i,e){if(!(i instanceof e))throw new TypeError("Cannot call a class as a function")}function Uo(i,e){for(var t=0;t<e.length;t++){var n=e[t];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(i,n.key,n)}}function Ja(i,e,t){return e&&Uo(i.prototype,e),t&&Uo(i,t),Object.defineProperty(i,"prototype",{writable:!1}),i}function hi(i,e,t){return e in i?Object.defineProperty(i,e,{value:t,enumerable:!0,configurable:!0,writable:!0}):i[e]=t,i}var Ha=function(){function i(){var e=arguments.length>0&&arguments[0]!==void 0?arguments[0]:{},t=e.sentencesPerParagraph,n=t===void 0?{max:7,min:3}:t,r=e.wordsPerSentence,o=r===void 0?{max:15,min:5}:r,s=e.random,a=e.seed,l=e.words,u=l===void 0?Ya.WORDS:l;if(Ua(this,i),hi(this,"sentencesPerParagraph",void 0),hi(this,"wordsPerSentence",void 0),hi(this,"random",void 0),hi(this,"words",void 0),n.min>n.max)throw new Error("Minimum number of sentences per paragraph (".concat(n.min,") cannot exceed maximum (").concat(n.max,")."));if(o.min>o.max)throw new Error("Minimum number of words per sentence (".concat(o.min,") cannot exceed maximum (").concat(o.max,")."));this.sentencesPerParagraph=n,this.words=u,this.wordsPerSentence=o,this.random=s||Math.random}return Ja(i,[{key:"generateRandomInteger",value:function(t,n){return Math.floor(this.random()*(n-t+1)+t)}},{key:"generateRandomWords",value:function(t){var n=this,r=this.wordsPerSentence,o=r.min,s=r.max,a=t||this.generateRandomInteger(o,s);return(0,Sr.makeArrayOfLength)(a).reduce(function(l,u){return"".concat(n.pluckRandomWord()," ").concat(l)},"").trim()}},{key:"generateRandomSentence",value:function(t){return"".concat((0,Sr.capitalize)(this.generateRandomWords(t)),".")}},{key:"generateRandomParagraph",value:function(t){var n=this,r=this.sentencesPerParagraph,o=r.min,s=r.max,a=t||this.generateRandomInteger(o,s);return(0,Sr.makeArrayOfLength)(a).reduce(function(l,u){return"".concat(n.generateRandomSentence()," ").concat(l)},"").trim()}},{key:"pluckRandomWord",value:function(){var t=0,n=this.words.length-1,r=this.generateRandomInteger(t,n);return this.words[r]}}]),i}(),qa=Ha;_i.default=qa});var Vo=it(vi=>{"use strict";Object.defineProperty(vi,"__esModule",{value:!0});vi.default=void 0;var bi=kr(),Ho=Ro(),Va=Xa(Jo()),yi=Mr();function Xa(i){return i&&i.__esModule?i:{default:i}}function Ka(i,e){if(!(i instanceof e))throw new TypeError("Cannot call a class as a function")}function qo(i,e){for(var t=0;t<e.length;t++){var n=e[t];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(i,n.key,n)}}function ec(i,e,t){return e&&qo(i.prototype,e),t&&qo(i,t),Object.defineProperty(i,"prototype",{writable:!1}),i}function tc(i,e,t){return e in i?Object.defineProperty(i,e,{value:t,enumerable:!0,configurable:!0,writable:!0}):i[e]=t,i}var nc=function(){function i(){var e=arguments.length>0&&arguments[0]!==void 0?arguments[0]:{},t=arguments.length>1&&arguments[1]!==void 0?arguments[1]:bi.FORMAT_PLAIN,n=arguments.length>2?arguments[2]:void 0;if(Ka(this,i),this.format=t,this.suffix=n,tc(this,"generator",void 0),bi.FORMATS.indexOf(t.toLowerCase())===-1)throw new Error("".concat(t," is an invalid format. Please use ").concat(bi.FORMATS.join(" or "),"."));this.generator=new Va.default(e)}return ec(i,[{key:"getLineEnding",value:function(){return this.suffix?this.suffix:!(0,yi.isReactNative)()&&(0,yi.isNode)()&&(0,yi.isWindows)()?Ho.LINE_ENDINGS.WIN32:Ho.LINE_ENDINGS.POSIX}},{key:"formatString",value:function(t){return this.format===bi.FORMAT_HTML?"<p>".concat(t,"</p>"):t}},{key:"formatStrings",value:function(t){var n=this;return t.map(function(r){return n.formatString(r)})}},{key:"generateWords",value:function(t){return this.formatString(this.generator.generateRandomWords(t))}},{key:"generateSentences",value:function(t){return this.formatString(this.generator.generateRandomParagraph(t))}},{key:"generateParagraphs",value:function(t){var n=this.generator.generateRandomParagraph.bind(this.generator);return this.formatStrings((0,yi.makeArrayOfStrings)(t,n)).join(this.getLineEnding())}}]),i}(),ic=nc;vi.default=ic});var Ko=it(Ln=>{"use strict";Object.defineProperty(Ln,"__esModule",{value:!0});Object.defineProperty(Ln,"LoremIpsum",{enumerable:!0,get:function(){return Xo.default}});Ln.loremIpsum=void 0;var rc=kr(),Wt=Po(),oc=xr(),Xo=sc(Vo());function sc(i){return i&&i.__esModule?i:{default:i}}var lc=function(){var e=arguments.length>0&&arguments[0]!==void 0?arguments[0]:{},t=e.count,n=t===void 0?1:t,r=e.format,o=r===void 0?rc.FORMAT_PLAIN:r,s=e.paragraphLowerBound,a=s===void 0?3:s,l=e.paragraphUpperBound,u=l===void 0?7:l,f=e.random,d=e.sentenceLowerBound,m=d===void 0?5:d,g=e.sentenceUpperBound,_=g===void 0?15:g,k=e.units,x=k===void 0?Wt.UNIT_SENTENCES:k,C=e.words,w=C===void 0?oc.WORDS:C,S=e.suffix,T=S===void 0?"":S,P={random:f,sentencesPerParagraph:{max:u,min:a},words:w,wordsPerSentence:{max:_,min:m}},Z=new Xo.default(P,o,T);switch(x){case Wt.UNIT_PARAGRAPHS:case Wt.UNIT_PARAGRAPH:return Z.generateParagraphs(n);case Wt.UNIT_SENTENCES:case Wt.UNIT_SENTENCE:return Z.generateSentences(n);case Wt.UNIT_WORDS:case Wt.UNIT_WORD:return Z.generateWords(n);default:return""}};Ln.loremIpsum=lc});var jd={};pa(jd,{default:()=>fr});module.exports=ma(jd);var Ot=require("obsidian");var Tn=require("obsidian");var _e=class{constructor(e){this.message=e}},Gt=class extends _e{constructor(e){super(e||"Failed to get configuration from REST API")}},vt=class extends _e{constructor(e){super(e||"Failed to get configuration from CLI")}};var yr=require("obsidian");function vr(i,e,t){switch(e){case"recent":return new Map([...i.entries()].sort((n,r)=>Zt(n[1],r[1])));case"old":return new Map([...i.entries()].sort((n,r)=>Zt(n[1],r[1])).reverse());case"a-to-z":return new Map([...i.entries()].sort());case"z-to-a":return new Map([...i.entries()].sort().reverse())}}function Zt(i,e){if(i instanceof yr.TFile&&e instanceof yr.TFile){let r=tt(i.basename),o=tt(e.basename),s=r instanceof _e?new Date:r.dateTime;return(o instanceof _e?new Date:o.dateTime).getTime()-s.getTime()}let t=i.sort((r,o)=>Zt(r,o))[0],n=e.sort((r,o)=>Zt(r,o))[0];return Zt(t,n)}var To=/(.*).sync-conflict-(\d{8})-(\d{6})-(\w+).(\w+)/;function tt(i){let t=new RegExp(To).exec(i);return t?{filename:t[1],date:t[2],time:t[3],dateTime:new Date(`${t[2].slice(0,4)}-${t[2].slice(4,6)}-${t[2].slice(6,8)}T${t[3].slice(0,2)}:${t[3].slice(2,4)}:${t[3].slice(4,6)}`),modifiedBy:t[4],extension:t[5]}:new _e(`Error parsing conflict filename : ${i}`)}function $n(i){return!!new RegExp(To).exec(i)}function cn(i,e=2){if(i===0)return"0 Bytes";let t=1024,n=e<0?0:e,r=["Bytes","KB","MB","GB","TB","PB","EB","ZB","YB"],o=Math.floor(Math.log(i)/Math.log(t));return parseFloat((i/Math.pow(t,o)).toFixed(n))+" "+r[o]}function _a(i,e){if(!Array.isArray(i))return!1;for(let t of i)if(!e(t))return!1;return!0}function Lo(i){return _a(i,e=>typeof e=="string")}function ba(i,e,t){return typeof i=="object"&&i!==null&&e in i&&typeof i[e]===t}function lt(i,e,t){ba(i,e,t)||console.error(`Error validating JSON: ${e} is not present or is not of type ${typeof t}. Got ${JSON.stringify(i)}.`)}var oi=class{constructor(e,t,n,r){this.syncthingFromCLI=e;this.syncthingFromREST=t;this.syncthingFromAndroid=n;this.plugin=r}async isRunning(){return console.log("isRunning"),this.syncthingFromREST.ping().then(e=>(console.log(e),!0)).catch(e=>(console.log(e),!1))}getCLIStatus(){return this.syncthingFromCLI.getVersion()}async getAPIStatus(){return this.plugin.settings.api_key?this.syncthingFromREST.ping():"API key is not set."}async hasSyncthing(){return Tn.Platform.isAndroidApp?await this.syncthingFromAndroid.hasSyncthing():Tn.Platform.isIosApp?!1:await this.syncthingFromCLI.getVersion().then(e=>!0).catch(async e=>await this.syncthingFromREST.ping().then(t=>!0).catch(t=>!1))}async getConflictsWithOriginal(e){let t=this.plugin.app.vault.getFiles();if($n(e.basename)){let r=tt(e.basename);if(r instanceof _e)throw console.error(r.message),new Error("Error parsing conflict filename.");let o=t.filter(a=>a.name.contains(".sync-conflict")&&a.name.contains(r.filename)||a.basename===r.filename),s=t.find(a=>a.basename===r.filename);return s&&o.remove(s),{originalFile:s,conflicts:o}}return{conflicts:t.filter(r=>r.name.contains(".sync-conflict")&&r.name.contains(e.basename))}}async getConflicts(){let t=this.plugin.app.vault.getFiles().filter(r=>r.name.contains(".sync-conflict"));if(t.length===0)return new _e("No conflicts found.");let n=new Map;for(let r of t){let o=tt(r.name);if(o instanceof _e)return o;let s=o.filename;if(n.has(s)){n.get(s).push(r),n.set(s,n.get(s).sort((a,l)=>Zt(a,l)));continue}n.set(s,[r])}return n}async getDiffFiles(e){let t=tt(e.name);if(t instanceof _e)return{originalFile:e,conflictingFiles:t,conflictingFilesProperties:new Map().set(e,t)};let r=this.plugin.app.vault.getFiles().filter(l=>l.name.contains(".sync-conflict")&&l.name.contains(t.filename)||l.basename===t.filename),o=r.find(l=>l.basename===t.filename);o&&r.remove(o);let s=r.length>0?r:new _e("No conflicts found.");if(s instanceof _e)return{originalFile:o||e,conflictingFiles:s,conflictingFilesProperties:new Map().set(e,s)};let a=new Map;for(let l of r){let u=tt(l.name);a.set(l,u)}return{originalFile:o||e,conflictingFiles:r,conflictingFilesProperties:a}}async getAPIKey(){if(Tn.Platform.isMobileApp)return new _e("Cannot get API key on mobile. Please enter it manually.");if(!this.plugin.settings.api_key)try{let e=await this.syncthingFromCLI.getAPIkey();if(e)return this.plugin.settings.api_key=e,await this.plugin.saveSettings(),e}catch(e){return new vt("Error getting API key.")}return this.plugin.settings.api_key}async getConfiguration(){if(!await this.isRunning())return new _e("Syncthing is not running.");try{return await this.syncthingFromREST.getConfiguration()}catch(e){return Tn.Platform.isMobileApp?(console.error(e),new Gt):await this.syncthingFromCLI.getConfiguration()}}async getDevices(){return await this.syncthingFromREST.getDevices()}async getFolders(){return await this.syncthingFromREST.getAllFolders()}async startSyncthing(){return this.syncthingFromCLI.startSyncthing()}async stopSyncthing(){return this.syncthingFromCLI.stopSyncthing()}};function si(i,e){return i=isNaN(Number(i))?0:Number(i),e=isNaN(Number(e))?100:Number(e),Math.floor(Math.random()*(e-i)+i)}var ya={from:new Date(0),to:new Date((2<<29)*si(1,8046627))};function wr(i){return i=typeof i=="object"?i:ya,new Date(si(+i.from,+i.to))}var fn=ga(Ko()),rt=require("obsidian"),dn=class{constructor(e){this.plugin=e}async generateSyncthingConflicts(e=2,t=3){new rt.Notice("Creating main files..."),new rt.Notice(`Parameters: ${e} distinct files, ${t} conflicts per file.`);let n=new rt.Notice(""),r=new rt.Notice("");for(let o=0;o<e;o++){n.setMessage(`Progress (main files): ${o}/${e}`);let s=await this.plugin.app.vault.create(`${(0,fn.loremIpsum)({count:1,units:"words"})}.md`,`# ${(0,fn.loremIpsum)({count:1,units:"words"})}
+"use strict";
+var __create = Object.create;
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getProtoOf = Object.getPrototypeOf;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __typeError = (msg) => {
+  throw TypeError(msg);
+};
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __commonJS = (cb, mod) => function __require() {
+  return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+};
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
+var __accessCheck = (obj, member, msg) => member.has(obj) || __typeError("Cannot " + msg);
+var __privateAdd = (obj, member, value) => member.has(obj) ? __typeError("Cannot add the same private member more than once") : member instanceof WeakSet ? member.add(obj) : member.set(obj, value);
+var __privateMethod = (obj, member, method) => (__accessCheck(obj, member, "access private method"), method);
 
-${(0,fn.loremIpsum)({count:1,units:"paragraphs"})}`);console.log("In the generateSyncthingConflicts function."),new rt.Notice("Creating conflict files...");for(let a=0;a<t;a++){r.setMessage(`Progress (conflicts): ${a}/${t}`);let u=wr({from:new Date(2020,0,1),to:new Date}).toISOString().replace(/-/gm,"").replace("T","-").replace(/:|\.\d{3}Z/gm,""),f=Math.random().toString(36).substring(2,9).toUpperCase();console.log(u),await this.plugin.app.vault.create(`${s.basename}.sync-conflict-${u}-${f}.md`,`# ${(0,fn.loremIpsum)({count:1,units:"words"})}
+// node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/constants/formats.js
+var require_formats = __commonJS({
+  "node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/constants/formats.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.FORMAT_PLAIN = exports.FORMAT_HTML = exports.FORMATS = void 0;
+    var FORMAT_HTML = "html";
+    exports.FORMAT_HTML = FORMAT_HTML;
+    var FORMAT_PLAIN = "plain";
+    exports.FORMAT_PLAIN = FORMAT_PLAIN;
+    var FORMATS = [FORMAT_HTML, FORMAT_PLAIN];
+    exports.FORMATS = FORMATS;
+  }
+});
 
-${(0,fn.loremIpsum)({count:2,units:"paragraphs"})}`)}}}async purgeVault(){this.plugin.app.vault.getAllLoadedFiles().forEach(async e=>{await this.plugin.app.vault.delete(e)})}},Nn=class extends rt.Modal{constructor(t,n){super(t);this.pluginDevModeController=n;this.distinctFiles=2,this.conflictsPerFile=3}onOpen(){let{contentEl:t}=this;t.createEl("h2",{text:"Plugin development mode"}),t.createEl("p",{text:`Here, you can create sample files to test the Obsidian Syncthing integration plugin.
-The generated files are formated as in Syncthing documentation about conflicting files.`}),t.createEl("p",{text:"File format : <filename>.sync-conflict-<date>-<deviceID>.<extension>"}),new rt.Setting(t).setName("Number of distinct files").setDesc("Number of files that will be created.").addSlider(n=>{n.setValue(this.distinctFiles).setDynamicTooltip().setLimits(1,50,1).onChange(r=>{this.distinctFiles=r})}),new rt.Setting(t).setName("Number of conflicts per file").setDesc("Number of conflicts that will be created for each file.").addSlider(n=>{n.setValue(this.conflictsPerFile).setDynamicTooltip().setLimits(1,25,1).onChange(r=>{this.conflictsPerFile=r})}),new rt.Setting(t).setName("Generate Syncthing conflicts").addButton(n=>{n.setCta().setButtonText("Generate").onClick(async()=>{await this.pluginDevModeController.generateSyncthingConflicts(this.distinctFiles,this.conflictsPerFile),this.close()})}),new rt.Setting(t).setName("Purge Vault").setDesc("Delete all files in the vault.").addButton(n=>{n.setWarning().setButtonText("Purge").onClick(async()=>{let r=new rt.Modal(this.app);r.contentEl.createEl("h1",{text:"Purge Vault"}),r.contentEl.createEl("p",{text:"This will delete all files in the vault. Please don't use it on a vault that contains important files."}),new rt.Setting(r.contentEl).setName("Are you sure?").setHeading().addButton(o=>{o.setWarning().setButtonText("Yes").onClick(async()=>{await this.pluginDevModeController.purgeVault(),r.close(),this.close()})}).addButton(o=>{o.setButtonText("No").onClick(()=>{r.close()})}),r.open()})})}onClose(){let{contentEl:t}=this;t.empty()}};var An=require("obsidian");var wi=class{constructor(e,t){this.status_bar=e;this.plugin=t;this.app=t.app,this.currentFile=this.app.workspace.getActiveFile()}onload(){this.createStatusBar(),this.plugin.registerEvent(this.plugin.app.workspace.on("file-open",e=>{this.currentFile=e,this.createStatusBar()})),this.status_bar.onClickEvent(e=>{var n,r;let t=new An.Menu;if(t.addItem(o=>{o.setTitle("Open all conflicts as splits").onClick(()=>{var s;(s=this.activeConflicts)==null||s.forEach(async a=>{await this.app.workspace.createLeafBySplit(this.app.workspace.getLeaf()).openFile(a)})}),o.setIcon("arrow-up-right")}),this.currentFile&&$n(this.currentFile.name)&&this.originalFile===void 0){let o=this.currentFile;t.addItem(s=>{s.setTitle("Rename to original").onClick(async()=>{let a=tt(o.name);if(a instanceof _e){new An.Notice("Failed to parse conflict filename"),console.error(a.message);return}new An.Notice("Not implemented yet")}),s.setIcon("pencil")})}this.originalFile!==void 0&&t.addItem(o=>{o.setTitle("Open original file").onClick(async()=>await this.app.workspace.createLeafBySplit(this.app.workspace.getLeaf()).openFile(this.originalFile)),o.setIcon("arrow-up-right")}),t.addSeparator(),(n=this.activeConflicts)==null||n.sort((o,s)=>{let a=tt(o.basename),l=tt(s.basename);return a instanceof _e||l instanceof _e?0:a.dateTime>l.dateTime?-1:a.dateTime<l.dateTime?1:0}),(r=this.activeConflicts)==null||r.forEach(o=>{t.addItem(s=>{if($n(o.basename)){let a=tt(o.basename);if(a instanceof _e)return;s.setTitle(`${a.filename} (caused by ${a.modifiedBy} on ${a.dateTime.toISOString().replace("T"," ").replace("Z","")})`)}s.setIcon("file"),s.onClick(async()=>{await this.app.workspace.createLeafBySplit(this.app.workspace.getLeaf()).openFile(o)})})}),t.showAtPosition({x:window.innerWidth-15,y:window.innerHeight-37})}),this.status_bar.addClass("mod-clickable"),this.status_bar.style.color="var(--text-warning)"}createStatusBar(){let e=this.app.workspace.getActiveFile();if(!e){this.status_bar.empty();return}this.plugin.syncthingController.getConflictsWithOriginal(e).then(t=>{if(this.activeConflicts=t.conflicts,this.activeConflicts.remove(e),this.originalFile=t.originalFile,!this.activeConflicts||this.activeConflicts.length===0){this.status_bar.empty();return}this.status_bar.setText(`${this.activeConflicts.length} conflicts`)})}onunload(){this.status_bar.empty()}};var es=require("obsidian"),ki=class{async hasSyncthing(){return console.log("Platform: ",es.Platform),console.log("Obsidian App: ",app),!0}async openSyncthing(){let t="syncthing://com.nutomic.syncthingandroid",n="https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid",r=()=>{window.location.href=t},s=setTimeout(()=>{window.location.href=n},2e3);return r(),document.addEventListener("visibilitychange",()=>{document.visibilityState==="visible"&&(console.log("Syncthing is installed"),clearTimeout(s))}),!0}};var xi=class{constructor(e,t,n,r){this.version=e;this.folders=t;this.devices=n;this.url=r}},Ci=class{constructor(e,t,n,r,o,s,a){this.id=e;this.label=t;this.path=n;this.filesystemType=r;this.type=o;this.devices=s;this.maxConflicts=a}},Ii=class{constructor(e,t,n,r,o,s){this.deviceID=e;this.introducedBy=t;this.address=n;this.paused=r;this.ignoredFolders=o;this.name=s}},Mi=class{constructor(e,t,n){this.deviceID=e;this.introducedBy=t;this.encryptionPassword=n}};var pn=class i extends xi{constructor(e,t,n,r={protocol:"http",ip_address:"localhost",port:8384}){super(e,t,n,r)}static fromJSON(e){let t=JSON.parse(e),n=[];if(!(typeof t=="object"&&t!==null))throw new Error("JSON is not an object or is null");if(lt(t,"version","string"),!("folders"in t&&Array.isArray(t.folders))||!("devices"in t&&Array.isArray(t.devices)))throw new Error("Error parsing JSON: missing fields or wrong type");for(let o of t.folders)console.log(o),n.push(Dn.fromJSON(JSON.stringify(o)));let r=[];for(let o of t.devices)r.push(jn.fromJSON(JSON.stringify(o)));return new i(t.version,n,r)}toJSON(){return JSON.stringify(this)}},Dn=class i extends Ci{static fromJSON(e){let t=JSON.parse(e),n=[];if(!(typeof t=="object"&&t!==null))throw new Error("JSON is not an object or is null");if(lt(t,"id","string"),lt(t,"label","string"),lt(t,"path","string"),lt(t,"filesystemType","string"),lt(t,"type","string"),lt(t,"maxConflicts",0),!("devices"in t&&Array.isArray(t.devices)))throw new Error("Error validating JSON: devices is not present or is not an array");for(let r of t.devices)n.push($r.fromJSON(JSON.stringify(r)));return new i(t.id,t.label,t.path,t.filesystemType,t.type,n,t.maxConflicts)}toJSON(){return JSON.stringify(this)}},jn=class i extends Ii{static fromJSON(e){var n;let t=JSON.parse(e);if(!(typeof t=="object"&&t!==null))throw new Error("JSON is not an object or is null");if(lt(t,"deviceID","string"),lt(t,"introducedBy","string"),lt(t,"paused",!0),!("addresses"in t&&Lo(t.addresses))||!("ignoredFolders"in t)||!("name"in t&&(typeof t.name=="string"||typeof t.name=="undefined")))throw new Error("Error validating JSON");return new i(t.deviceID,t.introducedBy,t.addresses,t.paused,t.ignoredFolders,(n=t.name)!=null?n:"")}toJSON(){return JSON.stringify(this)}},$r=class i extends Mi{static fromJSON(e){let t=JSON.parse(e);if(!(typeof t=="object"&&t!==null))throw new Error("Error parsing JSON");return lt(t,"deviceID","string"),lt(t,"introducedBy","string"),lt(t,"encryptionPassword","string"),new i(t.deviceID,t.introducedBy,t.encryptionPassword)}toJSON(){throw new Error("Method not implemented.")}};var Tr=require("obsidian"),Si=class{async stopSyncthing(){let t=this.runSyncthingCommand("syncthing cli operations shutdown");if(t instanceof Error)throw new vt(t.message);return!0}async startSyncthing(){let t=await this.runSyncthingCommand("syncthing");if(t instanceof Error)throw new vt(t.message);return!0}async getVersion(){let t=await this.runSyncthingCommand("syncthing --version");if(t instanceof Error)throw new vt(t.message);return t}async getConfiguration(){let t=await this.runSyncthingCommand("syncthing cli config dump-json");if(t instanceof Error)throw new vt(t.message);return pn.fromJSON(t)}async getAPIkey(){let e=await this.runSyncthingCommand("syncthing cli config gui apikey get");if(e instanceof Error)throw new vt("No API key found.");return e.trim()}async runSyncthingCommand(e){if(Tr.Platform.isMobileApp)return Error("CLI not supported on mobile.");let{promisify:t}=require("util");if(Tr.Platform.isMacOS&&e.startsWith("syncthing")){let s="/Applications/Syncthing.app/Contents/Resources/syncthing/",{stat:a}=require("fs");(await t(a)(s)).isDirectory()&&(e=s+e)}let{exec:n}=require("child_process"),o=await t(n)(e);return o.stderr?Error(o.stderr):o.stdout}};var Ti=require("obsidian");var $i=class{constructor(e){this.plugin=e}async ping(){let e=await this.requestEndpoint("/rest/system/ping");return console.log("REST - ping: ",e),e.json.ping}async getAllFolders(){let e=await this.requestEndpoint("/rest/config/folders"),t=[];console.log("REST: ",e.json);for(let n of e.json)console.log("REST: ",n),t.push(Dn.fromJSON(JSON.stringify(n)));return t}async getFoldersForDevice(e){return(await this.getAllFolders()).filter(n=>n.devices.some(r=>r.deviceID===e.deviceID))}async getDevices(){let e=await this.requestEndpoint("/rest/config/devices"),t=[];console.log("REST: ",e.json);for(let n of e.json)t.push(jn.fromJSON(JSON.stringify(n)));return t}async getConfiguration(){let e=await this.requestEndpoint("/rest/config");return pn.fromJSON(e.json)}async requestEndpoint(e){var o,s,a;console.log("requestEndpoint: Endpoint",e);let t=(o=this.plugin.settings.configuration.url)==null?void 0:o.ip_address;t==="localhost"&&Ti.Platform.isMobileApp&&(t="127.0.0.1");let n=`${(s=this.plugin.settings.configuration.url)==null?void 0:s.protocol}://${t}:${(a=this.plugin.settings.configuration.url)==null?void 0:a.port}${e}`,r=(0,Ti.requestUrl)({url:n,method:"GET",headers:{"X-API-Key":this.plugin.settings.api_key,Accept:"*/*","Content-Type":"application/json","Access-Control-Allow-Origin":"*",redirect:"follow"}});return console.log("requestEndpoint: API Key set ?",this.plugin.settings.api_key!==""),console.log("requestEndpoint: url requested ",n),r.then(l=>{if(console.log("requestEndpoint: response ",l),l.status>=400)throw new Gt(l.text);return l}).catch(l=>{throw console.error("requestEndpoint: error: ",l),new Gt(l)})}};var $l=require("obsidian");function z(){}function xt(i,e){for(let t in e)i[t]=e[t];return i}function ts(i){return!!i&&(typeof i=="object"||typeof i=="function")&&typeof i.then=="function"}function Lr(i){return i()}function Li(){return Object.create(null)}function we(i){i.forEach(Lr)}function En(i){return typeof i=="function"}function ue(i,e){return i!=i?e==e:i!==e||i&&typeof i=="object"||typeof i=="function"}function ns(i){return Object.keys(i).length===0}function is(i,...e){if(i==null){for(let n of e)n(void 0);return z}let t=i.subscribe(...e);return t.unsubscribe?()=>t.unsubscribe():t}function rs(i,e,t){i.$$.on_destroy.push(is(e,t))}function Qt(i,e,t,n){if(i){let r=os(i,e,t,n);return i[0](r)}}function os(i,e,t,n){return i[1]&&n?xt(t.ctx.slice(),i[1](n(e))):t.ctx}function Yt(i,e,t,n){if(i[2]&&n){let r=i[2](n(t));if(e.dirty===void 0)return r;if(typeof r=="object"){let o=[],s=Math.max(e.dirty.length,r.length);for(let a=0;a<s;a+=1)o[a]=e.dirty[a]|r[a];return o}return e.dirty|r}return e.dirty}function Ut(i,e,t,n,r,o){if(r){let s=os(e,t,n,o);i.p(s,r)}}function Jt(i){if(i.ctx.length>32){let e=[],t=i.ctx.length/32;for(let n=0;n<t;n++)e[n]=-1;return e}return-1}function Ni(i){let e={};for(let t in i)t[0]!=="$"&&(e[t]=i[t]);return e}function gn(i,e){let t={};e=new Set(e);for(let n in i)!e.has(n)&&n[0]!=="$"&&(t[n]=i[n]);return t}var Nr=typeof window!="undefined"?window:typeof globalThis!="undefined"?globalThis:global;var Ai=class i{constructor(e){K(this,"_listeners","WeakMap"in Nr?new WeakMap:void 0);K(this,"_observer");K(this,"options");this.options=e}observe(e,t){return this._listeners.set(e,t),this._getObserver().observe(e,this.options),()=>{this._listeners.delete(e),this._observer.unobserve(e)}}_getObserver(){var e;return(e=this._observer)!=null?e:this._observer=new ResizeObserver(t=>{var n;for(let r of t)i.entries.set(r.target,r),(n=this._listeners.get(r.target))==null||n(r)})}};Ai.entries="WeakMap"in Nr?new WeakMap:void 0;var ss=!1;function ls(){ss=!0}function as(){ss=!1}function c(i,e){i.appendChild(e)}function Ie(i,e,t){let n=cs(i);if(!n.getElementById(e)){let r=p("style");r.id=e,r.textContent=t,uc(n,r)}}function cs(i){if(!i)return document;let e=i.getRootNode?i.getRootNode():i.ownerDocument;return e&&e.host?e:i.ownerDocument}function uc(i,e){return c(i.head||i,e),e.sheet}function v(i,e,t){i.insertBefore(e,t||null)}function y(i){i.parentNode&&i.parentNode.removeChild(i)}function bt(i,e){for(let t=0;t<i.length;t+=1)i[t]&&i[t].d(e)}function p(i){return document.createElement(i)}function fc(i){return document.createElementNS("http://www.w3.org/2000/svg",i)}function F(i){return document.createTextNode(i)}function b(){return F(" ")}function ot(){return F("")}function Q(i,e,t,n){return i.addEventListener(e,t,n),()=>i.removeEventListener(e,t,n)}function h(i,e,t){t==null?i.removeAttribute(e):i.getAttribute(e)!==t&&i.setAttribute(e,t)}var dc=["width","height"];function mn(i,e){let t=Object.getOwnPropertyDescriptors(i.__proto__);for(let n in e)e[n]==null?i.removeAttribute(n):n==="style"?i.style.cssText=e[n]:n==="__value"?i.value=i[n]=e[n]:t[n]&&t[n].set&&dc.indexOf(n)===-1?i[n]=e[n]:h(i,n,e[n])}function us(i){return Array.from(i.childNodes)}function oe(i,e){e=""+e,i.data!==e&&(i.data=e)}function jt(i,e){i.value=e==null?"":e}function Oe(i,e,t,n){t==null?i.style.removeProperty(e):i.style.setProperty(e,t,n?"important":"")}function Ar(i,e,t){for(let n=0;n<i.options.length;n+=1){let r=i.options[n];if(r.__value===e){r.selected=!0;return}}(!t||e!==void 0)&&(i.selectedIndex=-1)}function gt(i,e,t){i.classList.toggle(e,!!t)}function Di(i,e,{bubbles:t=!1,cancelable:n=!1}={}){return new CustomEvent(i,{detail:e,bubbles:t,cancelable:n})}var Fn=class{constructor(e=!1){K(this,"is_svg",!1);K(this,"e");K(this,"n");K(this,"t");K(this,"a");this.is_svg=e,this.e=this.n=null}c(e){this.h(e)}m(e,t,n=null){this.e||(this.is_svg?this.e=fc(t.nodeName):this.e=p(t.nodeType===11?"TEMPLATE":t.nodeName),this.t=t.tagName!=="TEMPLATE"?t:t.content,this.c(e)),this.i(n)}h(e){this.e.innerHTML=e,this.n=Array.from(this.e.nodeName==="TEMPLATE"?this.e.content.childNodes:this.e.childNodes)}i(e){for(let t=0;t<this.n.length;t+=1)v(this.t,this.n[t],e)}p(e){this.d(),this.h(e),this.i(this.a)}d(){this.n.forEach(y)}};function fs(i){let e={};return i.childNodes.forEach(t=>{e[t.slot||"default"]=!0}),e}var Et;function ft(i){Et=i}function ji(){if(!Et)throw new Error("Function called outside component initialization");return Et}function Ke(i){ji().$$.on_mount.push(i)}function Dr(){let i=ji();return(e,t,{cancelable:n=!1}={})=>{let r=i.$$.callbacks[e];if(r){let o=Di(e,t,{cancelable:n});return r.slice().forEach(s=>{s.call(i,o)}),!o.defaultPrevented}return!0}}var Ht=[];var st=[],_n=[],ds=[],bc=Promise.resolve(),Er=!1;function ps(){Er||(Er=!0,bc.then(On))}function zn(i){_n.push(i)}var jr=new Set,hn=0;function On(){if(hn!==0)return;let i=Et;do{try{for(;hn<Ht.length;){let e=Ht[hn];hn++,ft(e),yc(e.$$)}}catch(e){throw Ht.length=0,hn=0,e}for(ft(null),Ht.length=0,hn=0;st.length;)st.pop()();for(let e=0;e<_n.length;e+=1){let t=_n[e];jr.has(t)||(jr.add(t),t())}_n.length=0}while(Ht.length);for(;ds.length;)ds.pop()();Er=!1,jr.clear(),ft(i)}function yc(i){if(i.fragment!==null){i.update(),we(i.before_update);let e=i.dirty;i.dirty=[-1],i.fragment&&i.fragment.p(i.ctx,e),i.after_update.forEach(zn)}}function gs(i){let e=[],t=[];_n.forEach(n=>i.indexOf(n)===-1?e.push(n):t.push(n)),t.forEach(n=>n()),_n=e}var Ei=new Set,qt;function Le(){qt={r:0,c:[],p:qt}}function Ne(){qt.r||we(qt.c),qt=qt.p}function I(i,e){i&&i.i&&(Ei.delete(i),i.i(e))}function M(i,e,t,n){if(i&&i.o){if(Ei.has(i))return;Ei.add(i),qt.c.push(()=>{Ei.delete(i),n&&(t&&i.d(1),n())}),i.o(e)}else n&&n()}function Pn(i,e){let t=e.token={};function n(r,o,s,a){if(e.token!==t)return;e.resolved=a;let l=e.ctx;s!==void 0&&(l=l.slice(),l[s]=a);let u=r&&(e.current=r)(l),f=!1;e.block&&(e.blocks?e.blocks.forEach((d,m)=>{m!==o&&d&&(Le(),M(d,1,1,()=>{e.blocks[m]===d&&(e.blocks[m]=null)}),Ne())}):e.block.d(1),u.c(),I(u,1),u.m(e.mount(),e.anchor),f=!0),e.block=u,e.blocks&&(e.blocks[o]=u),f&&On()}if(ts(i)){let r=ji();if(i.then(o=>{ft(r),n(e.then,1,e.value,o),ft(null)},o=>{if(ft(r),n(e.catch,2,e.error,o),ft(null),!e.hasCatch)throw o}),e.current!==e.pending)return n(e.pending,0),!0}else{if(e.current!==e.then)return n(e.then,1,e.value,i),!0;e.resolved=i}}function Fr(i,e,t){let n=e.slice(),{resolved:r}=i;i.current===i.then&&(n[i.value]=r),i.current===i.catch&&(n[i.error]=r),i.block.p(n,t)}function Je(i){return(i==null?void 0:i.length)!==void 0?i:Array.from(i)}function Fi(i,e){let t={},n={},r={$$scope:1},o=i.length;for(;o--;){let s=i[o],a=e[o];if(a){for(let l in s)l in a||(n[l]=1);for(let l in a)r[l]||(t[l]=a[l],r[l]=1);i[o]=a}else for(let l in s)r[l]=1}for(let s in n)s in t||(t[s]=void 0);return t}var vc=["allowfullscreen","allowpaymentrequest","async","autofocus","autoplay","checked","controls","default","defer","disabled","formnovalidate","hidden","inert","ismap","loop","multiple","muted","nomodule","novalidate","open","playsinline","readonly","required","reversed","selected"],wc=new Set([...vc]);function A(i){i&&i.c()}function L(i,e,t){let{fragment:n,after_update:r}=i.$$;n&&n.m(e,t),zn(()=>{let o=i.$$.on_mount.map(Lr).filter(En);i.$$.on_destroy?i.$$.on_destroy.push(...o):we(o),i.$$.on_mount=[]}),r.forEach(zn)}function N(i,e){let t=i.$$;t.fragment!==null&&(gs(t.after_update),we(t.on_destroy),t.fragment&&t.fragment.d(e),t.on_destroy=t.fragment=null,t.ctx=[])}function xc(i,e){i.$$.dirty[0]===-1&&(Ht.push(i),ps(),i.$$.dirty.fill(0)),i.$$.dirty[e/31|0]|=1<<e%31}function he(i,e,t,n,r,o,s=null,a=[-1]){let l=Et;ft(i);let u=i.$$={fragment:null,ctx:[],props:o,update:z,not_equal:r,bound:Li(),on_mount:[],on_destroy:[],on_disconnect:[],before_update:[],after_update:[],context:new Map(e.context||(l?l.$$.context:[])),callbacks:Li(),dirty:a,skip_bound:!1,root:e.target||l.$$.root};s&&s(u.root);let f=!1;if(u.ctx=t?t(i,e.props||{},(d,m,...g)=>{let _=g.length?g[0]:m;return u.ctx&&r(u.ctx[d],u.ctx[d]=_)&&(!u.skip_bound&&u.bound[d]&&u.bound[d](_),f&&xc(i,d)),m}):[],u.update(),f=!0,we(u.before_update),u.fragment=n?n(u.ctx):!1,e.target){if(e.hydrate){ls();let d=us(e.target);u.fragment&&u.fragment.l(d),d.forEach(y)}else u.fragment&&u.fragment.c();e.intro&&I(i.$$.fragment),L(i,e.target,e.anchor),as(),On()}ft(l)}var Cc;typeof HTMLElement=="function"&&(Cc=class extends HTMLElement{constructor(e,t,n){super();K(this,"$$ctor");K(this,"$$s");K(this,"$$c");K(this,"$$cn",!1);K(this,"$$d",{});K(this,"$$r",!1);K(this,"$$p_d",{});K(this,"$$l",{});K(this,"$$l_u",new Map);this.$$ctor=e,this.$$s=t,n&&this.attachShadow({mode:"open"})}addEventListener(e,t,n){if(this.$$l[e]=this.$$l[e]||[],this.$$l[e].push(t),this.$$c){let r=this.$$c.$on(e,t);this.$$l_u.set(t,r)}super.addEventListener(e,t,n)}removeEventListener(e,t,n){if(super.removeEventListener(e,t,n),this.$$c){let r=this.$$l_u.get(t);r&&(r(),this.$$l_u.delete(t))}}async connectedCallback(){if(this.$$cn=!0,!this.$$c){let e=function(o){return()=>{let s;return{c:function(){s=p("slot"),o!=="default"&&h(s,"name",o)},m:function(u,f){v(u,s,f)},d:function(u){u&&y(s)}}}};if(await Promise.resolve(),!this.$$cn||this.$$c)return;let t={},n=fs(this);for(let o of this.$$s)o in n&&(t[o]=[e(o)]);for(let o of this.attributes){let s=this.$$g_p(o.name);s in this.$$d||(this.$$d[s]=zr(s,o.value,this.$$p_d,"toProp"))}for(let o in this.$$p_d)!(o in this.$$d)&&this[o]!==void 0&&(this.$$d[o]=this[o],delete this[o]);this.$$c=new this.$$ctor({target:this.shadowRoot||this,props:{...this.$$d,$$slots:t,$$scope:{ctx:[]}}});let r=()=>{this.$$r=!0;for(let o in this.$$p_d)if(this.$$d[o]=this.$$c.$$.ctx[this.$$c.$$.props[o]],this.$$p_d[o].reflect){let s=zr(o,this.$$d[o],this.$$p_d,"toAttribute");s==null?this.removeAttribute(this.$$p_d[o].attribute||o):this.setAttribute(this.$$p_d[o].attribute||o,s)}this.$$r=!1};this.$$c.$$.after_update.push(r),r();for(let o in this.$$l)for(let s of this.$$l[o]){let a=this.$$c.$on(o,s);this.$$l_u.set(s,a)}this.$$l={}}}attributeChangedCallback(e,t,n){var r;this.$$r||(e=this.$$g_p(e),this.$$d[e]=zr(e,n,this.$$p_d,"toProp"),(r=this.$$c)==null||r.$set({[e]:this.$$d[e]}))}disconnectedCallback(){this.$$cn=!1,Promise.resolve().then(()=>{this.$$cn||(this.$$c.$destroy(),this.$$c=void 0)})}$$g_p(e){return Object.keys(this.$$p_d).find(t=>this.$$p_d[t].attribute===e||!this.$$p_d[t].attribute&&t.toLowerCase()===e)||e}});function zr(i,e,t,n){var o;let r=(o=t[i])==null?void 0:o.type;if(e=r==="Boolean"&&typeof e!="boolean"?e!=null:e,!n||!t[i])return e;if(n==="toAttribute")switch(r){case"Object":case"Array":return e==null?null:JSON.stringify(e);case"Boolean":return e?"":null;case"Number":return e==null?null:e;default:return e}else switch(r){case"Object":case"Array":return e&&JSON.parse(e);case"Boolean":return e;case"Number":return e!=null?+e:e;default:return e}}var fe=class{constructor(){K(this,"$$");K(this,"$$set")}$destroy(){N(this,1),this.$destroy=z}$on(e,t){if(!En(t))return z;let n=this.$$.callbacks[e]||(this.$$.callbacks[e]=[]);return n.push(t),()=>{let r=n.indexOf(t);r!==-1&&n.splice(r,1)}}$set(e){this.$$set&&!ns(e)&&(this.$$.skip_bound=!0,this.$$set(e),this.$$.skip_bound=!1)}};var ms="4";typeof window!="undefined"&&(window.__svelte||(window.__svelte={v:new Set})).v.add(ms);var Ml=require("obsidian");var or=require("obsidian");function He(i,e,t,n){function r(o){return o instanceof t?o:new t(function(s){s(o)})}return new(t||(t=Promise))(function(o,s){function a(f){try{u(n.next(f))}catch(d){s(d)}}function l(f){try{u(n.throw(f))}catch(d){s(d)}}function u(f){f.done?o(f.value):r(f.value).then(a,l)}u((n=n.apply(i,e||[])).next())})}var pe=require("@codemirror/view"),ie=require("@codemirror/state");var Or="\u037C",hs=typeof Symbol=="undefined"?"__"+Or:Symbol.for(Or),Pr=typeof Symbol=="undefined"?"__styleSet"+Math.floor(Math.random()*1e8):Symbol("styleSet"),_s=typeof globalThis!="undefined"?globalThis:typeof window!="undefined"?window:{},zi=class{constructor(e,t){this.rules=[];let{finish:n}=t||{};function r(s){return/^@/.test(s)?[s]:s.split(/,\s*/)}function o(s,a,l,u){let f=[],d=/^@(\w+)\b/.exec(s[0]),m=d&&d[1]=="keyframes";if(d&&a==null)return l.push(s[0]+";");for(let g in a){let _=a[g];if(/&/.test(g))o(g.split(/,\s*/).map(k=>s.map(x=>k.replace(/&/,x))).reduce((k,x)=>k.concat(x)),_,l);else if(_&&typeof _=="object"){if(!d)throw new RangeError("The value of a property ("+g+") should be a primitive value.");o(r(g),_,f,m)}else _!=null&&f.push(g.replace(/_.*/,"").replace(/[A-Z]/g,k=>"-"+k.toLowerCase())+": "+_+";")}(f.length||m)&&l.push((n&&!d&&!u?s.map(n):s).join(", ")+" {"+f.join(" ")+"}")}for(let s in e)o(r(s),e[s],this.rules)}getRules(){return this.rules.join(`
-`)}static newName(){let e=_s[hs]||1;return _s[hs]=e+1,Or+e.toString(36)}static mount(e,t,n){let r=e[Pr],o=n&&n.nonce;r?o&&r.setNonce(o):r=new Rr(e,o),r.mount(Array.isArray(t)?t:[t],e)}},bs=new Map,Rr=class{constructor(e,t){let n=e.ownerDocument||e,r=n.defaultView;if(!e.head&&e.adoptedStyleSheets&&r.CSSStyleSheet){let o=bs.get(n);if(o)return e[Pr]=o;this.sheet=new r.CSSStyleSheet,bs.set(n,this)}else this.styleTag=n.createElement("style"),t&&this.styleTag.setAttribute("nonce",t);this.modules=[],e[Pr]=this}mount(e,t){let n=this.sheet,r=0,o=0;for(let s=0;s<e.length;s++){let a=e[s],l=this.modules.indexOf(a);if(l<o&&l>-1&&(this.modules.splice(l,1),o--,l=-1),l==-1){if(this.modules.splice(o++,0,a),n)for(let u=0;u<a.rules.length;u++)n.insertRule(a.rules[u],r++)}else{for(;o<l;)r+=this.modules[o++].rules.length;r+=a.rules.length,o++}}if(n)t.adoptedStyleSheets.indexOf(this.sheet)<0&&(t.adoptedStyleSheets=[this.sheet,...t.adoptedStyleSheets]);else{let s="";for(let l=0;l<this.modules.length;l++)s+=this.modules[l].getRules()+`
-`;this.styleTag.textContent=s;let a=t.head||t;this.styleTag.parentNode!=a&&a.insertBefore(this.styleTag,a.firstChild)}}setNonce(e){this.styleTag&&this.styleTag.getAttribute("nonce")!=e&&this.styleTag.setAttribute("nonce",e)}};var Ui=require("@codemirror/language"),Es=require("@lezer/highlight"),Pe=class i{constructor(e,t,n,r){this.fromA=e,this.toA=t,this.fromB=n,this.toB=r}offset(e,t){return new i(this.fromA+e,this.toA+e,this.fromB+t,this.toB+t)}};function Xt(i,e,t,n,r,o){if(i==n)return[];let s=Yr(i,e,t,n,r,o),a=Ur(i,e+s,t,n,r+s,o);e+=s,t-=a,r+=s,o-=a;let l=t-e,u=o-r;if(!l||!u)return[new Pe(e,t,r,o)];if(l>u){let d=i.slice(e,t).indexOf(n.slice(r,o));if(d>-1)return[new Pe(e,e+d,r,r),new Pe(e+d+u,t,o,o)]}else if(u>l){let d=n.slice(r,o).indexOf(i.slice(e,t));if(d>-1)return[new Pe(e,e,r,r+d),new Pe(t,t,r+d+l,o)]}if(l==1||u==1)return[new Pe(e,t,r,o)];let f=zs(i,e,t,n,r,o);if(f){let[d,m,g]=f;return Xt(i,e,d,n,r,m).concat(Xt(i,d+g,t,n,m+g,o))}return Ic(i,e,t,n,r,o)}var Rn=1e9;function Ic(i,e,t,n,r,o){let s=t-e,a=o-r;if(Rn<1e9&&Math.min(s,a)>Rn*16)return Math.min(s,a)>Rn*64?[new Pe(e,t,r,o)]:ys(i,e,t,n,r,o);let l=Math.ceil((s+a)/2);Br.reset(l),Gr.reset(l);let u=(g,_)=>i.charCodeAt(e+g)==n.charCodeAt(r+_),f=(g,_)=>i.charCodeAt(t-g-1)==n.charCodeAt(o-_-1),d=(s-a)%2!=0?Gr:null,m=d?null:Br;for(let g=0;g<l;g++){if(g>Rn)return ys(i,e,t,n,r,o);let _=Br.advance(g,s,a,l,d,!1,u)||Gr.advance(g,s,a,l,m,!0,f);if(_)return Mc(i,e,t,e+_[0],n,r,o,r+_[1])}return[new Pe(e,t,r,o)]}var Gi=class{constructor(){this.vec=[]}reset(e){this.len=e<<1;for(let t=0;t<this.len;t++)this.vec[t]=-1;this.vec[e+1]=0,this.start=this.end=0}advance(e,t,n,r,o,s,a){for(let l=-e+this.start;l<=e-this.end;l+=2){let u=r+l,f=l==-e||l!=e&&this.vec[u-1]<this.vec[u+1]?this.vec[u+1]:this.vec[u-1]+1,d=f-l;for(;f<t&&d<n&&a(f,d);)f++,d++;if(this.vec[u]=f,f>t)this.end+=2;else if(d>n)this.start+=2;else if(o){let m=r+(t-n)-l;if(m>=0&&m<this.len&&o.vec[m]!=-1)if(s){let g=o.vec[m];if(g>=t-f)return[g,r+g-m]}else{let g=t-o.vec[m];if(f>=g)return[f,d]}}}return null}},Br=new Gi,Gr=new Gi;function Mc(i,e,t,n,r,o,s,a){let l=!1;return!yn(i,n)&&++n==t&&(l=!0),!yn(r,a)&&++a==s&&(l=!0),l?[new Pe(e,t,o,s)]:Xt(i,e,n,r,o,a).concat(Xt(i,n,t,r,a,s))}function Fs(i,e){let t=1,n=Math.min(i,e);for(;t<n;)t=t<<1;return t}function Yr(i,e,t,n,r,o){if(e==t||e==o||i.charCodeAt(e)!=n.charCodeAt(r))return 0;let s=Fs(t-e,o-r);for(let a=e,l=r;;){let u=a+s,f=l+s;if(u>t||f>o||i.slice(a,u)!=n.slice(l,f)){if(s==1)return a-e-(yn(i,a)?0:1);s=s>>1}else{if(u==t||f==o)return u-e;a=u,l=f}}}function Ur(i,e,t,n,r,o){if(e==t||r==o||i.charCodeAt(t-1)!=n.charCodeAt(o-1))return 0;let s=Fs(t-e,o-r);for(let a=t,l=o;;){let u=a-s,f=l-s;if(u<e||f<r||i.slice(u,a)!=n.slice(f,l)){if(s==1)return t-a-(yn(i,a)?0:1);s=s>>1}else{if(u==e||f==r)return t-u;a=u,l=f}}}function Zr(i,e,t,n,r,o,s,a){let l=n.slice(r,o),u=null;for(;;){if(u||s<a)return u;for(let f=e+s;;){yn(i,f)||f++;let d=f+s;if(yn(i,d)||(d+=d==f+1?1:-1),d>=t)break;let m=i.slice(f,d),g=-1;for(;(g=l.indexOf(m,g+1))!=-1;){let _=Yr(i,d,t,n,r+g+m.length,o),k=Ur(i,e,f,n,r,r+g),x=m.length+_+k;(!u||u[2]<x)&&(u=[f-k,r+g-k,x])}f=d}if(a<0)return u;s=s>>1}}function zs(i,e,t,n,r,o){let s=t-e,a=o-r;if(s<a){let l=zs(n,r,o,i,e,t);return l&&[l[1],l[0],l[2]]}return s<4||a*2<s?null:Zr(i,e,t,n,r,o,Math.floor(s/4),-1)}function ys(i,e,t,n,r,o){let s=t-e,a=o-r,l;if(s<a){let m=Zr(n,r,o,i,e,t,Math.floor(s/6),50);l=m&&[m[1],m[0],m[2]]}else l=Zr(i,e,t,n,r,o,Math.floor(a/6),50);if(!l)return[new Pe(e,t,r,o)];let[u,f,d]=l;return Xt(i,e,u,n,r,f).concat(Xt(i,u+d,t,n,f+d,o))}function Os(i,e){for(let t=1;t<i.length;t++){let n=i[t-1],r=i[t];n.toA>r.fromA-e&&n.toB>r.fromB-e&&(i[t-1]=new Pe(n.fromA,r.toA,n.fromB,r.toB),i.splice(t--,1))}}function Sc(i,e,t){for(;;){Os(t,1);let n=!1;for(let r=0;r<t.length;r++){let o=t[r],s,a;(s=Yr(i,o.fromA,o.toA,e,o.fromB,o.toB))&&(o=t[r]=new Pe(o.fromA+s,o.toA,o.fromB+s,o.toB)),(a=Ur(i,o.fromA,o.toA,e,o.fromB,o.toB))&&(o=t[r]=new Pe(o.fromA,o.toA-a,o.fromB,o.toB-a));let l=o.toA-o.fromA,u=o.toB-o.fromB;if(l&&u)continue;let f=o.fromA-(r?t[r-1].toA:0),d=(r<t.length-1?t[r+1].fromA:i.length)-o.toA;if(!f||!d)continue;let m=l?i.slice(o.fromA,o.toA):e.slice(o.fromB,o.toB);f<=m.length&&i.slice(o.fromA-f,o.fromA)==m.slice(m.length-f)?(t[r]=new Pe(o.fromA-f,o.toA-f,o.fromB-f,o.toB-f),n=!0):d<=m.length&&i.slice(o.toA,o.toA+d)==m.slice(0,d)&&(t[r]=new Pe(o.fromA+d,o.toA+d,o.fromB+d,o.toB+d),n=!0)}if(!n)break}return t}function $c(i,e,t){for(let n=0,r=0;r<i.length;r++){let o=i[r],s=o.toA-o.fromA,a=o.toB-o.fromB;if(s&&a||s>3||a>3){let l=r==i.length-1?e.length:i[r+1].fromA,u=o.fromA-n,f=l-o.toA,d=ws(e,o.fromA,Math.min(u,5)),m=vs(e,o.toA,Math.min(f,5)),g=o.fromA-d,_=m-o.toA;if(!s||!a){let k=Math.max(s,a),[x,C,w]=s?[e,o.fromA,o.toA]:[t,o.fromB,o.toB],S,T;g&&_?(k>g&&e.slice(d,o.fromA)==x.slice(w-g,w)?(o=i[r]=new Pe(d,d+s,o.fromB-g,o.toB-g),d=o.fromA,m=vs(e,o.toA,Math.min(l-o.toA,5))):k>_&&e.slice(o.toA,m)==x.slice(C,C+_)&&(o=i[r]=new Pe(m-s,m,o.fromB+_,o.toB+_),m=o.toA,d=ws(e,o.fromA,Math.min(o.fromA-n,5))),g=o.fromA-d,_=m-o.toA):!g&&!_&&(T=o.fromA-(S=Tc(e,o.fromA,u)))&&e.slice(S,o.fromA)==x.slice(w-T,w)&&(o=i[r]=new Pe(S,S+s,o.fromB-T,o.toB-T))}(g||_)&&(o=i[r]=new Pe(o.fromA-g,o.toA+_,o.fromB-g,o.toB+_)),n=o.toA}}return Os(i,3),i}var Vt;try{Vt=new RegExp("[\\p{Alphabetic}\\p{Number}]","u")}catch(i){}function Ps(i){return i>48&&i<58||i>64&&i<91||i>96&&i<123}function Rs(i,e){if(e==i.length)return 0;let t=i.charCodeAt(e);return t<192?Ps(t)?1:0:Vt?!Gs(t)||e==i.length-1?Vt.test(String.fromCharCode(t))?1:0:Vt.test(i.slice(e,e+2))?2:0:0}function Bs(i,e){if(!e)return 0;let t=i.charCodeAt(e-1);return t<192?Ps(t)?1:0:Vt?!Zs(t)||e==1?Vt.test(String.fromCharCode(t))?1:0:Vt.test(i.slice(e-2,e))?2:0:0}function vs(i,e,t){if(e==i.length||!Bs(i,e))return e;for(let n=e,r=e+t;;){let o=Rs(i,n);if(!o)return n;if(n+=o,n>r)return e}}function ws(i,e,t){if(!e||!Rs(i,e))return e;for(let n=e,r=e-t;;){let o=Bs(i,n);if(!o)return n;if(n-=o,n<r)return e}}function Tc(i,e,t){for(let n=e,r=e-t;;){let o=n?i.charCodeAt(n-1):10;if(o==10)return n;if(n--,n<r||o!=32&&o!=9)return e}}var Gs=i=>i>=55296&&i<=56319,Zs=i=>i>=56320&&i<=57343;function yn(i,e){return!e||e==i.length||!Gs(i.charCodeAt(e-1))||!Zs(i.charCodeAt(e))}function Lc(i,e,t){var n;return Rn=((n=t==null?void 0:t.scanLimit)!==null&&n!==void 0?n:1e9)>>1,Sc(i,e,Xt(i,0,i.length,e,0,e.length))}function Ws(i,e,t){return $c(Lc(i,e,t),i,e)}var mt=ie.Facet.define({combine:i=>i[0]}),Zi=ie.StateEffect.define(),dt=ie.StateField.define({create(i){return null},update(i,e){for(let t of e.effects)t.is(Zi)&&(i=t.value);return i}});var Ct=class i{constructor(e,t,n,r,o){this.changes=e,this.fromA=t,this.toA=n,this.fromB=r,this.toB=o}offset(e,t){return e||t?new i(this.changes,this.fromA+e,this.toA+e,this.fromB+t,this.toB+t):this}get endA(){return Math.max(this.fromA,this.toA-1)}get endB(){return Math.max(this.fromB,this.toB-1)}static build(e,t,n){return Qs(Ws(e.toString(),t.toString(),n),e,t,0,0)}static updateA(e,t,n,r,o){return Ms(Is(e,r,!0,n.length),e,t,n,o)}static updateB(e,t,n,r,o){return Ms(Is(e,r,!1,t.length),e,t,n,o)}};function ks(i,e,t,n){let r=t.lineAt(i),o=n.lineAt(e);return r.to==i&&o.to==e&&i<t.length&&e<n.length?[i+1,e+1]:[r.from,o.from]}function xs(i,e,t,n){let r=t.lineAt(i),o=n.lineAt(e);return r.from==i&&o.from==e?[i,e]:[r.to+1,o.to+1]}function Qs(i,e,t,n,r){let o=[];for(let s=0;s<i.length;s++){let a=i[s],[l,u]=ks(a.fromA+n,a.fromB+r,e,t),[f,d]=xs(a.toA+n,a.toB+r,e,t),m=[a.offset(-l+n,-u+r)];for(;s<i.length-1;){let g=i[s+1],[_,k]=ks(g.fromA+n,g.fromB+r,e,t);if(_>f+1&&k>d+1)break;m.push(g.offset(-l+n,-u+r)),[f,d]=xs(g.toA+n,g.toB+r,e,t),s++}o.push(new Ct(m,l,Math.max(l,f),u,Math.max(u,d)))}return o}var Oi=1e3;function Cs(i,e,t,n){let r=0,o=i.length;for(;;){if(r==o){let f=0,d=0;r&&({toA:f,toB:d}=i[r-1]);let m=e-(t?f:d);return[f+m,d+m]}let s=r+o>>1,a=i[s],[l,u]=t?[a.fromA,a.toA]:[a.fromB,a.toB];if(l>e)o=s;else if(u<=e)r=s+1;else return n?[a.fromA,a.fromB]:[a.toA,a.toB]}}function Is(i,e,t,n){let r=[];return e.iterChangedRanges((o,s,a,l)=>{let u=0,f=t?e.length:n,d=0,m=t?n:e.length;o>Oi&&([u,d]=Cs(i,o-Oi,t,!0)),s<e.length-Oi&&([f,m]=Cs(i,s+Oi,t,!1));let g=l-a-(s-o),_,[k,x]=t?[g,0]:[0,g];r.length&&(_=r[r.length-1]).toA>=u?r[r.length-1]={fromA:_.fromA,fromB:_.fromB,toA:f,toB:m,diffA:_.diffA+k,diffB:_.diffB+x}:r.push({fromA:u,toA:f,fromB:d,toB:m,diffA:k,diffB:x})}),r}function Ms(i,e,t,n,r){if(!i.length)return e;let o=[];for(let s=0,a=0,l=0,u=0;;s++){let f=s==i.length?null:i[s],d=f?f.fromA+a:t.length,m=f?f.fromB+l:n.length;for(;u<e.length;){let x=e[u];if(x.toA+a>d||x.toB+l>m)break;o.push(x.offset(a,l)),u++}if(!f)break;let g=f.toA+a+f.diffA,_=f.toB+l+f.diffB,k=Ws(t.sliceString(d,g),n.sliceString(m,_),r);for(let x of Qs(k,t,n,d,m))o.push(x);for(a+=f.diffA,l+=f.diffB;u<e.length;){let x=e[u];if(x.fromA+a>g&&x.fromB+l>_)break;u++}}return o}var Ji=pe.ViewPlugin.fromClass(class{constructor(i){({deco:this.deco,gutter:this.gutter}=Ts(i))}update(i){(i.docChanged||i.viewportChanged||Nc(i.startState,i.state)||Ac(i.startState,i.state))&&({deco:this.deco,gutter:this.gutter}=Ts(i.view))}},{decorations:i=>i.deco}),Pi=ie.Prec.low((0,pe.gutter)({class:"cm-changeGutter",markers:i=>{var e;return((e=i.plugin(Ji))===null||e===void 0?void 0:e.gutter)||ie.RangeSet.empty}}));function Nc(i,e){return i.field(dt,!1)!=e.field(dt,!1)}function Ac(i,e){return i.facet(mt)!=e.facet(mt)}var Ss=pe.Decoration.line({class:"cm-changedLine"}),Dc=pe.Decoration.mark({class:"cm-changedText"}),jc=pe.Decoration.mark({tagName:"ins",class:"cm-insertedLine"}),Ec=pe.Decoration.mark({tagName:"del",class:"cm-deletedLine"}),$s=new class extends pe.GutterMarker{constructor(){super(...arguments),this.elementClass="cm-changedLineGutter"}};function Fc(i,e,t,n,r,o){let s=t?i.fromA:i.fromB,a=t?i.toA:i.toB,l=0;if(s!=a){r.add(s,s,Ss),r.add(s,a,t?Ec:jc),o&&o.add(s,s,$s);for(let u=e.iterRange(s,a-1),f=s;!u.next().done;){if(u.lineBreak){f++,r.add(f,f,Ss),o&&o.add(f,f,$s);continue}let d=f+u.value.length;if(n)for(;l<i.changes.length;){let m=i.changes[l],g=s+(t?m.fromA:m.fromB),_=s+(t?m.toA:m.toB),k=Math.max(f,g),x=Math.min(d,_);if(k<x&&r.add(k,x,Dc),_<d)l++;else break}f=d}}}function Ts(i){let e=i.state.field(dt),{side:t,highlightChanges:n,markGutter:r}=i.state.facet(mt),o=t=="a",s=new ie.RangeSetBuilder,a=r?new ie.RangeSetBuilder:null,{from:l,to:u}=i.viewport;for(let f of e){if((o?f.fromA:f.fromB)>=u)break;(o?f.toA:f.toB)>l&&Fc(f,i.state.doc,o,n,s,a)}return{deco:s.finish(),gutter:a&&a.finish()}}var bn=class extends pe.WidgetType{constructor(e){super(),this.height=e}eq(e){return this.height==e.height}toDOM(){let e=document.createElement("div");return e.className="cm-mergeSpacer",e.style.height=this.height+"px",e}updateDOM(e){return e.style.height=this.height+"px",!0}get estimatedHeight(){return this.height}ignoreEvent(){return!1}},Wi=ie.StateEffect.define({map:(i,e)=>i.map(e)}),Bn=ie.StateField.define({create:()=>pe.Decoration.none,update:(i,e)=>{for(let t of e.effects)if(t.is(Wi))return t.value;return i.map(e.changes)},provide:i=>pe.EditorView.decorations.from(i)}),Ri=.01;function zc(i,e,t){let n=new ie.RangeSetBuilder,r=new ie.RangeSetBuilder,o=i.state.field(Bn).iter(),s=e.state.field(Bn).iter(),a=0,l=0,u=0,f=0;for(let _=0;;_++){let k=_<t.length?t[_]:null;if(a<(k?k.fromA:i.state.doc.length)){let x=i.lineBlockAt(a).top+u,C=e.lineBlockAt(l).top+f,w=x-C;w<-Ri?(u-=w,n.add(a,a,pe.Decoration.widget({widget:new bn(-w),block:!0,side:-1}))):w>Ri&&(f+=w,r.add(l,l,pe.Decoration.widget({widget:new bn(w),block:!0,side:-1})))}if(!k)break;for(a=k.toA,l=k.toB;o.value&&o.from<a;)u-=o.value.spec.widget.height,o.next();for(;s.value&&s.from<l;)f-=s.value.spec.widget.height,s.next()}for(;o.value;)u-=o.value.spec.widget.height,o.next();for(;s.value;)f-=s.value.spec.widget.height,s.next();let d=i.contentHeight+u-(e.contentHeight+f);d<Ri?n.add(i.state.doc.length,i.state.doc.length,pe.Decoration.widget({widget:new bn(-d),block:!0,side:1})):d>Ri&&r.add(e.state.doc.length,e.state.doc.length,pe.Decoration.widget({widget:new bn(d),block:!0,side:1}));let m=n.finish(),g=r.finish();ie.RangeSet.eq([m],[i.state.field(Bn)])||i.dispatch({effects:Wi.of(m)}),ie.RangeSet.eq([g],[e.state.field(Bn)])||e.dispatch({effects:Wi.of(g)})}var Wr=ie.StateEffect.define({map:(i,e)=>e.mapPos(i)}),Qr=class extends pe.WidgetType{constructor(e){super(),this.lines=e}eq(e){return this.lines==e.lines}toDOM(e){let t=document.createElement("div");return t.className="cm-collapsedLines",t.textContent="\u299A "+e.state.phrase("$ unchanged lines",this.lines)+" \u299A",t.addEventListener("click",n=>{let r=e.posAtDOM(n.target);e.dispatch({effects:Wr.of(r)});let{side:o,sibling:s}=e.state.facet(mt);s&&s().dispatch({effects:Wr.of(Oc(r,e.state.field(dt),o=="a"))})}),t}ignoreEvent(e){return e instanceof MouseEvent}get estimatedHeight(){return 27}};function Oc(i,e,t){let n=0,r=0;for(let o=0;;o++){let s=o<e.length?e[o]:null;if(!s||(t?s.fromA:s.fromB)>=i)return r+(i-n);[n,r]=t?[s.toA,s.toB]:[s.toB,s.toA]}}var Pc=ie.StateField.define({create(i){return pe.Decoration.none},update(i,e){i=i.map(e.changes);for(let t of e.effects)t.is(Wr)&&(i=i.update({filter:n=>n!=t.value}));return i},provide:i=>pe.EditorView.decorations.from(i)});function Ls({margin:i=3,minSize:e=4}){return Pc.init(t=>Rc(t,i,e))}function Rc(i,e,t){let n=new ie.RangeSetBuilder,r=i.facet(mt).side=="a",o=i.field(dt),s=1;for(let a=0;;a++){let l=a<o.length?o[a]:null,u=a?s+e:1,f=l?i.doc.lineAt(r?l.fromA:l.fromB).number-1-e:i.doc.lines,d=f-u+1;if(d>=t&&n.add(i.doc.line(u).from,i.doc.line(f).to,pe.Decoration.replace({widget:new Qr(d),block:!0})),!l)break;s=i.doc.lineAt(Math.min(i.doc.length,r?l.toA:l.toB)).number}return n.finish()}var Bc=pe.EditorView.styleModule.of(new zi({".cm-mergeView":{overflowY:"auto"},".cm-mergeViewEditors":{display:"flex",alignItems:"stretch"},".cm-mergeViewEditor":{flexGrow:1,flexBasis:0,overflow:"hidden"},".cm-merge-revert":{width:"1.6em",flexGrow:0,flexShrink:0,position:"relative"},".cm-merge-revert button":{position:"absolute",display:"block",width:"100%",boxSizing:"border-box",textAlign:"center",background:"none",border:"none",font:"inherit",cursor:"pointer"}})),Ys=pe.EditorView.baseTheme({".cm-mergeView & .cm-scroller, .cm-mergeView &":{height:"auto !important",overflowY:"visible !important"},"&.cm-merge-a .cm-changedLine, .cm-deletedChunk":{backgroundColor:"rgba(160, 128, 100, .08)"},"&.cm-merge-b .cm-changedLine":{backgroundColor:"rgba(100, 160, 128, .08)"},"&light.cm-merge-a .cm-changedText, &light .cm-deletedChunk .cm-deletedText":{background:"linear-gradient(#ee443366, #ee443366) bottom/100% 2px no-repeat"},"&dark.cm-merge-a .cm-changedText, &dark .cm-deletedChunk .cm-deletedText":{background:"linear-gradient(#ffaa9966, #ffaa9966) bottom/100% 2px no-repeat"},"&light.cm-merge-b .cm-changedText":{background:"linear-gradient(#22bb2266, #22bb2266) bottom/100% 2px no-repeat"},"&dark.cm-merge-b .cm-changedText":{background:"linear-gradient(#88ff8866, #88ff8866) bottom/100% 2px no-repeat"},".cm-insertedLine, .cm-deletedLine":{textDecoration:"none"},".cm-deletedChunk":{paddingLeft:"6px","& .cm-chunkButtons":{position:"absolute",insetInlineEnd:"5px"},"& button":{border:"none",cursor:"pointer",color:"white",margin:"0 2px",borderRadius:"3px","&[name=accept]":{background:"#2a2"},"&[name=reject]":{background:"#d43"}}},".cm-collapsedLines":{padding:"5px 5px 5px 10px",cursor:"pointer"},"&light .cm-collapsedLines":{color:"#444",background:"linear-gradient(to bottom, transparent 0, #f3f3f3 30%, #f3f3f3 70%, transparent 100%)"},"&dark .cm-collapsedLines":{color:"#ddd",background:"linear-gradient(to bottom, transparent 0, #222 30%, #222 70%, transparent 100%)"},".cm-changeGutter":{width:"3px",paddingLeft:"1px"},"&light.cm-merge-a .cm-changedLineGutter, &light .cm-deletedLineGutter":{background:"#e43"},"&dark.cm-merge-a .cm-changedLineGutter, &dark .cm-deletedLineGutter":{background:"#fa9"},"&light.cm-merge-b .cm-changedLineGutter":{background:"#2b2"},"&dark.cm-merge-b .cm-changedLineGutter":{background:"#8f8"}}),Ns=new ie.Compartment,Bi=new ie.Compartment,Qi=class{constructor(e){this.revertDOM=null,this.revertToA=!1,this.revertToLeft=!1,this.measuring=-1,this.diffConf=e.diffConfig;let t=[ie.Prec.low(Ji),Ys,Bc,Bn,pe.EditorView.updateListener.of(d=>{this.measuring<0&&(d.heightChanged||d.viewportChanged)&&!d.transactions.some(m=>m.effects.some(g=>g.is(Wi)))&&this.measure()})],n=[mt.of({side:"a",sibling:()=>this.b,highlightChanges:e.highlightChanges!==!1,markGutter:e.gutter!==!1})];e.gutter!==!1&&n.push(Pi);let r=ie.EditorState.create({doc:e.a.doc,selection:e.a.selection,extensions:[e.a.extensions||[],pe.EditorView.editorAttributes.of({class:"cm-merge-a"}),Bi.of(n),t]}),o=[mt.of({side:"b",sibling:()=>this.a,highlightChanges:e.highlightChanges!==!1,markGutter:e.gutter!==!1})];e.gutter!==!1&&o.push(Pi);let s=ie.EditorState.create({doc:e.b.doc,selection:e.b.selection,extensions:[e.b.extensions||[],pe.EditorView.editorAttributes.of({class:"cm-merge-b"}),Bi.of(o),t]});this.chunks=Ct.build(r.doc,s.doc,this.diffConf);let a=[dt.init(()=>this.chunks),Ns.of(e.collapseUnchanged?Ls(e.collapseUnchanged):[])];r=r.update({effects:ie.StateEffect.appendConfig.of(a)}).state,s=s.update({effects:ie.StateEffect.appendConfig.of(a)}).state,this.dom=document.createElement("div"),this.dom.className="cm-mergeView",this.editorDOM=this.dom.appendChild(document.createElement("div")),this.editorDOM.className="cm-mergeViewEditors";let l=e.orientation||"a-b",u=document.createElement("div");u.className="cm-mergeViewEditor";let f=document.createElement("div");f.className="cm-mergeViewEditor",this.editorDOM.appendChild(l=="a-b"?u:f),this.editorDOM.appendChild(l=="a-b"?f:u),this.a=new pe.EditorView({state:r,parent:u,root:e.root,dispatchTransactions:d=>this.dispatch(d,this.a)}),this.b=new pe.EditorView({state:s,parent:f,root:e.root,dispatchTransactions:d=>this.dispatch(d,this.b)}),this.setupRevertControls(!!e.revertControls,e.revertControls=="b-to-a",e.renderRevertControl),e.parent&&e.parent.appendChild(this.dom),this.scheduleMeasure()}dispatch(e,t){if(e.some(n=>n.docChanged)){let n=e[e.length-1],r=e.reduce((s,a)=>s.compose(a.changes),ie.ChangeSet.empty(e[0].startState.doc.length));this.chunks=t==this.a?Ct.updateA(this.chunks,n.newDoc,this.b.state.doc,r,this.diffConf):Ct.updateB(this.chunks,this.a.state.doc,n.newDoc,r,this.diffConf),t.update([...e,n.state.update({effects:Zi.of(this.chunks)})]);let o=t==this.a?this.b:this.a;o.update([o.state.update({effects:Zi.of(this.chunks)})]),this.scheduleMeasure()}else t.update(e)}reconfigure(e){if("diffConfig"in e&&(this.diffConf=e.diffConfig),"orientation"in e){let o=e.orientation!="b-a";if(o!=(this.editorDOM.firstChild==this.a.dom.parentNode)){let s=this.a.dom.parentNode,a=this.b.dom.parentNode;s.remove(),a.remove(),this.editorDOM.insertBefore(o?s:a,this.editorDOM.firstChild),this.editorDOM.appendChild(o?a:s),this.revertToLeft=!this.revertToLeft,this.revertDOM&&(this.revertDOM.textContent="")}}if("revertControls"in e||"renderRevertControl"in e){let o=!!this.revertDOM,s=this.revertToA,a=this.renderRevert;"revertControls"in e&&(o=!!e.revertControls,s=e.revertControls=="b-to-a"),"renderRevertControl"in e&&(a=e.renderRevertControl),this.setupRevertControls(o,s,a)}let t="highlightChanges"in e,n="gutter"in e,r="collapseUnchanged"in e;if(t||n||r){let o=[],s=[];if(t||n){let a=this.a.state.facet(mt),l=n?e.gutter!==!1:a.markGutter,u=t?e.highlightChanges!==!1:a.highlightChanges;o.push(Bi.reconfigure([mt.of({side:"a",sibling:()=>this.b,highlightChanges:u,markGutter:l}),l?Pi:[]])),s.push(Bi.reconfigure([mt.of({side:"b",sibling:()=>this.a,highlightChanges:u,markGutter:l}),l?Pi:[]]))}if(r){let a=Ns.reconfigure(e.collapseUnchanged?Ls(e.collapseUnchanged):[]);o.push(a),s.push(a)}this.a.dispatch({effects:o}),this.b.dispatch({effects:s})}this.scheduleMeasure()}setupRevertControls(e,t,n){this.revertToA=t,this.revertToLeft=this.revertToA==(this.editorDOM.firstChild==this.a.dom.parentNode),this.renderRevert=n,!e&&this.revertDOM?(this.revertDOM.remove(),this.revertDOM=null):e&&!this.revertDOM?(this.revertDOM=this.editorDOM.insertBefore(document.createElement("div"),this.editorDOM.firstChild.nextSibling),this.revertDOM.addEventListener("mousedown",r=>this.revertClicked(r)),this.revertDOM.className="cm-merge-revert"):this.revertDOM&&(this.revertDOM.textContent="")}scheduleMeasure(){if(this.measuring<0){let e=this.dom.ownerDocument.defaultView||window;this.measuring=e.requestAnimationFrame(()=>{this.measuring=-1,this.measure()})}}measure(){zc(this.a,this.b,this.chunks),this.revertDOM&&this.updateRevertButtons()}updateRevertButtons(){let e=this.revertDOM,t=e.firstChild,n=this.a.viewport,r=this.b.viewport;for(let o=0;o<this.chunks.length;o++){let s=this.chunks[o];if(s.fromA>n.to||s.fromB>r.to)break;if(s.fromA<n.from||s.fromB<r.from)continue;let a=this.a.lineBlockAt(s.fromA).top+"px";for(;t&&+t.dataset.chunk<o;)t=As(t);t&&t.dataset.chunk==String(o)?(t.style.top!=a&&(t.style.top=a),t=t.nextSibling):e.insertBefore(this.renderRevertButton(a,o),t)}for(;t;)t=As(t)}renderRevertButton(e,t){let n;if(this.renderRevert)n=this.renderRevert();else{n=document.createElement("button");let r=this.a.state.phrase("Revert this chunk");n.setAttribute("aria-label",r),n.setAttribute("title",r),n.textContent=this.revertToLeft?"\u21DC":"\u21DD"}return n.style.top=e,n.setAttribute("data-chunk",String(t)),n}revertClicked(e){let t=e.target,n;for(;t&&t.parentNode!=this.revertDOM;)t=t.parentNode;if(t&&(n=this.chunks[t.dataset.chunk])){let[r,o,s,a,l,u]=this.revertToA?[this.b,this.a,n.fromB,n.toB,n.fromA,n.toA]:[this.a,this.b,n.fromA,n.toA,n.fromB,n.toB],f=r.state.sliceDoc(s,Math.max(s,a-1));s!=a&&u<=o.state.doc.length&&(f+=r.state.lineBreak),o.dispatch({changes:{from:l,to:Math.min(o.state.doc.length,u),insert:f},userEvent:"revert"}),e.preventDefault()}}destroy(){this.a.destroy(),this.b.destroy(),this.measuring>-1&&(this.dom.ownerDocument.defaultView||window).cancelAnimationFrame(this.measuring),this.dom.remove()}};function As(i){let e=i.nextSibling;return i.remove(),e}var Gc=new class extends pe.GutterMarker{constructor(){super(...arguments),this.elementClass="cm-deletedLineGutter"}},Zc=ie.Prec.low((0,pe.gutter)({class:"cm-changeGutter",markers:i=>{var e;return((e=i.plugin(Ji))===null||e===void 0?void 0:e.gutter)||ie.RangeSet.empty},widgetMarker:(i,e)=>e instanceof Yi?Gc:null}));function Us(i){let e=typeof i.original=="string"?ie.Text.of(i.original.split(/\r?\n/)):i.original,t=i.diffConfig;return[ie.Prec.low(Ji),Uc,Ys,pe.EditorView.editorAttributes.of({class:"cm-merge-b"}),ie.EditorState.transactionExtender.of(n=>{let r=n.effects.find(a=>a.is(Jr));if(!n.docChanged&&!r)return null;let o=n.startState.field(dt),s=r?Ct.updateA(o,r.value.doc,n.newDoc,r.value.changes,t):Ct.updateB(o,n.startState.field(Gn),n.newDoc,n.changes,t);return{effects:Zi.of(s)}}),mt.of({highlightChanges:i.highlightChanges!==!1,markGutter:i.gutter!==!1,syntaxHighlightDeletions:i.syntaxHighlightDeletions!==!1,mergeControls:i.mergeControls!==!1,side:"b"}),Gn.init(()=>e),i.gutter!==!1?Zc:[],dt.init(n=>Ct.build(e,n.doc,t))]}var Jr=ie.StateEffect.define();var Gn=ie.StateField.define({create:()=>ie.Text.empty,update(i,e){for(let t of e.effects)t.is(Jr)&&(i=t.value.doc);return i}});var Ds=new WeakMap,Yi=class extends pe.WidgetType{constructor(e){super(),this.buildDOM=e,this.dom=null}eq(e){return this.dom==e.dom}toDOM(e){return this.dom||(this.dom=this.buildDOM(e))}};function Wc(i,e){let t=Ds.get(e.changes);if(t)return t;let n=o=>{let{highlightChanges:s,syntaxHighlightDeletions:a,mergeControls:l}=i.facet(mt),u=o.state.field(Gn).sliceString(e.fromA,e.endA),f=a&&i.facet(Ui.language),d=document.createElement("div");if(d.className="cm-deletedChunk",l){let C=d.appendChild(document.createElement("div"));C.className="cm-chunkButtons";let w=C.appendChild(document.createElement("button"));w.name="accept",w.textContent=i.phrase("Accept"),w.onmousedown=T=>{T.preventDefault(),Qc(o,o.posAtDOM(d))};let S=C.appendChild(document.createElement("button"));S.name="reject",S.textContent=i.phrase("Reject"),S.onmousedown=T=>{T.preventDefault(),Yc(o,o.posAtDOM(d))}}let m=d.appendChild(document.createElement("del")),g=e.changes,_=0,k=!1;function x(C,w,S){for(let T=C;T<w;){let P=w,Z=S+(k?" cm-deletedText":"");if(s&&_<g.length){let O=k?g[_].toA:g[_].fromA;O<=P&&(P=O,k&&_++,k=!k)}if(P>T){let O=document.createTextNode(u.slice(T,P));if(Z){let R=d.appendChild(document.createElement("span"));R.className=Z,m.appendChild(O)}else m.appendChild(O)}T=P}}if(f){let C=f.parser.parse(u),w=0;(0,Es.highlightTree)(C,{style:S=>(0,Ui.highlightingFor)(i,S)},(S,T,P)=>{S>w&&x(w,S,""),x(S,T,P),w=T}),x(w,u.length,"")}else x(0,u.length,"");return d},r=pe.Decoration.widget({block:!0,side:-1,widget:new Yi(n)});return Ds.set(e.changes,r),r}function Qc(i,e){let{state:t}=i,n=e!=null?e:t.selection.main.head,r=i.state.field(dt).find(l=>l.fromB<=n&&l.endB>=n);if(!r)return!1;let o=i.state.sliceDoc(r.fromB,Math.max(r.fromB,r.toB-1)),s=i.state.field(Gn);r.fromB!=r.toB&&r.toA<=s.length&&(o+=i.state.lineBreak);let a=ie.ChangeSet.of({from:r.fromA,to:Math.min(s.length,r.toA),insert:o},s.length);return i.dispatch({effects:Jr.of({doc:a.apply(s),changes:a}),userEvent:"accept"}),!0}function Yc(i,e){let{state:t}=i,n=e!=null?e:t.selection.main.head,r=t.field(dt).find(a=>a.fromB<=n&&a.endB>=n);if(!r)return!1;let s=t.field(Gn).sliceString(r.fromA,Math.max(r.fromA,r.toA-1));return r.fromA!=r.toA&&r.toB<=t.doc.length&&(s+=t.lineBreak),i.dispatch({changes:{from:r.fromB,to:Math.min(t.doc.length,r.toB),insert:s},userEvent:"revert"}),!0}function js(i){let e=new ie.RangeSetBuilder;for(let t of i.field(dt))e.add(t.fromB,t.fromB,Wc(i,t));return e.finish()}var Uc=ie.StateField.define({create:i=>js(i),update(i,e){return e.state.field(dt,!1)!=e.startState.field(dt,!1)?js(e.state):i},provide:i=>pe.EditorView.decorations.from(i)});var bl=require("@codemirror/state");var Ve=require("@codemirror/view"),at=require("@codemirror/view"),Js=require("@codemirror/state"),ht=require("@codemirror/language"),vn=require("@codemirror/commands"),Hi=require("@codemirror/search"),Ft=require("@codemirror/autocomplete"),Hs=require("@codemirror/lint"),Zn=[(0,Ve.lineNumbers)(),(0,Ve.highlightActiveLineGutter)(),(0,Ve.highlightSpecialChars)(),(0,vn.history)(),(0,ht.foldGutter)(),(0,Ve.drawSelection)(),(0,Ve.dropCursor)(),Js.EditorState.allowMultipleSelections.of(!0),(0,ht.indentOnInput)(),(0,ht.syntaxHighlighting)(ht.defaultHighlightStyle,{fallback:!0}),(0,ht.bracketMatching)(),(0,Ft.closeBrackets)(),(0,Ft.autocompletion)(),(0,Ve.rectangularSelection)(),(0,Ve.crosshairCursor)(),(0,Ve.highlightActiveLine)(),(0,Hi.highlightSelectionMatches)(),Ve.keymap.of([...Ft.closeBracketsKeymap,...vn.defaultKeymap,...Hi.searchKeymap,...vn.historyKeymap,...ht.foldKeymap,...Ft.completionKeymap,...Hs.lintKeymap])];function Xr(){return{async:!1,breaks:!1,extensions:null,gfm:!0,hooks:null,pedantic:!1,renderer:null,silent:!1,tokenizer:null,walkTokens:null}}var tn=Xr();function tl(i){tn=i}var nl=/[&<>"']/,Jc=new RegExp(nl.source,"g"),il=/[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/,Hc=new RegExp(il.source,"g"),qc={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"},qs=i=>qc[i];function pt(i,e){if(e){if(nl.test(i))return i.replace(Jc,qs)}else if(il.test(i))return i.replace(Hc,qs);return i}var Vc=/&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/ig;function Xc(i){return i.replace(Vc,(e,t)=>(t=t.toLowerCase(),t==="colon"?":":t.charAt(0)==="#"?t.charAt(1)==="x"?String.fromCharCode(parseInt(t.substring(2),16)):String.fromCharCode(+t.substring(1)):""))}var Kc=/(^|[^\[])\^/g;function Me(i,e){let t=typeof i=="string"?i:i.source;e=e||"";let n={replace:(r,o)=>{let s=typeof o=="string"?o:o.source;return s=s.replace(Kc,"$1"),t=t.replace(r,s),n},getRegex:()=>new RegExp(t,e)};return n}function Vs(i){try{i=encodeURI(i).replace(/%25/g,"%")}catch(e){return null}return i}var Qn={exec:()=>null};function Xs(i,e){let t=i.replace(/\|/g,(o,s,a)=>{let l=!1,u=s;for(;--u>=0&&a[u]==="\\";)l=!l;return l?"|":" |"}),n=t.split(/ \|/),r=0;if(n[0].trim()||n.shift(),n.length>0&&!n[n.length-1].trim()&&n.pop(),e)if(n.length>e)n.splice(e);else for(;n.length<e;)n.push("");for(;r<n.length;r++)n[r]=n[r].trim().replace(/\\\|/g,"|");return n}function qi(i,e,t){let n=i.length;if(n===0)return"";let r=0;for(;r<n;){let o=i.charAt(n-r-1);if(o===e&&!t)r++;else if(o!==e&&t)r++;else break}return i.slice(0,n-r)}function eu(i,e){if(i.indexOf(e[1])===-1)return-1;let t=0;for(let n=0;n<i.length;n++)if(i[n]==="\\")n++;else if(i[n]===e[0])t++;else if(i[n]===e[1]&&(t--,t<0))return n;return-1}function Ks(i,e,t,n){let r=e.href,o=e.title?pt(e.title):null,s=i[1].replace(/\\([\[\]])/g,"$1");if(i[0].charAt(0)!=="!"){n.state.inLink=!0;let a={type:"link",raw:t,href:r,title:o,text:s,tokens:n.inlineTokens(s)};return n.state.inLink=!1,a}return{type:"image",raw:t,href:r,title:o,text:pt(s)}}function tu(i,e){let t=i.match(/^(\s+)(?:```)/);if(t===null)return e;let n=t[1];return e.split(`
-`).map(r=>{let o=r.match(/^\s+/);if(o===null)return r;let[s]=o;return s.length>=n.length?r.slice(n.length):r}).join(`
-`)}var wn=class{constructor(e){K(this,"options");K(this,"rules");K(this,"lexer");this.options=e||tn}space(e){let t=this.rules.block.newline.exec(e);if(t&&t[0].length>0)return{type:"space",raw:t[0]}}code(e){let t=this.rules.block.code.exec(e);if(t){let n=t[0].replace(/^ {1,4}/gm,"");return{type:"code",raw:t[0],codeBlockStyle:"indented",text:this.options.pedantic?n:qi(n,`
-`)}}}fences(e){let t=this.rules.block.fences.exec(e);if(t){let n=t[0],r=tu(n,t[3]||"");return{type:"code",raw:n,lang:t[2]?t[2].trim().replace(this.rules.inline.anyPunctuation,"$1"):t[2],text:r}}}heading(e){let t=this.rules.block.heading.exec(e);if(t){let n=t[2].trim();if(/#$/.test(n)){let r=qi(n,"#");(this.options.pedantic||!r||/ $/.test(r))&&(n=r.trim())}return{type:"heading",raw:t[0],depth:t[1].length,text:n,tokens:this.lexer.inline(n)}}}hr(e){let t=this.rules.block.hr.exec(e);if(t)return{type:"hr",raw:t[0]}}blockquote(e){let t=this.rules.block.blockquote.exec(e);if(t){let n=qi(t[0].replace(/^ *>[ \t]?/gm,""),`
-`),r=this.lexer.state.top;this.lexer.state.top=!0;let o=this.lexer.blockTokens(n);return this.lexer.state.top=r,{type:"blockquote",raw:t[0],tokens:o,text:n}}}list(e){let t=this.rules.block.list.exec(e);if(t){let n=t[1].trim(),r=n.length>1,o={type:"list",raw:"",ordered:r,start:r?+n.slice(0,-1):"",loose:!1,items:[]};n=r?`\\d{1,9}\\${n.slice(-1)}`:`\\${n}`,this.options.pedantic&&(n=r?n:"[*+-]");let s=new RegExp(`^( {0,3}${n})((?:[	 ][^\\n]*)?(?:\\n|$))`),a="",l="",u=!1;for(;e;){let f=!1;if(!(t=s.exec(e))||this.rules.block.hr.test(e))break;a=t[0],e=e.substring(a.length);let d=t[2].split(`
-`,1)[0].replace(/^\t+/,C=>" ".repeat(3*C.length)),m=e.split(`
-`,1)[0],g=0;this.options.pedantic?(g=2,l=d.trimStart()):(g=t[2].search(/[^ ]/),g=g>4?1:g,l=d.slice(g),g+=t[1].length);let _=!1;if(!d&&/^ *$/.test(m)&&(a+=m+`
-`,e=e.substring(m.length+1),f=!0),!f){let C=new RegExp(`^ {0,${Math.min(3,g-1)}}(?:[*+-]|\\d{1,9}[.)])((?:[ 	][^\\n]*)?(?:\\n|$))`),w=new RegExp(`^ {0,${Math.min(3,g-1)}}((?:- *){3,}|(?:_ *){3,}|(?:\\* *){3,})(?:\\n+|$)`),S=new RegExp(`^ {0,${Math.min(3,g-1)}}(?:\`\`\`|~~~)`),T=new RegExp(`^ {0,${Math.min(3,g-1)}}#`);for(;e;){let P=e.split(`
-`,1)[0];if(m=P,this.options.pedantic&&(m=m.replace(/^ {1,4}(?=( {4})*[^ ])/g,"  ")),S.test(m)||T.test(m)||C.test(m)||w.test(e))break;if(m.search(/[^ ]/)>=g||!m.trim())l+=`
-`+m.slice(g);else{if(_||d.search(/[^ ]/)>=4||S.test(d)||T.test(d)||w.test(d))break;l+=`
-`+m}!_&&!m.trim()&&(_=!0),a+=P+`
-`,e=e.substring(P.length+1),d=m.slice(g)}}o.loose||(u?o.loose=!0:/\n *\n *$/.test(a)&&(u=!0));let k=null,x;this.options.gfm&&(k=/^\[[ xX]\] /.exec(l),k&&(x=k[0]!=="[ ] ",l=l.replace(/^\[[ xX]\] +/,""))),o.items.push({type:"list_item",raw:a,task:!!k,checked:x,loose:!1,text:l,tokens:[]}),o.raw+=a}o.items[o.items.length-1].raw=a.trimEnd(),o.items[o.items.length-1].text=l.trimEnd(),o.raw=o.raw.trimEnd();for(let f=0;f<o.items.length;f++)if(this.lexer.state.top=!1,o.items[f].tokens=this.lexer.blockTokens(o.items[f].text,[]),!o.loose){let d=o.items[f].tokens.filter(g=>g.type==="space"),m=d.length>0&&d.some(g=>/\n.*\n/.test(g.raw));o.loose=m}if(o.loose)for(let f=0;f<o.items.length;f++)o.items[f].loose=!0;return o}}html(e){let t=this.rules.block.html.exec(e);if(t)return{type:"html",block:!0,raw:t[0],pre:t[1]==="pre"||t[1]==="script"||t[1]==="style",text:t[0]}}def(e){let t=this.rules.block.def.exec(e);if(t){let n=t[1].toLowerCase().replace(/\s+/g," "),r=t[2]?t[2].replace(/^<(.*)>$/,"$1").replace(this.rules.inline.anyPunctuation,"$1"):"",o=t[3]?t[3].substring(1,t[3].length-1).replace(this.rules.inline.anyPunctuation,"$1"):t[3];return{type:"def",tag:n,raw:t[0],href:r,title:o}}}table(e){let t=this.rules.block.table.exec(e);if(!t||!/[:|]/.test(t[2]))return;let n=Xs(t[1]),r=t[2].replace(/^\||\| *$/g,"").split("|"),o=t[3]&&t[3].trim()?t[3].replace(/\n[ \t]*$/,"").split(`
-`):[],s={type:"table",raw:t[0],header:[],align:[],rows:[]};if(n.length===r.length){for(let a of r)/^ *-+: *$/.test(a)?s.align.push("right"):/^ *:-+: *$/.test(a)?s.align.push("center"):/^ *:-+ *$/.test(a)?s.align.push("left"):s.align.push(null);for(let a of n)s.header.push({text:a,tokens:this.lexer.inline(a)});for(let a of o)s.rows.push(Xs(a,s.header.length).map(l=>({text:l,tokens:this.lexer.inline(l)})));return s}}lheading(e){let t=this.rules.block.lheading.exec(e);if(t)return{type:"heading",raw:t[0],depth:t[2].charAt(0)==="="?1:2,text:t[1],tokens:this.lexer.inline(t[1])}}paragraph(e){let t=this.rules.block.paragraph.exec(e);if(t){let n=t[1].charAt(t[1].length-1)===`
-`?t[1].slice(0,-1):t[1];return{type:"paragraph",raw:t[0],text:n,tokens:this.lexer.inline(n)}}}text(e){let t=this.rules.block.text.exec(e);if(t)return{type:"text",raw:t[0],text:t[0],tokens:this.lexer.inline(t[0])}}escape(e){let t=this.rules.inline.escape.exec(e);if(t)return{type:"escape",raw:t[0],text:pt(t[1])}}tag(e){let t=this.rules.inline.tag.exec(e);if(t)return!this.lexer.state.inLink&&/^<a /i.test(t[0])?this.lexer.state.inLink=!0:this.lexer.state.inLink&&/^<\/a>/i.test(t[0])&&(this.lexer.state.inLink=!1),!this.lexer.state.inRawBlock&&/^<(pre|code|kbd|script)(\s|>)/i.test(t[0])?this.lexer.state.inRawBlock=!0:this.lexer.state.inRawBlock&&/^<\/(pre|code|kbd|script)(\s|>)/i.test(t[0])&&(this.lexer.state.inRawBlock=!1),{type:"html",raw:t[0],inLink:this.lexer.state.inLink,inRawBlock:this.lexer.state.inRawBlock,block:!1,text:t[0]}}link(e){let t=this.rules.inline.link.exec(e);if(t){let n=t[2].trim();if(!this.options.pedantic&&/^</.test(n)){if(!/>$/.test(n))return;let s=qi(n.slice(0,-1),"\\");if((n.length-s.length)%2===0)return}else{let s=eu(t[2],"()");if(s>-1){let l=(t[0].indexOf("!")===0?5:4)+t[1].length+s;t[2]=t[2].substring(0,s),t[0]=t[0].substring(0,l).trim(),t[3]=""}}let r=t[2],o="";if(this.options.pedantic){let s=/^([^'"]*[^\s])\s+(['"])(.*)\2/.exec(r);s&&(r=s[1],o=s[3])}else o=t[3]?t[3].slice(1,-1):"";return r=r.trim(),/^</.test(r)&&(this.options.pedantic&&!/>$/.test(n)?r=r.slice(1):r=r.slice(1,-1)),Ks(t,{href:r&&r.replace(this.rules.inline.anyPunctuation,"$1"),title:o&&o.replace(this.rules.inline.anyPunctuation,"$1")},t[0],this.lexer)}}reflink(e,t){let n;if((n=this.rules.inline.reflink.exec(e))||(n=this.rules.inline.nolink.exec(e))){let r=(n[2]||n[1]).replace(/\s+/g," "),o=t[r.toLowerCase()];if(!o){let s=n[0].charAt(0);return{type:"text",raw:s,text:s}}return Ks(n,o,n[0],this.lexer)}}emStrong(e,t,n=""){let r=this.rules.inline.emStrongLDelim.exec(e);if(!r||r[3]&&n.match(/[\p{L}\p{N}]/u))return;if(!(r[1]||r[2]||"")||!n||this.rules.inline.punctuation.exec(n)){let s=[...r[0]].length-1,a,l,u=s,f=0,d=r[0][0]==="*"?this.rules.inline.emStrongRDelimAst:this.rules.inline.emStrongRDelimUnd;for(d.lastIndex=0,t=t.slice(-1*e.length+s);(r=d.exec(t))!=null;){if(a=r[1]||r[2]||r[3]||r[4]||r[5]||r[6],!a)continue;if(l=[...a].length,r[3]||r[4]){u+=l;continue}else if((r[5]||r[6])&&s%3&&!((s+l)%3)){f+=l;continue}if(u-=l,u>0)continue;l=Math.min(l,l+u+f);let m=[...r[0]][0].length,g=e.slice(0,s+r.index+m+l);if(Math.min(s,l)%2){let k=g.slice(1,-1);return{type:"em",raw:g,text:k,tokens:this.lexer.inlineTokens(k)}}let _=g.slice(2,-2);return{type:"strong",raw:g,text:_,tokens:this.lexer.inlineTokens(_)}}}}codespan(e){let t=this.rules.inline.code.exec(e);if(t){let n=t[2].replace(/\n/g," "),r=/[^ ]/.test(n),o=/^ /.test(n)&&/ $/.test(n);return r&&o&&(n=n.substring(1,n.length-1)),n=pt(n,!0),{type:"codespan",raw:t[0],text:n}}}br(e){let t=this.rules.inline.br.exec(e);if(t)return{type:"br",raw:t[0]}}del(e){let t=this.rules.inline.del.exec(e);if(t)return{type:"del",raw:t[0],text:t[2],tokens:this.lexer.inlineTokens(t[2])}}autolink(e){let t=this.rules.inline.autolink.exec(e);if(t){let n,r;return t[2]==="@"?(n=pt(t[1]),r="mailto:"+n):(n=pt(t[1]),r=n),{type:"link",raw:t[0],text:n,href:r,tokens:[{type:"text",raw:n,text:n}]}}}url(e){var n,r;let t;if(t=this.rules.inline.url.exec(e)){let o,s;if(t[2]==="@")o=pt(t[0]),s="mailto:"+o;else{let a;do a=t[0],t[0]=(r=(n=this.rules.inline._backpedal.exec(t[0]))==null?void 0:n[0])!=null?r:"";while(a!==t[0]);o=pt(t[0]),t[1]==="www."?s="http://"+t[0]:s=t[0]}return{type:"link",raw:t[0],text:o,href:s,tokens:[{type:"text",raw:o,text:o}]}}}inlineText(e){let t=this.rules.inline.text.exec(e);if(t){let n;return this.lexer.state.inRawBlock?n=t[0]:n=pt(t[0]),{type:"text",raw:t[0],text:n}}}},nu=/^(?: *(?:\n|$))+/,iu=/^( {4}[^\n]+(?:\n(?: *(?:\n|$))*)?)+/,ru=/^ {0,3}(`{3,}(?=[^`\n]*(?:\n|$))|~{3,})([^\n]*)(?:\n|$)(?:|([\s\S]*?)(?:\n|$))(?: {0,3}\1[~`]* *(?=\n|$)|$)/,Jn=/^ {0,3}((?:-[\t ]*){3,}|(?:_[ \t]*){3,}|(?:\*[ \t]*){3,})(?:\n+|$)/,ou=/^ {0,3}(#{1,6})(?=\s|$)(.*)(?:\n+|$)/,rl=/(?:[*+-]|\d{1,9}[.)])/,ol=Me(/^(?!bull )((?:.|\n(?!\s*?\n|bull ))+?)\n {0,3}(=+|-+) *(?:\n+|$)/).replace(/bull/g,rl).getRegex(),Kr=/^([^\n]+(?:\n(?!hr|heading|lheading|blockquote|fences|list|html|table| +\n)[^\n]+)*)/,su=/^[^\n]+/,eo=/(?!\s*\])(?:\\.|[^\[\]\\])+/,lu=Me(/^ {0,3}\[(label)\]: *(?:\n *)?([^<\s][^\s]*|<.*?>)(?:(?: +(?:\n *)?| *\n *)(title))? *(?:\n+|$)/).replace("label",eo).replace("title",/(?:"(?:\\"?|[^"\\])*"|'[^'\n]*(?:\n[^'\n]+)*\n?'|\([^()]*\))/).getRegex(),au=Me(/^( {0,3}bull)([ \t][^\n]+?)?(?:\n|$)/).replace(/bull/g,rl).getRegex(),er="address|article|aside|base|basefont|blockquote|body|caption|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option|p|param|section|source|summary|table|tbody|td|tfoot|th|thead|title|tr|track|ul",to=/<!--(?!-?>)[\s\S]*?(?:-->|$)/,cu=Me("^ {0,3}(?:<(script|pre|style|textarea)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n+|$)|comment[^\\n]*(\\n+|$)|<\\?[\\s\\S]*?(?:\\?>\\n*|$)|<![A-Z][\\s\\S]*?(?:>\\n*|$)|<!\\[CDATA\\[[\\s\\S]*?(?:\\]\\]>\\n*|$)|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:(?:\\n *)+\\n|$)|<(?!script|pre|style|textarea)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n *)+\\n|$)|</(?!script|pre|style|textarea)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n *)+\\n|$))","i").replace("comment",to).replace("tag",er).replace("attribute",/ +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/).getRegex(),sl=Me(Kr).replace("hr",Jn).replace("heading"," {0,3}#{1,6}(?:\\s|$)").replace("|lheading","").replace("|table","").replace("blockquote"," {0,3}>").replace("fences"," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list"," {0,3}(?:[*+-]|1[.)]) ").replace("html","</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag",er).getRegex(),uu=Me(/^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/).replace("paragraph",sl).getRegex(),no={blockquote:uu,code:iu,def:lu,fences:ru,heading:ou,hr:Jn,html:cu,lheading:ol,list:au,newline:nu,paragraph:sl,table:Qn,text:su},el=Me("^ *([^\\n ].*)\\n {0,3}((?:\\| *)?:?-+:? *(?:\\| *:?-+:? *)*(?:\\| *)?)(?:\\n((?:(?! *\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)").replace("hr",Jn).replace("heading"," {0,3}#{1,6}(?:\\s|$)").replace("blockquote"," {0,3}>").replace("code"," {4}[^\\n]").replace("fences"," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list"," {0,3}(?:[*+-]|1[.)]) ").replace("html","</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag",er).getRegex(),fu={...no,table:el,paragraph:Me(Kr).replace("hr",Jn).replace("heading"," {0,3}#{1,6}(?:\\s|$)").replace("|lheading","").replace("table",el).replace("blockquote"," {0,3}>").replace("fences"," {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list"," {0,3}(?:[*+-]|1[.)]) ").replace("html","</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag",er).getRegex()},du={...no,html:Me(`^ *(?:comment *(?:\\n|\\s*$)|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)|<tag(?:"[^"]*"|'[^']*'|\\s[^'"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))`).replace("comment",to).replace(/tag/g,"(?!(?:a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)\\b)\\w+(?!:|[^\\w\\s@]*@)\\b").getRegex(),def:/^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/,heading:/^(#{1,6})(.*)(?:\n+|$)/,fences:Qn,lheading:/^(.+?)\n {0,3}(=+|-+) *(?:\n+|$)/,paragraph:Me(Kr).replace("hr",Jn).replace("heading",` *#{1,6} *[^
-]`).replace("lheading",ol).replace("|table","").replace("blockquote"," {0,3}>").replace("|fences","").replace("|list","").replace("|html","").replace("|tag","").getRegex()},ll=/^\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/,pu=/^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/,al=/^( {2,}|\\)\n(?!\s*$)/,gu=/^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*_]|\b_|$)|[^ ](?= {2,}\n)))/,Hn="\\p{P}$+<=>`^|~",mu=Me(/^((?![*_])[\spunctuation])/,"u").replace(/punctuation/g,Hn).getRegex(),hu=/\[[^[\]]*?\]\([^\(\)]*?\)|`[^`]*?`|<[^<>]*?>/g,_u=Me(/^(?:\*+(?:((?!\*)[punct])|[^\s*]))|^_+(?:((?!_)[punct])|([^\s_]))/,"u").replace(/punct/g,Hn).getRegex(),bu=Me("^[^_*]*?__[^_*]*?\\*[^_*]*?(?=__)|[^*]+(?=[^*])|(?!\\*)[punct](\\*+)(?=[\\s]|$)|[^punct\\s](\\*+)(?!\\*)(?=[punct\\s]|$)|(?!\\*)[punct\\s](\\*+)(?=[^punct\\s])|[\\s](\\*+)(?!\\*)(?=[punct])|(?!\\*)[punct](\\*+)(?!\\*)(?=[punct])|[^punct\\s](\\*+)(?=[^punct\\s])","gu").replace(/punct/g,Hn).getRegex(),yu=Me("^[^_*]*?\\*\\*[^_*]*?_[^_*]*?(?=\\*\\*)|[^_]+(?=[^_])|(?!_)[punct](_+)(?=[\\s]|$)|[^punct\\s](_+)(?!_)(?=[punct\\s]|$)|(?!_)[punct\\s](_+)(?=[^punct\\s])|[\\s](_+)(?!_)(?=[punct])|(?!_)[punct](_+)(?!_)(?=[punct])","gu").replace(/punct/g,Hn).getRegex(),vu=Me(/\\([punct])/,"gu").replace(/punct/g,Hn).getRegex(),wu=Me(/^<(scheme:[^\s\x00-\x1f<>]*|email)>/).replace("scheme",/[a-zA-Z][a-zA-Z0-9+.-]{1,31}/).replace("email",/[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/).getRegex(),ku=Me(to).replace("(?:-->|$)","-->").getRegex(),xu=Me("^comment|^</[a-zA-Z][\\w:-]*\\s*>|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>|^<\\?[\\s\\S]*?\\?>|^<![a-zA-Z]+\\s[\\s\\S]*?>|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>").replace("comment",ku).replace("attribute",/\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*"[^"]*"|\s*=\s*'[^']*'|\s*=\s*[^\s"'=<>`]+)?/).getRegex(),Xi=/(?:\[(?:\\.|[^\[\]\\])*\]|\\.|`[^`]*`|[^\[\]\\`])*?/,Cu=Me(/^!?\[(label)\]\(\s*(href)(?:\s+(title))?\s*\)/).replace("label",Xi).replace("href",/<(?:\\.|[^\n<>\\])+>|[^\s\x00-\x1f]*/).replace("title",/"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)/).getRegex(),cl=Me(/^!?\[(label)\]\[(ref)\]/).replace("label",Xi).replace("ref",eo).getRegex(),ul=Me(/^!?\[(ref)\](?:\[\])?/).replace("ref",eo).getRegex(),Iu=Me("reflink|nolink(?!\\()","g").replace("reflink",cl).replace("nolink",ul).getRegex(),io={_backpedal:Qn,anyPunctuation:vu,autolink:wu,blockSkip:hu,br:al,code:pu,del:Qn,emStrongLDelim:_u,emStrongRDelimAst:bu,emStrongRDelimUnd:yu,escape:ll,link:Cu,nolink:ul,punctuation:mu,reflink:cl,reflinkSearch:Iu,tag:xu,text:gu,url:Qn},Mu={...io,link:Me(/^!?\[(label)\]\((.*?)\)/).replace("label",Xi).getRegex(),reflink:Me(/^!?\[(label)\]\s*\[([^\]]*)\]/).replace("label",Xi).getRegex()},Hr={...io,escape:Me(ll).replace("])","~|])").getRegex(),url:Me(/^((?:ftp|https?):\/\/|www\.)(?:[a-zA-Z0-9\-]+\.?)+[^\s<]*|^email/,"i").replace("email",/[A-Za-z0-9._+-]+(@)[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![-_])/).getRegex(),_backpedal:/(?:[^?!.,:;*_'"~()&]+|\([^)]*\)|&(?![a-zA-Z0-9]+;$)|[?!.,:;*_'"~)]+(?!$))+/,del:/^(~~?)(?=[^\s~])([\s\S]*?[^\s~])\1(?=[^~]|$)/,text:/^([`~]+|[^`~])(?:(?= {2,}\n)|(?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)|[\s\S]*?(?:(?=[\\<!\[`*~_]|\b_|https?:\/\/|ftp:\/\/|www\.|$)|[^ ](?= {2,}\n)|[^a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-](?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)))/},Su={...Hr,br:Me(al).replace("{2,}","*").getRegex(),text:Me(Hr.text).replace("\\b_","\\b_| {2,}\\n").replace(/\{2,\}/g,"*").getRegex()},Vi={normal:no,gfm:fu,pedantic:du},Wn={normal:io,gfm:Hr,breaks:Su,pedantic:Mu},It=class i{constructor(e){K(this,"tokens");K(this,"options");K(this,"state");K(this,"tokenizer");K(this,"inlineQueue");this.tokens=[],this.tokens.links=Object.create(null),this.options=e||tn,this.options.tokenizer=this.options.tokenizer||new wn,this.tokenizer=this.options.tokenizer,this.tokenizer.options=this.options,this.tokenizer.lexer=this,this.inlineQueue=[],this.state={inLink:!1,inRawBlock:!1,top:!0};let t={block:Vi.normal,inline:Wn.normal};this.options.pedantic?(t.block=Vi.pedantic,t.inline=Wn.pedantic):this.options.gfm&&(t.block=Vi.gfm,this.options.breaks?t.inline=Wn.breaks:t.inline=Wn.gfm),this.tokenizer.rules=t}static get rules(){return{block:Vi,inline:Wn}}static lex(e,t){return new i(t).lex(e)}static lexInline(e,t){return new i(t).inlineTokens(e)}lex(e){e=e.replace(/\r\n|\r/g,`
-`),this.blockTokens(e,this.tokens);for(let t=0;t<this.inlineQueue.length;t++){let n=this.inlineQueue[t];this.inlineTokens(n.src,n.tokens)}return this.inlineQueue=[],this.tokens}blockTokens(e,t=[]){this.options.pedantic?e=e.replace(/\t/g,"    ").replace(/^ +$/gm,""):e=e.replace(/^( *)(\t+)/gm,(a,l,u)=>l+"    ".repeat(u.length));let n,r,o,s;for(;e;)if(!(this.options.extensions&&this.options.extensions.block&&this.options.extensions.block.some(a=>(n=a.call({lexer:this},e,t))?(e=e.substring(n.raw.length),t.push(n),!0):!1))){if(n=this.tokenizer.space(e)){e=e.substring(n.raw.length),n.raw.length===1&&t.length>0?t[t.length-1].raw+=`
-`:t.push(n);continue}if(n=this.tokenizer.code(e)){e=e.substring(n.raw.length),r=t[t.length-1],r&&(r.type==="paragraph"||r.type==="text")?(r.raw+=`
-`+n.raw,r.text+=`
-`+n.text,this.inlineQueue[this.inlineQueue.length-1].src=r.text):t.push(n);continue}if(n=this.tokenizer.fences(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.heading(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.hr(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.blockquote(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.list(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.html(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.def(e)){e=e.substring(n.raw.length),r=t[t.length-1],r&&(r.type==="paragraph"||r.type==="text")?(r.raw+=`
-`+n.raw,r.text+=`
-`+n.raw,this.inlineQueue[this.inlineQueue.length-1].src=r.text):this.tokens.links[n.tag]||(this.tokens.links[n.tag]={href:n.href,title:n.title});continue}if(n=this.tokenizer.table(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.lheading(e)){e=e.substring(n.raw.length),t.push(n);continue}if(o=e,this.options.extensions&&this.options.extensions.startBlock){let a=1/0,l=e.slice(1),u;this.options.extensions.startBlock.forEach(f=>{u=f.call({lexer:this},l),typeof u=="number"&&u>=0&&(a=Math.min(a,u))}),a<1/0&&a>=0&&(o=e.substring(0,a+1))}if(this.state.top&&(n=this.tokenizer.paragraph(o))){r=t[t.length-1],s&&r.type==="paragraph"?(r.raw+=`
-`+n.raw,r.text+=`
-`+n.text,this.inlineQueue.pop(),this.inlineQueue[this.inlineQueue.length-1].src=r.text):t.push(n),s=o.length!==e.length,e=e.substring(n.raw.length);continue}if(n=this.tokenizer.text(e)){e=e.substring(n.raw.length),r=t[t.length-1],r&&r.type==="text"?(r.raw+=`
-`+n.raw,r.text+=`
-`+n.text,this.inlineQueue.pop(),this.inlineQueue[this.inlineQueue.length-1].src=r.text):t.push(n);continue}if(e){let a="Infinite loop on byte: "+e.charCodeAt(0);if(this.options.silent){console.error(a);break}else throw new Error(a)}}return this.state.top=!0,t}inline(e,t=[]){return this.inlineQueue.push({src:e,tokens:t}),t}inlineTokens(e,t=[]){let n,r,o,s=e,a,l,u;if(this.tokens.links){let f=Object.keys(this.tokens.links);if(f.length>0)for(;(a=this.tokenizer.rules.inline.reflinkSearch.exec(s))!=null;)f.includes(a[0].slice(a[0].lastIndexOf("[")+1,-1))&&(s=s.slice(0,a.index)+"["+"a".repeat(a[0].length-2)+"]"+s.slice(this.tokenizer.rules.inline.reflinkSearch.lastIndex))}for(;(a=this.tokenizer.rules.inline.blockSkip.exec(s))!=null;)s=s.slice(0,a.index)+"["+"a".repeat(a[0].length-2)+"]"+s.slice(this.tokenizer.rules.inline.blockSkip.lastIndex);for(;(a=this.tokenizer.rules.inline.anyPunctuation.exec(s))!=null;)s=s.slice(0,a.index)+"++"+s.slice(this.tokenizer.rules.inline.anyPunctuation.lastIndex);for(;e;)if(l||(u=""),l=!1,!(this.options.extensions&&this.options.extensions.inline&&this.options.extensions.inline.some(f=>(n=f.call({lexer:this},e,t))?(e=e.substring(n.raw.length),t.push(n),!0):!1))){if(n=this.tokenizer.escape(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.tag(e)){e=e.substring(n.raw.length),r=t[t.length-1],r&&n.type==="text"&&r.type==="text"?(r.raw+=n.raw,r.text+=n.text):t.push(n);continue}if(n=this.tokenizer.link(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.reflink(e,this.tokens.links)){e=e.substring(n.raw.length),r=t[t.length-1],r&&n.type==="text"&&r.type==="text"?(r.raw+=n.raw,r.text+=n.text):t.push(n);continue}if(n=this.tokenizer.emStrong(e,s,u)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.codespan(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.br(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.del(e)){e=e.substring(n.raw.length),t.push(n);continue}if(n=this.tokenizer.autolink(e)){e=e.substring(n.raw.length),t.push(n);continue}if(!this.state.inLink&&(n=this.tokenizer.url(e))){e=e.substring(n.raw.length),t.push(n);continue}if(o=e,this.options.extensions&&this.options.extensions.startInline){let f=1/0,d=e.slice(1),m;this.options.extensions.startInline.forEach(g=>{m=g.call({lexer:this},d),typeof m=="number"&&m>=0&&(f=Math.min(f,m))}),f<1/0&&f>=0&&(o=e.substring(0,f+1))}if(n=this.tokenizer.inlineText(o)){e=e.substring(n.raw.length),n.raw.slice(-1)!=="_"&&(u=n.raw.slice(-1)),l=!0,r=t[t.length-1],r&&r.type==="text"?(r.raw+=n.raw,r.text+=n.text):t.push(n);continue}if(e){let f="Infinite loop on byte: "+e.charCodeAt(0);if(this.options.silent){console.error(f);break}else throw new Error(f)}}return t}},kn=class{constructor(e){K(this,"options");this.options=e||tn}code(e,t,n){var o;let r=(o=(t||"").match(/^\S*/))==null?void 0:o[0];return e=e.replace(/\n$/,"")+`
-`,r?'<pre><code class="language-'+pt(r)+'">'+(n?e:pt(e,!0))+`</code></pre>
-`:"<pre><code>"+(n?e:pt(e,!0))+`</code></pre>
-`}blockquote(e){return`<blockquote>
-${e}</blockquote>
-`}html(e,t){return e}heading(e,t,n){return`<h${t}>${e}</h${t}>
-`}hr(){return`<hr>
-`}list(e,t,n){let r=t?"ol":"ul",o=t&&n!==1?' start="'+n+'"':"";return"<"+r+o+`>
-`+e+"</"+r+`>
-`}listitem(e,t,n){return`<li>${e}</li>
-`}checkbox(e){return"<input "+(e?'checked="" ':"")+'disabled="" type="checkbox">'}paragraph(e){return`<p>${e}</p>
-`}table(e,t){return t&&(t=`<tbody>${t}</tbody>`),`<table>
-<thead>
-`+e+`</thead>
-`+t+`</table>
-`}tablerow(e){return`<tr>
-${e}</tr>
-`}tablecell(e,t){let n=t.header?"th":"td";return(t.align?`<${n} align="${t.align}">`:`<${n}>`)+e+`</${n}>
-`}strong(e){return`<strong>${e}</strong>`}em(e){return`<em>${e}</em>`}codespan(e){return`<code>${e}</code>`}br(){return"<br>"}del(e){return`<del>${e}</del>`}link(e,t,n){let r=Vs(e);if(r===null)return n;e=r;let o='<a href="'+e+'"';return t&&(o+=' title="'+t+'"'),o+=">"+n+"</a>",o}image(e,t,n){let r=Vs(e);if(r===null)return n;e=r;let o=`<img src="${e}" alt="${n}"`;return t&&(o+=` title="${t}"`),o+=">",o}text(e){return e}},Yn=class{strong(e){return e}em(e){return e}codespan(e){return e}del(e){return e}html(e){return e}text(e){return e}link(e,t,n){return""+n}image(e,t,n){return""+n}br(){return""}},Mt=class i{constructor(e){K(this,"options");K(this,"renderer");K(this,"textRenderer");this.options=e||tn,this.options.renderer=this.options.renderer||new kn,this.renderer=this.options.renderer,this.renderer.options=this.options,this.textRenderer=new Yn}static parse(e,t){return new i(t).parse(e)}static parseInline(e,t){return new i(t).parseInline(e)}parse(e,t=!0){let n="";for(let r=0;r<e.length;r++){let o=e[r];if(this.options.extensions&&this.options.extensions.renderers&&this.options.extensions.renderers[o.type]){let s=o,a=this.options.extensions.renderers[s.type].call({parser:this},s);if(a!==!1||!["space","hr","heading","code","table","blockquote","list","html","paragraph","text"].includes(s.type)){n+=a||"";continue}}switch(o.type){case"space":continue;case"hr":{n+=this.renderer.hr();continue}case"heading":{let s=o;n+=this.renderer.heading(this.parseInline(s.tokens),s.depth,Xc(this.parseInline(s.tokens,this.textRenderer)));continue}case"code":{let s=o;n+=this.renderer.code(s.text,s.lang,!!s.escaped);continue}case"table":{let s=o,a="",l="";for(let f=0;f<s.header.length;f++)l+=this.renderer.tablecell(this.parseInline(s.header[f].tokens),{header:!0,align:s.align[f]});a+=this.renderer.tablerow(l);let u="";for(let f=0;f<s.rows.length;f++){let d=s.rows[f];l="";for(let m=0;m<d.length;m++)l+=this.renderer.tablecell(this.parseInline(d[m].tokens),{header:!1,align:s.align[m]});u+=this.renderer.tablerow(l)}n+=this.renderer.table(a,u);continue}case"blockquote":{let s=o,a=this.parse(s.tokens);n+=this.renderer.blockquote(a);continue}case"list":{let s=o,a=s.ordered,l=s.start,u=s.loose,f="";for(let d=0;d<s.items.length;d++){let m=s.items[d],g=m.checked,_=m.task,k="";if(m.task){let x=this.renderer.checkbox(!!g);u?m.tokens.length>0&&m.tokens[0].type==="paragraph"?(m.tokens[0].text=x+" "+m.tokens[0].text,m.tokens[0].tokens&&m.tokens[0].tokens.length>0&&m.tokens[0].tokens[0].type==="text"&&(m.tokens[0].tokens[0].text=x+" "+m.tokens[0].tokens[0].text)):m.tokens.unshift({type:"text",text:x+" "}):k+=x+" "}k+=this.parse(m.tokens,u),f+=this.renderer.listitem(k,_,!!g)}n+=this.renderer.list(f,a,l);continue}case"html":{let s=o;n+=this.renderer.html(s.text,s.block);continue}case"paragraph":{let s=o;n+=this.renderer.paragraph(this.parseInline(s.tokens));continue}case"text":{let s=o,a=s.tokens?this.parseInline(s.tokens):s.text;for(;r+1<e.length&&e[r+1].type==="text";)s=e[++r],a+=`
-`+(s.tokens?this.parseInline(s.tokens):s.text);n+=t?this.renderer.paragraph(a):a;continue}default:{let s='Token with "'+o.type+'" type was not found.';if(this.options.silent)return console.error(s),"";throw new Error(s)}}}return n}parseInline(e,t){t=t||this.renderer;let n="";for(let r=0;r<e.length;r++){let o=e[r];if(this.options.extensions&&this.options.extensions.renderers&&this.options.extensions.renderers[o.type]){let s=this.options.extensions.renderers[o.type].call({parser:this},o);if(s!==!1||!["escape","html","link","image","strong","em","codespan","br","del","text"].includes(o.type)){n+=s||"";continue}}switch(o.type){case"escape":{let s=o;n+=t.text(s.text);break}case"html":{let s=o;n+=t.html(s.text);break}case"link":{let s=o;n+=t.link(s.href,s.title,this.parseInline(s.tokens,t));break}case"image":{let s=o;n+=t.image(s.href,s.title,s.text);break}case"strong":{let s=o;n+=t.strong(this.parseInline(s.tokens,t));break}case"em":{let s=o;n+=t.em(this.parseInline(s.tokens,t));break}case"codespan":{let s=o;n+=t.codespan(s.text);break}case"br":{n+=t.br();break}case"del":{let s=o;n+=t.del(this.parseInline(s.tokens,t));break}case"text":{let s=o;n+=t.text(s.text);break}default:{let s='Token with "'+o.type+'" type was not found.';if(this.options.silent)return console.error(s),"";throw new Error(s)}}}return n}},Kt=class{constructor(e){K(this,"options");this.options=e||tn}preprocess(e){return e}postprocess(e){return e}processAllTokens(e){return e}};K(Kt,"passThroughHooks",new Set(["preprocess","postprocess","processAllTokens"]));var Un,Vr,Ki,fl,qr=class{constructor(...e){br(this,Un);br(this,Ki);K(this,"defaults",Xr());K(this,"options",this.setOptions);K(this,"parse",ri(this,Un,Vr).call(this,It.lex,Mt.parse));K(this,"parseInline",ri(this,Un,Vr).call(this,It.lexInline,Mt.parseInline));K(this,"Parser",Mt);K(this,"Renderer",kn);K(this,"TextRenderer",Yn);K(this,"Lexer",It);K(this,"Tokenizer",wn);K(this,"Hooks",Kt);this.use(...e)}walkTokens(e,t){var r,o;let n=[];for(let s of e)switch(n=n.concat(t.call(this,s)),s.type){case"table":{let a=s;for(let l of a.header)n=n.concat(this.walkTokens(l.tokens,t));for(let l of a.rows)for(let u of l)n=n.concat(this.walkTokens(u.tokens,t));break}case"list":{let a=s;n=n.concat(this.walkTokens(a.items,t));break}default:{let a=s;(o=(r=this.defaults.extensions)==null?void 0:r.childTokens)!=null&&o[a.type]?this.defaults.extensions.childTokens[a.type].forEach(l=>{let u=a[l].flat(1/0);n=n.concat(this.walkTokens(u,t))}):a.tokens&&(n=n.concat(this.walkTokens(a.tokens,t)))}}return n}use(...e){let t=this.defaults.extensions||{renderers:{},childTokens:{}};return e.forEach(n=>{let r={...n};if(r.async=this.defaults.async||r.async||!1,n.extensions&&(n.extensions.forEach(o=>{if(!o.name)throw new Error("extension name required");if("renderer"in o){let s=t.renderers[o.name];s?t.renderers[o.name]=function(...a){let l=o.renderer.apply(this,a);return l===!1&&(l=s.apply(this,a)),l}:t.renderers[o.name]=o.renderer}if("tokenizer"in o){if(!o.level||o.level!=="block"&&o.level!=="inline")throw new Error("extension level must be 'block' or 'inline'");let s=t[o.level];s?s.unshift(o.tokenizer):t[o.level]=[o.tokenizer],o.start&&(o.level==="block"?t.startBlock?t.startBlock.push(o.start):t.startBlock=[o.start]:o.level==="inline"&&(t.startInline?t.startInline.push(o.start):t.startInline=[o.start]))}"childTokens"in o&&o.childTokens&&(t.childTokens[o.name]=o.childTokens)}),r.extensions=t),n.renderer){let o=this.defaults.renderer||new kn(this.defaults);for(let s in n.renderer){if(!(s in o))throw new Error(`renderer '${s}' does not exist`);if(s==="options")continue;let a=s,l=n.renderer[a],u=o[a];o[a]=(...f)=>{let d=l.apply(o,f);return d===!1&&(d=u.apply(o,f)),d||""}}r.renderer=o}if(n.tokenizer){let o=this.defaults.tokenizer||new wn(this.defaults);for(let s in n.tokenizer){if(!(s in o))throw new Error(`tokenizer '${s}' does not exist`);if(["options","rules","lexer"].includes(s))continue;let a=s,l=n.tokenizer[a],u=o[a];o[a]=(...f)=>{let d=l.apply(o,f);return d===!1&&(d=u.apply(o,f)),d}}r.tokenizer=o}if(n.hooks){let o=this.defaults.hooks||new Kt;for(let s in n.hooks){if(!(s in o))throw new Error(`hook '${s}' does not exist`);if(s==="options")continue;let a=s,l=n.hooks[a],u=o[a];Kt.passThroughHooks.has(s)?o[a]=f=>{if(this.defaults.async)return Promise.resolve(l.call(o,f)).then(m=>u.call(o,m));let d=l.call(o,f);return u.call(o,d)}:o[a]=(...f)=>{let d=l.apply(o,f);return d===!1&&(d=u.apply(o,f)),d}}r.hooks=o}if(n.walkTokens){let o=this.defaults.walkTokens,s=n.walkTokens;r.walkTokens=function(a){let l=[];return l.push(s.call(this,a)),o&&(l=l.concat(o.call(this,a))),l}}this.defaults={...this.defaults,...r}}),this}setOptions(e){return this.defaults={...this.defaults,...e},this}lexer(e,t){return It.lex(e,t!=null?t:this.defaults)}parser(e,t){return Mt.parse(e,t!=null?t:this.defaults)}};Un=new WeakSet,Vr=function(e,t){return(n,r)=>{let o={...r},s={...this.defaults,...o};this.defaults.async===!0&&o.async===!1&&(s.silent||console.warn("marked(): The async option was set to true by an extension. The async: false option sent to parse will be ignored."),s.async=!0);let a=ri(this,Ki,fl).call(this,!!s.silent,!!s.async);if(typeof n=="undefined"||n===null)return a(new Error("marked(): input parameter is undefined or null"));if(typeof n!="string")return a(new Error("marked(): input parameter is of type "+Object.prototype.toString.call(n)+", string expected"));if(s.hooks&&(s.hooks.options=s),s.async)return Promise.resolve(s.hooks?s.hooks.preprocess(n):n).then(l=>e(l,s)).then(l=>s.hooks?s.hooks.processAllTokens(l):l).then(l=>s.walkTokens?Promise.all(this.walkTokens(l,s.walkTokens)).then(()=>l):l).then(l=>t(l,s)).then(l=>s.hooks?s.hooks.postprocess(l):l).catch(a);try{s.hooks&&(n=s.hooks.preprocess(n));let l=e(n,s);s.hooks&&(l=s.hooks.processAllTokens(l)),s.walkTokens&&this.walkTokens(l,s.walkTokens);let u=t(l,s);return s.hooks&&(u=s.hooks.postprocess(u)),u}catch(l){return a(l)}}},Ki=new WeakSet,fl=function(e,t){return n=>{if(n.message+=`
-Please report this to https://github.com/markedjs/marked.`,e){let r="<p>An error occurred:</p><pre>"+pt(n.message+"",!0)+"</pre>";return t?Promise.resolve(r):r}if(t)return Promise.reject(n);throw n}};var en=new qr;function de(i,e){return en.parse(i,e)}de.options=de.setOptions=function(i){return en.setOptions(i),de.defaults=en.defaults,tl(de.defaults),de};de.getDefaults=Xr;de.defaults=tn;de.use=function(...i){return en.use(...i),de.defaults=en.defaults,tl(de.defaults),de};de.walkTokens=function(i,e){return en.walkTokens(i,e)};de.parseInline=en.parseInline;de.Parser=Mt;de.parser=Mt.parse;de.Renderer=kn;de.TextRenderer=Yn;de.Lexer=It;de.lexer=It.lex;de.Tokenizer=wn;de.Hooks=Kt;de.parse=de;var $m=de.options,Tm=de.setOptions,Lm=de.use,Nm=de.walkTokens,Am=de.parseInline;var Dm=Mt.parse,jm=It.lex;var St=require("obsidian");var dl=require("@codemirror/state");var _t=require("obsidian");var qn=require("obsidian"),xn=class extends qn.Modal{constructor(t,n,r){super(t);this.message=n;this.callback=r}onOpen(){this.titleEl.setText("Are you sure?"),this.contentEl.setText(this.message);let t=this.contentEl.createDiv("div");t.addClass("confirm-modal-buttons"),new qn.ButtonComponent(t).setButtonText("Yes").setCta().onClick(()=>{this.callback(),this.close()}),new qn.ButtonComponent(t).setButtonText("No").onClick(()=>{this.close()})}};function $u(i){Ie(i,"svelte-1vfpmb8",".merge.svelte-1vfpmb8{border-radius:5px;height:35%;overflow:scroll}.preview.svelte-1vfpmb8{border:1px solid var(--background-modifier-border);border-radius:5px;height:35%;overflow:scroll;padding:1%}.tools.svelte-1vfpmb8{display:flex;flex-direction:row;justify-content:end;align-items:center}")}function Tu(i){let e,t=de(i[0],{mangle:!1,headerIds:!1})+"",n;return{c(){e=new Fn(!1),n=ot(),e.a=n},m(r,o){e.m(t,r,o),v(r,n,o)},p(r,o){o&1&&t!==(t=de(r[0],{mangle:!1,headerIds:!1})+"")&&e.p(t)},d(r){r&&(y(n),e.d())}}}function Lu(i){let e,t=de(i[2].toString(),{mangle:!1,headerIds:!1})+"",n;return{c(){e=new Fn(!1),n=ot(),e.a=n},m(r,o){e.m(t,r,o),v(r,n,o)},p(r,o){o&4&&t!==(t=de(r[2].toString(),{mangle:!1,headerIds:!1})+"")&&e.p(t)},d(r){r&&(y(n),e.d())}}}function Nu(i){let e,t,n,r,o,s,a;function l(d,m){return d[2]?Lu:Tu}let u=l(i,-1),f=u(i);return{c(){e=p("div"),t=b(),n=p("h3"),n.textContent="Preview the merged file",r=b(),o=p("div"),f.c(),s=b(),a=p("div"),h(e,"class","merge svelte-1vfpmb8"),h(o,"class","preview svelte-1vfpmb8"),h(a,"class","tools svelte-1vfpmb8")},m(d,m){v(d,e,m),i[6](e),v(d,t,m),v(d,n,m),v(d,r,m),v(d,o,m),f.m(o,null),v(d,s,m),v(d,a,m),i[7](a)},p(d,[m]){u===(u=l(d,m))&&f?f.p(d,m):(f.d(1),f=u(d),f&&(f.c(),f.m(o,null)))},i:z,o:z,d(d){d&&(y(e),y(t),y(n),y(r),y(o),y(s),y(a)),i[6](null),f.d(),i[7](null)}}}function Au(i,e,t){let{originalContent:n="this is the original text"}=e,{modifiedContent:r="this is the modified text"}=e,{parentModal:o}=e,s,a,l,u,f;Ke(()=>{s=new Qi({a:{doc:n,extensions:[Zn,at.EditorView.lineWrapping,at.EditorView.darkTheme.of(!0),at.EditorView.updateListener.of(g=>{g.docChanged&&t(2,l=g.state.doc)})]},b:{doc:r,extensions:[Zn,at.EditorView.lineWrapping,at.EditorView.darkTheme.of(!0),at.EditorView.updateListener.of(g=>{g.docChanged&&(u=g.state.doc)}),at.EditorView.editable.of(!1),dl.EditorState.readOnly.of(!0)]},revertControls:"b-to-a",parent:a}),new _t.ButtonComponent(f).setButtonText("Save merged file").setCta().onClick(()=>He(void 0,void 0,void 0,function*(){if(s.chunks.length>0){new _t.Notice("There is still some merge conflicts. Please resolve them."),new xn(o.app,`Are you sure you want to save the file?
-There are still some merge conflicts.
-This action will save the previewed file in the original file and delete the conflicting file.`,()=>He(void 0,void 0,void 0,function*(){new _t.Notice("Saved file"),yield o.app.vault.delete(o.modifiedFile),new _t.Notice("Deleted conflicting file"),o.close()})).open();return}yield o.app.vault.modify(o.originalFile,l.toString()),new _t.Notice("Saved file"),yield o.app.vault.delete(o.modifiedFile),new _t.Notice("Deleted conflicting file"),o.close()})).buttonEl.style.margin="1%",new _t.ButtonComponent(f).setButtonText("Cancel merge").setWarning().onClick(()=>{if(s.chunks.length>0){new _t.Notice("There is still some merge conflicts. Please resolve them."),new xn(o.app,`Are you sure you want to cancel the merge?
-There are still some merge conflicts.
-This will keep the original file and the conflicting file.`,()=>{new _t.Notice("Closing the merge editor."),o.close()}).open();return}new xn(o.app,`Are you sure you want to cancel the merge?
-You have resolved the conflicts but your modifications will not be saved.
-This will keep the original file and the conflicting file.`,()=>{new _t.Notice("Closing the merge editor."),o.close()}).open()}).buttonEl.style.margin="1% 0"});function d(g){st[g?"unshift":"push"](()=>{a=g,t(1,a)})}function m(g){st[g?"unshift":"push"](()=>{f=g,t(3,f)})}return i.$$set=g=>{"originalContent"in g&&t(0,n=g.originalContent),"modifiedContent"in g&&t(4,r=g.modifiedContent),"parentModal"in g&&t(5,o=g.parentModal)},[n,a,l,f,r,o,d,m]}var ro=class extends fe{constructor(e){super(),he(this,e,Au,Nu,ue,{originalContent:0,modifiedContent:4,parentModal:5},$u)}},pl=ro;var gl=require("obsidian"),tr=class extends gl.Modal{constructor(t,n,r){super(t);this.originalFile=n;this.modifiedFile=r}async onOpen(){this.originalContent=await this.app.vault.read(this.originalFile),this.modifiedContent=await this.app.vault.read(this.modifiedFile),this.component=new pl({target:this.contentEl,props:{parentModal:this,originalContent:this.originalContent,modifiedContent:this.modifiedContent}}),this.modalEl.addClass("syncthing-merge-editor-modal"),this.contentEl.addClass("syncthing-merge-editor"),this.titleEl.setText(`Resolve conflicts - ${this.originalFile.basename}`)}onClose(){var t;(t=this.component)==null||t.$destroy()}};function Du(i){Ie(i,"svelte-8kfohb","p.svelte-8kfohb{background-color:darkred;opacity:0.6;border-radius:10px;box-shadow:black 0px 0px 10px;padding:1%}")}function ju(i){let e,t,n=i[0].message+"",r;return{c(){e=p("p"),t=F(`A failure occured :
-	`),r=F(n),h(e,"class","svelte-8kfohb")},m(o,s){v(o,e,s),c(e,t),c(e,r)},p(o,[s]){s&1&&n!==(n=o[0].message+"")&&oe(r,n)},i:z,o:z,d(o){o&&y(e)}}}function Eu(i,e,t){let{failure:n}=e;return i.$$set=r=>{"failure"in r&&t(0,n=r.failure)},[n]}var oo=class extends fe{constructor(e){super(),he(this,e,Eu,ju,ue,{failure:0},Du)}},nr=oo;function Fu(i){Ie(i,"svelte-kca58t",".conflict-file.svelte-kca58t{padding:0.5em;border-radius:0.5em;margin:0.5em}.conflict-file.svelte-kca58t:hover{background-color:var(--background-secondary-alt)}.conflict-file.svelte-kca58t:active{background-color:var(--background-secondary-alt)}.selected.svelte-kca58t{background-color:var(--background-secondary-alt)}")}function zu(i){let e,t,n,r,o,s,a,l,u,f,d,m,g,_,k,x=i[1].extension+"",C,w,S,T,P=cn(i[1].stat.size,1)+"",Z,O,R,re,te=new Date(i[1].stat.mtime).toLocaleString()+"",W,U,E,G,D=new Date(i[1].stat.ctime).toLocaleString()+"",J,be,X,$,j=i[1].path+"",ye;return{c(){e=p("div"),t=p("strong"),n=F("Conflict #"),r=F(i[0]),o=b(),s=p("em"),s.textContent=`Occured on: ${i[4].dateTime.toLocaleString()}`,a=b(),l=p("ul"),u=p("li"),u.textContent=`Conflict date: ${i[4].dateTime.toLocaleString()}`,f=b(),d=p("li"),d.textContent=`Modified by: ${i[4].modifiedBy}`,m=b(),g=p("li"),_=F("Extension: "),k=p("code"),C=F(x),w=b(),S=p("li"),T=F("Size: "),Z=F(P),O=b(),R=p("li"),re=F("Last modified at: "),W=F(te),U=b(),E=p("li"),G=F("Created at: "),J=F(D),be=b(),X=p("li"),$=F("Path: "),ye=F(j)},m(ge,q){v(ge,e,q),c(e,t),c(t,n),c(t,r),c(e,o),c(e,s),c(e,a),c(e,l),c(l,u),c(l,f),c(l,d),c(l,m),c(l,g),c(g,_),c(g,k),c(k,C),c(l,w),c(l,S),c(S,T),c(S,Z),c(l,O),c(l,R),c(R,re),c(R,W),c(l,U),c(l,E),c(E,G),c(E,J),c(l,be),c(l,X),c(X,$),c(X,ye)},p(ge,q){q&1&&oe(r,ge[0]),q&2&&x!==(x=ge[1].extension+"")&&oe(C,x),q&2&&P!==(P=cn(ge[1].stat.size,1)+"")&&oe(Z,P),q&2&&te!==(te=new Date(ge[1].stat.mtime).toLocaleString()+"")&&oe(W,te),q&2&&D!==(D=new Date(ge[1].stat.ctime).toLocaleString()+"")&&oe(J,D),q&2&&j!==(j=ge[1].path+"")&&oe(ye,j)},i:z,o:z,d(ge){ge&&y(e)}}}function Ou(i){let e,t;return e=new nr({props:{failure:i[4]}}),{c(){A(e.$$.fragment)},m(n,r){L(e,n,r),t=!0},p:z,i(n){t||(I(e.$$.fragment,n),t=!0)},o(n){M(e.$$.fragment,n),t=!1},d(n){N(e,n)}}}function Pu(i){let e,t,n,r,o,s,a=[Ou,zu],l=[];function u(f,d){return f[4]instanceof _e?0:1}return t=u(i,-1),n=l[t]=a[t](i),{c(){e=p("div"),n.c(),h(e,"class","svelte-kca58t"),gt(e,"conflict-file",i[2]),gt(e,"selected",i[3])},m(f,d){v(f,e,d),l[t].m(e,null),r=!0,o||(s=Q(e,"click",i[6]),o=!0)},p(f,[d]){n.p(f,d),(!r||d&4)&&gt(e,"conflict-file",f[2]),(!r||d&8)&&gt(e,"selected",f[3])},i(f){r||(I(n),r=!0)},o(f){M(n),r=!1},d(f){f&&y(e),l[t].d(),o=!1,s()}}}function Ru(i,e,t){let{counter:n}=e,{file:r}=e,{styled:o=!1}=e,{isClicked:s=!1}=e,a=Dr(),l=tt(r.name);function u(){a("file",{file:r})}let f=()=>{o&&u()};return i.$$set=d=>{"counter"in d&&t(0,n=d.counter),"file"in d&&t(1,r=d.file),"styled"in d&&t(2,o=d.styled),"isClicked"in d&&t(3,s=d.isClicked)},[n,r,o,s,l,u,f]}var so=class extends fe{constructor(e){super(),he(this,e,Ru,Pu,ue,{counter:0,file:1,styled:2,isClicked:3},Fu)}},ir=so;function Bu(i){let e,t,n,r,o,s=i[0].extension+"",a,l,u,f,d=cn(i[0].stat.size,1)+"",m,g,_,k,x=new Date(i[0].stat.mtime).toLocaleString()+"",C,w,S,T,P=new Date(i[0].stat.ctime).toLocaleString()+"",Z,O,R,re,te=i[0].path+"",W;return{c(){e=p("div"),t=p("ul"),n=p("li"),r=F("Extension: "),o=p("code"),a=F(s),l=b(),u=p("li"),f=F("Size: "),m=F(d),g=b(),_=p("li"),k=F("Last modified at: "),C=F(x),w=b(),S=p("li"),T=F("Created at: "),Z=F(P),O=b(),R=p("li"),re=F("Path: "),W=F(te)},m(U,E){v(U,e,E),c(e,t),c(t,n),c(n,r),c(n,o),c(o,a),c(t,l),c(t,u),c(u,f),c(u,m),c(t,g),c(t,_),c(_,k),c(_,C),c(t,w),c(t,S),c(S,T),c(S,Z),c(t,O),c(t,R),c(R,re),c(R,W)},p(U,[E]){E&1&&s!==(s=U[0].extension+"")&&oe(a,s),E&1&&d!==(d=cn(U[0].stat.size,1)+"")&&oe(m,d),E&1&&x!==(x=new Date(U[0].stat.mtime).toLocaleString()+"")&&oe(C,x),E&1&&P!==(P=new Date(U[0].stat.ctime).toLocaleString()+"")&&oe(Z,P),E&1&&te!==(te=U[0].path+"")&&oe(W,te)},i:z,o:z,d(U){U&&y(e)}}}function Gu(i,e,t){let{file:n}=e;return i.$$set=r=>{"file"in r&&t(0,n=r.file)},[n]}var lo=class extends fe{constructor(e){super(),he(this,e,Gu,Bu,ue,{file:0})}},ml=lo;function Zu(i){Ie(i,"svelte-10busrc",".column.svelte-10busrc.svelte-10busrc{display:inline-block;width:33%;min-height:fit-content;max-height:95%;vertical-align:top;overflow-y:scroll;padding:1%}.column.svelte-10busrc h1.svelte-10busrc{margin-top:0;text-align:center}.conflicts.svelte-10busrc.svelte-10busrc{max-height:650px;overflow-y:auto;padding:1%}.divider.svelte-10busrc.svelte-10busrc{margin-top:10px;margin-bottom:10px;border-bottom:2px solid var(--background-modifier-border)}.tools.svelte-10busrc.svelte-10busrc{display:flex;flex-direction:row;justify-content:space-evenly;align-items:end}.preview.svelte-10busrc.svelte-10busrc{border:1px solid var(--background-modifier-border);border-radius:5px;padding:1%}.preview-container.svelte-10busrc.svelte-10busrc{padding:1%;overflow-y:scroll;height:500px}.diff_view.svelte-10busrc.svelte-10busrc{max-height:650px;overflow-y:scroll}")}function hl(i,e,t){let n=i.slice();return n[13]=e[t],n[15]=t,n}function Wu(i){let e;return{c(){e=p("div"),h(e,"class","divider svelte-10busrc")},m(t,n){v(t,e,n)},d(t){t&&y(e)}}}function _l(i){let e,t,n,r=i[15]!==0&&Wu(i);return t=new ir({props:{file:i[13],counter:i[15],styled:!0,isClicked:i[0].conflictingFiles[i[15]]===i[2]}}),t.$on("file",i[6]),{c(){r&&r.c(),e=b(),A(t.$$.fragment)},m(o,s){r&&r.m(o,s),v(o,e,s),L(t,o,s),n=!0},p(o,s){let a={};s&1&&(a.file=o[13]),s&5&&(a.isClicked=o[0].conflictingFiles[o[15]]===o[2]),t.$set(a)},i(o){n||(I(t.$$.fragment,o),n=!0)},o(o){M(t.$$.fragment,o),n=!1},d(o){o&&y(e),r&&r.d(o),N(t,o)}}}function Qu(i){return{c:z,m:z,p:z,d:z}}function Yu(i){let e,t=de(i[12],{mangle:!1,headerIds:!1})+"";return{c(){e=p("div"),h(e,"class","preview svelte-10busrc")},m(n,r){v(n,e,r),e.innerHTML=t},p(n,r){r&1&&t!==(t=de(n[12],{mangle:!1,headerIds:!1})+"")&&(e.innerHTML=t)},d(n){n&&y(e)}}}function Uu(i){let e;return{c(){e=p("p"),e.textContent="Loading preview..."},m(t,n){v(t,e,n)},p:z,d(t){t&&y(e)}}}function Ju(i){return{c:z,m:z,p:z,d:z}}function Hu(i){let e,t=de(i[12],{mangle:!1,headerIds:!1})+"";return{c(){e=p("div"),h(e,"class","preview svelte-10busrc")},m(n,r){v(n,e,r),e.innerHTML=t},p(n,r){r&5&&t!==(t=de(n[12],{mangle:!1,headerIds:!1})+"")&&(e.innerHTML=t)},d(n){n&&y(e)}}}function qu(i){let e;return{c(){e=p("p"),e.textContent="Loading preview..."},m(t,n){v(t,e,n)},p:z,d(t){t&&y(e)}}}function Vu(i){let e,t,n,r,o,s,a,l,u,f,d,m,g,_,k=i[0].originalFile.basename+"",x,C,w,S,T,P,Z,O,R,re,te,W,U,E,G,D,J,be,X,$,j,ye,ge=Je(i[0].conflictingFiles),q=[];for(let H=0;H<ge.length;H+=1)q[H]=_l(hl(i,ge,H));let Se=H=>M(q[H],1,1,()=>{q[H]=null});w=new ml({props:{file:i[0].originalFile}});let ve={ctx:i,current:null,token:null,hasCatch:!1,pending:Uu,then:Yu,catch:Qu,value:12};Pn(O=i[0].app.vault.cachedRead(i[0].originalFile),ve);let me={ctx:i,current:null,token:null,hasCatch:!1,pending:qu,then:Hu,catch:Ju,value:12};return Pn(W=i[0].app.vault.cachedRead(i[2]),me),{c(){e=p("div"),t=p("h1"),t.textContent="Conflicting files",n=b(),r=p("div");for(let H=0;H<q.length;H+=1)q[H].c();o=b(),s=p("div"),a=p("h1"),a.textContent="Quick difference view",l=b(),u=p("div"),f=b(),d=p("div"),m=p("h1"),m.textContent="Original file",g=b(),_=p("h2"),x=F(k),C=b(),A(w.$$.fragment),S=b(),T=p("div"),P=p("h2"),P.textContent="Original file preview",Z=b(),ve.block.c(),R=b(),re=p("h2"),re.textContent="Conflicting file preview",te=b(),me.block.c(),U=b(),E=p("div"),G=p("button"),G.textContent="Accept conflict changes",D=b(),J=p("button"),J.textContent="Accept original",be=b(),X=p("button"),X.textContent="Open in Merge Editor",h(t,"class","svelte-10busrc"),h(r,"class","conflicts svelte-10busrc"),h(e,"class","column svelte-10busrc"),h(a,"class","svelte-10busrc"),h(u,"class","diff_view svelte-10busrc"),h(s,"class","column svelte-10busrc"),h(m,"class","svelte-10busrc"),h(T,"class","preview-container svelte-10busrc"),h(d,"class","column svelte-10busrc"),h(E,"class","tools svelte-10busrc")},m(H,V){v(H,e,V),c(e,t),c(e,n),c(e,r);for(let Ce=0;Ce<q.length;Ce+=1)q[Ce]&&q[Ce].m(r,null);v(H,o,V),v(H,s,V),c(s,a),c(s,l),c(s,u),i[7](u),v(H,f,V),v(H,d,V),c(d,m),c(d,g),c(d,_),c(_,x),c(d,C),L(w,d,null),c(d,S),c(d,T),c(T,P),c(T,Z),ve.block.m(T,ve.anchor=null),ve.mount=()=>T,ve.anchor=R,c(T,R),c(T,re),c(T,te),me.block.m(T,me.anchor=null),me.mount=()=>T,me.anchor=null,v(H,U,V),v(H,E,V),c(E,G),c(E,D),c(E,J),c(E,be),c(E,X),$=!0,j||(ye=[Q(G,"click",i[3]),Q(J,"click",i[4]),Q(X,"click",i[5])],j=!0)},p(H,[V]){if(i=H,V&69){ge=Je(i[0].conflictingFiles);let ce;for(ce=0;ce<ge.length;ce+=1){let Be=hl(i,ge,ce);q[ce]?(q[ce].p(Be,V),I(q[ce],1)):(q[ce]=_l(Be),q[ce].c(),I(q[ce],1),q[ce].m(r,null))}for(Le(),ce=ge.length;ce<q.length;ce+=1)Se(ce);Ne()}(!$||V&1)&&k!==(k=i[0].originalFile.basename+"")&&oe(x,k);let Ce={};V&1&&(Ce.file=i[0].originalFile),w.$set(Ce),ve.ctx=i,V&1&&O!==(O=i[0].app.vault.cachedRead(i[0].originalFile))&&Pn(O,ve)||Fr(ve,i,V),me.ctx=i,V&5&&W!==(W=i[0].app.vault.cachedRead(i[2]))&&Pn(W,me)||Fr(me,i,V)},i(H){if(!$){for(let V=0;V<ge.length;V+=1)I(q[V]);I(w.$$.fragment,H),$=!0}},o(H){q=q.filter(Boolean);for(let V=0;V<q.length;V+=1)M(q[V]);M(w.$$.fragment,H),$=!1},d(H){H&&(y(e),y(o),y(s),y(f),y(d),y(U),y(E)),bt(q,H),i[7](null),N(w),ve.block.d(),ve.token=null,ve=null,me.block.d(),me.token=null,me=null,j=!1,we(ye)}}}function Xu(i,e,t){let{parentModal:n}=e,r,o,s=n.conflictingFiles[0];n.titleEl.setText("Difference view"),n.titleEl.style.textAlign="center",Ke(()=>He(void 0,void 0,void 0,function*(){o=new at.EditorView({parent:r,state:bl.EditorState.create({doc:yield n.app.vault.read(s),extensions:[Zn,at.EditorView.editable.of(!1),at.EditorView.lineWrapping,at.EditorView.darkTheme.of(!0),Us({original:yield n.app.vault.read(n.originalFile),mergeControls:!1,gutter:!0,highlightChanges:!0,syntaxHighlightDeletions:!0})]})})}));function a(){return He(this,void 0,void 0,function*(){new St.Notice("Resolving conflict : Accepting left",2e3);let x=n.originalFile.path;setTimeout(()=>new St.Notice(`Deleting ${x}...`,2e3),500),yield n.app.vault.delete(n.originalFile,!0),new St.Notice("Original file deleted",2e3),setTimeout(()=>{new St.Notice(`Renaming ${s.path} to ${x}...`,2e3)},1e3),yield n.app.fileManager.renameFile(s,x),u(),new St.Notice("Conflict resolved : Accepted left",2e3),t(0,n.originalFile=s,n),f(),t(2,s=n.conflictingFiles[0])})}function l(){return He(this,void 0,void 0,function*(){new St.Notice("Resolving conflict : Accepting original",5e3),setTimeout(()=>new St.Notice(`Deleting ${s.path}...`,5e3),1e3),yield n.app.vault.delete(s),new St.Notice("Conflict resolved",5e3),u(),f(),t(2,s=n.conflictingFiles[0])})}function u(){n.conflictingFiles.remove(s),t(0,n)}function f(){n.conflictingFiles.length===0&&n.close()}function d(){new tr(n.app,n.originalFile,s).open()}function m(k){return o.state.update({changes:{from:0,to:o.state.doc.length,insert:k}})}function g(k){return He(this,void 0,void 0,function*(){t(2,s=k.detail.file),o.dispatch(m(yield n.app.vault.read(s)))})}function _(k){st[k?"unshift":"push"](()=>{r=k,t(1,r)})}return i.$$set=k=>{"parentModal"in k&&t(0,n=k.parentModal)},[n,r,s,a,l,d,g,_]}var ao=class extends fe{constructor(e){super(),he(this,e,Xu,Vu,ue,{parentModal:0},Zu)}},yl=ao;var rr=class extends or.Modal{constructor(t,n,r){super(t);this.file=n;this.syncthingController=r;this.d2hColorBlind=!1;this.conflictingFiles=[];this.conflictingFilesOrFailure=[];this.originalFile=n,this.conflictingFilesProperties=new Map}async onOpen(){if(this.modalEl.style.width="100%",this.modalEl.style.height="100%",{originalFile:this.originalFile,conflictingFiles:this.conflictingFilesOrFailure,conflictingFilesProperties:this.conflictingFilesProperties}=await this.syncthingController.getDiffFiles(this.file),this.conflictingFilesOrFailure instanceof _e){new or.Notice(this.conflictingFilesOrFailure.message),this.close();return}this.conflictingFiles=this.conflictingFilesOrFailure,this.component=new yl({target:this.contentEl,props:{parentModal:this}})}onClose(){var n;let{contentEl:t}=this;(n=this.component)==null||n.$destroy(),t.empty()}};function Ku(i){Ie(i,"svelte-x0g9xq",".divider.svelte-x0g9xq.svelte-x0g9xq{margin-top:10px;margin-bottom:10px;border-bottom:2px solid var(--background-modifier-border)}details.svelte-x0g9xq.svelte-x0g9xq{padding:1% 2%;border-radius:10px}details.svelte-x0g9xq.svelte-x0g9xq:hover{background-color:var(--background-modifier-hover)}summary.svelte-x0g9xq.svelte-x0g9xq{list-style:none;display:flex;flex-direction:row;justify-content:space-between;align-items:center}summary.svelte-x0g9xq>p.svelte-x0g9xq{display:flex;flex-direction:column}")}function vl(i,e,t){let n=i.slice();return n[5]=e[t],n[7]=t,n}function ef(i){let e=i[3].filename+"",t;return{c(){t=F(e)},m(n,r){v(n,t,r)},p:z,d(n){n&&y(t)}}}function tf(i){let e=i[3].message+"",t;return{c(){t=F(e)},m(n,r){v(n,t,r)},p:z,d(n){n&&y(t)}}}function nf(i){let e;return{c(){e=p("div"),h(e,"class","divider svelte-x0g9xq")},m(t,n){v(t,e,n)},d(t){t&&y(e)}}}function wl(i){let e,t,n,r=i[7]!==0&&nf(i);return t=new ir({props:{file:i[5],counter:i[7]}}),{c(){r&&r.c(),e=b(),A(t.$$.fragment)},m(o,s){r&&r.m(o,s),v(o,e,s),L(t,o,s),n=!0},p(o,s){let a={};s&1&&(a.file=o[5]),t.$set(a)},i(o){n||(I(t.$$.fragment,o),n=!0)},o(o){M(t.$$.fragment,o),n=!1},d(o){o&&y(e),r&&r.d(o),N(t,o)}}}function rf(i){let e,t,n,r,o,s,a,l=i[0].length+"",u,f,d=i[0].length>1?"s":"",m,g,_,k,x,C=i[0].length>1?"s":"",w,S,T,P,Z;function O(E,G){return E[3]instanceof _e?tf:ef}let re=O(i,-1)(i),te=Je(i[0]),W=[];for(let E=0;E<te.length;E+=1)W[E]=wl(vl(i,te,E));let U=E=>M(W[E],1,1,()=>{W[E]=null});return{c(){e=p("details"),t=p("summary"),n=p("p"),r=p("span"),re.c(),o=b(),s=p("span"),a=F("("),u=F(l),f=F(" conflict"),m=F(d),g=F(")"),_=b(),k=p("button"),x=F("View conflict"),w=F(C),S=b();for(let E=0;E<W.length;E+=1)W[E].c();h(n,"class","svelte-x0g9xq"),h(k,"class","mod-cta"),h(t,"class","svelte-x0g9xq"),h(e,"class","svelte-x0g9xq")},m(E,G){v(E,e,G),c(e,t),c(t,n),c(n,r),re.m(r,null),c(n,o),c(n,s),c(s,a),c(s,u),c(s,f),c(s,m),c(s,g),c(t,_),c(t,k),c(k,x),c(k,w),c(e,S);for(let D=0;D<W.length;D+=1)W[D]&&W[D].m(e,null);T=!0,P||(Z=Q(k,"click",i[4]),P=!0)},p(E,[G]){if(re.p(E,G),(!T||G&1)&&l!==(l=E[0].length+"")&&oe(u,l),(!T||G&1)&&d!==(d=E[0].length>1?"s":"")&&oe(m,d),(!T||G&1)&&C!==(C=E[0].length>1?"s":"")&&oe(w,C),G&1){te=Je(E[0]);let D;for(D=0;D<te.length;D+=1){let J=vl(E,te,D);W[D]?(W[D].p(J,G),I(W[D],1)):(W[D]=wl(J),W[D].c(),I(W[D],1),W[D].m(e,null))}for(Le(),D=te.length;D<W.length;D+=1)U(D);Ne()}},i(E){if(!T){for(let G=0;G<te.length;G+=1)I(W[G]);T=!0}},o(E){W=W.filter(Boolean);for(let G=0;G<W.length;G+=1)M(W[G]);T=!1},d(E){E&&y(e),re.d(),bt(W,E),P=!1,Z()}}}function of(i,e,t){let{conflicts:n}=e,{syncthingController:r}=e,{parentModal:o}=e,s=tt(n[0].name);s instanceof _e&&console.error(s);let a=()=>new rr(o.app,n[0],r).open();return i.$$set=l=>{"conflicts"in l&&t(0,n=l.conflicts),"syncthingController"in l&&t(1,r=l.syncthingController),"parentModal"in l&&t(2,o=l.parentModal)},[n,r,o,s,a]}var co=class extends fe{constructor(e){super(),he(this,e,of,rf,ue,{conflicts:0,syncthingController:1,parentModal:2},Ku)}},kl=co;function sf(i){Ie(i,"svelte-1drkksv",".divider.svelte-1drkksv{margin-top:10px;margin-bottom:10px;border-bottom:2px solid var(--background-modifier-border)}")}function xl(i,e,t){let n=i.slice();return n[5]=e[t],n[7]=t,n}function lf(i){let e;return{c(){e=p("div"),h(e,"class","divider svelte-1drkksv")},m(t,n){v(t,e,n)},d(t){t&&y(e)}}}function Cl(i){var o;let e,t,n,r=i[7]!==0&&lf(i);return t=new kl({props:{conflicts:(o=i[0].get(i[5]))!=null?o:[],syncthingController:i[1].syncthingController,parentModal:i[1]}}),{c(){r&&r.c(),e=b(),A(t.$$.fragment)},m(s,a){r&&r.m(s,a),v(s,e,a),L(t,s,a),n=!0},p(s,a){var u;let l={};a&1&&(l.conflicts=(u=s[0].get(s[5]))!=null?u:[]),a&2&&(l.syncthingController=s[1].syncthingController),a&2&&(l.parentModal=s[1]),t.$set(l)},i(s){n||(I(t.$$.fragment,s),n=!0)},o(s){M(t.$$.fragment,s),n=!1},d(s){s&&y(e),r&&r.d(s),N(t,s)}}}function Il(i){let e,t,n=Je(i[0].keys()),r=[];for(let s=0;s<n.length;s+=1)r[s]=Cl(xl(i,n,s));let o=s=>M(r[s],1,1,()=>{r[s]=null});return{c(){for(let s=0;s<r.length;s+=1)r[s].c();e=ot()},m(s,a){for(let l=0;l<r.length;l+=1)r[l]&&r[l].m(s,a);v(s,e,a),t=!0},p(s,a){if(a&3){n=Je(s[0].keys());let l;for(l=0;l<n.length;l+=1){let u=xl(s,n,l);r[l]?(r[l].p(u,a),I(r[l],1)):(r[l]=Cl(u),r[l].c(),I(r[l],1),r[l].m(e.parentNode,e))}for(Le(),l=n.length;l<r.length;l+=1)o(l);Ne()}},i(s){if(!t){for(let a=0;a<n.length;a+=1)I(r[a]);t=!0}},o(s){r=r.filter(Boolean);for(let a=0;a<r.length;a+=1)M(r[a]);t=!1},d(s){s&&y(e),bt(r,s)}}}function af(i){let e,t,n=i[0],r,o,s=Il(i);return{c(){e=p("div"),t=b(),s.c(),r=ot()},m(a,l){v(a,e,l),i[3](e),v(a,t,l),s.m(a,l),v(a,r,l),o=!0},p(a,[l]){l&1&&ue(n,n=a[0])?(Le(),M(s,1,1,z),Ne(),s=Il(a),s.c(),I(s,1),s.m(r.parentNode,r)):s.p(a,l)},i(a){o||(I(s),o=!0)},o(a){M(s),o=!1},d(a){a&&(y(e),y(t),y(r)),i[3](null),s.d(a)}}}function cf(i,e,t){let{parentModal:n}=e,{conflicts:r}=e,o,s={recent:"Most recent",old:"Least recent","a-to-z":"A to Z","z-to-a":"Z to A"};Ke(()=>{new Ml.Setting(o).setName("Sort by date").addDropdown(l=>{l.addOptions(s),l.onChange(u=>{t(0,r=vr(r,u,n.syncthingController)),console.log("dropdown",r)})}),t(0,r=vr(r,"recent",n.syncthingController))}),n.titleEl.setText("Syncthing Conflicts");function a(l){st[l?"unshift":"push"](()=>{o=l,t(2,o)})}return i.$$set=l=>{"parentModal"in l&&t(1,n=l.parentModal),"conflicts"in l&&t(0,r=l.conflicts)},i.$$.update=()=>{i.$$.dirty&1&&r&&console.log("conflicts",r)},[r,n,o,a]}var uo=class extends fe{constructor(e){super(),he(this,e,cf,af,ue,{parentModal:1,conflicts:0},sf)}},Sl=uo;var sr=class extends $l.Modal{constructor(t,n){super(t);this.syncthingController=n;this.components=[]}async onOpen(){var n,r;this.titleEl.style.textAlign="center";let t=await this.syncthingController.getConflicts();if(t instanceof _e){(n=this.components)==null||n.push(new nr({target:this.contentEl,props:{failure:t}}));return}(r=this.components)==null||r.push(new Sl({target:this.contentEl,props:{parentModal:this,conflicts:t}}))}onClose(){var n;(n=this.components)==null||n.forEach(r=>{r.$destroy()});let{contentEl:t}=this;t.empty()}};var Tl=`data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjEwMCUiIHdpZHRoPSIxMDAlIiB2aWV3Qm94PSIwIDAg
+// node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/constants/units.js
+var require_units = __commonJS({
+  "node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/constants/units.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.UNIT_WORDS = exports.UNIT_WORD = exports.UNIT_SENTENCES = exports.UNIT_SENTENCE = exports.UNIT_PARAGRAPHS = exports.UNIT_PARAGRAPH = exports.UNITS = void 0;
+    var UNIT_WORDS = "words";
+    exports.UNIT_WORDS = UNIT_WORDS;
+    var UNIT_WORD = "word";
+    exports.UNIT_WORD = UNIT_WORD;
+    var UNIT_SENTENCES = "sentences";
+    exports.UNIT_SENTENCES = UNIT_SENTENCES;
+    var UNIT_SENTENCE = "sentence";
+    exports.UNIT_SENTENCE = UNIT_SENTENCE;
+    var UNIT_PARAGRAPHS = "paragraphs";
+    exports.UNIT_PARAGRAPHS = UNIT_PARAGRAPHS;
+    var UNIT_PARAGRAPH = "paragraph";
+    exports.UNIT_PARAGRAPH = UNIT_PARAGRAPH;
+    var UNITS = [UNIT_WORDS, UNIT_WORD, UNIT_SENTENCES, UNIT_SENTENCE, UNIT_PARAGRAPHS, UNIT_PARAGRAPH];
+    exports.UNITS = UNITS;
+  }
+});
+
+// node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/constants/words.js
+var require_words = __commonJS({
+  "node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/constants/words.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.WORDS = void 0;
+    var WORDS = ["ad", "adipisicing", "aliqua", "aliquip", "amet", "anim", "aute", "cillum", "commodo", "consectetur", "consequat", "culpa", "cupidatat", "deserunt", "do", "dolor", "dolore", "duis", "ea", "eiusmod", "elit", "enim", "esse", "est", "et", "eu", "ex", "excepteur", "exercitation", "fugiat", "id", "in", "incididunt", "ipsum", "irure", "labore", "laboris", "laborum", "Lorem", "magna", "minim", "mollit", "nisi", "non", "nostrud", "nulla", "occaecat", "officia", "pariatur", "proident", "qui", "quis", "reprehenderit", "sint", "sit", "sunt", "tempor", "ullamco", "ut", "velit", "veniam", "voluptate"];
+    exports.WORDS = WORDS;
+  }
+});
+
+// node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/constants/lineEndings.js
+var require_lineEndings = __commonJS({
+  "node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/constants/lineEndings.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.LINE_ENDINGS = void 0;
+    var LINE_ENDINGS = {
+      POSIX: "\n",
+      WIN32: "\r\n"
+    };
+    exports.LINE_ENDINGS = LINE_ENDINGS;
+  }
+});
+
+// node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/util/capitalize.js
+var require_capitalize = __commonJS({
+  "node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/util/capitalize.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports["default"] = void 0;
+    var capitalize = function capitalize2(str) {
+      var trimmed = str.trim();
+      return trimmed.charAt(0).toUpperCase() + trimmed.slice(1);
+    };
+    var _default = capitalize;
+    exports["default"] = _default;
+  }
+});
+
+// node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/util/isNode.js
+var require_isNode = __commonJS({
+  "node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/util/isNode.js"(exports, module2) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports["default"] = void 0;
+    var isNode = function isNode2() {
+      return typeof module2 !== "undefined" && !!module2.exports;
+    };
+    var _default = isNode;
+    exports["default"] = _default;
+  }
+});
+
+// node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/util/isReactNative.js
+var require_isReactNative = __commonJS({
+  "node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/util/isReactNative.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports["default"] = void 0;
+    var isReactNative = function isReactNative2() {
+      var isReactNativeResult = false;
+      try {
+        isReactNativeResult = navigator.product === "ReactNative";
+      } catch (e) {
+        isReactNativeResult = false;
+      }
+      return isReactNativeResult;
+    };
+    var _default = isReactNative;
+    exports["default"] = _default;
+  }
+});
+
+// node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/constants/platforms.js
+var require_platforms = __commonJS({
+  "node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/constants/platforms.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports.SUPPORTED_PLATFORMS = void 0;
+    var SUPPORTED_PLATFORMS = {
+      DARWIN: "darwin",
+      LINUX: "linux",
+      WIN32: "win32"
+    };
+    exports.SUPPORTED_PLATFORMS = SUPPORTED_PLATFORMS;
+  }
+});
+
+// node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/util/isWindows.js
+var require_isWindows = __commonJS({
+  "node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/util/isWindows.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports["default"] = void 0;
+    var _platforms = require_platforms();
+    var isWindows = function isWindows2() {
+      var isWindowsResult = false;
+      try {
+        isWindowsResult = process.platform === _platforms.SUPPORTED_PLATFORMS.WIN32;
+      } catch (e) {
+        isWindowsResult = false;
+      }
+      return isWindowsResult;
+    };
+    var _default = isWindows;
+    exports["default"] = _default;
+  }
+});
+
+// node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/util/makeArrayOfLength.js
+var require_makeArrayOfLength = __commonJS({
+  "node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/util/makeArrayOfLength.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports["default"] = void 0;
+    var makeArrayOfLength = function makeArrayOfLength2() {
+      var length = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : 0;
+      return Array.apply(null, Array(length)).map(function(item, index) {
+        return index;
+      });
+    };
+    var _default = makeArrayOfLength;
+    exports["default"] = _default;
+  }
+});
+
+// node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/util/makeArrayOfStrings.js
+var require_makeArrayOfStrings = __commonJS({
+  "node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/util/makeArrayOfStrings.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports["default"] = void 0;
+    var _makeArrayOfLength = _interopRequireDefault(require_makeArrayOfLength());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { "default": obj };
+    }
+    var makeArrayOfStrings = function makeArrayOfStrings2(length, makeString) {
+      var arr = (0, _makeArrayOfLength["default"])(length);
+      return arr.map(function() {
+        return makeString();
+      });
+    };
+    var _default = makeArrayOfStrings;
+    exports["default"] = _default;
+  }
+});
+
+// node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/util/index.js
+var require_util = __commonJS({
+  "node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/util/index.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    Object.defineProperty(exports, "capitalize", {
+      enumerable: true,
+      get: function get() {
+        return _capitalize["default"];
+      }
+    });
+    Object.defineProperty(exports, "isNode", {
+      enumerable: true,
+      get: function get() {
+        return _isNode["default"];
+      }
+    });
+    Object.defineProperty(exports, "isReactNative", {
+      enumerable: true,
+      get: function get() {
+        return _isReactNative["default"];
+      }
+    });
+    Object.defineProperty(exports, "isWindows", {
+      enumerable: true,
+      get: function get() {
+        return _isWindows["default"];
+      }
+    });
+    Object.defineProperty(exports, "makeArrayOfLength", {
+      enumerable: true,
+      get: function get() {
+        return _makeArrayOfLength["default"];
+      }
+    });
+    Object.defineProperty(exports, "makeArrayOfStrings", {
+      enumerable: true,
+      get: function get() {
+        return _makeArrayOfStrings["default"];
+      }
+    });
+    var _capitalize = _interopRequireDefault(require_capitalize());
+    var _isNode = _interopRequireDefault(require_isNode());
+    var _isReactNative = _interopRequireDefault(require_isReactNative());
+    var _isWindows = _interopRequireDefault(require_isWindows());
+    var _makeArrayOfLength = _interopRequireDefault(require_makeArrayOfLength());
+    var _makeArrayOfStrings = _interopRequireDefault(require_makeArrayOfStrings());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { "default": obj };
+    }
+  }
+});
+
+// node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/lib/generator.js
+var require_generator = __commonJS({
+  "node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/lib/generator.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports["default"] = void 0;
+    var _words = require_words();
+    var _util = require_util();
+    function _classCallCheck(instance19, Constructor) {
+      if (!(instance19 instanceof Constructor)) {
+        throw new TypeError("Cannot call a class as a function");
+      }
+    }
+    function _defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+    function _createClass(Constructor, protoProps, staticProps) {
+      if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) _defineProperties(Constructor, staticProps);
+      Object.defineProperty(Constructor, "prototype", { writable: false });
+      return Constructor;
+    }
+    function _defineProperty(obj, key, value) {
+      if (key in obj) {
+        Object.defineProperty(obj, key, { value, enumerable: true, configurable: true, writable: true });
+      } else {
+        obj[key] = value;
+      }
+      return obj;
+    }
+    var Generator = /* @__PURE__ */ function() {
+      function Generator2() {
+        var _ref = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {}, _ref$sentencesPerPara = _ref.sentencesPerParagraph, sentencesPerParagraph = _ref$sentencesPerPara === void 0 ? {
+          max: 7,
+          min: 3
+        } : _ref$sentencesPerPara, _ref$wordsPerSentence = _ref.wordsPerSentence, wordsPerSentence = _ref$wordsPerSentence === void 0 ? {
+          max: 15,
+          min: 5
+        } : _ref$wordsPerSentence, random = _ref.random, seed = _ref.seed, _ref$words = _ref.words, words = _ref$words === void 0 ? _words.WORDS : _ref$words;
+        _classCallCheck(this, Generator2);
+        _defineProperty(this, "sentencesPerParagraph", void 0);
+        _defineProperty(this, "wordsPerSentence", void 0);
+        _defineProperty(this, "random", void 0);
+        _defineProperty(this, "words", void 0);
+        if (sentencesPerParagraph.min > sentencesPerParagraph.max) {
+          throw new Error("Minimum number of sentences per paragraph (".concat(sentencesPerParagraph.min, ") cannot exceed maximum (").concat(sentencesPerParagraph.max, ")."));
+        }
+        if (wordsPerSentence.min > wordsPerSentence.max) {
+          throw new Error("Minimum number of words per sentence (".concat(wordsPerSentence.min, ") cannot exceed maximum (").concat(wordsPerSentence.max, ")."));
+        }
+        this.sentencesPerParagraph = sentencesPerParagraph;
+        this.words = words;
+        this.wordsPerSentence = wordsPerSentence;
+        this.random = random || Math.random;
+      }
+      _createClass(Generator2, [{
+        key: "generateRandomInteger",
+        value: function generateRandomInteger(min, max) {
+          return Math.floor(this.random() * (max - min + 1) + min);
+        }
+      }, {
+        key: "generateRandomWords",
+        value: function generateRandomWords(num) {
+          var _this = this;
+          var _this$wordsPerSentenc = this.wordsPerSentence, min = _this$wordsPerSentenc.min, max = _this$wordsPerSentenc.max;
+          var length = num || this.generateRandomInteger(min, max);
+          return (0, _util.makeArrayOfLength)(length).reduce(function(accumulator, index) {
+            return "".concat(_this.pluckRandomWord(), " ").concat(accumulator);
+          }, "").trim();
+        }
+      }, {
+        key: "generateRandomSentence",
+        value: function generateRandomSentence(num) {
+          return "".concat((0, _util.capitalize)(this.generateRandomWords(num)), ".");
+        }
+      }, {
+        key: "generateRandomParagraph",
+        value: function generateRandomParagraph(num) {
+          var _this2 = this;
+          var _this$sentencesPerPar = this.sentencesPerParagraph, min = _this$sentencesPerPar.min, max = _this$sentencesPerPar.max;
+          var length = num || this.generateRandomInteger(min, max);
+          return (0, _util.makeArrayOfLength)(length).reduce(function(accumulator, index) {
+            return "".concat(_this2.generateRandomSentence(), " ").concat(accumulator);
+          }, "").trim();
+        }
+      }, {
+        key: "pluckRandomWord",
+        value: function pluckRandomWord() {
+          var min = 0;
+          var max = this.words.length - 1;
+          var index = this.generateRandomInteger(min, max);
+          return this.words[index];
+        }
+      }]);
+      return Generator2;
+    }();
+    var _default = Generator;
+    exports["default"] = _default;
+  }
+});
+
+// node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/lib/LoremIpsum.js
+var require_LoremIpsum = __commonJS({
+  "node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/lib/LoremIpsum.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    exports["default"] = void 0;
+    var _formats = require_formats();
+    var _lineEndings = require_lineEndings();
+    var _generator = _interopRequireDefault(require_generator());
+    var _util = require_util();
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { "default": obj };
+    }
+    function _classCallCheck(instance19, Constructor) {
+      if (!(instance19 instanceof Constructor)) {
+        throw new TypeError("Cannot call a class as a function");
+      }
+    }
+    function _defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+    function _createClass(Constructor, protoProps, staticProps) {
+      if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) _defineProperties(Constructor, staticProps);
+      Object.defineProperty(Constructor, "prototype", { writable: false });
+      return Constructor;
+    }
+    function _defineProperty(obj, key, value) {
+      if (key in obj) {
+        Object.defineProperty(obj, key, { value, enumerable: true, configurable: true, writable: true });
+      } else {
+        obj[key] = value;
+      }
+      return obj;
+    }
+    var LoremIpsum = /* @__PURE__ */ function() {
+      function LoremIpsum2() {
+        var options2 = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
+        var format = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : _formats.FORMAT_PLAIN;
+        var suffix = arguments.length > 2 ? arguments[2] : void 0;
+        _classCallCheck(this, LoremIpsum2);
+        this.format = format;
+        this.suffix = suffix;
+        _defineProperty(this, "generator", void 0);
+        if (_formats.FORMATS.indexOf(format.toLowerCase()) === -1) {
+          throw new Error("".concat(format, " is an invalid format. Please use ").concat(_formats.FORMATS.join(" or "), "."));
+        }
+        this.generator = new _generator["default"](options2);
+      }
+      _createClass(LoremIpsum2, [{
+        key: "getLineEnding",
+        value: function getLineEnding() {
+          if (this.suffix) {
+            return this.suffix;
+          }
+          if (!(0, _util.isReactNative)() && (0, _util.isNode)() && (0, _util.isWindows)()) {
+            return _lineEndings.LINE_ENDINGS.WIN32;
+          }
+          return _lineEndings.LINE_ENDINGS.POSIX;
+        }
+      }, {
+        key: "formatString",
+        value: function formatString(str) {
+          if (this.format === _formats.FORMAT_HTML) {
+            return "<p>".concat(str, "</p>");
+          }
+          return str;
+        }
+      }, {
+        key: "formatStrings",
+        value: function formatStrings(strings) {
+          var _this = this;
+          return strings.map(function(str) {
+            return _this.formatString(str);
+          });
+        }
+      }, {
+        key: "generateWords",
+        value: function generateWords(num) {
+          return this.formatString(this.generator.generateRandomWords(num));
+        }
+      }, {
+        key: "generateSentences",
+        value: function generateSentences(num) {
+          return this.formatString(this.generator.generateRandomParagraph(num));
+        }
+      }, {
+        key: "generateParagraphs",
+        value: function generateParagraphs(num) {
+          var makeString = this.generator.generateRandomParagraph.bind(this.generator);
+          return this.formatStrings((0, _util.makeArrayOfStrings)(num, makeString)).join(this.getLineEnding());
+        }
+      }]);
+      return LoremIpsum2;
+    }();
+    var _default = LoremIpsum;
+    exports["default"] = _default;
+  }
+});
+
+// node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/index.js
+var require_dist = __commonJS({
+  "node_modules/.pnpm/lorem-ipsum@2.0.8/node_modules/lorem-ipsum/dist/index.js"(exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    Object.defineProperty(exports, "LoremIpsum", {
+      enumerable: true,
+      get: function get() {
+        return _LoremIpsum["default"];
+      }
+    });
+    exports.loremIpsum = void 0;
+    var _formats = require_formats();
+    var _units = require_units();
+    var _words = require_words();
+    var _LoremIpsum = _interopRequireDefault(require_LoremIpsum());
+    function _interopRequireDefault(obj) {
+      return obj && obj.__esModule ? obj : { "default": obj };
+    }
+    var loremIpsum2 = function loremIpsum3() {
+      var _ref = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {}, _ref$count = _ref.count, count = _ref$count === void 0 ? 1 : _ref$count, _ref$format = _ref.format, format = _ref$format === void 0 ? _formats.FORMAT_PLAIN : _ref$format, _ref$paragraphLowerBo = _ref.paragraphLowerBound, paragraphLowerBound = _ref$paragraphLowerBo === void 0 ? 3 : _ref$paragraphLowerBo, _ref$paragraphUpperBo = _ref.paragraphUpperBound, paragraphUpperBound = _ref$paragraphUpperBo === void 0 ? 7 : _ref$paragraphUpperBo, random = _ref.random, _ref$sentenceLowerBou = _ref.sentenceLowerBound, sentenceLowerBound = _ref$sentenceLowerBou === void 0 ? 5 : _ref$sentenceLowerBou, _ref$sentenceUpperBou = _ref.sentenceUpperBound, sentenceUpperBound = _ref$sentenceUpperBou === void 0 ? 15 : _ref$sentenceUpperBou, _ref$units = _ref.units, units = _ref$units === void 0 ? _units.UNIT_SENTENCES : _ref$units, _ref$words = _ref.words, words = _ref$words === void 0 ? _words.WORDS : _ref$words, _ref$suffix = _ref.suffix, suffix = _ref$suffix === void 0 ? "" : _ref$suffix;
+      var options2 = {
+        random,
+        sentencesPerParagraph: {
+          max: paragraphUpperBound,
+          min: paragraphLowerBound
+        },
+        words,
+        wordsPerSentence: {
+          max: sentenceUpperBound,
+          min: sentenceLowerBound
+        }
+      };
+      var lorem = new _LoremIpsum["default"](options2, format, suffix);
+      switch (units) {
+        case _units.UNIT_PARAGRAPHS:
+        case _units.UNIT_PARAGRAPH:
+          return lorem.generateParagraphs(count);
+        case _units.UNIT_SENTENCES:
+        case _units.UNIT_SENTENCE:
+          return lorem.generateSentences(count);
+        case _units.UNIT_WORDS:
+        case _units.UNIT_WORD:
+          return lorem.generateWords(count);
+        default:
+          return "";
+      }
+    };
+    exports.loremIpsum = loremIpsum2;
+  }
+});
+
+// src/main.ts
+var main_exports = {};
+__export(main_exports, {
+  default: () => SyncthingPlugin
+});
+module.exports = __toCommonJS(main_exports);
+var import_obsidian27 = require("obsidian");
+
+// src/controllers/main_controller.ts
+var import_obsidian2 = require("obsidian");
+
+// src/models/failures.ts
+var Failure = class {
+  constructor(message) {
+    this.message = message;
+  }
+};
+var RestFailure = class extends Failure {
+  constructor(message) {
+    super(message ? message : "Failed to get configuration from REST API");
+  }
+};
+var CliFailure = class extends Failure {
+  constructor(message) {
+    super(message ? message : "Failed to get configuration from CLI");
+  }
+};
+
+// src/controllers/utils.ts
+var import_obsidian = require("obsidian");
+function sortFilesBy(files, type, syncthingController) {
+  switch (type) {
+    case "recent":
+      return new Map(
+        [...files.entries()].sort(
+          (a, b) => sortByConflictDate(a[1], b[1])
+        )
+      );
+    case "old":
+      return new Map(
+        [...files.entries()].sort((a, b) => sortByConflictDate(a[1], b[1])).reverse()
+      );
+    case "a-to-z":
+      return new Map([...files.entries()].sort());
+    case "z-to-a":
+      return new Map([...files.entries()].sort().reverse());
+  }
+}
+function sortByConflictDate(a, b) {
+  if (a instanceof import_obsidian.TFile && b instanceof import_obsidian.TFile) {
+    const filepropsA = parseConflictFilename(a.basename);
+    const filepropsB = parseConflictFilename(b.basename);
+    const dateA = filepropsA instanceof Failure ? /* @__PURE__ */ new Date() : filepropsA.dateTime;
+    const dateB = filepropsB instanceof Failure ? /* @__PURE__ */ new Date() : filepropsB.dateTime;
+    return dateB.getTime() - dateA.getTime();
+  }
+  const fileA = a.sort((a2, b2) => sortByConflictDate(a2, b2))[0];
+  const fileB = b.sort((a2, b2) => sortByConflictDate(a2, b2))[0];
+  return sortByConflictDate(fileA, fileB);
+}
+var SYNCTHING_CONFLICT_FILENAME_REGEX = /(.*).sync-conflict-(\d{8})-(\d{6})-(\w+).(\w+)/;
+function parseConflictFilename(filename) {
+  const regex = new RegExp(SYNCTHING_CONFLICT_FILENAME_REGEX);
+  const match = regex.exec(filename);
+  if (!match) {
+    return new Failure(`Error parsing conflict filename : ${filename}`);
+  }
+  return {
+    filename: match[1],
+    date: match[2],
+    time: match[3],
+    dateTime: /* @__PURE__ */ new Date(
+      `${match[2].slice(0, 4)}-${match[2].slice(4, 6)}-${match[2].slice(
+        6,
+        8
+      )}T${match[3].slice(0, 2)}:${match[3].slice(2, 4)}:${match[3].slice(
+        4,
+        6
+      )}`
+    ),
+    modifiedBy: match[4],
+    extension: match[5]
+  };
+}
+function isConflictFilename(filename) {
+  const regex = new RegExp(SYNCTHING_CONFLICT_FILENAME_REGEX);
+  const match = regex.exec(filename);
+  return !!match;
+}
+function formatBytes(bytes, decimals = 2) {
+  if (bytes === 0) return "0 Bytes";
+  const k = 1024;
+  const dm = decimals < 0 ? 0 : decimals;
+  const sizes = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i];
+}
+function isArrayOf(value, typeGuard) {
+  if (!Array.isArray(value)) {
+    return false;
+  }
+  for (const item of value) {
+    if (!typeGuard(item)) {
+      return false;
+    }
+  }
+  return true;
+}
+function isStringArray(value) {
+  return isArrayOf(value, (item) => typeof item === "string");
+}
+function validateJsonField(json, field, type) {
+  return typeof json === "object" && json !== null && field in json && typeof json[field] === type;
+}
+function logErrorIfNotValidJson(json, field, type) {
+  if (!validateJsonField(json, field, type)) {
+    console.error(
+      `Error validating JSON: ${field} is not present or is not of type ${typeof type}. Got ${JSON.stringify(
+        json
+      )}.`
+    );
+  }
+}
+
+// src/controllers/main_controller.ts
+var SyncthingController = class {
+  constructor(syncthingFromCLI, syncthingFromREST, syncthingFromAndroid, plugin) {
+    this.syncthingFromCLI = syncthingFromCLI;
+    this.syncthingFromREST = syncthingFromREST;
+    this.syncthingFromAndroid = syncthingFromAndroid;
+    this.plugin = plugin;
+  }
+  /**
+   * Checks if Syncthing is running.
+   */
+  async isRunning() {
+    console.log("isRunning");
+    return this.syncthingFromREST.ping().then((response) => {
+      console.log(response);
+      return true;
+    }).catch((error) => {
+      console.log(error);
+      return false;
+    });
+  }
+  /**
+   * Gets the Syncthing CLI status.
+   */
+  getCLIStatus() {
+    return this.syncthingFromCLI.getVersion();
+  }
+  /**
+   * Gets the Syncthing API status.
+   */
+  async getAPIStatus() {
+    if (!this.plugin.settings.api_key) {
+      return "API key is not set.";
+    }
+    return this.syncthingFromREST.ping();
+  }
+  /**
+   * Checks if Syncthing is installed on the system.
+   */
+  async hasSyncthing() {
+    if (import_obsidian2.Platform.isAndroidApp) {
+      return await this.syncthingFromAndroid.hasSyncthing();
+    } else if (import_obsidian2.Platform.isIosApp) {
+      return false;
+    }
+    return await this.syncthingFromCLI.getVersion().then((version) => {
+      return true;
+    }).catch(async (error) => {
+      return await this.syncthingFromREST.ping().then((response) => {
+        return true;
+      }).catch((error2) => {
+        return false;
+      });
+    });
+  }
+  async getConflictsWithOriginal(activeFile) {
+    const allFiles = this.plugin.app.vault.getFiles();
+    if (isConflictFilename(activeFile.basename)) {
+      const properties = parseConflictFilename(activeFile.basename);
+      if (properties instanceof Failure) {
+        console.error(properties.message);
+        throw new Error("Error parsing conflict filename.");
+      }
+      const conflictFiles = allFiles.filter((file16) => {
+        return file16.name.contains(".sync-conflict") && file16.name.contains(properties.filename) || file16.basename === properties.filename;
+      });
+      const originalFile = allFiles.find(
+        (file16) => file16.basename === properties.filename
+      );
+      if (originalFile) conflictFiles.remove(originalFile);
+      return {
+        originalFile,
+        conflicts: conflictFiles
+      };
+    }
+    const conflicts = allFiles.filter((file16) => {
+      return file16.name.contains(".sync-conflict") && file16.name.contains(activeFile.basename);
+    });
+    return {
+      conflicts
+    };
+  }
+  /**
+   * Gets the Syncthing conflicting files for the ConflictsModal.
+   * It returns a list of all files that are in conflict.
+   * (but only one version of each file, if applicable)
+   * @see https://docs.syncthing.net/users/syncing.html#conflicting-changes
+   */
+  async getConflicts() {
+    const allFiles = this.plugin.app.vault.getFiles();
+    const conflictsFiles = allFiles.filter((currentFile) => {
+      return currentFile.name.contains(".sync-conflict");
+    });
+    const conflictsFilesMap = /* @__PURE__ */ new Map();
+    for (const file16 of conflictsFiles) {
+      const filenameProperties = parseConflictFilename(file16.name);
+      if (filenameProperties instanceof Failure) {
+        return filenameProperties;
+      }
+      const filename = filenameProperties.filename;
+      if (conflictsFilesMap.has(filename)) {
+        conflictsFilesMap.get(filename).push(file16);
+        conflictsFilesMap.set(
+          filename,
+          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+          conflictsFilesMap.get(filename).sort((a, b) => sortByConflictDate(a, b))
+        );
+        continue;
+      }
+      conflictsFilesMap.set(filename, [file16]);
+    }
+    return conflictsFilesMap;
+  }
+  /**
+   * Gets the Syncthing conflicting files for the DiffModal.
+   * @see https://docs.syncthing.net/users/syncing.html#conflicting-changes
+   */
+  async getDiffFiles(file16) {
+    const filenameProperties = parseConflictFilename(file16.name);
+    if (filenameProperties instanceof Failure) {
+      return {
+        originalFile: file16,
+        conflictingFiles: filenameProperties,
+        conflictingFilesProperties: (/* @__PURE__ */ new Map()).set(
+          file16,
+          filenameProperties
+        )
+      };
+    }
+    const allFiles = this.plugin.app.vault.getFiles();
+    const conflictsFiles = allFiles.filter((currentFile) => {
+      return currentFile.name.contains(".sync-conflict") && currentFile.name.contains(filenameProperties.filename) || currentFile.basename === filenameProperties.filename;
+    });
+    const originalFile = conflictsFiles.find(
+      (currentFile) => currentFile.basename === filenameProperties.filename
+    );
+    if (originalFile) conflictsFiles.remove(originalFile);
+    const conflictingFilesProperties = /* @__PURE__ */ new Map();
+    for (const conflictingFile of conflictsFiles) {
+      const properties = parseConflictFilename(conflictingFile.name);
+      conflictingFilesProperties.set(conflictingFile, properties);
+    }
+    return {
+      originalFile: originalFile ? originalFile : file16,
+      conflictingFiles: conflictsFiles,
+      conflictingFilesProperties
+    };
+  }
+  /**
+   * Gets the Syncthing API key from the CLI.
+   */
+  async getAPIKey() {
+    if (import_obsidian2.Platform.isMobileApp) {
+      return new Failure(
+        "Cannot get API key on mobile. Please enter it manually."
+      );
+    }
+    if (!this.plugin.settings.api_key) {
+      try {
+        const apiKey = await this.syncthingFromCLI.getAPIkey();
+        if (apiKey) {
+          this.plugin.settings.api_key = apiKey;
+          await this.plugin.saveSettings();
+          return apiKey;
+        }
+      } catch (error) {
+        return new CliFailure("Error getting API key.");
+      }
+    }
+    return this.plugin.settings.api_key;
+  }
+  /**
+   * Gets the Syncthing configuration.
+   */
+  async getConfiguration() {
+    if (!await this.isRunning())
+      return new Failure("Syncthing is not running.");
+    try {
+      const config = await this.syncthingFromREST.getConfiguration();
+      return config;
+    } catch (error) {
+      if (import_obsidian2.Platform.isMobileApp) {
+        console.error(error);
+        return new RestFailure();
+      }
+      const config = await this.syncthingFromCLI.getConfiguration();
+      return config;
+    }
+  }
+  /**
+   * Gets the Syncthing devices.
+   */
+  async getDevices() {
+    return await this.syncthingFromREST.getDevices();
+  }
+  /**
+   * Gets the Syncthing folders.
+   */
+  async getFolders() {
+    return await this.syncthingFromREST.getAllFolders();
+  }
+  /**
+   * Starts the Syncthing service.
+   */
+  async startSyncthing() {
+    return this.syncthingFromCLI.startSyncthing();
+  }
+  /**
+   * Stops the Syncthing service.
+   */
+  async stopSyncthing() {
+    return this.syncthingFromCLI.stopSyncthing();
+  }
+};
+
+// node_modules/.pnpm/@js-random+number@0.3.5/node_modules/@js-random/number/module/index.js
+var defaultMin = 0;
+var defaultMax = 100;
+function randomNumber(min, max) {
+  min = isNaN(Number(min)) ? defaultMin : Number(min);
+  max = isNaN(Number(max)) ? defaultMax : Number(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+// node_modules/.pnpm/@js-random+date@0.3.5/node_modules/@js-random/date/module/index.js
+var defaultRange = {
+  from: /* @__PURE__ */ new Date(0),
+  to: new Date((2 << 29) * randomNumber(1, 8046627))
+};
+function randomDate(range) {
+  range = typeof range === "object" ? range : defaultRange;
+  return new Date(randomNumber(+range.from, +range.to));
+}
+
+// src/controllers/plugin_dev_mode.ts
+var import_lorem_ipsum = __toESM(require_dist());
+var import_obsidian3 = require("obsidian");
+var PluginDevModeController = class {
+  constructor(plugin) {
+    this.plugin = plugin;
+  }
+  async generateSyncthingConflicts(distinctFiles = 2, conflictsPerFile = 3) {
+    new import_obsidian3.Notice("Creating main files...");
+    new import_obsidian3.Notice(
+      `Parameters: ${distinctFiles} distinct files, ${conflictsPerFile} conflicts per file.`
+    );
+    const mainFileNotice = new import_obsidian3.Notice("");
+    const conflictFilesNotice = new import_obsidian3.Notice("");
+    for (let k = 0; k < distinctFiles; k++) {
+      mainFileNotice.setMessage(
+        `Progress (main files): ${k}/${distinctFiles}`
+      );
+      const mainFile = await this.plugin.app.vault.create(
+        `${(0, import_lorem_ipsum.loremIpsum)({ count: 1, units: "words" })}.md`,
+        `# ${(0, import_lorem_ipsum.loremIpsum)({ count: 1, units: "words" })}
+
+${(0, import_lorem_ipsum.loremIpsum)({
+          count: 1,
+          units: "paragraphs"
+        })}`
+      );
+      console.log("In the generateSyncthingConflicts function.");
+      new import_obsidian3.Notice("Creating conflict files...");
+      for (let j = 0; j < conflictsPerFile; j++) {
+        conflictFilesNotice.setMessage(
+          `Progress (conflicts): ${j}/${conflictsPerFile}`
+        );
+        const date = randomDate({
+          from: new Date(2020, 0, 1),
+          to: /* @__PURE__ */ new Date()
+        });
+        const dateString = date.toISOString().replace(/-/gm, "").replace("T", "-").replace(/:|\.\d{3}Z/gm, "");
+        const deviceID = Math.random().toString(36).substring(2, 9).toUpperCase();
+        console.log(dateString);
+        await this.plugin.app.vault.create(
+          `${mainFile.basename}.sync-conflict-${dateString}-${deviceID}.md`,
+          `# ${(0, import_lorem_ipsum.loremIpsum)({
+            count: 1,
+            units: "words"
+          })}
+
+${(0, import_lorem_ipsum.loremIpsum)({ count: 2, units: "paragraphs" })}`
+        );
+      }
+    }
+  }
+  async purgeVault() {
+    this.plugin.app.vault.getAllLoadedFiles().forEach(async (file16) => {
+      await this.plugin.app.vault.delete(file16);
+    });
+  }
+};
+var DevModeModal = class extends import_obsidian3.Modal {
+  constructor(app, pluginDevModeController) {
+    super(app);
+    this.pluginDevModeController = pluginDevModeController;
+    this.distinctFiles = 2;
+    this.conflictsPerFile = 3;
+  }
+  onOpen() {
+    const { contentEl } = this;
+    contentEl.createEl("h2", { text: "Plugin development mode" });
+    contentEl.createEl("p", {
+      text: "Here, you can create sample files to test the Obsidian Syncthing integration plugin.\nThe generated files are formated as in Syncthing documentation about conflicting files."
+    });
+    contentEl.createEl("p", {
+      text: "File format : <filename>.sync-conflict-<date>-<deviceID>.<extension>"
+    });
+    new import_obsidian3.Setting(contentEl).setName("Number of distinct files").setDesc("Number of files that will be created.").addSlider((slider) => {
+      slider.setValue(this.distinctFiles).setDynamicTooltip().setLimits(1, 50, 1).onChange((value) => {
+        this.distinctFiles = value;
+      });
+    });
+    new import_obsidian3.Setting(contentEl).setName("Number of conflicts per file").setDesc("Number of conflicts that will be created for each file.").addSlider((slider) => {
+      slider.setValue(this.conflictsPerFile).setDynamicTooltip().setLimits(1, 25, 1).onChange((value) => {
+        this.conflictsPerFile = value;
+      });
+    });
+    new import_obsidian3.Setting(contentEl).setName("Generate Syncthing conflicts").addButton((button) => {
+      button.setCta().setButtonText("Generate").onClick(async () => {
+        await this.pluginDevModeController.generateSyncthingConflicts(
+          this.distinctFiles,
+          this.conflictsPerFile
+        );
+        this.close();
+      });
+    });
+    new import_obsidian3.Setting(contentEl).setName("Purge Vault").setDesc("Delete all files in the vault.").addButton((button) => {
+      button.setWarning().setButtonText("Purge").onClick(async () => {
+        const modal = new import_obsidian3.Modal(this.app);
+        modal.contentEl.createEl("h1", { text: "Purge Vault" });
+        modal.contentEl.createEl("p", {
+          text: "This will delete all files in the vault. Please don't use it on a vault that contains important files."
+        });
+        new import_obsidian3.Setting(modal.contentEl).setName("Are you sure?").setHeading().addButton((button2) => {
+          button2.setWarning().setButtonText("Yes").onClick(async () => {
+            await this.pluginDevModeController.purgeVault();
+            modal.close();
+            this.close();
+          });
+        }).addButton((button2) => {
+          button2.setButtonText("No").onClick(() => {
+            modal.close();
+          });
+        });
+        modal.open();
+      });
+    });
+  }
+  onClose() {
+    const { contentEl } = this;
+    contentEl.empty();
+  }
+};
+
+// src/controllers/status_bar.ts
+var import_obsidian4 = require("obsidian");
+var SyncthingStatusBar = class {
+  constructor(status_bar, plugin) {
+    this.status_bar = status_bar;
+    this.plugin = plugin;
+    this.app = plugin.app;
+    this.currentFile = this.app.workspace.getActiveFile();
+  }
+  onload() {
+    this.createStatusBar();
+    this.plugin.registerEvent(
+      this.plugin.app.workspace.on("file-open", (file16) => {
+        this.currentFile = file16;
+        this.createStatusBar();
+      })
+    );
+    this.status_bar.onClickEvent((event) => {
+      var _a, _b;
+      const menu = new import_obsidian4.Menu();
+      menu.addItem((item) => {
+        item.setTitle("Open all conflicts as splits").onClick(() => {
+          var _a2;
+          (_a2 = this.activeConflicts) == null ? void 0 : _a2.forEach(async (file16) => {
+            await this.app.workspace.createLeafBySplit(this.app.workspace.getLeaf()).openFile(file16);
+          });
+        });
+        item.setIcon("arrow-up-right");
+      });
+      if (this.currentFile && isConflictFilename(this.currentFile.name) && this.originalFile === void 0) {
+        const file16 = this.currentFile;
+        menu.addItem((item) => {
+          item.setTitle("Rename to original").onClick(async () => {
+            const conflict = parseConflictFilename(file16.name);
+            if (conflict instanceof Failure) {
+              new import_obsidian4.Notice("Failed to parse conflict filename");
+              console.error(conflict.message);
+              return;
+            }
+            new import_obsidian4.Notice("Not implemented yet");
+          });
+          item.setIcon("pencil");
+        });
+      }
+      if (this.originalFile !== void 0) {
+        menu.addItem((item) => {
+          item.setTitle("Open original file").onClick(async () => await this.app.workspace.createLeafBySplit(this.app.workspace.getLeaf()).openFile(this.originalFile));
+          item.setIcon("arrow-up-right");
+        });
+      }
+      menu.addSeparator();
+      (_a = this.activeConflicts) == null ? void 0 : _a.sort((a, b) => {
+        const aProps = parseConflictFilename(a.basename);
+        const bProps = parseConflictFilename(b.basename);
+        if (aProps instanceof Failure || bProps instanceof Failure) {
+          return 0;
+        }
+        if (aProps.dateTime > bProps.dateTime) {
+          return -1;
+        }
+        if (aProps.dateTime < bProps.dateTime) {
+          return 1;
+        }
+        return 0;
+      });
+      (_b = this.activeConflicts) == null ? void 0 : _b.forEach((file16) => {
+        menu.addItem((item) => {
+          if (isConflictFilename(file16.basename)) {
+            const conflict = parseConflictFilename(file16.basename);
+            if (conflict instanceof Failure) {
+              return;
+            }
+            item.setTitle(`${conflict.filename} (caused by ${conflict.modifiedBy} on ${conflict.dateTime.toISOString().replace("T", " ").replace("Z", "")})`);
+          }
+          item.setIcon("file");
+          item.onClick(async () => {
+            await this.app.workspace.createLeafBySplit(this.app.workspace.getLeaf()).openFile(file16);
+          });
+        });
+      });
+      menu.showAtPosition({
+        x: window.innerWidth - 15,
+        y: window.innerHeight - 37
+      });
+    });
+    this.status_bar.addClass("mod-clickable");
+    this.status_bar.style.color = "var(--text-warning)";
+  }
+  createStatusBar() {
+    const activeFile = this.app.workspace.getActiveFile();
+    if (!activeFile) {
+      this.status_bar.empty();
+      return;
+    }
+    this.plugin.syncthingController.getConflictsWithOriginal(activeFile).then((result) => {
+      this.activeConflicts = result.conflicts;
+      this.activeConflicts.remove(activeFile);
+      this.originalFile = result.originalFile;
+      if (!this.activeConflicts || this.activeConflicts.length === 0) {
+        this.status_bar.empty();
+        return;
+      }
+      this.status_bar.setText(
+        `${this.activeConflicts.length} conflicts`
+      );
+    });
+  }
+  onunload() {
+    this.status_bar.empty();
+  }
+};
+
+// src/data/syncthing_android_datasource.ts
+var import_obsidian5 = require("obsidian");
+var SyncthingFromAndroid = class {
+  /**
+   * Check if the Syncthing Android app is installed.
+   */
+  async hasSyncthing() {
+    console.log("Platform: ", import_obsidian5.Platform);
+    return true;
+  }
+  /**
+   * Open the Syncthing Android app.
+   */
+  async openSyncthing() {
+    const packageName = "com.nutomic.syncthingandroid";
+    const appUrl = `syncthing://${packageName}`;
+    const fallbackUrl = "https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid";
+    const openApp = () => {
+      window.location.href = appUrl;
+    };
+    const redirectToStore = () => {
+      window.location.href = fallbackUrl;
+    };
+    const checkTimeout = setTimeout(redirectToStore, 2e3);
+    openApp();
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible") {
+        console.log("Syncthing is installed");
+        clearTimeout(checkTimeout);
+      }
+    });
+    return true;
+  }
+};
+
+// src/models/entities.ts
+var SyncthingConfiguration = class {
+  constructor(version, folders, devices, url) {
+    this.version = version;
+    this.folders = folders;
+    this.devices = devices;
+    this.url = url;
+  }
+};
+var SyncthingFolder = class {
+  constructor(id, label, path, filesystemType, type, devices, maxConflicts) {
+    this.id = id;
+    this.label = label;
+    this.path = path;
+    this.filesystemType = filesystemType;
+    this.type = type;
+    this.devices = devices;
+    this.maxConflicts = maxConflicts;
+  }
+};
+var SyncthingDevice = class {
+  constructor(deviceID, introducedBy, address, paused, ignoredFolders, name) {
+    this.deviceID = deviceID;
+    this.introducedBy = introducedBy;
+    this.address = address;
+    this.paused = paused;
+    this.ignoredFolders = ignoredFolders;
+    this.name = name;
+  }
+};
+var ReducedSyncthingDevice = class {
+  constructor(deviceID, introducedBy, encryptionPassword) {
+    this.deviceID = deviceID;
+    this.introducedBy = introducedBy;
+    this.encryptionPassword = encryptionPassword;
+  }
+};
+
+// src/models/models.ts
+var SyncthingConfigurationModel = class _SyncthingConfigurationModel extends SyncthingConfiguration {
+  constructor(version, folders, devices, url = {
+    protocol: "http",
+    ip_address: "localhost",
+    port: 8384
+  }) {
+    super(version, folders, devices, url);
+  }
+  /**
+   * The static method to parse a JSON string and return a model object.
+   * @param json - The JSON string to parse.
+   */
+  static fromJSON(json) {
+    const parsedJSON = JSON.parse(json);
+    const folders = [];
+    if (!(typeof parsedJSON === "object" && parsedJSON !== null))
+      throw new Error("JSON is not an object or is null");
+    logErrorIfNotValidJson(parsedJSON, "version", "string");
+    if (!("folders" in parsedJSON && Array.isArray(parsedJSON["folders"])) || !("devices" in parsedJSON && Array.isArray(parsedJSON["devices"])))
+      throw new Error("Error parsing JSON: missing fields or wrong type");
+    for (const parsedFolder of parsedJSON["folders"]) {
+      console.log(parsedFolder);
+      folders.push(
+        SyncthingFolderModel.fromJSON(JSON.stringify(parsedFolder))
+      );
+    }
+    const devices = [];
+    for (const parsedDevice of parsedJSON["devices"]) {
+      devices.push(
+        SyncthingDeviceModel.fromJSON(JSON.stringify(parsedDevice))
+      );
+    }
+    return new _SyncthingConfigurationModel(
+      parsedJSON["version"],
+      folders,
+      devices
+    );
+  }
+  /**
+   * The method to convert a model object to a JSON string.
+   */
+  toJSON() {
+    return JSON.stringify(this);
+  }
+};
+var SyncthingFolderModel = class _SyncthingFolderModel extends SyncthingFolder {
+  static fromJSON(json) {
+    const parsedJSON = JSON.parse(json);
+    const reducedDeviceInfos = [];
+    if (!(typeof parsedJSON === "object" && parsedJSON !== null))
+      throw new Error("JSON is not an object or is null");
+    logErrorIfNotValidJson(parsedJSON, "id", "string");
+    logErrorIfNotValidJson(parsedJSON, "label", "string");
+    logErrorIfNotValidJson(parsedJSON, "path", "string");
+    logErrorIfNotValidJson(parsedJSON, "filesystemType", "string");
+    logErrorIfNotValidJson(parsedJSON, "type", "string");
+    logErrorIfNotValidJson(parsedJSON, "maxConflicts", 0);
+    if (!("devices" in parsedJSON && Array.isArray(parsedJSON["devices"])))
+      throw new Error(
+        "Error validating JSON: devices is not present or is not an array"
+      );
+    for (const device of parsedJSON["devices"]) {
+      reducedDeviceInfos.push(
+        ReducedSyncthingDeviceModel.fromJSON(JSON.stringify(device))
+      );
+    }
+    return new _SyncthingFolderModel(
+      parsedJSON["id"],
+      parsedJSON["label"],
+      parsedJSON["path"],
+      parsedJSON["filesystemType"],
+      parsedJSON["type"],
+      // TODO: refactor this ^ w/ a type guard. See https://stackoverflow.com/a/51529486/20502385
+      reducedDeviceInfos,
+      parsedJSON["maxConflicts"]
+    );
+  }
+  toJSON() {
+    return JSON.stringify(this);
+  }
+};
+var SyncthingDeviceModel = class _SyncthingDeviceModel extends SyncthingDevice {
+  static fromJSON(json) {
+    var _a;
+    const parsedJSON = JSON.parse(json);
+    if (!(typeof parsedJSON === "object" && parsedJSON !== null))
+      throw new Error("JSON is not an object or is null");
+    logErrorIfNotValidJson(parsedJSON, "deviceID", "string");
+    logErrorIfNotValidJson(parsedJSON, "introducedBy", "string");
+    logErrorIfNotValidJson(parsedJSON, "paused", true);
+    if (!("addresses" in parsedJSON && isStringArray(parsedJSON["addresses"])) || !("ignoredFolders" in parsedJSON) || !("name" in parsedJSON && (typeof parsedJSON["name"] === "string" || typeof parsedJSON["name"] === "undefined")))
+      throw new Error("Error validating JSON");
+    return new _SyncthingDeviceModel(
+      parsedJSON["deviceID"],
+      parsedJSON["introducedBy"],
+      parsedJSON["addresses"],
+      parsedJSON["paused"],
+      parsedJSON["ignoredFolders"],
+      // TODO: refactor this.
+      (_a = parsedJSON["name"]) != null ? _a : ""
+    );
+  }
+  toJSON() {
+    return JSON.stringify(this);
+  }
+};
+var ReducedSyncthingDeviceModel = class _ReducedSyncthingDeviceModel extends ReducedSyncthingDevice {
+  static fromJSON(json) {
+    const parsedJSON = JSON.parse(json);
+    if (!(typeof parsedJSON === "object" && parsedJSON !== null))
+      throw new Error("Error parsing JSON");
+    logErrorIfNotValidJson(parsedJSON, "deviceID", "string");
+    logErrorIfNotValidJson(parsedJSON, "introducedBy", "string");
+    logErrorIfNotValidJson(parsedJSON, "encryptionPassword", "string");
+    return new _ReducedSyncthingDeviceModel(
+      parsedJSON["deviceID"],
+      parsedJSON["introducedBy"],
+      parsedJSON["encryptionPassword"]
+    );
+  }
+  toJSON() {
+    throw new Error("Method not implemented.");
+  }
+};
+
+// src/data/syncthing_local_datasource.ts
+var import_obsidian6 = require("obsidian");
+var SyncthingFromCLI = class {
+  /**
+   * Stop the Syncthing service using the CLI.
+   */
+  async stopSyncthing() {
+    const syncthingStop = "syncthing cli operations shutdown";
+    const response = this.runSyncthingCommand(syncthingStop);
+    if (response instanceof Error) {
+      throw new CliFailure(response.message);
+    }
+    return true;
+  }
+  /**
+   * Start the Syncthing service using the CLI.
+   */
+  async startSyncthing() {
+    const syncthingStart = "syncthing";
+    const response = await this.runSyncthingCommand(syncthingStart);
+    if (response instanceof Error) {
+      throw new CliFailure(response.message);
+    }
+    return true;
+  }
+  /**
+   * Get the version of Syncthing installation using the CLI.
+   * This is used to check if Syncthing is installed.
+   */
+  async getVersion() {
+    const syncthingVersion = "syncthing --version";
+    const response = await this.runSyncthingCommand(syncthingVersion);
+    if (response instanceof Error) {
+      throw new CliFailure(response.message);
+    }
+    return response;
+  }
+  /**
+   * Get the configuration of Syncthing installation using the CLI.
+   */
+  async getConfiguration() {
+    const commandToGetConfig = "syncthing cli config dump-json";
+    const response = await this.runSyncthingCommand(commandToGetConfig);
+    if (response instanceof Error) {
+      throw new CliFailure(response.message);
+    }
+    return SyncthingConfigurationModel.fromJSON(response);
+  }
+  /**
+   * Get the API key of Syncthing installation using the CLI.
+   */
+  async getAPIkey() {
+    const response = await this.runSyncthingCommand(
+      "syncthing cli config gui apikey get"
+    );
+    if (response instanceof Error) {
+      throw new CliFailure("No API key found.");
+    }
+    return response.trim();
+  }
+  async runSyncthingCommand(command) {
+    if (import_obsidian6.Platform.isMobileApp) {
+      return Error("CLI not supported on mobile.");
+    }
+    const { promisify } = require("util");
+    if (import_obsidian6.Platform.isMacOS && command.startsWith("syncthing")) {
+      const APP_REF = "/Applications/Syncthing.app/Contents/Resources/syncthing/";
+      const { stat } = require("fs");
+      const statPromise = promisify(stat);
+      const stats = await statPromise(APP_REF);
+      if (stats.isDirectory()) {
+        command = APP_REF + command;
+      }
+    }
+    const { exec } = require("child_process");
+    const execPromise = promisify(exec);
+    const result = await execPromise(command);
+    if (result.stderr) {
+      return Error(result.stderr);
+    }
+    return result.stdout;
+  }
+};
+
+// src/data/syncthing_remote_datasource.ts
+var import_obsidian7 = require("obsidian");
+var SyncthingFromREST = class {
+  constructor(plugin) {
+    this.plugin = plugin;
+  }
+  /**
+   * Ping the Syncthing installation using the REST API.
+   * This is used to check if Syncthing is installed.
+   */
+  async ping() {
+    const response = await this.requestEndpoint("/rest/system/ping");
+    console.log("REST - ping: ", response);
+    return response.json["ping"];
+  }
+  /**
+   * Get all the folders of Syncthing installation using the REST API.
+   * @see https://docs.syncthing.net/rest/config#rest-config-folders-rest-config-devices
+   */
+  async getAllFolders() {
+    const response = await this.requestEndpoint("/rest/config/folders");
+    const foldersModel = [];
+    console.log("REST: ", response.json);
+    for (const folder of response.json) {
+      console.log("REST: ", folder);
+      foldersModel.push(
+        SyncthingFolderModel.fromJSON(JSON.stringify(folder))
+      );
+    }
+    return foldersModel;
+  }
+  /**
+   * Get all the folders of Syncthing installation for a specific device using the REST API.
+   * @param device - The device to get the folders for.
+   */
+  async getFoldersForDevice(device) {
+    const folders = await this.getAllFolders();
+    return folders.filter(
+      (folder) => folder.devices.some(
+        (deviceInFolder) => deviceInFolder.deviceID === device.deviceID
+      )
+    );
+  }
+  /**
+   * Get all the devices of Syncthing installation using the REST API.
+   * @see https://docs.syncthing.net/rest/config#rest-config-folders-rest-config-devices
+   */
+  async getDevices() {
+    const response = await this.requestEndpoint("/rest/config/devices");
+    const devicesModel = [];
+    console.log("REST: ", response.json);
+    for (const device of response.json) {
+      devicesModel.push(
+        SyncthingDeviceModel.fromJSON(JSON.stringify(device))
+      );
+    }
+    return devicesModel;
+  }
+  /**
+   * Get the configuration of Syncthing installation using the REST API.
+   * @returns {SyncthingConfiguration} The configuration of Syncthing installation.
+   * @see https://docs.syncthing.net/rest/config.html
+   */
+  async getConfiguration() {
+    const response = await this.requestEndpoint("/rest/config");
+    return SyncthingConfigurationModel.fromJSON(response.json);
+  }
+  /**
+   * Private method to request an endpoint of the REST API.
+   * The endpoint should start with a `/`.
+   *
+   * @param endpoint - The REST endpoint to call. @see https://docs.syncthing.net/dev/rest.html
+   * @returns The response of the REST API.
+   */
+  async requestEndpoint(endpoint) {
+    var _a, _b, _c;
+    console.log("requestEndpoint: Endpoint", endpoint);
+    let ip_address = (_a = this.plugin.settings.configuration.url) == null ? void 0 : _a.ip_address;
+    if (ip_address === "localhost" && import_obsidian7.Platform.isMobileApp)
+      ip_address = "127.0.0.1";
+    const url = `${(_b = this.plugin.settings.configuration.url) == null ? void 0 : _b.protocol}://${ip_address}:${(_c = this.plugin.settings.configuration.url) == null ? void 0 : _c.port}${endpoint}`;
+    const response = (0, import_obsidian7.requestUrl)({
+      url,
+      method: "GET",
+      headers: {
+        "X-API-Key": this.plugin.settings.api_key,
+        Accept: "*/*",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        redirect: "follow"
+      }
+    });
+    console.log(
+      "requestEndpoint: API Key set ?",
+      this.plugin.settings.api_key !== ""
+    );
+    console.log("requestEndpoint: url requested ", url);
+    return response.then((response2) => {
+      console.log("requestEndpoint: response ", response2);
+      if (response2.status >= 400) {
+        throw new RestFailure(response2.text);
+      }
+      return response2;
+    }).catch((error) => {
+      console.error("requestEndpoint: error: ", error);
+      throw new RestFailure(error);
+    });
+  }
+};
+
+// src/views/conflicts_modal.ts
+var import_obsidian14 = require("obsidian");
+
+// node_modules/.pnpm/svelte@4.2.19/node_modules/svelte/src/runtime/internal/utils.js
+function noop() {
+}
+function assign(tar, src) {
+  for (const k in src) tar[k] = src[k];
+  return (
+    /** @type {T & S} */
+    tar
+  );
+}
+function is_promise(value) {
+  return !!value && (typeof value === "object" || typeof value === "function") && typeof /** @type {any} */
+  value.then === "function";
+}
+function add_location(element2, file16, line, column, char) {
+  element2.__svelte_meta = {
+    loc: { file: file16, line, column, char }
+  };
+}
+function run(fn) {
+  return fn();
+}
+function blank_object() {
+  return /* @__PURE__ */ Object.create(null);
+}
+function run_all(fns) {
+  fns.forEach(run);
+}
+function is_function(thing) {
+  return typeof thing === "function";
+}
+function safe_not_equal(a, b) {
+  return a != a ? b == b : a !== b || a && typeof a === "object" || typeof a === "function";
+}
+var src_url_equal_anchor;
+function src_url_equal(element_src, url) {
+  if (element_src === url) return true;
+  if (!src_url_equal_anchor) {
+    src_url_equal_anchor = document.createElement("a");
+  }
+  src_url_equal_anchor.href = url;
+  return element_src === src_url_equal_anchor.href;
+}
+function is_empty(obj) {
+  return Object.keys(obj).length === 0;
+}
+function validate_store(store, name) {
+  if (store != null && typeof store.subscribe !== "function") {
+    throw new Error(`'${name}' is not a store with a 'subscribe' method`);
+  }
+}
+function subscribe(store, ...callbacks) {
+  if (store == null) {
+    for (const callback of callbacks) {
+      callback(void 0);
+    }
+    return noop;
+  }
+  const unsub = store.subscribe(...callbacks);
+  return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
+}
+function component_subscribe(component, store, callback) {
+  component.$$.on_destroy.push(subscribe(store, callback));
+}
+function create_slot(definition, ctx, $$scope, fn) {
+  if (definition) {
+    const slot_ctx = get_slot_context(definition, ctx, $$scope, fn);
+    return definition[0](slot_ctx);
+  }
+}
+function get_slot_context(definition, ctx, $$scope, fn) {
+  return definition[1] && fn ? assign($$scope.ctx.slice(), definition[1](fn(ctx))) : $$scope.ctx;
+}
+function get_slot_changes(definition, $$scope, dirty, fn) {
+  if (definition[2] && fn) {
+    const lets = definition[2](fn(dirty));
+    if ($$scope.dirty === void 0) {
+      return lets;
+    }
+    if (typeof lets === "object") {
+      const merged = [];
+      const len = Math.max($$scope.dirty.length, lets.length);
+      for (let i = 0; i < len; i += 1) {
+        merged[i] = $$scope.dirty[i] | lets[i];
+      }
+      return merged;
+    }
+    return $$scope.dirty | lets;
+  }
+  return $$scope.dirty;
+}
+function update_slot_base(slot, slot_definition, ctx, $$scope, slot_changes, get_slot_context_fn) {
+  if (slot_changes) {
+    const slot_context = get_slot_context(slot_definition, ctx, $$scope, get_slot_context_fn);
+    slot.p(slot_context, slot_changes);
+  }
+}
+function get_all_dirty_from_scope($$scope) {
+  if ($$scope.ctx.length > 32) {
+    const dirty = [];
+    const length = $$scope.ctx.length / 32;
+    for (let i = 0; i < length; i++) {
+      dirty[i] = -1;
+    }
+    return dirty;
+  }
+  return -1;
+}
+function exclude_internal_props(props) {
+  const result = {};
+  for (const k in props) if (k[0] !== "$") result[k] = props[k];
+  return result;
+}
+function compute_rest_props(props, keys) {
+  const rest = {};
+  keys = new Set(keys);
+  for (const k in props) if (!keys.has(k) && k[0] !== "$") rest[k] = props[k];
+  return rest;
+}
+
+// node_modules/.pnpm/svelte@4.2.19/node_modules/svelte/src/runtime/internal/globals.js
+var globals = typeof window !== "undefined" ? window : typeof globalThis !== "undefined" ? globalThis : (
+  // @ts-ignore Node typings have this
+  global
+);
+
+// node_modules/.pnpm/svelte@4.2.19/node_modules/svelte/src/runtime/internal/ResizeObserverSingleton.js
+var ResizeObserverSingleton = class _ResizeObserverSingleton {
+  /** @param {ResizeObserverOptions} options */
+  constructor(options2) {
+    /**
+     * @private
+     * @readonly
+     * @type {WeakMap<Element, import('./private.js').Listener>}
+     */
+    __publicField(this, "_listeners", "WeakMap" in globals ? /* @__PURE__ */ new WeakMap() : void 0);
+    /**
+     * @private
+     * @type {ResizeObserver}
+     */
+    __publicField(this, "_observer");
+    /** @type {ResizeObserverOptions} */
+    __publicField(this, "options");
+    this.options = options2;
+  }
+  /**
+   * @param {Element} element
+   * @param {import('./private.js').Listener} listener
+   * @returns {() => void}
+   */
+  observe(element2, listener) {
+    this._listeners.set(element2, listener);
+    this._getObserver().observe(element2, this.options);
+    return () => {
+      this._listeners.delete(element2);
+      this._observer.unobserve(element2);
+    };
+  }
+  /**
+   * @private
+   */
+  _getObserver() {
+    var _a;
+    return (_a = this._observer) != null ? _a : this._observer = new ResizeObserver((entries) => {
+      var _a2;
+      for (const entry of entries) {
+        _ResizeObserverSingleton.entries.set(entry.target, entry);
+        (_a2 = this._listeners.get(entry.target)) == null ? void 0 : _a2(entry);
+      }
+    });
+  }
+};
+ResizeObserverSingleton.entries = "WeakMap" in globals ? /* @__PURE__ */ new WeakMap() : void 0;
+
+// node_modules/.pnpm/svelte@4.2.19/node_modules/svelte/src/runtime/internal/dom.js
+var is_hydrating = false;
+function start_hydrating() {
+  is_hydrating = true;
+}
+function end_hydrating() {
+  is_hydrating = false;
+}
+function append(target, node) {
+  target.appendChild(node);
+}
+function append_styles(target, style_sheet_id, styles) {
+  const append_styles_to = get_root_for_style(target);
+  if (!append_styles_to.getElementById(style_sheet_id)) {
+    const style = element("style");
+    style.id = style_sheet_id;
+    style.textContent = styles;
+    append_stylesheet(append_styles_to, style);
+  }
+}
+function get_root_for_style(node) {
+  if (!node) return document;
+  const root = node.getRootNode ? node.getRootNode() : node.ownerDocument;
+  if (root && /** @type {ShadowRoot} */
+  root.host) {
+    return (
+      /** @type {ShadowRoot} */
+      root
+    );
+  }
+  return node.ownerDocument;
+}
+function append_stylesheet(node, style) {
+  append(
+    /** @type {Document} */
+    node.head || node,
+    style
+  );
+  return style.sheet;
+}
+function insert(target, node, anchor) {
+  target.insertBefore(node, anchor || null);
+}
+function detach(node) {
+  if (node.parentNode) {
+    node.parentNode.removeChild(node);
+  }
+}
+function destroy_each(iterations, detaching) {
+  for (let i = 0; i < iterations.length; i += 1) {
+    if (iterations[i]) iterations[i].d(detaching);
+  }
+}
+function element(name) {
+  return document.createElement(name);
+}
+function svg_element(name) {
+  return document.createElementNS("http://www.w3.org/2000/svg", name);
+}
+function text(data) {
+  return document.createTextNode(data);
+}
+function space() {
+  return text(" ");
+}
+function empty() {
+  return text("");
+}
+function listen(node, event, handler, options2) {
+  node.addEventListener(event, handler, options2);
+  return () => node.removeEventListener(event, handler, options2);
+}
+function attr(node, attribute, value) {
+  if (value == null) node.removeAttribute(attribute);
+  else if (node.getAttribute(attribute) !== value) node.setAttribute(attribute, value);
+}
+var always_set_through_set_attribute = ["width", "height"];
+function set_attributes(node, attributes) {
+  const descriptors = Object.getOwnPropertyDescriptors(node.__proto__);
+  for (const key in attributes) {
+    if (attributes[key] == null) {
+      node.removeAttribute(key);
+    } else if (key === "style") {
+      node.style.cssText = attributes[key];
+    } else if (key === "__value") {
+      node.value = node[key] = attributes[key];
+    } else if (descriptors[key] && descriptors[key].set && always_set_through_set_attribute.indexOf(key) === -1) {
+      node[key] = attributes[key];
+    } else {
+      attr(node, key, attributes[key]);
+    }
+  }
+}
+function children(element2) {
+  return Array.from(element2.childNodes);
+}
+function set_input_value(input, value) {
+  input.value = value == null ? "" : value;
+}
+function set_style(node, key, value, important) {
+  if (value == null) {
+    node.style.removeProperty(key);
+  } else {
+    node.style.setProperty(key, value, important ? "important" : "");
+  }
+}
+function select_option(select, value, mounting) {
+  for (let i = 0; i < select.options.length; i += 1) {
+    const option = select.options[i];
+    if (option.__value === value) {
+      option.selected = true;
+      return;
+    }
+  }
+  if (!mounting || value !== void 0) {
+    select.selectedIndex = -1;
+  }
+}
+function toggle_class(element2, name, toggle) {
+  element2.classList.toggle(name, !!toggle);
+}
+function custom_event(type, detail, { bubbles = false, cancelable = false } = {}) {
+  return new CustomEvent(type, { detail, bubbles, cancelable });
+}
+var HtmlTag = class {
+  constructor(is_svg = false) {
+    /**
+     * @private
+     * @default false
+     */
+    __publicField(this, "is_svg", false);
+    /** parent for creating node */
+    __publicField(this, "e");
+    /** html tag nodes */
+    __publicField(this, "n");
+    /** target */
+    __publicField(this, "t");
+    /** anchor */
+    __publicField(this, "a");
+    this.is_svg = is_svg;
+    this.e = this.n = null;
+  }
+  /**
+   * @param {string} html
+   * @returns {void}
+   */
+  c(html2) {
+    this.h(html2);
+  }
+  /**
+   * @param {string} html
+   * @param {HTMLElement | SVGElement} target
+   * @param {HTMLElement | SVGElement} anchor
+   * @returns {void}
+   */
+  m(html2, target, anchor = null) {
+    if (!this.e) {
+      if (this.is_svg)
+        this.e = svg_element(
+          /** @type {keyof SVGElementTagNameMap} */
+          target.nodeName
+        );
+      else
+        this.e = element(
+          /** @type {keyof HTMLElementTagNameMap} */
+          target.nodeType === 11 ? "TEMPLATE" : target.nodeName
+        );
+      this.t = target.tagName !== "TEMPLATE" ? target : (
+        /** @type {HTMLTemplateElement} */
+        target.content
+      );
+      this.c(html2);
+    }
+    this.i(anchor);
+  }
+  /**
+   * @param {string} html
+   * @returns {void}
+   */
+  h(html2) {
+    this.e.innerHTML = html2;
+    this.n = Array.from(
+      this.e.nodeName === "TEMPLATE" ? this.e.content.childNodes : this.e.childNodes
+    );
+  }
+  /**
+   * @returns {void} */
+  i(anchor) {
+    for (let i = 0; i < this.n.length; i += 1) {
+      insert(this.t, this.n[i], anchor);
+    }
+  }
+  /**
+   * @param {string} html
+   * @returns {void}
+   */
+  p(html2) {
+    this.d();
+    this.h(html2);
+    this.i(this.a);
+  }
+  /**
+   * @returns {void} */
+  d() {
+    this.n.forEach(detach);
+  }
+};
+function get_custom_elements_slots(element2) {
+  const result = {};
+  element2.childNodes.forEach(
+    /** @param {Element} node */
+    (node) => {
+      result[node.slot || "default"] = true;
+    }
+  );
+  return result;
+}
+
+// node_modules/.pnpm/svelte@4.2.19/node_modules/svelte/src/runtime/internal/lifecycle.js
+var current_component;
+function set_current_component(component) {
+  current_component = component;
+}
+function get_current_component() {
+  if (!current_component) throw new Error("Function called outside component initialization");
+  return current_component;
+}
+function onMount(fn) {
+  get_current_component().$$.on_mount.push(fn);
+}
+function createEventDispatcher() {
+  const component = get_current_component();
+  return (type, detail, { cancelable = false } = {}) => {
+    const callbacks = component.$$.callbacks[type];
+    if (callbacks) {
+      const event = custom_event(
+        /** @type {string} */
+        type,
+        detail,
+        { cancelable }
+      );
+      callbacks.slice().forEach((fn) => {
+        fn.call(component, event);
+      });
+      return !event.defaultPrevented;
+    }
+    return true;
+  };
+}
+
+// node_modules/.pnpm/svelte@4.2.19/node_modules/svelte/src/runtime/internal/scheduler.js
+var dirty_components = [];
+var binding_callbacks = [];
+var render_callbacks = [];
+var flush_callbacks = [];
+var resolved_promise = /* @__PURE__ */ Promise.resolve();
+var update_scheduled = false;
+function schedule_update() {
+  if (!update_scheduled) {
+    update_scheduled = true;
+    resolved_promise.then(flush);
+  }
+}
+function add_render_callback(fn) {
+  render_callbacks.push(fn);
+}
+var seen_callbacks = /* @__PURE__ */ new Set();
+var flushidx = 0;
+function flush() {
+  if (flushidx !== 0) {
+    return;
+  }
+  const saved_component = current_component;
+  do {
+    try {
+      while (flushidx < dirty_components.length) {
+        const component = dirty_components[flushidx];
+        flushidx++;
+        set_current_component(component);
+        update(component.$$);
+      }
+    } catch (e) {
+      dirty_components.length = 0;
+      flushidx = 0;
+      throw e;
+    }
+    set_current_component(null);
+    dirty_components.length = 0;
+    flushidx = 0;
+    while (binding_callbacks.length) binding_callbacks.pop()();
+    for (let i = 0; i < render_callbacks.length; i += 1) {
+      const callback = render_callbacks[i];
+      if (!seen_callbacks.has(callback)) {
+        seen_callbacks.add(callback);
+        callback();
+      }
+    }
+    render_callbacks.length = 0;
+  } while (dirty_components.length);
+  while (flush_callbacks.length) {
+    flush_callbacks.pop()();
+  }
+  update_scheduled = false;
+  seen_callbacks.clear();
+  set_current_component(saved_component);
+}
+function update($$) {
+  if ($$.fragment !== null) {
+    $$.update();
+    run_all($$.before_update);
+    const dirty = $$.dirty;
+    $$.dirty = [-1];
+    $$.fragment && $$.fragment.p($$.ctx, dirty);
+    $$.after_update.forEach(add_render_callback);
+  }
+}
+function flush_render_callbacks(fns) {
+  const filtered = [];
+  const targets = [];
+  render_callbacks.forEach((c) => fns.indexOf(c) === -1 ? filtered.push(c) : targets.push(c));
+  targets.forEach((c) => c());
+  render_callbacks = filtered;
+}
+
+// node_modules/.pnpm/svelte@4.2.19/node_modules/svelte/src/runtime/internal/transitions.js
+var outroing = /* @__PURE__ */ new Set();
+var outros;
+function group_outros() {
+  outros = {
+    r: 0,
+    c: [],
+    p: outros
+    // parent group
+  };
+}
+function check_outros() {
+  if (!outros.r) {
+    run_all(outros.c);
+  }
+  outros = outros.p;
+}
+function transition_in(block2, local) {
+  if (block2 && block2.i) {
+    outroing.delete(block2);
+    block2.i(local);
+  }
+}
+function transition_out(block2, local, detach2, callback) {
+  if (block2 && block2.o) {
+    if (outroing.has(block2)) return;
+    outroing.add(block2);
+    outros.c.push(() => {
+      outroing.delete(block2);
+      if (callback) {
+        if (detach2) block2.d(1);
+        callback();
+      }
+    });
+    block2.o(local);
+  } else if (callback) {
+    callback();
+  }
+}
+
+// node_modules/.pnpm/svelte@4.2.19/node_modules/svelte/src/runtime/internal/await_block.js
+function handle_promise(promise, info) {
+  const token = info.token = {};
+  function update2(type, index, key, value) {
+    if (info.token !== token) return;
+    info.resolved = value;
+    let child_ctx = info.ctx;
+    if (key !== void 0) {
+      child_ctx = child_ctx.slice();
+      child_ctx[key] = value;
+    }
+    const block2 = type && (info.current = type)(child_ctx);
+    let needs_flush = false;
+    if (info.block) {
+      if (info.blocks) {
+        info.blocks.forEach((block3, i) => {
+          if (i !== index && block3) {
+            group_outros();
+            transition_out(block3, 1, 1, () => {
+              if (info.blocks[i] === block3) {
+                info.blocks[i] = null;
+              }
+            });
+            check_outros();
+          }
+        });
+      } else {
+        info.block.d(1);
+      }
+      block2.c();
+      transition_in(block2, 1);
+      block2.m(info.mount(), info.anchor);
+      needs_flush = true;
+    }
+    info.block = block2;
+    if (info.blocks) info.blocks[index] = block2;
+    if (needs_flush) {
+      flush();
+    }
+  }
+  if (is_promise(promise)) {
+    const current_component2 = get_current_component();
+    promise.then(
+      (value) => {
+        set_current_component(current_component2);
+        update2(info.then, 1, info.value, value);
+        set_current_component(null);
+      },
+      (error) => {
+        set_current_component(current_component2);
+        update2(info.catch, 2, info.error, error);
+        set_current_component(null);
+        if (!info.hasCatch) {
+          throw error;
+        }
+      }
+    );
+    if (info.current !== info.pending) {
+      update2(info.pending, 0);
+      return true;
+    }
+  } else {
+    if (info.current !== info.then) {
+      update2(info.then, 1, info.value, promise);
+      return true;
+    }
+    info.resolved = /** @type {T} */
+    promise;
+  }
+}
+function update_await_block_branch(info, ctx, dirty) {
+  const child_ctx = ctx.slice();
+  const { resolved } = info;
+  if (info.current === info.then) {
+    child_ctx[info.value] = resolved;
+  }
+  if (info.current === info.catch) {
+    child_ctx[info.error] = resolved;
+  }
+  info.block.p(child_ctx, dirty);
+}
+
+// node_modules/.pnpm/svelte@4.2.19/node_modules/svelte/src/runtime/internal/each.js
+function ensure_array_like(array_like_or_iterator) {
+  return (array_like_or_iterator == null ? void 0 : array_like_or_iterator.length) !== void 0 ? array_like_or_iterator : Array.from(array_like_or_iterator);
+}
+function outro_and_destroy_block(block2, lookup) {
+  transition_out(block2, 1, 1, () => {
+    lookup.delete(block2.key);
+  });
+}
+function update_keyed_each(old_blocks, dirty, get_key, dynamic, ctx, list2, lookup, node, destroy, create_each_block6, next, get_context) {
+  let o = old_blocks.length;
+  let n = list2.length;
+  let i = o;
+  const old_indexes = {};
+  while (i--) old_indexes[old_blocks[i].key] = i;
+  const new_blocks = [];
+  const new_lookup = /* @__PURE__ */ new Map();
+  const deltas = /* @__PURE__ */ new Map();
+  const updates = [];
+  i = n;
+  while (i--) {
+    const child_ctx = get_context(ctx, list2, i);
+    const key = get_key(child_ctx);
+    let block2 = lookup.get(key);
+    if (!block2) {
+      block2 = create_each_block6(key, child_ctx);
+      block2.c();
+    } else if (dynamic) {
+      updates.push(() => block2.p(child_ctx, dirty));
+    }
+    new_lookup.set(key, new_blocks[i] = block2);
+    if (key in old_indexes) deltas.set(key, Math.abs(i - old_indexes[key]));
+  }
+  const will_move = /* @__PURE__ */ new Set();
+  const did_move = /* @__PURE__ */ new Set();
+  function insert2(block2) {
+    transition_in(block2, 1);
+    block2.m(node, next);
+    lookup.set(block2.key, block2);
+    next = block2.first;
+    n--;
+  }
+  while (o && n) {
+    const new_block = new_blocks[n - 1];
+    const old_block = old_blocks[o - 1];
+    const new_key = new_block.key;
+    const old_key = old_block.key;
+    if (new_block === old_block) {
+      next = new_block.first;
+      o--;
+      n--;
+    } else if (!new_lookup.has(old_key)) {
+      destroy(old_block, lookup);
+      o--;
+    } else if (!lookup.has(new_key) || will_move.has(new_key)) {
+      insert2(new_block);
+    } else if (did_move.has(old_key)) {
+      o--;
+    } else if (deltas.get(new_key) > deltas.get(old_key)) {
+      did_move.add(new_key);
+      insert2(new_block);
+    } else {
+      will_move.add(old_key);
+      o--;
+    }
+  }
+  while (o--) {
+    const old_block = old_blocks[o];
+    if (!new_lookup.has(old_block.key)) destroy(old_block, lookup);
+  }
+  while (n) insert2(new_blocks[n - 1]);
+  run_all(updates);
+  return new_blocks;
+}
+function validate_each_keys(ctx, list2, get_context, get_key) {
+  const keys = /* @__PURE__ */ new Map();
+  for (let i = 0; i < list2.length; i++) {
+    const key = get_key(get_context(ctx, list2, i));
+    if (keys.has(key)) {
+      let value = "";
+      try {
+        value = `with value '${String(key)}' `;
+      } catch (e) {
+      }
+      throw new Error(
+        `Cannot have duplicate keys in a keyed each: Keys at index ${keys.get(
+          key
+        )} and ${i} ${value}are duplicates`
+      );
+    }
+    keys.set(key, i);
+  }
+}
+
+// node_modules/.pnpm/svelte@4.2.19/node_modules/svelte/src/runtime/internal/spread.js
+function get_spread_update(levels, updates) {
+  const update2 = {};
+  const to_null_out = {};
+  const accounted_for = { $$scope: 1 };
+  let i = levels.length;
+  while (i--) {
+    const o = levels[i];
+    const n = updates[i];
+    if (n) {
+      for (const key in o) {
+        if (!(key in n)) to_null_out[key] = 1;
+      }
+      for (const key in n) {
+        if (!accounted_for[key]) {
+          update2[key] = n[key];
+          accounted_for[key] = 1;
+        }
+      }
+      levels[i] = n;
+    } else {
+      for (const key in o) {
+        accounted_for[key] = 1;
+      }
+    }
+  }
+  for (const key in to_null_out) {
+    if (!(key in update2)) update2[key] = void 0;
+  }
+  return update2;
+}
+
+// node_modules/.pnpm/svelte@4.2.19/node_modules/svelte/src/shared/boolean_attributes.js
+var _boolean_attributes = (
+  /** @type {const} */
+  [
+    "allowfullscreen",
+    "allowpaymentrequest",
+    "async",
+    "autofocus",
+    "autoplay",
+    "checked",
+    "controls",
+    "default",
+    "defer",
+    "disabled",
+    "formnovalidate",
+    "hidden",
+    "inert",
+    "ismap",
+    "loop",
+    "multiple",
+    "muted",
+    "nomodule",
+    "novalidate",
+    "open",
+    "playsinline",
+    "readonly",
+    "required",
+    "reversed",
+    "selected"
+  ]
+);
+var boolean_attributes = /* @__PURE__ */ new Set([..._boolean_attributes]);
+
+// node_modules/.pnpm/svelte@4.2.19/node_modules/svelte/src/runtime/internal/Component.js
+function create_component(block2) {
+  block2 && block2.c();
+}
+function mount_component(component, target, anchor) {
+  const { fragment, after_update } = component.$$;
+  fragment && fragment.m(target, anchor);
+  add_render_callback(() => {
+    const new_on_destroy = component.$$.on_mount.map(run).filter(is_function);
+    if (component.$$.on_destroy) {
+      component.$$.on_destroy.push(...new_on_destroy);
+    } else {
+      run_all(new_on_destroy);
+    }
+    component.$$.on_mount = [];
+  });
+  after_update.forEach(add_render_callback);
+}
+function destroy_component(component, detaching) {
+  const $$ = component.$$;
+  if ($$.fragment !== null) {
+    flush_render_callbacks($$.after_update);
+    run_all($$.on_destroy);
+    $$.fragment && $$.fragment.d(detaching);
+    $$.on_destroy = $$.fragment = null;
+    $$.ctx = [];
+  }
+}
+function make_dirty(component, i) {
+  if (component.$$.dirty[0] === -1) {
+    dirty_components.push(component);
+    schedule_update();
+    component.$$.dirty.fill(0);
+  }
+  component.$$.dirty[i / 31 | 0] |= 1 << i % 31;
+}
+function init(component, options2, instance19, create_fragment19, not_equal, props, append_styles2 = null, dirty = [-1]) {
+  const parent_component = current_component;
+  set_current_component(component);
+  const $$ = component.$$ = {
+    fragment: null,
+    ctx: [],
+    // state
+    props,
+    update: noop,
+    not_equal,
+    bound: blank_object(),
+    // lifecycle
+    on_mount: [],
+    on_destroy: [],
+    on_disconnect: [],
+    before_update: [],
+    after_update: [],
+    context: new Map(options2.context || (parent_component ? parent_component.$$.context : [])),
+    // everything else
+    callbacks: blank_object(),
+    dirty,
+    skip_bound: false,
+    root: options2.target || parent_component.$$.root
+  };
+  append_styles2 && append_styles2($$.root);
+  let ready = false;
+  $$.ctx = instance19 ? instance19(component, options2.props || {}, (i, ret, ...rest) => {
+    const value = rest.length ? rest[0] : ret;
+    if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
+      if (!$$.skip_bound && $$.bound[i]) $$.bound[i](value);
+      if (ready) make_dirty(component, i);
+    }
+    return ret;
+  }) : [];
+  $$.update();
+  ready = true;
+  run_all($$.before_update);
+  $$.fragment = create_fragment19 ? create_fragment19($$.ctx) : false;
+  if (options2.target) {
+    if (options2.hydrate) {
+      start_hydrating();
+      const nodes = children(options2.target);
+      $$.fragment && $$.fragment.l(nodes);
+      nodes.forEach(detach);
+    } else {
+      $$.fragment && $$.fragment.c();
+    }
+    if (options2.intro) transition_in(component.$$.fragment);
+    mount_component(component, options2.target, options2.anchor);
+    end_hydrating();
+    flush();
+  }
+  set_current_component(parent_component);
+}
+var SvelteElement;
+if (typeof HTMLElement === "function") {
+  SvelteElement = class extends HTMLElement {
+    constructor($$componentCtor, $$slots, use_shadow_dom) {
+      super();
+      /** The Svelte component constructor */
+      __publicField(this, "$$ctor");
+      /** Slots */
+      __publicField(this, "$$s");
+      /** The Svelte component instance */
+      __publicField(this, "$$c");
+      /** Whether or not the custom element is connected */
+      __publicField(this, "$$cn", false);
+      /** Component props data */
+      __publicField(this, "$$d", {});
+      /** `true` if currently in the process of reflecting component props back to attributes */
+      __publicField(this, "$$r", false);
+      /** @type {Record<string, CustomElementPropDefinition>} Props definition (name, reflected, type etc) */
+      __publicField(this, "$$p_d", {});
+      /** @type {Record<string, Function[]>} Event listeners */
+      __publicField(this, "$$l", {});
+      /** @type {Map<Function, Function>} Event listener unsubscribe functions */
+      __publicField(this, "$$l_u", /* @__PURE__ */ new Map());
+      this.$$ctor = $$componentCtor;
+      this.$$s = $$slots;
+      if (use_shadow_dom) {
+        this.attachShadow({ mode: "open" });
+      }
+    }
+    addEventListener(type, listener, options2) {
+      this.$$l[type] = this.$$l[type] || [];
+      this.$$l[type].push(listener);
+      if (this.$$c) {
+        const unsub = this.$$c.$on(type, listener);
+        this.$$l_u.set(listener, unsub);
+      }
+      super.addEventListener(type, listener, options2);
+    }
+    removeEventListener(type, listener, options2) {
+      super.removeEventListener(type, listener, options2);
+      if (this.$$c) {
+        const unsub = this.$$l_u.get(listener);
+        if (unsub) {
+          unsub();
+          this.$$l_u.delete(listener);
+        }
+      }
+    }
+    async connectedCallback() {
+      this.$$cn = true;
+      if (!this.$$c) {
+        let create_slot2 = function(name) {
+          return () => {
+            let node;
+            const obj = {
+              c: function create() {
+                node = element("slot");
+                if (name !== "default") {
+                  attr(node, "name", name);
+                }
+              },
+              /**
+               * @param {HTMLElement} target
+               * @param {HTMLElement} [anchor]
+               */
+              m: function mount(target, anchor) {
+                insert(target, node, anchor);
+              },
+              d: function destroy(detaching) {
+                if (detaching) {
+                  detach(node);
+                }
+              }
+            };
+            return obj;
+          };
+        };
+        await Promise.resolve();
+        if (!this.$$cn || this.$$c) {
+          return;
+        }
+        const $$slots = {};
+        const existing_slots = get_custom_elements_slots(this);
+        for (const name of this.$$s) {
+          if (name in existing_slots) {
+            $$slots[name] = [create_slot2(name)];
+          }
+        }
+        for (const attribute of this.attributes) {
+          const name = this.$$g_p(attribute.name);
+          if (!(name in this.$$d)) {
+            this.$$d[name] = get_custom_element_value(name, attribute.value, this.$$p_d, "toProp");
+          }
+        }
+        for (const key in this.$$p_d) {
+          if (!(key in this.$$d) && this[key] !== void 0) {
+            this.$$d[key] = this[key];
+            delete this[key];
+          }
+        }
+        this.$$c = new this.$$ctor({
+          target: this.shadowRoot || this,
+          props: {
+            ...this.$$d,
+            $$slots,
+            $$scope: {
+              ctx: []
+            }
+          }
+        });
+        const reflect_attributes = () => {
+          this.$$r = true;
+          for (const key in this.$$p_d) {
+            this.$$d[key] = this.$$c.$$.ctx[this.$$c.$$.props[key]];
+            if (this.$$p_d[key].reflect) {
+              const attribute_value = get_custom_element_value(
+                key,
+                this.$$d[key],
+                this.$$p_d,
+                "toAttribute"
+              );
+              if (attribute_value == null) {
+                this.removeAttribute(this.$$p_d[key].attribute || key);
+              } else {
+                this.setAttribute(this.$$p_d[key].attribute || key, attribute_value);
+              }
+            }
+          }
+          this.$$r = false;
+        };
+        this.$$c.$$.after_update.push(reflect_attributes);
+        reflect_attributes();
+        for (const type in this.$$l) {
+          for (const listener of this.$$l[type]) {
+            const unsub = this.$$c.$on(type, listener);
+            this.$$l_u.set(listener, unsub);
+          }
+        }
+        this.$$l = {};
+      }
+    }
+    // We don't need this when working within Svelte code, but for compatibility of people using this outside of Svelte
+    // and setting attributes through setAttribute etc, this is helpful
+    attributeChangedCallback(attr2, _oldValue, newValue) {
+      var _a;
+      if (this.$$r) return;
+      attr2 = this.$$g_p(attr2);
+      this.$$d[attr2] = get_custom_element_value(attr2, newValue, this.$$p_d, "toProp");
+      (_a = this.$$c) == null ? void 0 : _a.$set({ [attr2]: this.$$d[attr2] });
+    }
+    disconnectedCallback() {
+      this.$$cn = false;
+      Promise.resolve().then(() => {
+        if (!this.$$cn && this.$$c) {
+          this.$$c.$destroy();
+          this.$$c = void 0;
+        }
+      });
+    }
+    $$g_p(attribute_name) {
+      return Object.keys(this.$$p_d).find(
+        (key) => this.$$p_d[key].attribute === attribute_name || !this.$$p_d[key].attribute && key.toLowerCase() === attribute_name
+      ) || attribute_name;
+    }
+  };
+}
+function get_custom_element_value(prop, value, props_definition, transform) {
+  var _a;
+  const type = (_a = props_definition[prop]) == null ? void 0 : _a.type;
+  value = type === "Boolean" && typeof value !== "boolean" ? value != null : value;
+  if (!transform || !props_definition[prop]) {
+    return value;
+  } else if (transform === "toAttribute") {
+    switch (type) {
+      case "Object":
+      case "Array":
+        return value == null ? null : JSON.stringify(value);
+      case "Boolean":
+        return value ? "" : null;
+      case "Number":
+        return value == null ? null : value;
+      default:
+        return value;
+    }
+  } else {
+    switch (type) {
+      case "Object":
+      case "Array":
+        return value && JSON.parse(value);
+      case "Boolean":
+        return value;
+      // conversion already handled above
+      case "Number":
+        return value != null ? +value : value;
+      default:
+        return value;
+    }
+  }
+}
+var SvelteComponent = class {
+  constructor() {
+    /**
+     * ### PRIVATE API
+     *
+     * Do not use, may change at any time
+     *
+     * @type {any}
+     */
+    __publicField(this, "$$");
+    /**
+     * ### PRIVATE API
+     *
+     * Do not use, may change at any time
+     *
+     * @type {any}
+     */
+    __publicField(this, "$$set");
+  }
+  /** @returns {void} */
+  $destroy() {
+    destroy_component(this, 1);
+    this.$destroy = noop;
+  }
+  /**
+   * @template {Extract<keyof Events, string>} K
+   * @param {K} type
+   * @param {((e: Events[K]) => void) | null | undefined} callback
+   * @returns {() => void}
+   */
+  $on(type, callback) {
+    if (!is_function(callback)) {
+      return noop;
+    }
+    const callbacks = this.$$.callbacks[type] || (this.$$.callbacks[type] = []);
+    callbacks.push(callback);
+    return () => {
+      const index = callbacks.indexOf(callback);
+      if (index !== -1) callbacks.splice(index, 1);
+    };
+  }
+  /**
+   * @param {Partial<Props>} props
+   * @returns {void}
+   */
+  $set(props) {
+    if (this.$$set && !is_empty(props)) {
+      this.$$.skip_bound = true;
+      this.$$set(props);
+      this.$$.skip_bound = false;
+    }
+  }
+};
+
+// node_modules/.pnpm/svelte@4.2.19/node_modules/svelte/src/shared/version.js
+var VERSION = "4.2.19";
+var PUBLIC_VERSION = "4";
+
+// node_modules/.pnpm/svelte@4.2.19/node_modules/svelte/src/runtime/internal/dev.js
+function dispatch_dev(type, detail) {
+  document.dispatchEvent(custom_event(type, { version: VERSION, ...detail }, { bubbles: true }));
+}
+function append_dev(target, node) {
+  dispatch_dev("SvelteDOMInsert", { target, node });
+  append(target, node);
+}
+function insert_dev(target, node, anchor) {
+  dispatch_dev("SvelteDOMInsert", { target, node, anchor });
+  insert(target, node, anchor);
+}
+function detach_dev(node) {
+  dispatch_dev("SvelteDOMRemove", { node });
+  detach(node);
+}
+function listen_dev(node, event, handler, options2, has_prevent_default, has_stop_propagation, has_stop_immediate_propagation) {
+  const modifiers = options2 === true ? ["capture"] : options2 ? Array.from(Object.keys(options2)) : [];
+  if (has_prevent_default) modifiers.push("preventDefault");
+  if (has_stop_propagation) modifiers.push("stopPropagation");
+  if (has_stop_immediate_propagation) modifiers.push("stopImmediatePropagation");
+  dispatch_dev("SvelteDOMAddEventListener", { node, event, handler, modifiers });
+  const dispose = listen(node, event, handler, options2);
+  return () => {
+    dispatch_dev("SvelteDOMRemoveEventListener", { node, event, handler, modifiers });
+    dispose();
+  };
+}
+function attr_dev(node, attribute, value) {
+  attr(node, attribute, value);
+  if (value == null) dispatch_dev("SvelteDOMRemoveAttribute", { node, attribute });
+  else dispatch_dev("SvelteDOMSetAttribute", { node, attribute, value });
+}
+function prop_dev(node, property, value) {
+  node[property] = value;
+  dispatch_dev("SvelteDOMSetProperty", { node, property, value });
+}
+function set_data_dev(text2, data) {
+  data = "" + data;
+  if (text2.data === data) return;
+  dispatch_dev("SvelteDOMSetData", { node: text2, data });
+  text2.data = /** @type {string} */
+  data;
+}
+function ensure_array_like_dev(arg) {
+  if (typeof arg !== "string" && !(arg && typeof arg === "object" && "length" in arg) && !(typeof Symbol === "function" && arg && Symbol.iterator in arg)) {
+    throw new Error("{#each} only works with iterable values.");
+  }
+  return ensure_array_like(arg);
+}
+function validate_slots(name, slot, keys) {
+  for (const slot_key of Object.keys(slot)) {
+    if (!~keys.indexOf(slot_key)) {
+      console.warn(`<${name}> received an unexpected slot "${slot_key}".`);
+    }
+  }
+}
+var SvelteComponentDev = class extends SvelteComponent {
+  /** @param {import('./public.js').ComponentConstructorOptions<Props>} options */
+  constructor(options2) {
+    if (!options2 || !options2.target && !options2.$$inline) {
+      throw new Error("'target' is a required option");
+    }
+    super();
+    /**
+     * For type checking capabilities only.
+     * Does not exist at runtime.
+     * ### DO NOT USE!
+     *
+     * @type {Props}
+     */
+    __publicField(this, "$$prop_def");
+    /**
+     * For type checking capabilities only.
+     * Does not exist at runtime.
+     * ### DO NOT USE!
+     *
+     * @type {Events}
+     */
+    __publicField(this, "$$events_def");
+    /**
+     * For type checking capabilities only.
+     * Does not exist at runtime.
+     * ### DO NOT USE!
+     *
+     * @type {Slots}
+     */
+    __publicField(this, "$$slot_def");
+  }
+  /** @returns {void} */
+  $destroy() {
+    super.$destroy();
+    this.$destroy = () => {
+      console.warn("Component was already destroyed");
+    };
+  }
+  /** @returns {void} */
+  $capture_state() {
+  }
+  /** @returns {void} */
+  $inject_state() {
+  }
+};
+
+// node_modules/.pnpm/svelte@4.2.19/node_modules/svelte/src/runtime/internal/disclose-version/index.js
+if (typeof window !== "undefined")
+  (window.__svelte || (window.__svelte = { v: /* @__PURE__ */ new Set() })).v.add(PUBLIC_VERSION);
+
+// src/components/conflicts_list.svelte
+var import_obsidian13 = require("obsidian");
+
+// src/views/diff_modal.ts
+var import_obsidian12 = require("obsidian");
+
+// node_modules/.pnpm/tslib@2.8.1/node_modules/tslib/tslib.es6.mjs
+function __awaiter(thisArg, _arguments, P, generator) {
+  function adopt(value) {
+    return value instanceof P ? value : new P(function(resolve) {
+      resolve(value);
+    });
+  }
+  return new (P || (P = Promise))(function(resolve, reject) {
+    function fulfilled(value) {
+      try {
+        step(generator.next(value));
+      } catch (e) {
+        reject(e);
+      }
+    }
+    function rejected(value) {
+      try {
+        step(generator["throw"](value));
+      } catch (e) {
+        reject(e);
+      }
+    }
+    function step(result) {
+      result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+    }
+    step((generator = generator.apply(thisArg, _arguments || [])).next());
+  });
+}
+
+// node_modules/.pnpm/@codemirror+merge@6.7.2/node_modules/@codemirror/merge/dist/index.js
+var import_view = require("@codemirror/view");
+var import_state = require("@codemirror/state");
+
+// node_modules/.pnpm/style-mod@4.1.2/node_modules/style-mod/src/style-mod.js
+var C = "\u037C";
+var COUNT = typeof Symbol == "undefined" ? "__" + C : Symbol.for(C);
+var SET = typeof Symbol == "undefined" ? "__styleSet" + Math.floor(Math.random() * 1e8) : Symbol("styleSet");
+var top = typeof globalThis != "undefined" ? globalThis : typeof window != "undefined" ? window : {};
+var StyleModule = class {
+  // :: (Object<Style>, ?{finish: ?(string) → string})
+  // Create a style module from the given spec.
+  //
+  // When `finish` is given, it is called on regular (non-`@`)
+  // selectors (after `&` expansion) to compute the final selector.
+  constructor(spec, options2) {
+    this.rules = [];
+    let { finish } = options2 || {};
+    function splitSelector(selector) {
+      return /^@/.test(selector) ? [selector] : selector.split(/,\s*/);
+    }
+    function render(selectors, spec2, target, isKeyframes) {
+      let local = [], isAt = /^@(\w+)\b/.exec(selectors[0]), keyframes = isAt && isAt[1] == "keyframes";
+      if (isAt && spec2 == null) return target.push(selectors[0] + ";");
+      for (let prop in spec2) {
+        let value = spec2[prop];
+        if (/&/.test(prop)) {
+          render(
+            prop.split(/,\s*/).map((part) => selectors.map((sel) => part.replace(/&/, sel))).reduce((a, b) => a.concat(b)),
+            value,
+            target
+          );
+        } else if (value && typeof value == "object") {
+          if (!isAt) throw new RangeError("The value of a property (" + prop + ") should be a primitive value.");
+          render(splitSelector(prop), value, local, keyframes);
+        } else if (value != null) {
+          local.push(prop.replace(/_.*/, "").replace(/[A-Z]/g, (l) => "-" + l.toLowerCase()) + ": " + value + ";");
+        }
+      }
+      if (local.length || keyframes) {
+        target.push((finish && !isAt && !isKeyframes ? selectors.map(finish) : selectors).join(", ") + " {" + local.join(" ") + "}");
+      }
+    }
+    for (let prop in spec) render(splitSelector(prop), spec[prop], this.rules);
+  }
+  // :: () → string
+  // Returns a string containing the module's CSS rules.
+  getRules() {
+    return this.rules.join("\n");
+  }
+  // :: () → string
+  // Generate a new unique CSS class name.
+  static newName() {
+    let id = top[COUNT] || 1;
+    top[COUNT] = id + 1;
+    return C + id.toString(36);
+  }
+  // :: (union<Document, ShadowRoot>, union<[StyleModule], StyleModule>, ?{nonce: ?string})
+  //
+  // Mount the given set of modules in the given DOM root, which ensures
+  // that the CSS rules defined by the module are available in that
+  // context.
+  //
+  // Rules are only added to the document once per root.
+  //
+  // Rule order will follow the order of the modules, so that rules from
+  // modules later in the array take precedence of those from earlier
+  // modules. If you call this function multiple times for the same root
+  // in a way that changes the order of already mounted modules, the old
+  // order will be changed.
+  //
+  // If a Content Security Policy nonce is provided, it is added to
+  // the `<style>` tag generated by the library.
+  static mount(root, modules, options2) {
+    let set = root[SET], nonce = options2 && options2.nonce;
+    if (!set) set = new StyleSet(root, nonce);
+    else if (nonce) set.setNonce(nonce);
+    set.mount(Array.isArray(modules) ? modules : [modules], root);
+  }
+};
+var adoptedSet = /* @__PURE__ */ new Map();
+var StyleSet = class {
+  constructor(root, nonce) {
+    let doc = root.ownerDocument || root, win = doc.defaultView;
+    if (!root.head && root.adoptedStyleSheets && win.CSSStyleSheet) {
+      let adopted = adoptedSet.get(doc);
+      if (adopted) return root[SET] = adopted;
+      this.sheet = new win.CSSStyleSheet();
+      adoptedSet.set(doc, this);
+    } else {
+      this.styleTag = doc.createElement("style");
+      if (nonce) this.styleTag.setAttribute("nonce", nonce);
+    }
+    this.modules = [];
+    root[SET] = this;
+  }
+  mount(modules, root) {
+    let sheet = this.sheet;
+    let pos = 0, j = 0;
+    for (let i = 0; i < modules.length; i++) {
+      let mod = modules[i], index = this.modules.indexOf(mod);
+      if (index < j && index > -1) {
+        this.modules.splice(index, 1);
+        j--;
+        index = -1;
+      }
+      if (index == -1) {
+        this.modules.splice(j++, 0, mod);
+        if (sheet) for (let k = 0; k < mod.rules.length; k++)
+          sheet.insertRule(mod.rules[k], pos++);
+      } else {
+        while (j < index) pos += this.modules[j++].rules.length;
+        pos += mod.rules.length;
+        j++;
+      }
+    }
+    if (sheet) {
+      if (root.adoptedStyleSheets.indexOf(this.sheet) < 0)
+        root.adoptedStyleSheets = [this.sheet, ...root.adoptedStyleSheets];
+    } else {
+      let text2 = "";
+      for (let i = 0; i < this.modules.length; i++)
+        text2 += this.modules[i].getRules() + "\n";
+      this.styleTag.textContent = text2;
+      let target = root.head || root;
+      if (this.styleTag.parentNode != target)
+        target.insertBefore(this.styleTag, target.firstChild);
+    }
+  }
+  setNonce(nonce) {
+    if (this.styleTag && this.styleTag.getAttribute("nonce") != nonce)
+      this.styleTag.setAttribute("nonce", nonce);
+  }
+};
+
+// node_modules/.pnpm/@codemirror+merge@6.7.2/node_modules/@codemirror/merge/dist/index.js
+var import_language = require("@codemirror/language");
+var import_highlight = require("@lezer/highlight");
+var Change = class _Change {
+  constructor(fromA, toA, fromB, toB) {
+    this.fromA = fromA;
+    this.toA = toA;
+    this.fromB = fromB;
+    this.toB = toB;
+  }
+  /**
+  @internal
+  */
+  offset(offA, offB = offA) {
+    return new _Change(this.fromA + offA, this.toA + offA, this.fromB + offB, this.toB + offB);
+  }
+};
+function findDiff(a, fromA, toA, b, fromB, toB) {
+  if (a == b)
+    return [];
+  let prefix = commonPrefix(a, fromA, toA, b, fromB, toB);
+  let suffix = commonSuffix(a, fromA + prefix, toA, b, fromB + prefix, toB);
+  fromA += prefix;
+  toA -= suffix;
+  fromB += prefix;
+  toB -= suffix;
+  let lenA = toA - fromA, lenB = toB - fromB;
+  if (!lenA || !lenB)
+    return [new Change(fromA, toA, fromB, toB)];
+  if (lenA > lenB) {
+    let found = a.slice(fromA, toA).indexOf(b.slice(fromB, toB));
+    if (found > -1)
+      return [
+        new Change(fromA, fromA + found, fromB, fromB),
+        new Change(fromA + found + lenB, toA, toB, toB)
+      ];
+  } else if (lenB > lenA) {
+    let found = b.slice(fromB, toB).indexOf(a.slice(fromA, toA));
+    if (found > -1)
+      return [
+        new Change(fromA, fromA, fromB, fromB + found),
+        new Change(toA, toA, fromB + found + lenA, toB)
+      ];
+  }
+  if (lenA == 1 || lenB == 1)
+    return [new Change(fromA, toA, fromB, toB)];
+  let half = halfMatch(a, fromA, toA, b, fromB, toB);
+  if (half) {
+    let [sharedA, sharedB, sharedLen] = half;
+    return findDiff(a, fromA, sharedA, b, fromB, sharedB).concat(findDiff(a, sharedA + sharedLen, toA, b, sharedB + sharedLen, toB));
+  }
+  return findSnake(a, fromA, toA, b, fromB, toB);
+}
+var scanLimit = 1e9;
+function findSnake(a, fromA, toA, b, fromB, toB) {
+  let lenA = toA - fromA, lenB = toB - fromB;
+  if (scanLimit < 1e9 && Math.min(lenA, lenB) > scanLimit * 16) {
+    if (Math.min(lenA, lenB) > scanLimit * 64)
+      return [new Change(fromA, toA, fromB, toB)];
+    return crudeMatch(a, fromA, toA, b, fromB, toB);
+  }
+  let off = Math.ceil((lenA + lenB) / 2);
+  frontier1.reset(off);
+  frontier2.reset(off);
+  let match1 = (x, y) => a.charCodeAt(fromA + x) == b.charCodeAt(fromB + y);
+  let match2 = (x, y) => a.charCodeAt(toA - x - 1) == b.charCodeAt(toB - y - 1);
+  let test1 = (lenA - lenB) % 2 != 0 ? frontier2 : null, test2 = test1 ? null : frontier1;
+  for (let depth = 0; depth < off; depth++) {
+    if (depth > scanLimit)
+      return crudeMatch(a, fromA, toA, b, fromB, toB);
+    let done = frontier1.advance(depth, lenA, lenB, off, test1, false, match1) || frontier2.advance(depth, lenA, lenB, off, test2, true, match2);
+    if (done)
+      return bisect(a, fromA, toA, fromA + done[0], b, fromB, toB, fromB + done[1]);
+  }
+  return [new Change(fromA, toA, fromB, toB)];
+}
+var Frontier = class {
+  constructor() {
+    this.vec = [];
+  }
+  reset(off) {
+    this.len = off << 1;
+    for (let i = 0; i < this.len; i++)
+      this.vec[i] = -1;
+    this.vec[off + 1] = 0;
+    this.start = this.end = 0;
+  }
+  advance(depth, lenX, lenY, vOff, other, fromBack, match) {
+    for (let k = -depth + this.start; k <= depth - this.end; k += 2) {
+      let off = vOff + k;
+      let x = k == -depth || k != depth && this.vec[off - 1] < this.vec[off + 1] ? this.vec[off + 1] : this.vec[off - 1] + 1;
+      let y = x - k;
+      while (x < lenX && y < lenY && match(x, y)) {
+        x++;
+        y++;
+      }
+      this.vec[off] = x;
+      if (x > lenX) {
+        this.end += 2;
+      } else if (y > lenY) {
+        this.start += 2;
+      } else if (other) {
+        let offOther = vOff + (lenX - lenY) - k;
+        if (offOther >= 0 && offOther < this.len && other.vec[offOther] != -1) {
+          if (!fromBack) {
+            let xOther = lenX - other.vec[offOther];
+            if (x >= xOther)
+              return [x, y];
+          } else {
+            let xOther = other.vec[offOther];
+            if (xOther >= lenX - x)
+              return [xOther, vOff + xOther - offOther];
+          }
+        }
+      }
+    }
+    return null;
+  }
+};
+var frontier1 = /* @__PURE__ */ new Frontier();
+var frontier2 = /* @__PURE__ */ new Frontier();
+function bisect(a, fromA, toA, splitA, b, fromB, toB, splitB) {
+  let stop = false;
+  if (!validIndex(a, splitA) && ++splitA == toA)
+    stop = true;
+  if (!validIndex(b, splitB) && ++splitB == toB)
+    stop = true;
+  if (stop)
+    return [new Change(fromA, toA, fromB, toB)];
+  return findDiff(a, fromA, splitA, b, fromB, splitB).concat(findDiff(a, splitA, toA, b, splitB, toB));
+}
+function chunkSize(lenA, lenB) {
+  let size = 1, max = Math.min(lenA, lenB);
+  while (size < max)
+    size = size << 1;
+  return size;
+}
+function commonPrefix(a, fromA, toA, b, fromB, toB) {
+  if (fromA == toA || fromA == toB || a.charCodeAt(fromA) != b.charCodeAt(fromB))
+    return 0;
+  let chunk = chunkSize(toA - fromA, toB - fromB);
+  for (let pA = fromA, pB = fromB; ; ) {
+    let endA = pA + chunk, endB = pB + chunk;
+    if (endA > toA || endB > toB || a.slice(pA, endA) != b.slice(pB, endB)) {
+      if (chunk == 1)
+        return pA - fromA - (validIndex(a, pA) ? 0 : 1);
+      chunk = chunk >> 1;
+    } else if (endA == toA || endB == toB) {
+      return endA - fromA;
+    } else {
+      pA = endA;
+      pB = endB;
+    }
+  }
+}
+function commonSuffix(a, fromA, toA, b, fromB, toB) {
+  if (fromA == toA || fromB == toB || a.charCodeAt(toA - 1) != b.charCodeAt(toB - 1))
+    return 0;
+  let chunk = chunkSize(toA - fromA, toB - fromB);
+  for (let pA = toA, pB = toB; ; ) {
+    let sA = pA - chunk, sB = pB - chunk;
+    if (sA < fromA || sB < fromB || a.slice(sA, pA) != b.slice(sB, pB)) {
+      if (chunk == 1)
+        return toA - pA - (validIndex(a, pA) ? 0 : 1);
+      chunk = chunk >> 1;
+    } else if (sA == fromA || sB == fromB) {
+      return toA - sA;
+    } else {
+      pA = sA;
+      pB = sB;
+    }
+  }
+}
+function findMatch(a, fromA, toA, b, fromB, toB, size, divideTo) {
+  let rangeB = b.slice(fromB, toB);
+  let best = null;
+  for (; ; ) {
+    if (best || size < divideTo)
+      return best;
+    for (let start = fromA + size; ; ) {
+      if (!validIndex(a, start))
+        start++;
+      let end = start + size;
+      if (!validIndex(a, end))
+        end += end == start + 1 ? 1 : -1;
+      if (end >= toA)
+        break;
+      let seed = a.slice(start, end);
+      let found = -1;
+      while ((found = rangeB.indexOf(seed, found + 1)) != -1) {
+        let prefixAfter = commonPrefix(a, end, toA, b, fromB + found + seed.length, toB);
+        let suffixBefore = commonSuffix(a, fromA, start, b, fromB, fromB + found);
+        let length = seed.length + prefixAfter + suffixBefore;
+        if (!best || best[2] < length)
+          best = [start - suffixBefore, fromB + found - suffixBefore, length];
+      }
+      start = end;
+    }
+    if (divideTo < 0)
+      return best;
+    size = size >> 1;
+  }
+}
+function halfMatch(a, fromA, toA, b, fromB, toB) {
+  let lenA = toA - fromA, lenB = toB - fromB;
+  if (lenA < lenB) {
+    let result = halfMatch(b, fromB, toB, a, fromA, toA);
+    return result && [result[1], result[0], result[2]];
+  }
+  if (lenA < 4 || lenB * 2 < lenA)
+    return null;
+  return findMatch(a, fromA, toA, b, fromB, toB, Math.floor(lenA / 4), -1);
+}
+function crudeMatch(a, fromA, toA, b, fromB, toB) {
+  let lenA = toA - fromA, lenB = toB - fromB;
+  let result;
+  if (lenA < lenB) {
+    let inv = findMatch(b, fromB, toB, a, fromA, toA, Math.floor(lenA / 6), 50);
+    result = inv && [inv[1], inv[0], inv[2]];
+  } else {
+    result = findMatch(a, fromA, toA, b, fromB, toB, Math.floor(lenB / 6), 50);
+  }
+  if (!result)
+    return [new Change(fromA, toA, fromB, toB)];
+  let [sharedA, sharedB, sharedLen] = result;
+  return findDiff(a, fromA, sharedA, b, fromB, sharedB).concat(findDiff(a, sharedA + sharedLen, toA, b, sharedB + sharedLen, toB));
+}
+function mergeAdjacent(changes, minGap) {
+  for (let i = 1; i < changes.length; i++) {
+    let prev = changes[i - 1], cur = changes[i];
+    if (prev.toA > cur.fromA - minGap && prev.toB > cur.fromB - minGap) {
+      changes[i - 1] = new Change(prev.fromA, cur.toA, prev.fromB, cur.toB);
+      changes.splice(i--, 1);
+    }
+  }
+}
+function normalize(a, b, changes) {
+  for (; ; ) {
+    mergeAdjacent(changes, 1);
+    let moved = false;
+    for (let i = 0; i < changes.length; i++) {
+      let ch = changes[i], pre, post;
+      if (pre = commonPrefix(a, ch.fromA, ch.toA, b, ch.fromB, ch.toB))
+        ch = changes[i] = new Change(ch.fromA + pre, ch.toA, ch.fromB + pre, ch.toB);
+      if (post = commonSuffix(a, ch.fromA, ch.toA, b, ch.fromB, ch.toB))
+        ch = changes[i] = new Change(ch.fromA, ch.toA - post, ch.fromB, ch.toB - post);
+      let lenA = ch.toA - ch.fromA, lenB = ch.toB - ch.fromB;
+      if (lenA && lenB)
+        continue;
+      let beforeLen = ch.fromA - (i ? changes[i - 1].toA : 0);
+      let afterLen = (i < changes.length - 1 ? changes[i + 1].fromA : a.length) - ch.toA;
+      if (!beforeLen || !afterLen)
+        continue;
+      let text2 = lenA ? a.slice(ch.fromA, ch.toA) : b.slice(ch.fromB, ch.toB);
+      if (beforeLen <= text2.length && a.slice(ch.fromA - beforeLen, ch.fromA) == text2.slice(text2.length - beforeLen)) {
+        changes[i] = new Change(ch.fromA - beforeLen, ch.toA - beforeLen, ch.fromB - beforeLen, ch.toB - beforeLen);
+        moved = true;
+      } else if (afterLen <= text2.length && a.slice(ch.toA, ch.toA + afterLen) == text2.slice(0, afterLen)) {
+        changes[i] = new Change(ch.fromA + afterLen, ch.toA + afterLen, ch.fromB + afterLen, ch.toB + afterLen);
+        moved = true;
+      }
+    }
+    if (!moved)
+      break;
+  }
+  return changes;
+}
+function makePresentable(changes, a, b) {
+  for (let posA = 0, i = 0; i < changes.length; i++) {
+    let change = changes[i];
+    let lenA = change.toA - change.fromA, lenB = change.toB - change.fromB;
+    if (lenA && lenB || lenA > 3 || lenB > 3) {
+      let nextChangeA = i == changes.length - 1 ? a.length : changes[i + 1].fromA;
+      let maxScanBefore = change.fromA - posA, maxScanAfter = nextChangeA - change.toA;
+      let boundBefore = findWordBoundaryBefore(a, change.fromA, Math.min(maxScanBefore, 5));
+      let boundAfter = findWordBoundaryAfter(a, change.toA, Math.min(maxScanAfter, 5));
+      let lenBefore = change.fromA - boundBefore, lenAfter = boundAfter - change.toA;
+      if (!lenA || !lenB) {
+        let changeLen = Math.max(lenA, lenB);
+        let [changeText, changeFrom, changeTo] = lenA ? [a, change.fromA, change.toA] : [b, change.fromB, change.toB];
+        if (lenBefore && lenAfter) {
+          if (changeLen > lenBefore && a.slice(boundBefore, change.fromA) == changeText.slice(changeTo - lenBefore, changeTo)) {
+            change = changes[i] = new Change(boundBefore, boundBefore + lenA, change.fromB - lenBefore, change.toB - lenBefore);
+            boundBefore = change.fromA;
+            boundAfter = findWordBoundaryAfter(a, change.toA, Math.min(nextChangeA - change.toA, 5));
+          } else if (changeLen > lenAfter && a.slice(change.toA, boundAfter) == changeText.slice(changeFrom, changeFrom + lenAfter)) {
+            change = changes[i] = new Change(boundAfter - lenA, boundAfter, change.fromB + lenAfter, change.toB + lenAfter);
+            boundAfter = change.toA;
+            boundBefore = findWordBoundaryBefore(a, change.fromA, Math.min(change.fromA - posA, 5));
+          }
+          lenBefore = change.fromA - boundBefore;
+          lenAfter = boundAfter - change.toA;
+        }
+      }
+      if (lenBefore || lenAfter) {
+        change = changes[i] = new Change(change.fromA - lenBefore, change.toA + lenAfter, change.fromB - lenBefore, change.toB + lenAfter);
+      } else if (!lenA) {
+        let first = findLineBreakAfter(b, change.fromB, change.toB), len;
+        let last = first < 0 ? -1 : findLineBreakBefore(b, change.toB, change.fromB);
+        if (first > -1 && (len = first - change.fromB) <= maxScanAfter && b.slice(change.fromB, first) == b.slice(change.toB, change.toB + len))
+          change = changes[i] = change.offset(len);
+        else if (last > -1 && (len = change.toB - last) >= maxScanBefore && b.slice(change.fromB - len, change.fromB) == b.slice(last, change.toB))
+          change = changes[i] = change.offset(-len);
+      } else if (!lenB) {
+        let first = findLineBreakAfter(a, change.fromA, change.toA), len;
+        let last = first < 0 ? -1 : findLineBreakBefore(a, change.toA, change.fromA);
+        if (first > -1 && (len = first - change.fromA) <= maxScanAfter && a.slice(change.fromA, first) == a.slice(change.toA, change.toA + len))
+          change = changes[i] = change.offset(len);
+        else if (last > -1 && (len = change.toA - last) >= maxScanBefore && a.slice(change.fromA - len, change.fromA) == a.slice(last, change.toA))
+          change = changes[i] = change.offset(-len);
+      }
+      posA = change.toA;
+    }
+  }
+  mergeAdjacent(changes, 3);
+  return changes;
+}
+var wordChar;
+try {
+  wordChar = /* @__PURE__ */ new RegExp("[\\p{Alphabetic}\\p{Number}]", "u");
+} catch (_) {
+}
+function asciiWordChar(code) {
+  return code > 48 && code < 58 || code > 64 && code < 91 || code > 96 && code < 123;
+}
+function wordCharAfter(s, pos) {
+  if (pos == s.length)
+    return 0;
+  let next = s.charCodeAt(pos);
+  if (next < 192)
+    return asciiWordChar(next) ? 1 : 0;
+  if (!wordChar)
+    return 0;
+  if (!isSurrogate1(next) || pos == s.length - 1)
+    return wordChar.test(String.fromCharCode(next)) ? 1 : 0;
+  return wordChar.test(s.slice(pos, pos + 2)) ? 2 : 0;
+}
+function wordCharBefore(s, pos) {
+  if (!pos)
+    return 0;
+  let prev = s.charCodeAt(pos - 1);
+  if (prev < 192)
+    return asciiWordChar(prev) ? 1 : 0;
+  if (!wordChar)
+    return 0;
+  if (!isSurrogate2(prev) || pos == 1)
+    return wordChar.test(String.fromCharCode(prev)) ? 1 : 0;
+  return wordChar.test(s.slice(pos - 2, pos)) ? 2 : 0;
+}
+function findWordBoundaryAfter(s, pos, max) {
+  if (pos == s.length || !wordCharBefore(s, pos))
+    return pos;
+  for (let cur = pos, end = pos + max; ; ) {
+    let size = wordCharAfter(s, cur);
+    if (!size)
+      return cur;
+    cur += size;
+    if (cur > end)
+      return pos;
+  }
+}
+function findWordBoundaryBefore(s, pos, max) {
+  if (!pos || !wordCharAfter(s, pos))
+    return pos;
+  for (let cur = pos, end = pos - max; ; ) {
+    let size = wordCharBefore(s, cur);
+    if (!size)
+      return cur;
+    cur -= size;
+    if (cur < end)
+      return pos;
+  }
+}
+function findLineBreakBefore(s, pos, stop) {
+  for (; pos != stop; pos--)
+    if (s.charCodeAt(pos - 1) == 10)
+      return pos;
+  return -1;
+}
+function findLineBreakAfter(s, pos, stop) {
+  for (; pos != stop; pos++)
+    if (s.charCodeAt(pos) == 10)
+      return pos;
+  return -1;
+}
+var isSurrogate1 = (code) => code >= 55296 && code <= 56319;
+var isSurrogate2 = (code) => code >= 56320 && code <= 57343;
+function validIndex(s, index) {
+  return !index || index == s.length || !isSurrogate1(s.charCodeAt(index - 1)) || !isSurrogate2(s.charCodeAt(index));
+}
+function diff(a, b, config) {
+  var _a;
+  scanLimit = ((_a = config === null || config === void 0 ? void 0 : config.scanLimit) !== null && _a !== void 0 ? _a : 1e9) >> 1;
+  return normalize(a, b, findDiff(a, 0, a.length, b, 0, b.length));
+}
+function presentableDiff(a, b, config) {
+  return makePresentable(diff(a, b, config), a, b);
+}
+var mergeConfig = /* @__PURE__ */ import_state.Facet.define({
+  combine: (values) => values[0]
+});
+var setChunks = /* @__PURE__ */ import_state.StateEffect.define();
+var ChunkField = /* @__PURE__ */ import_state.StateField.define({
+  create(state) {
+    return null;
+  },
+  update(current, tr) {
+    for (let e of tr.effects)
+      if (e.is(setChunks))
+        current = e.value;
+    return current;
+  }
+});
+var Chunk = class _Chunk {
+  constructor(changes, fromA, toA, fromB, toB) {
+    this.changes = changes;
+    this.fromA = fromA;
+    this.toA = toA;
+    this.fromB = fromB;
+    this.toB = toB;
+  }
+  /**
+  @internal
+  */
+  offset(offA, offB) {
+    return offA || offB ? new _Chunk(this.changes, this.fromA + offA, this.toA + offA, this.fromB + offB, this.toB + offB) : this;
+  }
+  /**
+  Returns `fromA` if the chunk is empty in A, or the end of the
+  last line in the chunk otherwise.
+  */
+  get endA() {
+    return Math.max(this.fromA, this.toA - 1);
+  }
+  /**
+  Returns `fromB` if the chunk is empty in B, or the end of the
+  last line in the chunk otherwise.
+  */
+  get endB() {
+    return Math.max(this.fromB, this.toB - 1);
+  }
+  /**
+  Build a set of changed chunks for the given documents.
+  */
+  static build(a, b, conf) {
+    return toChunks(presentableDiff(a.toString(), b.toString(), conf), a, b, 0, 0);
+  }
+  /**
+  Update a set of chunks for changes in document A. `a` should
+  hold the updated document A.
+  */
+  static updateA(chunks, a, b, changes, conf) {
+    return updateChunks(findRangesForChange(chunks, changes, true, b.length), chunks, a, b, conf);
+  }
+  /**
+  Update a set of chunks for changes in document B.
+  */
+  static updateB(chunks, a, b, changes, conf) {
+    return updateChunks(findRangesForChange(chunks, changes, false, a.length), chunks, a, b, conf);
+  }
+};
+function fromLine(fromA, fromB, a, b) {
+  let lineA = a.lineAt(fromA), lineB = b.lineAt(fromB);
+  return lineA.to == fromA && lineB.to == fromB && fromA < a.length && fromB < b.length ? [fromA + 1, fromB + 1] : [lineA.from, lineB.from];
+}
+function toLine(toA, toB, a, b) {
+  let lineA = a.lineAt(toA), lineB = b.lineAt(toB);
+  return lineA.from == toA && lineB.from == toB ? [toA, toB] : [lineA.to + 1, lineB.to + 1];
+}
+function toChunks(changes, a, b, offA, offB) {
+  let chunks = [];
+  for (let i = 0; i < changes.length; i++) {
+    let change = changes[i];
+    let [fromA, fromB] = fromLine(change.fromA + offA, change.fromB + offB, a, b);
+    let [toA, toB] = toLine(change.toA + offA, change.toB + offB, a, b);
+    let chunk = [change.offset(-fromA + offA, -fromB + offB)];
+    while (i < changes.length - 1) {
+      let next = changes[i + 1];
+      let [nextA, nextB] = fromLine(next.fromA + offA, next.fromB + offB, a, b);
+      if (nextA > toA + 1 && nextB > toB + 1)
+        break;
+      chunk.push(next.offset(-fromA + offA, -fromB + offB));
+      [toA, toB] = toLine(next.toA + offA, next.toB + offB, a, b);
+      i++;
+    }
+    chunks.push(new Chunk(chunk, fromA, Math.max(fromA, toA), fromB, Math.max(fromB, toB)));
+  }
+  return chunks;
+}
+var updateMargin = 1e3;
+function findPos(chunks, pos, isA, start) {
+  let lo = 0, hi = chunks.length;
+  for (; ; ) {
+    if (lo == hi) {
+      let refA = 0, refB = 0;
+      if (lo)
+        ({ toA: refA, toB: refB } = chunks[lo - 1]);
+      let off = pos - (isA ? refA : refB);
+      return [refA + off, refB + off];
+    }
+    let mid = lo + hi >> 1, chunk = chunks[mid];
+    let [from, to] = isA ? [chunk.fromA, chunk.toA] : [chunk.fromB, chunk.toB];
+    if (from > pos)
+      hi = mid;
+    else if (to <= pos)
+      lo = mid + 1;
+    else
+      return start ? [chunk.fromA, chunk.fromB] : [chunk.toA, chunk.toB];
+  }
+}
+function findRangesForChange(chunks, changes, isA, otherLen) {
+  let ranges = [];
+  changes.iterChangedRanges((cFromA, cToA, cFromB, cToB) => {
+    let fromA = 0, toA = isA ? changes.length : otherLen;
+    let fromB = 0, toB = isA ? otherLen : changes.length;
+    if (cFromA > updateMargin)
+      [fromA, fromB] = findPos(chunks, cFromA - updateMargin, isA, true);
+    if (cToA < changes.length - updateMargin)
+      [toA, toB] = findPos(chunks, cToA + updateMargin, isA, false);
+    let lenDiff = cToB - cFromB - (cToA - cFromA), last;
+    let [diffA, diffB] = isA ? [lenDiff, 0] : [0, lenDiff];
+    if (ranges.length && (last = ranges[ranges.length - 1]).toA >= fromA)
+      ranges[ranges.length - 1] = {
+        fromA: last.fromA,
+        fromB: last.fromB,
+        toA,
+        toB,
+        diffA: last.diffA + diffA,
+        diffB: last.diffB + diffB
+      };
+    else
+      ranges.push({ fromA, toA, fromB, toB, diffA, diffB });
+  });
+  return ranges;
+}
+function updateChunks(ranges, chunks, a, b, conf) {
+  if (!ranges.length)
+    return chunks;
+  let result = [];
+  for (let i = 0, offA = 0, offB = 0, chunkI = 0; ; i++) {
+    let range = i == ranges.length ? null : ranges[i];
+    let fromA = range ? range.fromA + offA : a.length, fromB = range ? range.fromB + offB : b.length;
+    while (chunkI < chunks.length) {
+      let next = chunks[chunkI];
+      if (next.toA + offA > fromA || next.toB + offB > fromB)
+        break;
+      result.push(next.offset(offA, offB));
+      chunkI++;
+    }
+    if (!range)
+      break;
+    let toA = range.toA + offA + range.diffA, toB = range.toB + offB + range.diffB;
+    let diff2 = presentableDiff(a.sliceString(fromA, toA), b.sliceString(fromB, toB), conf);
+    for (let chunk of toChunks(diff2, a, b, fromA, fromB))
+      result.push(chunk);
+    offA += range.diffA;
+    offB += range.diffB;
+    while (chunkI < chunks.length) {
+      let next = chunks[chunkI];
+      if (next.fromA + offA > toA && next.fromB + offB > toB)
+        break;
+      chunkI++;
+    }
+  }
+  return result;
+}
+var defaultDiffConfig = { scanLimit: 500 };
+var decorateChunks = /* @__PURE__ */ import_view.ViewPlugin.fromClass(class {
+  constructor(view) {
+    ({ deco: this.deco, gutter: this.gutter } = getChunkDeco(view));
+  }
+  update(update2) {
+    if (update2.docChanged || update2.viewportChanged || chunksChanged(update2.startState, update2.state) || configChanged(update2.startState, update2.state))
+      ({ deco: this.deco, gutter: this.gutter } = getChunkDeco(update2.view));
+  }
+}, {
+  decorations: (d) => d.deco
+});
+var changeGutter = /* @__PURE__ */ import_state.Prec.low(/* @__PURE__ */ (0, import_view.gutter)({
+  class: "cm-changeGutter",
+  markers: (view) => {
+    var _a;
+    return ((_a = view.plugin(decorateChunks)) === null || _a === void 0 ? void 0 : _a.gutter) || import_state.RangeSet.empty;
+  }
+}));
+function chunksChanged(s1, s2) {
+  return s1.field(ChunkField, false) != s2.field(ChunkField, false);
+}
+function configChanged(s1, s2) {
+  return s1.facet(mergeConfig) != s2.facet(mergeConfig);
+}
+var changedLine = /* @__PURE__ */ import_view.Decoration.line({ class: "cm-changedLine" });
+var changedText = /* @__PURE__ */ import_view.Decoration.mark({ class: "cm-changedText" });
+var inserted = /* @__PURE__ */ import_view.Decoration.mark({ tagName: "ins", class: "cm-insertedLine" });
+var deleted = /* @__PURE__ */ import_view.Decoration.mark({ tagName: "del", class: "cm-deletedLine" });
+var changedLineGutterMarker = /* @__PURE__ */ new class extends import_view.GutterMarker {
+  constructor() {
+    super(...arguments);
+    this.elementClass = "cm-changedLineGutter";
+  }
+}();
+function buildChunkDeco(chunk, doc, isA, highlight, builder, gutterBuilder) {
+  let from = isA ? chunk.fromA : chunk.fromB, to = isA ? chunk.toA : chunk.toB;
+  let changeI = 0;
+  if (from != to) {
+    builder.add(from, from, changedLine);
+    builder.add(from, to, isA ? deleted : inserted);
+    if (gutterBuilder)
+      gutterBuilder.add(from, from, changedLineGutterMarker);
+    for (let iter = doc.iterRange(from, to - 1), pos = from; !iter.next().done; ) {
+      if (iter.lineBreak) {
+        pos++;
+        builder.add(pos, pos, changedLine);
+        if (gutterBuilder)
+          gutterBuilder.add(pos, pos, changedLineGutterMarker);
+        continue;
+      }
+      let lineEnd = pos + iter.value.length;
+      if (highlight)
+        while (changeI < chunk.changes.length) {
+          let nextChange = chunk.changes[changeI];
+          let nextFrom = from + (isA ? nextChange.fromA : nextChange.fromB);
+          let nextTo = from + (isA ? nextChange.toA : nextChange.toB);
+          let chFrom = Math.max(pos, nextFrom), chTo = Math.min(lineEnd, nextTo);
+          if (chFrom < chTo)
+            builder.add(chFrom, chTo, changedText);
+          if (nextTo < lineEnd)
+            changeI++;
+          else
+            break;
+        }
+      pos = lineEnd;
+    }
+  }
+}
+function getChunkDeco(view) {
+  let chunks = view.state.field(ChunkField);
+  let { side, highlightChanges, markGutter } = view.state.facet(mergeConfig), isA = side == "a";
+  let builder = new import_state.RangeSetBuilder();
+  let gutterBuilder = markGutter ? new import_state.RangeSetBuilder() : null;
+  let { from, to } = view.viewport;
+  for (let chunk of chunks) {
+    if ((isA ? chunk.fromA : chunk.fromB) >= to)
+      break;
+    if ((isA ? chunk.toA : chunk.toB) > from)
+      buildChunkDeco(chunk, view.state.doc, isA, highlightChanges, builder, gutterBuilder);
+  }
+  return { deco: builder.finish(), gutter: gutterBuilder && gutterBuilder.finish() };
+}
+var Spacer = class extends import_view.WidgetType {
+  constructor(height) {
+    super();
+    this.height = height;
+  }
+  eq(other) {
+    return this.height == other.height;
+  }
+  toDOM() {
+    let elt = document.createElement("div");
+    elt.className = "cm-mergeSpacer";
+    elt.style.height = this.height + "px";
+    return elt;
+  }
+  updateDOM(dom) {
+    dom.style.height = this.height + "px";
+    return true;
+  }
+  get estimatedHeight() {
+    return this.height;
+  }
+  ignoreEvent() {
+    return false;
+  }
+};
+var adjustSpacers = /* @__PURE__ */ import_state.StateEffect.define({
+  map: (value, mapping) => value.map(mapping)
+});
+var Spacers = /* @__PURE__ */ import_state.StateField.define({
+  create: () => import_view.Decoration.none,
+  update: (spacers, tr) => {
+    for (let e of tr.effects)
+      if (e.is(adjustSpacers))
+        return e.value;
+    return spacers.map(tr.changes);
+  },
+  provide: (f) => import_view.EditorView.decorations.from(f)
+});
+var epsilon = 0.01;
+function compareSpacers(a, b) {
+  if (a.size != b.size)
+    return false;
+  let iA = a.iter(), iB = b.iter();
+  while (iA.value) {
+    if (iA.from != iB.from || Math.abs(iA.value.spec.widget.height - iB.value.spec.widget.height) > 1)
+      return false;
+    iA.next();
+    iB.next();
+  }
+  return true;
+}
+function updateSpacers(a, b, chunks) {
+  let buildA = new import_state.RangeSetBuilder(), buildB = new import_state.RangeSetBuilder();
+  let spacersA = a.state.field(Spacers).iter(), spacersB = b.state.field(Spacers).iter();
+  let posA = 0, posB = 0, offA = 0, offB = 0, vpA = a.viewport, vpB = b.viewport;
+  for (let chunkI = 0; ; chunkI++) {
+    let chunk = chunkI < chunks.length ? chunks[chunkI] : null;
+    let endA = chunk ? chunk.fromA : a.state.doc.length, endB = chunk ? chunk.fromB : b.state.doc.length;
+    if (posA < endA) {
+      let heightA = a.lineBlockAt(posA).top + offA;
+      let heightB = b.lineBlockAt(posB).top + offB;
+      let diff2 = heightA - heightB;
+      if (diff2 < -epsilon) {
+        offA -= diff2;
+        buildA.add(posA, posA, import_view.Decoration.widget({
+          widget: new Spacer(-diff2),
+          block: true,
+          side: -1
+        }));
+      } else if (diff2 > epsilon) {
+        offB += diff2;
+        buildB.add(posB, posB, import_view.Decoration.widget({
+          widget: new Spacer(diff2),
+          block: true,
+          side: -1
+        }));
+      }
+    }
+    if (endA > posA + 1e3 && posA < vpA.from && endA > vpA.from && posB < vpB.from && endB > vpB.from) {
+      let off = Math.min(vpA.from - posA, vpB.from - posB);
+      posA += off;
+      posB += off;
+      chunkI--;
+    } else if (!chunk) {
+      break;
+    } else {
+      posA = chunk.toA;
+      posB = chunk.toB;
+    }
+    while (spacersA.value && spacersA.from < posA) {
+      offA -= spacersA.value.spec.widget.height;
+      spacersA.next();
+    }
+    while (spacersB.value && spacersB.from < posB) {
+      offB -= spacersB.value.spec.widget.height;
+      spacersB.next();
+    }
+  }
+  while (spacersA.value) {
+    offA -= spacersA.value.spec.widget.height;
+    spacersA.next();
+  }
+  while (spacersB.value) {
+    offB -= spacersB.value.spec.widget.height;
+    spacersB.next();
+  }
+  let docDiff = a.contentHeight + offA - (b.contentHeight + offB);
+  if (docDiff < epsilon) {
+    buildA.add(a.state.doc.length, a.state.doc.length, import_view.Decoration.widget({
+      widget: new Spacer(-docDiff),
+      block: true,
+      side: 1
+    }));
+  } else if (docDiff > epsilon) {
+    buildB.add(b.state.doc.length, b.state.doc.length, import_view.Decoration.widget({
+      widget: new Spacer(docDiff),
+      block: true,
+      side: 1
+    }));
+  }
+  let decoA = buildA.finish(), decoB = buildB.finish();
+  if (!compareSpacers(decoA, a.state.field(Spacers)))
+    a.dispatch({ effects: adjustSpacers.of(decoA) });
+  if (!compareSpacers(decoB, b.state.field(Spacers)))
+    b.dispatch({ effects: adjustSpacers.of(decoB) });
+}
+var uncollapse = /* @__PURE__ */ import_state.StateEffect.define({
+  map: (value, change) => change.mapPos(value)
+});
+var CollapseWidget = class extends import_view.WidgetType {
+  constructor(lines) {
+    super();
+    this.lines = lines;
+  }
+  eq(other) {
+    return this.lines == other.lines;
+  }
+  toDOM(view) {
+    let outer = document.createElement("div");
+    outer.className = "cm-collapsedLines";
+    outer.textContent = "\u299A " + view.state.phrase("$ unchanged lines", this.lines) + " \u299A";
+    outer.addEventListener("click", (e) => {
+      let pos = view.posAtDOM(e.target);
+      view.dispatch({ effects: uncollapse.of(pos) });
+      let { side, sibling } = view.state.facet(mergeConfig);
+      if (sibling)
+        sibling().dispatch({ effects: uncollapse.of(mapPos(pos, view.state.field(ChunkField), side == "a")) });
+    });
+    return outer;
+  }
+  ignoreEvent(e) {
+    return e instanceof MouseEvent;
+  }
+  get estimatedHeight() {
+    return 27;
+  }
+};
+function mapPos(pos, chunks, isA) {
+  let startOur = 0, startOther = 0;
+  for (let i = 0; ; i++) {
+    let next = i < chunks.length ? chunks[i] : null;
+    if (!next || (isA ? next.fromA : next.fromB) >= pos)
+      return startOther + (pos - startOur);
+    [startOur, startOther] = isA ? [next.toA, next.toB] : [next.toB, next.toA];
+  }
+}
+var CollapsedRanges = /* @__PURE__ */ import_state.StateField.define({
+  create(state) {
+    return import_view.Decoration.none;
+  },
+  update(deco, tr) {
+    deco = deco.map(tr.changes);
+    for (let e of tr.effects)
+      if (e.is(uncollapse))
+        deco = deco.update({ filter: (from) => from != e.value });
+    return deco;
+  },
+  provide: (f) => import_view.EditorView.decorations.from(f)
+});
+function collapseUnchanged({ margin = 3, minSize = 4 }) {
+  return CollapsedRanges.init((state) => buildCollapsedRanges(state, margin, minSize));
+}
+function buildCollapsedRanges(state, margin, minLines) {
+  let builder = new import_state.RangeSetBuilder();
+  let isA = state.facet(mergeConfig).side == "a";
+  let chunks = state.field(ChunkField);
+  let prevLine = 1;
+  for (let i = 0; ; i++) {
+    let chunk = i < chunks.length ? chunks[i] : null;
+    let collapseFrom = i ? prevLine + margin : 1;
+    let collapseTo = chunk ? state.doc.lineAt(isA ? chunk.fromA : chunk.fromB).number - 1 - margin : state.doc.lines;
+    let lines = collapseTo - collapseFrom + 1;
+    if (lines >= minLines) {
+      builder.add(state.doc.line(collapseFrom).from, state.doc.line(collapseTo).to, import_view.Decoration.replace({
+        widget: new CollapseWidget(lines),
+        block: true
+      }));
+    }
+    if (!chunk)
+      break;
+    prevLine = state.doc.lineAt(Math.min(state.doc.length, isA ? chunk.toA : chunk.toB)).number;
+  }
+  return builder.finish();
+}
+var externalTheme = /* @__PURE__ */ import_view.EditorView.styleModule.of(/* @__PURE__ */ new StyleModule({
+  ".cm-mergeView": {
+    overflowY: "auto"
+  },
+  ".cm-mergeViewEditors": {
+    display: "flex",
+    alignItems: "stretch"
+  },
+  ".cm-mergeViewEditor": {
+    flexGrow: 1,
+    flexBasis: 0,
+    overflow: "hidden"
+  },
+  ".cm-merge-revert": {
+    width: "1.6em",
+    flexGrow: 0,
+    flexShrink: 0,
+    position: "relative"
+  },
+  ".cm-merge-revert button": {
+    position: "absolute",
+    display: "block",
+    width: "100%",
+    boxSizing: "border-box",
+    textAlign: "center",
+    background: "none",
+    border: "none",
+    font: "inherit",
+    cursor: "pointer"
+  }
+}));
+var baseTheme = /* @__PURE__ */ import_view.EditorView.baseTheme({
+  ".cm-mergeView & .cm-scroller, .cm-mergeView &": {
+    height: "auto !important",
+    overflowY: "visible !important"
+  },
+  "&.cm-merge-a .cm-changedLine, .cm-deletedChunk": {
+    backgroundColor: "rgba(160, 128, 100, .08)"
+  },
+  "&.cm-merge-b .cm-changedLine": {
+    backgroundColor: "rgba(100, 160, 128, .08)"
+  },
+  "&light.cm-merge-a .cm-changedText, &light .cm-deletedChunk .cm-deletedText": {
+    background: "linear-gradient(#ee443366, #ee443366) bottom/100% 2px no-repeat"
+  },
+  "&dark.cm-merge-a .cm-changedText, &dark .cm-deletedChunk .cm-deletedText": {
+    background: "linear-gradient(#ffaa9966, #ffaa9966) bottom/100% 2px no-repeat"
+  },
+  "&light.cm-merge-b .cm-changedText": {
+    background: "linear-gradient(#22bb2266, #22bb2266) bottom/100% 2px no-repeat"
+  },
+  "&dark.cm-merge-b .cm-changedText": {
+    background: "linear-gradient(#88ff8866, #88ff8866) bottom/100% 2px no-repeat"
+  },
+  ".cm-insertedLine, .cm-deletedLine": {
+    textDecoration: "none"
+  },
+  ".cm-deletedChunk": {
+    paddingLeft: "6px",
+    "& .cm-chunkButtons": {
+      position: "absolute",
+      insetInlineEnd: "5px"
+    },
+    "& button": {
+      border: "none",
+      cursor: "pointer",
+      color: "white",
+      margin: "0 2px",
+      borderRadius: "3px",
+      "&[name=accept]": { background: "#2a2" },
+      "&[name=reject]": { background: "#d43" }
+    }
+  },
+  ".cm-collapsedLines": {
+    padding: "5px 5px 5px 10px",
+    cursor: "pointer"
+  },
+  "&light .cm-collapsedLines": {
+    color: "#444",
+    background: "linear-gradient(to bottom, transparent 0, #f3f3f3 30%, #f3f3f3 70%, transparent 100%)"
+  },
+  "&dark .cm-collapsedLines": {
+    color: "#ddd",
+    background: "linear-gradient(to bottom, transparent 0, #222 30%, #222 70%, transparent 100%)"
+  },
+  ".cm-changeGutter": { width: "3px", paddingLeft: "1px" },
+  "&light.cm-merge-a .cm-changedLineGutter, &light .cm-deletedLineGutter": { background: "#e43" },
+  "&dark.cm-merge-a .cm-changedLineGutter, &dark .cm-deletedLineGutter": { background: "#fa9" },
+  "&light.cm-merge-b .cm-changedLineGutter": { background: "#2b2" },
+  "&dark.cm-merge-b .cm-changedLineGutter": { background: "#8f8" }
+});
+var collapseCompartment = /* @__PURE__ */ new import_state.Compartment();
+var configCompartment = /* @__PURE__ */ new import_state.Compartment();
+var MergeView = class {
+  /**
+  Create a new merge view.
+  */
+  constructor(config) {
+    this.revertDOM = null;
+    this.revertToA = false;
+    this.revertToLeft = false;
+    this.measuring = -1;
+    this.diffConf = config.diffConfig || defaultDiffConfig;
+    let sharedExtensions = [
+      import_state.Prec.low(decorateChunks),
+      baseTheme,
+      externalTheme,
+      Spacers,
+      import_view.EditorView.updateListener.of((update2) => {
+        if (this.measuring < 0 && (update2.heightChanged || update2.viewportChanged) && !update2.transactions.some((tr) => tr.effects.some((e) => e.is(adjustSpacers))))
+          this.measure();
+      })
+    ];
+    let configA = [mergeConfig.of({
+      side: "a",
+      sibling: () => this.b,
+      highlightChanges: config.highlightChanges !== false,
+      markGutter: config.gutter !== false
+    })];
+    if (config.gutter !== false)
+      configA.push(changeGutter);
+    let stateA = import_state.EditorState.create({
+      doc: config.a.doc,
+      selection: config.a.selection,
+      extensions: [
+        config.a.extensions || [],
+        import_view.EditorView.editorAttributes.of({ class: "cm-merge-a" }),
+        configCompartment.of(configA),
+        sharedExtensions
+      ]
+    });
+    let configB = [mergeConfig.of({
+      side: "b",
+      sibling: () => this.a,
+      highlightChanges: config.highlightChanges !== false,
+      markGutter: config.gutter !== false
+    })];
+    if (config.gutter !== false)
+      configB.push(changeGutter);
+    let stateB = import_state.EditorState.create({
+      doc: config.b.doc,
+      selection: config.b.selection,
+      extensions: [
+        config.b.extensions || [],
+        import_view.EditorView.editorAttributes.of({ class: "cm-merge-b" }),
+        configCompartment.of(configB),
+        sharedExtensions
+      ]
+    });
+    this.chunks = Chunk.build(stateA.doc, stateB.doc, this.diffConf);
+    let add = [
+      ChunkField.init(() => this.chunks),
+      collapseCompartment.of(config.collapseUnchanged ? collapseUnchanged(config.collapseUnchanged) : [])
+    ];
+    stateA = stateA.update({ effects: import_state.StateEffect.appendConfig.of(add) }).state;
+    stateB = stateB.update({ effects: import_state.StateEffect.appendConfig.of(add) }).state;
+    this.dom = document.createElement("div");
+    this.dom.className = "cm-mergeView";
+    this.editorDOM = this.dom.appendChild(document.createElement("div"));
+    this.editorDOM.className = "cm-mergeViewEditors";
+    let orientation = config.orientation || "a-b";
+    let wrapA = document.createElement("div");
+    wrapA.className = "cm-mergeViewEditor";
+    let wrapB = document.createElement("div");
+    wrapB.className = "cm-mergeViewEditor";
+    this.editorDOM.appendChild(orientation == "a-b" ? wrapA : wrapB);
+    this.editorDOM.appendChild(orientation == "a-b" ? wrapB : wrapA);
+    this.a = new import_view.EditorView({
+      state: stateA,
+      parent: wrapA,
+      root: config.root,
+      dispatchTransactions: (trs) => this.dispatch(trs, this.a)
+    });
+    this.b = new import_view.EditorView({
+      state: stateB,
+      parent: wrapB,
+      root: config.root,
+      dispatchTransactions: (trs) => this.dispatch(trs, this.b)
+    });
+    this.setupRevertControls(!!config.revertControls, config.revertControls == "b-to-a", config.renderRevertControl);
+    if (config.parent)
+      config.parent.appendChild(this.dom);
+    this.scheduleMeasure();
+  }
+  dispatch(trs, target) {
+    if (trs.some((tr) => tr.docChanged)) {
+      let last = trs[trs.length - 1];
+      let changes = trs.reduce((chs, tr) => chs.compose(tr.changes), import_state.ChangeSet.empty(trs[0].startState.doc.length));
+      this.chunks = target == this.a ? Chunk.updateA(this.chunks, last.newDoc, this.b.state.doc, changes, this.diffConf) : Chunk.updateB(this.chunks, this.a.state.doc, last.newDoc, changes, this.diffConf);
+      target.update([...trs, last.state.update({ effects: setChunks.of(this.chunks) })]);
+      let other = target == this.a ? this.b : this.a;
+      other.update([other.state.update({ effects: setChunks.of(this.chunks) })]);
+      this.scheduleMeasure();
+    } else {
+      target.update(trs);
+    }
+  }
+  /**
+  Reconfigure an existing merge view.
+  */
+  reconfigure(config) {
+    if ("diffConfig" in config) {
+      this.diffConf = config.diffConfig;
+    }
+    if ("orientation" in config) {
+      let aB = config.orientation != "b-a";
+      if (aB != (this.editorDOM.firstChild == this.a.dom.parentNode)) {
+        let domA = this.a.dom.parentNode, domB = this.b.dom.parentNode;
+        domA.remove();
+        domB.remove();
+        this.editorDOM.insertBefore(aB ? domA : domB, this.editorDOM.firstChild);
+        this.editorDOM.appendChild(aB ? domB : domA);
+        this.revertToLeft = !this.revertToLeft;
+        if (this.revertDOM)
+          this.revertDOM.textContent = "";
+      }
+    }
+    if ("revertControls" in config || "renderRevertControl" in config) {
+      let controls = !!this.revertDOM, toA = this.revertToA, render = this.renderRevert;
+      if ("revertControls" in config) {
+        controls = !!config.revertControls;
+        toA = config.revertControls == "b-to-a";
+      }
+      if ("renderRevertControl" in config)
+        render = config.renderRevertControl;
+      this.setupRevertControls(controls, toA, render);
+    }
+    let highlight = "highlightChanges" in config, gutter2 = "gutter" in config, collapse = "collapseUnchanged" in config;
+    if (highlight || gutter2 || collapse) {
+      let effectsA = [], effectsB = [];
+      if (highlight || gutter2) {
+        let currentConfig = this.a.state.facet(mergeConfig);
+        let markGutter = gutter2 ? config.gutter !== false : currentConfig.markGutter;
+        let highlightChanges = highlight ? config.highlightChanges !== false : currentConfig.highlightChanges;
+        effectsA.push(configCompartment.reconfigure([
+          mergeConfig.of({ side: "a", sibling: () => this.b, highlightChanges, markGutter }),
+          markGutter ? changeGutter : []
+        ]));
+        effectsB.push(configCompartment.reconfigure([
+          mergeConfig.of({ side: "b", sibling: () => this.a, highlightChanges, markGutter }),
+          markGutter ? changeGutter : []
+        ]));
+      }
+      if (collapse) {
+        let effect = collapseCompartment.reconfigure(config.collapseUnchanged ? collapseUnchanged(config.collapseUnchanged) : []);
+        effectsA.push(effect);
+        effectsB.push(effect);
+      }
+      this.a.dispatch({ effects: effectsA });
+      this.b.dispatch({ effects: effectsB });
+    }
+    this.scheduleMeasure();
+  }
+  setupRevertControls(controls, toA, render) {
+    this.revertToA = toA;
+    this.revertToLeft = this.revertToA == (this.editorDOM.firstChild == this.a.dom.parentNode);
+    this.renderRevert = render;
+    if (!controls && this.revertDOM) {
+      this.revertDOM.remove();
+      this.revertDOM = null;
+    } else if (controls && !this.revertDOM) {
+      this.revertDOM = this.editorDOM.insertBefore(document.createElement("div"), this.editorDOM.firstChild.nextSibling);
+      this.revertDOM.addEventListener("mousedown", (e) => this.revertClicked(e));
+      this.revertDOM.className = "cm-merge-revert";
+    } else if (this.revertDOM) {
+      this.revertDOM.textContent = "";
+    }
+  }
+  scheduleMeasure() {
+    if (this.measuring < 0) {
+      let win = this.dom.ownerDocument.defaultView || window;
+      this.measuring = win.requestAnimationFrame(() => {
+        this.measuring = -1;
+        this.measure();
+      });
+    }
+  }
+  measure() {
+    updateSpacers(this.a, this.b, this.chunks);
+    if (this.revertDOM)
+      this.updateRevertButtons();
+  }
+  updateRevertButtons() {
+    let dom = this.revertDOM, next = dom.firstChild;
+    let vpA = this.a.viewport, vpB = this.b.viewport;
+    for (let i = 0; i < this.chunks.length; i++) {
+      let chunk = this.chunks[i];
+      if (chunk.fromA > vpA.to || chunk.fromB > vpB.to)
+        break;
+      if (chunk.fromA < vpA.from || chunk.fromB < vpB.from)
+        continue;
+      let top2 = this.a.lineBlockAt(chunk.fromA).top + "px";
+      while (next && +next.dataset.chunk < i)
+        next = rm(next);
+      if (next && next.dataset.chunk == String(i)) {
+        if (next.style.top != top2)
+          next.style.top = top2;
+        next = next.nextSibling;
+      } else {
+        dom.insertBefore(this.renderRevertButton(top2, i), next);
+      }
+    }
+    while (next)
+      next = rm(next);
+  }
+  renderRevertButton(top2, chunk) {
+    let elt;
+    if (this.renderRevert) {
+      elt = this.renderRevert();
+    } else {
+      elt = document.createElement("button");
+      let text2 = this.a.state.phrase("Revert this chunk");
+      elt.setAttribute("aria-label", text2);
+      elt.setAttribute("title", text2);
+      elt.textContent = this.revertToLeft ? "\u21DC" : "\u21DD";
+    }
+    elt.style.top = top2;
+    elt.setAttribute("data-chunk", String(chunk));
+    return elt;
+  }
+  revertClicked(e) {
+    let target = e.target, chunk;
+    while (target && target.parentNode != this.revertDOM)
+      target = target.parentNode;
+    if (target && (chunk = this.chunks[target.dataset.chunk])) {
+      let [source, dest, srcFrom, srcTo, destFrom, destTo] = this.revertToA ? [this.b, this.a, chunk.fromB, chunk.toB, chunk.fromA, chunk.toA] : [this.a, this.b, chunk.fromA, chunk.toA, chunk.fromB, chunk.toB];
+      let insert2 = source.state.sliceDoc(srcFrom, Math.max(srcFrom, srcTo - 1));
+      if (srcFrom != srcTo && destTo <= dest.state.doc.length)
+        insert2 += source.state.lineBreak;
+      dest.dispatch({
+        changes: { from: destFrom, to: Math.min(dest.state.doc.length, destTo), insert: insert2 },
+        userEvent: "revert"
+      });
+      e.preventDefault();
+    }
+  }
+  /**
+  Destroy this merge view.
+  */
+  destroy() {
+    this.a.destroy();
+    this.b.destroy();
+    if (this.measuring > -1)
+      (this.dom.ownerDocument.defaultView || window).cancelAnimationFrame(this.measuring);
+    this.dom.remove();
+  }
+};
+function rm(elt) {
+  let next = elt.nextSibling;
+  elt.remove();
+  return next;
+}
+var deletedChunkGutterMarker = /* @__PURE__ */ new class extends import_view.GutterMarker {
+  constructor() {
+    super(...arguments);
+    this.elementClass = "cm-deletedLineGutter";
+  }
+}();
+var unifiedChangeGutter = /* @__PURE__ */ import_state.Prec.low(/* @__PURE__ */ (0, import_view.gutter)({
+  class: "cm-changeGutter",
+  markers: (view) => {
+    var _a;
+    return ((_a = view.plugin(decorateChunks)) === null || _a === void 0 ? void 0 : _a.gutter) || import_state.RangeSet.empty;
+  },
+  widgetMarker: (view, widget) => widget instanceof DeletionWidget ? deletedChunkGutterMarker : null
+}));
+function unifiedMergeView(config) {
+  let orig = typeof config.original == "string" ? import_state.Text.of(config.original.split(/\r?\n/)) : config.original;
+  let diffConf = config.diffConfig || defaultDiffConfig;
+  return [
+    import_state.Prec.low(decorateChunks),
+    deletedChunks,
+    baseTheme,
+    import_view.EditorView.editorAttributes.of({ class: "cm-merge-b" }),
+    import_state.EditorState.transactionExtender.of((tr) => {
+      let updateDoc = tr.effects.find((e) => e.is(updateOriginalDoc));
+      if (!tr.docChanged && !updateDoc)
+        return null;
+      let prev = tr.startState.field(ChunkField);
+      let chunks = updateDoc ? Chunk.updateA(prev, updateDoc.value.doc, tr.newDoc, updateDoc.value.changes, diffConf) : Chunk.updateB(prev, tr.startState.field(originalDoc), tr.newDoc, tr.changes, diffConf);
+      return { effects: setChunks.of(chunks) };
+    }),
+    mergeConfig.of({
+      highlightChanges: config.highlightChanges !== false,
+      markGutter: config.gutter !== false,
+      syntaxHighlightDeletions: config.syntaxHighlightDeletions !== false,
+      mergeControls: config.mergeControls !== false,
+      side: "b"
+    }),
+    originalDoc.init(() => orig),
+    config.gutter !== false ? unifiedChangeGutter : [],
+    config.collapseUnchanged ? collapseUnchanged(config.collapseUnchanged) : [],
+    ChunkField.init((state) => Chunk.build(orig, state.doc, diffConf))
+  ];
+}
+var updateOriginalDoc = /* @__PURE__ */ import_state.StateEffect.define();
+var originalDoc = /* @__PURE__ */ import_state.StateField.define({
+  create: () => import_state.Text.empty,
+  update(doc, tr) {
+    for (let e of tr.effects)
+      if (e.is(updateOriginalDoc))
+        doc = e.value.doc;
+    return doc;
+  }
+});
+var DeletionWidgets = /* @__PURE__ */ new WeakMap();
+var DeletionWidget = class extends import_view.WidgetType {
+  constructor(buildDOM) {
+    super();
+    this.buildDOM = buildDOM;
+    this.dom = null;
+  }
+  eq(other) {
+    return this.dom == other.dom;
+  }
+  toDOM(view) {
+    return this.dom || (this.dom = this.buildDOM(view));
+  }
+};
+function deletionWidget(state, chunk) {
+  let known = DeletionWidgets.get(chunk.changes);
+  if (known)
+    return known;
+  let buildDOM = (view) => {
+    let { highlightChanges, syntaxHighlightDeletions, mergeControls } = state.facet(mergeConfig);
+    let text2 = view.state.field(originalDoc).sliceString(chunk.fromA, chunk.endA);
+    let lang = syntaxHighlightDeletions && state.facet(import_language.language);
+    let dom = document.createElement("div");
+    dom.className = "cm-deletedChunk";
+    if (mergeControls) {
+      let buttons = dom.appendChild(document.createElement("div"));
+      buttons.className = "cm-chunkButtons";
+      let accept = buttons.appendChild(document.createElement("button"));
+      accept.name = "accept";
+      accept.textContent = state.phrase("Accept");
+      accept.onmousedown = (e) => {
+        e.preventDefault();
+        acceptChunk(view, view.posAtDOM(dom));
+      };
+      let reject = buttons.appendChild(document.createElement("button"));
+      reject.name = "reject";
+      reject.textContent = state.phrase("Reject");
+      reject.onmousedown = (e) => {
+        e.preventDefault();
+        rejectChunk(view, view.posAtDOM(dom));
+      };
+    }
+    let content = dom.appendChild(document.createElement("del"));
+    let changes = chunk.changes, changeI = 0, inside = false;
+    function add(from, to, cls) {
+      for (let at = from; at < to; ) {
+        let nextStop = to, nodeCls = cls + (inside ? " cm-deletedText" : ""), flip = false;
+        if (highlightChanges && changeI < changes.length) {
+          let nextBound = Math.max(0, inside ? changes[changeI].toA : changes[changeI].fromA);
+          if (nextBound <= nextStop) {
+            nextStop = nextBound;
+            if (inside)
+              changeI++;
+            flip = true;
+          }
+        }
+        if (nextStop > at) {
+          let node = document.createTextNode(text2.slice(at, nextStop));
+          if (nodeCls) {
+            let span = content.appendChild(document.createElement("span"));
+            span.className = nodeCls;
+            span.appendChild(node);
+          } else {
+            content.appendChild(node);
+          }
+        }
+        at = nextStop;
+        if (flip)
+          inside = !inside;
+      }
+    }
+    if (lang) {
+      let tree = lang.parser.parse(text2), pos = 0;
+      (0, import_highlight.highlightTree)(tree, { style: (tags) => (0, import_language.highlightingFor)(state, tags) }, (from, to, cls) => {
+        if (from > pos)
+          add(pos, from, "");
+        add(from, to, cls);
+        pos = to;
+      });
+      add(pos, text2.length, "");
+    } else {
+      add(0, text2.length, "");
+    }
+    return dom;
+  };
+  let deco = import_view.Decoration.widget({
+    block: true,
+    side: -1,
+    widget: new DeletionWidget(buildDOM)
+  });
+  DeletionWidgets.set(chunk.changes, deco);
+  return deco;
+}
+function acceptChunk(view, pos) {
+  let { state } = view, at = pos !== null && pos !== void 0 ? pos : state.selection.main.head;
+  let chunk = view.state.field(ChunkField).find((ch) => ch.fromB <= at && ch.endB >= at);
+  if (!chunk)
+    return false;
+  let insert2 = view.state.sliceDoc(chunk.fromB, Math.max(chunk.fromB, chunk.toB - 1));
+  let orig = view.state.field(originalDoc);
+  if (chunk.fromB != chunk.toB && chunk.toA <= orig.length)
+    insert2 += view.state.lineBreak;
+  let changes = import_state.ChangeSet.of({ from: chunk.fromA, to: Math.min(orig.length, chunk.toA), insert: insert2 }, orig.length);
+  view.dispatch({
+    effects: updateOriginalDoc.of({ doc: changes.apply(orig), changes }),
+    userEvent: "accept"
+  });
+  return true;
+}
+function rejectChunk(view, pos) {
+  let { state } = view, at = pos !== null && pos !== void 0 ? pos : state.selection.main.head;
+  let chunk = state.field(ChunkField).find((ch) => ch.fromB <= at && ch.endB >= at);
+  if (!chunk)
+    return false;
+  let orig = state.field(originalDoc);
+  let insert2 = orig.sliceString(chunk.fromA, Math.max(chunk.fromA, chunk.toA - 1));
+  if (chunk.fromA != chunk.toA && chunk.toB <= state.doc.length)
+    insert2 += state.lineBreak;
+  view.dispatch({
+    changes: { from: chunk.fromB, to: Math.min(state.doc.length, chunk.toB), insert: insert2 },
+    userEvent: "revert"
+  });
+  return true;
+}
+function buildDeletedChunks(state) {
+  let builder = new import_state.RangeSetBuilder();
+  for (let ch of state.field(ChunkField))
+    builder.add(ch.fromB, ch.fromB, deletionWidget(state, ch));
+  return builder.finish();
+}
+var deletedChunks = /* @__PURE__ */ import_state.StateField.define({
+  create: (state) => buildDeletedChunks(state),
+  update(deco, tr) {
+    return tr.state.field(ChunkField, false) != tr.startState.field(ChunkField, false) ? buildDeletedChunks(tr.state) : deco;
+  },
+  provide: (f) => import_view.EditorView.decorations.from(f)
+});
+
+// src/components/diff_view.svelte
+var import_state4 = require("@codemirror/state");
+
+// node_modules/.pnpm/codemirror@6.0.1_@lezer+common@1.2.3/node_modules/codemirror/dist/index.js
+var import_view2 = require("@codemirror/view");
+var import_view3 = require("@codemirror/view");
+var import_state2 = require("@codemirror/state");
+var import_language2 = require("@codemirror/language");
+var import_commands = require("@codemirror/commands");
+var import_search = require("@codemirror/search");
+var import_autocomplete = require("@codemirror/autocomplete");
+var import_lint = require("@codemirror/lint");
+var basicSetup = /* @__PURE__ */ (() => [
+  (0, import_view2.lineNumbers)(),
+  (0, import_view2.highlightActiveLineGutter)(),
+  (0, import_view2.highlightSpecialChars)(),
+  (0, import_commands.history)(),
+  (0, import_language2.foldGutter)(),
+  (0, import_view2.drawSelection)(),
+  (0, import_view2.dropCursor)(),
+  import_state2.EditorState.allowMultipleSelections.of(true),
+  (0, import_language2.indentOnInput)(),
+  (0, import_language2.syntaxHighlighting)(import_language2.defaultHighlightStyle, { fallback: true }),
+  (0, import_language2.bracketMatching)(),
+  (0, import_autocomplete.closeBrackets)(),
+  (0, import_autocomplete.autocompletion)(),
+  (0, import_view2.rectangularSelection)(),
+  (0, import_view2.crosshairCursor)(),
+  (0, import_view2.highlightActiveLine)(),
+  (0, import_search.highlightSelectionMatches)(),
+  import_view2.keymap.of([
+    ...import_autocomplete.closeBracketsKeymap,
+    ...import_commands.defaultKeymap,
+    ...import_search.searchKeymap,
+    ...import_commands.historyKeymap,
+    ...import_language2.foldKeymap,
+    ...import_autocomplete.completionKeymap,
+    ...import_lint.lintKeymap
+  ])
+])();
+
+// node_modules/.pnpm/marked@11.2.0/node_modules/marked/lib/marked.esm.js
+function _getDefaults() {
+  return {
+    async: false,
+    breaks: false,
+    extensions: null,
+    gfm: true,
+    hooks: null,
+    pedantic: false,
+    renderer: null,
+    silent: false,
+    tokenizer: null,
+    walkTokens: null
+  };
+}
+var _defaults = _getDefaults();
+function changeDefaults(newDefaults) {
+  _defaults = newDefaults;
+}
+var escapeTest = /[&<>"']/;
+var escapeReplace = new RegExp(escapeTest.source, "g");
+var escapeTestNoEncode = /[<>"']|&(?!(#\d{1,7}|#[Xx][a-fA-F0-9]{1,6}|\w+);)/;
+var escapeReplaceNoEncode = new RegExp(escapeTestNoEncode.source, "g");
+var escapeReplacements = {
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  '"': "&quot;",
+  "'": "&#39;"
+};
+var getEscapeReplacement = (ch) => escapeReplacements[ch];
+function escape$1(html2, encode) {
+  if (encode) {
+    if (escapeTest.test(html2)) {
+      return html2.replace(escapeReplace, getEscapeReplacement);
+    }
+  } else {
+    if (escapeTestNoEncode.test(html2)) {
+      return html2.replace(escapeReplaceNoEncode, getEscapeReplacement);
+    }
+  }
+  return html2;
+}
+var unescapeTest = /&(#(?:\d+)|(?:#x[0-9A-Fa-f]+)|(?:\w+));?/ig;
+function unescape(html2) {
+  return html2.replace(unescapeTest, (_, n) => {
+    n = n.toLowerCase();
+    if (n === "colon")
+      return ":";
+    if (n.charAt(0) === "#") {
+      return n.charAt(1) === "x" ? String.fromCharCode(parseInt(n.substring(2), 16)) : String.fromCharCode(+n.substring(1));
+    }
+    return "";
+  });
+}
+var caret = /(^|[^\[])\^/g;
+function edit(regex, opt) {
+  let source = typeof regex === "string" ? regex : regex.source;
+  opt = opt || "";
+  const obj = {
+    replace: (name, val) => {
+      let valSource = typeof val === "string" ? val : val.source;
+      valSource = valSource.replace(caret, "$1");
+      source = source.replace(name, valSource);
+      return obj;
+    },
+    getRegex: () => {
+      return new RegExp(source, opt);
+    }
+  };
+  return obj;
+}
+function cleanUrl(href) {
+  try {
+    href = encodeURI(href).replace(/%25/g, "%");
+  } catch (e) {
+    return null;
+  }
+  return href;
+}
+var noopTest = { exec: () => null };
+function splitCells(tableRow, count) {
+  const row = tableRow.replace(/\|/g, (match, offset, str) => {
+    let escaped = false;
+    let curr = offset;
+    while (--curr >= 0 && str[curr] === "\\")
+      escaped = !escaped;
+    if (escaped) {
+      return "|";
+    } else {
+      return " |";
+    }
+  }), cells = row.split(/ \|/);
+  let i = 0;
+  if (!cells[0].trim()) {
+    cells.shift();
+  }
+  if (cells.length > 0 && !cells[cells.length - 1].trim()) {
+    cells.pop();
+  }
+  if (count) {
+    if (cells.length > count) {
+      cells.splice(count);
+    } else {
+      while (cells.length < count)
+        cells.push("");
+    }
+  }
+  for (; i < cells.length; i++) {
+    cells[i] = cells[i].trim().replace(/\\\|/g, "|");
+  }
+  return cells;
+}
+function rtrim(str, c, invert) {
+  const l = str.length;
+  if (l === 0) {
+    return "";
+  }
+  let suffLen = 0;
+  while (suffLen < l) {
+    const currChar = str.charAt(l - suffLen - 1);
+    if (currChar === c && !invert) {
+      suffLen++;
+    } else if (currChar !== c && invert) {
+      suffLen++;
+    } else {
+      break;
+    }
+  }
+  return str.slice(0, l - suffLen);
+}
+function findClosingBracket(str, b) {
+  if (str.indexOf(b[1]) === -1) {
+    return -1;
+  }
+  let level = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === "\\") {
+      i++;
+    } else if (str[i] === b[0]) {
+      level++;
+    } else if (str[i] === b[1]) {
+      level--;
+      if (level < 0) {
+        return i;
+      }
+    }
+  }
+  return -1;
+}
+function outputLink(cap, link2, raw, lexer2) {
+  const href = link2.href;
+  const title = link2.title ? escape$1(link2.title) : null;
+  const text2 = cap[1].replace(/\\([\[\]])/g, "$1");
+  if (cap[0].charAt(0) !== "!") {
+    lexer2.state.inLink = true;
+    const token = {
+      type: "link",
+      raw,
+      href,
+      title,
+      text: text2,
+      tokens: lexer2.inlineTokens(text2)
+    };
+    lexer2.state.inLink = false;
+    return token;
+  }
+  return {
+    type: "image",
+    raw,
+    href,
+    title,
+    text: escape$1(text2)
+  };
+}
+function indentCodeCompensation(raw, text2) {
+  const matchIndentToCode = raw.match(/^(\s+)(?:```)/);
+  if (matchIndentToCode === null) {
+    return text2;
+  }
+  const indentToCode = matchIndentToCode[1];
+  return text2.split("\n").map((node) => {
+    const matchIndentInNode = node.match(/^\s+/);
+    if (matchIndentInNode === null) {
+      return node;
+    }
+    const [indentInNode] = matchIndentInNode;
+    if (indentInNode.length >= indentToCode.length) {
+      return node.slice(indentToCode.length);
+    }
+    return node;
+  }).join("\n");
+}
+var _Tokenizer = class {
+  // set by the lexer
+  constructor(options2) {
+    __publicField(this, "options");
+    __publicField(this, "rules");
+    // set by the lexer
+    __publicField(this, "lexer");
+    this.options = options2 || _defaults;
+  }
+  space(src) {
+    const cap = this.rules.block.newline.exec(src);
+    if (cap && cap[0].length > 0) {
+      return {
+        type: "space",
+        raw: cap[0]
+      };
+    }
+  }
+  code(src) {
+    const cap = this.rules.block.code.exec(src);
+    if (cap) {
+      const text2 = cap[0].replace(/^ {1,4}/gm, "");
+      return {
+        type: "code",
+        raw: cap[0],
+        codeBlockStyle: "indented",
+        text: !this.options.pedantic ? rtrim(text2, "\n") : text2
+      };
+    }
+  }
+  fences(src) {
+    const cap = this.rules.block.fences.exec(src);
+    if (cap) {
+      const raw = cap[0];
+      const text2 = indentCodeCompensation(raw, cap[3] || "");
+      return {
+        type: "code",
+        raw,
+        lang: cap[2] ? cap[2].trim().replace(this.rules.inline.anyPunctuation, "$1") : cap[2],
+        text: text2
+      };
+    }
+  }
+  heading(src) {
+    const cap = this.rules.block.heading.exec(src);
+    if (cap) {
+      let text2 = cap[2].trim();
+      if (/#$/.test(text2)) {
+        const trimmed = rtrim(text2, "#");
+        if (this.options.pedantic) {
+          text2 = trimmed.trim();
+        } else if (!trimmed || / $/.test(trimmed)) {
+          text2 = trimmed.trim();
+        }
+      }
+      return {
+        type: "heading",
+        raw: cap[0],
+        depth: cap[1].length,
+        text: text2,
+        tokens: this.lexer.inline(text2)
+      };
+    }
+  }
+  hr(src) {
+    const cap = this.rules.block.hr.exec(src);
+    if (cap) {
+      return {
+        type: "hr",
+        raw: cap[0]
+      };
+    }
+  }
+  blockquote(src) {
+    const cap = this.rules.block.blockquote.exec(src);
+    if (cap) {
+      const text2 = rtrim(cap[0].replace(/^ *>[ \t]?/gm, ""), "\n");
+      const top2 = this.lexer.state.top;
+      this.lexer.state.top = true;
+      const tokens = this.lexer.blockTokens(text2);
+      this.lexer.state.top = top2;
+      return {
+        type: "blockquote",
+        raw: cap[0],
+        tokens,
+        text: text2
+      };
+    }
+  }
+  list(src) {
+    let cap = this.rules.block.list.exec(src);
+    if (cap) {
+      let bull = cap[1].trim();
+      const isordered = bull.length > 1;
+      const list2 = {
+        type: "list",
+        raw: "",
+        ordered: isordered,
+        start: isordered ? +bull.slice(0, -1) : "",
+        loose: false,
+        items: []
+      };
+      bull = isordered ? `\\d{1,9}\\${bull.slice(-1)}` : `\\${bull}`;
+      if (this.options.pedantic) {
+        bull = isordered ? bull : "[*+-]";
+      }
+      const itemRegex = new RegExp(`^( {0,3}${bull})((?:[	 ][^\\n]*)?(?:\\n|$))`);
+      let raw = "";
+      let itemContents = "";
+      let endsWithBlankLine = false;
+      while (src) {
+        let endEarly = false;
+        if (!(cap = itemRegex.exec(src))) {
+          break;
+        }
+        if (this.rules.block.hr.test(src)) {
+          break;
+        }
+        raw = cap[0];
+        src = src.substring(raw.length);
+        let line = cap[2].split("\n", 1)[0].replace(/^\t+/, (t) => " ".repeat(3 * t.length));
+        let nextLine = src.split("\n", 1)[0];
+        let indent = 0;
+        if (this.options.pedantic) {
+          indent = 2;
+          itemContents = line.trimStart();
+        } else {
+          indent = cap[2].search(/[^ ]/);
+          indent = indent > 4 ? 1 : indent;
+          itemContents = line.slice(indent);
+          indent += cap[1].length;
+        }
+        let blankLine = false;
+        if (!line && /^ *$/.test(nextLine)) {
+          raw += nextLine + "\n";
+          src = src.substring(nextLine.length + 1);
+          endEarly = true;
+        }
+        if (!endEarly) {
+          const nextBulletRegex = new RegExp(`^ {0,${Math.min(3, indent - 1)}}(?:[*+-]|\\d{1,9}[.)])((?:[ 	][^\\n]*)?(?:\\n|$))`);
+          const hrRegex = new RegExp(`^ {0,${Math.min(3, indent - 1)}}((?:- *){3,}|(?:_ *){3,}|(?:\\* *){3,})(?:\\n+|$)`);
+          const fencesBeginRegex = new RegExp(`^ {0,${Math.min(3, indent - 1)}}(?:\`\`\`|~~~)`);
+          const headingBeginRegex = new RegExp(`^ {0,${Math.min(3, indent - 1)}}#`);
+          while (src) {
+            const rawLine = src.split("\n", 1)[0];
+            nextLine = rawLine;
+            if (this.options.pedantic) {
+              nextLine = nextLine.replace(/^ {1,4}(?=( {4})*[^ ])/g, "  ");
+            }
+            if (fencesBeginRegex.test(nextLine)) {
+              break;
+            }
+            if (headingBeginRegex.test(nextLine)) {
+              break;
+            }
+            if (nextBulletRegex.test(nextLine)) {
+              break;
+            }
+            if (hrRegex.test(src)) {
+              break;
+            }
+            if (nextLine.search(/[^ ]/) >= indent || !nextLine.trim()) {
+              itemContents += "\n" + nextLine.slice(indent);
+            } else {
+              if (blankLine) {
+                break;
+              }
+              if (line.search(/[^ ]/) >= 4) {
+                break;
+              }
+              if (fencesBeginRegex.test(line)) {
+                break;
+              }
+              if (headingBeginRegex.test(line)) {
+                break;
+              }
+              if (hrRegex.test(line)) {
+                break;
+              }
+              itemContents += "\n" + nextLine;
+            }
+            if (!blankLine && !nextLine.trim()) {
+              blankLine = true;
+            }
+            raw += rawLine + "\n";
+            src = src.substring(rawLine.length + 1);
+            line = nextLine.slice(indent);
+          }
+        }
+        if (!list2.loose) {
+          if (endsWithBlankLine) {
+            list2.loose = true;
+          } else if (/\n *\n *$/.test(raw)) {
+            endsWithBlankLine = true;
+          }
+        }
+        let istask = null;
+        let ischecked;
+        if (this.options.gfm) {
+          istask = /^\[[ xX]\] /.exec(itemContents);
+          if (istask) {
+            ischecked = istask[0] !== "[ ] ";
+            itemContents = itemContents.replace(/^\[[ xX]\] +/, "");
+          }
+        }
+        list2.items.push({
+          type: "list_item",
+          raw,
+          task: !!istask,
+          checked: ischecked,
+          loose: false,
+          text: itemContents,
+          tokens: []
+        });
+        list2.raw += raw;
+      }
+      list2.items[list2.items.length - 1].raw = raw.trimEnd();
+      list2.items[list2.items.length - 1].text = itemContents.trimEnd();
+      list2.raw = list2.raw.trimEnd();
+      for (let i = 0; i < list2.items.length; i++) {
+        this.lexer.state.top = false;
+        list2.items[i].tokens = this.lexer.blockTokens(list2.items[i].text, []);
+        if (!list2.loose) {
+          const spacers = list2.items[i].tokens.filter((t) => t.type === "space");
+          const hasMultipleLineBreaks = spacers.length > 0 && spacers.some((t) => /\n.*\n/.test(t.raw));
+          list2.loose = hasMultipleLineBreaks;
+        }
+      }
+      if (list2.loose) {
+        for (let i = 0; i < list2.items.length; i++) {
+          list2.items[i].loose = true;
+        }
+      }
+      return list2;
+    }
+  }
+  html(src) {
+    const cap = this.rules.block.html.exec(src);
+    if (cap) {
+      const token = {
+        type: "html",
+        block: true,
+        raw: cap[0],
+        pre: cap[1] === "pre" || cap[1] === "script" || cap[1] === "style",
+        text: cap[0]
+      };
+      return token;
+    }
+  }
+  def(src) {
+    const cap = this.rules.block.def.exec(src);
+    if (cap) {
+      const tag2 = cap[1].toLowerCase().replace(/\s+/g, " ");
+      const href = cap[2] ? cap[2].replace(/^<(.*)>$/, "$1").replace(this.rules.inline.anyPunctuation, "$1") : "";
+      const title = cap[3] ? cap[3].substring(1, cap[3].length - 1).replace(this.rules.inline.anyPunctuation, "$1") : cap[3];
+      return {
+        type: "def",
+        tag: tag2,
+        raw: cap[0],
+        href,
+        title
+      };
+    }
+  }
+  table(src) {
+    const cap = this.rules.block.table.exec(src);
+    if (!cap) {
+      return;
+    }
+    if (!/[:|]/.test(cap[2])) {
+      return;
+    }
+    const headers = splitCells(cap[1]);
+    const aligns = cap[2].replace(/^\||\| *$/g, "").split("|");
+    const rows = cap[3] && cap[3].trim() ? cap[3].replace(/\n[ \t]*$/, "").split("\n") : [];
+    const item = {
+      type: "table",
+      raw: cap[0],
+      header: [],
+      align: [],
+      rows: []
+    };
+    if (headers.length !== aligns.length) {
+      return;
+    }
+    for (const align of aligns) {
+      if (/^ *-+: *$/.test(align)) {
+        item.align.push("right");
+      } else if (/^ *:-+: *$/.test(align)) {
+        item.align.push("center");
+      } else if (/^ *:-+ *$/.test(align)) {
+        item.align.push("left");
+      } else {
+        item.align.push(null);
+      }
+    }
+    for (const header of headers) {
+      item.header.push({
+        text: header,
+        tokens: this.lexer.inline(header)
+      });
+    }
+    for (const row of rows) {
+      item.rows.push(splitCells(row, item.header.length).map((cell) => {
+        return {
+          text: cell,
+          tokens: this.lexer.inline(cell)
+        };
+      }));
+    }
+    return item;
+  }
+  lheading(src) {
+    const cap = this.rules.block.lheading.exec(src);
+    if (cap) {
+      return {
+        type: "heading",
+        raw: cap[0],
+        depth: cap[2].charAt(0) === "=" ? 1 : 2,
+        text: cap[1],
+        tokens: this.lexer.inline(cap[1])
+      };
+    }
+  }
+  paragraph(src) {
+    const cap = this.rules.block.paragraph.exec(src);
+    if (cap) {
+      const text2 = cap[1].charAt(cap[1].length - 1) === "\n" ? cap[1].slice(0, -1) : cap[1];
+      return {
+        type: "paragraph",
+        raw: cap[0],
+        text: text2,
+        tokens: this.lexer.inline(text2)
+      };
+    }
+  }
+  text(src) {
+    const cap = this.rules.block.text.exec(src);
+    if (cap) {
+      return {
+        type: "text",
+        raw: cap[0],
+        text: cap[0],
+        tokens: this.lexer.inline(cap[0])
+      };
+    }
+  }
+  escape(src) {
+    const cap = this.rules.inline.escape.exec(src);
+    if (cap) {
+      return {
+        type: "escape",
+        raw: cap[0],
+        text: escape$1(cap[1])
+      };
+    }
+  }
+  tag(src) {
+    const cap = this.rules.inline.tag.exec(src);
+    if (cap) {
+      if (!this.lexer.state.inLink && /^<a /i.test(cap[0])) {
+        this.lexer.state.inLink = true;
+      } else if (this.lexer.state.inLink && /^<\/a>/i.test(cap[0])) {
+        this.lexer.state.inLink = false;
+      }
+      if (!this.lexer.state.inRawBlock && /^<(pre|code|kbd|script)(\s|>)/i.test(cap[0])) {
+        this.lexer.state.inRawBlock = true;
+      } else if (this.lexer.state.inRawBlock && /^<\/(pre|code|kbd|script)(\s|>)/i.test(cap[0])) {
+        this.lexer.state.inRawBlock = false;
+      }
+      return {
+        type: "html",
+        raw: cap[0],
+        inLink: this.lexer.state.inLink,
+        inRawBlock: this.lexer.state.inRawBlock,
+        block: false,
+        text: cap[0]
+      };
+    }
+  }
+  link(src) {
+    const cap = this.rules.inline.link.exec(src);
+    if (cap) {
+      const trimmedUrl = cap[2].trim();
+      if (!this.options.pedantic && /^</.test(trimmedUrl)) {
+        if (!/>$/.test(trimmedUrl)) {
+          return;
+        }
+        const rtrimSlash = rtrim(trimmedUrl.slice(0, -1), "\\");
+        if ((trimmedUrl.length - rtrimSlash.length) % 2 === 0) {
+          return;
+        }
+      } else {
+        const lastParenIndex = findClosingBracket(cap[2], "()");
+        if (lastParenIndex > -1) {
+          const start = cap[0].indexOf("!") === 0 ? 5 : 4;
+          const linkLen = start + cap[1].length + lastParenIndex;
+          cap[2] = cap[2].substring(0, lastParenIndex);
+          cap[0] = cap[0].substring(0, linkLen).trim();
+          cap[3] = "";
+        }
+      }
+      let href = cap[2];
+      let title = "";
+      if (this.options.pedantic) {
+        const link2 = /^([^'"]*[^\s])\s+(['"])(.*)\2/.exec(href);
+        if (link2) {
+          href = link2[1];
+          title = link2[3];
+        }
+      } else {
+        title = cap[3] ? cap[3].slice(1, -1) : "";
+      }
+      href = href.trim();
+      if (/^</.test(href)) {
+        if (this.options.pedantic && !/>$/.test(trimmedUrl)) {
+          href = href.slice(1);
+        } else {
+          href = href.slice(1, -1);
+        }
+      }
+      return outputLink(cap, {
+        href: href ? href.replace(this.rules.inline.anyPunctuation, "$1") : href,
+        title: title ? title.replace(this.rules.inline.anyPunctuation, "$1") : title
+      }, cap[0], this.lexer);
+    }
+  }
+  reflink(src, links) {
+    let cap;
+    if ((cap = this.rules.inline.reflink.exec(src)) || (cap = this.rules.inline.nolink.exec(src))) {
+      const linkString = (cap[2] || cap[1]).replace(/\s+/g, " ");
+      const link2 = links[linkString.toLowerCase()];
+      if (!link2) {
+        const text2 = cap[0].charAt(0);
+        return {
+          type: "text",
+          raw: text2,
+          text: text2
+        };
+      }
+      return outputLink(cap, link2, cap[0], this.lexer);
+    }
+  }
+  emStrong(src, maskedSrc, prevChar = "") {
+    let match = this.rules.inline.emStrongLDelim.exec(src);
+    if (!match)
+      return;
+    if (match[3] && prevChar.match(/[\p{L}\p{N}]/u))
+      return;
+    const nextChar = match[1] || match[2] || "";
+    if (!nextChar || !prevChar || this.rules.inline.punctuation.exec(prevChar)) {
+      const lLength = [...match[0]].length - 1;
+      let rDelim, rLength, delimTotal = lLength, midDelimTotal = 0;
+      const endReg = match[0][0] === "*" ? this.rules.inline.emStrongRDelimAst : this.rules.inline.emStrongRDelimUnd;
+      endReg.lastIndex = 0;
+      maskedSrc = maskedSrc.slice(-1 * src.length + lLength);
+      while ((match = endReg.exec(maskedSrc)) != null) {
+        rDelim = match[1] || match[2] || match[3] || match[4] || match[5] || match[6];
+        if (!rDelim)
+          continue;
+        rLength = [...rDelim].length;
+        if (match[3] || match[4]) {
+          delimTotal += rLength;
+          continue;
+        } else if (match[5] || match[6]) {
+          if (lLength % 3 && !((lLength + rLength) % 3)) {
+            midDelimTotal += rLength;
+            continue;
+          }
+        }
+        delimTotal -= rLength;
+        if (delimTotal > 0)
+          continue;
+        rLength = Math.min(rLength, rLength + delimTotal + midDelimTotal);
+        const lastCharLength = [...match[0]][0].length;
+        const raw = src.slice(0, lLength + match.index + lastCharLength + rLength);
+        if (Math.min(lLength, rLength) % 2) {
+          const text3 = raw.slice(1, -1);
+          return {
+            type: "em",
+            raw,
+            text: text3,
+            tokens: this.lexer.inlineTokens(text3)
+          };
+        }
+        const text2 = raw.slice(2, -2);
+        return {
+          type: "strong",
+          raw,
+          text: text2,
+          tokens: this.lexer.inlineTokens(text2)
+        };
+      }
+    }
+  }
+  codespan(src) {
+    const cap = this.rules.inline.code.exec(src);
+    if (cap) {
+      let text2 = cap[2].replace(/\n/g, " ");
+      const hasNonSpaceChars = /[^ ]/.test(text2);
+      const hasSpaceCharsOnBothEnds = /^ /.test(text2) && / $/.test(text2);
+      if (hasNonSpaceChars && hasSpaceCharsOnBothEnds) {
+        text2 = text2.substring(1, text2.length - 1);
+      }
+      text2 = escape$1(text2, true);
+      return {
+        type: "codespan",
+        raw: cap[0],
+        text: text2
+      };
+    }
+  }
+  br(src) {
+    const cap = this.rules.inline.br.exec(src);
+    if (cap) {
+      return {
+        type: "br",
+        raw: cap[0]
+      };
+    }
+  }
+  del(src) {
+    const cap = this.rules.inline.del.exec(src);
+    if (cap) {
+      return {
+        type: "del",
+        raw: cap[0],
+        text: cap[2],
+        tokens: this.lexer.inlineTokens(cap[2])
+      };
+    }
+  }
+  autolink(src) {
+    const cap = this.rules.inline.autolink.exec(src);
+    if (cap) {
+      let text2, href;
+      if (cap[2] === "@") {
+        text2 = escape$1(cap[1]);
+        href = "mailto:" + text2;
+      } else {
+        text2 = escape$1(cap[1]);
+        href = text2;
+      }
+      return {
+        type: "link",
+        raw: cap[0],
+        text: text2,
+        href,
+        tokens: [
+          {
+            type: "text",
+            raw: text2,
+            text: text2
+          }
+        ]
+      };
+    }
+  }
+  url(src) {
+    var _a, _b;
+    let cap;
+    if (cap = this.rules.inline.url.exec(src)) {
+      let text2, href;
+      if (cap[2] === "@") {
+        text2 = escape$1(cap[0]);
+        href = "mailto:" + text2;
+      } else {
+        let prevCapZero;
+        do {
+          prevCapZero = cap[0];
+          cap[0] = (_b = (_a = this.rules.inline._backpedal.exec(cap[0])) == null ? void 0 : _a[0]) != null ? _b : "";
+        } while (prevCapZero !== cap[0]);
+        text2 = escape$1(cap[0]);
+        if (cap[1] === "www.") {
+          href = "http://" + cap[0];
+        } else {
+          href = cap[0];
+        }
+      }
+      return {
+        type: "link",
+        raw: cap[0],
+        text: text2,
+        href,
+        tokens: [
+          {
+            type: "text",
+            raw: text2,
+            text: text2
+          }
+        ]
+      };
+    }
+  }
+  inlineText(src) {
+    const cap = this.rules.inline.text.exec(src);
+    if (cap) {
+      let text2;
+      if (this.lexer.state.inRawBlock) {
+        text2 = cap[0];
+      } else {
+        text2 = escape$1(cap[0]);
+      }
+      return {
+        type: "text",
+        raw: cap[0],
+        text: text2
+      };
+    }
+  }
+};
+var newline = /^(?: *(?:\n|$))+/;
+var blockCode = /^( {4}[^\n]+(?:\n(?: *(?:\n|$))*)?)+/;
+var fences = /^ {0,3}(`{3,}(?=[^`\n]*(?:\n|$))|~{3,})([^\n]*)(?:\n|$)(?:|([\s\S]*?)(?:\n|$))(?: {0,3}\1[~`]* *(?=\n|$)|$)/;
+var hr = /^ {0,3}((?:-[\t ]*){3,}|(?:_[ \t]*){3,}|(?:\*[ \t]*){3,})(?:\n+|$)/;
+var heading = /^ {0,3}(#{1,6})(?=\s|$)(.*)(?:\n+|$)/;
+var bullet = /(?:[*+-]|\d{1,9}[.)])/;
+var lheading = edit(/^(?!bull )((?:.|\n(?!\s*?\n|bull ))+?)\n {0,3}(=+|-+) *(?:\n+|$)/).replace(/bull/g, bullet).getRegex();
+var _paragraph = /^([^\n]+(?:\n(?!hr|heading|lheading|blockquote|fences|list|html|table| +\n)[^\n]+)*)/;
+var blockText = /^[^\n]+/;
+var _blockLabel = /(?!\s*\])(?:\\.|[^\[\]\\])+/;
+var def = edit(/^ {0,3}\[(label)\]: *(?:\n *)?([^<\s][^\s]*|<.*?>)(?:(?: +(?:\n *)?| *\n *)(title))? *(?:\n+|$)/).replace("label", _blockLabel).replace("title", /(?:"(?:\\"?|[^"\\])*"|'[^'\n]*(?:\n[^'\n]+)*\n?'|\([^()]*\))/).getRegex();
+var list = edit(/^( {0,3}bull)([ \t][^\n]+?)?(?:\n|$)/).replace(/bull/g, bullet).getRegex();
+var _tag = "address|article|aside|base|basefont|blockquote|body|caption|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option|p|param|section|source|summary|table|tbody|td|tfoot|th|thead|title|tr|track|ul";
+var _comment = /<!--(?!-?>)[\s\S]*?(?:-->|$)/;
+var html = edit("^ {0,3}(?:<(script|pre|style|textarea)[\\s>][\\s\\S]*?(?:</\\1>[^\\n]*\\n+|$)|comment[^\\n]*(\\n+|$)|<\\?[\\s\\S]*?(?:\\?>\\n*|$)|<![A-Z][\\s\\S]*?(?:>\\n*|$)|<!\\[CDATA\\[[\\s\\S]*?(?:\\]\\]>\\n*|$)|</?(tag)(?: +|\\n|/?>)[\\s\\S]*?(?:(?:\\n *)+\\n|$)|<(?!script|pre|style|textarea)([a-z][\\w-]*)(?:attribute)*? */?>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n *)+\\n|$)|</(?!script|pre|style|textarea)[a-z][\\w-]*\\s*>(?=[ \\t]*(?:\\n|$))[\\s\\S]*?(?:(?:\\n *)+\\n|$))", "i").replace("comment", _comment).replace("tag", _tag).replace("attribute", / +[a-zA-Z:_][\w.:-]*(?: *= *"[^"\n]*"| *= *'[^'\n]*'| *= *[^\s"'=<>`]+)?/).getRegex();
+var paragraph = edit(_paragraph).replace("hr", hr).replace("heading", " {0,3}#{1,6}(?:\\s|$)").replace("|lheading", "").replace("|table", "").replace("blockquote", " {0,3}>").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list", " {0,3}(?:[*+-]|1[.)]) ").replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag", _tag).getRegex();
+var blockquote = edit(/^( {0,3}> ?(paragraph|[^\n]*)(?:\n|$))+/).replace("paragraph", paragraph).getRegex();
+var blockNormal = {
+  blockquote,
+  code: blockCode,
+  def,
+  fences,
+  heading,
+  hr,
+  html,
+  lheading,
+  list,
+  newline,
+  paragraph,
+  table: noopTest,
+  text: blockText
+};
+var gfmTable = edit("^ *([^\\n ].*)\\n {0,3}((?:\\| *)?:?-+:? *(?:\\| *:?-+:? *)*(?:\\| *)?)(?:\\n((?:(?! *\\n|hr|heading|blockquote|code|fences|list|html).*(?:\\n|$))*)\\n*|$)").replace("hr", hr).replace("heading", " {0,3}#{1,6}(?:\\s|$)").replace("blockquote", " {0,3}>").replace("code", " {4}[^\\n]").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list", " {0,3}(?:[*+-]|1[.)]) ").replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag", _tag).getRegex();
+var blockGfm = {
+  ...blockNormal,
+  table: gfmTable,
+  paragraph: edit(_paragraph).replace("hr", hr).replace("heading", " {0,3}#{1,6}(?:\\s|$)").replace("|lheading", "").replace("table", gfmTable).replace("blockquote", " {0,3}>").replace("fences", " {0,3}(?:`{3,}(?=[^`\\n]*\\n)|~{3,})[^\\n]*\\n").replace("list", " {0,3}(?:[*+-]|1[.)]) ").replace("html", "</?(?:tag)(?: +|\\n|/?>)|<(?:script|pre|style|textarea|!--)").replace("tag", _tag).getRegex()
+};
+var blockPedantic = {
+  ...blockNormal,
+  html: edit(`^ *(?:comment *(?:\\n|\\s*$)|<(tag)[\\s\\S]+?</\\1> *(?:\\n{2,}|\\s*$)|<tag(?:"[^"]*"|'[^']*'|\\s[^'"/>\\s]*)*?/?> *(?:\\n{2,}|\\s*$))`).replace("comment", _comment).replace(/tag/g, "(?!(?:a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)\\b)\\w+(?!:|[^\\w\\s@]*@)\\b").getRegex(),
+  def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +(["(][^\n]+[")]))? *(?:\n+|$)/,
+  heading: /^(#{1,6})(.*)(?:\n+|$)/,
+  fences: noopTest,
+  // fences not supported
+  lheading: /^(.+?)\n {0,3}(=+|-+) *(?:\n+|$)/,
+  paragraph: edit(_paragraph).replace("hr", hr).replace("heading", " *#{1,6} *[^\n]").replace("lheading", lheading).replace("|table", "").replace("blockquote", " {0,3}>").replace("|fences", "").replace("|list", "").replace("|html", "").replace("|tag", "").getRegex()
+};
+var escape2 = /^\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/;
+var inlineCode = /^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/;
+var br = /^( {2,}|\\)\n(?!\s*$)/;
+var inlineText = /^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*_]|\b_|$)|[^ ](?= {2,}\n)))/;
+var _punctuation = "\\p{P}$+<=>`^|~";
+var punctuation = edit(/^((?![*_])[\spunctuation])/, "u").replace(/punctuation/g, _punctuation).getRegex();
+var blockSkip = /\[[^[\]]*?\]\([^\(\)]*?\)|`[^`]*?`|<[^<>]*?>/g;
+var emStrongLDelim = edit(/^(?:\*+(?:((?!\*)[punct])|[^\s*]))|^_+(?:((?!_)[punct])|([^\s_]))/, "u").replace(/punct/g, _punctuation).getRegex();
+var emStrongRDelimAst = edit("^[^_*]*?__[^_*]*?\\*[^_*]*?(?=__)|[^*]+(?=[^*])|(?!\\*)[punct](\\*+)(?=[\\s]|$)|[^punct\\s](\\*+)(?!\\*)(?=[punct\\s]|$)|(?!\\*)[punct\\s](\\*+)(?=[^punct\\s])|[\\s](\\*+)(?!\\*)(?=[punct])|(?!\\*)[punct](\\*+)(?!\\*)(?=[punct])|[^punct\\s](\\*+)(?=[^punct\\s])", "gu").replace(/punct/g, _punctuation).getRegex();
+var emStrongRDelimUnd = edit("^[^_*]*?\\*\\*[^_*]*?_[^_*]*?(?=\\*\\*)|[^_]+(?=[^_])|(?!_)[punct](_+)(?=[\\s]|$)|[^punct\\s](_+)(?!_)(?=[punct\\s]|$)|(?!_)[punct\\s](_+)(?=[^punct\\s])|[\\s](_+)(?!_)(?=[punct])|(?!_)[punct](_+)(?!_)(?=[punct])", "gu").replace(/punct/g, _punctuation).getRegex();
+var anyPunctuation = edit(/\\([punct])/, "gu").replace(/punct/g, _punctuation).getRegex();
+var autolink = edit(/^<(scheme:[^\s\x00-\x1f<>]*|email)>/).replace("scheme", /[a-zA-Z][a-zA-Z0-9+.-]{1,31}/).replace("email", /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/).getRegex();
+var _inlineComment = edit(_comment).replace("(?:-->|$)", "-->").getRegex();
+var tag = edit("^comment|^</[a-zA-Z][\\w:-]*\\s*>|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>|^<\\?[\\s\\S]*?\\?>|^<![a-zA-Z]+\\s[\\s\\S]*?>|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>").replace("comment", _inlineComment).replace("attribute", /\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*"[^"]*"|\s*=\s*'[^']*'|\s*=\s*[^\s"'=<>`]+)?/).getRegex();
+var _inlineLabel = /(?:\[(?:\\.|[^\[\]\\])*\]|\\.|`[^`]*`|[^\[\]\\`])*?/;
+var link = edit(/^!?\[(label)\]\(\s*(href)(?:\s+(title))?\s*\)/).replace("label", _inlineLabel).replace("href", /<(?:\\.|[^\n<>\\])+>|[^\s\x00-\x1f]*/).replace("title", /"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)/).getRegex();
+var reflink = edit(/^!?\[(label)\]\[(ref)\]/).replace("label", _inlineLabel).replace("ref", _blockLabel).getRegex();
+var nolink = edit(/^!?\[(ref)\](?:\[\])?/).replace("ref", _blockLabel).getRegex();
+var reflinkSearch = edit("reflink|nolink(?!\\()", "g").replace("reflink", reflink).replace("nolink", nolink).getRegex();
+var inlineNormal = {
+  _backpedal: noopTest,
+  // only used for GFM url
+  anyPunctuation,
+  autolink,
+  blockSkip,
+  br,
+  code: inlineCode,
+  del: noopTest,
+  emStrongLDelim,
+  emStrongRDelimAst,
+  emStrongRDelimUnd,
+  escape: escape2,
+  link,
+  nolink,
+  punctuation,
+  reflink,
+  reflinkSearch,
+  tag,
+  text: inlineText,
+  url: noopTest
+};
+var inlinePedantic = {
+  ...inlineNormal,
+  link: edit(/^!?\[(label)\]\((.*?)\)/).replace("label", _inlineLabel).getRegex(),
+  reflink: edit(/^!?\[(label)\]\s*\[([^\]]*)\]/).replace("label", _inlineLabel).getRegex()
+};
+var inlineGfm = {
+  ...inlineNormal,
+  escape: edit(escape2).replace("])", "~|])").getRegex(),
+  url: edit(/^((?:ftp|https?):\/\/|www\.)(?:[a-zA-Z0-9\-]+\.?)+[^\s<]*|^email/, "i").replace("email", /[A-Za-z0-9._+-]+(@)[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![-_])/).getRegex(),
+  _backpedal: /(?:[^?!.,:;*_'"~()&]+|\([^)]*\)|&(?![a-zA-Z0-9]+;$)|[?!.,:;*_'"~)]+(?!$))+/,
+  del: /^(~~?)(?=[^\s~])([\s\S]*?[^\s~])\1(?=[^~]|$)/,
+  text: /^([`~]+|[^`~])(?:(?= {2,}\n)|(?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)|[\s\S]*?(?:(?=[\\<!\[`*~_]|\b_|https?:\/\/|ftp:\/\/|www\.|$)|[^ ](?= {2,}\n)|[^a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-](?=[a-zA-Z0-9.!#$%&'*+\/=?_`{\|}~-]+@)))/
+};
+var inlineBreaks = {
+  ...inlineGfm,
+  br: edit(br).replace("{2,}", "*").getRegex(),
+  text: edit(inlineGfm.text).replace("\\b_", "\\b_| {2,}\\n").replace(/\{2,\}/g, "*").getRegex()
+};
+var block = {
+  normal: blockNormal,
+  gfm: blockGfm,
+  pedantic: blockPedantic
+};
+var inline = {
+  normal: inlineNormal,
+  gfm: inlineGfm,
+  breaks: inlineBreaks,
+  pedantic: inlinePedantic
+};
+var _Lexer = class __Lexer {
+  constructor(options2) {
+    __publicField(this, "tokens");
+    __publicField(this, "options");
+    __publicField(this, "state");
+    __publicField(this, "tokenizer");
+    __publicField(this, "inlineQueue");
+    this.tokens = [];
+    this.tokens.links = /* @__PURE__ */ Object.create(null);
+    this.options = options2 || _defaults;
+    this.options.tokenizer = this.options.tokenizer || new _Tokenizer();
+    this.tokenizer = this.options.tokenizer;
+    this.tokenizer.options = this.options;
+    this.tokenizer.lexer = this;
+    this.inlineQueue = [];
+    this.state = {
+      inLink: false,
+      inRawBlock: false,
+      top: true
+    };
+    const rules = {
+      block: block.normal,
+      inline: inline.normal
+    };
+    if (this.options.pedantic) {
+      rules.block = block.pedantic;
+      rules.inline = inline.pedantic;
+    } else if (this.options.gfm) {
+      rules.block = block.gfm;
+      if (this.options.breaks) {
+        rules.inline = inline.breaks;
+      } else {
+        rules.inline = inline.gfm;
+      }
+    }
+    this.tokenizer.rules = rules;
+  }
+  /**
+   * Expose Rules
+   */
+  static get rules() {
+    return {
+      block,
+      inline
+    };
+  }
+  /**
+   * Static Lex Method
+   */
+  static lex(src, options2) {
+    const lexer2 = new __Lexer(options2);
+    return lexer2.lex(src);
+  }
+  /**
+   * Static Lex Inline Method
+   */
+  static lexInline(src, options2) {
+    const lexer2 = new __Lexer(options2);
+    return lexer2.inlineTokens(src);
+  }
+  /**
+   * Preprocessing
+   */
+  lex(src) {
+    src = src.replace(/\r\n|\r/g, "\n");
+    this.blockTokens(src, this.tokens);
+    for (let i = 0; i < this.inlineQueue.length; i++) {
+      const next = this.inlineQueue[i];
+      this.inlineTokens(next.src, next.tokens);
+    }
+    this.inlineQueue = [];
+    return this.tokens;
+  }
+  blockTokens(src, tokens = []) {
+    if (this.options.pedantic) {
+      src = src.replace(/\t/g, "    ").replace(/^ +$/gm, "");
+    } else {
+      src = src.replace(/^( *)(\t+)/gm, (_, leading, tabs) => {
+        return leading + "    ".repeat(tabs.length);
+      });
+    }
+    let token;
+    let lastToken;
+    let cutSrc;
+    let lastParagraphClipped;
+    while (src) {
+      if (this.options.extensions && this.options.extensions.block && this.options.extensions.block.some((extTokenizer) => {
+        if (token = extTokenizer.call({ lexer: this }, src, tokens)) {
+          src = src.substring(token.raw.length);
+          tokens.push(token);
+          return true;
+        }
+        return false;
+      })) {
+        continue;
+      }
+      if (token = this.tokenizer.space(src)) {
+        src = src.substring(token.raw.length);
+        if (token.raw.length === 1 && tokens.length > 0) {
+          tokens[tokens.length - 1].raw += "\n";
+        } else {
+          tokens.push(token);
+        }
+        continue;
+      }
+      if (token = this.tokenizer.code(src)) {
+        src = src.substring(token.raw.length);
+        lastToken = tokens[tokens.length - 1];
+        if (lastToken && (lastToken.type === "paragraph" || lastToken.type === "text")) {
+          lastToken.raw += "\n" + token.raw;
+          lastToken.text += "\n" + token.text;
+          this.inlineQueue[this.inlineQueue.length - 1].src = lastToken.text;
+        } else {
+          tokens.push(token);
+        }
+        continue;
+      }
+      if (token = this.tokenizer.fences(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      }
+      if (token = this.tokenizer.heading(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      }
+      if (token = this.tokenizer.hr(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      }
+      if (token = this.tokenizer.blockquote(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      }
+      if (token = this.tokenizer.list(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      }
+      if (token = this.tokenizer.html(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      }
+      if (token = this.tokenizer.def(src)) {
+        src = src.substring(token.raw.length);
+        lastToken = tokens[tokens.length - 1];
+        if (lastToken && (lastToken.type === "paragraph" || lastToken.type === "text")) {
+          lastToken.raw += "\n" + token.raw;
+          lastToken.text += "\n" + token.raw;
+          this.inlineQueue[this.inlineQueue.length - 1].src = lastToken.text;
+        } else if (!this.tokens.links[token.tag]) {
+          this.tokens.links[token.tag] = {
+            href: token.href,
+            title: token.title
+          };
+        }
+        continue;
+      }
+      if (token = this.tokenizer.table(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      }
+      if (token = this.tokenizer.lheading(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      }
+      cutSrc = src;
+      if (this.options.extensions && this.options.extensions.startBlock) {
+        let startIndex = Infinity;
+        const tempSrc = src.slice(1);
+        let tempStart;
+        this.options.extensions.startBlock.forEach((getStartIndex) => {
+          tempStart = getStartIndex.call({ lexer: this }, tempSrc);
+          if (typeof tempStart === "number" && tempStart >= 0) {
+            startIndex = Math.min(startIndex, tempStart);
+          }
+        });
+        if (startIndex < Infinity && startIndex >= 0) {
+          cutSrc = src.substring(0, startIndex + 1);
+        }
+      }
+      if (this.state.top && (token = this.tokenizer.paragraph(cutSrc))) {
+        lastToken = tokens[tokens.length - 1];
+        if (lastParagraphClipped && lastToken.type === "paragraph") {
+          lastToken.raw += "\n" + token.raw;
+          lastToken.text += "\n" + token.text;
+          this.inlineQueue.pop();
+          this.inlineQueue[this.inlineQueue.length - 1].src = lastToken.text;
+        } else {
+          tokens.push(token);
+        }
+        lastParagraphClipped = cutSrc.length !== src.length;
+        src = src.substring(token.raw.length);
+        continue;
+      }
+      if (token = this.tokenizer.text(src)) {
+        src = src.substring(token.raw.length);
+        lastToken = tokens[tokens.length - 1];
+        if (lastToken && lastToken.type === "text") {
+          lastToken.raw += "\n" + token.raw;
+          lastToken.text += "\n" + token.text;
+          this.inlineQueue.pop();
+          this.inlineQueue[this.inlineQueue.length - 1].src = lastToken.text;
+        } else {
+          tokens.push(token);
+        }
+        continue;
+      }
+      if (src) {
+        const errMsg = "Infinite loop on byte: " + src.charCodeAt(0);
+        if (this.options.silent) {
+          console.error(errMsg);
+          break;
+        } else {
+          throw new Error(errMsg);
+        }
+      }
+    }
+    this.state.top = true;
+    return tokens;
+  }
+  inline(src, tokens = []) {
+    this.inlineQueue.push({ src, tokens });
+    return tokens;
+  }
+  /**
+   * Lexing/Compiling
+   */
+  inlineTokens(src, tokens = []) {
+    let token, lastToken, cutSrc;
+    let maskedSrc = src;
+    let match;
+    let keepPrevChar, prevChar;
+    if (this.tokens.links) {
+      const links = Object.keys(this.tokens.links);
+      if (links.length > 0) {
+        while ((match = this.tokenizer.rules.inline.reflinkSearch.exec(maskedSrc)) != null) {
+          if (links.includes(match[0].slice(match[0].lastIndexOf("[") + 1, -1))) {
+            maskedSrc = maskedSrc.slice(0, match.index) + "[" + "a".repeat(match[0].length - 2) + "]" + maskedSrc.slice(this.tokenizer.rules.inline.reflinkSearch.lastIndex);
+          }
+        }
+      }
+    }
+    while ((match = this.tokenizer.rules.inline.blockSkip.exec(maskedSrc)) != null) {
+      maskedSrc = maskedSrc.slice(0, match.index) + "[" + "a".repeat(match[0].length - 2) + "]" + maskedSrc.slice(this.tokenizer.rules.inline.blockSkip.lastIndex);
+    }
+    while ((match = this.tokenizer.rules.inline.anyPunctuation.exec(maskedSrc)) != null) {
+      maskedSrc = maskedSrc.slice(0, match.index) + "++" + maskedSrc.slice(this.tokenizer.rules.inline.anyPunctuation.lastIndex);
+    }
+    while (src) {
+      if (!keepPrevChar) {
+        prevChar = "";
+      }
+      keepPrevChar = false;
+      if (this.options.extensions && this.options.extensions.inline && this.options.extensions.inline.some((extTokenizer) => {
+        if (token = extTokenizer.call({ lexer: this }, src, tokens)) {
+          src = src.substring(token.raw.length);
+          tokens.push(token);
+          return true;
+        }
+        return false;
+      })) {
+        continue;
+      }
+      if (token = this.tokenizer.escape(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      }
+      if (token = this.tokenizer.tag(src)) {
+        src = src.substring(token.raw.length);
+        lastToken = tokens[tokens.length - 1];
+        if (lastToken && token.type === "text" && lastToken.type === "text") {
+          lastToken.raw += token.raw;
+          lastToken.text += token.text;
+        } else {
+          tokens.push(token);
+        }
+        continue;
+      }
+      if (token = this.tokenizer.link(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      }
+      if (token = this.tokenizer.reflink(src, this.tokens.links)) {
+        src = src.substring(token.raw.length);
+        lastToken = tokens[tokens.length - 1];
+        if (lastToken && token.type === "text" && lastToken.type === "text") {
+          lastToken.raw += token.raw;
+          lastToken.text += token.text;
+        } else {
+          tokens.push(token);
+        }
+        continue;
+      }
+      if (token = this.tokenizer.emStrong(src, maskedSrc, prevChar)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      }
+      if (token = this.tokenizer.codespan(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      }
+      if (token = this.tokenizer.br(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      }
+      if (token = this.tokenizer.del(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      }
+      if (token = this.tokenizer.autolink(src)) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      }
+      if (!this.state.inLink && (token = this.tokenizer.url(src))) {
+        src = src.substring(token.raw.length);
+        tokens.push(token);
+        continue;
+      }
+      cutSrc = src;
+      if (this.options.extensions && this.options.extensions.startInline) {
+        let startIndex = Infinity;
+        const tempSrc = src.slice(1);
+        let tempStart;
+        this.options.extensions.startInline.forEach((getStartIndex) => {
+          tempStart = getStartIndex.call({ lexer: this }, tempSrc);
+          if (typeof tempStart === "number" && tempStart >= 0) {
+            startIndex = Math.min(startIndex, tempStart);
+          }
+        });
+        if (startIndex < Infinity && startIndex >= 0) {
+          cutSrc = src.substring(0, startIndex + 1);
+        }
+      }
+      if (token = this.tokenizer.inlineText(cutSrc)) {
+        src = src.substring(token.raw.length);
+        if (token.raw.slice(-1) !== "_") {
+          prevChar = token.raw.slice(-1);
+        }
+        keepPrevChar = true;
+        lastToken = tokens[tokens.length - 1];
+        if (lastToken && lastToken.type === "text") {
+          lastToken.raw += token.raw;
+          lastToken.text += token.text;
+        } else {
+          tokens.push(token);
+        }
+        continue;
+      }
+      if (src) {
+        const errMsg = "Infinite loop on byte: " + src.charCodeAt(0);
+        if (this.options.silent) {
+          console.error(errMsg);
+          break;
+        } else {
+          throw new Error(errMsg);
+        }
+      }
+    }
+    return tokens;
+  }
+};
+var _Renderer = class {
+  constructor(options2) {
+    __publicField(this, "options");
+    this.options = options2 || _defaults;
+  }
+  code(code, infostring, escaped) {
+    var _a;
+    const lang = (_a = (infostring || "").match(/^\S*/)) == null ? void 0 : _a[0];
+    code = code.replace(/\n$/, "") + "\n";
+    if (!lang) {
+      return "<pre><code>" + (escaped ? code : escape$1(code, true)) + "</code></pre>\n";
+    }
+    return '<pre><code class="language-' + escape$1(lang) + '">' + (escaped ? code : escape$1(code, true)) + "</code></pre>\n";
+  }
+  blockquote(quote) {
+    return `<blockquote>
+${quote}</blockquote>
+`;
+  }
+  html(html2, block2) {
+    return html2;
+  }
+  heading(text2, level, raw) {
+    return `<h${level}>${text2}</h${level}>
+`;
+  }
+  hr() {
+    return "<hr>\n";
+  }
+  list(body, ordered, start) {
+    const type = ordered ? "ol" : "ul";
+    const startatt = ordered && start !== 1 ? ' start="' + start + '"' : "";
+    return "<" + type + startatt + ">\n" + body + "</" + type + ">\n";
+  }
+  listitem(text2, task, checked) {
+    return `<li>${text2}</li>
+`;
+  }
+  checkbox(checked) {
+    return "<input " + (checked ? 'checked="" ' : "") + 'disabled="" type="checkbox">';
+  }
+  paragraph(text2) {
+    return `<p>${text2}</p>
+`;
+  }
+  table(header, body) {
+    if (body)
+      body = `<tbody>${body}</tbody>`;
+    return "<table>\n<thead>\n" + header + "</thead>\n" + body + "</table>\n";
+  }
+  tablerow(content) {
+    return `<tr>
+${content}</tr>
+`;
+  }
+  tablecell(content, flags) {
+    const type = flags.header ? "th" : "td";
+    const tag2 = flags.align ? `<${type} align="${flags.align}">` : `<${type}>`;
+    return tag2 + content + `</${type}>
+`;
+  }
+  /**
+   * span level renderer
+   */
+  strong(text2) {
+    return `<strong>${text2}</strong>`;
+  }
+  em(text2) {
+    return `<em>${text2}</em>`;
+  }
+  codespan(text2) {
+    return `<code>${text2}</code>`;
+  }
+  br() {
+    return "<br>";
+  }
+  del(text2) {
+    return `<del>${text2}</del>`;
+  }
+  link(href, title, text2) {
+    const cleanHref = cleanUrl(href);
+    if (cleanHref === null) {
+      return text2;
+    }
+    href = cleanHref;
+    let out = '<a href="' + href + '"';
+    if (title) {
+      out += ' title="' + title + '"';
+    }
+    out += ">" + text2 + "</a>";
+    return out;
+  }
+  image(href, title, text2) {
+    const cleanHref = cleanUrl(href);
+    if (cleanHref === null) {
+      return text2;
+    }
+    href = cleanHref;
+    let out = `<img src="${href}" alt="${text2}"`;
+    if (title) {
+      out += ` title="${title}"`;
+    }
+    out += ">";
+    return out;
+  }
+  text(text2) {
+    return text2;
+  }
+};
+var _TextRenderer = class {
+  // no need for block level renderers
+  strong(text2) {
+    return text2;
+  }
+  em(text2) {
+    return text2;
+  }
+  codespan(text2) {
+    return text2;
+  }
+  del(text2) {
+    return text2;
+  }
+  html(text2) {
+    return text2;
+  }
+  text(text2) {
+    return text2;
+  }
+  link(href, title, text2) {
+    return "" + text2;
+  }
+  image(href, title, text2) {
+    return "" + text2;
+  }
+  br() {
+    return "";
+  }
+};
+var _Parser = class __Parser {
+  constructor(options2) {
+    __publicField(this, "options");
+    __publicField(this, "renderer");
+    __publicField(this, "textRenderer");
+    this.options = options2 || _defaults;
+    this.options.renderer = this.options.renderer || new _Renderer();
+    this.renderer = this.options.renderer;
+    this.renderer.options = this.options;
+    this.textRenderer = new _TextRenderer();
+  }
+  /**
+   * Static Parse Method
+   */
+  static parse(tokens, options2) {
+    const parser2 = new __Parser(options2);
+    return parser2.parse(tokens);
+  }
+  /**
+   * Static Parse Inline Method
+   */
+  static parseInline(tokens, options2) {
+    const parser2 = new __Parser(options2);
+    return parser2.parseInline(tokens);
+  }
+  /**
+   * Parse Loop
+   */
+  parse(tokens, top2 = true) {
+    let out = "";
+    for (let i = 0; i < tokens.length; i++) {
+      const token = tokens[i];
+      if (this.options.extensions && this.options.extensions.renderers && this.options.extensions.renderers[token.type]) {
+        const genericToken = token;
+        const ret = this.options.extensions.renderers[genericToken.type].call({ parser: this }, genericToken);
+        if (ret !== false || !["space", "hr", "heading", "code", "table", "blockquote", "list", "html", "paragraph", "text"].includes(genericToken.type)) {
+          out += ret || "";
+          continue;
+        }
+      }
+      switch (token.type) {
+        case "space": {
+          continue;
+        }
+        case "hr": {
+          out += this.renderer.hr();
+          continue;
+        }
+        case "heading": {
+          const headingToken = token;
+          out += this.renderer.heading(this.parseInline(headingToken.tokens), headingToken.depth, unescape(this.parseInline(headingToken.tokens, this.textRenderer)));
+          continue;
+        }
+        case "code": {
+          const codeToken = token;
+          out += this.renderer.code(codeToken.text, codeToken.lang, !!codeToken.escaped);
+          continue;
+        }
+        case "table": {
+          const tableToken = token;
+          let header = "";
+          let cell = "";
+          for (let j = 0; j < tableToken.header.length; j++) {
+            cell += this.renderer.tablecell(this.parseInline(tableToken.header[j].tokens), { header: true, align: tableToken.align[j] });
+          }
+          header += this.renderer.tablerow(cell);
+          let body = "";
+          for (let j = 0; j < tableToken.rows.length; j++) {
+            const row = tableToken.rows[j];
+            cell = "";
+            for (let k = 0; k < row.length; k++) {
+              cell += this.renderer.tablecell(this.parseInline(row[k].tokens), { header: false, align: tableToken.align[k] });
+            }
+            body += this.renderer.tablerow(cell);
+          }
+          out += this.renderer.table(header, body);
+          continue;
+        }
+        case "blockquote": {
+          const blockquoteToken = token;
+          const body = this.parse(blockquoteToken.tokens);
+          out += this.renderer.blockquote(body);
+          continue;
+        }
+        case "list": {
+          const listToken = token;
+          const ordered = listToken.ordered;
+          const start = listToken.start;
+          const loose = listToken.loose;
+          let body = "";
+          for (let j = 0; j < listToken.items.length; j++) {
+            const item = listToken.items[j];
+            const checked = item.checked;
+            const task = item.task;
+            let itemBody = "";
+            if (item.task) {
+              const checkbox = this.renderer.checkbox(!!checked);
+              if (loose) {
+                if (item.tokens.length > 0 && item.tokens[0].type === "paragraph") {
+                  item.tokens[0].text = checkbox + " " + item.tokens[0].text;
+                  if (item.tokens[0].tokens && item.tokens[0].tokens.length > 0 && item.tokens[0].tokens[0].type === "text") {
+                    item.tokens[0].tokens[0].text = checkbox + " " + item.tokens[0].tokens[0].text;
+                  }
+                } else {
+                  item.tokens.unshift({
+                    type: "text",
+                    text: checkbox + " "
+                  });
+                }
+              } else {
+                itemBody += checkbox + " ";
+              }
+            }
+            itemBody += this.parse(item.tokens, loose);
+            body += this.renderer.listitem(itemBody, task, !!checked);
+          }
+          out += this.renderer.list(body, ordered, start);
+          continue;
+        }
+        case "html": {
+          const htmlToken = token;
+          out += this.renderer.html(htmlToken.text, htmlToken.block);
+          continue;
+        }
+        case "paragraph": {
+          const paragraphToken = token;
+          out += this.renderer.paragraph(this.parseInline(paragraphToken.tokens));
+          continue;
+        }
+        case "text": {
+          let textToken = token;
+          let body = textToken.tokens ? this.parseInline(textToken.tokens) : textToken.text;
+          while (i + 1 < tokens.length && tokens[i + 1].type === "text") {
+            textToken = tokens[++i];
+            body += "\n" + (textToken.tokens ? this.parseInline(textToken.tokens) : textToken.text);
+          }
+          out += top2 ? this.renderer.paragraph(body) : body;
+          continue;
+        }
+        default: {
+          const errMsg = 'Token with "' + token.type + '" type was not found.';
+          if (this.options.silent) {
+            console.error(errMsg);
+            return "";
+          } else {
+            throw new Error(errMsg);
+          }
+        }
+      }
+    }
+    return out;
+  }
+  /**
+   * Parse Inline Tokens
+   */
+  parseInline(tokens, renderer) {
+    renderer = renderer || this.renderer;
+    let out = "";
+    for (let i = 0; i < tokens.length; i++) {
+      const token = tokens[i];
+      if (this.options.extensions && this.options.extensions.renderers && this.options.extensions.renderers[token.type]) {
+        const ret = this.options.extensions.renderers[token.type].call({ parser: this }, token);
+        if (ret !== false || !["escape", "html", "link", "image", "strong", "em", "codespan", "br", "del", "text"].includes(token.type)) {
+          out += ret || "";
+          continue;
+        }
+      }
+      switch (token.type) {
+        case "escape": {
+          const escapeToken = token;
+          out += renderer.text(escapeToken.text);
+          break;
+        }
+        case "html": {
+          const tagToken = token;
+          out += renderer.html(tagToken.text);
+          break;
+        }
+        case "link": {
+          const linkToken = token;
+          out += renderer.link(linkToken.href, linkToken.title, this.parseInline(linkToken.tokens, renderer));
+          break;
+        }
+        case "image": {
+          const imageToken = token;
+          out += renderer.image(imageToken.href, imageToken.title, imageToken.text);
+          break;
+        }
+        case "strong": {
+          const strongToken = token;
+          out += renderer.strong(this.parseInline(strongToken.tokens, renderer));
+          break;
+        }
+        case "em": {
+          const emToken = token;
+          out += renderer.em(this.parseInline(emToken.tokens, renderer));
+          break;
+        }
+        case "codespan": {
+          const codespanToken = token;
+          out += renderer.codespan(codespanToken.text);
+          break;
+        }
+        case "br": {
+          out += renderer.br();
+          break;
+        }
+        case "del": {
+          const delToken = token;
+          out += renderer.del(this.parseInline(delToken.tokens, renderer));
+          break;
+        }
+        case "text": {
+          const textToken = token;
+          out += renderer.text(textToken.text);
+          break;
+        }
+        default: {
+          const errMsg = 'Token with "' + token.type + '" type was not found.';
+          if (this.options.silent) {
+            console.error(errMsg);
+            return "";
+          } else {
+            throw new Error(errMsg);
+          }
+        }
+      }
+    }
+    return out;
+  }
+};
+var _Hooks = class {
+  constructor(options2) {
+    __publicField(this, "options");
+    this.options = options2 || _defaults;
+  }
+  /**
+   * Process markdown before marked
+   */
+  preprocess(markdown) {
+    return markdown;
+  }
+  /**
+   * Process HTML after marked is finished
+   */
+  postprocess(html2) {
+    return html2;
+  }
+  /**
+   * Process all tokens before walk tokens
+   */
+  processAllTokens(tokens) {
+    return tokens;
+  }
+};
+__publicField(_Hooks, "passThroughHooks", /* @__PURE__ */ new Set([
+  "preprocess",
+  "postprocess",
+  "processAllTokens"
+]));
+var _Marked_instances, parseMarkdown_fn, onError_fn;
+var Marked = class {
+  constructor(...args) {
+    __privateAdd(this, _Marked_instances);
+    __publicField(this, "defaults", _getDefaults());
+    __publicField(this, "options", this.setOptions);
+    __publicField(this, "parse", __privateMethod(this, _Marked_instances, parseMarkdown_fn).call(this, _Lexer.lex, _Parser.parse));
+    __publicField(this, "parseInline", __privateMethod(this, _Marked_instances, parseMarkdown_fn).call(this, _Lexer.lexInline, _Parser.parseInline));
+    __publicField(this, "Parser", _Parser);
+    __publicField(this, "Renderer", _Renderer);
+    __publicField(this, "TextRenderer", _TextRenderer);
+    __publicField(this, "Lexer", _Lexer);
+    __publicField(this, "Tokenizer", _Tokenizer);
+    __publicField(this, "Hooks", _Hooks);
+    this.use(...args);
+  }
+  /**
+   * Run callback for every token
+   */
+  walkTokens(tokens, callback) {
+    var _a, _b;
+    let values = [];
+    for (const token of tokens) {
+      values = values.concat(callback.call(this, token));
+      switch (token.type) {
+        case "table": {
+          const tableToken = token;
+          for (const cell of tableToken.header) {
+            values = values.concat(this.walkTokens(cell.tokens, callback));
+          }
+          for (const row of tableToken.rows) {
+            for (const cell of row) {
+              values = values.concat(this.walkTokens(cell.tokens, callback));
+            }
+          }
+          break;
+        }
+        case "list": {
+          const listToken = token;
+          values = values.concat(this.walkTokens(listToken.items, callback));
+          break;
+        }
+        default: {
+          const genericToken = token;
+          if ((_b = (_a = this.defaults.extensions) == null ? void 0 : _a.childTokens) == null ? void 0 : _b[genericToken.type]) {
+            this.defaults.extensions.childTokens[genericToken.type].forEach((childTokens) => {
+              const tokens2 = genericToken[childTokens].flat(Infinity);
+              values = values.concat(this.walkTokens(tokens2, callback));
+            });
+          } else if (genericToken.tokens) {
+            values = values.concat(this.walkTokens(genericToken.tokens, callback));
+          }
+        }
+      }
+    }
+    return values;
+  }
+  use(...args) {
+    const extensions = this.defaults.extensions || { renderers: {}, childTokens: {} };
+    args.forEach((pack) => {
+      const opts = { ...pack };
+      opts.async = this.defaults.async || opts.async || false;
+      if (pack.extensions) {
+        pack.extensions.forEach((ext) => {
+          if (!ext.name) {
+            throw new Error("extension name required");
+          }
+          if ("renderer" in ext) {
+            const prevRenderer = extensions.renderers[ext.name];
+            if (prevRenderer) {
+              extensions.renderers[ext.name] = function(...args2) {
+                let ret = ext.renderer.apply(this, args2);
+                if (ret === false) {
+                  ret = prevRenderer.apply(this, args2);
+                }
+                return ret;
+              };
+            } else {
+              extensions.renderers[ext.name] = ext.renderer;
+            }
+          }
+          if ("tokenizer" in ext) {
+            if (!ext.level || ext.level !== "block" && ext.level !== "inline") {
+              throw new Error("extension level must be 'block' or 'inline'");
+            }
+            const extLevel = extensions[ext.level];
+            if (extLevel) {
+              extLevel.unshift(ext.tokenizer);
+            } else {
+              extensions[ext.level] = [ext.tokenizer];
+            }
+            if (ext.start) {
+              if (ext.level === "block") {
+                if (extensions.startBlock) {
+                  extensions.startBlock.push(ext.start);
+                } else {
+                  extensions.startBlock = [ext.start];
+                }
+              } else if (ext.level === "inline") {
+                if (extensions.startInline) {
+                  extensions.startInline.push(ext.start);
+                } else {
+                  extensions.startInline = [ext.start];
+                }
+              }
+            }
+          }
+          if ("childTokens" in ext && ext.childTokens) {
+            extensions.childTokens[ext.name] = ext.childTokens;
+          }
+        });
+        opts.extensions = extensions;
+      }
+      if (pack.renderer) {
+        const renderer = this.defaults.renderer || new _Renderer(this.defaults);
+        for (const prop in pack.renderer) {
+          if (!(prop in renderer)) {
+            throw new Error(`renderer '${prop}' does not exist`);
+          }
+          if (prop === "options") {
+            continue;
+          }
+          const rendererProp = prop;
+          const rendererFunc = pack.renderer[rendererProp];
+          const prevRenderer = renderer[rendererProp];
+          renderer[rendererProp] = (...args2) => {
+            let ret = rendererFunc.apply(renderer, args2);
+            if (ret === false) {
+              ret = prevRenderer.apply(renderer, args2);
+            }
+            return ret || "";
+          };
+        }
+        opts.renderer = renderer;
+      }
+      if (pack.tokenizer) {
+        const tokenizer = this.defaults.tokenizer || new _Tokenizer(this.defaults);
+        for (const prop in pack.tokenizer) {
+          if (!(prop in tokenizer)) {
+            throw new Error(`tokenizer '${prop}' does not exist`);
+          }
+          if (["options", "rules", "lexer"].includes(prop)) {
+            continue;
+          }
+          const tokenizerProp = prop;
+          const tokenizerFunc = pack.tokenizer[tokenizerProp];
+          const prevTokenizer = tokenizer[tokenizerProp];
+          tokenizer[tokenizerProp] = (...args2) => {
+            let ret = tokenizerFunc.apply(tokenizer, args2);
+            if (ret === false) {
+              ret = prevTokenizer.apply(tokenizer, args2);
+            }
+            return ret;
+          };
+        }
+        opts.tokenizer = tokenizer;
+      }
+      if (pack.hooks) {
+        const hooks = this.defaults.hooks || new _Hooks();
+        for (const prop in pack.hooks) {
+          if (!(prop in hooks)) {
+            throw new Error(`hook '${prop}' does not exist`);
+          }
+          if (prop === "options") {
+            continue;
+          }
+          const hooksProp = prop;
+          const hooksFunc = pack.hooks[hooksProp];
+          const prevHook = hooks[hooksProp];
+          if (_Hooks.passThroughHooks.has(prop)) {
+            hooks[hooksProp] = (arg) => {
+              if (this.defaults.async) {
+                return Promise.resolve(hooksFunc.call(hooks, arg)).then((ret2) => {
+                  return prevHook.call(hooks, ret2);
+                });
+              }
+              const ret = hooksFunc.call(hooks, arg);
+              return prevHook.call(hooks, ret);
+            };
+          } else {
+            hooks[hooksProp] = (...args2) => {
+              let ret = hooksFunc.apply(hooks, args2);
+              if (ret === false) {
+                ret = prevHook.apply(hooks, args2);
+              }
+              return ret;
+            };
+          }
+        }
+        opts.hooks = hooks;
+      }
+      if (pack.walkTokens) {
+        const walkTokens2 = this.defaults.walkTokens;
+        const packWalktokens = pack.walkTokens;
+        opts.walkTokens = function(token) {
+          let values = [];
+          values.push(packWalktokens.call(this, token));
+          if (walkTokens2) {
+            values = values.concat(walkTokens2.call(this, token));
+          }
+          return values;
+        };
+      }
+      this.defaults = { ...this.defaults, ...opts };
+    });
+    return this;
+  }
+  setOptions(opt) {
+    this.defaults = { ...this.defaults, ...opt };
+    return this;
+  }
+  lexer(src, options2) {
+    return _Lexer.lex(src, options2 != null ? options2 : this.defaults);
+  }
+  parser(tokens, options2) {
+    return _Parser.parse(tokens, options2 != null ? options2 : this.defaults);
+  }
+};
+_Marked_instances = new WeakSet();
+parseMarkdown_fn = function(lexer2, parser2) {
+  return (src, options2) => {
+    const origOpt = { ...options2 };
+    const opt = { ...this.defaults, ...origOpt };
+    if (this.defaults.async === true && origOpt.async === false) {
+      if (!opt.silent) {
+        console.warn("marked(): The async option was set to true by an extension. The async: false option sent to parse will be ignored.");
+      }
+      opt.async = true;
+    }
+    const throwError = __privateMethod(this, _Marked_instances, onError_fn).call(this, !!opt.silent, !!opt.async);
+    if (typeof src === "undefined" || src === null) {
+      return throwError(new Error("marked(): input parameter is undefined or null"));
+    }
+    if (typeof src !== "string") {
+      return throwError(new Error("marked(): input parameter is of type " + Object.prototype.toString.call(src) + ", string expected"));
+    }
+    if (opt.hooks) {
+      opt.hooks.options = opt;
+    }
+    if (opt.async) {
+      return Promise.resolve(opt.hooks ? opt.hooks.preprocess(src) : src).then((src2) => lexer2(src2, opt)).then((tokens) => opt.hooks ? opt.hooks.processAllTokens(tokens) : tokens).then((tokens) => opt.walkTokens ? Promise.all(this.walkTokens(tokens, opt.walkTokens)).then(() => tokens) : tokens).then((tokens) => parser2(tokens, opt)).then((html2) => opt.hooks ? opt.hooks.postprocess(html2) : html2).catch(throwError);
+    }
+    try {
+      if (opt.hooks) {
+        src = opt.hooks.preprocess(src);
+      }
+      let tokens = lexer2(src, opt);
+      if (opt.hooks) {
+        tokens = opt.hooks.processAllTokens(tokens);
+      }
+      if (opt.walkTokens) {
+        this.walkTokens(tokens, opt.walkTokens);
+      }
+      let html2 = parser2(tokens, opt);
+      if (opt.hooks) {
+        html2 = opt.hooks.postprocess(html2);
+      }
+      return html2;
+    } catch (e) {
+      return throwError(e);
+    }
+  };
+};
+onError_fn = function(silent, async) {
+  return (e) => {
+    e.message += "\nPlease report this to https://github.com/markedjs/marked.";
+    if (silent) {
+      const msg = "<p>An error occurred:</p><pre>" + escape$1(e.message + "", true) + "</pre>";
+      if (async) {
+        return Promise.resolve(msg);
+      }
+      return msg;
+    }
+    if (async) {
+      return Promise.reject(e);
+    }
+    throw e;
+  };
+};
+var markedInstance = new Marked();
+function marked(src, opt) {
+  return markedInstance.parse(src, opt);
+}
+marked.options = marked.setOptions = function(options2) {
+  markedInstance.setOptions(options2);
+  marked.defaults = markedInstance.defaults;
+  changeDefaults(marked.defaults);
+  return marked;
+};
+marked.getDefaults = _getDefaults;
+marked.defaults = _defaults;
+marked.use = function(...args) {
+  markedInstance.use(...args);
+  marked.defaults = markedInstance.defaults;
+  changeDefaults(marked.defaults);
+  return marked;
+};
+marked.walkTokens = function(tokens, callback) {
+  return markedInstance.walkTokens(tokens, callback);
+};
+marked.parseInline = markedInstance.parseInline;
+marked.Parser = _Parser;
+marked.parser = _Parser.parse;
+marked.Renderer = _Renderer;
+marked.TextRenderer = _TextRenderer;
+marked.Lexer = _Lexer;
+marked.lexer = _Lexer.lex;
+marked.Tokenizer = _Tokenizer;
+marked.Hooks = _Hooks;
+marked.parse = marked;
+var options = marked.options;
+var setOptions = marked.setOptions;
+var use = marked.use;
+var walkTokens = marked.walkTokens;
+var parseInline = marked.parseInline;
+var parser = _Parser.parse;
+var lexer = _Lexer.lex;
+
+// src/components/diff_view.svelte
+var import_obsidian11 = require("obsidian");
+
+// src/components/merge_editor.svelte
+var import_state3 = require("@codemirror/state");
+var import_obsidian9 = require("obsidian");
+
+// src/views/confirm_modal.ts
+var import_obsidian8 = require("obsidian");
+var ConfirmModal = class extends import_obsidian8.Modal {
+  constructor(app, message, callback) {
+    super(app);
+    this.message = message;
+    this.callback = callback;
+  }
+  onOpen() {
+    this.titleEl.setText("Are you sure?");
+    this.contentEl.setText(this.message);
+    const buttons = this.contentEl.createDiv("div");
+    buttons.addClass("confirm-modal-buttons");
+    new import_obsidian8.ButtonComponent(buttons).setButtonText("Yes").setCta().onClick(() => {
+      this.callback();
+      this.close();
+    });
+    new import_obsidian8.ButtonComponent(buttons).setButtonText("No").onClick(() => {
+      this.close();
+    });
+  }
+};
+
+// src/components/merge_editor.svelte
+var file = "src/components/merge_editor.svelte";
+function add_css(target) {
+  append_styles(target, "svelte-1vfpmb8", ".merge.svelte-1vfpmb8{border-radius:5px;height:35%;overflow:scroll}.preview.svelte-1vfpmb8{border:1px solid var(--background-modifier-border);border-radius:5px;height:35%;overflow:scroll;padding:1%}.tools.svelte-1vfpmb8{display:flex;flex-direction:row;justify-content:end;align-items:center}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWVyZ2VfZWRpdG9yLnN2ZWx0ZSIsIm1hcHBpbmdzIjoiQUF3SUMscUJBQU8sQ0FDTixhQUFhLENBQUUsR0FBRyxDQUNsQixNQUFNLENBQUUsR0FBRyxDQUNYLFFBQVEsQ0FBRSxNQUNYLENBRUEsdUJBQVMsQ0FDUixNQUFNLENBQUUsR0FBRyxDQUFDLEtBQUssQ0FBQyxJQUFJLDRCQUE0QixDQUFDLENBQ25ELGFBQWEsQ0FBRSxHQUFHLENBQ2xCLE1BQU0sQ0FBRSxHQUFHLENBQ1gsUUFBUSxDQUFFLE1BQU0sQ0FDaEIsT0FBTyxDQUFFLEVBQ1YsQ0FFQSxxQkFBTyxDQUNOLE9BQU8sQ0FBRSxJQUFJLENBQ2IsY0FBYyxDQUFFLEdBQUcsQ0FDbkIsZUFBZSxDQUFFLEdBQUcsQ0FDcEIsV0FBVyxDQUFFLE1BQ2QiLCJuYW1lcyI6W10sInNvdXJjZXMiOlsibWVyZ2VfZWRpdG9yLnN2ZWx0ZSJdfQ== */");
+}
+function create_else_block(ctx) {
+  let html_tag;
+  let raw_value = marked(
+    /*originalContent*/
+    ctx[0],
+    { mangle: false, headerIds: false }
+  ) + "";
+  let html_anchor;
+  const block2 = {
+    c: function create() {
+      html_tag = new HtmlTag(false);
+      html_anchor = empty();
+      html_tag.a = html_anchor;
+    },
+    m: function mount(target, anchor) {
+      html_tag.m(raw_value, target, anchor);
+      insert_dev(target, html_anchor, anchor);
+    },
+    p: function update2(ctx2, dirty) {
+      if (dirty & /*originalContent*/
+      1 && raw_value !== (raw_value = marked(
+        /*originalContent*/
+        ctx2[0],
+        { mangle: false, headerIds: false }
+      ) + "")) html_tag.p(raw_value);
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(html_anchor);
+        html_tag.d();
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_else_block.name,
+    type: "else",
+    source: "(101:1) {:else}",
+    ctx
+  });
+  return block2;
+}
+function create_if_block(ctx) {
+  let html_tag;
+  let raw_value = marked(
+    /*contentEditorA*/
+    ctx[2].toString(),
+    { mangle: false, headerIds: false }
+  ) + "";
+  let html_anchor;
+  const block2 = {
+    c: function create() {
+      html_tag = new HtmlTag(false);
+      html_anchor = empty();
+      html_tag.a = html_anchor;
+    },
+    m: function mount(target, anchor) {
+      html_tag.m(raw_value, target, anchor);
+      insert_dev(target, html_anchor, anchor);
+    },
+    p: function update2(ctx2, dirty) {
+      if (dirty & /*contentEditorA*/
+      4 && raw_value !== (raw_value = marked(
+        /*contentEditorA*/
+        ctx2[2].toString(),
+        { mangle: false, headerIds: false }
+      ) + "")) html_tag.p(raw_value);
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(html_anchor);
+        html_tag.d();
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block.name,
+    type: "if",
+    source: "(95:1) {#if contentEditorA}",
+    ctx
+  });
+  return block2;
+}
+function create_fragment(ctx) {
+  let div0;
+  let t0;
+  let h3;
+  let t2;
+  let div1;
+  let t3;
+  let div2;
+  function select_block_type(ctx2, dirty) {
+    if (
+      /*contentEditorA*/
+      ctx2[2]
+    ) return create_if_block;
+    return create_else_block;
+  }
+  let current_block_type = select_block_type(ctx, -1);
+  let if_block = current_block_type(ctx);
+  const block2 = {
+    c: function create() {
+      div0 = element("div");
+      t0 = space();
+      h3 = element("h3");
+      h3.textContent = "Preview the merged file";
+      t2 = space();
+      div1 = element("div");
+      if_block.c();
+      t3 = space();
+      div2 = element("div");
+      attr_dev(div0, "class", "merge svelte-1vfpmb8");
+      add_location(div0, file, 114, 0, 3927);
+      add_location(h3, file, 116, 0, 3983);
+      attr_dev(div1, "class", "preview svelte-1vfpmb8");
+      add_location(div1, file, 117, 0, 4016);
+      attr_dev(div2, "class", "tools svelte-1vfpmb8");
+      add_location(div2, file, 133, 0, 4372);
+    },
+    l: function claim(nodes) {
+      throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div0, anchor);
+      ctx[6](div0);
+      insert_dev(target, t0, anchor);
+      insert_dev(target, h3, anchor);
+      insert_dev(target, t2, anchor);
+      insert_dev(target, div1, anchor);
+      if_block.m(div1, null);
+      insert_dev(target, t3, anchor);
+      insert_dev(target, div2, anchor);
+      ctx[7](div2);
+    },
+    p: function update2(ctx2, [dirty]) {
+      if (current_block_type === (current_block_type = select_block_type(ctx2, dirty)) && if_block) {
+        if_block.p(ctx2, dirty);
+      } else {
+        if_block.d(1);
+        if_block = current_block_type(ctx2);
+        if (if_block) {
+          if_block.c();
+          if_block.m(div1, null);
+        }
+      }
+    },
+    i: noop,
+    o: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div0);
+        detach_dev(t0);
+        detach_dev(h3);
+        detach_dev(t2);
+        detach_dev(div1);
+        detach_dev(t3);
+        detach_dev(div2);
+      }
+      ctx[6](null);
+      if_block.d();
+      ctx[7](null);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+function instance($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("Merge_editor", slots, []);
+  let { originalContent = "this is the original text" } = $$props;
+  let { modifiedContent = "this is the modified text" } = $$props;
+  let { parentModal } = $$props;
+  let mergeEditor;
+  let mergeEditorContainer;
+  let contentEditorA;
+  let contentEditorB;
+  let toolsContainer;
+  onMount(() => {
+    mergeEditor = new MergeView({
+      a: {
+        doc: originalContent,
+        extensions: [
+          basicSetup,
+          import_view3.EditorView.lineWrapping,
+          import_view3.EditorView.darkTheme.of(true),
+          import_view3.EditorView.updateListener.of((viewUpdate) => {
+            if (viewUpdate.docChanged) {
+              $$invalidate(2, contentEditorA = viewUpdate.state.doc);
+            }
+          })
+        ]
+      },
+      b: {
+        doc: modifiedContent,
+        extensions: [
+          basicSetup,
+          import_view3.EditorView.lineWrapping,
+          import_view3.EditorView.darkTheme.of(true),
+          import_view3.EditorView.updateListener.of((viewUpdate) => {
+            if (viewUpdate.docChanged) {
+              contentEditorB = viewUpdate.state.doc;
+            }
+          }),
+          import_view3.EditorView.editable.of(false),
+          import_state3.EditorState.readOnly.of(true)
+        ]
+      },
+      revertControls: "b-to-a",
+      parent: mergeEditorContainer
+    });
+    new import_obsidian9.ButtonComponent(toolsContainer).setButtonText("Save merged file").setCta().onClick(() => __awaiter(void 0, void 0, void 0, function* () {
+      if (mergeEditor.chunks.length > 0) {
+        new import_obsidian9.Notice("There is still some merge conflicts. Please resolve them.");
+        new ConfirmModal(
+          parentModal.app,
+          "Are you sure you want to save the file?\nThere are still some merge conflicts.\nThis action will save the previewed file in the original file and delete the conflicting file.",
+          () => __awaiter(void 0, void 0, void 0, function* () {
+            new import_obsidian9.Notice("Saved file");
+            yield parentModal.app.vault.delete(parentModal.modifiedFile);
+            new import_obsidian9.Notice("Deleted conflicting file");
+            parentModal.close();
+          })
+        ).open();
+        return;
+      }
+      yield parentModal.app.vault.modify(parentModal.originalFile, contentEditorA.toString());
+      new import_obsidian9.Notice("Saved file");
+      yield parentModal.app.vault.delete(parentModal.modifiedFile);
+      new import_obsidian9.Notice("Deleted conflicting file");
+      parentModal.close();
+    })).buttonEl.style.margin = "1%";
+    new import_obsidian9.ButtonComponent(toolsContainer).setButtonText("Cancel merge").setWarning().onClick(() => {
+      if (mergeEditor.chunks.length > 0) {
+        new import_obsidian9.Notice("There is still some merge conflicts. Please resolve them.");
+        new ConfirmModal(
+          parentModal.app,
+          "Are you sure you want to cancel the merge?\nThere are still some merge conflicts.\nThis will keep the original file and the conflicting file.",
+          () => {
+            new import_obsidian9.Notice("Closing the merge editor.");
+            parentModal.close();
+          }
+        ).open();
+        return;
+      }
+      new ConfirmModal(
+        parentModal.app,
+        "Are you sure you want to cancel the merge?\nYou have resolved the conflicts but your modifications will not be saved.\nThis will keep the original file and the conflicting file.",
+        () => {
+          new import_obsidian9.Notice("Closing the merge editor.");
+          parentModal.close();
+        }
+      ).open();
+    }).buttonEl.style.margin = "1% 0";
+  });
+  $$self.$$.on_mount.push(function() {
+    if (parentModal === void 0 && !("parentModal" in $$props || $$self.$$.bound[$$self.$$.props["parentModal"]])) {
+      console.warn("<Merge_editor> was created without expected prop 'parentModal'");
+    }
+  });
+  const writable_props = ["originalContent", "modifiedContent", "parentModal"];
+  Object.keys($$props).forEach((key) => {
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$" && key !== "slot") console.warn(`<Merge_editor> was created with unknown prop '${key}'`);
+  });
+  function div0_binding($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      mergeEditorContainer = $$value;
+      $$invalidate(1, mergeEditorContainer);
+    });
+  }
+  function div2_binding($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      toolsContainer = $$value;
+      $$invalidate(3, toolsContainer);
+    });
+  }
+  $$self.$$set = ($$props2) => {
+    if ("originalContent" in $$props2) $$invalidate(0, originalContent = $$props2.originalContent);
+    if ("modifiedContent" in $$props2) $$invalidate(4, modifiedContent = $$props2.modifiedContent);
+    if ("parentModal" in $$props2) $$invalidate(5, parentModal = $$props2.parentModal);
+  };
+  $$self.$capture_state = () => ({
+    __awaiter,
+    MergeView,
+    EditorState: import_state3.EditorState,
+    EditorView: import_view3.EditorView,
+    basicSetup,
+    marked,
+    ButtonComponent: import_obsidian9.ButtonComponent,
+    Notice: import_obsidian9.Notice,
+    ConfirmModal,
+    onMount,
+    originalContent,
+    modifiedContent,
+    parentModal,
+    mergeEditor,
+    mergeEditorContainer,
+    contentEditorA,
+    contentEditorB,
+    toolsContainer
+  });
+  $$self.$inject_state = ($$props2) => {
+    if ("originalContent" in $$props2) $$invalidate(0, originalContent = $$props2.originalContent);
+    if ("modifiedContent" in $$props2) $$invalidate(4, modifiedContent = $$props2.modifiedContent);
+    if ("parentModal" in $$props2) $$invalidate(5, parentModal = $$props2.parentModal);
+    if ("mergeEditor" in $$props2) mergeEditor = $$props2.mergeEditor;
+    if ("mergeEditorContainer" in $$props2) $$invalidate(1, mergeEditorContainer = $$props2.mergeEditorContainer);
+    if ("contentEditorA" in $$props2) $$invalidate(2, contentEditorA = $$props2.contentEditorA);
+    if ("contentEditorB" in $$props2) contentEditorB = $$props2.contentEditorB;
+    if ("toolsContainer" in $$props2) $$invalidate(3, toolsContainer = $$props2.toolsContainer);
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  return [
+    originalContent,
+    mergeEditorContainer,
+    contentEditorA,
+    toolsContainer,
+    modifiedContent,
+    parentModal,
+    div0_binding,
+    div2_binding
+  ];
+}
+var Merge_editor = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(
+      this,
+      options2,
+      instance,
+      create_fragment,
+      safe_not_equal,
+      {
+        originalContent: 0,
+        modifiedContent: 4,
+        parentModal: 5
+      },
+      add_css
+    );
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "Merge_editor",
+      options: options2,
+      id: create_fragment.name
+    });
+  }
+  get originalContent() {
+    throw new Error("<Merge_editor>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set originalContent(value) {
+    throw new Error("<Merge_editor>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get modifiedContent() {
+    throw new Error("<Merge_editor>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set modifiedContent(value) {
+    throw new Error("<Merge_editor>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get parentModal() {
+    throw new Error("<Merge_editor>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set parentModal(value) {
+    throw new Error("<Merge_editor>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var merge_editor_default = Merge_editor;
+
+// src/views/merge_editor.ts
+var import_obsidian10 = require("obsidian");
+var MergeModal = class extends import_obsidian10.Modal {
+  constructor(app, originalFile, modifiedFile) {
+    super(app);
+    this.originalFile = originalFile;
+    this.modifiedFile = modifiedFile;
+  }
+  async onOpen() {
+    this.originalContent = await this.app.vault.read(this.originalFile);
+    this.modifiedContent = await this.app.vault.read(this.modifiedFile);
+    this.component = new merge_editor_default({
+      target: this.contentEl,
+      props: {
+        parentModal: this,
+        originalContent: this.originalContent,
+        modifiedContent: this.modifiedContent
+      }
+    });
+    this.modalEl.addClass("syncthing-merge-editor-modal");
+    this.contentEl.addClass("syncthing-merge-editor");
+    this.titleEl.setText(
+      `Resolve conflicts - ${this.originalFile.basename}`
+    );
+  }
+  onClose() {
+    var _a;
+    (_a = this.component) == null ? void 0 : _a.$destroy();
+  }
+};
+
+// src/components/error.svelte
+var { Error: Error_1 } = globals;
+var file2 = "src/components/error.svelte";
+function add_css2(target) {
+  append_styles(target, "svelte-8kfohb", "p.svelte-8kfohb{background-color:darkred;opacity:0.6;border-radius:10px;box-shadow:black 0px 0px 10px;padding:1%}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZXJyb3Iuc3ZlbHRlIiwibWFwcGluZ3MiOiJBQVlDLGVBQUUsQ0FDRCxnQkFBZ0IsQ0FBRSxPQUFPLENBQ3pCLE9BQU8sQ0FBRSxHQUFHLENBQ1osYUFBYSxDQUFFLElBQUksQ0FDbkIsVUFBVSxDQUFFLEtBQUssQ0FBQyxHQUFHLENBQUMsR0FBRyxDQUFDLElBQUksQ0FDOUIsT0FBTyxDQUFFLEVBQ1YiLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiZXJyb3Iuc3ZlbHRlIl19 */");
+}
+function create_fragment2(ctx) {
+  let p;
+  let t0;
+  let t1_value = (
+    /*failure*/
+    ctx[0].message + ""
+  );
+  let t1;
+  const block2 = {
+    c: function create() {
+      p = element("p");
+      t0 = text("A failure occured :\n	");
+      t1 = text(t1_value);
+      attr_dev(p, "class", "svelte-8kfohb");
+      add_location(p, file2, 6, 0, 74);
+    },
+    l: function claim(nodes) {
+      throw new Error_1("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, p, anchor);
+      append_dev(p, t0);
+      append_dev(p, t1);
+    },
+    p: function update2(ctx2, [dirty]) {
+      if (dirty & /*failure*/
+      1 && t1_value !== (t1_value = /*failure*/
+      ctx2[0].message + "")) set_data_dev(t1, t1_value);
+    },
+    i: noop,
+    o: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(p);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment2.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+function instance2($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("Error", slots, []);
+  let { failure } = $$props;
+  $$self.$$.on_mount.push(function() {
+    if (failure === void 0 && !("failure" in $$props || $$self.$$.bound[$$self.$$.props["failure"]])) {
+      console.warn("<Error> was created without expected prop 'failure'");
+    }
+  });
+  const writable_props = ["failure"];
+  Object.keys($$props).forEach((key) => {
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$" && key !== "slot") console.warn(`<Error> was created with unknown prop '${key}'`);
+  });
+  $$self.$$set = ($$props2) => {
+    if ("failure" in $$props2) $$invalidate(0, failure = $$props2.failure);
+  };
+  $$self.$capture_state = () => ({ failure });
+  $$self.$inject_state = ($$props2) => {
+    if ("failure" in $$props2) $$invalidate(0, failure = $$props2.failure);
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  return [failure];
+}
+var Error2 = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(this, options2, instance2, create_fragment2, safe_not_equal, { failure: 0 }, add_css2);
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "Error",
+      options: options2,
+      id: create_fragment2.name
+    });
+  }
+  get failure() {
+    throw new Error_1("<Error>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set failure(value) {
+    throw new Error_1("<Error>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var error_default = Error2;
+
+// src/components/conflict_file_details.svelte
+var { Error: Error_12 } = globals;
+var file_1 = "src/components/conflict_file_details.svelte";
+function add_css3(target) {
+  append_styles(target, "svelte-kca58t", ".conflict-file.svelte-kca58t{padding:0.5em;border-radius:0.5em;margin:0.5em}.conflict-file.svelte-kca58t:hover{background-color:var(--background-secondary-alt)}.conflict-file.svelte-kca58t:active{background-color:var(--background-secondary-alt)}.selected.svelte-kca58t{background-color:var(--background-secondary-alt)}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uZmxpY3RfZmlsZV9kZXRhaWxzLnN2ZWx0ZSIsIm1hcHBpbmdzIjoiQUFnRUMsNEJBQWUsQ0FDZCxPQUFPLENBQUUsS0FBSyxDQUNkLGFBQWEsQ0FBRSxLQUFLLENBQ3BCLE1BQU0sQ0FBRSxLQUVULENBQ0EsNEJBQWMsTUFBTyxDQUNwQixnQkFBZ0IsQ0FBRSxJQUFJLDBCQUEwQixDQUNqRCxDQUNBLDRCQUFjLE9BQVEsQ0FDckIsZ0JBQWdCLENBQUUsSUFBSSwwQkFBMEIsQ0FDakQsQ0FDQSx1QkFBVSxDQUNULGdCQUFnQixDQUFFLElBQUksMEJBQTBCLENBQ2pEIiwibmFtZXMiOltdLCJzb3VyY2VzIjpbImNvbmZsaWN0X2ZpbGVfZGV0YWlscy5zdmVsdGUiXX0= */");
+}
+function create_else_block2(ctx) {
+  let div;
+  let strong;
+  let t0;
+  let t1;
+  let t2;
+  let em;
+  let t5;
+  let ul;
+  let li0;
+  let t8;
+  let li1;
+  let t11;
+  let li2;
+  let t12;
+  let code;
+  let t13_value = (
+    /*file*/
+    ctx[1].extension + ""
+  );
+  let t13;
+  let t14;
+  let li3;
+  let t15;
+  let t16_value = formatBytes(
+    /*file*/
+    ctx[1].stat.size,
+    1
+  ) + "";
+  let t16;
+  let t17;
+  let li4;
+  let t18;
+  let t19_value = new Date(
+    /*file*/
+    ctx[1].stat.mtime
+  ).toLocaleString() + "";
+  let t19;
+  let t20;
+  let li5;
+  let t21;
+  let t22_value = new Date(
+    /*file*/
+    ctx[1].stat.ctime
+  ).toLocaleString() + "";
+  let t22;
+  let t23;
+  let li6;
+  let t24;
+  let t25_value = (
+    /*file*/
+    ctx[1].path + ""
+  );
+  let t25;
+  const block2 = {
+    c: function create() {
+      div = element("div");
+      strong = element("strong");
+      t0 = text("Conflict #");
+      t1 = text(
+        /*counter*/
+        ctx[0]
+      );
+      t2 = space();
+      em = element("em");
+      em.textContent = `Occured on: ${/*filenameProps*/
+      ctx[4].dateTime.toLocaleString()}`;
+      t5 = space();
+      ul = element("ul");
+      li0 = element("li");
+      li0.textContent = `Conflict date: ${/*filenameProps*/
+      ctx[4].dateTime.toLocaleString()}`;
+      t8 = space();
+      li1 = element("li");
+      li1.textContent = `Modified by: ${/*filenameProps*/
+      ctx[4].modifiedBy}`;
+      t11 = space();
+      li2 = element("li");
+      t12 = text("Extension: ");
+      code = element("code");
+      t13 = text(t13_value);
+      t14 = space();
+      li3 = element("li");
+      t15 = text("Size: ");
+      t16 = text(t16_value);
+      t17 = space();
+      li4 = element("li");
+      t18 = text("Last modified at: ");
+      t19 = text(t19_value);
+      t20 = space();
+      li5 = element("li");
+      t21 = text("Created at: ");
+      t22 = text(t22_value);
+      t23 = space();
+      li6 = element("li");
+      t24 = text("Path: ");
+      t25 = text(t25_value);
+      add_location(strong, file_1, 34, 3, 928);
+      add_location(em, file_1, 35, 3, 968);
+      add_location(li0, file_1, 39, 4, 1052);
+      add_location(li1, file_1, 42, 4, 1133);
+      add_location(code, file_1, 46, 16, 1218);
+      add_location(li2, file_1, 45, 4, 1197);
+      add_location(li3, file_1, 48, 4, 1262);
+      add_location(li4, file_1, 49, 4, 1314);
+      add_location(li5, file_1, 54, 4, 1414);
+      add_location(li6, file_1, 57, 4, 1495);
+      add_location(ul, file_1, 38, 3, 1043);
+      add_location(div, file_1, 33, 2, 919);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+      append_dev(div, strong);
+      append_dev(strong, t0);
+      append_dev(strong, t1);
+      append_dev(div, t2);
+      append_dev(div, em);
+      append_dev(div, t5);
+      append_dev(div, ul);
+      append_dev(ul, li0);
+      append_dev(ul, t8);
+      append_dev(ul, li1);
+      append_dev(ul, t11);
+      append_dev(ul, li2);
+      append_dev(li2, t12);
+      append_dev(li2, code);
+      append_dev(code, t13);
+      append_dev(ul, t14);
+      append_dev(ul, li3);
+      append_dev(li3, t15);
+      append_dev(li3, t16);
+      append_dev(ul, t17);
+      append_dev(ul, li4);
+      append_dev(li4, t18);
+      append_dev(li4, t19);
+      append_dev(ul, t20);
+      append_dev(ul, li5);
+      append_dev(li5, t21);
+      append_dev(li5, t22);
+      append_dev(ul, t23);
+      append_dev(ul, li6);
+      append_dev(li6, t24);
+      append_dev(li6, t25);
+    },
+    p: function update2(ctx2, dirty) {
+      if (dirty & /*counter*/
+      1) set_data_dev(
+        t1,
+        /*counter*/
+        ctx2[0]
+      );
+      if (dirty & /*file*/
+      2 && t13_value !== (t13_value = /*file*/
+      ctx2[1].extension + "")) set_data_dev(t13, t13_value);
+      if (dirty & /*file*/
+      2 && t16_value !== (t16_value = formatBytes(
+        /*file*/
+        ctx2[1].stat.size,
+        1
+      ) + "")) set_data_dev(t16, t16_value);
+      if (dirty & /*file*/
+      2 && t19_value !== (t19_value = new Date(
+        /*file*/
+        ctx2[1].stat.mtime
+      ).toLocaleString() + "")) set_data_dev(t19, t19_value);
+      if (dirty & /*file*/
+      2 && t22_value !== (t22_value = new Date(
+        /*file*/
+        ctx2[1].stat.ctime
+      ).toLocaleString() + "")) set_data_dev(t22, t22_value);
+      if (dirty & /*file*/
+      2 && t25_value !== (t25_value = /*file*/
+      ctx2[1].path + "")) set_data_dev(t25, t25_value);
+    },
+    i: noop,
+    o: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_else_block2.name,
+    type: "else",
+    source: "(28:1) {:else}",
+    ctx
+  });
+  return block2;
+}
+function create_if_block2(ctx) {
+  let error;
+  let current;
+  error = new error_default({
+    props: { failure: (
+      /*filenameProps*/
+      ctx[4]
+    ) },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      create_component(error.$$.fragment);
+    },
+    m: function mount(target, anchor) {
+      mount_component(error, target, anchor);
+      current = true;
+    },
+    p: noop,
+    i: function intro(local) {
+      if (current) return;
+      transition_in(error.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(error.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      destroy_component(error, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block2.name,
+    type: "if",
+    source: "(26:1) {#if filenameProps instanceof Failure}",
+    ctx
+  });
+  return block2;
+}
+function create_fragment3(ctx) {
+  let div;
+  let current_block_type_index;
+  let if_block;
+  let current;
+  let mounted;
+  let dispose;
+  const if_block_creators = [create_if_block2, create_else_block2];
+  const if_blocks = [];
+  function select_block_type(ctx2, dirty) {
+    if (
+      /*filenameProps*/
+      ctx2[4] instanceof Failure
+    ) return 0;
+    return 1;
+  }
+  current_block_type_index = select_block_type(ctx, -1);
+  if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  const block2 = {
+    c: function create() {
+      div = element("div");
+      if_block.c();
+      attr_dev(div, "class", "svelte-kca58t");
+      toggle_class(
+        div,
+        "conflict-file",
+        /*styled*/
+        ctx[2]
+      );
+      toggle_class(
+        div,
+        "selected",
+        /*isClicked*/
+        ctx[3]
+      );
+      add_location(div, file_1, 23, 0, 715);
+    },
+    l: function claim(nodes) {
+      throw new Error_12("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+      if_blocks[current_block_type_index].m(div, null);
+      current = true;
+      if (!mounted) {
+        dispose = listen_dev(
+          div,
+          "click",
+          /*click_handler*/
+          ctx[6],
+          false,
+          false,
+          false,
+          false
+        );
+        mounted = true;
+      }
+    },
+    p: function update2(ctx2, [dirty]) {
+      if_block.p(ctx2, dirty);
+      if (!current || dirty & /*styled*/
+      4) {
+        toggle_class(
+          div,
+          "conflict-file",
+          /*styled*/
+          ctx2[2]
+        );
+      }
+      if (!current || dirty & /*isClicked*/
+      8) {
+        toggle_class(
+          div,
+          "selected",
+          /*isClicked*/
+          ctx2[3]
+        );
+      }
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(if_block);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div);
+      }
+      if_blocks[current_block_type_index].d();
+      mounted = false;
+      dispose();
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment3.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+function instance3($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("Conflict_file_details", slots, []);
+  let { counter } = $$props;
+  let { file: file16 } = $$props;
+  let { styled = false } = $$props;
+  let { isClicked = false } = $$props;
+  let dispatch = createEventDispatcher();
+  const filenameProps = parseConflictFilename(file16.name);
+  function handleClick() {
+    dispatch("file", { file: file16 });
+  }
+  $$self.$$.on_mount.push(function() {
+    if (counter === void 0 && !("counter" in $$props || $$self.$$.bound[$$self.$$.props["counter"]])) {
+      console.warn("<Conflict_file_details> was created without expected prop 'counter'");
+    }
+    if (file16 === void 0 && !("file" in $$props || $$self.$$.bound[$$self.$$.props["file"]])) {
+      console.warn("<Conflict_file_details> was created without expected prop 'file'");
+    }
+  });
+  const writable_props = ["counter", "file", "styled", "isClicked"];
+  Object.keys($$props).forEach((key) => {
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$" && key !== "slot") console.warn(`<Conflict_file_details> was created with unknown prop '${key}'`);
+  });
+  const click_handler = () => {
+    if (styled) handleClick();
+  };
+  $$self.$$set = ($$props2) => {
+    if ("counter" in $$props2) $$invalidate(0, counter = $$props2.counter);
+    if ("file" in $$props2) $$invalidate(1, file16 = $$props2.file);
+    if ("styled" in $$props2) $$invalidate(2, styled = $$props2.styled);
+    if ("isClicked" in $$props2) $$invalidate(3, isClicked = $$props2.isClicked);
+  };
+  $$self.$capture_state = () => ({
+    formatBytes,
+    parseConflictFilename,
+    Failure,
+    createEventDispatcher,
+    Error: error_default,
+    counter,
+    file: file16,
+    styled,
+    isClicked,
+    dispatch,
+    filenameProps,
+    handleClick
+  });
+  $$self.$inject_state = ($$props2) => {
+    if ("counter" in $$props2) $$invalidate(0, counter = $$props2.counter);
+    if ("file" in $$props2) $$invalidate(1, file16 = $$props2.file);
+    if ("styled" in $$props2) $$invalidate(2, styled = $$props2.styled);
+    if ("isClicked" in $$props2) $$invalidate(3, isClicked = $$props2.isClicked);
+    if ("dispatch" in $$props2) dispatch = $$props2.dispatch;
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  return [counter, file16, styled, isClicked, filenameProps, handleClick, click_handler];
+}
+var Conflict_file_details = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(
+      this,
+      options2,
+      instance3,
+      create_fragment3,
+      safe_not_equal,
+      {
+        counter: 0,
+        file: 1,
+        styled: 2,
+        isClicked: 3
+      },
+      add_css3
+    );
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "Conflict_file_details",
+      options: options2,
+      id: create_fragment3.name
+    });
+  }
+  get counter() {
+    throw new Error_12("<Conflict_file_details>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set counter(value) {
+    throw new Error_12("<Conflict_file_details>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get file() {
+    throw new Error_12("<Conflict_file_details>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set file(value) {
+    throw new Error_12("<Conflict_file_details>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get styled() {
+    throw new Error_12("<Conflict_file_details>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set styled(value) {
+    throw new Error_12("<Conflict_file_details>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get isClicked() {
+    throw new Error_12("<Conflict_file_details>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set isClicked(value) {
+    throw new Error_12("<Conflict_file_details>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var conflict_file_details_default = Conflict_file_details;
+
+// src/components/file_details.svelte
+var file_12 = "src/components/file_details.svelte";
+function create_fragment4(ctx) {
+  let div;
+  let ul;
+  let li0;
+  let t0;
+  let code;
+  let t1_value = (
+    /*file*/
+    ctx[0].extension + ""
+  );
+  let t1;
+  let t2;
+  let li1;
+  let t3;
+  let t4_value = formatBytes(
+    /*file*/
+    ctx[0].stat.size,
+    1
+  ) + "";
+  let t4;
+  let t5;
+  let li2;
+  let t6;
+  let t7_value = new Date(
+    /*file*/
+    ctx[0].stat.mtime
+  ).toLocaleString() + "";
+  let t7;
+  let t8;
+  let li3;
+  let t9;
+  let t10_value = new Date(
+    /*file*/
+    ctx[0].stat.ctime
+  ).toLocaleString() + "";
+  let t10;
+  let t11;
+  let li4;
+  let t12;
+  let t13_value = (
+    /*file*/
+    ctx[0].path + ""
+  );
+  let t13;
+  const block2 = {
+    c: function create() {
+      div = element("div");
+      ul = element("ul");
+      li0 = element("li");
+      t0 = text("Extension: ");
+      code = element("code");
+      t1 = text(t1_value);
+      t2 = space();
+      li1 = element("li");
+      t3 = text("Size: ");
+      t4 = text(t4_value);
+      t5 = space();
+      li2 = element("li");
+      t6 = text("Last modified at: ");
+      t7 = text(t7_value);
+      t8 = space();
+      li3 = element("li");
+      t9 = text("Created at: ");
+      t10 = text(t10_value);
+      t11 = space();
+      li4 = element("li");
+      t12 = text("Path: ");
+      t13 = text(t13_value);
+      add_location(code, file_12, 10, 14, 132);
+      add_location(li0, file_12, 9, 2, 113);
+      add_location(li1, file_12, 12, 2, 172);
+      add_location(li2, file_12, 13, 2, 222);
+      add_location(li3, file_12, 16, 2, 303);
+      add_location(li4, file_12, 17, 2, 371);
+      add_location(ul, file_12, 8, 1, 106);
+      add_location(div, file_12, 7, 0, 99);
+    },
+    l: function claim(nodes) {
+      throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+      append_dev(div, ul);
+      append_dev(ul, li0);
+      append_dev(li0, t0);
+      append_dev(li0, code);
+      append_dev(code, t1);
+      append_dev(ul, t2);
+      append_dev(ul, li1);
+      append_dev(li1, t3);
+      append_dev(li1, t4);
+      append_dev(ul, t5);
+      append_dev(ul, li2);
+      append_dev(li2, t6);
+      append_dev(li2, t7);
+      append_dev(ul, t8);
+      append_dev(ul, li3);
+      append_dev(li3, t9);
+      append_dev(li3, t10);
+      append_dev(ul, t11);
+      append_dev(ul, li4);
+      append_dev(li4, t12);
+      append_dev(li4, t13);
+    },
+    p: function update2(ctx2, [dirty]) {
+      if (dirty & /*file*/
+      1 && t1_value !== (t1_value = /*file*/
+      ctx2[0].extension + "")) set_data_dev(t1, t1_value);
+      if (dirty & /*file*/
+      1 && t4_value !== (t4_value = formatBytes(
+        /*file*/
+        ctx2[0].stat.size,
+        1
+      ) + "")) set_data_dev(t4, t4_value);
+      if (dirty & /*file*/
+      1 && t7_value !== (t7_value = new Date(
+        /*file*/
+        ctx2[0].stat.mtime
+      ).toLocaleString() + "")) set_data_dev(t7, t7_value);
+      if (dirty & /*file*/
+      1 && t10_value !== (t10_value = new Date(
+        /*file*/
+        ctx2[0].stat.ctime
+      ).toLocaleString() + "")) set_data_dev(t10, t10_value);
+      if (dirty & /*file*/
+      1 && t13_value !== (t13_value = /*file*/
+      ctx2[0].path + "")) set_data_dev(t13, t13_value);
+    },
+    i: noop,
+    o: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment4.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+function instance4($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("File_details", slots, []);
+  let { file: file16 } = $$props;
+  $$self.$$.on_mount.push(function() {
+    if (file16 === void 0 && !("file" in $$props || $$self.$$.bound[$$self.$$.props["file"]])) {
+      console.warn("<File_details> was created without expected prop 'file'");
+    }
+  });
+  const writable_props = ["file"];
+  Object.keys($$props).forEach((key) => {
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$" && key !== "slot") console.warn(`<File_details> was created with unknown prop '${key}'`);
+  });
+  $$self.$$set = ($$props2) => {
+    if ("file" in $$props2) $$invalidate(0, file16 = $$props2.file);
+  };
+  $$self.$capture_state = () => ({ formatBytes, file: file16 });
+  $$self.$inject_state = ($$props2) => {
+    if ("file" in $$props2) $$invalidate(0, file16 = $$props2.file);
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  return [file16];
+}
+var File_details = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(this, options2, instance4, create_fragment4, safe_not_equal, { file: 0 });
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "File_details",
+      options: options2,
+      id: create_fragment4.name
+    });
+  }
+  get file() {
+    throw new Error("<File_details>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set file(value) {
+    throw new Error("<File_details>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var file_details_default = File_details;
+
+// src/components/diff_view.svelte
+var file_13 = "src/components/diff_view.svelte";
+function add_css4(target) {
+  append_styles(target, "svelte-10busrc", ".column.svelte-10busrc.svelte-10busrc{display:inline-block;width:33%;min-height:fit-content;max-height:95%;vertical-align:top;overflow-y:scroll;padding:1%}.column.svelte-10busrc h1.svelte-10busrc{margin-top:0;text-align:center}.conflicts.svelte-10busrc.svelte-10busrc{max-height:650px;overflow-y:auto;padding:1%}.divider.svelte-10busrc.svelte-10busrc{margin-top:10px;margin-bottom:10px;border-bottom:2px solid var(--background-modifier-border)}.tools.svelte-10busrc.svelte-10busrc{display:flex;flex-direction:row;justify-content:space-evenly;align-items:end}.preview.svelte-10busrc.svelte-10busrc{border:1px solid var(--background-modifier-border);border-radius:5px;padding:1%}.preview-container.svelte-10busrc.svelte-10busrc{padding:1%;overflow-y:scroll;height:500px}.diff_view.svelte-10busrc.svelte-10busrc{max-height:650px;overflow-y:scroll}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGlmZl92aWV3LnN2ZWx0ZSIsIm1hcHBpbmdzIjoiQUFxTEMscUNBQVEsQ0FDUCxPQUFPLENBQUUsWUFBWSxDQUNyQixLQUFLLENBQUUsR0FBRyxDQUNWLFVBQVUsQ0FBRSxXQUFXLENBQ3ZCLFVBQVUsQ0FBRSxHQUFHLENBQ2YsY0FBYyxDQUFFLEdBQUcsQ0FDbkIsVUFBVSxDQUFFLE1BQU0sQ0FDbEIsT0FBTyxDQUFFLEVBQ1YsQ0FDQSxzQkFBTyxDQUFDLGlCQUFHLENBQ1YsVUFBVSxDQUFFLENBQUMsQ0FDYixVQUFVLENBQUUsTUFDYixDQUNBLHdDQUFXLENBQ1YsVUFBVSxDQUFFLEtBQUssQ0FDakIsVUFBVSxDQUFFLElBQUksQ0FDaEIsT0FBTyxDQUFFLEVBQ1YsQ0FDQSxzQ0FBUyxDQUNSLFVBQVUsQ0FBRSxJQUFJLENBQ2hCLGFBQWEsQ0FBRSxJQUFJLENBQ25CLGFBQWEsQ0FBRSxHQUFHLENBQUMsS0FBSyxDQUFDLElBQUksNEJBQTRCLENBQzFELENBQ0Esb0NBQU8sQ0FDTixPQUFPLENBQUUsSUFBSSxDQUNiLGNBQWMsQ0FBRSxHQUFHLENBQ25CLGVBQWUsQ0FBRSxZQUFZLENBQzdCLFdBQVcsQ0FBRSxHQUNkLENBQ0Esc0NBQVMsQ0FDUixNQUFNLENBQUUsR0FBRyxDQUFDLEtBQUssQ0FBQyxJQUFJLDRCQUE0QixDQUFDLENBQ25ELGFBQWEsQ0FBRSxHQUFHLENBQ2xCLE9BQU8sQ0FBRSxFQUNWLENBQ0EsZ0RBQW1CLENBQ2xCLE9BQU8sQ0FBRSxFQUFFLENBQ1gsVUFBVSxDQUFFLE1BQU0sQ0FDbEIsTUFBTSxDQUFFLEtBQ1QsQ0FDQSx3Q0FBVyxDQUNWLFVBQVUsQ0FBRSxLQUFLLENBQ2pCLFVBQVUsQ0FBRSxNQUNiIiwibmFtZXMiOltdLCJzb3VyY2VzIjpbImRpZmZfdmlldy5zdmVsdGUiXX0= */");
+}
+function get_each_context(ctx, list2, i) {
+  const child_ctx = ctx.slice();
+  child_ctx[13] = list2[i];
+  child_ctx[15] = i;
+  return child_ctx;
+}
+function create_if_block3(ctx) {
+  let div;
+  const block2 = {
+    c: function create() {
+      div = element("div");
+      attr_dev(div, "class", "divider svelte-10busrc");
+      add_location(div, file_13, 127, 4, 3980);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block3.name,
+    type: "if",
+    source: "(102:3) {#if i !== 0}",
+    ctx
+  });
+  return block2;
+}
+function create_each_block(ctx) {
+  let t;
+  let conflictfiledetails;
+  let current;
+  let if_block = (
+    /*i*/
+    ctx[15] !== 0 && create_if_block3(ctx)
+  );
+  conflictfiledetails = new conflict_file_details_default({
+    props: {
+      file: (
+        /*file*/
+        ctx[13]
+      ),
+      counter: (
+        /*i*/
+        ctx[15]
+      ),
+      styled: true,
+      isClicked: (
+        /*parentModal*/
+        ctx[0].conflictingFiles[
+          /*i*/
+          ctx[15]
+        ] === /*currentConflict*/
+        ctx[2]
+      )
+    },
+    $$inline: true
+  });
+  conflictfiledetails.$on(
+    "file",
+    /*onFileChange*/
+    ctx[6]
+  );
+  const block2 = {
+    c: function create() {
+      if (if_block) if_block.c();
+      t = space();
+      create_component(conflictfiledetails.$$.fragment);
+    },
+    m: function mount(target, anchor) {
+      if (if_block) if_block.m(target, anchor);
+      insert_dev(target, t, anchor);
+      mount_component(conflictfiledetails, target, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, dirty) {
+      const conflictfiledetails_changes = {};
+      if (dirty & /*parentModal*/
+      1) conflictfiledetails_changes.file = /*file*/
+      ctx2[13];
+      if (dirty & /*parentModal, currentConflict*/
+      5) conflictfiledetails_changes.isClicked = /*parentModal*/
+      ctx2[0].conflictingFiles[
+        /*i*/
+        ctx2[15]
+      ] === /*currentConflict*/
+      ctx2[2];
+      conflictfiledetails.$set(conflictfiledetails_changes);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(conflictfiledetails.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(conflictfiledetails.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(t);
+      }
+      if (if_block) if_block.d(detaching);
+      destroy_component(conflictfiledetails, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_each_block.name,
+    type: "each",
+    source: "(101:2) {#each parentModal.conflictingFiles as file, i}",
+    ctx
+  });
+  return block2;
+}
+function create_catch_block_1(ctx) {
+  const block2 = { c: noop, m: noop, p: noop, d: noop };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_catch_block_1.name,
+    type: "catch",
+    source: '(1:0) <script lang=\\"ts\\">import { __awaiter }',
+    ctx
+  });
+  return block2;
+}
+function create_then_block_1(ctx) {
+  let div;
+  let raw_value = marked(
+    /*content*/
+    ctx[12],
+    { mangle: false, headerIds: false }
+  ) + "";
+  const block2 = {
+    c: function create() {
+      div = element("div");
+      attr_dev(div, "class", "preview svelte-10busrc");
+      add_location(div, file_13, 152, 3, 4659);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+      div.innerHTML = raw_value;
+    },
+    p: function update2(ctx2, dirty) {
+      if (dirty & /*parentModal*/
+      1 && raw_value !== (raw_value = marked(
+        /*content*/
+        ctx2[12],
+        { mangle: false, headerIds: false }
+      ) + "")) div.innerHTML = raw_value;
+      ;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_then_block_1.name,
+    type: "then",
+    source: "(127:2) {:then content}",
+    ctx
+  });
+  return block2;
+}
+function create_pending_block_1(ctx) {
+  let p;
+  const block2 = {
+    c: function create() {
+      p = element("p");
+      p.textContent = "Loading preview...";
+      add_location(p, file_13, 150, 3, 4612);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, p, anchor);
+    },
+    p: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(p);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_pending_block_1.name,
+    type: "pending",
+    source: "(125:69)     <p>Loading preview...</p>   {:then content}",
+    ctx
+  });
+  return block2;
+}
+function create_catch_block(ctx) {
+  const block2 = { c: noop, m: noop, p: noop, d: noop };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_catch_block.name,
+    type: "catch",
+    source: '(1:0) <script lang=\\"ts\\">import { __awaiter }',
+    ctx
+  });
+  return block2;
+}
+function create_then_block(ctx) {
+  let div;
+  let raw_value = marked(
+    /*content*/
+    ctx[12],
+    { mangle: false, headerIds: false }
+  ) + "";
+  const block2 = {
+    c: function create() {
+      div = element("div");
+      attr_dev(div, "class", "preview svelte-10busrc");
+      add_location(div, file_13, 164, 3, 4990);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+      div.innerHTML = raw_value;
+    },
+    p: function update2(ctx2, dirty) {
+      if (dirty & /*parentModal, currentConflict*/
+      5 && raw_value !== (raw_value = marked(
+        /*content*/
+        ctx2[12],
+        { mangle: false, headerIds: false }
+      ) + "")) div.innerHTML = raw_value;
+      ;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_then_block.name,
+    type: "then",
+    source: "(139:2) {:then content}",
+    ctx
+  });
+  return block2;
+}
+function create_pending_block(ctx) {
+  let p;
+  const block2 = {
+    c: function create() {
+      p = element("p");
+      p.textContent = "Loading preview...";
+      add_location(p, file_13, 162, 3, 4943);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, p, anchor);
+    },
+    p: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(p);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_pending_block.name,
+    type: "pending",
+    source: "(137:60)     <p>Loading preview...</p>   {:then content}",
+    ctx
+  });
+  return block2;
+}
+function create_fragment5(ctx) {
+  let div1;
+  let h10;
+  let t1;
+  let div0;
+  let t2;
+  let div3;
+  let h11;
+  let t4;
+  let div2;
+  let t5;
+  let div5;
+  let h12;
+  let t7;
+  let h20;
+  let t8_value = (
+    /*parentModal*/
+    ctx[0].originalFile.basename + ""
+  );
+  let t8;
+  let t9;
+  let filedetails;
+  let t10;
+  let div4;
+  let h21;
+  let t12;
+  let promise;
+  let t13;
+  let h22;
+  let t15;
+  let promise_1;
+  let t16;
+  let div6;
+  let button0;
+  let t18;
+  let button1;
+  let t20;
+  let button2;
+  let current;
+  let mounted;
+  let dispose;
+  let each_value = ensure_array_like_dev(
+    /*parentModal*/
+    ctx[0].conflictingFiles
+  );
+  let each_blocks = [];
+  for (let i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+  }
+  const out = (i) => transition_out(each_blocks[i], 1, 1, () => {
+    each_blocks[i] = null;
+  });
+  filedetails = new file_details_default({
+    props: {
+      file: (
+        /*parentModal*/
+        ctx[0].originalFile
+      )
+    },
+    $$inline: true
+  });
+  let info = {
+    ctx,
+    current: null,
+    token: null,
+    hasCatch: false,
+    pending: create_pending_block_1,
+    then: create_then_block_1,
+    catch: create_catch_block_1,
+    value: 12
+  };
+  handle_promise(promise = /*parentModal*/
+  ctx[0].app.vault.cachedRead(
+    /*parentModal*/
+    ctx[0].originalFile
+  ), info);
+  let info_1 = {
+    ctx,
+    current: null,
+    token: null,
+    hasCatch: false,
+    pending: create_pending_block,
+    then: create_then_block,
+    catch: create_catch_block,
+    value: 12
+  };
+  handle_promise(promise_1 = /*parentModal*/
+  ctx[0].app.vault.cachedRead(
+    /*currentConflict*/
+    ctx[2]
+  ), info_1);
+  const block2 = {
+    c: function create() {
+      div1 = element("div");
+      h10 = element("h1");
+      h10.textContent = "Conflicting files";
+      t1 = space();
+      div0 = element("div");
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        each_blocks[i].c();
+      }
+      t2 = space();
+      div3 = element("div");
+      h11 = element("h1");
+      h11.textContent = "Quick difference view";
+      t4 = space();
+      div2 = element("div");
+      t5 = space();
+      div5 = element("div");
+      h12 = element("h1");
+      h12.textContent = "Original file";
+      t7 = space();
+      h20 = element("h2");
+      t8 = text(t8_value);
+      t9 = space();
+      create_component(filedetails.$$.fragment);
+      t10 = space();
+      div4 = element("div");
+      h21 = element("h2");
+      h21.textContent = "Original file preview";
+      t12 = space();
+      info.block.c();
+      t13 = space();
+      h22 = element("h2");
+      h22.textContent = "Conflicting file preview";
+      t15 = space();
+      info_1.block.c();
+      t16 = space();
+      div6 = element("div");
+      button0 = element("button");
+      button0.textContent = "Accept conflict changes";
+      t18 = space();
+      button1 = element("button");
+      button1.textContent = "Accept original";
+      t20 = space();
+      button2 = element("button");
+      button2.textContent = "Open in Merge Editor";
+      attr_dev(h10, "class", "svelte-10busrc");
+      add_location(h10, file_13, 123, 1, 3857);
+      attr_dev(div0, "class", "conflicts svelte-10busrc");
+      add_location(div0, file_13, 124, 1, 3885);
+      attr_dev(div1, "class", "column svelte-10busrc");
+      add_location(div1, file_13, 122, 0, 3835);
+      attr_dev(h11, "class", "svelte-10busrc");
+      add_location(h11, file_13, 140, 1, 4230);
+      attr_dev(div2, "class", "diff_view svelte-10busrc");
+      add_location(div2, file_13, 141, 1, 4262);
+      attr_dev(div3, "class", "column svelte-10busrc");
+      add_location(div3, file_13, 139, 0, 4208);
+      attr_dev(h12, "class", "svelte-10busrc");
+      add_location(h12, file_13, 144, 1, 4355);
+      add_location(h20, file_13, 145, 1, 4379);
+      add_location(h21, file_13, 148, 2, 4508);
+      add_location(h22, file_13, 160, 2, 4845);
+      attr_dev(div4, "class", "preview-container svelte-10busrc");
+      add_location(div4, file_13, 147, 1, 4474);
+      attr_dev(div5, "class", "column svelte-10busrc");
+      add_location(div5, file_13, 143, 0, 4333);
+      add_location(button0, file_13, 175, 1, 5210);
+      add_location(button1, file_13, 176, 1, 5280);
+      add_location(button2, file_13, 177, 1, 5342);
+      attr_dev(div6, "class", "tools svelte-10busrc");
+      add_location(div6, file_13, 174, 0, 5189);
+    },
+    l: function claim(nodes) {
+      throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div1, anchor);
+      append_dev(div1, h10);
+      append_dev(div1, t1);
+      append_dev(div1, div0);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        if (each_blocks[i]) {
+          each_blocks[i].m(div0, null);
+        }
+      }
+      insert_dev(target, t2, anchor);
+      insert_dev(target, div3, anchor);
+      append_dev(div3, h11);
+      append_dev(div3, t4);
+      append_dev(div3, div2);
+      ctx[7](div2);
+      insert_dev(target, t5, anchor);
+      insert_dev(target, div5, anchor);
+      append_dev(div5, h12);
+      append_dev(div5, t7);
+      append_dev(div5, h20);
+      append_dev(h20, t8);
+      append_dev(div5, t9);
+      mount_component(filedetails, div5, null);
+      append_dev(div5, t10);
+      append_dev(div5, div4);
+      append_dev(div4, h21);
+      append_dev(div4, t12);
+      info.block.m(div4, info.anchor = null);
+      info.mount = () => div4;
+      info.anchor = t13;
+      append_dev(div4, t13);
+      append_dev(div4, h22);
+      append_dev(div4, t15);
+      info_1.block.m(div4, info_1.anchor = null);
+      info_1.mount = () => div4;
+      info_1.anchor = null;
+      insert_dev(target, t16, anchor);
+      insert_dev(target, div6, anchor);
+      append_dev(div6, button0);
+      append_dev(div6, t18);
+      append_dev(div6, button1);
+      append_dev(div6, t20);
+      append_dev(div6, button2);
+      current = true;
+      if (!mounted) {
+        dispose = [
+          listen_dev(
+            button0,
+            "click",
+            /*acceptConflict*/
+            ctx[3],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button1,
+            "click",
+            /*acceptOriginal*/
+            ctx[4],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button2,
+            "click",
+            /*openMergeEditor*/
+            ctx[5],
+            false,
+            false,
+            false,
+            false
+          )
+        ];
+        mounted = true;
+      }
+    },
+    p: function update2(new_ctx, [dirty]) {
+      ctx = new_ctx;
+      if (dirty & /*parentModal, currentConflict, onFileChange*/
+      69) {
+        each_value = ensure_array_like_dev(
+          /*parentModal*/
+          ctx[0].conflictingFiles
+        );
+        let i;
+        for (i = 0; i < each_value.length; i += 1) {
+          const child_ctx = get_each_context(ctx, each_value, i);
+          if (each_blocks[i]) {
+            each_blocks[i].p(child_ctx, dirty);
+            transition_in(each_blocks[i], 1);
+          } else {
+            each_blocks[i] = create_each_block(child_ctx);
+            each_blocks[i].c();
+            transition_in(each_blocks[i], 1);
+            each_blocks[i].m(div0, null);
+          }
+        }
+        group_outros();
+        for (i = each_value.length; i < each_blocks.length; i += 1) {
+          out(i);
+        }
+        check_outros();
+      }
+      if ((!current || dirty & /*parentModal*/
+      1) && t8_value !== (t8_value = /*parentModal*/
+      ctx[0].originalFile.basename + "")) set_data_dev(t8, t8_value);
+      const filedetails_changes = {};
+      if (dirty & /*parentModal*/
+      1) filedetails_changes.file = /*parentModal*/
+      ctx[0].originalFile;
+      filedetails.$set(filedetails_changes);
+      info.ctx = ctx;
+      if (dirty & /*parentModal*/
+      1 && promise !== (promise = /*parentModal*/
+      ctx[0].app.vault.cachedRead(
+        /*parentModal*/
+        ctx[0].originalFile
+      )) && handle_promise(promise, info)) {
+      } else {
+        update_await_block_branch(info, ctx, dirty);
+      }
+      info_1.ctx = ctx;
+      if (dirty & /*parentModal, currentConflict*/
+      5 && promise_1 !== (promise_1 = /*parentModal*/
+      ctx[0].app.vault.cachedRead(
+        /*currentConflict*/
+        ctx[2]
+      )) && handle_promise(promise_1, info_1)) {
+      } else {
+        update_await_block_branch(info_1, ctx, dirty);
+      }
+    },
+    i: function intro(local) {
+      if (current) return;
+      for (let i = 0; i < each_value.length; i += 1) {
+        transition_in(each_blocks[i]);
+      }
+      transition_in(filedetails.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        transition_out(each_blocks[i]);
+      }
+      transition_out(filedetails.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div1);
+        detach_dev(t2);
+        detach_dev(div3);
+        detach_dev(t5);
+        detach_dev(div5);
+        detach_dev(t16);
+        detach_dev(div6);
+      }
+      destroy_each(each_blocks, detaching);
+      ctx[7](null);
+      destroy_component(filedetails);
+      info.block.d();
+      info.token = null;
+      info = null;
+      info_1.block.d();
+      info_1.token = null;
+      info_1 = null;
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment5.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+function instance5($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("Diff_view", slots, []);
+  let { parentModal } = $$props;
+  let unifiedMergeViewContainer;
+  let editor;
+  let currentConflict = parentModal.conflictingFiles[0];
+  parentModal.titleEl.setText("Difference view");
+  parentModal.titleEl.style.textAlign = "center";
+  onMount(() => __awaiter(void 0, void 0, void 0, function* () {
+    editor = new import_view3.EditorView({
+      parent: unifiedMergeViewContainer,
+      state: import_state4.EditorState.create({
+        doc: yield parentModal.app.vault.read(currentConflict),
+        extensions: [
+          basicSetup,
+          import_view3.EditorView.editable.of(false),
+          import_view3.EditorView.lineWrapping,
+          import_view3.EditorView.darkTheme.of(true),
+          unifiedMergeView({
+            original: yield parentModal.app.vault.read(parentModal.originalFile),
+            mergeControls: false,
+            gutter: true,
+            highlightChanges: true,
+            syntaxHighlightDeletions: true
+          })
+        ]
+      })
+    });
+  }));
+  function acceptConflict() {
+    return __awaiter(this, void 0, void 0, function* () {
+      const noticeTime = 2e3;
+      new import_obsidian11.Notice("Resolving conflict : Accepting left", noticeTime);
+      const filenamePath = parentModal.originalFile.path;
+      setTimeout(() => new import_obsidian11.Notice(`Deleting ${filenamePath}...`, noticeTime), 500);
+      yield parentModal.app.vault.delete(parentModal.originalFile, true);
+      new import_obsidian11.Notice("Original file deleted", 2e3);
+      setTimeout(
+        () => {
+          new import_obsidian11.Notice(`Renaming ${currentConflict.path} to ${filenamePath}...`, noticeTime);
+        },
+        1e3
+      );
+      yield parentModal.app.fileManager.renameFile(currentConflict, filenamePath);
+      removeCurrentConflictFromList();
+      new import_obsidian11.Notice(`Conflict resolved : Accepted left`, noticeTime);
+      $$invalidate(0, parentModal.originalFile = currentConflict, parentModal);
+      closeIfNoMoreConflicts();
+      $$invalidate(2, currentConflict = parentModal.conflictingFiles[0]);
+    });
+  }
+  function acceptOriginal() {
+    return __awaiter(this, void 0, void 0, function* () {
+      new import_obsidian11.Notice("Resolving conflict : Accepting original", 5e3);
+      setTimeout(() => new import_obsidian11.Notice(`Deleting ${currentConflict.path}...`, 5e3), 1e3);
+      yield parentModal.app.vault.delete(currentConflict);
+      new import_obsidian11.Notice("Conflict resolved", 5e3);
+      removeCurrentConflictFromList();
+      closeIfNoMoreConflicts();
+      $$invalidate(2, currentConflict = parentModal.conflictingFiles[0]);
+    });
+  }
+  function removeCurrentConflictFromList() {
+    parentModal.conflictingFiles.remove(currentConflict);
+    $$invalidate(0, parentModal);
+  }
+  function closeIfNoMoreConflicts() {
+    if (parentModal.conflictingFiles.length === 0) {
+      parentModal.close();
+    }
+  }
+  function openMergeEditor() {
+    new MergeModal(parentModal.app, parentModal.originalFile, currentConflict).open();
+  }
+  function updateEditorDoc(content) {
+    return editor.state.update({
+      changes: {
+        from: 0,
+        to: editor.state.doc.length,
+        insert: content
+      }
+    });
+  }
+  function onFileChange(event) {
+    return __awaiter(this, void 0, void 0, function* () {
+      $$invalidate(2, currentConflict = event.detail.file);
+      editor.dispatch(updateEditorDoc(yield parentModal.app.vault.read(currentConflict)));
+    });
+  }
+  $$self.$$.on_mount.push(function() {
+    if (parentModal === void 0 && !("parentModal" in $$props || $$self.$$.bound[$$self.$$.props["parentModal"]])) {
+      console.warn("<Diff_view> was created without expected prop 'parentModal'");
+    }
+  });
+  const writable_props = ["parentModal"];
+  Object.keys($$props).forEach((key) => {
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$" && key !== "slot") console.warn(`<Diff_view> was created with unknown prop '${key}'`);
+  });
+  function div2_binding($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      unifiedMergeViewContainer = $$value;
+      $$invalidate(1, unifiedMergeViewContainer);
+    });
+  }
+  $$self.$$set = ($$props2) => {
+    if ("parentModal" in $$props2) $$invalidate(0, parentModal = $$props2.parentModal);
+  };
+  $$self.$capture_state = () => ({
+    __awaiter,
+    unifiedMergeView,
+    EditorState: import_state4.EditorState,
+    EditorView: import_view3.EditorView,
+    basicSetup,
+    marked,
+    Notice: import_obsidian11.Notice,
+    MergeModal,
+    onMount,
+    ConflictFileDetails: conflict_file_details_default,
+    FileDetails: file_details_default,
+    parentModal,
+    unifiedMergeViewContainer,
+    editor,
+    currentConflict,
+    acceptConflict,
+    acceptOriginal,
+    removeCurrentConflictFromList,
+    closeIfNoMoreConflicts,
+    openMergeEditor,
+    updateEditorDoc,
+    onFileChange
+  });
+  $$self.$inject_state = ($$props2) => {
+    if ("parentModal" in $$props2) $$invalidate(0, parentModal = $$props2.parentModal);
+    if ("unifiedMergeViewContainer" in $$props2) $$invalidate(1, unifiedMergeViewContainer = $$props2.unifiedMergeViewContainer);
+    if ("editor" in $$props2) editor = $$props2.editor;
+    if ("currentConflict" in $$props2) $$invalidate(2, currentConflict = $$props2.currentConflict);
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  return [
+    parentModal,
+    unifiedMergeViewContainer,
+    currentConflict,
+    acceptConflict,
+    acceptOriginal,
+    openMergeEditor,
+    onFileChange,
+    div2_binding
+  ];
+}
+var Diff_view = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(this, options2, instance5, create_fragment5, safe_not_equal, { parentModal: 0 }, add_css4);
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "Diff_view",
+      options: options2,
+      id: create_fragment5.name
+    });
+  }
+  get parentModal() {
+    throw new Error("<Diff_view>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set parentModal(value) {
+    throw new Error("<Diff_view>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var diff_view_default = Diff_view;
+
+// src/views/diff_modal.ts
+var DiffModal = class extends import_obsidian12.Modal {
+  constructor(app, file16, syncthingController) {
+    super(app);
+    this.file = file16;
+    this.syncthingController = syncthingController;
+    this.d2hColorBlind = false;
+    this.conflictingFiles = [];
+    this.conflictingFilesOrFailure = [];
+    this.originalFile = file16;
+    this.conflictingFilesProperties = /* @__PURE__ */ new Map();
+  }
+  async onOpen() {
+    this.modalEl.style.width = "100%";
+    this.modalEl.style.height = "100%";
+    ({
+      originalFile: this.originalFile,
+      conflictingFiles: this.conflictingFilesOrFailure,
+      conflictingFilesProperties: this.conflictingFilesProperties
+    } = await this.syncthingController.getDiffFiles(this.file));
+    if (this.conflictingFilesOrFailure instanceof Failure) {
+      new import_obsidian12.Notice(this.conflictingFilesOrFailure.message);
+      this.close();
+      return;
+    }
+    this.conflictingFiles = this.conflictingFilesOrFailure;
+    this.component = new diff_view_default({
+      target: this.contentEl,
+      props: {
+        parentModal: this
+      }
+    });
+  }
+  onClose() {
+    var _a;
+    const { contentEl } = this;
+    (_a = this.component) == null ? void 0 : _a.$destroy();
+    contentEl.empty();
+  }
+};
+
+// src/components/conflict_item.svelte
+var { console: console_1 } = globals;
+var file3 = "src/components/conflict_item.svelte";
+function add_css5(target) {
+  append_styles(target, "svelte-x0g9xq", ".divider.svelte-x0g9xq.svelte-x0g9xq{margin-top:10px;margin-bottom:10px;border-bottom:2px solid var(--background-modifier-border)}details.svelte-x0g9xq.svelte-x0g9xq{padding:1% 2%;border-radius:10px}details.svelte-x0g9xq.svelte-x0g9xq:hover{background-color:var(--background-modifier-hover)}summary.svelte-x0g9xq.svelte-x0g9xq{list-style:none;display:flex;flex-direction:row;justify-content:space-between;align-items:center}summary.svelte-x0g9xq>p.svelte-x0g9xq{display:flex;flex-direction:column}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uZmxpY3RfaXRlbS5zdmVsdGUiLCJtYXBwaW5ncyI6IkFBc0RDLG9DQUFTLENBQ1IsVUFBVSxDQUFFLElBQUksQ0FDaEIsYUFBYSxDQUFFLElBQUksQ0FDbkIsYUFBYSxDQUFFLEdBQUcsQ0FBQyxLQUFLLENBQUMsSUFBSSw0QkFBNEIsQ0FDMUQsQ0FDQSxtQ0FBUSxDQUNQLE9BQU8sQ0FBRSxFQUFFLENBQUMsRUFBRSxDQUNkLGFBQWEsQ0FBRSxJQUNoQixDQUNBLG1DQUFPLE1BQU8sQ0FDYixnQkFBZ0IsQ0FBRSxJQUFJLDJCQUEyQixDQUNsRCxDQUNBLG1DQUFRLENBQ1AsVUFBVSxDQUFFLElBQUksQ0FDaEIsT0FBTyxDQUFFLElBQUksQ0FDYixjQUFjLENBQUUsR0FBRyxDQUNuQixlQUFlLENBQUUsYUFBYSxDQUM5QixXQUFXLENBQUUsTUFDZCxDQUNBLHFCQUFPLENBQUcsZUFBRSxDQUNYLE9BQU8sQ0FBRSxJQUFJLENBQ2IsY0FBYyxDQUFFLE1BQ2pCIiwibmFtZXMiOltdLCJzb3VyY2VzIjpbImNvbmZsaWN0X2l0ZW0uc3ZlbHRlIl19 */");
+}
+function get_each_context2(ctx, list2, i) {
+  const child_ctx = ctx.slice();
+  child_ctx[5] = list2[i];
+  child_ctx[7] = i;
+  return child_ctx;
+}
+function create_else_block3(ctx) {
+  let t_value = (
+    /*filenameProps*/
+    ctx[3].filename + ""
+  );
+  let t;
+  const block2 = {
+    c: function create() {
+      t = text(t_value);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, t, anchor);
+    },
+    p: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(t);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_else_block3.name,
+    type: "else",
+    source: "(20:4) {:else}",
+    ctx
+  });
+  return block2;
+}
+function create_if_block_1(ctx) {
+  let t_value = (
+    /*filenameProps*/
+    ctx[3].message + ""
+  );
+  let t;
+  const block2 = {
+    c: function create() {
+      t = text(t_value);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, t, anchor);
+    },
+    p: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(t);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block_1.name,
+    type: "if",
+    source: "(18:4) {#if filenameProps instanceof Failure}",
+    ctx
+  });
+  return block2;
+}
+function create_if_block4(ctx) {
+  let div;
+  const block2 = {
+    c: function create() {
+      div = element("div");
+      attr_dev(div, "class", "divider svelte-x0g9xq");
+      add_location(div, file3, 47, 3, 1017);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block4.name,
+    type: "if",
+    source: "(42:2) {#if i !== 0}",
+    ctx
+  });
+  return block2;
+}
+function create_each_block2(ctx) {
+  let t;
+  let conflictfiledetails;
+  let current;
+  let if_block = (
+    /*i*/
+    ctx[7] !== 0 && create_if_block4(ctx)
+  );
+  conflictfiledetails = new conflict_file_details_default({
+    props: {
+      file: (
+        /*conflict*/
+        ctx[5]
+      ),
+      counter: (
+        /*i*/
+        ctx[7]
+      )
+    },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      if (if_block) if_block.c();
+      t = space();
+      create_component(conflictfiledetails.$$.fragment);
+    },
+    m: function mount(target, anchor) {
+      if (if_block) if_block.m(target, anchor);
+      insert_dev(target, t, anchor);
+      mount_component(conflictfiledetails, target, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, dirty) {
+      const conflictfiledetails_changes = {};
+      if (dirty & /*conflicts*/
+      1) conflictfiledetails_changes.file = /*conflict*/
+      ctx2[5];
+      conflictfiledetails.$set(conflictfiledetails_changes);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(conflictfiledetails.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(conflictfiledetails.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(t);
+      }
+      if (if_block) if_block.d(detaching);
+      destroy_component(conflictfiledetails, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_each_block2.name,
+    type: "each",
+    source: "(41:1) {#each conflicts as conflict, i}",
+    ctx
+  });
+  return block2;
+}
+function create_fragment6(ctx) {
+  let details;
+  let summary;
+  let p;
+  let span0;
+  let t0;
+  let span1;
+  let t1;
+  let t2_value = (
+    /*conflicts*/
+    ctx[0].length + ""
+  );
+  let t2;
+  let t3;
+  let t4_value = (
+    /*conflicts*/
+    ctx[0].length > 1 ? "s" : ""
+  );
+  let t4;
+  let t5;
+  let t6;
+  let button;
+  let t7;
+  let t8_value = (
+    /*conflicts*/
+    ctx[0].length > 1 ? "s" : ""
+  );
+  let t8;
+  let t9;
+  let current;
+  let mounted;
+  let dispose;
+  function select_block_type(ctx2, dirty) {
+    if (
+      /*filenameProps*/
+      ctx2[3] instanceof Failure
+    ) return create_if_block_1;
+    return create_else_block3;
+  }
+  let current_block_type = select_block_type(ctx, -1);
+  let if_block = current_block_type(ctx);
+  let each_value = ensure_array_like_dev(
+    /*conflicts*/
+    ctx[0]
+  );
+  let each_blocks = [];
+  for (let i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block2(get_each_context2(ctx, each_value, i));
+  }
+  const out = (i) => transition_out(each_blocks[i], 1, 1, () => {
+    each_blocks[i] = null;
+  });
+  const block2 = {
+    c: function create() {
+      details = element("details");
+      summary = element("summary");
+      p = element("p");
+      span0 = element("span");
+      if_block.c();
+      t0 = space();
+      span1 = element("span");
+      t1 = text("(");
+      t2 = text(t2_value);
+      t3 = text(" conflict");
+      t4 = text(t4_value);
+      t5 = text(")");
+      t6 = space();
+      button = element("button");
+      t7 = text("View conflict");
+      t8 = text(t8_value);
+      t9 = space();
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        each_blocks[i].c();
+      }
+      add_location(span0, file3, 21, 3, 501);
+      add_location(span1, file3, 28, 3, 646);
+      attr_dev(p, "class", "svelte-x0g9xq");
+      add_location(p, file3, 20, 2, 494);
+      attr_dev(button, "class", "mod-cta");
+      add_location(button, file3, 33, 2, 741);
+      attr_dev(summary, "class", "svelte-x0g9xq");
+      add_location(summary, file3, 19, 1, 482);
+      attr_dev(details, "class", "svelte-x0g9xq");
+      add_location(details, file3, 18, 0, 471);
+    },
+    l: function claim(nodes) {
+      throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, details, anchor);
+      append_dev(details, summary);
+      append_dev(summary, p);
+      append_dev(p, span0);
+      if_block.m(span0, null);
+      append_dev(p, t0);
+      append_dev(p, span1);
+      append_dev(span1, t1);
+      append_dev(span1, t2);
+      append_dev(span1, t3);
+      append_dev(span1, t4);
+      append_dev(span1, t5);
+      append_dev(summary, t6);
+      append_dev(summary, button);
+      append_dev(button, t7);
+      append_dev(button, t8);
+      append_dev(details, t9);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        if (each_blocks[i]) {
+          each_blocks[i].m(details, null);
+        }
+      }
+      current = true;
+      if (!mounted) {
+        dispose = listen_dev(
+          button,
+          "click",
+          /*click_handler*/
+          ctx[4],
+          false,
+          false,
+          false,
+          false
+        );
+        mounted = true;
+      }
+    },
+    p: function update2(ctx2, [dirty]) {
+      if_block.p(ctx2, dirty);
+      if ((!current || dirty & /*conflicts*/
+      1) && t2_value !== (t2_value = /*conflicts*/
+      ctx2[0].length + "")) set_data_dev(t2, t2_value);
+      if ((!current || dirty & /*conflicts*/
+      1) && t4_value !== (t4_value = /*conflicts*/
+      ctx2[0].length > 1 ? "s" : "")) set_data_dev(t4, t4_value);
+      if ((!current || dirty & /*conflicts*/
+      1) && t8_value !== (t8_value = /*conflicts*/
+      ctx2[0].length > 1 ? "s" : "")) set_data_dev(t8, t8_value);
+      if (dirty & /*conflicts*/
+      1) {
+        each_value = ensure_array_like_dev(
+          /*conflicts*/
+          ctx2[0]
+        );
+        let i;
+        for (i = 0; i < each_value.length; i += 1) {
+          const child_ctx = get_each_context2(ctx2, each_value, i);
+          if (each_blocks[i]) {
+            each_blocks[i].p(child_ctx, dirty);
+            transition_in(each_blocks[i], 1);
+          } else {
+            each_blocks[i] = create_each_block2(child_ctx);
+            each_blocks[i].c();
+            transition_in(each_blocks[i], 1);
+            each_blocks[i].m(details, null);
+          }
+        }
+        group_outros();
+        for (i = each_value.length; i < each_blocks.length; i += 1) {
+          out(i);
+        }
+        check_outros();
+      }
+    },
+    i: function intro(local) {
+      if (current) return;
+      for (let i = 0; i < each_value.length; i += 1) {
+        transition_in(each_blocks[i]);
+      }
+      current = true;
+    },
+    o: function outro(local) {
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        transition_out(each_blocks[i]);
+      }
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(details);
+      }
+      if_block.d();
+      destroy_each(each_blocks, detaching);
+      mounted = false;
+      dispose();
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment6.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+function instance6($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("Conflict_item", slots, []);
+  let { conflicts } = $$props;
+  let { syncthingController } = $$props;
+  let { parentModal } = $$props;
+  let filenameProps = parseConflictFilename(conflicts[0].name);
+  if (filenameProps instanceof Failure) {
+    console.error(filenameProps);
+  }
+  $$self.$$.on_mount.push(function() {
+    if (conflicts === void 0 && !("conflicts" in $$props || $$self.$$.bound[$$self.$$.props["conflicts"]])) {
+      console_1.warn("<Conflict_item> was created without expected prop 'conflicts'");
+    }
+    if (syncthingController === void 0 && !("syncthingController" in $$props || $$self.$$.bound[$$self.$$.props["syncthingController"]])) {
+      console_1.warn("<Conflict_item> was created without expected prop 'syncthingController'");
+    }
+    if (parentModal === void 0 && !("parentModal" in $$props || $$self.$$.bound[$$self.$$.props["parentModal"]])) {
+      console_1.warn("<Conflict_item> was created without expected prop 'parentModal'");
+    }
+  });
+  const writable_props = ["conflicts", "syncthingController", "parentModal"];
+  Object.keys($$props).forEach((key) => {
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$" && key !== "slot") console_1.warn(`<Conflict_item> was created with unknown prop '${key}'`);
+  });
+  const click_handler = () => new DiffModal(parentModal.app, conflicts[0], syncthingController).open();
+  $$self.$$set = ($$props2) => {
+    if ("conflicts" in $$props2) $$invalidate(0, conflicts = $$props2.conflicts);
+    if ("syncthingController" in $$props2) $$invalidate(1, syncthingController = $$props2.syncthingController);
+    if ("parentModal" in $$props2) $$invalidate(2, parentModal = $$props2.parentModal);
+  };
+  $$self.$capture_state = () => ({
+    Failure,
+    DiffModal,
+    ConflictFileDetails: conflict_file_details_default,
+    parseConflictFilename,
+    conflicts,
+    syncthingController,
+    parentModal,
+    filenameProps
+  });
+  $$self.$inject_state = ($$props2) => {
+    if ("conflicts" in $$props2) $$invalidate(0, conflicts = $$props2.conflicts);
+    if ("syncthingController" in $$props2) $$invalidate(1, syncthingController = $$props2.syncthingController);
+    if ("parentModal" in $$props2) $$invalidate(2, parentModal = $$props2.parentModal);
+    if ("filenameProps" in $$props2) $$invalidate(3, filenameProps = $$props2.filenameProps);
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  return [conflicts, syncthingController, parentModal, filenameProps, click_handler];
+}
+var Conflict_item = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(
+      this,
+      options2,
+      instance6,
+      create_fragment6,
+      safe_not_equal,
+      {
+        conflicts: 0,
+        syncthingController: 1,
+        parentModal: 2
+      },
+      add_css5
+    );
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "Conflict_item",
+      options: options2,
+      id: create_fragment6.name
+    });
+  }
+  get conflicts() {
+    throw new Error("<Conflict_item>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set conflicts(value) {
+    throw new Error("<Conflict_item>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get syncthingController() {
+    throw new Error("<Conflict_item>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set syncthingController(value) {
+    throw new Error("<Conflict_item>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get parentModal() {
+    throw new Error("<Conflict_item>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set parentModal(value) {
+    throw new Error("<Conflict_item>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var conflict_item_default = Conflict_item;
+
+// src/components/conflicts_list.svelte
+var { console: console_12 } = globals;
+var file4 = "src/components/conflicts_list.svelte";
+function add_css6(target) {
+  append_styles(target, "svelte-1drkksv", ".divider.svelte-1drkksv{margin-top:10px;margin-bottom:10px;border-bottom:2px solid var(--background-modifier-border)}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uZmxpY3RzX2xpc3Quc3ZlbHRlIiwibWFwcGluZ3MiOiJBQTJEQyx1QkFBUyxDQUNSLFVBQVUsQ0FBRSxJQUFJLENBQ2hCLGFBQWEsQ0FBRSxJQUFJLENBQ25CLGFBQWEsQ0FBRSxHQUFHLENBQUMsS0FBSyxDQUFDLElBQUksNEJBQTRCLENBQzFEIiwibmFtZXMiOltdLCJzb3VyY2VzIjpbImNvbmZsaWN0c19saXN0LnN2ZWx0ZSJdfQ== */");
+}
+function get_each_context3(ctx, list2, i) {
+  const child_ctx = ctx.slice();
+  child_ctx[5] = list2[i];
+  child_ctx[7] = i;
+  return child_ctx;
+}
+function create_else_block4(ctx) {
+  let div;
+  let t;
+  let each_blocks = [];
+  let each_1_lookup = /* @__PURE__ */ new Map();
+  let each_1_anchor;
+  let current;
+  let each_value = ensure_array_like_dev(
+    /*conflicts*/
+    ctx[0].keys()
+  );
+  const get_key = (ctx2) => (
+    /*conflictNames*/
+    ctx2[5]
+  );
+  validate_each_keys(ctx, each_value, get_each_context3, get_key);
+  for (let i = 0; i < each_value.length; i += 1) {
+    let child_ctx = get_each_context3(ctx, each_value, i);
+    let key = get_key(child_ctx);
+    each_1_lookup.set(key, each_blocks[i] = create_each_block3(key, child_ctx));
+  }
+  const block2 = {
+    c: function create() {
+      div = element("div");
+      t = space();
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        each_blocks[i].c();
+      }
+      each_1_anchor = empty();
+      add_location(div, file4, 45, 1, 1021);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+      ctx[3](div);
+      insert_dev(target, t, anchor);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        if (each_blocks[i]) {
+          each_blocks[i].m(target, anchor);
+        }
+      }
+      insert_dev(target, each_1_anchor, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, dirty) {
+      if (dirty & /*conflicts, parentModal*/
+      3) {
+        each_value = ensure_array_like_dev(
+          /*conflicts*/
+          ctx2[0].keys()
+        );
+        group_outros();
+        validate_each_keys(ctx2, each_value, get_each_context3, get_key);
+        each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx2, each_value, each_1_lookup, each_1_anchor.parentNode, outro_and_destroy_block, create_each_block3, each_1_anchor, get_each_context3);
+        check_outros();
+      }
+    },
+    i: function intro(local) {
+      if (current) return;
+      for (let i = 0; i < each_value.length; i += 1) {
+        transition_in(each_blocks[i]);
+      }
+      current = true;
+    },
+    o: function outro(local) {
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        transition_out(each_blocks[i]);
+      }
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div);
+        detach_dev(t);
+        detach_dev(each_1_anchor);
+      }
+      ctx[3](null);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        each_blocks[i].d(detaching);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_else_block4.name,
+    type: "else",
+    source: "(33:0) {:else}",
+    ctx
+  });
+  return block2;
+}
+function create_if_block5(ctx) {
+  let p;
+  const block2 = {
+    c: function create() {
+      p = element("p");
+      p.textContent = "No conflicts found.";
+      add_location(p, file4, 43, 1, 985);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, p, anchor);
+    },
+    p: noop,
+    i: noop,
+    o: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(p);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block5.name,
+    type: "if",
+    source: "(31:0) {#if conflicts.size === 0}",
+    ctx
+  });
+  return block2;
+}
+function create_if_block_12(ctx) {
+  let div;
+  const block2 = {
+    c: function create() {
+      div = element("div");
+      attr_dev(div, "class", "divider svelte-1drkksv");
+      add_location(div, file4, 48, 3, 1143);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block_12.name,
+    type: "if",
+    source: "(36:2) {#if i !== 0}",
+    ctx
+  });
+  return block2;
+}
+function create_each_block3(key_1, ctx) {
+  var _a;
+  let first;
+  let t;
+  let conflictitem;
+  let current;
+  let if_block = (
+    /*i*/
+    ctx[7] !== 0 && create_if_block_12(ctx)
+  );
+  conflictitem = new conflict_item_default({
+    props: {
+      conflicts: (
+        /*conflicts*/
+        (_a = ctx[0].get(
+          /*conflictNames*/
+          ctx[5]
+        )) != null ? _a : []
+      ),
+      syncthingController: (
+        /*parentModal*/
+        ctx[1].syncthingController
+      ),
+      parentModal: (
+        /*parentModal*/
+        ctx[1]
+      )
+    },
+    $$inline: true
+  });
+  const block2 = {
+    key: key_1,
+    first: null,
+    c: function create() {
+      first = empty();
+      if (if_block) if_block.c();
+      t = space();
+      create_component(conflictitem.$$.fragment);
+      this.first = first;
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, first, anchor);
+      if (if_block) if_block.m(target, anchor);
+      insert_dev(target, t, anchor);
+      mount_component(conflictitem, target, anchor);
+      current = true;
+    },
+    p: function update2(new_ctx, dirty) {
+      var _a2;
+      ctx = new_ctx;
+      if (
+        /*i*/
+        ctx[7] !== 0
+      ) {
+        if (if_block) {
+        } else {
+          if_block = create_if_block_12(ctx);
+          if_block.c();
+          if_block.m(t.parentNode, t);
+        }
+      } else if (if_block) {
+        if_block.d(1);
+        if_block = null;
+      }
+      const conflictitem_changes = {};
+      if (dirty & /*conflicts*/
+      1) conflictitem_changes.conflicts = /*conflicts*/
+      (_a2 = ctx[0].get(
+        /*conflictNames*/
+        ctx[5]
+      )) != null ? _a2 : [];
+      if (dirty & /*parentModal*/
+      2) conflictitem_changes.syncthingController = /*parentModal*/
+      ctx[1].syncthingController;
+      if (dirty & /*parentModal*/
+      2) conflictitem_changes.parentModal = /*parentModal*/
+      ctx[1];
+      conflictitem.$set(conflictitem_changes);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(conflictitem.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(conflictitem.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(first);
+        detach_dev(t);
+      }
+      if (if_block) if_block.d(detaching);
+      destroy_component(conflictitem, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_each_block3.name,
+    type: "each",
+    source: "(35:1) {#each conflicts.keys() as conflictNames, i (conflictNames)}",
+    ctx
+  });
+  return block2;
+}
+function create_fragment7(ctx) {
+  let current_block_type_index;
+  let if_block;
+  let if_block_anchor;
+  let current;
+  const if_block_creators = [create_if_block5, create_else_block4];
+  const if_blocks = [];
+  function select_block_type(ctx2, dirty) {
+    if (
+      /*conflicts*/
+      ctx2[0].size === 0
+    ) return 0;
+    return 1;
+  }
+  current_block_type_index = select_block_type(ctx, -1);
+  if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  const block2 = {
+    c: function create() {
+      if_block.c();
+      if_block_anchor = empty();
+    },
+    l: function claim(nodes) {
+      throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      if_blocks[current_block_type_index].m(target, anchor);
+      insert_dev(target, if_block_anchor, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, [dirty]) {
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type(ctx2, dirty);
+      if (current_block_type_index === previous_block_index) {
+        if_blocks[current_block_type_index].p(ctx2, dirty);
+      } else {
+        group_outros();
+        transition_out(if_blocks[previous_block_index], 1, 1, () => {
+          if_blocks[previous_block_index] = null;
+        });
+        check_outros();
+        if_block = if_blocks[current_block_type_index];
+        if (!if_block) {
+          if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+          if_block.c();
+        } else {
+          if_block.p(ctx2, dirty);
+        }
+        transition_in(if_block, 1);
+        if_block.m(if_block_anchor.parentNode, if_block_anchor);
+      }
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(if_block);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(if_block_anchor);
+      }
+      if_blocks[current_block_type_index].d(detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment7.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+function instance7($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("Conflicts_list", slots, []);
+  let { parentModal } = $$props;
+  let { conflicts } = $$props;
+  let sortSettingContainer;
+  let sortOptions = {
+    recent: "Most recent",
+    old: "Least recent",
+    "a-to-z": "A to Z",
+    "z-to-a": "Z to A"
+  };
+  onMount(() => {
+    new import_obsidian13.Setting(sortSettingContainer).setName("Sort by date").addDropdown((dropdown) => {
+      dropdown.addOptions(sortOptions);
+      dropdown.onChange((value) => {
+        $$invalidate(0, conflicts = sortFilesBy(conflicts, value, parentModal.syncthingController));
+        console.log("dropdown", conflicts);
+      });
+    });
+    $$invalidate(0, conflicts = sortFilesBy(conflicts, "recent", parentModal.syncthingController));
+  });
+  parentModal.titleEl.setText("Syncthing Conflicts");
+  $$self.$$.on_mount.push(function() {
+    if (parentModal === void 0 && !("parentModal" in $$props || $$self.$$.bound[$$self.$$.props["parentModal"]])) {
+      console_12.warn("<Conflicts_list> was created without expected prop 'parentModal'");
+    }
+    if (conflicts === void 0 && !("conflicts" in $$props || $$self.$$.bound[$$self.$$.props["conflicts"]])) {
+      console_12.warn("<Conflicts_list> was created without expected prop 'conflicts'");
+    }
+  });
+  const writable_props = ["parentModal", "conflicts"];
+  Object.keys($$props).forEach((key) => {
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$" && key !== "slot") console_12.warn(`<Conflicts_list> was created with unknown prop '${key}'`);
+  });
+  function div_binding($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      sortSettingContainer = $$value;
+      $$invalidate(2, sortSettingContainer);
+    });
+  }
+  $$self.$$set = ($$props2) => {
+    if ("parentModal" in $$props2) $$invalidate(1, parentModal = $$props2.parentModal);
+    if ("conflicts" in $$props2) $$invalidate(0, conflicts = $$props2.conflicts);
+  };
+  $$self.$capture_state = () => ({
+    Setting: import_obsidian13.Setting,
+    onMount,
+    ConflictItem: conflict_item_default,
+    sortFilesBy,
+    parentModal,
+    conflicts,
+    sortSettingContainer,
+    sortOptions
+  });
+  $$self.$inject_state = ($$props2) => {
+    if ("parentModal" in $$props2) $$invalidate(1, parentModal = $$props2.parentModal);
+    if ("conflicts" in $$props2) $$invalidate(0, conflicts = $$props2.conflicts);
+    if ("sortSettingContainer" in $$props2) $$invalidate(2, sortSettingContainer = $$props2.sortSettingContainer);
+    if ("sortOptions" in $$props2) sortOptions = $$props2.sortOptions;
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & /*conflicts*/
+    1) {
+      $: if (conflicts) console.log("conflicts", conflicts);
+    }
+  };
+  return [conflicts, parentModal, sortSettingContainer, div_binding];
+}
+var Conflicts_list = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(this, options2, instance7, create_fragment7, safe_not_equal, { parentModal: 1, conflicts: 0 }, add_css6);
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "Conflicts_list",
+      options: options2,
+      id: create_fragment7.name
+    });
+  }
+  get parentModal() {
+    throw new Error("<Conflicts_list>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set parentModal(value) {
+    throw new Error("<Conflicts_list>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get conflicts() {
+    throw new Error("<Conflicts_list>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set conflicts(value) {
+    throw new Error("<Conflicts_list>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var conflicts_list_default = Conflicts_list;
+
+// src/views/conflicts_modal.ts
+var ConflictsModal = class extends import_obsidian14.Modal {
+  constructor(app, syncthingController) {
+    super(app);
+    this.syncthingController = syncthingController;
+    this.components = [];
+  }
+  async onOpen() {
+    var _a, _b;
+    this.titleEl.style.textAlign = "center";
+    const conflictFiles = await this.syncthingController.getConflicts();
+    if (conflictFiles instanceof Failure) {
+      (_a = this.components) == null ? void 0 : _a.push(
+        new error_default({
+          target: this.contentEl,
+          props: {
+            failure: conflictFiles
+          }
+        })
+      );
+      return;
+    }
+    (_b = this.components) == null ? void 0 : _b.push(
+      new conflicts_list_default({
+        target: this.contentEl,
+        props: {
+          parentModal: this,
+          conflicts: conflictFiles
+        }
+      })
+    );
+  }
+  onClose() {
+    var _a;
+    (_a = this.components) == null ? void 0 : _a.forEach((component) => {
+      component.$destroy();
+    });
+    const { contentEl } = this;
+    contentEl.empty();
+  }
+};
+
+// src/views/logos.ts
+var ObsidianLogo = `data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjEwMCUiIHdpZHRoPSIxMDAlIiB2aWV3Qm94PSIwIDAg
 NTEyIDUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCgk8cmFkaWFsR3Jh
 ZGllbnQgaWQ9ImxvZ28tYm90dG9tLWxlZnQiIGN4PSIwIiBjeT0iMCIgZ3JhZGllbnRUcmFuc2Zv
 cm09Im1hdHJpeCgtNTkgLTIyNSAxNTAgLTM5IDE2MS40IDQ3MCkiIGdyYWRpZW50VW5pdHM9InVz
@@ -478,7 +9799,8 @@ LjIgNDAuMi0xMTAuMSAyOS4zLTE2MHoiIGZpbGw9InVybCgjbG9nby1ib3R0b20tZWRnZSkiLz4N
 CgkJCTxwYXRoIGQ9Ik0zMTIuNSAzMTFjNTMuMSAxOS45IDczLjYgNjMuNiA4OC45IDEwMC0xOS0z
 OC4xLTQ1LjItODAuMy05MC44LTk2LTM0LjgtMTEuOC02NC4xLTEwLjQtMTE0LjMgMWwtMS4xLTVj
 NTMuMi0xMi4xIDgxLTEzLjUgMTE3LjMgMHoiIGZpbGw9InVybCgjbG9nby1taWRkbGUtZWRnZSki
-Lz4NCgkJPC9nPg0KCTwvZz4NCjwvc3ZnPg0K`,Ll=`data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBB
+Lz4NCgkJPC9nPg0KCTwvZz4NCjwvc3ZnPg0K`;
+var SyncthingLogo = `data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBB
 ZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9u
 OiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1s
 bnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53
@@ -544,7 +9866,8 @@ bDUuMS01LjJjMi4zLDIuNiw2LDQuMyw5LjksNC4zYzQuNiwwLDguNi0yLjQsOC42LTguM3YtMy4x
 Yy0xLjksMy41LTUuOSw1LjMtMTAsNS4zDQoJCUM0MDEuMSw4MC41LDM5NS41LDczLjMsMzk1LjUs
 NjQuNnogTTQxOS40LDY4LjV2LTYuNmMtMS4zLTMuMy00LjItNS41LTcuMS01LjVjLTQuMSwwLTcs
 NC03LDguNGMwLDQuNiwzLjIsOCw3LjUsOA0KCQlDNDE1LjcsNzIuOCw0MTguMSw3MSw0MTkuNCw2
-OC41eiIvPg0KPC9nPg0KPC9zdmc+DQo=`,Nl=`
+OC41eiIvPg0KPC9nPg0KPC9zdmc+DQo=`;
+var SyncthingLogoSVG = `
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 117.3 117.3"
@@ -573,35 +9896,7982 @@ OC41eiIvPg0KPC9nPg0KPC9zdmc+DQo=`,Nl=`
 	</g>
 </g>
 </svg>
-`;var zt=require("obsidian");var Re=require("obsidian");var Ql=require("obsidian");var nn=require("obsidian");var $t=require("obsidian");var Al=require("obsidian");function uf(i){let e,t=[i[1],{style:"display: flex;"}],n={};for(let r=0;r<t.length;r+=1)n=xt(n,t[r]);return{c(){e=p("div"),mn(e,n)},m(r,o){v(r,e,o),i[3](e)},p(r,[o]){mn(e,n=Fi(t,[o&2&&r[1],{style:"display: flex;"}]))},i:z,o:z,d(r){r&&y(e),i[3](null)}}}function ff(i,e,t){let n=["name"],r=gn(e,n),o,{name:s}=e;Ke(()=>{let l=(0,Al.getIcon)(s);l&&o.appendChild(l)});function a(l){st[l?"unshift":"push"](()=>{o=l,t(0,o)})}return i.$$set=l=>{e=xt(xt({},e),Ni(l)),t(1,r=gn(e,n)),"name"in l&&t(2,s=l.name)},[o,r,s,a]}var fo=class extends fe{constructor(e){super(),he(this,e,ff,uf,ue,{name:2})}},Y=fo;function df(i){Ie(i,"svelte-8fgumz","details.svelte-8fgumz.svelte-8fgumz{padding:1%;border-radius:var(--radius-l)}details.svelte-8fgumz.svelte-8fgumz:hover{background-color:var(--background-modifier-hover)}summary.svelte-8fgumz.svelte-8fgumz{list-style:none;display:flex;flex-direction:row;align-items:center;gap:0.5em;height:fit-content;background-color:var(--background-secondary-alt);padding:1% 2%;border-radius:var(--radius-m)}details[open].svelte-8fgumz summary.svelte-8fgumz{border-radius:0;border-top-left-radius:var(--radius-m);border-top-right-radius:var(--radius-m)}table.svelte-8fgumz.svelte-8fgumz{width:100%;background-color:var(--background-primary);border-collapse:collapse;border-spacing:0;padding:1%;border-radius:var(--radius-l)}table.svelte-8fgumz>tr:last-child td.svelte-8fgumz:first-child{border-bottom-left-radius:var(--radius-m)}table.svelte-8fgumz>tr:last-child td.svelte-8fgumz:last-child{border-bottom-right-radius:var(--radius-m)}table.svelte-8fgumz tr td.svelte-8fgumz{padding:0.5em}tr.svelte-8fgumz.svelte-8fgumz:active,td.svelte-8fgumz.svelte-8fgumz:active{position:static;background:none;width:auto;transition:none;transform:none;border-radius:0}table.svelte-8fgumz tr td div.svelte-8fgumz{vertical-align:middle;display:inline-flex;align-items:center;gap:0.5em}table.svelte-8fgumz tr td.svelte-8fgumz:first-child{text-align:start;display:table-cell}table.svelte-8fgumz tr td.svelte-8fgumz:last-child{text-align:end}table.svelte-8fgumz tr.svelte-8fgumz:nth-child(odd){background-color:var(--background-primary-alt)}table.svelte-8fgumz tr.svelte-8fgumz:nth-child(even){background-color:var(--background-secondary)}")}var pf=i=>({}),Dl=i=>({class:"footer"}),gf=i=>({}),jl=i=>({});function mf(i){var a,l,u;let e,t,n,r=((u=(a=i[1])==null?void 0:a.name)!=null?u:(l=i[1])==null?void 0:l.deviceID)+"",o,s;return e=new Y({props:{name:"hard-drive"}}),{c(){A(e.$$.fragment),t=b(),n=p("span"),o=F(r)},m(f,d){L(e,f,d),v(f,t,d),v(f,n,d),c(n,o),s=!0},p(f,d){var m,g,_;(!s||d&2)&&r!==(r=((_=(m=f[1])==null?void 0:m.name)!=null?_:(g=f[1])==null?void 0:g.deviceID)+"")&&oe(o,r)},i(f){s||(I(e.$$.fragment,f),s=!0)},o(f){M(e.$$.fragment,f),s=!1},d(f){f&&(y(t),y(n)),N(e,f)}}}function hf(i){let e,t,n,r,o,s,a,l,u,f,d,m,g,_,k,x,C,w,S,T,P,Z,O,R,re,te,W,U,E,G,D,J,be,X,$,j,ye,ge,q,Se,ve,me,H,V,Ce,ce,Be,De,Ge,ct,$e,et,Ze,qe,je,Qe,Ye,se,Te,Ue,ke,ut,We,xe=i[1].deviceID.slice(0,7)+"",wt,B,le,Ee,ne,Xe,kt,yt,Mn,Tt,Lt,Nt,rn;return r=new Y({props:{name:"download-cloud"}}),g=new Y({props:{name:"upload-cloud"}}),Z=new Y({props:{name:"home"}}),D=new Y({props:{name:"network"}}),Se=new Y({props:{name:"milestone"}}),Ge=new Y({props:{name:"clock-9"}}),se=new Y({props:{name:"qr-code"}}),Xe=new Y({props:{name:"tag"}}),{c(){e=p("tr"),t=p("td"),n=p("div"),A(r.$$.fragment),o=b(),s=p("span"),s.textContent="Download Rate",a=b(),l=p("td"),l.innerHTML='<a href="/" style="color: inherit;">0 B/s (0 B)</a>',u=b(),f=p("tr"),d=p("td"),m=p("div"),A(g.$$.fragment),_=b(),k=p("span"),k.textContent="Upload Rate",x=b(),C=p("td"),C.innerHTML='<a href="/" style="color: inherit;">0 B/s (0 B)</a>',w=b(),S=p("tr"),T=p("td"),P=p("div"),A(Z.$$.fragment),O=b(),R=p("span"),R.textContent="Local State (Total)",re=b(),te=p("td"),te.innerHTML="<span>Files: 100, Folders: 50, Storage: ~40 MiB</span>",W=b(),U=p("tr"),E=p("td"),G=p("div"),A(D.$$.fragment),J=b(),be=p("span"),be.textContent="Listeners",X=b(),$=p("td"),$.innerHTML="<span>3/3</span>",j=b(),ye=p("tr"),ge=p("td"),q=p("div"),A(Se.$$.fragment),ve=b(),me=p("span"),me.textContent="Discovery",H=b(),V=p("td"),V.innerHTML="<span>4/5</span>",Ce=b(),ce=p("tr"),Be=p("td"),De=p("div"),A(Ge.$$.fragment),ct=b(),$e=p("span"),$e.textContent="Uptime",et=b(),Ze=p("td"),Ze.innerHTML="<span>10h 23m</span>",qe=b(),je=p("tr"),Qe=p("td"),Ye=p("div"),A(se.$$.fragment),Te=b(),Ue=p("span"),Ue.textContent="Identification",ke=b(),ut=p("td"),We=p("a"),wt=F(xe),B=b(),le=p("tr"),Ee=p("td"),ne=p("div"),A(Xe.$$.fragment),kt=b(),yt=p("span"),yt.textContent="Version",Mn=b(),Tt=p("td"),Tt.innerHTML="<span>v1.23.7, Windows, blabla</span>",h(n,"class","svelte-8fgumz"),h(t,"class","svelte-8fgumz"),h(l,"class","svelte-8fgumz"),h(e,"class","svelte-8fgumz"),h(m,"class","svelte-8fgumz"),h(d,"class","svelte-8fgumz"),h(C,"class","svelte-8fgumz"),h(f,"class","svelte-8fgumz"),h(P,"class","svelte-8fgumz"),h(T,"class","svelte-8fgumz"),h(te,"class","svelte-8fgumz"),h(S,"class","svelte-8fgumz"),h(G,"class","svelte-8fgumz"),h(E,"class","svelte-8fgumz"),h($,"class","svelte-8fgumz"),h(U,"class","svelte-8fgumz"),h(q,"class","svelte-8fgumz"),h(ge,"class","svelte-8fgumz"),h(V,"class","svelte-8fgumz"),h(ye,"class","svelte-8fgumz"),h(De,"class","svelte-8fgumz"),h(Be,"class","svelte-8fgumz"),h(Ze,"class","svelte-8fgumz"),h(ce,"class","svelte-8fgumz"),h(Ye,"class","svelte-8fgumz"),h(Qe,"class","svelte-8fgumz"),h(We,"href","/"),h(ut,"class","svelte-8fgumz"),h(je,"class","svelte-8fgumz"),h(ne,"class","svelte-8fgumz"),h(Ee,"class","svelte-8fgumz"),h(Tt,"class","svelte-8fgumz"),h(le,"class","svelte-8fgumz")},m(ae,Fe){v(ae,e,Fe),c(e,t),c(t,n),L(r,n,null),c(n,o),c(n,s),c(e,a),c(e,l),v(ae,u,Fe),v(ae,f,Fe),c(f,d),c(d,m),L(g,m,null),c(m,_),c(m,k),c(f,x),c(f,C),v(ae,w,Fe),v(ae,S,Fe),c(S,T),c(T,P),L(Z,P,null),c(P,O),c(P,R),c(S,re),c(S,te),v(ae,W,Fe),v(ae,U,Fe),c(U,E),c(E,G),L(D,G,null),c(G,J),c(G,be),c(U,X),c(U,$),v(ae,j,Fe),v(ae,ye,Fe),c(ye,ge),c(ge,q),L(Se,q,null),c(q,ve),c(q,me),c(ye,H),c(ye,V),v(ae,Ce,Fe),v(ae,ce,Fe),c(ce,Be),c(Be,De),L(Ge,De,null),c(De,ct),c(De,$e),c(ce,et),c(ce,Ze),v(ae,qe,Fe),v(ae,je,Fe),c(je,Qe),c(Qe,Ye),L(se,Ye,null),c(Ye,Te),c(Ye,Ue),c(je,ke),c(je,ut),c(ut,We),c(We,wt),v(ae,B,Fe),v(ae,le,Fe),c(le,Ee),c(Ee,ne),L(Xe,ne,null),c(ne,kt),c(ne,yt),c(le,Mn),c(le,Tt),Lt=!0,Nt||(rn=Q(We,"click",i[6]),Nt=!0)},p(ae,Fe){(!Lt||Fe&2)&&xe!==(xe=ae[1].deviceID.slice(0,7)+"")&&oe(wt,xe)},i(ae){Lt||(I(r.$$.fragment,ae),I(g.$$.fragment,ae),I(Z.$$.fragment,ae),I(D.$$.fragment,ae),I(Se.$$.fragment,ae),I(Ge.$$.fragment,ae),I(se.$$.fragment,ae),I(Xe.$$.fragment,ae),Lt=!0)},o(ae){M(r.$$.fragment,ae),M(g.$$.fragment,ae),M(Z.$$.fragment,ae),M(D.$$.fragment,ae),M(Se.$$.fragment,ae),M(Ge.$$.fragment,ae),M(se.$$.fragment,ae),M(Xe.$$.fragment,ae),Lt=!1},d(ae){ae&&(y(e),y(u),y(f),y(w),y(S),y(W),y(U),y(j),y(ye),y(Ce),y(ce),y(qe),y(je),y(B),y(le)),N(r),N(g),N(Z),N(D),N(Se),N(Ge),N(se),N(Xe),Nt=!1,rn()}}}function _f(i){let e,t,n,r,o,s,a,l,u,f,d,m,g,_,k,x,C,w,S,T,P,Z,O,R,re,te,W,U,E=i[1].address.join(", ")+"",G,D,J,be,X,$,j,ye,ge,q,Se,ve=i[1].deviceID.slice(0,7)+"",me,H,V,Ce,ce,Be,De,Ge,ct,$e,et,Ze=i[1].name+"",qe,je,Qe,Ye;return r=new Y({props:{name:"eye"}}),_=new Y({props:{name:"cloud"}}),O=new Y({props:{name:"link"}}),$=new Y({props:{name:"qr-code"}}),Be=new Y({props:{name:"folder"}}),{c(){e=p("tr"),t=p("td"),n=p("div"),A(r.$$.fragment),o=b(),s=p("span"),s.textContent="Last seen",a=b(),l=p("td"),u=p("span"),u.textContent=`${new Date().toString()}`,f=b(),d=p("tr"),m=p("td"),g=p("div"),A(_.$$.fragment),k=b(),x=p("span"),x.textContent="Sync Status",C=b(),w=p("td"),w.innerHTML="<span>up to date</span>",S=b(),T=p("tr"),P=p("td"),Z=p("div"),A(O.$$.fragment),R=b(),re=p("span"),re.textContent="Addresses",te=b(),W=p("td"),U=p("span"),G=F(E),D=b(),J=p("tr"),be=p("td"),X=p("div"),A($.$$.fragment),j=b(),ye=p("span"),ye.textContent="Identification",ge=b(),q=p("td"),Se=p("a"),me=F(ve),H=b(),V=p("tr"),Ce=p("td"),ce=p("div"),A(Be.$$.fragment),De=b(),Ge=p("span"),Ge.textContent="Folders",ct=b(),$e=p("td"),et=p("span"),qe=F(Ze),h(n,"class","svelte-8fgumz"),h(t,"class","svelte-8fgumz"),h(l,"class","svelte-8fgumz"),h(e,"class","svelte-8fgumz"),h(g,"class","svelte-8fgumz"),h(m,"class","svelte-8fgumz"),h(w,"class","svelte-8fgumz"),h(d,"class","svelte-8fgumz"),h(Z,"class","svelte-8fgumz"),h(P,"class","svelte-8fgumz"),h(W,"class","svelte-8fgumz"),h(T,"class","svelte-8fgumz"),h(X,"class","svelte-8fgumz"),h(be,"class","svelte-8fgumz"),h(Se,"href","/"),h(q,"class","svelte-8fgumz"),h(J,"class","svelte-8fgumz"),h(ce,"class","svelte-8fgumz"),h(Ce,"class","svelte-8fgumz"),h($e,"class","svelte-8fgumz"),h(V,"class","svelte-8fgumz")},m(se,Te){v(se,e,Te),c(e,t),c(t,n),L(r,n,null),c(n,o),c(n,s),c(e,a),c(e,l),c(l,u),v(se,f,Te),v(se,d,Te),c(d,m),c(m,g),L(_,g,null),c(g,k),c(g,x),c(d,C),c(d,w),v(se,S,Te),v(se,T,Te),c(T,P),c(P,Z),L(O,Z,null),c(Z,R),c(Z,re),c(T,te),c(T,W),c(W,U),c(U,G),v(se,D,Te),v(se,J,Te),c(J,be),c(be,X),L($,X,null),c(X,j),c(X,ye),c(J,ge),c(J,q),c(q,Se),c(Se,me),v(se,H,Te),v(se,V,Te),c(V,Ce),c(Ce,ce),L(Be,ce,null),c(ce,De),c(ce,Ge),c(V,ct),c(V,$e),c($e,et),c(et,qe),je=!0,Qe||(Ye=Q(Se,"click",i[5]),Qe=!0)},p(se,Te){(!je||Te&2)&&E!==(E=se[1].address.join(", ")+"")&&oe(G,E),(!je||Te&2)&&ve!==(ve=se[1].deviceID.slice(0,7)+"")&&oe(me,ve),(!je||Te&2)&&Ze!==(Ze=se[1].name+"")&&oe(qe,Ze)},i(se){je||(I(r.$$.fragment,se),I(_.$$.fragment,se),I(O.$$.fragment,se),I($.$$.fragment,se),I(Be.$$.fragment,se),je=!0)},o(se){M(r.$$.fragment,se),M(_.$$.fragment,se),M(O.$$.fragment,se),M($.$$.fragment,se),M(Be.$$.fragment,se),je=!1},d(se){se&&(y(e),y(f),y(d),y(S),y(T),y(D),y(J),y(H),y(V)),N(r),N(_),N(O),N($),N(Be),Qe=!1,Ye()}}}function bf(i){let e,t,n,r,o,s,a,l,u,f=i[0].id+"",d,m,g,_,k,x,C,w,S,T,P,Z=i[0].path+"",O,R,re,te,W,U,E,G,D,J,be,X,$,j,ye,ge,q,Se,ve,me,H,V,Ce,ce,Be,De,Ge,ct,$e,et,Ze,qe,je,Qe,Ye,se,Te,Ue,ke,ut,We,xe,wt,B,le,Ee,ne,Xe,kt,yt,Mn,Tt,Lt,Nt,rn,ae=i[0].devices.map(El).join(", ")+"",Fe,dr,Pt,ei,on,sn,Co,pr,Io,ti,gr,mr,Rt,ni,ln,an,Mo,hr,So,ii,_r,Bt;return r=new Y({props:{name:"info"}}),x=new Y({props:{name:"folder"}}),U=new Y({props:{name:"globe-2"}}),ye=new Y({props:{name:"home"}}),ce=new Y({props:{name:"refresh-cw"}}),et=new Y({props:{name:"clock-9"}}),Qe=new Y({props:{name:"eye"}}),We=new Y({props:{name:"file"}}),yt=new Y({props:{name:"share-2"}}),sn=new Y({props:{name:"clock-9"}}),an=new Y({props:{name:"arrow-left-right"}}),{c(){e=p("tr"),t=p("td"),n=p("div"),A(r.$$.fragment),o=b(),s=p("span"),s.textContent="Folder ID",a=b(),l=p("td"),u=p("span"),d=F(f),m=b(),g=p("tr"),_=p("td"),k=p("div"),A(x.$$.fragment),C=b(),w=p("span"),w.textContent="Folder Path",S=b(),T=p("td"),P=p("span"),O=F(Z),R=b(),re=p("tr"),te=p("td"),W=p("div"),A(U.$$.fragment),E=b(),G=p("span"),G.textContent="Global State",D=b(),J=p("td"),J.innerHTML="<span>Files: 100, Folders: 50, Storage: ~40 MiB</span>",be=b(),X=p("tr"),$=p("td"),j=p("div"),A(ye.$$.fragment),ge=b(),q=p("span"),q.textContent="Local State",Se=b(),ve=p("td"),ve.innerHTML="<span>Files: 100, Folders: 50, Storage: ~40 MiB</span>",me=b(),H=p("tr"),V=p("td"),Ce=p("div"),A(ce.$$.fragment),Be=b(),De=p("span"),De.textContent="Rescans",Ge=b(),ct=p("td"),$e=p("div"),A(et.$$.fragment),Ze=b(),qe=p("span"),qe.textContent="1h",je=b(),A(Qe.$$.fragment),Ye=b(),se=p("span"),se.textContent="Enabled",Te=b(),Ue=p("tr"),ke=p("td"),ut=p("div"),A(We.$$.fragment),xe=b(),wt=p("span"),wt.textContent="File Versioning",B=b(),le=p("td"),le.innerHTML="<span>Staggered</span>",Ee=b(),ne=p("tr"),Xe=p("td"),kt=p("div"),A(yt.$$.fragment),Mn=b(),Tt=p("span"),Tt.textContent="Shared With",Lt=b(),Nt=p("td"),rn=p("span"),Fe=F(ae),dr=b(),Pt=p("tr"),ei=p("td"),on=p("div"),A(sn.$$.fragment),Co=b(),pr=p("span"),pr.textContent="Last Scan",Io=b(),ti=p("td"),gr=p("span"),gr.textContent=`${new Date().toISOString()}`,mr=b(),Rt=p("tr"),ni=p("td"),ln=p("div"),A(an.$$.fragment),Mo=b(),hr=p("span"),hr.textContent="Latest Change",So=b(),ii=p("td"),_r=p("span"),_r.textContent="Updated <filename>.ext",h(n,"class","svelte-8fgumz"),h(t,"class","svelte-8fgumz"),h(l,"class","svelte-8fgumz"),h(e,"class","svelte-8fgumz"),h(k,"class","svelte-8fgumz"),h(_,"class","svelte-8fgumz"),h(T,"class","svelte-8fgumz"),h(g,"class","svelte-8fgumz"),h(W,"class","svelte-8fgumz"),h(te,"class","svelte-8fgumz"),h(J,"class","svelte-8fgumz"),h(re,"class","svelte-8fgumz"),h(j,"class","svelte-8fgumz"),h($,"class","svelte-8fgumz"),h(ve,"class","svelte-8fgumz"),h(X,"class","svelte-8fgumz"),h(Ce,"class","svelte-8fgumz"),h(V,"class","svelte-8fgumz"),h($e,"class","svelte-8fgumz"),h(ct,"class","svelte-8fgumz"),h(H,"class","svelte-8fgumz"),h(ut,"class","svelte-8fgumz"),h(ke,"class","svelte-8fgumz"),h(le,"class","svelte-8fgumz"),h(Ue,"class","svelte-8fgumz"),h(kt,"class","svelte-8fgumz"),h(Xe,"class","svelte-8fgumz"),h(Nt,"class","svelte-8fgumz"),h(ne,"class","svelte-8fgumz"),h(on,"class","svelte-8fgumz"),h(ei,"class","svelte-8fgumz"),h(ti,"class","svelte-8fgumz"),h(Pt,"class","svelte-8fgumz"),h(ln,"class","svelte-8fgumz"),h(ni,"class","svelte-8fgumz"),h(ii,"class","svelte-8fgumz"),h(Rt,"class","svelte-8fgumz")},m(ee,ze){v(ee,e,ze),c(e,t),c(t,n),L(r,n,null),c(n,o),c(n,s),c(e,a),c(e,l),c(l,u),c(u,d),v(ee,m,ze),v(ee,g,ze),c(g,_),c(_,k),L(x,k,null),c(k,C),c(k,w),c(g,S),c(g,T),c(T,P),c(P,O),v(ee,R,ze),v(ee,re,ze),c(re,te),c(te,W),L(U,W,null),c(W,E),c(W,G),c(re,D),c(re,J),v(ee,be,ze),v(ee,X,ze),c(X,$),c($,j),L(ye,j,null),c(j,ge),c(j,q),c(X,Se),c(X,ve),v(ee,me,ze),v(ee,H,ze),c(H,V),c(V,Ce),L(ce,Ce,null),c(Ce,Be),c(Ce,De),c(H,Ge),c(H,ct),c(ct,$e),L(et,$e,null),c($e,Ze),c($e,qe),c($e,je),L(Qe,$e,null),c($e,Ye),c($e,se),v(ee,Te,ze),v(ee,Ue,ze),c(Ue,ke),c(ke,ut),L(We,ut,null),c(ut,xe),c(ut,wt),c(Ue,B),c(Ue,le),v(ee,Ee,ze),v(ee,ne,ze),c(ne,Xe),c(Xe,kt),L(yt,kt,null),c(kt,Mn),c(kt,Tt),c(ne,Lt),c(ne,Nt),c(Nt,rn),c(rn,Fe),v(ee,dr,ze),v(ee,Pt,ze),c(Pt,ei),c(ei,on),L(sn,on,null),c(on,Co),c(on,pr),c(Pt,Io),c(Pt,ti),c(ti,gr),v(ee,mr,ze),v(ee,Rt,ze),c(Rt,ni),c(ni,ln),L(an,ln,null),c(ln,Mo),c(ln,hr),c(Rt,So),c(Rt,ii),c(ii,_r),Bt=!0},p(ee,ze){(!Bt||ze&1)&&f!==(f=ee[0].id+"")&&oe(d,f),(!Bt||ze&1)&&Z!==(Z=ee[0].path+"")&&oe(O,Z),(!Bt||ze&1)&&ae!==(ae=ee[0].devices.map(El).join(", ")+"")&&oe(Fe,ae)},i(ee){Bt||(I(r.$$.fragment,ee),I(x.$$.fragment,ee),I(U.$$.fragment,ee),I(ye.$$.fragment,ee),I(ce.$$.fragment,ee),I(et.$$.fragment,ee),I(Qe.$$.fragment,ee),I(We.$$.fragment,ee),I(yt.$$.fragment,ee),I(sn.$$.fragment,ee),I(an.$$.fragment,ee),Bt=!0)},o(ee){M(r.$$.fragment,ee),M(x.$$.fragment,ee),M(U.$$.fragment,ee),M(ye.$$.fragment,ee),M(ce.$$.fragment,ee),M(et.$$.fragment,ee),M(Qe.$$.fragment,ee),M(We.$$.fragment,ee),M(yt.$$.fragment,ee),M(sn.$$.fragment,ee),M(an.$$.fragment,ee),Bt=!1},d(ee){ee&&(y(e),y(m),y(g),y(R),y(re),y(be),y(X),y(me),y(H),y(Te),y(Ue),y(Ee),y(ne),y(dr),y(Pt),y(mr),y(Rt)),N(r),N(x),N(U),N(ye),N(ce),N(et),N(Qe),N(We),N(yt),N(sn),N(an)}}}function yf(i){let e,t,n,r,o,s,a,l,u,f,d,m;return t=new Y({props:{name:"pause"}}),a=new Y({props:{name:"pencil"}}),{c(){e=p("button"),A(t.$$.fragment),n=b(),r=p("span"),r.textContent="Pause",o=b(),s=p("button"),A(a.$$.fragment),l=b(),u=p("span"),u.textContent="Edit"},m(g,_){v(g,e,_),L(t,e,null),c(e,n),c(e,r),v(g,o,_),v(g,s,_),L(a,s,null),c(s,l),c(s,u),f=!0,d||(m=[Q(e,"click",i[11]),Q(s,"click",i[12])],d=!0)},i(g){f||(I(t.$$.fragment,g),I(a.$$.fragment,g),f=!0)},o(g){M(t.$$.fragment,g),M(a.$$.fragment,g),f=!1},d(g){g&&(y(e),y(o),y(s)),N(t),N(a),d=!1,we(m)}}}function vf(i){let e,t,n,r,o,s,a,l,u,f,d,m,g,_,k,x,C,w,S,T,P,Z;return t=new Y({props:{name:"pause"}}),a=new Y({props:{name:"history"}}),m=new Y({props:{name:"refresh-cw"}}),C=new Y({props:{name:"pencil"}}),{c(){e=p("button"),A(t.$$.fragment),n=b(),r=p("span"),r.textContent="Pause",o=b(),s=p("button"),A(a.$$.fragment),l=b(),u=p("span"),u.textContent="Versions",f=b(),d=p("button"),A(m.$$.fragment),g=b(),_=p("span"),_.textContent="Rescan",k=b(),x=p("button"),A(C.$$.fragment),w=b(),S=p("span"),S.textContent="Edit"},m(O,R){v(O,e,R),L(t,e,null),c(e,n),c(e,r),v(O,o,R),v(O,s,R),L(a,s,null),c(s,l),c(s,u),v(O,f,R),v(O,d,R),L(m,d,null),c(d,g),c(d,_),v(O,k,R),v(O,x,R),L(C,x,null),c(x,w),c(x,S),T=!0,P||(Z=[Q(e,"click",i[7]),Q(s,"click",i[8]),Q(d,"click",i[9]),Q(x,"click",i[10])],P=!0)},i(O){T||(I(t.$$.fragment,O),I(a.$$.fragment,O),I(m.$$.fragment,O),I(C.$$.fragment,O),T=!0)},o(O){M(t.$$.fragment,O),M(a.$$.fragment,O),M(m.$$.fragment,O),M(C.$$.fragment,O),T=!1},d(O){O&&(y(e),y(o),y(s),y(f),y(d),y(k),y(x)),N(t),N(a),N(m),N(C),P=!1,we(Z)}}}function wf(i){let e,t,n,r,o=[vf,yf],s=[];function a(l,u){return l[0]&&!l[2]?0:l[1]&&!l[2]?1:-1}return~(e=a(i,-1))&&(t=s[e]=o[e](i)),{c(){t&&t.c(),n=ot()},m(l,u){~e&&s[e].m(l,u),v(l,n,u),r=!0},p(l,u){let f=e;e=a(l,u),e!==f&&(t&&(Le(),M(s[f],1,1,()=>{s[f]=null}),Ne()),~e?(t=s[e],t||(t=s[e]=o[e](l),t.c()),I(t,1),t.m(n.parentNode,n)):t=null)},i(l){r||(I(t),r=!0)},o(l){M(t),r=!1},d(l){l&&y(n),~e&&s[e].d(l)}}}function kf(i){let e,t,n,r,o,s,a,l,u=i[4].title,f=Qt(u,i,i[3],jl),d=f||mf(i),m=[bf,_f,hf],g=[];function _(w,S){return w[0]&&!w[2]?0:w[1]&&!w[2]?1:w[2]&&w[1]?2:-1}~(o=_(i,-1))&&(s=g[o]=m[o](i));let k=i[4].footer,x=Qt(k,i,i[3],Dl),C=x||wf(i);return{c(){e=p("details"),t=p("summary"),d&&d.c(),n=b(),r=p("table"),s&&s.c(),a=b(),C&&C.c(),h(t,"class","svelte-8fgumz"),h(r,"class","svelte-8fgumz"),h(e,"class","svelte-8fgumz")},m(w,S){v(w,e,S),c(e,t),d&&d.m(t,null),c(e,n),c(e,r),~o&&g[o].m(r,null),c(e,a),C&&C.m(e,null),l=!0},p(w,[S]){f?f.p&&(!l||S&8)&&Ut(f,u,w,w[3],l?Yt(u,w[3],S,gf):Jt(w[3]),jl):d&&d.p&&(!l||S&2)&&d.p(w,l?S:-1);let T=o;o=_(w,S),o===T?~o&&g[o].p(w,S):(s&&(Le(),M(g[T],1,1,()=>{g[T]=null}),Ne()),~o?(s=g[o],s?s.p(w,S):(s=g[o]=m[o](w),s.c()),I(s,1),s.m(r,null)):s=null),x?x.p&&(!l||S&8)&&Ut(x,k,w,w[3],l?Yt(k,w[3],S,pf):Jt(w[3]),Dl):C&&C.p&&(!l||S&7)&&C.p(w,l?S:-1)},i(w){l||(I(d,w),I(s),I(C,w),l=!0)},o(w){M(d,w),M(s),M(C,w),l=!1},d(w){w&&y(e),d&&d.d(w),~o&&g[o].d(),C&&C.d(w)}}}var El=i=>i.deviceID.slice(0,7);function xf(i,e,t){let{$$slots:n={},$$scope:r}=e,{folder:o=void 0}=e,{device:s=void 0}=e,{isThisDevice:a=!1}=e,l=()=>{new $t.Notice("Not implemented yet!")},u=()=>new $t.Notice("not implement yet !"),f=async x=>{new $t.Notice("Not implemented yet!")},d=async x=>{new $t.Notice("Not implemented yet!")},m=async x=>{new $t.Notice("Not implemented yet!")},g=async x=>{new $t.Notice("Not implemented yet!")},_=async x=>{new $t.Notice("Not implemented yet!")},k=async x=>{new $t.Notice("Not implemented yet!")};return i.$$set=x=>{"folder"in x&&t(0,o=x.folder),"device"in x&&t(1,s=x.device),"isThisDevice"in x&&t(2,a=x.isThisDevice),"$$scope"in x&&t(3,r=x.$$scope)},[o,s,a,r,n,l,u,f,d,m,g,_,k]}var po=class extends fe{constructor(e){super(),he(this,e,xf,kf,ue,{folder:0,device:1,isThisDevice:2},df)}},Cn=po;var Vn=require("obsidian");function Cf(i){Ie(i,"svelte-13pw3b3",".footer.svelte-13pw3b3.svelte-13pw3b3{display:flex;justify-content:flex-end;gap:0.5rem;margin:1em 0 0 0}.footer.svelte-13pw3b3 button.svelte-13pw3b3{gap:0.5rem}")}function If(i){let e,t,n,r=i[0].label+"",o,s,a,l;return e=new Y({props:{name:"folder"}}),{c(){A(e.$$.fragment),t=b(),n=p("span"),o=F(r),s=b(),a=p("span"),a.textContent="Unshared",Oe(a,"flex","1 0 auto"),Oe(a,"text-align","end")},m(u,f){L(e,u,f),v(u,t,f),v(u,n,f),c(n,o),v(u,s,f),v(u,a,f),l=!0},p(u,f){(!l||f&1)&&r!==(r=u[0].label+"")&&oe(o,r)},i(u){l||(I(e.$$.fragment,u),l=!0)},o(u){M(e.$$.fragment,u),l=!1},d(u){u&&(y(t),y(n),y(s),y(a)),N(e,u)}}}function Mf(i){let e,t,n,r,o,s,a,l,u,f,d,m,g,_,k,x,C,w,S,T,P,Z,O;return n=new Y({props:{name:"pause"}}),l=new Y({props:{name:"history"}}),g=new Y({props:{name:"refresh-cw"}}),w=new Y({props:{name:"pencil"}}),{c(){e=p("div"),t=p("button"),A(n.$$.fragment),r=b(),o=p("span"),o.textContent="Pause",s=b(),a=p("button"),A(l.$$.fragment),u=b(),f=p("span"),f.textContent="Versions",d=b(),m=p("button"),A(g.$$.fragment),_=b(),k=p("span"),k.textContent="Rescan",x=b(),C=p("button"),A(w.$$.fragment),S=b(),T=p("span"),T.textContent="Edit",h(t,"class","svelte-13pw3b3"),h(a,"class","svelte-13pw3b3"),h(m,"class","svelte-13pw3b3"),h(C,"class","svelte-13pw3b3"),h(e,"slot","footer"),h(e,"class","footer svelte-13pw3b3")},m(R,re){v(R,e,re),c(e,t),L(n,t,null),c(t,r),c(t,o),c(e,s),c(e,a),L(l,a,null),c(a,u),c(a,f),c(e,d),c(e,m),L(g,m,null),c(m,_),c(m,k),c(e,x),c(e,C),L(w,C,null),c(C,S),c(C,T),P=!0,Z||(O=[Q(t,"click",i[1]),Q(a,"click",i[2]),Q(m,"click",i[3]),Q(C,"click",i[4])],Z=!0)},p:z,i(R){P||(I(n.$$.fragment,R),I(l.$$.fragment,R),I(g.$$.fragment,R),I(w.$$.fragment,R),P=!0)},o(R){M(n.$$.fragment,R),M(l.$$.fragment,R),M(g.$$.fragment,R),M(w.$$.fragment,R),P=!1},d(R){R&&y(e),N(n),N(l),N(g),N(w),Z=!1,we(O)}}}function Sf(i){let e,t;return e=new Cn({props:{folder:i[0],device:void 0,$$slots:{footer:[Mf],title:[If]},$$scope:{ctx:i}}}),{c(){A(e.$$.fragment)},m(n,r){L(e,n,r),t=!0},p(n,[r]){let o={};r&1&&(o.folder=n[0]),r&33&&(o.$$scope={dirty:r,ctx:n}),e.$set(o)},i(n){t||(I(e.$$.fragment,n),t=!0)},o(n){M(e.$$.fragment,n),t=!1},d(n){N(e,n)}}}function $f(i,e,t){let{folder:n={id:"folder ID",label:"folder label",path:"folder path",type:"sendreceive",devices:[{deviceID:"device 1",encryptionPassword:"",introducedBy:""},{deviceID:"device 2",encryptionPassword:"",introducedBy:""}],filesystemType:"filesystem type",maxConflicts:0}}=e,r=async l=>{new Vn.Notice("Not implemented yet!")},o=async l=>{new Vn.Notice("Not implemented yet!")},s=async l=>{new Vn.Notice("Not implemented yet!")},a=async l=>{new Vn.Notice("Not implemented yet!")};return i.$$set=l=>{"folder"in l&&t(0,n=l.folder)},[n,r,o,s,a]}var go=class extends fe{constructor(e){super(),he(this,e,$f,Sf,ue,{folder:0},Cf)}},Fl=go;var mo=require("obsidian");function Tf(i){Ie(i,"svelte-13pw3b3",".footer.svelte-13pw3b3.svelte-13pw3b3{display:flex;justify-content:flex-end;gap:0.5rem;margin:1em 0 0 0}.footer.svelte-13pw3b3 button.svelte-13pw3b3{gap:0.5rem}")}function Lf(i){var g;let e,t,n,r,o=((g=i[0].name)!=null?g:i[0].deviceID)+"",s,a,l,u,f,d,m;return t=new Y({props:{name:"hard-drive"}}),d=new Y({props:{name:"wifi-off"}}),{c(){e=p("div"),A(t.$$.fragment),n=b(),r=p("span"),s=F(o),a=b(),l=p("div"),u=p("span"),u.textContent="Disconnected",f=b(),A(d.$$.fragment),Oe(e,"display","flex"),Oe(e,"gap","0.5em"),Oe(l,"display","flex"),Oe(l,"gap","0.5em"),Oe(l,"flex","1 0 auto"),Oe(l,"justify-content","end")},m(_,k){v(_,e,k),L(t,e,null),c(e,n),c(e,r),c(r,s),v(_,a,k),v(_,l,k),c(l,u),c(l,f),L(d,l,null),m=!0},p(_,k){var x;(!m||k&1)&&o!==(o=((x=_[0].name)!=null?x:_[0].deviceID)+"")&&oe(s,o)},i(_){m||(I(t.$$.fragment,_),I(d.$$.fragment,_),m=!0)},o(_){M(t.$$.fragment,_),M(d.$$.fragment,_),m=!1},d(_){_&&(y(e),y(a),y(l)),N(t),N(d)}}}function Nf(i){let e,t,n,r,o,s,a,l,u,f,d,m,g;return n=new Y({props:{name:"pause"}}),l=new Y({props:{name:"pencil"}}),{c(){e=p("div"),t=p("button"),A(n.$$.fragment),r=b(),o=p("span"),o.textContent="Pause",s=b(),a=p("button"),A(l.$$.fragment),u=b(),f=p("span"),f.textContent="Edit",h(t,"class","svelte-13pw3b3"),h(a,"class","svelte-13pw3b3"),h(e,"slot","footer"),h(e,"class","footer svelte-13pw3b3")},m(_,k){v(_,e,k),c(e,t),L(n,t,null),c(t,r),c(t,o),c(e,s),c(e,a),L(l,a,null),c(a,u),c(a,f),d=!0,m||(g=[Q(t,"click",i[1]),Q(a,"click",i[2])],m=!0)},p:z,i(_){d||(I(n.$$.fragment,_),I(l.$$.fragment,_),d=!0)},o(_){M(n.$$.fragment,_),M(l.$$.fragment,_),d=!1},d(_){_&&y(e),N(n),N(l),m=!1,we(g)}}}function Af(i){let e,t;return e=new Cn({props:{device:i[0],folder:void 0,$$slots:{footer:[Nf],title:[Lf]},$$scope:{ctx:i}}}),{c(){A(e.$$.fragment)},m(n,r){L(e,n,r),t=!0},p(n,[r]){let o={};r&1&&(o.device=n[0]),r&9&&(o.$$scope={dirty:r,ctx:n}),e.$set(o)},i(n){t||(I(e.$$.fragment,n),t=!0)},o(n){M(e.$$.fragment,n),t=!1},d(n){N(e,n)}}}function Df(i,e,t){let{device:n={address:["dynamic"],deviceID:"device ID",introducedBy:"introduced by",name:"device name",ignoredFolders:[],paused:!1}}=e,r=async s=>{new mo.Notice("Not implemented yet!")},o=async s=>{new mo.Notice("Not implemented yet!")};return i.$$set=s=>{"device"in s&&t(0,n=s.device)},[n,r,o]}var ho=class extends fe{constructor(e){super(),he(this,e,Df,Af,ue,{device:0},Tf)}},zl=ho;function jf(i){Ie(i,"svelte-15h0slv",`.close-button.svelte-15h0slv{margin-left:auto;cursor:var(--cursor);font-size:24px;line-height:20px;padding:var(--size-2-2);border-radius:var(--radius-s);color:var(--text-muted);&:before {
-			font-family: Inter, sans-serif;
-			content: "\\D7";
-			font-weight: 300;
-		};&:hover {
-			background-color: var(--background-modifier-hover);
-			color: var(--text-normal);
-		}}`)}function Ol(i){let e,t,n,r,o,s,a,l,u,f,d,m,g,_;return{c(){e=p("div"),t=p("div"),n=p("div"),n.innerHTML='<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-alert-triangle"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>',r=b(),o=p("div"),s=F(i[1]),a=b(),l=p("div"),u=b(),f=p("div"),d=p("p"),m=F(i[2]),h(n,"class","callout-icon"),h(o,"class","callout-title-inner"),h(l,"role","button"),h(l,"tabindex","0"),h(l,"aria-roledescription","Dismiss"),h(l,"class","close-button svelte-15h0slv"),h(t,"class","callout-title"),h(f,"class","callout-content"),h(e,"data-callout-metadata",""),h(e,"data-callout-fold",""),h(e,"data-callout","warning"),h(e,"class","callout")},m(k,x){v(k,e,x),c(e,t),c(t,n),c(t,r),c(t,o),c(o,s),c(t,a),c(t,l),c(e,u),c(e,f),c(f,d),c(d,m),g||(_=[Q(l,"keypress",i[3]),Q(l,"click",i[4])],g=!0)},p(k,x){x&2&&oe(s,k[1]),x&4&&oe(m,k[2])},d(k){k&&y(e),g=!1,we(_)}}}function Ef(i){let e,t=!i[0]&&Ol(i);return{c(){t&&t.c(),e=ot()},m(n,r){t&&t.m(n,r),v(n,e,r)},p(n,[r]){n[0]?t&&(t.d(1),t=null):t?t.p(n,r):(t=Ol(n),t.c(),t.m(e.parentNode,e))},i:z,o:z,d(n){n&&y(e),t&&t.d(n)}}}function Ff(i,e,t){let{title:n="Warning"}=e,{message:r}=e,{dismiss:o=!1}=e,s=()=>t(0,o=!o),a=()=>t(0,o=!o);return i.$$set=l=>{"title"in l&&t(1,n=l.title),"message"in l&&t(2,r=l.message),"dismiss"in l&&t(0,o=l.dismiss)},[o,n,r,s,a]}var _o=class extends fe{constructor(e){super(),he(this,e,Ff,Ef,ue,{title:1,message:2,dismiss:0},jf)}},Pl=_o;function zf(i){Ie(i,"svelte-f2narq",".left.svelte-f2narq.svelte-f2narq{float:left;width:50%}.right.svelte-f2narq.svelte-f2narq{float:right;width:50%}.folder.svelte-f2narq.svelte-f2narq,.mydevice.svelte-f2narq.svelte-f2narq,.remote.svelte-f2narq.svelte-f2narq{width:100%}.controls.svelte-f2narq.svelte-f2narq{display:flex;flex-direction:row;justify-content:flex-end;margin:1em 0}.controls.svelte-f2narq button.svelte-f2narq{gap:0.5em;margin:0 0.5em}")}function Rl(i,e,t){let n=i.slice();return n[16]=e[t],n}function Bl(i,e,t){let n=i.slice();return n[19]=e[t],n}function Gl(i){let e,t;return e=new Fl({props:{folder:i[19]}}),{c(){A(e.$$.fragment)},m(n,r){L(e,n,r),t=!0},p(n,r){let o={};r&1&&(o.folder=n[19]),e.$set(o)},i(n){t||(I(e.$$.fragment,n),t=!0)},o(n){M(e.$$.fragment,n),t=!1},d(n){N(e,n)}}}function Zl(i){let e,t;return e=new zl({props:{device:i[16]}}),{c(){A(e.$$.fragment)},m(n,r){L(e,n,r),t=!0},p(n,r){let o={};r&6&&(o.device=n[16]),e.$set(o)},i(n){t||(I(e.$$.fragment,n),t=!0)},o(n){M(e.$$.fragment,n),t=!1},d(n){N(e,n)}}}function Of(i){let e,t,n,r,o,s,a=i[0].length+"",l,u,f,d,m,g,_,k,x,C,w,S,T,P,Z,O,R,re,te,W,U,E,G,D,J,be,X,$,j,ye=i[1].filter(i[7]).length+"",ge,q,Se,ve,me,H,V,Ce,ce,Be,De,Ge,ct,$e,et,Ze,qe,je,Qe,Ye,se,Te;e=new Pl({props:{message:"The following configuration is not fully implemented yet. Some data aren't real-time and some controls are not implemented yet. It is mainly to reproduce the Syncthing GUI and then, real-time data and controls will be added."}});let Ue=Je(i[0]),ke=[];for(let B=0;B<Ue.length;B+=1)ke[B]=Gl(Bl(i,Ue,B));let ut=B=>M(ke[B],1,1,()=>{ke[B]=null});_=new Y({props:{name:"pause"}}),S=new Y({props:{name:"refresh-cw"}}),R=new Y({props:{name:"plus"}}),J=new Cn({props:{isThisDevice:!0,device:i[2]}});let We=Je(i[1].filter(i[8])),xe=[];for(let B=0;B<We.length;B+=1)xe[B]=Zl(Rl(i,We,B));let wt=B=>M(xe[B],1,1,()=>{xe[B]=null});return V=new Y({props:{name:"pause"}}),Ge=new Y({props:{name:"info"}}),qe=new Y({props:{name:"plus"}}),{c(){A(e.$$.fragment),t=b(),n=p("div"),r=p("div"),o=p("h2"),s=F("Folders ("),l=F(a),u=F(")"),f=b();for(let B=0;B<ke.length;B+=1)ke[B].c();d=b(),m=p("div"),g=p("button"),A(_.$$.fragment),k=b(),x=p("span"),x.textContent="Pause All",C=b(),w=p("button"),A(S.$$.fragment),T=b(),P=p("span"),P.textContent="Rescan All",Z=b(),O=p("button"),A(R.$$.fragment),re=b(),te=p("span"),te.textContent="Add Folder",W=b(),U=p("div"),E=p("div"),G=p("h2"),G.textContent="This Device",D=b(),A(J.$$.fragment),be=b(),X=p("div"),$=p("h2"),j=F("Remote Devices ("),ge=F(ye),q=F(")"),Se=b();for(let B=0;B<xe.length;B+=1)xe[B].c();ve=b(),me=p("div"),H=p("button"),A(V.$$.fragment),Ce=b(),ce=p("span"),ce.textContent="Pause All",Be=b(),De=p("button"),A(Ge.$$.fragment),ct=b(),$e=p("span"),$e.textContent="Recent Changes",et=b(),Ze=p("button"),A(qe.$$.fragment),je=b(),Qe=p("span"),Qe.textContent="Add Remote Device",h(g,"class","svelte-f2narq"),h(w,"class","svelte-f2narq"),h(O,"class","svelte-f2narq"),h(m,"class","controls svelte-f2narq"),h(r,"class","folder svelte-f2narq"),h(n,"class","left svelte-f2narq"),h(E,"class","mydevice svelte-f2narq"),h(H,"class","svelte-f2narq"),h(De,"class","svelte-f2narq"),h(Ze,"class","svelte-f2narq"),h(me,"class","controls svelte-f2narq"),h(X,"class","remote svelte-f2narq"),h(U,"class","right svelte-f2narq")},m(B,le){L(e,B,le),v(B,t,le),v(B,n,le),c(n,r),c(r,o),c(o,s),c(o,l),c(o,u),c(r,f);for(let Ee=0;Ee<ke.length;Ee+=1)ke[Ee]&&ke[Ee].m(r,null);c(r,d),c(r,m),c(m,g),L(_,g,null),c(g,k),c(g,x),c(m,C),c(m,w),L(S,w,null),c(w,T),c(w,P),c(m,Z),c(m,O),L(R,O,null),c(O,re),c(O,te),v(B,W,le),v(B,U,le),c(U,E),c(E,G),c(E,D),L(J,E,null),c(U,be),c(U,X),c(X,$),c($,j),c($,ge),c($,q),c(X,Se);for(let Ee=0;Ee<xe.length;Ee+=1)xe[Ee]&&xe[Ee].m(X,null);c(X,ve),c(X,me),c(me,H),L(V,H,null),c(H,Ce),c(H,ce),c(me,Be),c(me,De),L(Ge,De,null),c(De,ct),c(De,$e),c(me,et),c(me,Ze),L(qe,Ze,null),c(Ze,je),c(Ze,Qe),Ye=!0,se||(Te=[Q(g,"click",i[4]),Q(w,"click",i[5]),Q(O,"click",i[6]),Q(H,"click",i[9]),Q(De,"click",i[10]),Q(Ze,"click",i[11])],se=!0)},p(B,[le]){if((!Ye||le&1)&&a!==(a=B[0].length+"")&&oe(l,a),le&1){Ue=Je(B[0]);let ne;for(ne=0;ne<Ue.length;ne+=1){let Xe=Bl(B,Ue,ne);ke[ne]?(ke[ne].p(Xe,le),I(ke[ne],1)):(ke[ne]=Gl(Xe),ke[ne].c(),I(ke[ne],1),ke[ne].m(r,d))}for(Le(),ne=Ue.length;ne<ke.length;ne+=1)ut(ne);Ne()}let Ee={};if(le&4&&(Ee.device=B[2]),J.$set(Ee),(!Ye||le&6)&&ye!==(ye=B[1].filter(B[7]).length+"")&&oe(ge,ye),le&6){We=Je(B[1].filter(B[8]));let ne;for(ne=0;ne<We.length;ne+=1){let Xe=Rl(B,We,ne);xe[ne]?(xe[ne].p(Xe,le),I(xe[ne],1)):(xe[ne]=Zl(Xe),xe[ne].c(),I(xe[ne],1),xe[ne].m(X,ve))}for(Le(),ne=We.length;ne<xe.length;ne+=1)wt(ne);Ne()}},i(B){if(!Ye){I(e.$$.fragment,B);for(let le=0;le<Ue.length;le+=1)I(ke[le]);I(_.$$.fragment,B),I(S.$$.fragment,B),I(R.$$.fragment,B),I(J.$$.fragment,B);for(let le=0;le<We.length;le+=1)I(xe[le]);I(V.$$.fragment,B),I(Ge.$$.fragment,B),I(qe.$$.fragment,B),Ye=!0}},o(B){M(e.$$.fragment,B),ke=ke.filter(Boolean);for(let le=0;le<ke.length;le+=1)M(ke[le]);M(_.$$.fragment,B),M(S.$$.fragment,B),M(R.$$.fragment,B),M(J.$$.fragment,B),xe=xe.filter(Boolean);for(let le=0;le<xe.length;le+=1)M(xe[le]);M(V.$$.fragment,B),M(Ge.$$.fragment,B),M(qe.$$.fragment,B),Ye=!1},d(B){B&&(y(t),y(n),y(W),y(U)),N(e,B),bt(ke,B),N(_),N(S),N(R),N(J),bt(xe,B),N(V),N(Ge),N(qe),se=!1,we(Te)}}}function Pf(i,e,t){var n,r,o;let{parent:s}=e;s.titleEl.setText("Syncthing Configuration"),s.titleEl.style.textAlign="center";let a=`${(n=s.plugin.settings.configuration.url)===null||n===void 0?void 0:n.protocol}://${(r=s.plugin.settings.configuration.url)===null||r===void 0?void 0:r.ip_address}:${(o=s.plugin.settings.configuration.url)===null||o===void 0?void 0:o.port}/`;console.log(a);let l=[],u=[],f;Ke(()=>He(void 0,void 0,void 0,function*(){t(0,l=yield s.plugin.syncthingController.getFolders()),t(1,u=yield s.plugin.syncthingController.getDevices()),t(2,f=u.first()),console.log("Folders: ",l),console.log("Devices: ",u)}));let d=async S=>{new nn.Notice("Not implemented yet!")},m=async S=>{new nn.Notice("Not implemented yet!")},g=async S=>{new nn.Notice("Not implemented yet!")},_=S=>S!==f,k=S=>S!==f,x=async S=>{new nn.Notice("Not implemented yet!")},C=async S=>{new nn.Notice("Not implemented yet!")},w=async S=>{new nn.Notice("Not implemented yet!")};return i.$$set=S=>{"parent"in S&&t(3,s=S.parent)},[l,u,f,s,d,m,g,_,k,x,C,w]}var bo=class extends fe{constructor(e){super(),he(this,e,Pf,Of,ue,{parent:3},zf)}},Wl=bo;var lr=class extends Ql.Modal{constructor(t,n){super(t);this.plugin=n;this.components=[]}async onOpen(){this.modalEl.style.width="100%",this.modalEl.style.height="100%",this.components.push(new Wl({target:this.contentEl,props:{parent:this}}))}onClose(){let{contentEl:t}=this;this.components.forEach(n=>n.$destroy()),t.empty()}};function Rf(i){Ie(i,"svelte-1iic7l7",".error.svelte-1iic7l7{color:var(--text-error)}")}var Bf=i=>({}),Yl=i=>({}),Gf=i=>({}),Ul=i=>({}),Zf=i=>({}),Jl=i=>({});function Wf(i){let e;return{c(){e=F(i[0])},m(t,n){v(t,e,n)},p(t,n){n&1&&oe(e,t[0])},d(t){t&&y(e)}}}function Qf(i){let e;return{c(){e=F(i[1])},m(t,n){v(t,e,n)},p(t,n){n&2&&oe(e,t[1])},d(t){t&&y(e)}}}function Yf(i){let e,t,n,r,o,s,a,l,u,f=i[6].name,d=Qt(f,i,i[5],Jl),m=d||Wf(i),g=i[6].description,_=Qt(g,i,i[5],Ul),k=_||Qf(i),x=i[6].control,C=Qt(x,i,i[5],Yl);return{c(){e=p("div"),t=p("div"),n=p("div"),m&&m.c(),r=b(),o=p("div"),k&&k.c(),s=b(),a=p("div"),C&&C.c(),h(n,"class","setting-item-name svelte-1iic7l7"),gt(n,"error",i[3]),h(o,"class","setting-item-description svelte-1iic7l7"),gt(o,"error",i[3]),h(t,"class","setting-item-info"),h(a,"class","setting-item-control"),h(e,"class",l="setting-item "+i[4]+" svelte-1iic7l7"),gt(e,"setting-item-heading",i[2])},m(w,S){v(w,e,S),c(e,t),c(t,n),m&&m.m(n,null),c(t,r),c(t,o),k&&k.m(o,null),c(e,s),c(e,a),C&&C.m(a,null),u=!0},p(w,[S]){d?d.p&&(!u||S&32)&&Ut(d,f,w,w[5],u?Yt(f,w[5],S,Zf):Jt(w[5]),Jl):m&&m.p&&(!u||S&1)&&m.p(w,u?S:-1),(!u||S&8)&&gt(n,"error",w[3]),_?_.p&&(!u||S&32)&&Ut(_,g,w,w[5],u?Yt(g,w[5],S,Gf):Jt(w[5]),Ul):k&&k.p&&(!u||S&2)&&k.p(w,u?S:-1),(!u||S&8)&&gt(o,"error",w[3]),C&&C.p&&(!u||S&32)&&Ut(C,x,w,w[5],u?Yt(x,w[5],S,Bf):Jt(w[5]),Yl),(!u||S&16&&l!==(l="setting-item "+w[4]+" svelte-1iic7l7"))&&h(e,"class",l),(!u||S&20)&&gt(e,"setting-item-heading",w[2])},i(w){u||(I(m,w),I(k,w),I(C,w),u=!0)},o(w){M(m,w),M(k,w),M(C,w),u=!1},d(w){w&&y(e),m&&m.d(w),k&&k.d(w),C&&C.d(w)}}}function Uf(i,e,t){let{$$slots:n={},$$scope:r}=e,{name:o=""}=e,{description:s=""}=e,{heading:a=!1}=e,{error:l=!1}=e,{class:u=""}=e;return i.$$set=f=>{"name"in f&&t(0,o=f.name),"description"in f&&t(1,s=f.description),"heading"in f&&t(2,a=f.heading),"error"in f&&t(3,l=f.error),"class"in f&&t(4,u=f.class),"$$scope"in f&&t(5,r=f.$$scope)},[o,s,a,l,u,r,n]}var yo=class extends fe{constructor(e){super(),he(this,e,Uf,Yf,ue,{name:0,description:1,heading:2,error:3,class:4},Rf)}},Ae=yo;var Hl=require("obsidian");function Jf(i){let e,t=[i[1]],n={};for(let r=0;r<t.length;r+=1)n=xt(n,t[r]);return{c(){e=p("div"),mn(e,n)},m(r,o){v(r,e,o),i[3](e)},p(r,[o]){mn(e,n=Fi(t,[o&2&&r[1]]))},i:z,o:z,d(r){r&&y(e),i[3](null)}}}function Hf(i,e,t){let n=["callback"],r=gn(e,n),{callback:o}=e,s;Ke(()=>{new Hl.ToggleComponent(s).onChange(o)});function a(l){st[l?"unshift":"push"](()=>{s=l,t(0,s)})}return i.$$set=l=>{e=xt(xt({},e),Ni(l)),t(1,r=gn(e,n)),"callback"in l&&t(2,o=l.callback)},[s,r,o,a]}var vo=class extends fe{constructor(e){super(),he(this,e,Hf,Jf,ue,{callback:2})}},ql=vo;var Xn=require("obsidian");var In=[];function Vl(i,e=z){let t,n=new Set;function r(a){if(ue(i,a)&&(i=a,t)){let l=!In.length;for(let u of n)u[1](),In.push(u,i);if(l){for(let u=0;u<In.length;u+=2)In[u][0](In[u+1]);In.length=0}}}function o(a){r(a(i))}function s(a,l=z){let u=[a,l];return n.add(u),n.size===1&&(t=e(r,o)||z),a(i),()=>{n.delete(u),n.size===0&&t&&(t(),t=null)}}return{set:r,update:o,subscribe:s}}var Xl=require("obsidian"),ar=class extends Xl.AbstractInputSuggest{constructor(e,t){super(e,t),this.inputEl=t}getSuggestions(e){let t=this.app.vault.getAllLoadedFiles(),n=[],r=e.toLowerCase();return n=t.filter(o=>o.path.toLowerCase().includes(r)),n}renderSuggestion(e,t){t.setText(e.path)}selectSuggestion(e){this.inputEl.value=e.path,this.inputEl.trigger("input"),this.close()}};var cr=require("obsidian");function qf(i){let e;return{c(){e=p("div"),h(e,"id","file-suggester"),h(e,"class",i[0])},m(t,n){v(t,e,n),i[4](e)},p(t,[n]){n&1&&h(e,"class",t[0])},i:z,o:z,d(t){t&&y(e),i[4](null)}}}function Vf(i,e,t){let{parent:n}=e,{onChange:r=()=>{}}=e,{class:o=""}=e,s;Ke(()=>{new cr.Setting(s).addSearch(l=>{new ar(n.app,l.inputEl),l.setPlaceholder("Type to search for a file").setValue("").onChange((0,cr.debounce)(r,750))})});function a(l){st[l?"unshift":"push"](()=>{s=l,t(1,s)})}return i.$$set=l=>{"parent"in l&&t(2,n=l.parent),"onChange"in l&&t(3,r=l.onChange),"class"in l&&t(0,o=l.class)},[o,s,n,r,a]}var wo=class extends fe{constructor(e){super(),he(this,e,Vf,qf,ue,{parent:2,onChange:3,class:0})}},Kl=wo;function Xf(i){Ie(i,"svelte-1yicc3x",".container.svelte-1yicc3x{display:grid;grid-template-columns:auto 1fr;gap:10px}")}function ea(i,e,t){let n=i.slice();return n[14]=e[t],n}function Kf(i){let e,t;return{c(){e=F("Manage the ignored files and patterns in "),t=p("code"),t.textContent=".stignore"},m(n,r){v(n,e,r),v(n,t,r)},p:z,d(n){n&&(y(e),y(t))}}}function ed(i){let e;return{c(){e=p("p"),e.innerHTML=`Please set the files you want to ignore in your vault when syncing
-			with Syncthing.
-			<br/>
-			See
-			<a href="https://docs.syncthing.net/users/ignoring.html" target="_blank">Syncthing documentation</a> for more information.`},m(t,n){v(t,e,n)},p:z,d(t){t&&y(e)}}}function td(i){let e,t,n,r,o,s,a,l,u,f,d;return r=new Kl({props:{parent:i[0],onChange:i[8]}}),{c(){e=p("div"),t=p("button"),t.textContent="Add file/folder",n=b(),A(r.$$.fragment),o=b(),s=p("button"),s.textContent="Add pattern",a=b(),l=p("input"),h(l,"type","text"),h(l,"placeholder","Enter some text..."),h(e,"class","container svelte-1yicc3x")},m(m,g){v(m,e,g),c(e,t),c(e,n),L(r,e,null),c(e,o),c(e,s),c(e,a),c(e,l),jt(l,i[2]),u=!0,f||(d=[Q(t,"click",i[7]),Q(s,"click",i[9]),Q(l,"input",i[10])],f=!0)},p(m,g){let _={};g&1&&(_.parent=m[0]),g&2&&(_.onChange=m[8]),r.$set(_),g&4&&l.value!==m[2]&&jt(l,m[2])},i(m){u||(I(r.$$.fragment,m),u=!0)},o(m){M(r.$$.fragment,m),u=!1},d(m){m&&y(e),N(r),f=!1,we(d)}}}function ta(i){let e,t,n=Je(i[3].filter(ia)),r=[];for(let s=0;s<n.length;s+=1)r[s]=na(ea(i,n,s));let o=s=>M(r[s],1,1,()=>{r[s]=null});return{c(){for(let s=0;s<r.length;s+=1)r[s].c();e=ot()},m(s,a){for(let l=0;l<r.length;l+=1)r[l]&&r[l].m(s,a);v(s,e,a),t=!0},p(s,a){if(a&40){n=Je(s[3].filter(ia));let l;for(l=0;l<n.length;l+=1){let u=ea(s,n,l);r[l]?(r[l].p(u,a),I(r[l],1)):(r[l]=na(u),r[l].c(),I(r[l],1),r[l].m(e.parentNode,e))}for(Le(),l=n.length;l<r.length;l+=1)o(l);Ne()}},i(s){if(!t){for(let a=0;a<n.length;a+=1)I(r[a]);t=!0}},o(s){r=r.filter(Boolean);for(let a=0;a<r.length;a+=1)M(r[a]);t=!1},d(s){s&&y(e),bt(r,s)}}}function nd(i){let e,t,n,r;function o(){return i[11](i[14])}return{c(){e=p("button"),e.textContent="Remove",t=b()},m(s,a){v(s,e,a),v(s,t,a),n||(r=Q(e,"click",o),n=!0)},p(s,a){i=s},d(s){s&&(y(e),y(t)),n=!1,r()}}}function na(i){let e,t;return e=new Ae({props:{name:i[14],$$slots:{control:[nd]},$$scope:{ctx:i}}}),{c(){A(e.$$.fragment)},m(n,r){L(e,n,r),t=!0},p(n,r){let o={};r&8&&(o.name=n[14]),r&131080&&(o.$$scope={dirty:r,ctx:n}),e.$set(o)},i(n){t||(I(e.$$.fragment,n),t=!0)},o(n){M(e.$$.fragment,n),t=!1},d(n){N(e,n)}}}function id(i){let e,t,n,r,o,s;e=new Ae({props:{name:"Syncthing Ignored Files",heading:!0}}),n=new Ae({props:{$$slots:{control:[td],description:[ed],name:[Kf]},$$scope:{ctx:i}}});let a=i[3].length>0&&ta(i);return{c(){A(e.$$.fragment),t=b(),A(n.$$.fragment),r=b(),a&&a.c(),o=ot()},m(l,u){L(e,l,u),v(l,t,u),L(n,l,u),v(l,r,u),a&&a.m(l,u),v(l,o,u),s=!0},p(l,[u]){let f={};u&131079&&(f.$$scope={dirty:u,ctx:l}),n.$set(f),l[3].length>0?a?(a.p(l,u),u&8&&I(a,1)):(a=ta(l),a.c(),I(a,1),a.m(o.parentNode,o)):a&&(Le(),M(a,1,1,()=>{a=null}),Ne())},i(l){s||(I(e.$$.fragment,l),I(n.$$.fragment,l),I(a),s=!0)},o(l){M(e.$$.fragment,l),M(n.$$.fragment,l),M(a),s=!1},d(l){l&&(y(t),y(r),y(o)),N(e,l),N(n,l),a&&a.d(l)}}}var ia=i=>i!=="";function rd(i,e,t){let n,{parent:r}=e,o=(0,Xn.normalizePath)(".stignore"),s="",a="";function l(){return He(this,void 0,void 0,function*(){let C="";try{C=yield r.app.vault.adapter.read(o)}catch(w){console.error("Error: ",w),new Xn.Notice("No .stignore file found.")}return C.replace(/\r|\n+$/g,"").replace(/\n+/g,`
-`).split(`
-`)})}function u(C){return He(this,void 0,void 0,function*(){let w=yield l();if(w.includes(C)){new Xn.Notice("This pattern is already in the .stignore file.");return}yield r.app.vault.adapter.write(o,`${C}
-${w.join(`
-`)}`),d.set(yield l())})}function f(C){return He(this,void 0,void 0,function*(){let w=yield l();yield r.app.vault.adapter.write(o,w.filter(S=>S!==C).join(`
-`)),d.set(yield l())})}let d=Vl([]);rs(i,d,C=>t(3,n=C)),d.subscribe(C=>He(void 0,void 0,void 0,function*(){C=yield l()})),He(void 0,void 0,void 0,function*(){d.set(yield l())});let m=async()=>{console.log("selectedFile: ",s),await u(s),t(1,s="")},g=async C=>{console.log("fileSuggester: ",C),t(1,s=C)},_=async()=>{console.log("typedPattern: ",a),await u(a),t(2,a="")};function k(){a=this.value,t(2,a)}let x=async C=>f(C);return i.$$set=C=>{"parent"in C&&t(0,r=C.parent)},[r,s,a,n,u,f,d,m,g,_,k,x]}var ko=class extends fe{constructor(e){super(),he(this,e,rd,id,ue,{parent:0},Xf)}},ra=ko;function od(i){Ie(i,"svelte-13bfvu7",".banner.svelte-13bfvu7.svelte-13bfvu7{display:flex;justify-content:center;align-items:center;margin:0;padding:0}.banner.svelte-13bfvu7 a.svelte-13bfvu7{text-decoration-line:none}.banner.svelte-13bfvu7 img.svelte-13bfvu7{height:2em}.footer.svelte-13bfvu7.svelte-13bfvu7{display:flex;justify-content:space-between;width:100%}.footer.svelte-13bfvu7 button.svelte-13bfvu7{display:flex;flex-direction:row;align-items:flex-start;gap:0.5em;justify-content:space-around}")}function sd(i){let e;return{c(){e=p("p"),e.innerHTML=`This plugin allows you to sync your vault with Syncthing. It allows you
-		to manage the sync process from within Obsidian. You can only manage the
-		folder you are in. To use this plugin, you need to have Syncthing
-		installed on your device. You can find more information about Syncthing
-		here:
-		<a href="https://syncthing.net">https://syncthing.net</a>`,h(e,"slot","description")},m(t,n){v(t,e,n)},p:z,d(t){t&&y(e)}}}function oa(i){let e,t,n,r;return e=new Ae({props:{heading:!0,error:!0,name:"Syncthing is not found",$$slots:{description:[ld]},$$scope:{ctx:i}}}),n=new Ae({props:{name:"Retry",description:"If you want to retry connecting, after setting the API key. This might resolve the issue.",$$slots:{control:[ad]},$$scope:{ctx:i}}}),{c(){A(e.$$.fragment),t=b(),A(n.$$.fragment)},m(o,s){L(e,o,s),v(o,t,s),L(n,o,s),r=!0},i(o){r||(I(e.$$.fragment,o),I(n.$$.fragment,o),r=!0)},o(o){M(e.$$.fragment,o),M(n.$$.fragment,o),r=!1},d(o){o&&y(t),N(e,o),N(n,o)}}}function ld(i){let e,t;return{c(){e=F(`Syncthing is not installed or not found on your device. Please
-			install it at the following URL:
-			`),t=p("a"),t.textContent="https://syncthing.net/downloads",h(t,"href","https://syncthing.net/downloads"),h(t,"target","_blank")},m(n,r){v(n,e,r),v(n,t,r)},p:z,d(n){n&&(y(e),y(t))}}}function ad(i){let e;return{c(){e=p("button"),e.textContent="Connect to Syncthing via API.",h(e,"class","mod-cta")},m(t,n){v(t,e,n)},p:z,d(t){t&&y(e)}}}function cd(i){let e;return{c(){e=F("Add your Syncthing API key here for the plugin to work.")},m(t,n){v(t,e,n)},d(t){t&&y(e)}}}function ud(i){let e,t,n,r,o,s,a,l,u,f=[pd,dd],d=[];function m(g,_){return g[2]==="password"?0:1}return t=m(i,-1),n=d[t]=f[t](i),s=new Y({props:{name:"eraser"}}),{c(){e=p("button"),n.c(),r=b(),o=p("button"),A(s.$$.fragment)},m(g,_){v(g,e,_),d[t].m(e,null),v(g,r,_),v(g,o,_),L(s,o,null),a=!0,l||(u=[Q(e,"click",i[10]),Q(o,"click",i[11])],l=!0)},p(g,_){let k=t;t=m(g,_),t!==k&&(Le(),M(d[k],1,1,()=>{d[k]=null}),Ne(),n=d[t],n||(n=d[t]=f[t](g),n.c()),I(n,1),n.m(e,null))},i(g){a||(I(n),I(s.$$.fragment,g),a=!0)},o(g){M(n),M(s.$$.fragment,g),a=!1},d(g){g&&(y(e),y(r),y(o)),d[t].d(),N(s),l=!1,we(u)}}}function fd(i){let e,t,n;return{c(){e=p("button"),e.textContent="Get API key"},m(r,o){v(r,e,o),t||(n=Q(e,"click",i[5]),t=!0)},p:z,i:z,o:z,d(r){r&&y(e),t=!1,n()}}}function dd(i){let e,t;return e=new Y({props:{name:"eye-off"}}),{c(){A(e.$$.fragment)},m(n,r){L(e,n,r),t=!0},i(n){t||(I(e.$$.fragment,n),t=!0)},o(n){M(e.$$.fragment,n),t=!1},d(n){N(e,n)}}}function pd(i){let e,t;return e=new Y({props:{name:"eye"}}),{c(){A(e.$$.fragment)},m(n,r){L(e,n,r),t=!0},i(n){t||(I(e.$$.fragment,n),t=!0)},o(n){M(e.$$.fragment,n),t=!1},d(n){N(e,n)}}}function gd(i){let e,t,n,r,o,s,a,l,u,f=[fd,ud],d=[];function m(g,_){return g[0].plugin.settings.api_key?1:0}return r=m(i,-1),o=d[r]=f[r](i),{c(){e=p("input"),n=b(),o.c(),s=ot(),h(e,"type",i[2]),h(e,"name","apikey"),h(e,"id","apikey"),e.value=t=i[0].plugin.settings.api_key,h(e,"placeholder","Enter your API key here...")},m(g,_){v(g,e,_),v(g,n,_),d[r].m(g,_),v(g,s,_),a=!0,l||(u=Q(e,"change",i[9]),l=!0)},p(g,_){(!a||_&4)&&h(e,"type",g[2]),(!a||_&1&&t!==(t=g[0].plugin.settings.api_key)&&e.value!==t)&&(e.value=t);let k=r;r=m(g,_),r===k?d[r].p(g,_):(Le(),M(d[k],1,1,()=>{d[k]=null}),Ne(),o=d[r],o?o.p(g,_):(o=d[r]=f[r](g),o.c()),I(o,1),o.m(s.parentNode,s))},i(g){a||(I(o),a=!0)},o(g){M(o),a=!1},d(g){g&&(y(e),y(n),y(s)),d[r].d(g),l=!1,u()}}}function md(i){let e,t,n;return{c(){e=p("button"),e.textContent="Check API Status"},m(r,o){v(r,e,o),t||(n=Q(e,"click",i[12]),t=!0)},p:z,d(r){r&&y(e),t=!1,n()}}}function hd(i){let e,t;return e=new Ae({props:{name:"Syncthing CLI Status",$$slots:{control:[_d]},$$scope:{ctx:i}}}),{c(){A(e.$$.fragment)},m(n,r){L(e,n,r),t=!0},p(n,r){let o={};r&268435457&&(o.$$scope={dirty:r,ctx:n}),e.$set(o)},i(n){t||(I(e.$$.fragment,n),t=!0)},o(n){M(e.$$.fragment,n),t=!1},d(n){N(e,n)}}}function _d(i){let e,t,n;return{c(){e=p("button"),e.textContent="Check CLI Status"},m(r,o){v(r,e,o),t||(n=Q(e,"click",i[13]),t=!0)},p:z,d(r){r&&y(e),t=!1,n()}}}function bd(i){let e,t;return e=new Ae({props:{name:"Warning",description:"The following settings are in beta. All plugin's features may not currently be available on mobile.",error:!0}}),{c(){A(e.$$.fragment)},m(n,r){L(e,n,r),t=!0},i(n){t||(I(e.$$.fragment,n),t=!0)},o(n){M(e.$$.fragment,n),t=!1},d(n){N(e,n)}}}function yd(i){let e,t,n,r,o,s,a,l,u,f,d,m,g,_,k,x;return{c(){var C,w,S,T;e=p("div"),t=p("div"),n=p("select"),r=p("option"),r.textContent="http://",o=p("option"),o.textContent="https://",a=b(),l=p("input"),f=b(),d=p("input"),g=b(),_=p("input"),r.__value="http",jt(r,r.__value),o.__value="https",jt(o,o.__value),Oe(n,"border-radius","var(--input-radius) 0 0 var(--input-radius)"),h(l,"type","text"),h(l,"placeholder","Enter your Syncthing address here..."),l.value=u=(w=(C=i[0].plugin.settings.configuration.url)==null?void 0:C.ip_address)!=null?w:"",Oe(l,"border-radius","0"),h(d,"type","number"),h(d,"placeholder","Enter the port..."),d.value=m=(T=(S=i[0].plugin.settings.configuration.url)==null?void 0:S.port)!=null?T:"",Oe(d,"border-radius","0 var(--input-radius) var(--input-radius) 0"),Oe(t,"display","flex"),Oe(t,"align-items","center"),Oe(_,"margin","2% 0"),_.value=i[4],_.disabled=!0,h(e,"slot","control"),Oe(e,"display","flex"),Oe(e,"flex-direction","column"),Oe(e,"align-items","flex-start"),Oe(e,"justify-content","flex-end")},m(C,w){var S,T;v(C,e,w),c(e,t),c(t,n),c(n,r),c(n,o),Ar(n,(T=(S=i[0].plugin.settings.configuration.url)==null?void 0:S.protocol)!=null?T:""),c(t,a),c(t,l),c(t,f),c(t,d),c(e,g),c(e,_),k||(x=[Q(n,"change",i[14]),Q(l,"change",i[15]),Q(d,"change",i[16])],k=!0)},p(C,w){var S,T,P,Z,O,R,re,te;w&1&&s!==(s=(T=(S=C[0].plugin.settings.configuration.url)==null?void 0:S.protocol)!=null?T:"")&&Ar(n,(Z=(P=C[0].plugin.settings.configuration.url)==null?void 0:P.protocol)!=null?Z:""),w&1&&u!==(u=(R=(O=C[0].plugin.settings.configuration.url)==null?void 0:O.ip_address)!=null?R:"")&&l.value!==u&&(l.value=u),w&1&&m!==(m=(te=(re=C[0].plugin.settings.configuration.url)==null?void 0:re.port)!=null?te:"")&&d.value!==m&&(d.value=m),w&16&&_.value!==C[4]&&(_.value=C[4])},d(C){C&&y(e),k=!1,we(x)}}}function vd(i){let e,t;return e=new Y({props:{name:"eye-off"}}),{c(){A(e.$$.fragment)},m(n,r){L(e,n,r),t=!0},i(n){t||(I(e.$$.fragment,n),t=!0)},o(n){M(e.$$.fragment,n),t=!1},d(n){N(e,n)}}}function wd(i){let e,t;return e=new Y({props:{name:"eye"}}),{c(){A(e.$$.fragment)},m(n,r){L(e,n,r),t=!0},i(n){t||(I(e.$$.fragment,n),t=!0)},o(n){M(e.$$.fragment,n),t=!1},d(n){N(e,n)}}}function kd(i){let e,t,n,r,o,s,a,l,u,f,d,m,g,_=[wd,vd],k=[];function x(C,w){return C[3]==="password"?0:1}return u=x(i,-1),f=k[u]=_[u](i),{c(){var C;e=p("input"),n=b(),r=p("input"),a=b(),l=p("button"),f.c(),h(e,"type","text"),h(e,"placeholder","Enter your GUI username..."),h(e,"id","gui-username"),e.required=t=Re.Platform.isMobileApp,h(r,"type",i[3]),h(r,"placeholder","Enter your GUI password..."),h(r,"id","gui-password"),r.value=o=(C=i[0].plugin.settings.gui_password)!=null?C:"",r.required=s=Re.Platform.isMobileApp},m(C,w){v(C,e,w),jt(e,i[0].plugin.settings.gui_username),v(C,n,w),v(C,r,w),v(C,a,w),v(C,l,w),k[u].m(l,null),d=!0,m||(g=[Q(e,"input",i[17]),Q(e,"change",i[18]),Q(r,"change",i[19]),Q(l,"click",i[20])],m=!0)},p(C,w){var T;w&1&&e.value!==C[0].plugin.settings.gui_username&&jt(e,C[0].plugin.settings.gui_username),(!d||w&8)&&h(r,"type",C[3]),(!d||w&1&&o!==(o=(T=C[0].plugin.settings.gui_password)!=null?T:"")&&r.value!==o)&&(r.value=o);let S=u;u=x(C,w),u!==S&&(Le(),M(k[S],1,1,()=>{k[S]=null}),Ne(),f=k[u],f||(f=k[u]=_[u](C),f.c()),I(f,1),f.m(l,null))},i(C){d||(I(f),d=!0)},o(C){M(f),d=!1},d(C){C&&(y(e),y(n),y(r),y(a),y(l)),k[u].d(),m=!1,we(g)}}}function xd(i){let e,t,n,r,o;return t=new Y({props:{name:"link"}}),{c(){e=p("button"),A(t.$$.fragment),h(e,"slot","control"),h(e,"class","mod-cta")},m(s,a){v(s,e,a),L(t,e,null),n=!0,r||(o=Q(e,"click",i[21]),r=!0)},p:z,i(s){n||(I(t.$$.fragment,s),n=!0)},o(s){M(t.$$.fragment,s),n=!1},d(s){s&&y(e),N(t),r=!1,o()}}}function Cd(i){let e,t,n,r,o;return t=new Y({props:{name:"cog"}}),{c(){e=p("button"),A(t.$$.fragment),h(e,"slot","control")},m(s,a){v(s,e,a),L(t,e,null),n=!0,r||(o=Q(e,"click",i[22]),r=!0)},p:z,i(s){n||(I(t.$$.fragment,s),n=!0)},o(s){M(t.$$.fragment,s),n=!1},d(s){s&&y(e),N(t),r=!1,o()}}}function Id(i){let e,t,n,r;return e=new Ae({props:{name:"Plugin's Dev Mode",heading:!0}}),n=new Ae({props:{name:"Enable Plugin's Developer Mode",description:"For the moment, the developer mode contains a Syncthing conflicts generator. It allows to test the plugin's conflict resolution system.",$$slots:{control:[Sd],description:[Md]},$$scope:{ctx:i}}}),{c(){A(e.$$.fragment),t=b(),A(n.$$.fragment)},m(o,s){L(e,o,s),v(o,t,s),L(n,o,s),r=!0},p(o,s){let a={};s&268435457&&(a.$$scope={dirty:s,ctx:o}),n.$set(a)},i(o){r||(I(e.$$.fragment,o),I(n.$$.fragment,o),r=!0)},o(o){M(e.$$.fragment,o),M(n.$$.fragment,o),r=!1},d(o){o&&y(t),N(e,o),N(n,o)}}}function Md(i){let e,t,n;return{c(){e=F(`For the moment, the developer mode contains a Syncthing conflicts
-			generator.
-			`),t=p("br"),n=F(`
-			It allows to test the plugin's conflict resolution system.`)},m(r,o){v(r,e,o),v(r,t,o),v(r,n,o)},p:z,d(r){r&&(y(e),y(t),y(n))}}}function Sd(i){let e,t;return e=new ql({props:{callback:i[23],slot:"control"}}),{c(){A(e.$$.fragment)},m(n,r){L(e,n,r),t=!0},p(n,r){let o={};r&1&&(o.callback=n[23]),e.$set(o)},i(n){t||(I(e.$$.fragment,n),t=!0)},o(n){M(e.$$.fragment,n),t=!1},d(n){N(e,n)}}}function $d(i){let e,t,n,r;return e=new Ae({props:{name:"Open Mobile app",heading:!0}}),n=new Ae({props:{name:"Open Syncthing mobile app",description:"Open the Syncthing mobile app, if not it opens the Google Play Store page.",$$slots:{control:[Td]},$$scope:{ctx:i}}}),{c(){A(e.$$.fragment),t=b(),A(n.$$.fragment)},m(o,s){L(e,o,s),v(o,t,s),L(n,o,s),r=!0},p(o,s){let a={};s&268435457&&(a.$$scope={dirty:s,ctx:o}),n.$set(a)},i(o){r||(I(e.$$.fragment,o),I(n.$$.fragment,o),r=!0)},o(o){M(e.$$.fragment,o),M(n.$$.fragment,o),r=!1},d(o){o&&y(t),N(e,o),N(n,o)}}}function Td(i){let e,t,n;return{c(){e=p("button"),e.textContent="Open Syncthing on Mobile."},m(r,o){v(r,e,o),t||(n=Q(e,"click",i[24]),t=!0)},p:z,d(r){r&&y(e),t=!1,n()}}}function Ld(i){let e,t,n,r,o,s,a,l,u,f,d,m,g,_,k;return n=new Y({props:{name:"heart"}}),a=new Y({props:{name:"github"}}),d=new Y({props:{name:"bug"}}),{c(){e=p("div"),t=p("button"),A(n.$$.fragment),r=F(`
-			Sponsor`),o=b(),s=p("button"),A(a.$$.fragment),l=F(`
-			GitHub repo`),u=b(),f=p("button"),A(d.$$.fragment),m=F(`
-			Report a bug`),h(t,"class","svelte-13bfvu7"),h(s,"class","svelte-13bfvu7"),h(f,"class","svelte-13bfvu7"),h(e,"slot","control"),h(e,"class","footer svelte-13bfvu7")},m(x,C){v(x,e,C),c(e,t),L(n,t,null),c(t,r),c(e,o),c(e,s),L(a,s,null),c(s,l),c(e,u),c(e,f),L(d,f,null),c(f,m),g=!0,_||(k=[Q(t,"click",i[25]),Q(s,"click",i[26]),Q(f,"click",i[27])],_=!0)},p:z,i(x){g||(I(n.$$.fragment,x),I(a.$$.fragment,x),I(d.$$.fragment,x),g=!0)},o(x){M(n.$$.fragment,x),M(a.$$.fragment,x),M(d.$$.fragment,x),g=!1},d(x){x&&y(e),N(n),N(a),N(d),_=!1,we(k)}}}function Nd(i){let e,t,n,r,o,s,a,l,u,f,d,m,g,_,k,x,C,w,S,T,P,Z,O,R,re,te,W,U,E;n=new Ae({props:{name:"Syncthing Integration for Obsidian",heading:!0,$$slots:{description:[sd]},$$scope:{ctx:i}}});let G=!i[1]&&oa(i);s=new Ae({props:{name:"Syncthing API Key",heading:!0,$$slots:{control:[gd],description:[cd]},$$scope:{ctx:i}}}),l=new Ae({props:{name:"Syncthing API Status",$$slots:{control:[md]},$$scope:{ctx:i}}});let D=Re.Platform.isDesktopApp&&hd(i),J=Re.Platform.isMobileApp&&bd(i);m=new Ae({props:{name:"Syncthing base URL",heading:!0}}),_=new Ae({props:{name:"Set the Syncthing base URL",description:"Please set your Syncthing base URL here. This address will be used to open the Syncthing GUI in your browser and to make API requests.",$$slots:{control:[yd]},$$scope:{ctx:i}}}),x=new Ae({props:{name:"Set GUI Credentials",description:"Please set your Syncthing GUI credentials here. These credentials will be used to open the Syncthing GUI in your browser.",$$slots:{control:[kd]},$$scope:{ctx:i}}}),w=new Ae({props:{name:"Open Syncthing GUI",description:"Open the Syncthing GUI in your browser.",$$slots:{control:[xd]},$$scope:{ctx:i}}}),T=new Ae({props:{name:"Syncthing Configuration",heading:!0}}),Z=new Ae({props:{name:"In construction",description:"This part is in construction.",$$slots:{control:[Cd]},$$scope:{ctx:i}}}),R=new ra({props:{parent:i[0]}});let be=Re.Platform.isDesktopApp&&Id(i),X=Re.Platform.isMobileApp&&$d(i);return U=new Ae({props:{heading:!0,$$slots:{control:[Ld]},$$scope:{ctx:i}}}),{c(){e=p("p"),e.innerHTML=`<a href="https://github.com/LBF38/obsidian-syncthing-integration" class="svelte-13bfvu7"><img src="${Ll}" alt="Syncthing&#39;s logo" class="svelte-13bfvu7"/> <img src="${Tl}" alt="Obsidian&#39;s logo" class="svelte-13bfvu7"/></a>`,t=b(),A(n.$$.fragment),r=b(),G&&G.c(),o=b(),A(s.$$.fragment),a=b(),A(l.$$.fragment),u=b(),D&&D.c(),f=b(),J&&J.c(),d=b(),A(m.$$.fragment),g=b(),A(_.$$.fragment),k=b(),A(x.$$.fragment),C=b(),A(w.$$.fragment),S=b(),A(T.$$.fragment),P=b(),A(Z.$$.fragment),O=b(),A(R.$$.fragment),re=b(),be&&be.c(),te=b(),X&&X.c(),W=b(),A(U.$$.fragment),h(e,"class","banner svelte-13bfvu7")},m($,j){v($,e,j),v($,t,j),L(n,$,j),v($,r,j),G&&G.m($,j),v($,o,j),L(s,$,j),v($,a,j),L(l,$,j),v($,u,j),D&&D.m($,j),v($,f,j),J&&J.m($,j),v($,d,j),L(m,$,j),v($,g,j),L(_,$,j),v($,k,j),L(x,$,j),v($,C,j),L(w,$,j),v($,S,j),L(T,$,j),v($,P,j),L(Z,$,j),v($,O,j),L(R,$,j),v($,re,j),be&&be.m($,j),v($,te,j),X&&X.m($,j),v($,W,j),L(U,$,j),E=!0},p($,[j]){let ye={};j&268435456&&(ye.$$scope={dirty:j,ctx:$}),n.$set(ye),$[1]?G&&(Le(),M(G,1,1,()=>{G=null}),Ne()):G?j&2&&I(G,1):(G=oa($),G.c(),I(G,1),G.m(o.parentNode,o));let ge={};j&268435461&&(ge.$$scope={dirty:j,ctx:$}),s.$set(ge);let q={};j&268435457&&(q.$$scope={dirty:j,ctx:$}),l.$set(q),Re.Platform.isDesktopApp&&D.p($,j);let Se={};j&268435473&&(Se.$$scope={dirty:j,ctx:$}),_.$set(Se);let ve={};j&268435465&&(ve.$$scope={dirty:j,ctx:$}),x.$set(ve);let me={};j&268435473&&(me.$$scope={dirty:j,ctx:$}),w.$set(me);let H={};j&268435457&&(H.$$scope={dirty:j,ctx:$}),Z.$set(H);let V={};j&1&&(V.parent=$[0]),R.$set(V),Re.Platform.isDesktopApp&&be.p($,j),Re.Platform.isMobileApp&&X.p($,j);let Ce={};j&268435456&&(Ce.$$scope={dirty:j,ctx:$}),U.$set(Ce)},i($){E||(I(n.$$.fragment,$),I(G),I(s.$$.fragment,$),I(l.$$.fragment,$),I(D),I(J),I(m.$$.fragment,$),I(_.$$.fragment,$),I(x.$$.fragment,$),I(w.$$.fragment,$),I(T.$$.fragment,$),I(Z.$$.fragment,$),I(R.$$.fragment,$),I(be),I(X),I(U.$$.fragment,$),E=!0)},o($){M(n.$$.fragment,$),M(G),M(s.$$.fragment,$),M(l.$$.fragment,$),M(D),M(J),M(m.$$.fragment,$),M(_.$$.fragment,$),M(x.$$.fragment,$),M(w.$$.fragment,$),M(T.$$.fragment,$),M(Z.$$.fragment,$),M(R.$$.fragment,$),M(be),M(X),M(U.$$.fragment,$),E=!1},d($){$&&(y(e),y(t),y(r),y(o),y(a),y(u),y(f),y(d),y(g),y(k),y(C),y(S),y(P),y(O),y(re),y(te),y(W)),N(n,$),G&&G.d($),N(s,$),N(l,$),D&&D.d($),J&&J.d($),N(m,$),N(_,$),N(x,$),N(w,$),N(T,$),N(Z,$),N(R,$),be&&be.d($),X&&X.d($),N(U,$)}}}function Ad(i,e,t){var n,r,o;let{parent:s}=e,a=!0,l="password",u="password",f="";Ke(()=>He(void 0,void 0,void 0,function*(){t(1,a=yield s.syncthingController.hasSyncthing())}));function d(){return He(this,void 0,void 0,function*(){s.syncthingController.getAPIKey().then(D=>{if(D instanceof _e){new Re.Notice(D.message);return}t(0,s.plugin.settings.api_key=D,s),s.plugin.saveSettings()})})}let m=async D=>{t(0,s.plugin.settings.api_key=D.currentTarget.value,s),await s.plugin.saveSettings()},g=()=>{t(2,l=l==="password"?"text":"password")},_=async()=>{t(0,s.plugin.settings.api_key="",s),await s.plugin.saveSettings()},k=async()=>{s.syncthingController.getAPIStatus().then(D=>{new Re.Notice(`Syncthing Ping : ${D}`)}).catch(D=>{console.log("settings tab error: ",D),new Re.Notice(D.message)})},x=async()=>{s.syncthingController.getCLIStatus().then(D=>{new Re.Notice(`Syncthing Ping : ${D}`)}).catch(D=>{new Re.Notice(D.message)})},C=async D=>{console.log("select change: ",D,D.currentTarget.value),s.plugin.settings.configuration.url||t(0,s.plugin.settings.configuration.url={protocol:"http",ip_address:"localhost",port:8384},s),(D.currentTarget.value==="http"||D.currentTarget.value==="https")&&t(0,s.plugin.settings.configuration.url.protocol=D.currentTarget.value,s),await s.plugin.saveSettings()},w=async D=>{console.log("ip address change: ",D,D.currentTarget.value);let J=D.currentTarget.value;s.plugin.settings.configuration.url||t(0,s.plugin.settings.configuration.url={protocol:"http",ip_address:"localhost",port:8384},s),t(0,s.plugin.settings.configuration.url.ip_address=J===""||!J?"localhost":J,s),await s.plugin.saveSettings()},S=async D=>{console.log("port change: ",D,D.currentTarget.value);let J=D.currentTarget.value;s.plugin.settings.configuration.url||t(0,s.plugin.settings.configuration.url={protocol:"http",ip_address:"localhost",port:8384},s),t(0,s.plugin.settings.configuration.url.port=isNaN(parseInt(J))||!J?8384:parseInt(J),s),await s.plugin.saveSettings()};function T(){s.plugin.settings.gui_username=this.value,t(0,s)}let P=async D=>{t(0,s.plugin.settings.gui_username=D.currentTarget.value,s),await s.plugin.saveSettings()},Z=async D=>{t(0,s.plugin.settings.gui_password=D.currentTarget.value,s),await s.plugin.saveSettings()},O=()=>{t(3,u=u==="password"?"text":"password")},R=async()=>{var J,be,X;if((!s.plugin.settings.gui_username||!s.plugin.settings.gui_password)&&Re.Platform.isMobileApp){new Re.Notice("Please set your GUI credentials first. There are needed on mobile app.");return}let D;s.plugin.settings.gui_username&&s.plugin.settings.gui_password?D=`${(J=s.plugin.settings.configuration.url)==null?void 0:J.protocol}://${s.plugin.settings.gui_username}:${s.plugin.settings.gui_password}@${(be=s.plugin.settings.configuration.url)==null?void 0:be.ip_address}:${(X=s.plugin.settings.configuration.url)==null?void 0:X.port}`:D=f,open(D)},re=async D=>{new Re.Notice("This part is in construction."),new lr(s.app,s.plugin).open()},te=async D=>{t(0,s.plugin.settings.devMode=D,s),await s.plugin.saveSettings(),s.plugin.onunload(),s.plugin.onload()},W=()=>{if(!Re.Platform.isAndroidApp){new Re.Notice("The feature is not implemented for your platform. Please open the Syncthing app for your platform. You can create an issue on GitHub if you want to request this feature.",5e3);return}s.plugin.syncthingFromAndroid.openSyncthing()},U=()=>{open("https://github.com/sponsors/LBF38")},E=()=>{open("https://github.com/LBF38/obsidian-syncthing-integration")},G=()=>{open("https://github.com/LBF38/obsidian-syncthing-integration/issues/new/choose")};return i.$$set=D=>{"parent"in D&&t(0,s=D.parent)},i.$$.update=()=>{i.$$.dirty&449&&t(4,f=`${t(6,n=s.plugin.settings.configuration.url)===null||n===void 0?void 0:n.protocol}://${t(7,r=s.plugin.settings.configuration.url)===null||r===void 0?void 0:r.ip_address}:${t(8,o=s.plugin.settings.configuration.url)===null||o===void 0?void 0:o.port}`)},[s,a,l,u,f,d,n,r,o,m,g,_,k,x,C,w,S,T,P,Z,O,R,re,te,W,U,E,G]}var xo=class extends fe{constructor(e){super(),he(this,e,Ad,Nd,ue,{parent:0},od)}},sa=xo;var ur=class extends zt.PluginSettingTab{constructor(e,t){super(e,t),this.plugin=t,this.syncthingController=t.syncthingController}async display(){let{containerEl:e}=this;e.empty(),new sa({target:e,props:{parent:this}})}syncthingConfiguration(e){new zt.Setting(e).setName("Syncthing Configuration").setHeading().setDesc("This section will show the configuration of the Syncthing instance for the vault."),new zt.Setting(e).setName("This part is not implemented yet.")}async configurationSetting(e){let t=new zt.Setting(e).setName("Get Syncthing Configuration").setDesc("This button will get the configuration of the Syncthing instance for the vault.");t.addButton(n=>{n.setIcon("sync").setCta().onClick(async()=>{let r=await this.syncthingController.getConfiguration();if(r instanceof _e){t.setName("Error").setDesc("Error getting configuration. Please try again later."),new zt.Notice("Error getting configuration. Please try again later.");return}this.plugin.settings.configuration=r})})}async initConfigTable(e,t){let n=e.createEl("table");n.appendChild(e.createEl("tbody"));let r=n.createEl("thead").createEl("tr");return r.createEl("th",{text:"Device ID"}),r.createEl("th",{text:"Device Name"}),r.createEl("th",{text:"Device Address"}),t.devices.forEach(o=>{this.addConfigRowToTable(n,o)}),n}addConfigRowToTable(e,t){let n=e.appendChild(e.createEl("tr"));n.appendChild(e.createEl("td",{text:t.deviceID.slice(0,8)})),n.appendChild(e.createEl("td",{text:t.name})),n.appendChild(e.createEl("td",{text:t.address.join(", ")}))}};var Dd={configuration:{url:{protocol:"http",ip_address:"localhost",port:8384}},devMode:!1},Kn=class Kn extends Ot.Plugin{constructor(){super(...arguments);this.pluginsElements=[];this.syncthingFromCLI=new Si;this.syncthingFromREST=new $i(this);this.syncthingFromAndroid=new ki;this.syncthingController=new oi(this.syncthingFromCLI,this.syncthingFromREST,this.syncthingFromAndroid,this);this.devModeController=new dn(this)}async onload(){Kn.loadCount++,await this.loadSettings(),(0,Ot.addIcon)("syncthing",Nl),Ot.Platform.isMobileApp||(this.statusBar=new wi(this.addStatusBarItem(),this),this.statusBar.onload(),this.pluginsElements.push(this.statusBar.status_bar));let t=new ur(this.app,this);Kn.loadCount===1&&this.addSettingTab(t);let n=this.addRibbonIcon("syncthing","Open Syncthing conflict manager modal",()=>{new sr(this.app,this.syncthingController).open()});if(this.settings.devMode){new Ot.Notice("Dev mode is enabled.");let r=this.addRibbonIcon("chevron-right-square","Generate Syncthing conflicts",async()=>{new Nn(this.app,new dn(this)).open()});this.addCommand({id:"generate-syncthing-conflicts",name:"Generate Syncthing conflicts",icon:"chevron-right-square",callback:async()=>{new Nn(this.app,new dn(this)).open()}}),this.pluginsElements.push(r)}this.pluginsElements.push(n)}onunload(){var t;(t=this.statusBar)==null||t.onunload(),this.pluginsElements.forEach(n=>n.remove())}async loadSettings(){this.settings=Object.assign({},Dd,await this.loadData())}async saveSettings(){await this.saveData(this.settings)}};Kn.loadCount=0;var fr=Kn;
+`;
+
+// src/views/settings_tab.ts
+var import_obsidian26 = require("obsidian");
+
+// src/components/settings_view.svelte
+var import_obsidian25 = require("obsidian");
+
+// src/views/configuration_modal.ts
+var import_obsidian20 = require("obsidian");
+
+// src/components/configuration_table.svelte
+var import_obsidian19 = require("obsidian");
+
+// src/components/configuration_item.svelte
+var import_obsidian16 = require("obsidian");
+
+// src/components/obsidian_lucide_icon.svelte
+var import_obsidian15 = require("obsidian");
+var file5 = "src/components/obsidian_lucide_icon.svelte";
+function create_fragment8(ctx) {
+  let div;
+  let div_levels = [
+    /*$$restProps*/
+    ctx[1],
+    { style: "display: flex;" }
+  ];
+  let div_data = {};
+  for (let i = 0; i < div_levels.length; i += 1) {
+    div_data = assign(div_data, div_levels[i]);
+  }
+  const block2 = {
+    c: function create() {
+      div = element("div");
+      set_attributes(div, div_data);
+      add_location(div, file5, 13, 0, 228);
+    },
+    l: function claim(nodes) {
+      throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+      ctx[3](div);
+    },
+    p: function update2(ctx2, [dirty]) {
+      set_attributes(div, div_data = get_spread_update(div_levels, [
+        dirty & /*$$restProps*/
+        2 && /*$$restProps*/
+        ctx2[1],
+        { style: "display: flex;" }
+      ]));
+    },
+    i: noop,
+    o: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div);
+      }
+      ctx[3](null);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment8.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+function instance8($$self, $$props, $$invalidate) {
+  const omit_props_names = ["name"];
+  let $$restProps = compute_rest_props($$props, omit_props_names);
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("Obsidian_lucide_icon", slots, []);
+  let element2;
+  let { name } = $$props;
+  onMount(() => {
+    let icon = (0, import_obsidian15.getIcon)(name);
+    if (icon) element2.appendChild(icon);
+  });
+  $$self.$$.on_mount.push(function() {
+    if (name === void 0 && !("name" in $$props || $$self.$$.bound[$$self.$$.props["name"]])) {
+      console.warn("<Obsidian_lucide_icon> was created without expected prop 'name'");
+    }
+  });
+  function div_binding($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      element2 = $$value;
+      $$invalidate(0, element2);
+    });
+  }
+  $$self.$$set = ($$new_props) => {
+    $$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    $$invalidate(1, $$restProps = compute_rest_props($$props, omit_props_names));
+    if ("name" in $$new_props) $$invalidate(2, name = $$new_props.name);
+  };
+  $$self.$capture_state = () => ({ getIcon: import_obsidian15.getIcon, onMount, element: element2, name });
+  $$self.$inject_state = ($$new_props) => {
+    if ("element" in $$props) $$invalidate(0, element2 = $$new_props.element);
+    if ("name" in $$props) $$invalidate(2, name = $$new_props.name);
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  return [element2, $$restProps, name, div_binding];
+}
+var Obsidian_lucide_icon = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(this, options2, instance8, create_fragment8, safe_not_equal, { name: 2 });
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "Obsidian_lucide_icon",
+      options: options2,
+      id: create_fragment8.name
+    });
+  }
+  get name() {
+    throw new Error("<Obsidian_lucide_icon>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set name(value) {
+    throw new Error("<Obsidian_lucide_icon>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var obsidian_lucide_icon_default = Obsidian_lucide_icon;
+
+// src/components/configuration_item.svelte
+var file6 = "src/components/configuration_item.svelte";
+function add_css7(target) {
+  append_styles(target, "svelte-8fgumz", "details.svelte-8fgumz.svelte-8fgumz{padding:1%;border-radius:var(--radius-l)}details.svelte-8fgumz.svelte-8fgumz:hover{background-color:var(--background-modifier-hover)}summary.svelte-8fgumz.svelte-8fgumz{list-style:none;display:flex;flex-direction:row;align-items:center;gap:0.5em;height:fit-content;background-color:var(--background-secondary-alt);padding:1% 2%;border-radius:var(--radius-m)}details[open].svelte-8fgumz summary.svelte-8fgumz{border-radius:0;border-top-left-radius:var(--radius-m);border-top-right-radius:var(--radius-m)}table.svelte-8fgumz.svelte-8fgumz{width:100%;background-color:var(--background-primary);border-collapse:collapse;border-spacing:0;padding:1%;border-radius:var(--radius-l)}table.svelte-8fgumz>tr:last-child td.svelte-8fgumz:first-child{border-bottom-left-radius:var(--radius-m)}table.svelte-8fgumz>tr:last-child td.svelte-8fgumz:last-child{border-bottom-right-radius:var(--radius-m)}table.svelte-8fgumz tr td.svelte-8fgumz{padding:0.5em}tr.svelte-8fgumz.svelte-8fgumz:active,td.svelte-8fgumz.svelte-8fgumz:active{position:static;background:none;width:auto;transition:none;transform:none;border-radius:0}table.svelte-8fgumz tr td div.svelte-8fgumz{vertical-align:middle;display:inline-flex;align-items:center;gap:0.5em}table.svelte-8fgumz tr td.svelte-8fgumz:first-child{text-align:start;display:table-cell}table.svelte-8fgumz tr td.svelte-8fgumz:last-child{text-align:end}table.svelte-8fgumz tr.svelte-8fgumz:nth-child(odd){background-color:var(--background-primary-alt)}table.svelte-8fgumz tr.svelte-8fgumz:nth-child(even){background-color:var(--background-secondary)}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uZmlndXJhdGlvbl9pdGVtLnN2ZWx0ZSIsIm1hcHBpbmdzIjoiQUE4VkMsbUNBQVEsQ0FDUCxPQUFPLENBQUUsRUFBRSxDQUNYLGFBQWEsQ0FBRSxJQUFJLFVBQVUsQ0FDOUIsQ0FDQSxtQ0FBTyxNQUFPLENBQ2IsZ0JBQWdCLENBQUUsSUFBSSwyQkFBMkIsQ0FDbEQsQ0FDQSxtQ0FBUSxDQUNQLFVBQVUsQ0FBRSxJQUFJLENBQ2hCLE9BQU8sQ0FBRSxJQUFJLENBQ2IsY0FBYyxDQUFFLEdBQUcsQ0FDbkIsV0FBVyxDQUFFLE1BQU0sQ0FDbkIsR0FBRyxDQUFFLEtBQUssQ0FDVixNQUFNLENBQUUsV0FBVyxDQUNuQixnQkFBZ0IsQ0FBRSxJQUFJLDBCQUEwQixDQUFDLENBQ2pELE9BQU8sQ0FBRSxFQUFFLENBQUMsRUFBRSxDQUNkLGFBQWEsQ0FBRSxJQUFJLFVBQVUsQ0FDOUIsQ0FDQSxPQUFPLENBQUMsSUFBSSxlQUFDLENBQUMscUJBQVEsQ0FDckIsYUFBYSxDQUFFLENBQUMsQ0FDaEIsc0JBQXNCLENBQUUsSUFBSSxVQUFVLENBQUMsQ0FDdkMsdUJBQXVCLENBQUUsSUFBSSxVQUFVLENBQ3hDLENBQ0EsaUNBQU0sQ0FDTCxLQUFLLENBQUUsSUFBSSxDQUNYLGdCQUFnQixDQUFFLElBQUksb0JBQW9CLENBQUMsQ0FDM0MsZUFBZSxDQUFFLFFBQVEsQ0FDekIsY0FBYyxDQUFFLENBQUMsQ0FDakIsT0FBTyxDQUFFLEVBQUUsQ0FDWCxhQUFhLENBQUUsSUFBSSxVQUFVLENBQzlCLENBQ0EsbUJBQUssQ0FBRyxFQUFFLFdBQVcsQ0FBQyxnQkFBRSxZQUFhLENBQ3BDLHlCQUF5QixDQUFFLElBQUksVUFBVSxDQUMxQyxDQUNBLG1CQUFLLENBQUcsRUFBRSxXQUFXLENBQUMsZ0JBQUUsV0FBWSxDQUNuQywwQkFBMEIsQ0FBRSxJQUFJLFVBQVUsQ0FDM0MsQ0FDQSxtQkFBSyxDQUFDLEVBQUUsQ0FBQyxnQkFBRyxDQUNYLE9BQU8sQ0FBRSxLQUVWLENBQ0EsOEJBQUUsT0FBTyxDQUNULDhCQUFFLE9BQVEsQ0FFVCxRQUFRLENBQUUsTUFBTSxDQUNoQixVQUFVLENBQUUsSUFBSSxDQUNoQixLQUFLLENBQUUsSUFBSSxDQUNYLFVBQVUsQ0FBRSxJQUFJLENBQ2hCLFNBQVMsQ0FBRSxJQUFJLENBQ2YsYUFBYSxDQUFFLENBQ2hCLENBQ0EsbUJBQUssQ0FBQyxFQUFFLENBQUMsRUFBRSxDQUFDLGlCQUFJLENBQ2YsY0FBYyxDQUFFLE1BQU0sQ0FDdEIsT0FBTyxDQUFFLFdBQVcsQ0FDcEIsV0FBVyxDQUFFLE1BQU0sQ0FDbkIsR0FBRyxDQUFFLEtBQ04sQ0FDQSxtQkFBSyxDQUFDLEVBQUUsQ0FBQyxnQkFBRSxZQUFhLENBQ3ZCLFVBQVUsQ0FBRSxLQUFLLENBQ2pCLE9BQU8sQ0FBRSxVQUNWLENBQ0EsbUJBQUssQ0FBQyxFQUFFLENBQUMsZ0JBQUUsV0FBWSxDQUN0QixVQUFVLENBQUUsR0FDYixDQUNBLG1CQUFLLENBQUMsZ0JBQUUsV0FBVyxHQUFHLENBQUUsQ0FDdkIsZ0JBQWdCLENBQUUsSUFBSSx3QkFBd0IsQ0FDL0MsQ0FDQSxtQkFBSyxDQUFDLGdCQUFFLFdBQVcsSUFBSSxDQUFFLENBQ3hCLGdCQUFnQixDQUFFLElBQUksc0JBQXNCLENBQzdDIiwibmFtZXMiOltdLCJzb3VyY2VzIjpbImNvbmZpZ3VyYXRpb25faXRlbS5zdmVsdGUiXX0= */");
+}
+var get_footer_slot_changes = (dirty) => ({});
+var get_footer_slot_context = (ctx) => ({ class: "footer" });
+var get_title_slot_changes = (dirty) => ({});
+var get_title_slot_context = (ctx) => ({});
+function fallback_block_1(ctx) {
+  var _a, _b, _c;
+  let obsidianlucideicon;
+  let t0;
+  let span;
+  let t1_value = (
+    /*device*/
+    ((_c = (_a = ctx[1]) == null ? void 0 : _a.name) != null ? _c : (
+      /*device*/
+      (_b = ctx[1]) == null ? void 0 : _b.deviceID
+    )) + ""
+  );
+  let t1;
+  let current;
+  obsidianlucideicon = new obsidian_lucide_icon_default({
+    props: { name: "hard-drive" },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      create_component(obsidianlucideicon.$$.fragment);
+      t0 = space();
+      span = element("span");
+      t1 = text(t1_value);
+      add_location(span, file6, 14, 3, 313);
+    },
+    m: function mount(target, anchor) {
+      mount_component(obsidianlucideicon, target, anchor);
+      insert_dev(target, t0, anchor);
+      insert_dev(target, span, anchor);
+      append_dev(span, t1);
+      current = true;
+    },
+    p: function update2(ctx2, dirty) {
+      var _a2, _b2, _c2;
+      if ((!current || dirty & /*device*/
+      2) && t1_value !== (t1_value = /*device*/
+      ((_c2 = (_a2 = ctx2[1]) == null ? void 0 : _a2.name) != null ? _c2 : (
+        /*device*/
+        (_b2 = ctx2[1]) == null ? void 0 : _b2.deviceID
+      )) + "")) set_data_dev(t1, t1_value);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidianlucideicon.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidianlucideicon.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(t0);
+        detach_dev(span);
+      }
+      destroy_component(obsidianlucideicon, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: fallback_block_1.name,
+    type: "fallback",
+    source: "(10:21)     ",
+    ctx
+  });
+  return block2;
+}
+function create_if_block_4(ctx) {
+  let tr0;
+  let td0;
+  let div0;
+  let obsidianlucideicon0;
+  let t0;
+  let span0;
+  let t2;
+  let td1;
+  let a0;
+  let t4;
+  let tr1;
+  let td2;
+  let div1;
+  let obsidianlucideicon1;
+  let t5;
+  let span1;
+  let t7;
+  let td3;
+  let a1;
+  let t9;
+  let tr2;
+  let td4;
+  let div2;
+  let obsidianlucideicon2;
+  let t10;
+  let span2;
+  let t12;
+  let td5;
+  let span3;
+  let t14;
+  let tr3;
+  let td6;
+  let div3;
+  let obsidianlucideicon3;
+  let t15;
+  let span4;
+  let t17;
+  let td7;
+  let span5;
+  let t19;
+  let tr4;
+  let td8;
+  let div4;
+  let obsidianlucideicon4;
+  let t20;
+  let span6;
+  let t22;
+  let td9;
+  let span7;
+  let t24;
+  let tr5;
+  let td10;
+  let div5;
+  let obsidianlucideicon5;
+  let t25;
+  let span8;
+  let t27;
+  let td11;
+  let span9;
+  let t29;
+  let tr6;
+  let td12;
+  let div6;
+  let obsidianlucideicon6;
+  let t30;
+  let span10;
+  let t32;
+  let td13;
+  let a2;
+  let t33_value = (
+    /*device*/
+    ctx[1].deviceID.slice(0, 7) + ""
+  );
+  let t33;
+  let t34;
+  let tr7;
+  let td14;
+  let div7;
+  let obsidianlucideicon7;
+  let t35;
+  let span11;
+  let t37;
+  let td15;
+  let span12;
+  let current;
+  let mounted;
+  let dispose;
+  obsidianlucideicon0 = new obsidian_lucide_icon_default({
+    props: { name: "download-cloud" },
+    $$inline: true
+  });
+  obsidianlucideicon1 = new obsidian_lucide_icon_default({
+    props: { name: "upload-cloud" },
+    $$inline: true
+  });
+  obsidianlucideicon2 = new obsidian_lucide_icon_default({ props: { name: "home" }, $$inline: true });
+  obsidianlucideicon3 = new obsidian_lucide_icon_default({
+    props: { name: "network" },
+    $$inline: true
+  });
+  obsidianlucideicon4 = new obsidian_lucide_icon_default({
+    props: { name: "milestone" },
+    $$inline: true
+  });
+  obsidianlucideicon5 = new obsidian_lucide_icon_default({
+    props: { name: "clock-9" },
+    $$inline: true
+  });
+  obsidianlucideicon6 = new obsidian_lucide_icon_default({
+    props: { name: "qr-code" },
+    $$inline: true
+  });
+  obsidianlucideicon7 = new obsidian_lucide_icon_default({ props: { name: "tag" }, $$inline: true });
+  const block2 = {
+    c: function create() {
+      tr0 = element("tr");
+      td0 = element("td");
+      div0 = element("div");
+      create_component(obsidianlucideicon0.$$.fragment);
+      t0 = space();
+      span0 = element("span");
+      span0.textContent = "Download Rate";
+      t2 = space();
+      td1 = element("td");
+      a0 = element("a");
+      a0.textContent = "0 B/s (0 B)";
+      t4 = space();
+      tr1 = element("tr");
+      td2 = element("td");
+      div1 = element("div");
+      create_component(obsidianlucideicon1.$$.fragment);
+      t5 = space();
+      span1 = element("span");
+      span1.textContent = "Upload Rate";
+      t7 = space();
+      td3 = element("td");
+      a1 = element("a");
+      a1.textContent = "0 B/s (0 B)";
+      t9 = space();
+      tr2 = element("tr");
+      td4 = element("td");
+      div2 = element("div");
+      create_component(obsidianlucideicon2.$$.fragment);
+      t10 = space();
+      span2 = element("span");
+      span2.textContent = "Local State (Total)";
+      t12 = space();
+      td5 = element("td");
+      span3 = element("span");
+      span3.textContent = "Files: 100, Folders: 50, Storage: ~40 MiB";
+      t14 = space();
+      tr3 = element("tr");
+      td6 = element("td");
+      div3 = element("div");
+      create_component(obsidianlucideicon3.$$.fragment);
+      t15 = space();
+      span4 = element("span");
+      span4.textContent = "Listeners";
+      t17 = space();
+      td7 = element("td");
+      span5 = element("span");
+      span5.textContent = "3/3";
+      t19 = space();
+      tr4 = element("tr");
+      td8 = element("td");
+      div4 = element("div");
+      create_component(obsidianlucideicon4.$$.fragment);
+      t20 = space();
+      span6 = element("span");
+      span6.textContent = "Discovery";
+      t22 = space();
+      td9 = element("td");
+      span7 = element("span");
+      span7.textContent = "4/5";
+      t24 = space();
+      tr5 = element("tr");
+      td10 = element("td");
+      div5 = element("div");
+      create_component(obsidianlucideicon5.$$.fragment);
+      t25 = space();
+      span8 = element("span");
+      span8.textContent = "Uptime";
+      t27 = space();
+      td11 = element("td");
+      span9 = element("span");
+      span9.textContent = "10h 23m";
+      t29 = space();
+      tr6 = element("tr");
+      td12 = element("td");
+      div6 = element("div");
+      create_component(obsidianlucideicon6.$$.fragment);
+      t30 = space();
+      span10 = element("span");
+      span10.textContent = "Identification";
+      t32 = space();
+      td13 = element("td");
+      a2 = element("a");
+      t33 = text(t33_value);
+      t34 = space();
+      tr7 = element("tr");
+      td14 = element("td");
+      div7 = element("div");
+      create_component(obsidianlucideicon7.$$.fragment);
+      t35 = space();
+      span11 = element("span");
+      span11.textContent = "Version";
+      t37 = space();
+      td15 = element("td");
+      span12 = element("span");
+      span12.textContent = "v1.23.7, Windows, blabla";
+      add_location(span0, file6, 203, 6, 3968);
+      attr_dev(div0, "class", "svelte-8fgumz");
+      add_location(div0, file6, 201, 5, 3905);
+      attr_dev(td0, "class", "svelte-8fgumz");
+      add_location(td0, file6, 200, 4, 3895);
+      attr_dev(a0, "href", "/");
+      set_style(a0, "color", "inherit");
+      add_location(a0, file6, 207, 5, 4031);
+      attr_dev(td1, "class", "svelte-8fgumz");
+      add_location(td1, file6, 206, 4, 4021);
+      attr_dev(tr0, "class", "svelte-8fgumz");
+      add_location(tr0, file6, 199, 3, 3886);
+      add_location(span1, file6, 214, 6, 4187);
+      attr_dev(div1, "class", "svelte-8fgumz");
+      add_location(div1, file6, 212, 5, 4126);
+      attr_dev(td2, "class", "svelte-8fgumz");
+      add_location(td2, file6, 211, 4, 4116);
+      attr_dev(a1, "href", "/");
+      set_style(a1, "color", "inherit");
+      add_location(a1, file6, 218, 5, 4248);
+      attr_dev(td3, "class", "svelte-8fgumz");
+      add_location(td3, file6, 217, 4, 4238);
+      attr_dev(tr1, "class", "svelte-8fgumz");
+      add_location(tr1, file6, 210, 3, 4107);
+      add_location(span2, file6, 225, 6, 4396);
+      attr_dev(div2, "class", "svelte-8fgumz");
+      add_location(div2, file6, 223, 5, 4343);
+      attr_dev(td4, "class", "svelte-8fgumz");
+      add_location(td4, file6, 222, 4, 4333);
+      add_location(span3, file6, 229, 5, 4465);
+      attr_dev(td5, "class", "svelte-8fgumz");
+      add_location(td5, file6, 228, 4, 4455);
+      attr_dev(tr2, "class", "svelte-8fgumz");
+      add_location(tr2, file6, 221, 3, 4324);
+      add_location(span4, file6, 236, 6, 4619);
+      attr_dev(div3, "class", "svelte-8fgumz");
+      add_location(div3, file6, 234, 5, 4563);
+      attr_dev(td6, "class", "svelte-8fgumz");
+      add_location(td6, file6, 233, 4, 4553);
+      add_location(span5, file6, 240, 5, 4678);
+      attr_dev(td7, "class", "svelte-8fgumz");
+      add_location(td7, file6, 239, 4, 4668);
+      attr_dev(tr3, "class", "svelte-8fgumz");
+      add_location(tr3, file6, 232, 3, 4544);
+      add_location(span6, file6, 247, 6, 4796);
+      attr_dev(div4, "class", "svelte-8fgumz");
+      add_location(div4, file6, 245, 5, 4738);
+      attr_dev(td8, "class", "svelte-8fgumz");
+      add_location(td8, file6, 244, 4, 4728);
+      add_location(span7, file6, 251, 5, 4855);
+      attr_dev(td9, "class", "svelte-8fgumz");
+      add_location(td9, file6, 250, 4, 4845);
+      attr_dev(tr4, "class", "svelte-8fgumz");
+      add_location(tr4, file6, 243, 3, 4719);
+      add_location(span8, file6, 258, 6, 4971);
+      attr_dev(div5, "class", "svelte-8fgumz");
+      add_location(div5, file6, 256, 5, 4915);
+      attr_dev(td10, "class", "svelte-8fgumz");
+      add_location(td10, file6, 255, 4, 4905);
+      add_location(span9, file6, 262, 5, 5027);
+      attr_dev(td11, "class", "svelte-8fgumz");
+      add_location(td11, file6, 261, 4, 5017);
+      attr_dev(tr5, "class", "svelte-8fgumz");
+      add_location(tr5, file6, 254, 3, 4896);
+      add_location(span10, file6, 269, 6, 5147);
+      attr_dev(div6, "class", "svelte-8fgumz");
+      add_location(div6, file6, 267, 5, 5091);
+      attr_dev(td12, "class", "svelte-8fgumz");
+      add_location(td12, file6, 266, 4, 5081);
+      attr_dev(a2, "href", "/");
+      add_location(a2, file6, 273, 5, 5211);
+      attr_dev(td13, "class", "svelte-8fgumz");
+      add_location(td13, file6, 272, 4, 5201);
+      attr_dev(tr6, "class", "svelte-8fgumz");
+      add_location(tr6, file6, 265, 3, 5072);
+      add_location(span11, file6, 285, 6, 5432);
+      attr_dev(div7, "class", "svelte-8fgumz");
+      add_location(div7, file6, 283, 5, 5380);
+      attr_dev(td14, "class", "svelte-8fgumz");
+      add_location(td14, file6, 282, 4, 5370);
+      add_location(span12, file6, 289, 5, 5489);
+      attr_dev(td15, "class", "svelte-8fgumz");
+      add_location(td15, file6, 288, 4, 5479);
+      attr_dev(tr7, "class", "svelte-8fgumz");
+      add_location(tr7, file6, 281, 3, 5361);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, tr0, anchor);
+      append_dev(tr0, td0);
+      append_dev(td0, div0);
+      mount_component(obsidianlucideicon0, div0, null);
+      append_dev(div0, t0);
+      append_dev(div0, span0);
+      append_dev(tr0, t2);
+      append_dev(tr0, td1);
+      append_dev(td1, a0);
+      insert_dev(target, t4, anchor);
+      insert_dev(target, tr1, anchor);
+      append_dev(tr1, td2);
+      append_dev(td2, div1);
+      mount_component(obsidianlucideicon1, div1, null);
+      append_dev(div1, t5);
+      append_dev(div1, span1);
+      append_dev(tr1, t7);
+      append_dev(tr1, td3);
+      append_dev(td3, a1);
+      insert_dev(target, t9, anchor);
+      insert_dev(target, tr2, anchor);
+      append_dev(tr2, td4);
+      append_dev(td4, div2);
+      mount_component(obsidianlucideicon2, div2, null);
+      append_dev(div2, t10);
+      append_dev(div2, span2);
+      append_dev(tr2, t12);
+      append_dev(tr2, td5);
+      append_dev(td5, span3);
+      insert_dev(target, t14, anchor);
+      insert_dev(target, tr3, anchor);
+      append_dev(tr3, td6);
+      append_dev(td6, div3);
+      mount_component(obsidianlucideicon3, div3, null);
+      append_dev(div3, t15);
+      append_dev(div3, span4);
+      append_dev(tr3, t17);
+      append_dev(tr3, td7);
+      append_dev(td7, span5);
+      insert_dev(target, t19, anchor);
+      insert_dev(target, tr4, anchor);
+      append_dev(tr4, td8);
+      append_dev(td8, div4);
+      mount_component(obsidianlucideicon4, div4, null);
+      append_dev(div4, t20);
+      append_dev(div4, span6);
+      append_dev(tr4, t22);
+      append_dev(tr4, td9);
+      append_dev(td9, span7);
+      insert_dev(target, t24, anchor);
+      insert_dev(target, tr5, anchor);
+      append_dev(tr5, td10);
+      append_dev(td10, div5);
+      mount_component(obsidianlucideicon5, div5, null);
+      append_dev(div5, t25);
+      append_dev(div5, span8);
+      append_dev(tr5, t27);
+      append_dev(tr5, td11);
+      append_dev(td11, span9);
+      insert_dev(target, t29, anchor);
+      insert_dev(target, tr6, anchor);
+      append_dev(tr6, td12);
+      append_dev(td12, div6);
+      mount_component(obsidianlucideicon6, div6, null);
+      append_dev(div6, t30);
+      append_dev(div6, span10);
+      append_dev(tr6, t32);
+      append_dev(tr6, td13);
+      append_dev(td13, a2);
+      append_dev(a2, t33);
+      insert_dev(target, t34, anchor);
+      insert_dev(target, tr7, anchor);
+      append_dev(tr7, td14);
+      append_dev(td14, div7);
+      mount_component(obsidianlucideicon7, div7, null);
+      append_dev(div7, t35);
+      append_dev(div7, span11);
+      append_dev(tr7, t37);
+      append_dev(tr7, td15);
+      append_dev(td15, span12);
+      current = true;
+      if (!mounted) {
+        dispose = listen_dev(
+          a2,
+          "click",
+          /*click_handler_1*/
+          ctx[6],
+          false,
+          false,
+          false,
+          false
+        );
+        mounted = true;
+      }
+    },
+    p: function update2(ctx2, dirty) {
+      if ((!current || dirty & /*device*/
+      2) && t33_value !== (t33_value = /*device*/
+      ctx2[1].deviceID.slice(0, 7) + "")) set_data_dev(t33, t33_value);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidianlucideicon0.$$.fragment, local);
+      transition_in(obsidianlucideicon1.$$.fragment, local);
+      transition_in(obsidianlucideicon2.$$.fragment, local);
+      transition_in(obsidianlucideicon3.$$.fragment, local);
+      transition_in(obsidianlucideicon4.$$.fragment, local);
+      transition_in(obsidianlucideicon5.$$.fragment, local);
+      transition_in(obsidianlucideicon6.$$.fragment, local);
+      transition_in(obsidianlucideicon7.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidianlucideicon0.$$.fragment, local);
+      transition_out(obsidianlucideicon1.$$.fragment, local);
+      transition_out(obsidianlucideicon2.$$.fragment, local);
+      transition_out(obsidianlucideicon3.$$.fragment, local);
+      transition_out(obsidianlucideicon4.$$.fragment, local);
+      transition_out(obsidianlucideicon5.$$.fragment, local);
+      transition_out(obsidianlucideicon6.$$.fragment, local);
+      transition_out(obsidianlucideicon7.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(tr0);
+        detach_dev(t4);
+        detach_dev(tr1);
+        detach_dev(t9);
+        detach_dev(tr2);
+        detach_dev(t14);
+        detach_dev(tr3);
+        detach_dev(t19);
+        detach_dev(tr4);
+        detach_dev(t24);
+        detach_dev(tr5);
+        detach_dev(t29);
+        detach_dev(tr6);
+        detach_dev(t34);
+        detach_dev(tr7);
+      }
+      destroy_component(obsidianlucideicon0);
+      destroy_component(obsidianlucideicon1);
+      destroy_component(obsidianlucideicon2);
+      destroy_component(obsidianlucideicon3);
+      destroy_component(obsidianlucideicon4);
+      destroy_component(obsidianlucideicon5);
+      destroy_component(obsidianlucideicon6);
+      destroy_component(obsidianlucideicon7);
+      mounted = false;
+      dispose();
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block_4.name,
+    type: "if",
+    source: "(196:35) ",
+    ctx
+  });
+  return block2;
+}
+function create_if_block_3(ctx) {
+  let tr0;
+  let td0;
+  let div0;
+  let obsidianlucideicon0;
+  let t0;
+  let span0;
+  let t2;
+  let td1;
+  let span1;
+  let t4;
+  let tr1;
+  let td2;
+  let div1;
+  let obsidianlucideicon1;
+  let t5;
+  let span2;
+  let t7;
+  let td3;
+  let span3;
+  let t9;
+  let tr2;
+  let td4;
+  let div2;
+  let obsidianlucideicon2;
+  let t10;
+  let span4;
+  let t12;
+  let td5;
+  let span5;
+  let t13_value = (
+    /*device*/
+    ctx[1].address.join(", ") + ""
+  );
+  let t13;
+  let t14;
+  let tr3;
+  let td6;
+  let div3;
+  let obsidianlucideicon3;
+  let t15;
+  let span6;
+  let t17;
+  let td7;
+  let a;
+  let t18_value = (
+    /*device*/
+    ctx[1].deviceID.slice(0, 7) + ""
+  );
+  let t18;
+  let t19;
+  let tr4;
+  let td8;
+  let div4;
+  let obsidianlucideicon4;
+  let t20;
+  let span7;
+  let t22;
+  let td9;
+  let span8;
+  let t23_value = (
+    /*device*/
+    ctx[1].name + ""
+  );
+  let t23;
+  let current;
+  let mounted;
+  let dispose;
+  obsidianlucideicon0 = new obsidian_lucide_icon_default({ props: { name: "eye" }, $$inline: true });
+  obsidianlucideicon1 = new obsidian_lucide_icon_default({ props: { name: "cloud" }, $$inline: true });
+  obsidianlucideicon2 = new obsidian_lucide_icon_default({ props: { name: "link" }, $$inline: true });
+  obsidianlucideicon3 = new obsidian_lucide_icon_default({
+    props: { name: "qr-code" },
+    $$inline: true
+  });
+  obsidianlucideicon4 = new obsidian_lucide_icon_default({
+    props: { name: "folder" },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      tr0 = element("tr");
+      td0 = element("td");
+      div0 = element("div");
+      create_component(obsidianlucideicon0.$$.fragment);
+      t0 = space();
+      span0 = element("span");
+      span0.textContent = "Last seen";
+      t2 = space();
+      td1 = element("td");
+      span1 = element("span");
+      span1.textContent = `${(/* @__PURE__ */ new Date()).toString()}`;
+      t4 = space();
+      tr1 = element("tr");
+      td2 = element("td");
+      div1 = element("div");
+      create_component(obsidianlucideicon1.$$.fragment);
+      t5 = space();
+      span2 = element("span");
+      span2.textContent = "Sync Status";
+      t7 = space();
+      td3 = element("td");
+      span3 = element("span");
+      span3.textContent = "up to date";
+      t9 = space();
+      tr2 = element("tr");
+      td4 = element("td");
+      div2 = element("div");
+      create_component(obsidianlucideicon2.$$.fragment);
+      t10 = space();
+      span4 = element("span");
+      span4.textContent = "Addresses";
+      t12 = space();
+      td5 = element("td");
+      span5 = element("span");
+      t13 = text(t13_value);
+      t14 = space();
+      tr3 = element("tr");
+      td6 = element("td");
+      div3 = element("div");
+      create_component(obsidianlucideicon3.$$.fragment);
+      t15 = space();
+      span6 = element("span");
+      span6.textContent = "Identification";
+      t17 = space();
+      td7 = element("td");
+      a = element("a");
+      t18 = text(t18_value);
+      t19 = space();
+      tr4 = element("tr");
+      td8 = element("td");
+      div4 = element("div");
+      create_component(obsidianlucideicon4.$$.fragment);
+      t20 = space();
+      span7 = element("span");
+      span7.textContent = "Folders";
+      t22 = space();
+      td9 = element("td");
+      span8 = element("span");
+      t23 = text(t23_value);
+      add_location(span0, file6, 138, 6, 2782);
+      attr_dev(div0, "class", "svelte-8fgumz");
+      add_location(div0, file6, 136, 5, 2730);
+      attr_dev(td0, "class", "svelte-8fgumz");
+      add_location(td0, file6, 135, 4, 2720);
+      add_location(span1, file6, 143, 5, 2885);
+      attr_dev(td1, "class", "svelte-8fgumz");
+      add_location(td1, file6, 141, 4, 2831);
+      attr_dev(tr0, "class", "svelte-8fgumz");
+      add_location(tr0, file6, 134, 3, 2711);
+      add_location(span2, file6, 150, 6, 3017);
+      attr_dev(div1, "class", "svelte-8fgumz");
+      add_location(div1, file6, 148, 5, 2963);
+      attr_dev(td2, "class", "svelte-8fgumz");
+      add_location(td2, file6, 147, 4, 2953);
+      add_location(span3, file6, 155, 5, 3122);
+      attr_dev(td3, "class", "svelte-8fgumz");
+      add_location(td3, file6, 153, 4, 3068);
+      attr_dev(tr1, "class", "svelte-8fgumz");
+      add_location(tr1, file6, 146, 3, 2944);
+      add_location(span4, file6, 162, 6, 3240);
+      attr_dev(div2, "class", "svelte-8fgumz");
+      add_location(div2, file6, 160, 5, 3187);
+      attr_dev(td4, "class", "svelte-8fgumz");
+      add_location(td4, file6, 159, 4, 3177);
+      add_location(span5, file6, 166, 5, 3299);
+      attr_dev(td5, "class", "svelte-8fgumz");
+      add_location(td5, file6, 165, 4, 3289);
+      attr_dev(tr2, "class", "svelte-8fgumz");
+      add_location(tr2, file6, 158, 3, 3168);
+      add_location(span6, file6, 173, 6, 3437);
+      attr_dev(div3, "class", "svelte-8fgumz");
+      add_location(div3, file6, 171, 5, 3381);
+      attr_dev(td6, "class", "svelte-8fgumz");
+      add_location(td6, file6, 170, 4, 3371);
+      attr_dev(a, "href", "/");
+      add_location(a, file6, 177, 5, 3501);
+      attr_dev(td7, "class", "svelte-8fgumz");
+      add_location(td7, file6, 176, 4, 3491);
+      attr_dev(tr3, "class", "svelte-8fgumz");
+      add_location(tr3, file6, 169, 3, 3362);
+      add_location(span7, file6, 191, 6, 3744);
+      attr_dev(div4, "class", "svelte-8fgumz");
+      add_location(div4, file6, 189, 5, 3689);
+      attr_dev(td8, "class", "svelte-8fgumz");
+      add_location(td8, file6, 188, 4, 3679);
+      add_location(span8, file6, 195, 5, 3801);
+      attr_dev(td9, "class", "svelte-8fgumz");
+      add_location(td9, file6, 194, 4, 3791);
+      attr_dev(tr4, "class", "svelte-8fgumz");
+      add_location(tr4, file6, 187, 3, 3670);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, tr0, anchor);
+      append_dev(tr0, td0);
+      append_dev(td0, div0);
+      mount_component(obsidianlucideicon0, div0, null);
+      append_dev(div0, t0);
+      append_dev(div0, span0);
+      append_dev(tr0, t2);
+      append_dev(tr0, td1);
+      append_dev(td1, span1);
+      insert_dev(target, t4, anchor);
+      insert_dev(target, tr1, anchor);
+      append_dev(tr1, td2);
+      append_dev(td2, div1);
+      mount_component(obsidianlucideicon1, div1, null);
+      append_dev(div1, t5);
+      append_dev(div1, span2);
+      append_dev(tr1, t7);
+      append_dev(tr1, td3);
+      append_dev(td3, span3);
+      insert_dev(target, t9, anchor);
+      insert_dev(target, tr2, anchor);
+      append_dev(tr2, td4);
+      append_dev(td4, div2);
+      mount_component(obsidianlucideicon2, div2, null);
+      append_dev(div2, t10);
+      append_dev(div2, span4);
+      append_dev(tr2, t12);
+      append_dev(tr2, td5);
+      append_dev(td5, span5);
+      append_dev(span5, t13);
+      insert_dev(target, t14, anchor);
+      insert_dev(target, tr3, anchor);
+      append_dev(tr3, td6);
+      append_dev(td6, div3);
+      mount_component(obsidianlucideicon3, div3, null);
+      append_dev(div3, t15);
+      append_dev(div3, span6);
+      append_dev(tr3, t17);
+      append_dev(tr3, td7);
+      append_dev(td7, a);
+      append_dev(a, t18);
+      insert_dev(target, t19, anchor);
+      insert_dev(target, tr4, anchor);
+      append_dev(tr4, td8);
+      append_dev(td8, div4);
+      mount_component(obsidianlucideicon4, div4, null);
+      append_dev(div4, t20);
+      append_dev(div4, span7);
+      append_dev(tr4, t22);
+      append_dev(tr4, td9);
+      append_dev(td9, span8);
+      append_dev(span8, t23);
+      current = true;
+      if (!mounted) {
+        dispose = listen_dev(
+          a,
+          "click",
+          /*click_handler*/
+          ctx[5],
+          false,
+          false,
+          false,
+          false
+        );
+        mounted = true;
+      }
+    },
+    p: function update2(ctx2, dirty) {
+      if ((!current || dirty & /*device*/
+      2) && t13_value !== (t13_value = /*device*/
+      ctx2[1].address.join(", ") + "")) set_data_dev(t13, t13_value);
+      if ((!current || dirty & /*device*/
+      2) && t18_value !== (t18_value = /*device*/
+      ctx2[1].deviceID.slice(0, 7) + "")) set_data_dev(t18, t18_value);
+      if ((!current || dirty & /*device*/
+      2) && t23_value !== (t23_value = /*device*/
+      ctx2[1].name + "")) set_data_dev(t23, t23_value);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidianlucideicon0.$$.fragment, local);
+      transition_in(obsidianlucideicon1.$$.fragment, local);
+      transition_in(obsidianlucideicon2.$$.fragment, local);
+      transition_in(obsidianlucideicon3.$$.fragment, local);
+      transition_in(obsidianlucideicon4.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidianlucideicon0.$$.fragment, local);
+      transition_out(obsidianlucideicon1.$$.fragment, local);
+      transition_out(obsidianlucideicon2.$$.fragment, local);
+      transition_out(obsidianlucideicon3.$$.fragment, local);
+      transition_out(obsidianlucideicon4.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(tr0);
+        detach_dev(t4);
+        detach_dev(tr1);
+        detach_dev(t9);
+        detach_dev(tr2);
+        detach_dev(t14);
+        detach_dev(tr3);
+        detach_dev(t19);
+        detach_dev(tr4);
+      }
+      destroy_component(obsidianlucideicon0);
+      destroy_component(obsidianlucideicon1);
+      destroy_component(obsidianlucideicon2);
+      destroy_component(obsidianlucideicon3);
+      destroy_component(obsidianlucideicon4);
+      mounted = false;
+      dispose();
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block_3.name,
+    type: "if",
+    source: "(131:36) ",
+    ctx
+  });
+  return block2;
+}
+function create_if_block_2(ctx) {
+  let tr0;
+  let td0;
+  let div0;
+  let obsidianlucideicon0;
+  let t0;
+  let span0;
+  let t2;
+  let td1;
+  let span1;
+  let t3_value = (
+    /*folder*/
+    ctx[0].id + ""
+  );
+  let t3;
+  let t4;
+  let tr1;
+  let td2;
+  let div1;
+  let obsidianlucideicon1;
+  let t5;
+  let span2;
+  let t7;
+  let td3;
+  let span3;
+  let t8_value = (
+    /*folder*/
+    ctx[0].path + ""
+  );
+  let t8;
+  let t9;
+  let tr2;
+  let td4;
+  let div2;
+  let obsidianlucideicon2;
+  let t10;
+  let span4;
+  let t12;
+  let td5;
+  let span5;
+  let t14;
+  let tr3;
+  let td6;
+  let div3;
+  let obsidianlucideicon3;
+  let t15;
+  let span6;
+  let t17;
+  let td7;
+  let span7;
+  let t19;
+  let tr4;
+  let td8;
+  let div4;
+  let obsidianlucideicon4;
+  let t20;
+  let span8;
+  let t22;
+  let td9;
+  let div5;
+  let obsidianlucideicon5;
+  let t23;
+  let span9;
+  let t25;
+  let obsidianlucideicon6;
+  let t26;
+  let span10;
+  let t28;
+  let tr5;
+  let td10;
+  let div6;
+  let obsidianlucideicon7;
+  let t29;
+  let span11;
+  let t31;
+  let td11;
+  let span12;
+  let t33;
+  let tr6;
+  let td12;
+  let div7;
+  let obsidianlucideicon8;
+  let t34;
+  let span13;
+  let t36;
+  let td13;
+  let span14;
+  let t37_value = (
+    /*folder*/
+    ctx[0].devices.map(func).join(", ") + ""
+  );
+  let t37;
+  let t38;
+  let tr7;
+  let td14;
+  let div8;
+  let obsidianlucideicon9;
+  let t39;
+  let span15;
+  let t41;
+  let td15;
+  let span16;
+  let t43;
+  let tr8;
+  let td16;
+  let div9;
+  let obsidianlucideicon10;
+  let t44;
+  let span17;
+  let t46;
+  let td17;
+  let span18;
+  let current;
+  obsidianlucideicon0 = new obsidian_lucide_icon_default({ props: { name: "info" }, $$inline: true });
+  obsidianlucideicon1 = new obsidian_lucide_icon_default({
+    props: { name: "folder" },
+    $$inline: true
+  });
+  obsidianlucideicon2 = new obsidian_lucide_icon_default({
+    props: { name: "globe-2" },
+    $$inline: true
+  });
+  obsidianlucideicon3 = new obsidian_lucide_icon_default({ props: { name: "home" }, $$inline: true });
+  obsidianlucideicon4 = new obsidian_lucide_icon_default({
+    props: { name: "refresh-cw" },
+    $$inline: true
+  });
+  obsidianlucideicon5 = new obsidian_lucide_icon_default({
+    props: { name: "clock-9" },
+    $$inline: true
+  });
+  obsidianlucideicon6 = new obsidian_lucide_icon_default({ props: { name: "eye" }, $$inline: true });
+  obsidianlucideicon7 = new obsidian_lucide_icon_default({ props: { name: "file" }, $$inline: true });
+  obsidianlucideicon8 = new obsidian_lucide_icon_default({
+    props: { name: "share-2" },
+    $$inline: true
+  });
+  obsidianlucideicon9 = new obsidian_lucide_icon_default({
+    props: { name: "clock-9" },
+    $$inline: true
+  });
+  obsidianlucideicon10 = new obsidian_lucide_icon_default({
+    props: { name: "arrow-left-right" },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      tr0 = element("tr");
+      td0 = element("td");
+      div0 = element("div");
+      create_component(obsidianlucideicon0.$$.fragment);
+      t0 = space();
+      span0 = element("span");
+      span0.textContent = "Folder ID";
+      t2 = space();
+      td1 = element("td");
+      span1 = element("span");
+      t3 = text(t3_value);
+      t4 = space();
+      tr1 = element("tr");
+      td2 = element("td");
+      div1 = element("div");
+      create_component(obsidianlucideicon1.$$.fragment);
+      t5 = space();
+      span2 = element("span");
+      span2.textContent = "Folder Path";
+      t7 = space();
+      td3 = element("td");
+      span3 = element("span");
+      t8 = text(t8_value);
+      t9 = space();
+      tr2 = element("tr");
+      td4 = element("td");
+      div2 = element("div");
+      create_component(obsidianlucideicon2.$$.fragment);
+      t10 = space();
+      span4 = element("span");
+      span4.textContent = "Global State";
+      t12 = space();
+      td5 = element("td");
+      span5 = element("span");
+      span5.textContent = "Files: 100, Folders: 50, Storage: ~40 MiB";
+      t14 = space();
+      tr3 = element("tr");
+      td6 = element("td");
+      div3 = element("div");
+      create_component(obsidianlucideicon3.$$.fragment);
+      t15 = space();
+      span6 = element("span");
+      span6.textContent = "Local State";
+      t17 = space();
+      td7 = element("td");
+      span7 = element("span");
+      span7.textContent = "Files: 100, Folders: 50, Storage: ~40 MiB";
+      t19 = space();
+      tr4 = element("tr");
+      td8 = element("td");
+      div4 = element("div");
+      create_component(obsidianlucideicon4.$$.fragment);
+      t20 = space();
+      span8 = element("span");
+      span8.textContent = "Rescans";
+      t22 = space();
+      td9 = element("td");
+      div5 = element("div");
+      create_component(obsidianlucideicon5.$$.fragment);
+      t23 = space();
+      span9 = element("span");
+      span9.textContent = "1h";
+      t25 = space();
+      create_component(obsidianlucideicon6.$$.fragment);
+      t26 = space();
+      span10 = element("span");
+      span10.textContent = "Enabled";
+      t28 = space();
+      tr5 = element("tr");
+      td10 = element("td");
+      div6 = element("div");
+      create_component(obsidianlucideicon7.$$.fragment);
+      t29 = space();
+      span11 = element("span");
+      span11.textContent = "File Versioning";
+      t31 = space();
+      td11 = element("td");
+      span12 = element("span");
+      span12.textContent = "Staggered";
+      t33 = space();
+      tr6 = element("tr");
+      td12 = element("td");
+      div7 = element("div");
+      create_component(obsidianlucideicon8.$$.fragment);
+      t34 = space();
+      span13 = element("span");
+      span13.textContent = "Shared With";
+      t36 = space();
+      td13 = element("td");
+      span14 = element("span");
+      t37 = text(t37_value);
+      t38 = space();
+      tr7 = element("tr");
+      td14 = element("td");
+      div8 = element("div");
+      create_component(obsidianlucideicon9.$$.fragment);
+      t39 = space();
+      span15 = element("span");
+      span15.textContent = "Last Scan";
+      t41 = space();
+      td15 = element("td");
+      span16 = element("span");
+      span16.textContent = `${(/* @__PURE__ */ new Date()).toISOString()}`;
+      t43 = space();
+      tr8 = element("tr");
+      td16 = element("td");
+      div9 = element("div");
+      create_component(obsidianlucideicon10.$$.fragment);
+      t44 = space();
+      span17 = element("span");
+      span17.textContent = "Latest Change";
+      t46 = space();
+      td17 = element("td");
+      span18 = element("span");
+      span18.textContent = `${"Updated <filename>.ext"}`;
+      add_location(span0, file6, 23, 6, 499);
+      attr_dev(div0, "class", "svelte-8fgumz");
+      add_location(div0, file6, 21, 5, 446);
+      attr_dev(td0, "class", "svelte-8fgumz");
+      add_location(td0, file6, 20, 4, 436);
+      add_location(span1, file6, 27, 5, 558);
+      attr_dev(td1, "class", "svelte-8fgumz");
+      add_location(td1, file6, 26, 4, 548);
+      attr_dev(tr0, "class", "svelte-8fgumz");
+      add_location(tr0, file6, 19, 3, 427);
+      add_location(span2, file6, 34, 6, 679);
+      attr_dev(div1, "class", "svelte-8fgumz");
+      add_location(div1, file6, 32, 5, 624);
+      attr_dev(td2, "class", "svelte-8fgumz");
+      add_location(td2, file6, 31, 4, 614);
+      add_location(span3, file6, 38, 5, 740);
+      attr_dev(td3, "class", "svelte-8fgumz");
+      add_location(td3, file6, 37, 4, 730);
+      attr_dev(tr1, "class", "svelte-8fgumz");
+      add_location(tr1, file6, 30, 3, 605);
+      add_location(span4, file6, 45, 6, 864);
+      attr_dev(div2, "class", "svelte-8fgumz");
+      add_location(div2, file6, 43, 5, 808);
+      attr_dev(td4, "class", "svelte-8fgumz");
+      add_location(td4, file6, 42, 4, 798);
+      add_location(span5, file6, 50, 5, 970);
+      attr_dev(td5, "class", "svelte-8fgumz");
+      add_location(td5, file6, 48, 4, 916);
+      attr_dev(tr2, "class", "svelte-8fgumz");
+      add_location(tr2, file6, 41, 3, 789);
+      add_location(span6, file6, 57, 6, 1121);
+      attr_dev(div3, "class", "svelte-8fgumz");
+      add_location(div3, file6, 55, 5, 1068);
+      attr_dev(td6, "class", "svelte-8fgumz");
+      add_location(td6, file6, 54, 4, 1058);
+      add_location(span7, file6, 62, 5, 1226);
+      attr_dev(td7, "class", "svelte-8fgumz");
+      add_location(td7, file6, 60, 4, 1172);
+      attr_dev(tr3, "class", "svelte-8fgumz");
+      add_location(tr3, file6, 53, 3, 1049);
+      add_location(span8, file6, 69, 6, 1383);
+      attr_dev(div4, "class", "svelte-8fgumz");
+      add_location(div4, file6, 67, 5, 1324);
+      attr_dev(td8, "class", "svelte-8fgumz");
+      add_location(td8, file6, 66, 4, 1314);
+      add_location(span9, file6, 76, 6, 1540);
+      add_location(span10, file6, 78, 6, 1602);
+      attr_dev(div5, "class", "svelte-8fgumz");
+      add_location(div5, file6, 74, 5, 1484);
+      attr_dev(td9, "class", "svelte-8fgumz");
+      add_location(td9, file6, 72, 4, 1430);
+      attr_dev(tr4, "class", "svelte-8fgumz");
+      add_location(tr4, file6, 65, 3, 1305);
+      add_location(span11, file6, 86, 6, 1729);
+      attr_dev(div6, "class", "svelte-8fgumz");
+      add_location(div6, file6, 84, 5, 1676);
+      attr_dev(td10, "class", "svelte-8fgumz");
+      add_location(td10, file6, 83, 4, 1666);
+      add_location(span12, file6, 91, 5, 1838);
+      attr_dev(td11, "class", "svelte-8fgumz");
+      add_location(td11, file6, 89, 4, 1784);
+      attr_dev(tr5, "class", "svelte-8fgumz");
+      add_location(tr5, file6, 82, 3, 1657);
+      add_location(span13, file6, 98, 6, 1958);
+      attr_dev(div7, "class", "svelte-8fgumz");
+      add_location(div7, file6, 96, 5, 1902);
+      attr_dev(td12, "class", "svelte-8fgumz");
+      add_location(td12, file6, 95, 4, 1892);
+      add_location(span14, file6, 103, 5, 2083);
+      attr_dev(td13, "class", "svelte-8fgumz");
+      add_location(td13, file6, 101, 4, 2009);
+      attr_dev(tr6, "class", "svelte-8fgumz");
+      add_location(tr6, file6, 94, 3, 1883);
+      add_location(span15, file6, 114, 6, 2295);
+      attr_dev(div8, "class", "svelte-8fgumz");
+      add_location(div8, file6, 112, 5, 2239);
+      attr_dev(td14, "class", "svelte-8fgumz");
+      add_location(td14, file6, 111, 4, 2229);
+      add_location(span16, file6, 119, 5, 2403);
+      attr_dev(td15, "class", "svelte-8fgumz");
+      add_location(td15, file6, 117, 4, 2344);
+      attr_dev(tr7, "class", "svelte-8fgumz");
+      add_location(tr7, file6, 110, 3, 2220);
+      add_location(span17, file6, 126, 6, 2549);
+      attr_dev(div9, "class", "svelte-8fgumz");
+      add_location(div9, file6, 124, 5, 2484);
+      attr_dev(td16, "class", "svelte-8fgumz");
+      add_location(td16, file6, 123, 4, 2474);
+      add_location(span18, file6, 130, 5, 2612);
+      attr_dev(td17, "class", "svelte-8fgumz");
+      add_location(td17, file6, 129, 4, 2602);
+      attr_dev(tr8, "class", "svelte-8fgumz");
+      add_location(tr8, file6, 122, 3, 2465);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, tr0, anchor);
+      append_dev(tr0, td0);
+      append_dev(td0, div0);
+      mount_component(obsidianlucideicon0, div0, null);
+      append_dev(div0, t0);
+      append_dev(div0, span0);
+      append_dev(tr0, t2);
+      append_dev(tr0, td1);
+      append_dev(td1, span1);
+      append_dev(span1, t3);
+      insert_dev(target, t4, anchor);
+      insert_dev(target, tr1, anchor);
+      append_dev(tr1, td2);
+      append_dev(td2, div1);
+      mount_component(obsidianlucideicon1, div1, null);
+      append_dev(div1, t5);
+      append_dev(div1, span2);
+      append_dev(tr1, t7);
+      append_dev(tr1, td3);
+      append_dev(td3, span3);
+      append_dev(span3, t8);
+      insert_dev(target, t9, anchor);
+      insert_dev(target, tr2, anchor);
+      append_dev(tr2, td4);
+      append_dev(td4, div2);
+      mount_component(obsidianlucideicon2, div2, null);
+      append_dev(div2, t10);
+      append_dev(div2, span4);
+      append_dev(tr2, t12);
+      append_dev(tr2, td5);
+      append_dev(td5, span5);
+      insert_dev(target, t14, anchor);
+      insert_dev(target, tr3, anchor);
+      append_dev(tr3, td6);
+      append_dev(td6, div3);
+      mount_component(obsidianlucideicon3, div3, null);
+      append_dev(div3, t15);
+      append_dev(div3, span6);
+      append_dev(tr3, t17);
+      append_dev(tr3, td7);
+      append_dev(td7, span7);
+      insert_dev(target, t19, anchor);
+      insert_dev(target, tr4, anchor);
+      append_dev(tr4, td8);
+      append_dev(td8, div4);
+      mount_component(obsidianlucideicon4, div4, null);
+      append_dev(div4, t20);
+      append_dev(div4, span8);
+      append_dev(tr4, t22);
+      append_dev(tr4, td9);
+      append_dev(td9, div5);
+      mount_component(obsidianlucideicon5, div5, null);
+      append_dev(div5, t23);
+      append_dev(div5, span9);
+      append_dev(div5, t25);
+      mount_component(obsidianlucideicon6, div5, null);
+      append_dev(div5, t26);
+      append_dev(div5, span10);
+      insert_dev(target, t28, anchor);
+      insert_dev(target, tr5, anchor);
+      append_dev(tr5, td10);
+      append_dev(td10, div6);
+      mount_component(obsidianlucideicon7, div6, null);
+      append_dev(div6, t29);
+      append_dev(div6, span11);
+      append_dev(tr5, t31);
+      append_dev(tr5, td11);
+      append_dev(td11, span12);
+      insert_dev(target, t33, anchor);
+      insert_dev(target, tr6, anchor);
+      append_dev(tr6, td12);
+      append_dev(td12, div7);
+      mount_component(obsidianlucideicon8, div7, null);
+      append_dev(div7, t34);
+      append_dev(div7, span13);
+      append_dev(tr6, t36);
+      append_dev(tr6, td13);
+      append_dev(td13, span14);
+      append_dev(span14, t37);
+      insert_dev(target, t38, anchor);
+      insert_dev(target, tr7, anchor);
+      append_dev(tr7, td14);
+      append_dev(td14, div8);
+      mount_component(obsidianlucideicon9, div8, null);
+      append_dev(div8, t39);
+      append_dev(div8, span15);
+      append_dev(tr7, t41);
+      append_dev(tr7, td15);
+      append_dev(td15, span16);
+      insert_dev(target, t43, anchor);
+      insert_dev(target, tr8, anchor);
+      append_dev(tr8, td16);
+      append_dev(td16, div9);
+      mount_component(obsidianlucideicon10, div9, null);
+      append_dev(div9, t44);
+      append_dev(div9, span17);
+      append_dev(tr8, t46);
+      append_dev(tr8, td17);
+      append_dev(td17, span18);
+      current = true;
+    },
+    p: function update2(ctx2, dirty) {
+      if ((!current || dirty & /*folder*/
+      1) && t3_value !== (t3_value = /*folder*/
+      ctx2[0].id + "")) set_data_dev(t3, t3_value);
+      if ((!current || dirty & /*folder*/
+      1) && t8_value !== (t8_value = /*folder*/
+      ctx2[0].path + "")) set_data_dev(t8, t8_value);
+      if ((!current || dirty & /*folder*/
+      1) && t37_value !== (t37_value = /*folder*/
+      ctx2[0].devices.map(func).join(", ") + "")) set_data_dev(t37, t37_value);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidianlucideicon0.$$.fragment, local);
+      transition_in(obsidianlucideicon1.$$.fragment, local);
+      transition_in(obsidianlucideicon2.$$.fragment, local);
+      transition_in(obsidianlucideicon3.$$.fragment, local);
+      transition_in(obsidianlucideicon4.$$.fragment, local);
+      transition_in(obsidianlucideicon5.$$.fragment, local);
+      transition_in(obsidianlucideicon6.$$.fragment, local);
+      transition_in(obsidianlucideicon7.$$.fragment, local);
+      transition_in(obsidianlucideicon8.$$.fragment, local);
+      transition_in(obsidianlucideicon9.$$.fragment, local);
+      transition_in(obsidianlucideicon10.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidianlucideicon0.$$.fragment, local);
+      transition_out(obsidianlucideicon1.$$.fragment, local);
+      transition_out(obsidianlucideicon2.$$.fragment, local);
+      transition_out(obsidianlucideicon3.$$.fragment, local);
+      transition_out(obsidianlucideicon4.$$.fragment, local);
+      transition_out(obsidianlucideicon5.$$.fragment, local);
+      transition_out(obsidianlucideicon6.$$.fragment, local);
+      transition_out(obsidianlucideicon7.$$.fragment, local);
+      transition_out(obsidianlucideicon8.$$.fragment, local);
+      transition_out(obsidianlucideicon9.$$.fragment, local);
+      transition_out(obsidianlucideicon10.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(tr0);
+        detach_dev(t4);
+        detach_dev(tr1);
+        detach_dev(t9);
+        detach_dev(tr2);
+        detach_dev(t14);
+        detach_dev(tr3);
+        detach_dev(t19);
+        detach_dev(tr4);
+        detach_dev(t28);
+        detach_dev(tr5);
+        detach_dev(t33);
+        detach_dev(tr6);
+        detach_dev(t38);
+        detach_dev(tr7);
+        detach_dev(t43);
+        detach_dev(tr8);
+      }
+      destroy_component(obsidianlucideicon0);
+      destroy_component(obsidianlucideicon1);
+      destroy_component(obsidianlucideicon2);
+      destroy_component(obsidianlucideicon3);
+      destroy_component(obsidianlucideicon4);
+      destroy_component(obsidianlucideicon5);
+      destroy_component(obsidianlucideicon6);
+      destroy_component(obsidianlucideicon7);
+      destroy_component(obsidianlucideicon8);
+      destroy_component(obsidianlucideicon9);
+      destroy_component(obsidianlucideicon10);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block_2.name,
+    type: "if",
+    source: "(16:2) {#if folder && !isThisDevice}",
+    ctx
+  });
+  return block2;
+}
+function create_if_block_13(ctx) {
+  let button0;
+  let obsidianlucideicon0;
+  let t0;
+  let span0;
+  let t2;
+  let button1;
+  let obsidianlucideicon1;
+  let t3;
+  let span1;
+  let current;
+  let mounted;
+  let dispose;
+  obsidianlucideicon0 = new obsidian_lucide_icon_default({ props: { name: "pause" }, $$inline: true });
+  obsidianlucideicon1 = new obsidian_lucide_icon_default({
+    props: { name: "pencil" },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      button0 = element("button");
+      create_component(obsidianlucideicon0.$$.fragment);
+      t0 = space();
+      span0 = element("span");
+      span0.textContent = "Pause";
+      t2 = space();
+      button1 = element("button");
+      create_component(obsidianlucideicon1.$$.fragment);
+      t3 = space();
+      span1 = element("span");
+      span1.textContent = "Edit";
+      add_location(span0, file6, 335, 4, 6515);
+      add_location(button0, file6, 329, 3, 6377);
+      add_location(span1, file6, 343, 4, 6689);
+      add_location(button1, file6, 337, 3, 6550);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, button0, anchor);
+      mount_component(obsidianlucideicon0, button0, null);
+      append_dev(button0, t0);
+      append_dev(button0, span0);
+      insert_dev(target, t2, anchor);
+      insert_dev(target, button1, anchor);
+      mount_component(obsidianlucideicon1, button1, null);
+      append_dev(button1, t3);
+      append_dev(button1, span1);
+      current = true;
+      if (!mounted) {
+        dispose = [
+          listen_dev(
+            button0,
+            "click",
+            /*click_handler_6*/
+            ctx[11],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button1,
+            "click",
+            /*click_handler_7*/
+            ctx[12],
+            false,
+            false,
+            false,
+            false
+          )
+        ];
+        mounted = true;
+      }
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidianlucideicon0.$$.fragment, local);
+      transition_in(obsidianlucideicon1.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidianlucideicon0.$$.fragment, local);
+      transition_out(obsidianlucideicon1.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(button0);
+        detach_dev(t2);
+        detach_dev(button1);
+      }
+      destroy_component(obsidianlucideicon0);
+      destroy_component(obsidianlucideicon1);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block_13.name,
+    type: "if",
+    source: "(326:36) ",
+    ctx
+  });
+  return block2;
+}
+function create_if_block6(ctx) {
+  let button0;
+  let obsidianlucideicon0;
+  let t0;
+  let span0;
+  let t2;
+  let button1;
+  let obsidianlucideicon1;
+  let t3;
+  let span1;
+  let t5;
+  let button2;
+  let obsidianlucideicon2;
+  let t6;
+  let span2;
+  let t8;
+  let button3;
+  let obsidianlucideicon3;
+  let t9;
+  let span3;
+  let current;
+  let mounted;
+  let dispose;
+  obsidianlucideicon0 = new obsidian_lucide_icon_default({ props: { name: "pause" }, $$inline: true });
+  obsidianlucideicon1 = new obsidian_lucide_icon_default({
+    props: { name: "history" },
+    $$inline: true
+  });
+  obsidianlucideicon2 = new obsidian_lucide_icon_default({
+    props: { name: "refresh-cw" },
+    $$inline: true
+  });
+  obsidianlucideicon3 = new obsidian_lucide_icon_default({
+    props: { name: "pencil" },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      button0 = element("button");
+      create_component(obsidianlucideicon0.$$.fragment);
+      t0 = space();
+      span0 = element("span");
+      span0.textContent = "Pause";
+      t2 = space();
+      button1 = element("button");
+      create_component(obsidianlucideicon1.$$.fragment);
+      t3 = space();
+      span1 = element("span");
+      span1.textContent = "Versions";
+      t5 = space();
+      button2 = element("button");
+      create_component(obsidianlucideicon2.$$.fragment);
+      t6 = space();
+      span2 = element("span");
+      span2.textContent = "Rescan";
+      t8 = space();
+      button3 = element("button");
+      create_component(obsidianlucideicon3.$$.fragment);
+      t9 = space();
+      span3 = element("span");
+      span3.textContent = "Edit";
+      add_location(span0, file6, 302, 4, 5775);
+      add_location(button0, file6, 296, 3, 5637);
+      add_location(span1, file6, 310, 4, 5950);
+      add_location(button1, file6, 304, 3, 5810);
+      add_location(span2, file6, 318, 4, 6131);
+      add_location(button2, file6, 312, 3, 5988);
+      add_location(span3, file6, 326, 4, 6306);
+      add_location(button3, file6, 320, 3, 6167);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, button0, anchor);
+      mount_component(obsidianlucideicon0, button0, null);
+      append_dev(button0, t0);
+      append_dev(button0, span0);
+      insert_dev(target, t2, anchor);
+      insert_dev(target, button1, anchor);
+      mount_component(obsidianlucideicon1, button1, null);
+      append_dev(button1, t3);
+      append_dev(button1, span1);
+      insert_dev(target, t5, anchor);
+      insert_dev(target, button2, anchor);
+      mount_component(obsidianlucideicon2, button2, null);
+      append_dev(button2, t6);
+      append_dev(button2, span2);
+      insert_dev(target, t8, anchor);
+      insert_dev(target, button3, anchor);
+      mount_component(obsidianlucideicon3, button3, null);
+      append_dev(button3, t9);
+      append_dev(button3, span3);
+      current = true;
+      if (!mounted) {
+        dispose = [
+          listen_dev(
+            button0,
+            "click",
+            /*click_handler_2*/
+            ctx[7],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button1,
+            "click",
+            /*click_handler_3*/
+            ctx[8],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button2,
+            "click",
+            /*click_handler_4*/
+            ctx[9],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button3,
+            "click",
+            /*click_handler_5*/
+            ctx[10],
+            false,
+            false,
+            false,
+            false
+          )
+        ];
+        mounted = true;
+      }
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidianlucideicon0.$$.fragment, local);
+      transition_in(obsidianlucideicon1.$$.fragment, local);
+      transition_in(obsidianlucideicon2.$$.fragment, local);
+      transition_in(obsidianlucideicon3.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidianlucideicon0.$$.fragment, local);
+      transition_out(obsidianlucideicon1.$$.fragment, local);
+      transition_out(obsidianlucideicon2.$$.fragment, local);
+      transition_out(obsidianlucideicon3.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(button0);
+        detach_dev(t2);
+        detach_dev(button1);
+        detach_dev(t5);
+        detach_dev(button2);
+        detach_dev(t8);
+        detach_dev(button3);
+      }
+      destroy_component(obsidianlucideicon0);
+      destroy_component(obsidianlucideicon1);
+      destroy_component(obsidianlucideicon2);
+      destroy_component(obsidianlucideicon3);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block6.name,
+    type: "if",
+    source: "(293:2) {#if folder && !isThisDevice}",
+    ctx
+  });
+  return block2;
+}
+function fallback_block(ctx) {
+  let current_block_type_index;
+  let if_block;
+  let if_block_anchor;
+  let current;
+  const if_block_creators = [create_if_block6, create_if_block_13];
+  const if_blocks = [];
+  function select_block_type_1(ctx2, dirty) {
+    if (
+      /*folder*/
+      ctx2[0] && !/*isThisDevice*/
+      ctx2[2]
+    ) return 0;
+    if (
+      /*device*/
+      ctx2[1] && !/*isThisDevice*/
+      ctx2[2]
+    ) return 1;
+    return -1;
+  }
+  if (~(current_block_type_index = select_block_type_1(ctx, -1))) {
+    if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  }
+  const block2 = {
+    c: function create() {
+      if (if_block) if_block.c();
+      if_block_anchor = empty();
+    },
+    m: function mount(target, anchor) {
+      if (~current_block_type_index) {
+        if_blocks[current_block_type_index].m(target, anchor);
+      }
+      insert_dev(target, if_block_anchor, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, dirty) {
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type_1(ctx2, dirty);
+      if (current_block_type_index !== previous_block_index) {
+        if (if_block) {
+          group_outros();
+          transition_out(if_blocks[previous_block_index], 1, 1, () => {
+            if_blocks[previous_block_index] = null;
+          });
+          check_outros();
+        }
+        if (~current_block_type_index) {
+          if_block = if_blocks[current_block_type_index];
+          if (!if_block) {
+            if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+            if_block.c();
+          } else {
+          }
+          transition_in(if_block, 1);
+          if_block.m(if_block_anchor.parentNode, if_block_anchor);
+        } else {
+          if_block = null;
+        }
+      }
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(if_block);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(if_block_anchor);
+      }
+      if (~current_block_type_index) {
+        if_blocks[current_block_type_index].d(detaching);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: fallback_block.name,
+    type: "fallback",
+    source: "(292:36)    ",
+    ctx
+  });
+  return block2;
+}
+function create_fragment9(ctx) {
+  let details;
+  let summary;
+  let t0;
+  let table;
+  let current_block_type_index;
+  let if_block;
+  let t1;
+  let current;
+  const title_slot_template = (
+    /*#slots*/
+    ctx[4].title
+  );
+  const title_slot = create_slot(
+    title_slot_template,
+    ctx,
+    /*$$scope*/
+    ctx[3],
+    get_title_slot_context
+  );
+  const title_slot_or_fallback = title_slot || fallback_block_1(ctx);
+  const if_block_creators = [create_if_block_2, create_if_block_3, create_if_block_4];
+  const if_blocks = [];
+  function select_block_type(ctx2, dirty) {
+    if (
+      /*folder*/
+      ctx2[0] && !/*isThisDevice*/
+      ctx2[2]
+    ) return 0;
+    if (
+      /*device*/
+      ctx2[1] && !/*isThisDevice*/
+      ctx2[2]
+    ) return 1;
+    if (
+      /*isThisDevice*/
+      ctx2[2] && /*device*/
+      ctx2[1]
+    ) return 2;
+    return -1;
+  }
+  if (~(current_block_type_index = select_block_type(ctx, -1))) {
+    if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  }
+  const footer_slot_template = (
+    /*#slots*/
+    ctx[4].footer
+  );
+  const footer_slot = create_slot(
+    footer_slot_template,
+    ctx,
+    /*$$scope*/
+    ctx[3],
+    get_footer_slot_context
+  );
+  const footer_slot_or_fallback = footer_slot || fallback_block(ctx);
+  const block2 = {
+    c: function create() {
+      details = element("details");
+      summary = element("summary");
+      if (title_slot_or_fallback) title_slot_or_fallback.c();
+      t0 = space();
+      table = element("table");
+      if (if_block) if_block.c();
+      t1 = space();
+      if (footer_slot_or_fallback) footer_slot_or_fallback.c();
+      attr_dev(summary, "class", "svelte-8fgumz");
+      add_location(summary, file6, 11, 1, 234);
+      attr_dev(table, "class", "svelte-8fgumz");
+      add_location(table, file6, 17, 1, 384);
+      attr_dev(details, "class", "svelte-8fgumz");
+      add_location(details, file6, 10, 0, 223);
+    },
+    l: function claim(nodes) {
+      throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, details, anchor);
+      append_dev(details, summary);
+      if (title_slot_or_fallback) {
+        title_slot_or_fallback.m(summary, null);
+      }
+      append_dev(details, t0);
+      append_dev(details, table);
+      if (~current_block_type_index) {
+        if_blocks[current_block_type_index].m(table, null);
+      }
+      append_dev(details, t1);
+      if (footer_slot_or_fallback) {
+        footer_slot_or_fallback.m(details, null);
+      }
+      current = true;
+    },
+    p: function update2(ctx2, [dirty]) {
+      if (title_slot) {
+        if (title_slot.p && (!current || dirty & /*$$scope*/
+        8)) {
+          update_slot_base(
+            title_slot,
+            title_slot_template,
+            ctx2,
+            /*$$scope*/
+            ctx2[3],
+            !current ? get_all_dirty_from_scope(
+              /*$$scope*/
+              ctx2[3]
+            ) : get_slot_changes(
+              title_slot_template,
+              /*$$scope*/
+              ctx2[3],
+              dirty,
+              get_title_slot_changes
+            ),
+            get_title_slot_context
+          );
+        }
+      } else {
+        if (title_slot_or_fallback && title_slot_or_fallback.p && (!current || dirty & /*device*/
+        2)) {
+          title_slot_or_fallback.p(ctx2, !current ? -1 : dirty);
+        }
+      }
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type(ctx2, dirty);
+      if (current_block_type_index === previous_block_index) {
+        if (~current_block_type_index) {
+          if_blocks[current_block_type_index].p(ctx2, dirty);
+        }
+      } else {
+        if (if_block) {
+          group_outros();
+          transition_out(if_blocks[previous_block_index], 1, 1, () => {
+            if_blocks[previous_block_index] = null;
+          });
+          check_outros();
+        }
+        if (~current_block_type_index) {
+          if_block = if_blocks[current_block_type_index];
+          if (!if_block) {
+            if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+            if_block.c();
+          } else {
+            if_block.p(ctx2, dirty);
+          }
+          transition_in(if_block, 1);
+          if_block.m(table, null);
+        } else {
+          if_block = null;
+        }
+      }
+      if (footer_slot) {
+        if (footer_slot.p && (!current || dirty & /*$$scope*/
+        8)) {
+          update_slot_base(
+            footer_slot,
+            footer_slot_template,
+            ctx2,
+            /*$$scope*/
+            ctx2[3],
+            !current ? get_all_dirty_from_scope(
+              /*$$scope*/
+              ctx2[3]
+            ) : get_slot_changes(
+              footer_slot_template,
+              /*$$scope*/
+              ctx2[3],
+              dirty,
+              get_footer_slot_changes
+            ),
+            get_footer_slot_context
+          );
+        }
+      } else {
+        if (footer_slot_or_fallback && footer_slot_or_fallback.p && (!current || dirty & /*folder, isThisDevice, device*/
+        7)) {
+          footer_slot_or_fallback.p(ctx2, !current ? -1 : dirty);
+        }
+      }
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(title_slot_or_fallback, local);
+      transition_in(if_block);
+      transition_in(footer_slot_or_fallback, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(title_slot_or_fallback, local);
+      transition_out(if_block);
+      transition_out(footer_slot_or_fallback, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(details);
+      }
+      if (title_slot_or_fallback) title_slot_or_fallback.d(detaching);
+      if (~current_block_type_index) {
+        if_blocks[current_block_type_index].d();
+      }
+      if (footer_slot_or_fallback) footer_slot_or_fallback.d(detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment9.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+var func = (device) => device.deviceID.slice(0, 7);
+function instance9($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("Configuration_item", slots, ["title", "footer"]);
+  let { folder = void 0 } = $$props;
+  let { device = void 0 } = $$props;
+  let { isThisDevice = false } = $$props;
+  const writable_props = ["folder", "device", "isThisDevice"];
+  Object.keys($$props).forEach((key) => {
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$" && key !== "slot") console.warn(`<Configuration_item> was created with unknown prop '${key}'`);
+  });
+  const click_handler = () => {
+    new import_obsidian16.Notice("Not implemented yet!");
+  };
+  const click_handler_1 = () => new import_obsidian16.Notice("not implement yet !");
+  const click_handler_2 = async (event) => {
+    new import_obsidian16.Notice("Not implemented yet!");
+  };
+  const click_handler_3 = async (event) => {
+    new import_obsidian16.Notice("Not implemented yet!");
+  };
+  const click_handler_4 = async (event) => {
+    new import_obsidian16.Notice("Not implemented yet!");
+  };
+  const click_handler_5 = async (event) => {
+    new import_obsidian16.Notice("Not implemented yet!");
+  };
+  const click_handler_6 = async (event) => {
+    new import_obsidian16.Notice("Not implemented yet!");
+  };
+  const click_handler_7 = async (event) => {
+    new import_obsidian16.Notice("Not implemented yet!");
+  };
+  $$self.$$set = ($$props2) => {
+    if ("folder" in $$props2) $$invalidate(0, folder = $$props2.folder);
+    if ("device" in $$props2) $$invalidate(1, device = $$props2.device);
+    if ("isThisDevice" in $$props2) $$invalidate(2, isThisDevice = $$props2.isThisDevice);
+    if ("$$scope" in $$props2) $$invalidate(3, $$scope = $$props2.$$scope);
+  };
+  $$self.$capture_state = () => ({
+    Notice: import_obsidian16.Notice,
+    ObsidianLucideIcon: obsidian_lucide_icon_default,
+    folder,
+    device,
+    isThisDevice
+  });
+  $$self.$inject_state = ($$props2) => {
+    if ("folder" in $$props2) $$invalidate(0, folder = $$props2.folder);
+    if ("device" in $$props2) $$invalidate(1, device = $$props2.device);
+    if ("isThisDevice" in $$props2) $$invalidate(2, isThisDevice = $$props2.isThisDevice);
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  return [
+    folder,
+    device,
+    isThisDevice,
+    $$scope,
+    slots,
+    click_handler,
+    click_handler_1,
+    click_handler_2,
+    click_handler_3,
+    click_handler_4,
+    click_handler_5,
+    click_handler_6,
+    click_handler_7
+  ];
+}
+var Configuration_item = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(this, options2, instance9, create_fragment9, safe_not_equal, { folder: 0, device: 1, isThisDevice: 2 }, add_css7);
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "Configuration_item",
+      options: options2,
+      id: create_fragment9.name
+    });
+  }
+  get folder() {
+    throw new Error("<Configuration_item>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set folder(value) {
+    throw new Error("<Configuration_item>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get device() {
+    throw new Error("<Configuration_item>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set device(value) {
+    throw new Error("<Configuration_item>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get isThisDevice() {
+    throw new Error("<Configuration_item>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set isThisDevice(value) {
+    throw new Error("<Configuration_item>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var configuration_item_default = Configuration_item;
+
+// src/components/folder_item.svelte
+var import_obsidian17 = require("obsidian");
+var file7 = "src/components/folder_item.svelte";
+function add_css8(target) {
+  append_styles(target, "svelte-13pw3b3", ".footer.svelte-13pw3b3.svelte-13pw3b3{display:flex;justify-content:flex-end;gap:0.5rem;margin:1em 0 0 0}.footer.svelte-13pw3b3 button.svelte-13pw3b3{gap:0.5rem}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZm9sZGVyX2l0ZW0uc3ZlbHRlIiwibWFwcGluZ3MiOiJBQWdFQyxxQ0FBUSxDQUNQLE9BQU8sQ0FBRSxJQUFJLENBQ2IsZUFBZSxDQUFFLFFBQVEsQ0FDekIsR0FBRyxDQUFFLE1BQU0sQ0FDWCxNQUFNLENBQUUsR0FBRyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FDakIsQ0FDQSxzQkFBTyxDQUFDLHFCQUFPLENBQ2QsR0FBRyxDQUFFLE1BQ04iLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiZm9sZGVyX2l0ZW0uc3ZlbHRlIl19 */");
+}
+function create_title_slot(ctx) {
+  let obsidianlucideicon;
+  let t0;
+  let span0;
+  let t1_value = (
+    /*folder*/
+    ctx[0].label + ""
+  );
+  let t1;
+  let t2;
+  let span1;
+  let current;
+  obsidianlucideicon = new obsidian_lucide_icon_default({
+    props: { name: "folder" },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      create_component(obsidianlucideicon.$$.fragment);
+      t0 = space();
+      span0 = element("span");
+      t1 = text(t1_value);
+      t2 = space();
+      span1 = element("span");
+      span1.textContent = "Unshared";
+      add_location(span0, file7, 23, 2, 760);
+      set_style(span1, "flex", "1 0 auto");
+      set_style(span1, "text-align", "end");
+      add_location(span1, file7, 24, 2, 790);
+    },
+    m: function mount(target, anchor) {
+      mount_component(obsidianlucideicon, target, anchor);
+      insert_dev(target, t0, anchor);
+      insert_dev(target, span0, anchor);
+      append_dev(span0, t1);
+      insert_dev(target, t2, anchor);
+      insert_dev(target, span1, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, dirty) {
+      if ((!current || dirty & /*folder*/
+      1) && t1_value !== (t1_value = /*folder*/
+      ctx2[0].label + "")) set_data_dev(t1, t1_value);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidianlucideicon.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidianlucideicon.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(t0);
+        detach_dev(span0);
+        detach_dev(t2);
+        detach_dev(span1);
+      }
+      destroy_component(obsidianlucideicon, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_title_slot.name,
+    type: "slot",
+    source: '(20:1) <svelte:fragment slot=\\"title\\">',
+    ctx
+  });
+  return block2;
+}
+function create_footer_slot(ctx) {
+  let div;
+  let button0;
+  let obsidianlucideicon0;
+  let t0;
+  let span0;
+  let t2;
+  let button1;
+  let obsidianlucideicon1;
+  let t3;
+  let span1;
+  let t5;
+  let button2;
+  let obsidianlucideicon2;
+  let t6;
+  let span2;
+  let t8;
+  let button3;
+  let obsidianlucideicon3;
+  let t9;
+  let span3;
+  let current;
+  let mounted;
+  let dispose;
+  obsidianlucideicon0 = new obsidian_lucide_icon_default({ props: { name: "pause" }, $$inline: true });
+  obsidianlucideicon1 = new obsidian_lucide_icon_default({
+    props: { name: "history" },
+    $$inline: true
+  });
+  obsidianlucideicon2 = new obsidian_lucide_icon_default({
+    props: { name: "refresh-cw" },
+    $$inline: true
+  });
+  obsidianlucideicon3 = new obsidian_lucide_icon_default({
+    props: { name: "pencil" },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      div = element("div");
+      button0 = element("button");
+      create_component(obsidianlucideicon0.$$.fragment);
+      t0 = space();
+      span0 = element("span");
+      span0.textContent = "Pause";
+      t2 = space();
+      button1 = element("button");
+      create_component(obsidianlucideicon1.$$.fragment);
+      t3 = space();
+      span1 = element("span");
+      span1.textContent = "Versions";
+      t5 = space();
+      button2 = element("button");
+      create_component(obsidianlucideicon2.$$.fragment);
+      t6 = space();
+      span2 = element("span");
+      span2.textContent = "Rescan";
+      t8 = space();
+      button3 = element("button");
+      create_component(obsidianlucideicon3.$$.fragment);
+      t9 = space();
+      span3 = element("span");
+      span3.textContent = "Edit";
+      add_location(span0, file7, 34, 3, 1044);
+      attr_dev(button0, "class", "svelte-13pw3b3");
+      add_location(button0, file7, 28, 2, 912);
+      add_location(span1, file7, 42, 3, 1211);
+      attr_dev(button1, "class", "svelte-13pw3b3");
+      add_location(button1, file7, 36, 2, 1077);
+      add_location(span2, file7, 50, 3, 1384);
+      attr_dev(button2, "class", "svelte-13pw3b3");
+      add_location(button2, file7, 44, 2, 1247);
+      add_location(span3, file7, 58, 3, 1551);
+      attr_dev(button3, "class", "svelte-13pw3b3");
+      add_location(button3, file7, 52, 2, 1418);
+      attr_dev(div, "slot", "footer");
+      attr_dev(div, "class", "footer svelte-13pw3b3");
+      add_location(div, file7, 27, 1, 875);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+      append_dev(div, button0);
+      mount_component(obsidianlucideicon0, button0, null);
+      append_dev(button0, t0);
+      append_dev(button0, span0);
+      append_dev(div, t2);
+      append_dev(div, button1);
+      mount_component(obsidianlucideicon1, button1, null);
+      append_dev(button1, t3);
+      append_dev(button1, span1);
+      append_dev(div, t5);
+      append_dev(div, button2);
+      mount_component(obsidianlucideicon2, button2, null);
+      append_dev(button2, t6);
+      append_dev(button2, span2);
+      append_dev(div, t8);
+      append_dev(div, button3);
+      mount_component(obsidianlucideicon3, button3, null);
+      append_dev(button3, t9);
+      append_dev(button3, span3);
+      current = true;
+      if (!mounted) {
+        dispose = [
+          listen_dev(
+            button0,
+            "click",
+            /*click_handler*/
+            ctx[1],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button1,
+            "click",
+            /*click_handler_1*/
+            ctx[2],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button2,
+            "click",
+            /*click_handler_2*/
+            ctx[3],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button3,
+            "click",
+            /*click_handler_3*/
+            ctx[4],
+            false,
+            false,
+            false,
+            false
+          )
+        ];
+        mounted = true;
+      }
+    },
+    p: noop,
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidianlucideicon0.$$.fragment, local);
+      transition_in(obsidianlucideicon1.$$.fragment, local);
+      transition_in(obsidianlucideicon2.$$.fragment, local);
+      transition_in(obsidianlucideicon3.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidianlucideicon0.$$.fragment, local);
+      transition_out(obsidianlucideicon1.$$.fragment, local);
+      transition_out(obsidianlucideicon2.$$.fragment, local);
+      transition_out(obsidianlucideicon3.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div);
+      }
+      destroy_component(obsidianlucideicon0);
+      destroy_component(obsidianlucideicon1);
+      destroy_component(obsidianlucideicon2);
+      destroy_component(obsidianlucideicon3);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_footer_slot.name,
+    type: "slot",
+    source: "(26:1) ",
+    ctx
+  });
+  return block2;
+}
+function create_fragment10(ctx) {
+  let configurationitem;
+  let current;
+  configurationitem = new configuration_item_default({
+    props: {
+      folder: (
+        /*folder*/
+        ctx[0]
+      ),
+      device: void 0,
+      $$slots: {
+        footer: [create_footer_slot],
+        title: [create_title_slot]
+      },
+      $$scope: { ctx }
+    },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      create_component(configurationitem.$$.fragment);
+    },
+    l: function claim(nodes) {
+      throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      mount_component(configurationitem, target, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, [dirty]) {
+      const configurationitem_changes = {};
+      if (dirty & /*folder*/
+      1) configurationitem_changes.folder = /*folder*/
+      ctx2[0];
+      if (dirty & /*$$scope, folder*/
+      33) {
+        configurationitem_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      configurationitem.$set(configurationitem_changes);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(configurationitem.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(configurationitem.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      destroy_component(configurationitem, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment10.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+function instance10($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("Folder_item", slots, []);
+  let { folder = {
+    id: "folder ID",
+    label: "folder label",
+    path: "folder path",
+    type: "sendreceive",
+    devices: [
+      {
+        deviceID: "device 1",
+        encryptionPassword: "",
+        introducedBy: ""
+      },
+      {
+        deviceID: "device 2",
+        encryptionPassword: "",
+        introducedBy: ""
+      }
+    ],
+    filesystemType: "filesystem type",
+    maxConflicts: 0
+  } } = $$props;
+  const writable_props = ["folder"];
+  Object.keys($$props).forEach((key) => {
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$" && key !== "slot") console.warn(`<Folder_item> was created with unknown prop '${key}'`);
+  });
+  const click_handler = async (event) => {
+    new import_obsidian17.Notice("Not implemented yet!");
+  };
+  const click_handler_1 = async (event) => {
+    new import_obsidian17.Notice("Not implemented yet!");
+  };
+  const click_handler_2 = async (event) => {
+    new import_obsidian17.Notice("Not implemented yet!");
+  };
+  const click_handler_3 = async (event) => {
+    new import_obsidian17.Notice("Not implemented yet!");
+  };
+  $$self.$$set = ($$props2) => {
+    if ("folder" in $$props2) $$invalidate(0, folder = $$props2.folder);
+  };
+  $$self.$capture_state = () => ({
+    Notice: import_obsidian17.Notice,
+    ConfigurationItem: configuration_item_default,
+    ObsidianLucideIcon: obsidian_lucide_icon_default,
+    folder
+  });
+  $$self.$inject_state = ($$props2) => {
+    if ("folder" in $$props2) $$invalidate(0, folder = $$props2.folder);
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  return [folder, click_handler, click_handler_1, click_handler_2, click_handler_3];
+}
+var Folder_item = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(this, options2, instance10, create_fragment10, safe_not_equal, { folder: 0 }, add_css8);
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "Folder_item",
+      options: options2,
+      id: create_fragment10.name
+    });
+  }
+  get folder() {
+    throw new Error("<Folder_item>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set folder(value) {
+    throw new Error("<Folder_item>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var folder_item_default = Folder_item;
+
+// src/components/remote_item.svelte
+var import_obsidian18 = require("obsidian");
+var file8 = "src/components/remote_item.svelte";
+function add_css9(target) {
+  append_styles(target, "svelte-13pw3b3", ".footer.svelte-13pw3b3.svelte-13pw3b3{display:flex;justify-content:flex-end;gap:0.5rem;margin:1em 0 0 0}.footer.svelte-13pw3b3 button.svelte-13pw3b3{gap:0.5rem}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmVtb3RlX2l0ZW0uc3ZlbHRlIiwibWFwcGluZ3MiOiJBQW1EQyxxQ0FBUSxDQUNQLE9BQU8sQ0FBRSxJQUFJLENBQ2IsZUFBZSxDQUFFLFFBQVEsQ0FDekIsR0FBRyxDQUFFLE1BQU0sQ0FDWCxNQUFNLENBQUUsR0FBRyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FDakIsQ0FDQSxzQkFBTyxDQUFDLHFCQUFPLENBQ2QsR0FBRyxDQUFFLE1BQ04iLCJuYW1lcyI6W10sInNvdXJjZXMiOlsicmVtb3RlX2l0ZW0uc3ZlbHRlIl19 */");
+}
+function create_title_slot2(ctx) {
+  var _a;
+  let div0;
+  let obsidianlucideicon0;
+  let t0;
+  let span0;
+  let t1_value = (
+    /*device*/
+    ((_a = ctx[0].name) != null ? _a : (
+      /*device*/
+      ctx[0].deviceID
+    )) + ""
+  );
+  let t1;
+  let t2;
+  let div1;
+  let span1;
+  let t4;
+  let obsidianlucideicon1;
+  let current;
+  obsidianlucideicon0 = new obsidian_lucide_icon_default({
+    props: { name: "hard-drive" },
+    $$inline: true
+  });
+  obsidianlucideicon1 = new obsidian_lucide_icon_default({
+    props: { name: "wifi-off" },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      div0 = element("div");
+      create_component(obsidianlucideicon0.$$.fragment);
+      t0 = space();
+      span0 = element("span");
+      t1 = text(t1_value);
+      t2 = space();
+      div1 = element("div");
+      span1 = element("span");
+      span1.textContent = "Disconnected";
+      t4 = space();
+      create_component(obsidianlucideicon1.$$.fragment);
+      add_location(span0, file8, 20, 3, 631);
+      set_style(div0, "display", "flex");
+      set_style(div0, "gap", "0.5em");
+      add_location(div0, file8, 18, 2, 545);
+      add_location(span1, file8, 25, 3, 774);
+      set_style(div1, "display", "flex");
+      set_style(div1, "gap", "0.5em");
+      set_style(div1, "flex", "1 0 auto");
+      set_style(div1, "justify-content", "end");
+      add_location(div1, file8, 22, 2, 688);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div0, anchor);
+      mount_component(obsidianlucideicon0, div0, null);
+      append_dev(div0, t0);
+      append_dev(div0, span0);
+      append_dev(span0, t1);
+      insert_dev(target, t2, anchor);
+      insert_dev(target, div1, anchor);
+      append_dev(div1, span1);
+      append_dev(div1, t4);
+      mount_component(obsidianlucideicon1, div1, null);
+      current = true;
+    },
+    p: function update2(ctx2, dirty) {
+      var _a2;
+      if ((!current || dirty & /*device*/
+      1) && t1_value !== (t1_value = /*device*/
+      ((_a2 = ctx2[0].name) != null ? _a2 : (
+        /*device*/
+        ctx2[0].deviceID
+      )) + "")) set_data_dev(t1, t1_value);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidianlucideicon0.$$.fragment, local);
+      transition_in(obsidianlucideicon1.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidianlucideicon0.$$.fragment, local);
+      transition_out(obsidianlucideicon1.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div0);
+        detach_dev(t2);
+        detach_dev(div1);
+      }
+      destroy_component(obsidianlucideicon0);
+      destroy_component(obsidianlucideicon1);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_title_slot2.name,
+    type: "slot",
+    source: '(16:1) <svelte:fragment slot=\\"title\\">',
+    ctx
+  });
+  return block2;
+}
+function create_footer_slot2(ctx) {
+  let div;
+  let button0;
+  let obsidianlucideicon0;
+  let t0;
+  let span0;
+  let t2;
+  let button1;
+  let obsidianlucideicon1;
+  let t3;
+  let span1;
+  let current;
+  let mounted;
+  let dispose;
+  obsidianlucideicon0 = new obsidian_lucide_icon_default({ props: { name: "pause" }, $$inline: true });
+  obsidianlucideicon1 = new obsidian_lucide_icon_default({
+    props: { name: "pencil" },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      div = element("div");
+      button0 = element("button");
+      create_component(obsidianlucideicon0.$$.fragment);
+      t0 = space();
+      span0 = element("span");
+      span0.textContent = "Pause";
+      t2 = space();
+      button1 = element("button");
+      create_component(obsidianlucideicon1.$$.fragment);
+      t3 = space();
+      span1 = element("span");
+      span1.textContent = "Edit";
+      add_location(span0, file8, 37, 3, 1042);
+      attr_dev(button0, "class", "svelte-13pw3b3");
+      add_location(button0, file8, 31, 2, 910);
+      add_location(span1, file8, 45, 3, 1208);
+      attr_dev(button1, "class", "svelte-13pw3b3");
+      add_location(button1, file8, 39, 2, 1075);
+      attr_dev(div, "slot", "footer");
+      attr_dev(div, "class", "footer svelte-13pw3b3");
+      add_location(div, file8, 30, 1, 873);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+      append_dev(div, button0);
+      mount_component(obsidianlucideicon0, button0, null);
+      append_dev(button0, t0);
+      append_dev(button0, span0);
+      append_dev(div, t2);
+      append_dev(div, button1);
+      mount_component(obsidianlucideicon1, button1, null);
+      append_dev(button1, t3);
+      append_dev(button1, span1);
+      current = true;
+      if (!mounted) {
+        dispose = [
+          listen_dev(
+            button0,
+            "click",
+            /*click_handler*/
+            ctx[1],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button1,
+            "click",
+            /*click_handler_1*/
+            ctx[2],
+            false,
+            false,
+            false,
+            false
+          )
+        ];
+        mounted = true;
+      }
+    },
+    p: noop,
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidianlucideicon0.$$.fragment, local);
+      transition_in(obsidianlucideicon1.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidianlucideicon0.$$.fragment, local);
+      transition_out(obsidianlucideicon1.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div);
+      }
+      destroy_component(obsidianlucideicon0);
+      destroy_component(obsidianlucideicon1);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_footer_slot2.name,
+    type: "slot",
+    source: "(29:1) ",
+    ctx
+  });
+  return block2;
+}
+function create_fragment11(ctx) {
+  let configurationitem;
+  let current;
+  configurationitem = new configuration_item_default({
+    props: {
+      device: (
+        /*device*/
+        ctx[0]
+      ),
+      folder: void 0,
+      $$slots: {
+        footer: [create_footer_slot2],
+        title: [create_title_slot2]
+      },
+      $$scope: { ctx }
+    },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      create_component(configurationitem.$$.fragment);
+    },
+    l: function claim(nodes) {
+      throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      mount_component(configurationitem, target, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, [dirty]) {
+      const configurationitem_changes = {};
+      if (dirty & /*device*/
+      1) configurationitem_changes.device = /*device*/
+      ctx2[0];
+      if (dirty & /*$$scope, device*/
+      9) {
+        configurationitem_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      configurationitem.$set(configurationitem_changes);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(configurationitem.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(configurationitem.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      destroy_component(configurationitem, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment11.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+function instance11($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("Remote_item", slots, []);
+  let { device = {
+    address: ["dynamic"],
+    deviceID: "device ID",
+    introducedBy: "introduced by",
+    name: "device name",
+    ignoredFolders: [],
+    paused: false
+  } } = $$props;
+  const writable_props = ["device"];
+  Object.keys($$props).forEach((key) => {
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$" && key !== "slot") console.warn(`<Remote_item> was created with unknown prop '${key}'`);
+  });
+  const click_handler = async (event) => {
+    new import_obsidian18.Notice("Not implemented yet!");
+  };
+  const click_handler_1 = async (event) => {
+    new import_obsidian18.Notice("Not implemented yet!");
+  };
+  $$self.$$set = ($$props2) => {
+    if ("device" in $$props2) $$invalidate(0, device = $$props2.device);
+  };
+  $$self.$capture_state = () => ({
+    Notice: import_obsidian18.Notice,
+    ConfigurationItem: configuration_item_default,
+    ObsidianLucideIcon: obsidian_lucide_icon_default,
+    device
+  });
+  $$self.$inject_state = ($$props2) => {
+    if ("device" in $$props2) $$invalidate(0, device = $$props2.device);
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  return [device, click_handler, click_handler_1];
+}
+var Remote_item = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(this, options2, instance11, create_fragment11, safe_not_equal, { device: 0 }, add_css9);
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "Remote_item",
+      options: options2,
+      id: create_fragment11.name
+    });
+  }
+  get device() {
+    throw new Error("<Remote_item>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set device(value) {
+    throw new Error("<Remote_item>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var remote_item_default = Remote_item;
+
+// src/components/warning_message.svelte
+var file9 = "src/components/warning_message.svelte";
+function add_css10(target) {
+  append_styles(target, "svelte-15h0slv", '.close-button.svelte-15h0slv{margin-left:auto;cursor:var(--cursor);font-size:24px;line-height:20px;padding:var(--size-2-2);border-radius:var(--radius-s);color:var(--text-muted);&:before {\n			font-family: Inter, sans-serif;\n			content: "\\D7";\n			font-weight: 300;\n		};&:hover {\n			background-color: var(--background-modifier-hover);\n			color: var(--text-normal);\n		}}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoid2FybmluZ19tZXNzYWdlLnN2ZWx0ZSIsIm1hcHBpbmdzIjoiQUFtREMsNEJBQWMsQ0FDYixXQUFXLENBQUUsSUFBSSxDQUNqQixNQUFNLENBQUUsSUFBSSxRQUFRLENBQUMsQ0FJckIsU0FBUyxDQUFFLElBQUksQ0FDZixXQUFXLENBQUUsSUFBSSxDQUdqQixPQUFPLENBQUUsSUFBSSxVQUFVLENBQUMsQ0FDeEIsYUFBYSxDQUFFLElBQUksVUFBVSxDQUFDLENBQzlCLEtBQUssQ0FBRSxJQUFJLFlBQVksQ0FBQyxDQUN4QixDQUFDLE9BQU8sQ0FBQztBQUNYLEdBQUcsYUFBYSxLQUFLLENBQUMsQ0FBQyxVQUFVO0FBQ2pDLEdBQUcsU0FBUyxLQUFLO0FBQ2pCLEdBQUcsYUFBYSxHQUFHO0FBQ25CLEdBQUUsQ0FDQSxDQUFDLE1BQU0sQ0FBQztBQUNWLEdBQUcsa0JBQWtCLElBQUksMkJBQTJCLENBQUM7QUFDckQsR0FBRyxPQUFPLElBQUksYUFBYSxDQUFDO0FBQzVCLEdBQ0MiLCJuYW1lcyI6W10sInNvdXJjZXMiOlsid2FybmluZ19tZXNzYWdlLnN2ZWx0ZSJdfQ== */');
+}
+function create_if_block7(ctx) {
+  let div5;
+  let div3;
+  let div0;
+  let svg;
+  let path;
+  let line0;
+  let line1;
+  let t0;
+  let div1;
+  let t1;
+  let t2;
+  let div2;
+  let t3;
+  let div4;
+  let p;
+  let t4;
+  let mounted;
+  let dispose;
+  const block2 = {
+    c: function create() {
+      div5 = element("div");
+      div3 = element("div");
+      div0 = element("div");
+      svg = svg_element("svg");
+      path = svg_element("path");
+      line0 = svg_element("line");
+      line1 = svg_element("line");
+      t0 = space();
+      div1 = element("div");
+      t1 = text(
+        /*title*/
+        ctx[1]
+      );
+      t2 = space();
+      div2 = element("div");
+      t3 = space();
+      div4 = element("div");
+      p = element("p");
+      t4 = text(
+        /*message*/
+        ctx[2]
+      );
+      attr_dev(path, "d", "m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z");
+      add_location(path, file9, 27, 5, 569);
+      attr_dev(line0, "x1", "12");
+      attr_dev(line0, "y1", "9");
+      attr_dev(line0, "x2", "12");
+      attr_dev(line0, "y2", "13");
+      add_location(line0, file9, 30, 5, 672);
+      attr_dev(line1, "x1", "12");
+      attr_dev(line1, "y1", "17");
+      attr_dev(line1, "x2", "12.01");
+      attr_dev(line1, "y2", "17");
+      add_location(line1, file9, 31, 5, 717);
+      attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
+      attr_dev(svg, "width", "24");
+      attr_dev(svg, "height", "24");
+      attr_dev(svg, "viewBox", "0 0 24 24");
+      attr_dev(svg, "fill", "none");
+      attr_dev(svg, "stroke", "currentColor");
+      attr_dev(svg, "stroke-width", "2");
+      attr_dev(svg, "stroke-linecap", "round");
+      attr_dev(svg, "stroke-linejoin", "round");
+      attr_dev(svg, "class", "svg-icon lucide-alert-triangle");
+      add_location(svg, file9, 15, 4, 288);
+      attr_dev(div0, "class", "callout-icon");
+      add_location(div0, file9, 14, 3, 257);
+      attr_dev(div1, "class", "callout-title-inner");
+      add_location(div1, file9, 34, 3, 785);
+      attr_dev(div2, "role", "button");
+      attr_dev(div2, "tabindex", "0");
+      attr_dev(div2, "aria-roledescription", "Dismiss");
+      attr_dev(div2, "class", "close-button svelte-15h0slv");
+      add_location(div2, file9, 35, 3, 835);
+      attr_dev(div3, "class", "callout-title");
+      add_location(div3, file9, 13, 2, 226);
+      add_location(p, file9, 45, 3, 1072);
+      attr_dev(div4, "class", "callout-content");
+      add_location(div4, file9, 44, 2, 1039);
+      attr_dev(div5, "data-callout-metadata", "");
+      attr_dev(div5, "data-callout-fold", "");
+      attr_dev(div5, "data-callout", "warning");
+      attr_dev(div5, "class", "callout");
+      add_location(div5, file9, 7, 1, 123);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div5, anchor);
+      append_dev(div5, div3);
+      append_dev(div3, div0);
+      append_dev(div0, svg);
+      append_dev(svg, path);
+      append_dev(svg, line0);
+      append_dev(svg, line1);
+      append_dev(div3, t0);
+      append_dev(div3, div1);
+      append_dev(div1, t1);
+      append_dev(div3, t2);
+      append_dev(div3, div2);
+      append_dev(div5, t3);
+      append_dev(div5, div4);
+      append_dev(div4, p);
+      append_dev(p, t4);
+      if (!mounted) {
+        dispose = [
+          listen_dev(
+            div2,
+            "keypress",
+            /*keypress_handler*/
+            ctx[3],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            div2,
+            "click",
+            /*click_handler*/
+            ctx[4],
+            false,
+            false,
+            false,
+            false
+          )
+        ];
+        mounted = true;
+      }
+    },
+    p: function update2(ctx2, dirty) {
+      if (dirty & /*title*/
+      2) set_data_dev(
+        t1,
+        /*title*/
+        ctx2[1]
+      );
+      if (dirty & /*message*/
+      4) set_data_dev(
+        t4,
+        /*message*/
+        ctx2[2]
+      );
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div5);
+      }
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block7.name,
+    type: "if",
+    source: "(6:0) {#if !dismiss}",
+    ctx
+  });
+  return block2;
+}
+function create_fragment12(ctx) {
+  let if_block_anchor;
+  let if_block = !/*dismiss*/
+  ctx[0] && create_if_block7(ctx);
+  const block2 = {
+    c: function create() {
+      if (if_block) if_block.c();
+      if_block_anchor = empty();
+    },
+    l: function claim(nodes) {
+      throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      if (if_block) if_block.m(target, anchor);
+      insert_dev(target, if_block_anchor, anchor);
+    },
+    p: function update2(ctx2, [dirty]) {
+      if (!/*dismiss*/
+      ctx2[0]) {
+        if (if_block) {
+          if_block.p(ctx2, dirty);
+        } else {
+          if_block = create_if_block7(ctx2);
+          if_block.c();
+          if_block.m(if_block_anchor.parentNode, if_block_anchor);
+        }
+      } else if (if_block) {
+        if_block.d(1);
+        if_block = null;
+      }
+    },
+    i: noop,
+    o: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(if_block_anchor);
+      }
+      if (if_block) if_block.d(detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment12.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+function instance12($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("Warning_message", slots, []);
+  let { title = "Warning" } = $$props;
+  let { message } = $$props;
+  let { dismiss = false } = $$props;
+  $$self.$$.on_mount.push(function() {
+    if (message === void 0 && !("message" in $$props || $$self.$$.bound[$$self.$$.props["message"]])) {
+      console.warn("<Warning_message> was created without expected prop 'message'");
+    }
+  });
+  const writable_props = ["title", "message", "dismiss"];
+  Object.keys($$props).forEach((key) => {
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$" && key !== "slot") console.warn(`<Warning_message> was created with unknown prop '${key}'`);
+  });
+  const keypress_handler = () => $$invalidate(0, dismiss = !dismiss);
+  const click_handler = () => $$invalidate(0, dismiss = !dismiss);
+  $$self.$$set = ($$props2) => {
+    if ("title" in $$props2) $$invalidate(1, title = $$props2.title);
+    if ("message" in $$props2) $$invalidate(2, message = $$props2.message);
+    if ("dismiss" in $$props2) $$invalidate(0, dismiss = $$props2.dismiss);
+  };
+  $$self.$capture_state = () => ({ title, message, dismiss });
+  $$self.$inject_state = ($$props2) => {
+    if ("title" in $$props2) $$invalidate(1, title = $$props2.title);
+    if ("message" in $$props2) $$invalidate(2, message = $$props2.message);
+    if ("dismiss" in $$props2) $$invalidate(0, dismiss = $$props2.dismiss);
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  return [dismiss, title, message, keypress_handler, click_handler];
+}
+var Warning_message = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(this, options2, instance12, create_fragment12, safe_not_equal, { title: 1, message: 2, dismiss: 0 }, add_css10);
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "Warning_message",
+      options: options2,
+      id: create_fragment12.name
+    });
+  }
+  get title() {
+    throw new Error("<Warning_message>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set title(value) {
+    throw new Error("<Warning_message>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get message() {
+    throw new Error("<Warning_message>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set message(value) {
+    throw new Error("<Warning_message>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get dismiss() {
+    throw new Error("<Warning_message>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set dismiss(value) {
+    throw new Error("<Warning_message>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var warning_message_default = Warning_message;
+
+// src/components/configuration_table.svelte
+var { console: console_13 } = globals;
+var file10 = "src/components/configuration_table.svelte";
+function add_css11(target) {
+  append_styles(target, "svelte-f2narq", ".left.svelte-f2narq.svelte-f2narq{float:left;width:50%}.right.svelte-f2narq.svelte-f2narq{float:right;width:50%}.folder.svelte-f2narq.svelte-f2narq,.mydevice.svelte-f2narq.svelte-f2narq,.remote.svelte-f2narq.svelte-f2narq{width:100%}.controls.svelte-f2narq.svelte-f2narq{display:flex;flex-direction:row;justify-content:flex-end;margin:1em 0}.controls.svelte-f2narq button.svelte-f2narq{gap:0.5em;margin:0 0.5em}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uZmlndXJhdGlvbl90YWJsZS5zdmVsdGUiLCJtYXBwaW5ncyI6IkFBK0dDLGlDQUFNLENBQ0wsS0FBSyxDQUFFLElBQUksQ0FDWCxLQUFLLENBQUUsR0FDUixDQUNBLGtDQUFPLENBQ04sS0FBSyxDQUFFLEtBQUssQ0FDWixLQUFLLENBQUUsR0FDUixDQUNBLG1DQUFPLENBQ1AscUNBQVMsQ0FDVCxtQ0FBUSxDQUNQLEtBQUssQ0FBRSxJQUNSLENBQ0EscUNBQVUsQ0FDVCxPQUFPLENBQUUsSUFBSSxDQUNiLGNBQWMsQ0FBRSxHQUFHLENBQ25CLGVBQWUsQ0FBRSxRQUFRLENBQ3pCLE1BQU0sQ0FBRSxHQUFHLENBQUMsQ0FDYixDQUNBLHVCQUFTLENBQUMsb0JBQU8sQ0FDaEIsR0FBRyxDQUFFLEtBQUssQ0FDVixNQUFNLENBQUUsQ0FBQyxDQUFDLEtBQ1giLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiY29uZmlndXJhdGlvbl90YWJsZS5zdmVsdGUiXX0= */");
+}
+function get_each_context4(ctx, list2, i) {
+  const child_ctx = ctx.slice();
+  child_ctx[16] = list2[i];
+  return child_ctx;
+}
+function get_each_context_1(ctx, list2, i) {
+  const child_ctx = ctx.slice();
+  child_ctx[19] = list2[i];
+  return child_ctx;
+}
+function create_each_block_1(ctx) {
+  let folderitem;
+  let current;
+  folderitem = new folder_item_default({
+    props: { folder: (
+      /*folder*/
+      ctx[19]
+    ) },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      create_component(folderitem.$$.fragment);
+    },
+    m: function mount(target, anchor) {
+      mount_component(folderitem, target, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, dirty) {
+      const folderitem_changes = {};
+      if (dirty & /*folders*/
+      1) folderitem_changes.folder = /*folder*/
+      ctx2[19];
+      folderitem.$set(folderitem_changes);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(folderitem.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(folderitem.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      destroy_component(folderitem, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_each_block_1.name,
+    type: "each",
+    source: "(35:2) {#each folders as folder}",
+    ctx
+  });
+  return block2;
+}
+function create_each_block4(ctx) {
+  let remoteitem;
+  let current;
+  remoteitem = new remote_item_default({
+    props: { device: (
+      /*device*/
+      ctx[16]
+    ) },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      create_component(remoteitem.$$.fragment);
+    },
+    m: function mount(target, anchor) {
+      mount_component(remoteitem, target, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, dirty) {
+      const remoteitem_changes = {};
+      if (dirty & /*devices, thisDevice*/
+      6) remoteitem_changes.device = /*device*/
+      ctx2[16];
+      remoteitem.$set(remoteitem_changes);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(remoteitem.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(remoteitem.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      destroy_component(remoteitem, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_each_block4.name,
+    type: "each",
+    source: "(76:2) {#each devices.filter((value) => value !== thisDevice) as device}",
+    ctx
+  });
+  return block2;
+}
+function create_fragment13(ctx) {
+  let warningmessage;
+  let t0;
+  let div2;
+  let div1;
+  let h20;
+  let t1;
+  let t2_value = (
+    /*folders*/
+    ctx[0].length + ""
+  );
+  let t2;
+  let t3;
+  let t4;
+  let t5;
+  let div0;
+  let button0;
+  let obsidianlucideicon0;
+  let t6;
+  let span0;
+  let t8;
+  let button1;
+  let obsidianlucideicon1;
+  let t9;
+  let span1;
+  let t11;
+  let button2;
+  let obsidianlucideicon2;
+  let t12;
+  let span2;
+  let t14;
+  let div6;
+  let div3;
+  let h21;
+  let t16;
+  let configurationitem;
+  let t17;
+  let div5;
+  let h22;
+  let t18;
+  let t19_value = (
+    /*devices*/
+    ctx[1].filter(
+      /*func*/
+      ctx[7]
+    ).length + ""
+  );
+  let t19;
+  let t20;
+  let t21;
+  let t22;
+  let div4;
+  let button3;
+  let obsidianlucideicon3;
+  let t23;
+  let span3;
+  let t25;
+  let button4;
+  let obsidianlucideicon4;
+  let t26;
+  let span4;
+  let t28;
+  let button5;
+  let obsidianlucideicon5;
+  let t29;
+  let span5;
+  let current;
+  let mounted;
+  let dispose;
+  warningmessage = new warning_message_default({
+    props: {
+      message: "The following configuration is not fully implemented yet. Some data aren't real-time and some controls are not implemented yet. It is mainly to reproduce the Syncthing GUI and then, real-time data and controls will be added."
+    },
+    $$inline: true
+  });
+  let each_value_1 = ensure_array_like_dev(
+    /*folders*/
+    ctx[0]
+  );
+  let each_blocks_1 = [];
+  for (let i = 0; i < each_value_1.length; i += 1) {
+    each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+  }
+  const out = (i) => transition_out(each_blocks_1[i], 1, 1, () => {
+    each_blocks_1[i] = null;
+  });
+  obsidianlucideicon0 = new obsidian_lucide_icon_default({ props: { name: "pause" }, $$inline: true });
+  obsidianlucideicon1 = new obsidian_lucide_icon_default({
+    props: { name: "refresh-cw" },
+    $$inline: true
+  });
+  obsidianlucideicon2 = new obsidian_lucide_icon_default({ props: { name: "plus" }, $$inline: true });
+  configurationitem = new configuration_item_default({
+    props: {
+      isThisDevice: true,
+      device: (
+        /*thisDevice*/
+        ctx[2]
+      )
+    },
+    $$inline: true
+  });
+  let each_value = ensure_array_like_dev(
+    /*devices*/
+    ctx[1].filter(
+      /*func_1*/
+      ctx[8]
+    )
+  );
+  let each_blocks = [];
+  for (let i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block4(get_each_context4(ctx, each_value, i));
+  }
+  const out_1 = (i) => transition_out(each_blocks[i], 1, 1, () => {
+    each_blocks[i] = null;
+  });
+  obsidianlucideicon3 = new obsidian_lucide_icon_default({ props: { name: "pause" }, $$inline: true });
+  obsidianlucideicon4 = new obsidian_lucide_icon_default({ props: { name: "info" }, $$inline: true });
+  obsidianlucideicon5 = new obsidian_lucide_icon_default({ props: { name: "plus" }, $$inline: true });
+  const block2 = {
+    c: function create() {
+      create_component(warningmessage.$$.fragment);
+      t0 = space();
+      div2 = element("div");
+      div1 = element("div");
+      h20 = element("h2");
+      t1 = text("Folders (");
+      t2 = text(t2_value);
+      t3 = text(")");
+      t4 = space();
+      for (let i = 0; i < each_blocks_1.length; i += 1) {
+        each_blocks_1[i].c();
+      }
+      t5 = space();
+      div0 = element("div");
+      button0 = element("button");
+      create_component(obsidianlucideicon0.$$.fragment);
+      t6 = space();
+      span0 = element("span");
+      span0.textContent = "Pause All";
+      t8 = space();
+      button1 = element("button");
+      create_component(obsidianlucideicon1.$$.fragment);
+      t9 = space();
+      span1 = element("span");
+      span1.textContent = "Rescan All";
+      t11 = space();
+      button2 = element("button");
+      create_component(obsidianlucideicon2.$$.fragment);
+      t12 = space();
+      span2 = element("span");
+      span2.textContent = "Add Folder";
+      t14 = space();
+      div6 = element("div");
+      div3 = element("div");
+      h21 = element("h2");
+      h21.textContent = "This Device";
+      t16 = space();
+      create_component(configurationitem.$$.fragment);
+      t17 = space();
+      div5 = element("div");
+      h22 = element("h2");
+      t18 = text("Remote Devices (");
+      t19 = text(t19_value);
+      t20 = text(")");
+      t21 = space();
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        each_blocks[i].c();
+      }
+      t22 = space();
+      div4 = element("div");
+      button3 = element("button");
+      create_component(obsidianlucideicon3.$$.fragment);
+      t23 = space();
+      span3 = element("span");
+      span3.textContent = "Pause All";
+      t25 = space();
+      button4 = element("button");
+      create_component(obsidianlucideicon4.$$.fragment);
+      t26 = space();
+      span4 = element("span");
+      span4.textContent = "Recent Changes";
+      t28 = space();
+      button5 = element("button");
+      create_component(obsidianlucideicon5.$$.fragment);
+      t29 = space();
+      span5 = element("span");
+      span5.textContent = "Add Remote Device";
+      add_location(h20, file10, 36, 2, 1618);
+      add_location(span0, file10, 47, 4, 1885);
+      attr_dev(button0, "class", "svelte-f2narq");
+      add_location(button0, file10, 41, 3, 1747);
+      add_location(span1, file10, 55, 4, 2067);
+      attr_dev(button1, "class", "svelte-f2narq");
+      add_location(button1, file10, 49, 3, 1924);
+      add_location(span2, file10, 63, 4, 2244);
+      attr_dev(button2, "class", "svelte-f2narq");
+      add_location(button2, file10, 57, 3, 2107);
+      attr_dev(div0, "class", "controls svelte-f2narq");
+      add_location(div0, file10, 40, 2, 1721);
+      attr_dev(div1, "class", "folder svelte-f2narq");
+      add_location(div1, file10, 35, 1, 1595);
+      attr_dev(div2, "class", "left svelte-f2narq");
+      add_location(div2, file10, 34, 0, 1575);
+      add_location(h21, file10, 70, 2, 2351);
+      attr_dev(div3, "class", "mydevice svelte-f2narq");
+      add_location(div3, file10, 69, 1, 2326);
+      add_location(h22, file10, 74, 2, 2461);
+      add_location(span3, file10, 88, 4, 2827);
+      attr_dev(button3, "class", "svelte-f2narq");
+      add_location(button3, file10, 82, 3, 2689);
+      add_location(span4, file10, 96, 4, 3003);
+      attr_dev(button4, "class", "svelte-f2narq");
+      add_location(button4, file10, 90, 3, 2866);
+      add_location(span5, file10, 104, 4, 3184);
+      attr_dev(button5, "class", "svelte-f2narq");
+      add_location(button5, file10, 98, 3, 3047);
+      attr_dev(div4, "class", "controls svelte-f2narq");
+      add_location(div4, file10, 81, 2, 2663);
+      attr_dev(div5, "class", "remote svelte-f2narq");
+      add_location(div5, file10, 73, 1, 2438);
+      attr_dev(div6, "class", "right svelte-f2narq");
+      add_location(div6, file10, 68, 0, 2305);
+    },
+    l: function claim(nodes) {
+      throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      mount_component(warningmessage, target, anchor);
+      insert_dev(target, t0, anchor);
+      insert_dev(target, div2, anchor);
+      append_dev(div2, div1);
+      append_dev(div1, h20);
+      append_dev(h20, t1);
+      append_dev(h20, t2);
+      append_dev(h20, t3);
+      append_dev(div1, t4);
+      for (let i = 0; i < each_blocks_1.length; i += 1) {
+        if (each_blocks_1[i]) {
+          each_blocks_1[i].m(div1, null);
+        }
+      }
+      append_dev(div1, t5);
+      append_dev(div1, div0);
+      append_dev(div0, button0);
+      mount_component(obsidianlucideicon0, button0, null);
+      append_dev(button0, t6);
+      append_dev(button0, span0);
+      append_dev(div0, t8);
+      append_dev(div0, button1);
+      mount_component(obsidianlucideicon1, button1, null);
+      append_dev(button1, t9);
+      append_dev(button1, span1);
+      append_dev(div0, t11);
+      append_dev(div0, button2);
+      mount_component(obsidianlucideicon2, button2, null);
+      append_dev(button2, t12);
+      append_dev(button2, span2);
+      insert_dev(target, t14, anchor);
+      insert_dev(target, div6, anchor);
+      append_dev(div6, div3);
+      append_dev(div3, h21);
+      append_dev(div3, t16);
+      mount_component(configurationitem, div3, null);
+      append_dev(div6, t17);
+      append_dev(div6, div5);
+      append_dev(div5, h22);
+      append_dev(h22, t18);
+      append_dev(h22, t19);
+      append_dev(h22, t20);
+      append_dev(div5, t21);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        if (each_blocks[i]) {
+          each_blocks[i].m(div5, null);
+        }
+      }
+      append_dev(div5, t22);
+      append_dev(div5, div4);
+      append_dev(div4, button3);
+      mount_component(obsidianlucideicon3, button3, null);
+      append_dev(button3, t23);
+      append_dev(button3, span3);
+      append_dev(div4, t25);
+      append_dev(div4, button4);
+      mount_component(obsidianlucideicon4, button4, null);
+      append_dev(button4, t26);
+      append_dev(button4, span4);
+      append_dev(div4, t28);
+      append_dev(div4, button5);
+      mount_component(obsidianlucideicon5, button5, null);
+      append_dev(button5, t29);
+      append_dev(button5, span5);
+      current = true;
+      if (!mounted) {
+        dispose = [
+          listen_dev(
+            button0,
+            "click",
+            /*click_handler*/
+            ctx[4],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button1,
+            "click",
+            /*click_handler_1*/
+            ctx[5],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button2,
+            "click",
+            /*click_handler_2*/
+            ctx[6],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button3,
+            "click",
+            /*click_handler_3*/
+            ctx[9],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button4,
+            "click",
+            /*click_handler_4*/
+            ctx[10],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button5,
+            "click",
+            /*click_handler_5*/
+            ctx[11],
+            false,
+            false,
+            false,
+            false
+          )
+        ];
+        mounted = true;
+      }
+    },
+    p: function update2(ctx2, [dirty]) {
+      if ((!current || dirty & /*folders*/
+      1) && t2_value !== (t2_value = /*folders*/
+      ctx2[0].length + "")) set_data_dev(t2, t2_value);
+      if (dirty & /*folders*/
+      1) {
+        each_value_1 = ensure_array_like_dev(
+          /*folders*/
+          ctx2[0]
+        );
+        let i;
+        for (i = 0; i < each_value_1.length; i += 1) {
+          const child_ctx = get_each_context_1(ctx2, each_value_1, i);
+          if (each_blocks_1[i]) {
+            each_blocks_1[i].p(child_ctx, dirty);
+            transition_in(each_blocks_1[i], 1);
+          } else {
+            each_blocks_1[i] = create_each_block_1(child_ctx);
+            each_blocks_1[i].c();
+            transition_in(each_blocks_1[i], 1);
+            each_blocks_1[i].m(div1, t5);
+          }
+        }
+        group_outros();
+        for (i = each_value_1.length; i < each_blocks_1.length; i += 1) {
+          out(i);
+        }
+        check_outros();
+      }
+      const configurationitem_changes = {};
+      if (dirty & /*thisDevice*/
+      4) configurationitem_changes.device = /*thisDevice*/
+      ctx2[2];
+      configurationitem.$set(configurationitem_changes);
+      if ((!current || dirty & /*devices, thisDevice*/
+      6) && t19_value !== (t19_value = /*devices*/
+      ctx2[1].filter(
+        /*func*/
+        ctx2[7]
+      ).length + "")) set_data_dev(t19, t19_value);
+      if (dirty & /*devices, thisDevice*/
+      6) {
+        each_value = ensure_array_like_dev(
+          /*devices*/
+          ctx2[1].filter(
+            /*func_1*/
+            ctx2[8]
+          )
+        );
+        let i;
+        for (i = 0; i < each_value.length; i += 1) {
+          const child_ctx = get_each_context4(ctx2, each_value, i);
+          if (each_blocks[i]) {
+            each_blocks[i].p(child_ctx, dirty);
+            transition_in(each_blocks[i], 1);
+          } else {
+            each_blocks[i] = create_each_block4(child_ctx);
+            each_blocks[i].c();
+            transition_in(each_blocks[i], 1);
+            each_blocks[i].m(div5, t22);
+          }
+        }
+        group_outros();
+        for (i = each_value.length; i < each_blocks.length; i += 1) {
+          out_1(i);
+        }
+        check_outros();
+      }
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(warningmessage.$$.fragment, local);
+      for (let i = 0; i < each_value_1.length; i += 1) {
+        transition_in(each_blocks_1[i]);
+      }
+      transition_in(obsidianlucideicon0.$$.fragment, local);
+      transition_in(obsidianlucideicon1.$$.fragment, local);
+      transition_in(obsidianlucideicon2.$$.fragment, local);
+      transition_in(configurationitem.$$.fragment, local);
+      for (let i = 0; i < each_value.length; i += 1) {
+        transition_in(each_blocks[i]);
+      }
+      transition_in(obsidianlucideicon3.$$.fragment, local);
+      transition_in(obsidianlucideicon4.$$.fragment, local);
+      transition_in(obsidianlucideicon5.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(warningmessage.$$.fragment, local);
+      each_blocks_1 = each_blocks_1.filter(Boolean);
+      for (let i = 0; i < each_blocks_1.length; i += 1) {
+        transition_out(each_blocks_1[i]);
+      }
+      transition_out(obsidianlucideicon0.$$.fragment, local);
+      transition_out(obsidianlucideicon1.$$.fragment, local);
+      transition_out(obsidianlucideicon2.$$.fragment, local);
+      transition_out(configurationitem.$$.fragment, local);
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        transition_out(each_blocks[i]);
+      }
+      transition_out(obsidianlucideicon3.$$.fragment, local);
+      transition_out(obsidianlucideicon4.$$.fragment, local);
+      transition_out(obsidianlucideicon5.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(t0);
+        detach_dev(div2);
+        detach_dev(t14);
+        detach_dev(div6);
+      }
+      destroy_component(warningmessage, detaching);
+      destroy_each(each_blocks_1, detaching);
+      destroy_component(obsidianlucideicon0);
+      destroy_component(obsidianlucideicon1);
+      destroy_component(obsidianlucideicon2);
+      destroy_component(configurationitem);
+      destroy_each(each_blocks, detaching);
+      destroy_component(obsidianlucideicon3);
+      destroy_component(obsidianlucideicon4);
+      destroy_component(obsidianlucideicon5);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment13.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+function instance13($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("Configuration_table", slots, []);
+  var _a, _b, _c;
+  let { parent } = $$props;
+  parent.titleEl.setText("Syncthing Configuration");
+  parent.titleEl.style.textAlign = "center";
+  let syncthingBaseUrl = `${(_a = parent.plugin.settings.configuration.url) === null || _a === void 0 ? void 0 : _a.protocol}://${(_b = parent.plugin.settings.configuration.url) === null || _b === void 0 ? void 0 : _b.ip_address}:${(_c = parent.plugin.settings.configuration.url) === null || _c === void 0 ? void 0 : _c.port}/`;
+  console.log(syncthingBaseUrl);
+  let folders = [];
+  let devices = [];
+  let thisDevice = void 0;
+  onMount(() => __awaiter(void 0, void 0, void 0, function* () {
+    $$invalidate(0, folders = yield parent.plugin.syncthingController.getFolders());
+    $$invalidate(1, devices = yield parent.plugin.syncthingController.getDevices());
+    $$invalidate(2, thisDevice = devices.first());
+    console.log("Folders: ", folders);
+    console.log("Devices: ", devices);
+  }));
+  $$self.$$.on_mount.push(function() {
+    if (parent === void 0 && !("parent" in $$props || $$self.$$.bound[$$self.$$.props["parent"]])) {
+      console_13.warn("<Configuration_table> was created without expected prop 'parent'");
+    }
+  });
+  const writable_props = ["parent"];
+  Object.keys($$props).forEach((key) => {
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$" && key !== "slot") console_13.warn(`<Configuration_table> was created with unknown prop '${key}'`);
+  });
+  const click_handler = async (event) => {
+    new import_obsidian19.Notice("Not implemented yet!");
+  };
+  const click_handler_1 = async (event) => {
+    new import_obsidian19.Notice("Not implemented yet!");
+  };
+  const click_handler_2 = async (event) => {
+    new import_obsidian19.Notice("Not implemented yet!");
+  };
+  const func2 = (value) => value !== thisDevice;
+  const func_12 = (value) => value !== thisDevice;
+  const click_handler_3 = async (event) => {
+    new import_obsidian19.Notice("Not implemented yet!");
+  };
+  const click_handler_4 = async (event) => {
+    new import_obsidian19.Notice("Not implemented yet!");
+  };
+  const click_handler_5 = async (event) => {
+    new import_obsidian19.Notice("Not implemented yet!");
+  };
+  $$self.$$set = ($$props2) => {
+    if ("parent" in $$props2) $$invalidate(3, parent = $$props2.parent);
+  };
+  $$self.$capture_state = () => ({
+    _a,
+    _b,
+    _c,
+    __awaiter,
+    Notice: import_obsidian19.Notice,
+    onMount,
+    ConfigurationItem: configuration_item_default,
+    FolderItem: folder_item_default,
+    ObsidianLucideIcon: obsidian_lucide_icon_default,
+    RemoteItem: remote_item_default,
+    WarningMessage: warning_message_default,
+    parent,
+    syncthingBaseUrl,
+    folders,
+    devices,
+    thisDevice
+  });
+  $$self.$inject_state = ($$props2) => {
+    if ("_a" in $$props2) _a = $$props2._a;
+    if ("_b" in $$props2) _b = $$props2._b;
+    if ("_c" in $$props2) _c = $$props2._c;
+    if ("parent" in $$props2) $$invalidate(3, parent = $$props2.parent);
+    if ("syncthingBaseUrl" in $$props2) syncthingBaseUrl = $$props2.syncthingBaseUrl;
+    if ("folders" in $$props2) $$invalidate(0, folders = $$props2.folders);
+    if ("devices" in $$props2) $$invalidate(1, devices = $$props2.devices);
+    if ("thisDevice" in $$props2) $$invalidate(2, thisDevice = $$props2.thisDevice);
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  return [
+    folders,
+    devices,
+    thisDevice,
+    parent,
+    click_handler,
+    click_handler_1,
+    click_handler_2,
+    func2,
+    func_12,
+    click_handler_3,
+    click_handler_4,
+    click_handler_5
+  ];
+}
+var Configuration_table = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(this, options2, instance13, create_fragment13, safe_not_equal, { parent: 3 }, add_css11);
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "Configuration_table",
+      options: options2,
+      id: create_fragment13.name
+    });
+  }
+  get parent() {
+    throw new Error("<Configuration_table>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set parent(value) {
+    throw new Error("<Configuration_table>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var configuration_table_default = Configuration_table;
+
+// src/views/configuration_modal.ts
+var ConfigurationModal = class extends import_obsidian20.Modal {
+  constructor(app, plugin) {
+    super(app);
+    this.plugin = plugin;
+    this.components = [];
+  }
+  async onOpen() {
+    this.modalEl.style.width = "100%";
+    this.modalEl.style.height = "100%";
+    this.components.push(
+      new configuration_table_default({
+        target: this.contentEl,
+        props: {
+          parent: this
+        }
+      })
+    );
+  }
+  onClose() {
+    const { contentEl } = this;
+    this.components.forEach((component) => component.$destroy());
+    contentEl.empty();
+  }
+};
+
+// src/components/obsidian_settings_item.svelte
+var file11 = "src/components/obsidian_settings_item.svelte";
+function add_css12(target) {
+  append_styles(target, "svelte-1iic7l7", ".error.svelte-1iic7l7{color:var(--text-error)}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoib2JzaWRpYW5fc2V0dGluZ3NfaXRlbS5zdmVsdGUiLCJtYXBwaW5ncyI6IkFBd0JDLHFCQUFPLENBQ04sS0FBSyxDQUFFLElBQUksWUFBWSxDQUN4QiIsIm5hbWVzIjpbXSwic291cmNlcyI6WyJvYnNpZGlhbl9zZXR0aW5nc19pdGVtLnN2ZWx0ZSJdfQ== */");
+}
+var get_control_slot_changes = (dirty) => ({});
+var get_control_slot_context = (ctx) => ({});
+var get_description_slot_changes = (dirty) => ({});
+var get_description_slot_context = (ctx) => ({});
+var get_name_slot_changes = (dirty) => ({});
+var get_name_slot_context = (ctx) => ({});
+function fallback_block_12(ctx) {
+  let t;
+  const block2 = {
+    c: function create() {
+      t = text(
+        /*name*/
+        ctx[0]
+      );
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, t, anchor);
+    },
+    p: function update2(ctx2, dirty) {
+      if (dirty & /*name*/
+      1) set_data_dev(
+        t,
+        /*name*/
+        ctx2[0]
+      );
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(t);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: fallback_block_12.name,
+    type: "fallback",
+    source: "(12:21) {name}",
+    ctx
+  });
+  return block2;
+}
+function fallback_block2(ctx) {
+  let t;
+  const block2 = {
+    c: function create() {
+      t = text(
+        /*description*/
+        ctx[1]
+      );
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, t, anchor);
+    },
+    p: function update2(ctx2, dirty) {
+      if (dirty & /*description*/
+      2) set_data_dev(
+        t,
+        /*description*/
+        ctx2[1]
+      );
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(t);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: fallback_block2.name,
+    type: "fallback",
+    source: "(15:28) {description}",
+    ctx
+  });
+  return block2;
+}
+function create_fragment14(ctx) {
+  let div4;
+  let div2;
+  let div0;
+  let t0;
+  let div1;
+  let t1;
+  let div3;
+  let div4_class_value;
+  let current;
+  const name_slot_template = (
+    /*#slots*/
+    ctx[6].name
+  );
+  const name_slot = create_slot(
+    name_slot_template,
+    ctx,
+    /*$$scope*/
+    ctx[5],
+    get_name_slot_context
+  );
+  const name_slot_or_fallback = name_slot || fallback_block_12(ctx);
+  const description_slot_template = (
+    /*#slots*/
+    ctx[6].description
+  );
+  const description_slot = create_slot(
+    description_slot_template,
+    ctx,
+    /*$$scope*/
+    ctx[5],
+    get_description_slot_context
+  );
+  const description_slot_or_fallback = description_slot || fallback_block2(ctx);
+  const control_slot_template = (
+    /*#slots*/
+    ctx[6].control
+  );
+  const control_slot = create_slot(
+    control_slot_template,
+    ctx,
+    /*$$scope*/
+    ctx[5],
+    get_control_slot_context
+  );
+  const block2 = {
+    c: function create() {
+      div4 = element("div");
+      div2 = element("div");
+      div0 = element("div");
+      if (name_slot_or_fallback) name_slot_or_fallback.c();
+      t0 = space();
+      div1 = element("div");
+      if (description_slot_or_fallback) description_slot_or_fallback.c();
+      t1 = space();
+      div3 = element("div");
+      if (control_slot) control_slot.c();
+      attr_dev(div0, "class", "setting-item-name svelte-1iic7l7");
+      toggle_class(
+        div0,
+        "error",
+        /*error*/
+        ctx[3]
+      );
+      add_location(div0, file11, 11, 2, 296);
+      attr_dev(div1, "class", "setting-item-description svelte-1iic7l7");
+      toggle_class(
+        div1,
+        "error",
+        /*error*/
+        ctx[3]
+      );
+      add_location(div1, file11, 14, 2, 386);
+      attr_dev(div2, "class", "setting-item-info");
+      add_location(div2, file11, 10, 1, 262);
+      attr_dev(div3, "class", "setting-item-control");
+      add_location(div3, file11, 18, 1, 504);
+      attr_dev(div4, "class", div4_class_value = "setting-item " + /*className*/
+      ctx[4] + " svelte-1iic7l7");
+      toggle_class(
+        div4,
+        "setting-item-heading",
+        /*heading*/
+        ctx[2]
+      );
+      add_location(div4, file11, 9, 0, 185);
+    },
+    l: function claim(nodes) {
+      throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div4, anchor);
+      append_dev(div4, div2);
+      append_dev(div2, div0);
+      if (name_slot_or_fallback) {
+        name_slot_or_fallback.m(div0, null);
+      }
+      append_dev(div2, t0);
+      append_dev(div2, div1);
+      if (description_slot_or_fallback) {
+        description_slot_or_fallback.m(div1, null);
+      }
+      append_dev(div4, t1);
+      append_dev(div4, div3);
+      if (control_slot) {
+        control_slot.m(div3, null);
+      }
+      current = true;
+    },
+    p: function update2(ctx2, [dirty]) {
+      if (name_slot) {
+        if (name_slot.p && (!current || dirty & /*$$scope*/
+        32)) {
+          update_slot_base(
+            name_slot,
+            name_slot_template,
+            ctx2,
+            /*$$scope*/
+            ctx2[5],
+            !current ? get_all_dirty_from_scope(
+              /*$$scope*/
+              ctx2[5]
+            ) : get_slot_changes(
+              name_slot_template,
+              /*$$scope*/
+              ctx2[5],
+              dirty,
+              get_name_slot_changes
+            ),
+            get_name_slot_context
+          );
+        }
+      } else {
+        if (name_slot_or_fallback && name_slot_or_fallback.p && (!current || dirty & /*name*/
+        1)) {
+          name_slot_or_fallback.p(ctx2, !current ? -1 : dirty);
+        }
+      }
+      if (!current || dirty & /*error*/
+      8) {
+        toggle_class(
+          div0,
+          "error",
+          /*error*/
+          ctx2[3]
+        );
+      }
+      if (description_slot) {
+        if (description_slot.p && (!current || dirty & /*$$scope*/
+        32)) {
+          update_slot_base(
+            description_slot,
+            description_slot_template,
+            ctx2,
+            /*$$scope*/
+            ctx2[5],
+            !current ? get_all_dirty_from_scope(
+              /*$$scope*/
+              ctx2[5]
+            ) : get_slot_changes(
+              description_slot_template,
+              /*$$scope*/
+              ctx2[5],
+              dirty,
+              get_description_slot_changes
+            ),
+            get_description_slot_context
+          );
+        }
+      } else {
+        if (description_slot_or_fallback && description_slot_or_fallback.p && (!current || dirty & /*description*/
+        2)) {
+          description_slot_or_fallback.p(ctx2, !current ? -1 : dirty);
+        }
+      }
+      if (!current || dirty & /*error*/
+      8) {
+        toggle_class(
+          div1,
+          "error",
+          /*error*/
+          ctx2[3]
+        );
+      }
+      if (control_slot) {
+        if (control_slot.p && (!current || dirty & /*$$scope*/
+        32)) {
+          update_slot_base(
+            control_slot,
+            control_slot_template,
+            ctx2,
+            /*$$scope*/
+            ctx2[5],
+            !current ? get_all_dirty_from_scope(
+              /*$$scope*/
+              ctx2[5]
+            ) : get_slot_changes(
+              control_slot_template,
+              /*$$scope*/
+              ctx2[5],
+              dirty,
+              get_control_slot_changes
+            ),
+            get_control_slot_context
+          );
+        }
+      }
+      if (!current || dirty & /*className*/
+      16 && div4_class_value !== (div4_class_value = "setting-item " + /*className*/
+      ctx2[4] + " svelte-1iic7l7")) {
+        attr_dev(div4, "class", div4_class_value);
+      }
+      if (!current || dirty & /*className, heading*/
+      20) {
+        toggle_class(
+          div4,
+          "setting-item-heading",
+          /*heading*/
+          ctx2[2]
+        );
+      }
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(name_slot_or_fallback, local);
+      transition_in(description_slot_or_fallback, local);
+      transition_in(control_slot, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(name_slot_or_fallback, local);
+      transition_out(description_slot_or_fallback, local);
+      transition_out(control_slot, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div4);
+      }
+      if (name_slot_or_fallback) name_slot_or_fallback.d(detaching);
+      if (description_slot_or_fallback) description_slot_or_fallback.d(detaching);
+      if (control_slot) control_slot.d(detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment14.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+function instance14($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("Obsidian_settings_item", slots, ["name", "description", "control"]);
+  let { name = "" } = $$props;
+  let { description = "" } = $$props;
+  let { heading: heading2 = false } = $$props;
+  let { error = false } = $$props;
+  let { class: className = "" } = $$props;
+  const writable_props = ["name", "description", "heading", "error", "class"];
+  Object.keys($$props).forEach((key) => {
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$" && key !== "slot") console.warn(`<Obsidian_settings_item> was created with unknown prop '${key}'`);
+  });
+  $$self.$$set = ($$props2) => {
+    if ("name" in $$props2) $$invalidate(0, name = $$props2.name);
+    if ("description" in $$props2) $$invalidate(1, description = $$props2.description);
+    if ("heading" in $$props2) $$invalidate(2, heading2 = $$props2.heading);
+    if ("error" in $$props2) $$invalidate(3, error = $$props2.error);
+    if ("class" in $$props2) $$invalidate(4, className = $$props2.class);
+    if ("$$scope" in $$props2) $$invalidate(5, $$scope = $$props2.$$scope);
+  };
+  $$self.$capture_state = () => ({
+    name,
+    description,
+    heading: heading2,
+    error,
+    className
+  });
+  $$self.$inject_state = ($$props2) => {
+    if ("name" in $$props2) $$invalidate(0, name = $$props2.name);
+    if ("description" in $$props2) $$invalidate(1, description = $$props2.description);
+    if ("heading" in $$props2) $$invalidate(2, heading2 = $$props2.heading);
+    if ("error" in $$props2) $$invalidate(3, error = $$props2.error);
+    if ("className" in $$props2) $$invalidate(4, className = $$props2.className);
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  return [name, description, heading2, error, className, $$scope, slots];
+}
+var Obsidian_settings_item = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(
+      this,
+      options2,
+      instance14,
+      create_fragment14,
+      safe_not_equal,
+      {
+        name: 0,
+        description: 1,
+        heading: 2,
+        error: 3,
+        class: 4
+      },
+      add_css12
+    );
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "Obsidian_settings_item",
+      options: options2,
+      id: create_fragment14.name
+    });
+  }
+  get name() {
+    throw new Error("<Obsidian_settings_item>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set name(value) {
+    throw new Error("<Obsidian_settings_item>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get description() {
+    throw new Error("<Obsidian_settings_item>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set description(value) {
+    throw new Error("<Obsidian_settings_item>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get heading() {
+    throw new Error("<Obsidian_settings_item>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set heading(value) {
+    throw new Error("<Obsidian_settings_item>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get error() {
+    throw new Error("<Obsidian_settings_item>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set error(value) {
+    throw new Error("<Obsidian_settings_item>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get class() {
+    throw new Error("<Obsidian_settings_item>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set class(value) {
+    throw new Error("<Obsidian_settings_item>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var obsidian_settings_item_default = Obsidian_settings_item;
+
+// src/components/obsidian_toggle.svelte
+var import_obsidian21 = require("obsidian");
+var file12 = "src/components/obsidian_toggle.svelte";
+function create_fragment15(ctx) {
+  let div;
+  let div_levels = [
+    /*$$restProps*/
+    ctx[1]
+  ];
+  let div_data = {};
+  for (let i = 0; i < div_levels.length; i += 1) {
+    div_data = assign(div_data, div_levels[i]);
+  }
+  const block2 = {
+    c: function create() {
+      div = element("div");
+      set_attributes(div, div_data);
+      add_location(div, file12, 12, 0, 214);
+    },
+    l: function claim(nodes) {
+      throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+      ctx[3](div);
+    },
+    p: function update2(ctx2, [dirty]) {
+      set_attributes(div, div_data = get_spread_update(div_levels, [dirty & /*$$restProps*/
+      2 && /*$$restProps*/
+      ctx2[1]]));
+    },
+    i: noop,
+    o: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div);
+      }
+      ctx[3](null);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment15.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+function instance15($$self, $$props, $$invalidate) {
+  const omit_props_names = ["callback"];
+  let $$restProps = compute_rest_props($$props, omit_props_names);
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("Obsidian_toggle", slots, []);
+  let { callback } = $$props;
+  let element2;
+  onMount(() => {
+    new import_obsidian21.ToggleComponent(element2).onChange(callback);
+  });
+  $$self.$$.on_mount.push(function() {
+    if (callback === void 0 && !("callback" in $$props || $$self.$$.bound[$$self.$$.props["callback"]])) {
+      console.warn("<Obsidian_toggle> was created without expected prop 'callback'");
+    }
+  });
+  function div_binding($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      element2 = $$value;
+      $$invalidate(0, element2);
+    });
+  }
+  $$self.$$set = ($$new_props) => {
+    $$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    $$invalidate(1, $$restProps = compute_rest_props($$props, omit_props_names));
+    if ("callback" in $$new_props) $$invalidate(2, callback = $$new_props.callback);
+  };
+  $$self.$capture_state = () => ({
+    ToggleComponent: import_obsidian21.ToggleComponent,
+    onMount,
+    callback,
+    element: element2
+  });
+  $$self.$inject_state = ($$new_props) => {
+    if ("callback" in $$props) $$invalidate(2, callback = $$new_props.callback);
+    if ("element" in $$props) $$invalidate(0, element2 = $$new_props.element);
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  return [element2, $$restProps, callback, div_binding];
+}
+var Obsidian_toggle = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(this, options2, instance15, create_fragment15, safe_not_equal, { callback: 2 });
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "Obsidian_toggle",
+      options: options2,
+      id: create_fragment15.name
+    });
+  }
+  get callback() {
+    throw new Error("<Obsidian_toggle>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set callback(value) {
+    throw new Error("<Obsidian_toggle>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var obsidian_toggle_default = Obsidian_toggle;
+
+// src/components/syncthing_ignore_files.svelte
+var import_obsidian24 = require("obsidian");
+
+// node_modules/.pnpm/svelte@4.2.19/node_modules/svelte/src/runtime/store/index.js
+var subscriber_queue = [];
+function writable(value, start = noop) {
+  let stop;
+  const subscribers = /* @__PURE__ */ new Set();
+  function set(new_value) {
+    if (safe_not_equal(value, new_value)) {
+      value = new_value;
+      if (stop) {
+        const run_queue = !subscriber_queue.length;
+        for (const subscriber of subscribers) {
+          subscriber[1]();
+          subscriber_queue.push(subscriber, value);
+        }
+        if (run_queue) {
+          for (let i = 0; i < subscriber_queue.length; i += 2) {
+            subscriber_queue[i][0](subscriber_queue[i + 1]);
+          }
+          subscriber_queue.length = 0;
+        }
+      }
+    }
+  }
+  function update2(fn) {
+    set(fn(value));
+  }
+  function subscribe2(run2, invalidate = noop) {
+    const subscriber = [run2, invalidate];
+    subscribers.add(subscriber);
+    if (subscribers.size === 1) {
+      stop = start(set, update2) || noop;
+    }
+    run2(value);
+    return () => {
+      subscribers.delete(subscriber);
+      if (subscribers.size === 0 && stop) {
+        stop();
+        stop = null;
+      }
+    };
+  }
+  return { set, update: update2, subscribe: subscribe2 };
+}
+
+// src/components/suggesters/FileSuggester.ts
+var import_obsidian22 = require("obsidian");
+var FileSuggester = class extends import_obsidian22.AbstractInputSuggest {
+  constructor(app, inputEl) {
+    super(app, inputEl);
+    this.inputEl = inputEl;
+  }
+  getSuggestions(inputStr) {
+    const abstractFiles = this.app.vault.getAllLoadedFiles();
+    let files = [];
+    const lowerCaseInputStr = inputStr.toLowerCase();
+    files = abstractFiles.filter(
+      (file16) => (
+        // file instanceof TFile &&
+        file16.path.toLowerCase().includes(lowerCaseInputStr)
+      )
+    );
+    return files;
+  }
+  renderSuggestion(file16, el) {
+    el.setText(file16.path);
+  }
+  selectSuggestion(file16) {
+    this.inputEl.value = file16.path;
+    this.inputEl.trigger("input");
+    this.close();
+  }
+};
+
+// src/components/suggesters/file_suggester.svelte
+var import_obsidian23 = require("obsidian");
+var file13 = "src/components/suggesters/file_suggester.svelte";
+function create_fragment16(ctx) {
+  let div;
+  const block2 = {
+    c: function create() {
+      div = element("div");
+      attr_dev(div, "id", "file-suggester");
+      attr_dev(
+        div,
+        "class",
+        /*className*/
+        ctx[0]
+      );
+      add_location(div, file13, 22, 0, 535);
+    },
+    l: function claim(nodes) {
+      throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+      ctx[4](div);
+    },
+    p: function update2(ctx2, [dirty]) {
+      if (dirty & /*className*/
+      1) {
+        attr_dev(
+          div,
+          "class",
+          /*className*/
+          ctx2[0]
+        );
+      }
+    },
+    i: noop,
+    o: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div);
+      }
+      ctx[4](null);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment16.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+function instance16($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("File_suggester", slots, []);
+  let { parent } = $$props;
+  let { onChange = () => {
+  } } = $$props;
+  let { class: className = "" } = $$props;
+  let containerEl;
+  onMount(() => {
+    new import_obsidian23.Setting(containerEl).addSearch((cb) => {
+      new FileSuggester(parent.app, cb.inputEl);
+      cb.setPlaceholder("Type to search for a file").setValue("").onChange((0, import_obsidian23.debounce)(onChange, 750));
+    });
+  });
+  $$self.$$.on_mount.push(function() {
+    if (parent === void 0 && !("parent" in $$props || $$self.$$.bound[$$self.$$.props["parent"]])) {
+      console.warn("<File_suggester> was created without expected prop 'parent'");
+    }
+  });
+  const writable_props = ["parent", "onChange", "class"];
+  Object.keys($$props).forEach((key) => {
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$" && key !== "slot") console.warn(`<File_suggester> was created with unknown prop '${key}'`);
+  });
+  function div_binding($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      containerEl = $$value;
+      $$invalidate(1, containerEl);
+    });
+  }
+  $$self.$$set = ($$props2) => {
+    if ("parent" in $$props2) $$invalidate(2, parent = $$props2.parent);
+    if ("onChange" in $$props2) $$invalidate(3, onChange = $$props2.onChange);
+    if ("class" in $$props2) $$invalidate(0, className = $$props2.class);
+  };
+  $$self.$capture_state = () => ({
+    onMount,
+    FileSuggester,
+    Setting: import_obsidian23.Setting,
+    debounce: import_obsidian23.debounce,
+    parent,
+    onChange,
+    className,
+    containerEl
+  });
+  $$self.$inject_state = ($$props2) => {
+    if ("parent" in $$props2) $$invalidate(2, parent = $$props2.parent);
+    if ("onChange" in $$props2) $$invalidate(3, onChange = $$props2.onChange);
+    if ("className" in $$props2) $$invalidate(0, className = $$props2.className);
+    if ("containerEl" in $$props2) $$invalidate(1, containerEl = $$props2.containerEl);
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  return [className, containerEl, parent, onChange, div_binding];
+}
+var File_suggester = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(this, options2, instance16, create_fragment16, safe_not_equal, { parent: 2, onChange: 3, class: 0 });
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "File_suggester",
+      options: options2,
+      id: create_fragment16.name
+    });
+  }
+  get parent() {
+    throw new Error("<File_suggester>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set parent(value) {
+    throw new Error("<File_suggester>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get onChange() {
+    throw new Error("<File_suggester>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set onChange(value) {
+    throw new Error("<File_suggester>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  get class() {
+    throw new Error("<File_suggester>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set class(value) {
+    throw new Error("<File_suggester>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var file_suggester_default = File_suggester;
+
+// src/components/syncthing_ignore_files.svelte
+var { console: console_14 } = globals;
+var file14 = "src/components/syncthing_ignore_files.svelte";
+function add_css13(target) {
+  append_styles(target, "svelte-1yicc3x", ".container.svelte-1yicc3x{display:grid;grid-template-columns:auto 1fr;gap:10px}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3luY3RoaW5nX2lnbm9yZV9maWxlcy5zdmVsdGUiLCJtYXBwaW5ncyI6IkFBK0hDLHlCQUFXLENBQ1YsT0FBTyxDQUFFLElBQUksQ0FDYixxQkFBcUIsQ0FBRSxJQUFJLENBQUMsR0FBRyxDQUMvQixHQUFHLENBQUUsSUFDTiIsIm5hbWVzIjpbXSwic291cmNlcyI6WyJzeW5jdGhpbmdfaWdub3JlX2ZpbGVzLnN2ZWx0ZSJdfQ== */");
+}
+function get_each_context5(ctx, list2, i) {
+  const child_ctx = ctx.slice();
+  child_ctx[14] = list2[i];
+  return child_ctx;
+}
+function create_name_slot(ctx) {
+  let t0;
+  let code;
+  const block2 = {
+    c: function create() {
+      t0 = text("Manage the ignored files and patterns in ");
+      code = element("code");
+      code.textContent = ".stignore";
+      add_location(code, file14, 63, 43, 2232);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, t0, anchor);
+      insert_dev(target, code, anchor);
+    },
+    p: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(t0);
+        detach_dev(code);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_name_slot.name,
+    type: "slot",
+    source: '(56:1) <svelte:fragment slot=\\"name\\">',
+    ctx
+  });
+  return block2;
+}
+function create_description_slot(ctx) {
+  let p;
+  let t0;
+  let br2;
+  let t1;
+  let a;
+  let t3;
+  const block2 = {
+    c: function create() {
+      p = element("p");
+      t0 = text("Please set the files you want to ignore in your vault when syncing\n			with Syncthing.\n			");
+      br2 = element("br");
+      t1 = text("\n			See\n			");
+      a = element("a");
+      a.textContent = "Syncthing documentation";
+      t3 = text(" for more information.");
+      add_location(br2, file14, 69, 3, 2411);
+      attr_dev(a, "href", "https://docs.syncthing.net/users/ignoring.html");
+      attr_dev(a, "target", "_blank");
+      add_location(a, file14, 71, 3, 2428);
+      add_location(p, file14, 66, 2, 2315);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, p, anchor);
+      append_dev(p, t0);
+      append_dev(p, br2);
+      append_dev(p, t1);
+      append_dev(p, a);
+      append_dev(p, t3);
+    },
+    p: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(p);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_description_slot.name,
+    type: "slot",
+    source: '(59:1) <svelte:fragment slot=\\"description\\">',
+    ctx
+  });
+  return block2;
+}
+function create_control_slot_1(ctx) {
+  let div;
+  let button0;
+  let t1;
+  let filesuggester;
+  let t2;
+  let button1;
+  let t4;
+  let input;
+  let current;
+  let mounted;
+  let dispose;
+  filesuggester = new file_suggester_default({
+    props: {
+      parent: (
+        /*parent*/
+        ctx[0]
+      ),
+      onChange: (
+        /*func*/
+        ctx[8]
+      )
+    },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      div = element("div");
+      button0 = element("button");
+      button0.textContent = "Add file/folder";
+      t1 = space();
+      create_component(filesuggester.$$.fragment);
+      t2 = space();
+      button1 = element("button");
+      button1.textContent = "Add pattern";
+      t4 = space();
+      input = element("input");
+      add_location(button0, file14, 79, 3, 2653);
+      add_location(button1, file14, 95, 3, 3004);
+      attr_dev(input, "type", "text");
+      attr_dev(input, "placeholder", "Enter some text...");
+      add_location(input, file14, 104, 3, 3203);
+      attr_dev(div, "class", "container svelte-1yicc3x");
+      add_location(div, file14, 78, 2, 2626);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+      append_dev(div, button0);
+      append_dev(div, t1);
+      mount_component(filesuggester, div, null);
+      append_dev(div, t2);
+      append_dev(div, button1);
+      append_dev(div, t4);
+      append_dev(div, input);
+      set_input_value(
+        input,
+        /*typedPattern*/
+        ctx[2]
+      );
+      current = true;
+      if (!mounted) {
+        dispose = [
+          listen_dev(
+            button0,
+            "click",
+            /*click_handler*/
+            ctx[7],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button1,
+            "click",
+            /*click_handler_1*/
+            ctx[9],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            input,
+            "input",
+            /*input_input_handler*/
+            ctx[10]
+          )
+        ];
+        mounted = true;
+      }
+    },
+    p: function update2(ctx2, dirty) {
+      const filesuggester_changes = {};
+      if (dirty & /*parent*/
+      1) filesuggester_changes.parent = /*parent*/
+      ctx2[0];
+      if (dirty & /*selectedFile*/
+      2) filesuggester_changes.onChange = /*func*/
+      ctx2[8];
+      filesuggester.$set(filesuggester_changes);
+      if (dirty & /*typedPattern*/
+      4 && input.value !== /*typedPattern*/
+      ctx2[2]) {
+        set_input_value(
+          input,
+          /*typedPattern*/
+          ctx2[2]
+        );
+      }
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(filesuggester.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(filesuggester.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div);
+      }
+      destroy_component(filesuggester);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_control_slot_1.name,
+    type: "slot",
+    source: '(71:1) <svelte:fragment slot=\\"control\\">',
+    ctx
+  });
+  return block2;
+}
+function create_if_block8(ctx) {
+  let each_1_anchor;
+  let current;
+  let each_value = ensure_array_like_dev(
+    /*$ignoredFiles*/
+    ctx[3].filter(func_1)
+  );
+  let each_blocks = [];
+  for (let i = 0; i < each_value.length; i += 1) {
+    each_blocks[i] = create_each_block5(get_each_context5(ctx, each_value, i));
+  }
+  const out = (i) => transition_out(each_blocks[i], 1, 1, () => {
+    each_blocks[i] = null;
+  });
+  const block2 = {
+    c: function create() {
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        each_blocks[i].c();
+      }
+      each_1_anchor = empty();
+    },
+    m: function mount(target, anchor) {
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        if (each_blocks[i]) {
+          each_blocks[i].m(target, anchor);
+        }
+      }
+      insert_dev(target, each_1_anchor, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, dirty) {
+      if (dirty & /*$ignoredFiles, deleteIgnoredFiles*/
+      40) {
+        each_value = ensure_array_like_dev(
+          /*$ignoredFiles*/
+          ctx2[3].filter(func_1)
+        );
+        let i;
+        for (i = 0; i < each_value.length; i += 1) {
+          const child_ctx = get_each_context5(ctx2, each_value, i);
+          if (each_blocks[i]) {
+            each_blocks[i].p(child_ctx, dirty);
+            transition_in(each_blocks[i], 1);
+          } else {
+            each_blocks[i] = create_each_block5(child_ctx);
+            each_blocks[i].c();
+            transition_in(each_blocks[i], 1);
+            each_blocks[i].m(each_1_anchor.parentNode, each_1_anchor);
+          }
+        }
+        group_outros();
+        for (i = each_value.length; i < each_blocks.length; i += 1) {
+          out(i);
+        }
+        check_outros();
+      }
+    },
+    i: function intro(local) {
+      if (current) return;
+      for (let i = 0; i < each_value.length; i += 1) {
+        transition_in(each_blocks[i]);
+      }
+      current = true;
+    },
+    o: function outro(local) {
+      each_blocks = each_blocks.filter(Boolean);
+      for (let i = 0; i < each_blocks.length; i += 1) {
+        transition_out(each_blocks[i]);
+      }
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(each_1_anchor);
+      }
+      destroy_each(each_blocks, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block8.name,
+    type: "if",
+    source: "(108:0) {#if $ignoredFiles.length > 0}",
+    ctx
+  });
+  return block2;
+}
+function create_control_slot(ctx) {
+  let button;
+  let t1;
+  let mounted;
+  let dispose;
+  function click_handler_2() {
+    return (
+      /*click_handler_2*/
+      ctx[11](
+        /*item*/
+        ctx[14]
+      )
+    );
+  }
+  const block2 = {
+    c: function create() {
+      button = element("button");
+      button.textContent = "Remove";
+      t1 = space();
+      add_location(button, file14, 118, 4, 3572);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, button, anchor);
+      insert_dev(target, t1, anchor);
+      if (!mounted) {
+        dispose = listen_dev(button, "click", click_handler_2, false, false, false, false);
+        mounted = true;
+      }
+    },
+    p: function update2(new_ctx, dirty) {
+      ctx = new_ctx;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(button);
+        detach_dev(t1);
+      }
+      mounted = false;
+      dispose();
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_control_slot.name,
+    type: "slot",
+    source: '(111:3) <svelte:fragment slot=\\"control\\">',
+    ctx
+  });
+  return block2;
+}
+function create_each_block5(ctx) {
+  let obsidiansettingsitem;
+  let current;
+  obsidiansettingsitem = new obsidian_settings_item_default({
+    props: {
+      name: (
+        /*item*/
+        ctx[14]
+      ),
+      $$slots: { control: [create_control_slot] },
+      $$scope: { ctx }
+    },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      create_component(obsidiansettingsitem.$$.fragment);
+    },
+    m: function mount(target, anchor) {
+      mount_component(obsidiansettingsitem, target, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, dirty) {
+      const obsidiansettingsitem_changes = {};
+      if (dirty & /*$ignoredFiles*/
+      8) obsidiansettingsitem_changes.name = /*item*/
+      ctx2[14];
+      if (dirty & /*$$scope, $ignoredFiles*/
+      131080) {
+        obsidiansettingsitem_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      obsidiansettingsitem.$set(obsidiansettingsitem_changes);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidiansettingsitem.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidiansettingsitem.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      destroy_component(obsidiansettingsitem, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_each_block5.name,
+    type: "each",
+    source: '(109:1) {#each $ignoredFiles.filter((item) => item !== \\"\\") as item}',
+    ctx
+  });
+  return block2;
+}
+function create_fragment17(ctx) {
+  let obsidiansettingsitem0;
+  let t0;
+  let obsidiansettingsitem1;
+  let t1;
+  let if_block_anchor;
+  let current;
+  obsidiansettingsitem0 = new obsidian_settings_item_default({
+    props: {
+      name: "Syncthing Ignored Files",
+      heading: true
+    },
+    $$inline: true
+  });
+  obsidiansettingsitem1 = new obsidian_settings_item_default({
+    props: {
+      $$slots: {
+        control: [create_control_slot_1],
+        description: [create_description_slot],
+        name: [create_name_slot]
+      },
+      $$scope: { ctx }
+    },
+    $$inline: true
+  });
+  let if_block = (
+    /*$ignoredFiles*/
+    ctx[3].length > 0 && create_if_block8(ctx)
+  );
+  const block2 = {
+    c: function create() {
+      create_component(obsidiansettingsitem0.$$.fragment);
+      t0 = space();
+      create_component(obsidiansettingsitem1.$$.fragment);
+      t1 = space();
+      if (if_block) if_block.c();
+      if_block_anchor = empty();
+    },
+    l: function claim(nodes) {
+      throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      mount_component(obsidiansettingsitem0, target, anchor);
+      insert_dev(target, t0, anchor);
+      mount_component(obsidiansettingsitem1, target, anchor);
+      insert_dev(target, t1, anchor);
+      if (if_block) if_block.m(target, anchor);
+      insert_dev(target, if_block_anchor, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, [dirty]) {
+      const obsidiansettingsitem1_changes = {};
+      if (dirty & /*$$scope, typedPattern, parent, selectedFile*/
+      131079) {
+        obsidiansettingsitem1_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      obsidiansettingsitem1.$set(obsidiansettingsitem1_changes);
+      if (
+        /*$ignoredFiles*/
+        ctx2[3].length > 0
+      ) {
+        if (if_block) {
+          if_block.p(ctx2, dirty);
+          if (dirty & /*$ignoredFiles*/
+          8) {
+            transition_in(if_block, 1);
+          }
+        } else {
+          if_block = create_if_block8(ctx2);
+          if_block.c();
+          transition_in(if_block, 1);
+          if_block.m(if_block_anchor.parentNode, if_block_anchor);
+        }
+      } else if (if_block) {
+        group_outros();
+        transition_out(if_block, 1, 1, () => {
+          if_block = null;
+        });
+        check_outros();
+      }
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidiansettingsitem0.$$.fragment, local);
+      transition_in(obsidiansettingsitem1.$$.fragment, local);
+      transition_in(if_block);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidiansettingsitem0.$$.fragment, local);
+      transition_out(obsidiansettingsitem1.$$.fragment, local);
+      transition_out(if_block);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(t0);
+        detach_dev(t1);
+        detach_dev(if_block_anchor);
+      }
+      destroy_component(obsidiansettingsitem0, detaching);
+      destroy_component(obsidiansettingsitem1, detaching);
+      if (if_block) if_block.d(detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment17.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+var func_1 = (item) => item !== "";
+function instance17($$self, $$props, $$invalidate) {
+  let $ignoredFiles;
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("Syncthing_ignore_files", slots, []);
+  let { parent } = $$props;
+  const syncthingIgnoreFilePath = (0, import_obsidian24.normalizePath)(".stignore");
+  let selectedFile = "";
+  let typedPattern = "";
+  function getIgnoredFiles() {
+    return __awaiter(this, void 0, void 0, function* () {
+      let ignoredFilesContent = "";
+      try {
+        ignoredFilesContent = yield parent.app.vault.adapter.read(syncthingIgnoreFilePath);
+      } catch (error) {
+        console.error("Error: ", error);
+        new import_obsidian24.Notice("No .stignore file found.");
+      }
+      return ignoredFilesContent.replace(/\r|\n+$/g, "").replace(/\n+/g, "\n").split("\n");
+    });
+  }
+  function updateIgnoredFiles(content) {
+    return __awaiter(this, void 0, void 0, function* () {
+      const oldContent = yield getIgnoredFiles();
+      if (oldContent.includes(content)) {
+        new import_obsidian24.Notice("This pattern is already in the .stignore file.");
+        return;
+      }
+      yield parent.app.vault.adapter.write(syncthingIgnoreFilePath, `${content}
+${oldContent.join("\n")}`);
+      ignoredFiles.set(yield getIgnoredFiles());
+    });
+  }
+  function deleteIgnoredFiles(content) {
+    return __awaiter(this, void 0, void 0, function* () {
+      const oldContent = yield getIgnoredFiles();
+      yield parent.app.vault.adapter.write(syncthingIgnoreFilePath, oldContent.filter((item) => item !== content).join("\n"));
+      ignoredFiles.set(yield getIgnoredFiles());
+    });
+  }
+  const ignoredFiles = writable([]);
+  validate_store(ignoredFiles, "ignoredFiles");
+  component_subscribe($$self, ignoredFiles, (value) => $$invalidate(3, $ignoredFiles = value));
+  ignoredFiles.subscribe((value) => __awaiter(void 0, void 0, void 0, function* () {
+    value = yield getIgnoredFiles();
+  }));
+  (() => __awaiter(void 0, void 0, void 0, function* () {
+    ignoredFiles.set(yield getIgnoredFiles());
+  }))();
+  $$self.$$.on_mount.push(function() {
+    if (parent === void 0 && !("parent" in $$props || $$self.$$.bound[$$self.$$.props["parent"]])) {
+      console_14.warn("<Syncthing_ignore_files> was created without expected prop 'parent'");
+    }
+  });
+  const writable_props = ["parent"];
+  Object.keys($$props).forEach((key) => {
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$" && key !== "slot") console_14.warn(`<Syncthing_ignore_files> was created with unknown prop '${key}'`);
+  });
+  const click_handler = async () => {
+    console.log("selectedFile: ", selectedFile);
+    await updateIgnoredFiles(selectedFile);
+    $$invalidate(1, selectedFile = "");
+  };
+  const func2 = async (value) => {
+    console.log("fileSuggester: ", value);
+    $$invalidate(1, selectedFile = value);
+  };
+  const click_handler_1 = async () => {
+    console.log("typedPattern: ", typedPattern);
+    await updateIgnoredFiles(typedPattern);
+    $$invalidate(2, typedPattern = "");
+  };
+  function input_input_handler() {
+    typedPattern = this.value;
+    $$invalidate(2, typedPattern);
+  }
+  const click_handler_2 = async (item) => deleteIgnoredFiles(item);
+  $$self.$$set = ($$props2) => {
+    if ("parent" in $$props2) $$invalidate(0, parent = $$props2.parent);
+  };
+  $$self.$capture_state = () => ({
+    __awaiter,
+    Notice: import_obsidian24.Notice,
+    normalizePath: import_obsidian24.normalizePath,
+    writable,
+    ObsidianSettingsItem: obsidian_settings_item_default,
+    FileSuggester: file_suggester_default,
+    parent,
+    syncthingIgnoreFilePath,
+    selectedFile,
+    typedPattern,
+    getIgnoredFiles,
+    updateIgnoredFiles,
+    deleteIgnoredFiles,
+    ignoredFiles,
+    $ignoredFiles
+  });
+  $$self.$inject_state = ($$props2) => {
+    if ("parent" in $$props2) $$invalidate(0, parent = $$props2.parent);
+    if ("selectedFile" in $$props2) $$invalidate(1, selectedFile = $$props2.selectedFile);
+    if ("typedPattern" in $$props2) $$invalidate(2, typedPattern = $$props2.typedPattern);
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  return [
+    parent,
+    selectedFile,
+    typedPattern,
+    $ignoredFiles,
+    updateIgnoredFiles,
+    deleteIgnoredFiles,
+    ignoredFiles,
+    click_handler,
+    func2,
+    click_handler_1,
+    input_input_handler,
+    click_handler_2
+  ];
+}
+var Syncthing_ignore_files = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(this, options2, instance17, create_fragment17, safe_not_equal, { parent: 0 }, add_css13);
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "Syncthing_ignore_files",
+      options: options2,
+      id: create_fragment17.name
+    });
+  }
+  get parent() {
+    throw new Error("<Syncthing_ignore_files>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set parent(value) {
+    throw new Error("<Syncthing_ignore_files>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var syncthing_ignore_files_default = Syncthing_ignore_files;
+
+// src/components/settings_view.svelte
+var { console: console_15 } = globals;
+var file15 = "src/components/settings_view.svelte";
+function add_css14(target) {
+  append_styles(target, "svelte-13bfvu7", ".banner.svelte-13bfvu7.svelte-13bfvu7{display:flex;justify-content:center;align-items:center;margin:0;padding:0}.banner.svelte-13bfvu7 a.svelte-13bfvu7{text-decoration-line:none}.banner.svelte-13bfvu7 img.svelte-13bfvu7{height:2em}.footer.svelte-13bfvu7.svelte-13bfvu7{display:flex;justify-content:space-between;width:100%}.footer.svelte-13bfvu7 button.svelte-13bfvu7{display:flex;flex-direction:row;align-items:flex-start;gap:0.5em;justify-content:space-around}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2V0dGluZ3Nfdmlldy5zdmVsdGUiLCJtYXBwaW5ncyI6IkFBdWNDLHFDQUFRLENBQ1AsT0FBTyxDQUFFLElBQUksQ0FDYixlQUFlLENBQUUsTUFBTSxDQUN2QixXQUFXLENBQUUsTUFBTSxDQUNuQixNQUFNLENBQUUsQ0FBQyxDQUNULE9BQU8sQ0FBRSxDQUNWLENBQ0Esc0JBQU8sQ0FBQyxnQkFBRSxDQUNULG9CQUFvQixDQUFFLElBQ3ZCLENBQ0Esc0JBQU8sQ0FBQyxrQkFBSSxDQUNYLE1BQU0sQ0FBRSxHQUNULENBQ0EscUNBQVEsQ0FDUCxPQUFPLENBQUUsSUFBSSxDQUNiLGVBQWUsQ0FBRSxhQUFhLENBQzlCLEtBQUssQ0FBRSxJQUNSLENBQ0Esc0JBQU8sQ0FBQyxxQkFBTyxDQUNkLE9BQU8sQ0FBRSxJQUFJLENBQ2IsY0FBYyxDQUFFLEdBQUcsQ0FDbkIsV0FBVyxDQUFFLFVBQVUsQ0FDdkIsR0FBRyxDQUFFLEtBQUssQ0FDVixlQUFlLENBQUUsWUFDbEIiLCJuYW1lcyI6W10sInNvdXJjZXMiOlsic2V0dGluZ3Nfdmlldy5zdmVsdGUiXX0= */");
+}
+function create_description_slot_3(ctx) {
+  let p;
+  let t0;
+  let a;
+  const block2 = {
+    c: function create() {
+      p = element("p");
+      t0 = text("This plugin allows you to sync your vault with Syncthing. It allows you\n		to manage the sync process from within Obsidian. You can only manage the\n		folder you are in. To use this plugin, you need to have Syncthing\n		installed on your device. You can find more information about Syncthing\n		here:\n		");
+      a = element("a");
+      a.textContent = "https://syncthing.net";
+      attr_dev(a, "href", "https://syncthing.net");
+      add_location(a, file15, 50, 2, 2228);
+      attr_dev(p, "slot", "description");
+      add_location(p, file15, 44, 1, 1904);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, p, anchor);
+      append_dev(p, t0);
+      append_dev(p, a);
+    },
+    p: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(p);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_description_slot_3.name,
+    type: "slot",
+    source: "(45:1) ",
+    ctx
+  });
+  return block2;
+}
+function create_if_block_7(ctx) {
+  let obsidiansettingsitem0;
+  let t;
+  let obsidiansettingsitem1;
+  let current;
+  obsidiansettingsitem0 = new obsidian_settings_item_default({
+    props: {
+      heading: true,
+      error: true,
+      name: "Syncthing is not found",
+      $$slots: { description: [create_description_slot_2] },
+      $$scope: { ctx }
+    },
+    $$inline: true
+  });
+  obsidiansettingsitem1 = new obsidian_settings_item_default({
+    props: {
+      name: "Retry",
+      description: "If you want to retry connecting, after setting the API key. This might resolve the issue.",
+      $$slots: { control: [create_control_slot_10] },
+      $$scope: { ctx }
+    },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      create_component(obsidiansettingsitem0.$$.fragment);
+      t = space();
+      create_component(obsidiansettingsitem1.$$.fragment);
+    },
+    m: function mount(target, anchor) {
+      mount_component(obsidiansettingsitem0, target, anchor);
+      insert_dev(target, t, anchor);
+      mount_component(obsidiansettingsitem1, target, anchor);
+      current = true;
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidiansettingsitem0.$$.fragment, local);
+      transition_in(obsidiansettingsitem1.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidiansettingsitem0.$$.fragment, local);
+      transition_out(obsidiansettingsitem1.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(t);
+      }
+      destroy_component(obsidiansettingsitem0, detaching);
+      destroy_component(obsidiansettingsitem1, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block_7.name,
+    type: "if",
+    source: "(56:0) {#if !hasSyncthing}",
+    ctx
+  });
+  return block2;
+}
+function create_description_slot_2(ctx) {
+  let t0;
+  let a;
+  const block2 = {
+    c: function create() {
+      t0 = text("Syncthing is not installed or not found on your device. Please\n			install it at the following URL:\n			");
+      a = element("a");
+      a.textContent = "https://syncthing.net/downloads";
+      attr_dev(a, "href", "https://syncthing.net/downloads");
+      attr_dev(a, "target", "_blank");
+      add_location(a, file15, 64, 3, 2607);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, t0, anchor);
+      insert_dev(target, a, anchor);
+    },
+    p: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(t0);
+        detach_dev(a);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_description_slot_2.name,
+    type: "slot",
+    source: '(62:2) <svelte:fragment slot=\\"description\\">',
+    ctx
+  });
+  return block2;
+}
+function create_control_slot_10(ctx) {
+  let button;
+  const block2 = {
+    c: function create() {
+      button = element("button");
+      button.textContent = "Connect to Syncthing via API.";
+      attr_dev(button, "class", "mod-cta");
+      add_location(button, file15, 74, 3, 2941);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, button, anchor);
+    },
+    p: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(button);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_control_slot_10.name,
+    type: "slot",
+    source: '(74:2) <svelte:fragment slot=\\"control\\">',
+    ctx
+  });
+  return block2;
+}
+function create_description_slot_1(ctx) {
+  let t;
+  const block2 = {
+    c: function create() {
+      t = text("Add your Syncthing API key here for the plugin to work.");
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, t, anchor);
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(t);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_description_slot_1.name,
+    type: "slot",
+    source: '(82:1) <svelte:fragment slot=\\"description\\">',
+    ctx
+  });
+  return block2;
+}
+function create_else_block_1(ctx) {
+  let button0;
+  let current_block_type_index;
+  let if_block;
+  let t;
+  let button1;
+  let obsidianlucideicon;
+  let current;
+  let mounted;
+  let dispose;
+  const if_block_creators = [create_if_block_6, create_else_block_2];
+  const if_blocks = [];
+  function select_block_type_1(ctx2, dirty) {
+    if (
+      /*apiInputType*/
+      ctx2[2] === "password"
+    ) return 0;
+    return 1;
+  }
+  current_block_type_index = select_block_type_1(ctx, -1);
+  if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  obsidianlucideicon = new obsidian_lucide_icon_default({
+    props: { name: "eraser" },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      button0 = element("button");
+      if_block.c();
+      t = space();
+      button1 = element("button");
+      create_component(obsidianlucideicon.$$.fragment);
+      add_location(button0, file15, 99, 3, 3701);
+      add_location(button1, file15, 111, 3, 3978);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, button0, anchor);
+      if_blocks[current_block_type_index].m(button0, null);
+      insert_dev(target, t, anchor);
+      insert_dev(target, button1, anchor);
+      mount_component(obsidianlucideicon, button1, null);
+      current = true;
+      if (!mounted) {
+        dispose = [
+          listen_dev(
+            button0,
+            "click",
+            /*click_handler*/
+            ctx[10],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button1,
+            "click",
+            /*click_handler_1*/
+            ctx[11],
+            false,
+            false,
+            false,
+            false
+          )
+        ];
+        mounted = true;
+      }
+    },
+    p: function update2(ctx2, dirty) {
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type_1(ctx2, dirty);
+      if (current_block_type_index !== previous_block_index) {
+        group_outros();
+        transition_out(if_blocks[previous_block_index], 1, 1, () => {
+          if_blocks[previous_block_index] = null;
+        });
+        check_outros();
+        if_block = if_blocks[current_block_type_index];
+        if (!if_block) {
+          if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+          if_block.c();
+        } else {
+        }
+        transition_in(if_block, 1);
+        if_block.m(button0, null);
+      }
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(if_block);
+      transition_in(obsidianlucideicon.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(if_block);
+      transition_out(obsidianlucideicon.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(button0);
+        detach_dev(t);
+        detach_dev(button1);
+      }
+      if_blocks[current_block_type_index].d();
+      destroy_component(obsidianlucideicon);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_else_block_1.name,
+    type: "else",
+    source: "(99:2) {:else}",
+    ctx
+  });
+  return block2;
+}
+function create_if_block_5(ctx) {
+  let button;
+  let mounted;
+  let dispose;
+  const block2 = {
+    c: function create() {
+      button = element("button");
+      button.textContent = "Get API key";
+      add_location(button, file15, 97, 3, 3636);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, button, anchor);
+      if (!mounted) {
+        dispose = listen_dev(
+          button,
+          "click",
+          /*getAPIkey*/
+          ctx[5],
+          false,
+          false,
+          false,
+          false
+        );
+        mounted = true;
+      }
+    },
+    p: noop,
+    i: noop,
+    o: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(button);
+      }
+      mounted = false;
+      dispose();
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block_5.name,
+    type: "if",
+    source: "(97:2) {#if !parent.plugin.settings.api_key}",
+    ctx
+  });
+  return block2;
+}
+function create_else_block_2(ctx) {
+  let obsidianlucideicon;
+  let current;
+  obsidianlucideicon = new obsidian_lucide_icon_default({
+    props: { name: "eye-off" },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      create_component(obsidianlucideicon.$$.fragment);
+    },
+    m: function mount(target, anchor) {
+      mount_component(obsidianlucideicon, target, anchor);
+      current = true;
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidianlucideicon.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidianlucideicon.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      destroy_component(obsidianlucideicon, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_else_block_2.name,
+    type: "else",
+    source: "(108:4) {:else}",
+    ctx
+  });
+  return block2;
+}
+function create_if_block_6(ctx) {
+  let obsidianlucideicon;
+  let current;
+  obsidianlucideicon = new obsidian_lucide_icon_default({ props: { name: "eye" }, $$inline: true });
+  const block2 = {
+    c: function create() {
+      create_component(obsidianlucideicon.$$.fragment);
+    },
+    m: function mount(target, anchor) {
+      mount_component(obsidianlucideicon, target, anchor);
+      current = true;
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidianlucideicon.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidianlucideicon.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      destroy_component(obsidianlucideicon, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block_6.name,
+    type: "if",
+    source: '(106:4) {#if apiInputType === \\"password\\"}',
+    ctx
+  });
+  return block2;
+}
+function create_control_slot_9(ctx) {
+  let input;
+  let input_value_value;
+  let t;
+  let current_block_type_index;
+  let if_block;
+  let if_block_anchor;
+  let current;
+  let mounted;
+  let dispose;
+  const if_block_creators = [create_if_block_5, create_else_block_1];
+  const if_blocks = [];
+  function select_block_type(ctx2, dirty) {
+    if (!/*parent*/
+    ctx2[0].plugin.settings.api_key) return 0;
+    return 1;
+  }
+  current_block_type_index = select_block_type(ctx, -1);
+  if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  const block2 = {
+    c: function create() {
+      input = element("input");
+      t = space();
+      if_block.c();
+      if_block_anchor = empty();
+      attr_dev(
+        input,
+        "type",
+        /*apiInputType*/
+        ctx[2]
+      );
+      attr_dev(input, "name", "apikey");
+      attr_dev(input, "id", "apikey");
+      input.value = input_value_value = /*parent*/
+      ctx[0].plugin.settings.api_key;
+      attr_dev(input, "placeholder", "Enter your API key here...");
+      add_location(input, file15, 85, 2, 3297);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, input, anchor);
+      insert_dev(target, t, anchor);
+      if_blocks[current_block_type_index].m(target, anchor);
+      insert_dev(target, if_block_anchor, anchor);
+      current = true;
+      if (!mounted) {
+        dispose = listen_dev(
+          input,
+          "change",
+          /*change_handler*/
+          ctx[9],
+          false,
+          false,
+          false,
+          false
+        );
+        mounted = true;
+      }
+    },
+    p: function update2(ctx2, dirty) {
+      if (!current || dirty & /*apiInputType*/
+      4) {
+        attr_dev(
+          input,
+          "type",
+          /*apiInputType*/
+          ctx2[2]
+        );
+      }
+      if (!current || dirty & /*parent*/
+      1 && input_value_value !== (input_value_value = /*parent*/
+      ctx2[0].plugin.settings.api_key) && input.value !== input_value_value) {
+        prop_dev(input, "value", input_value_value);
+      }
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type(ctx2, dirty);
+      if (current_block_type_index === previous_block_index) {
+        if_blocks[current_block_type_index].p(ctx2, dirty);
+      } else {
+        group_outros();
+        transition_out(if_blocks[previous_block_index], 1, 1, () => {
+          if_blocks[previous_block_index] = null;
+        });
+        check_outros();
+        if_block = if_blocks[current_block_type_index];
+        if (!if_block) {
+          if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+          if_block.c();
+        } else {
+          if_block.p(ctx2, dirty);
+        }
+        transition_in(if_block, 1);
+        if_block.m(if_block_anchor.parentNode, if_block_anchor);
+      }
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(if_block);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(input);
+        detach_dev(t);
+        detach_dev(if_block_anchor);
+      }
+      if_blocks[current_block_type_index].d(detaching);
+      mounted = false;
+      dispose();
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_control_slot_9.name,
+    type: "slot",
+    source: '(85:1) <svelte:fragment slot=\\"control\\">',
+    ctx
+  });
+  return block2;
+}
+function create_control_slot_8(ctx) {
+  let button;
+  let mounted;
+  let dispose;
+  const block2 = {
+    c: function create() {
+      button = element("button");
+      button.textContent = "Check API Status";
+      add_location(button, file15, 126, 2, 4329);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, button, anchor);
+      if (!mounted) {
+        dispose = listen_dev(
+          button,
+          "click",
+          /*click_handler_2*/
+          ctx[12],
+          false,
+          false,
+          false,
+          false
+        );
+        mounted = true;
+      }
+    },
+    p: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(button);
+      }
+      mounted = false;
+      dispose();
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_control_slot_8.name,
+    type: "slot",
+    source: '(126:1) <svelte:fragment slot=\\"control\\">',
+    ctx
+  });
+  return block2;
+}
+function create_if_block_42(ctx) {
+  let obsidiansettingsitem;
+  let current;
+  obsidiansettingsitem = new obsidian_settings_item_default({
+    props: {
+      name: "Syncthing CLI Status",
+      $$slots: { control: [create_control_slot_7] },
+      $$scope: { ctx }
+    },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      create_component(obsidiansettingsitem.$$.fragment);
+    },
+    m: function mount(target, anchor) {
+      mount_component(obsidiansettingsitem, target, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, dirty) {
+      const obsidiansettingsitem_changes = {};
+      if (dirty & /*$$scope, parent*/
+      268435457) {
+        obsidiansettingsitem_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      obsidiansettingsitem.$set(obsidiansettingsitem_changes);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidiansettingsitem.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidiansettingsitem.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      destroy_component(obsidiansettingsitem, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block_42.name,
+    type: "if",
+    source: "(145:0) {#if Platform.isDesktopApp}",
+    ctx
+  });
+  return block2;
+}
+function create_control_slot_7(ctx) {
+  let button;
+  let mounted;
+  let dispose;
+  const block2 = {
+    c: function create() {
+      button = element("button");
+      button.textContent = "Check CLI Status";
+      add_location(button, file15, 147, 3, 4819);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, button, anchor);
+      if (!mounted) {
+        dispose = listen_dev(
+          button,
+          "click",
+          /*click_handler_3*/
+          ctx[13],
+          false,
+          false,
+          false,
+          false
+        );
+        mounted = true;
+      }
+    },
+    p: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(button);
+      }
+      mounted = false;
+      dispose();
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_control_slot_7.name,
+    type: "slot",
+    source: '(147:2) <svelte:fragment slot=\\"control\\">',
+    ctx
+  });
+  return block2;
+}
+function create_if_block_32(ctx) {
+  let obsidiansettingsitem;
+  let current;
+  obsidiansettingsitem = new obsidian_settings_item_default({
+    props: {
+      name: "Warning",
+      description: "The following settings are in beta. All plugin's features may not currently be available on mobile.",
+      error: true
+    },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      create_component(obsidiansettingsitem.$$.fragment);
+    },
+    m: function mount(target, anchor) {
+      mount_component(obsidiansettingsitem, target, anchor);
+      current = true;
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidiansettingsitem.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidiansettingsitem.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      destroy_component(obsidiansettingsitem, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block_32.name,
+    type: "if",
+    source: "(167:0) {#if Platform.isMobileApp}",
+    ctx
+  });
+  return block2;
+}
+function create_control_slot_6(ctx) {
+  let div1;
+  let div0;
+  let select;
+  let option0;
+  let option1;
+  let select_value_value;
+  let t2;
+  let input0;
+  let input0_value_value;
+  let t3;
+  let input1;
+  let input1_value_value;
+  let t4;
+  let input2;
+  let mounted;
+  let dispose;
+  const block2 = {
+    c: function create() {
+      var _a, _b, _c, _d;
+      div1 = element("div");
+      div0 = element("div");
+      select = element("select");
+      option0 = element("option");
+      option0.textContent = "http://";
+      option1 = element("option");
+      option1.textContent = "https://";
+      t2 = space();
+      input0 = element("input");
+      t3 = space();
+      input1 = element("input");
+      t4 = space();
+      input2 = element("input");
+      option0.__value = "http";
+      set_input_value(option0, option0.__value);
+      add_location(option0, file15, 210, 4, 6607);
+      option1.__value = "https";
+      set_input_value(option1, option1.__value);
+      add_location(option1, file15, 211, 4, 6650);
+      set_style(select, "border-radius", "var(--input-radius) 0 0 var(--input-radius)");
+      add_location(select, file15, 185, 3, 5874);
+      attr_dev(input0, "type", "text");
+      attr_dev(input0, "placeholder", "Enter your Syncthing address here...");
+      input0.value = input0_value_value = /*parent*/
+      (_b = (_a = ctx[0].plugin.settings.configuration.url) == null ? void 0 : _a.ip_address) != null ? _b : "";
+      set_style(input0, "border-radius", "0");
+      add_location(input0, file15, 214, 3, 6708);
+      attr_dev(input1, "type", "number");
+      attr_dev(input1, "placeholder", "Enter the port...");
+      input1.value = input1_value_value = /*parent*/
+      (_d = (_c = ctx[0].plugin.settings.configuration.url) == null ? void 0 : _c.port) != null ? _d : "";
+      set_style(input1, "border-radius", "0 var(--input-radius) var(--input-radius) 0");
+      add_location(input1, file15, 241, 3, 7476);
+      set_style(div0, "display", "flex");
+      set_style(div0, "align-items", "center");
+      add_location(div0, file15, 184, 2, 5821);
+      set_style(input2, "margin", "2% 0");
+      input2.value = /*syncthingBaseUrl*/
+      ctx[4];
+      input2.disabled = true;
+      add_location(input2, file15, 268, 2, 8267);
+      attr_dev(div1, "slot", "control");
+      set_style(div1, "display", "flex");
+      set_style(div1, "flex-direction", "column");
+      set_style(div1, "align-items", "flex-start");
+      set_style(div1, "justify-content", "flex-end");
+      add_location(div1, file15, 180, 1, 5693);
+    },
+    m: function mount(target, anchor) {
+      var _a, _b;
+      insert_dev(target, div1, anchor);
+      append_dev(div1, div0);
+      append_dev(div0, select);
+      append_dev(select, option0);
+      append_dev(select, option1);
+      select_option(
+        select,
+        /*parent*/
+        (_b = (_a = ctx[0].plugin.settings.configuration.url) == null ? void 0 : _a.protocol) != null ? _b : ""
+      );
+      append_dev(div0, t2);
+      append_dev(div0, input0);
+      append_dev(div0, t3);
+      append_dev(div0, input1);
+      append_dev(div1, t4);
+      append_dev(div1, input2);
+      if (!mounted) {
+        dispose = [
+          listen_dev(
+            select,
+            "change",
+            /*change_handler_1*/
+            ctx[14],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            input0,
+            "change",
+            /*change_handler_2*/
+            ctx[15],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            input1,
+            "change",
+            /*change_handler_3*/
+            ctx[16],
+            false,
+            false,
+            false,
+            false
+          )
+        ];
+        mounted = true;
+      }
+    },
+    p: function update2(ctx2, dirty) {
+      var _a, _b, _c, _d, _e, _f, _g, _h;
+      if (dirty & /*parent*/
+      1 && select_value_value !== (select_value_value = /*parent*/
+      (_b = (_a = ctx2[0].plugin.settings.configuration.url) == null ? void 0 : _a.protocol) != null ? _b : "")) {
+        select_option(
+          select,
+          /*parent*/
+          (_d = (_c = ctx2[0].plugin.settings.configuration.url) == null ? void 0 : _c.protocol) != null ? _d : ""
+        );
+      }
+      if (dirty & /*parent*/
+      1 && input0_value_value !== (input0_value_value = /*parent*/
+      (_f = (_e = ctx2[0].plugin.settings.configuration.url) == null ? void 0 : _e.ip_address) != null ? _f : "") && input0.value !== input0_value_value) {
+        prop_dev(input0, "value", input0_value_value);
+      }
+      if (dirty & /*parent*/
+      1 && input1_value_value !== (input1_value_value = /*parent*/
+      (_h = (_g = ctx2[0].plugin.settings.configuration.url) == null ? void 0 : _g.port) != null ? _h : "") && input1.value !== input1_value_value) {
+        prop_dev(input1, "value", input1_value_value);
+      }
+      if (dirty & /*syncthingBaseUrl*/
+      16 && input2.value !== /*syncthingBaseUrl*/
+      ctx2[4]) {
+        prop_dev(
+          input2,
+          "value",
+          /*syncthingBaseUrl*/
+          ctx2[4]
+        );
+      }
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div1);
+      }
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_control_slot_6.name,
+    type: "slot",
+    source: "(181:1) ",
+    ctx
+  });
+  return block2;
+}
+function create_else_block5(ctx) {
+  let obsidianlucideicon;
+  let current;
+  obsidianlucideicon = new obsidian_lucide_icon_default({
+    props: { name: "eye-off" },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      create_component(obsidianlucideicon.$$.fragment);
+    },
+    m: function mount(target, anchor) {
+      mount_component(obsidianlucideicon, target, anchor);
+      current = true;
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidianlucideicon.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidianlucideicon.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      destroy_component(obsidianlucideicon, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_else_block5.name,
+    type: "else",
+    source: "(307:3) {:else}",
+    ctx
+  });
+  return block2;
+}
+function create_if_block_22(ctx) {
+  let obsidianlucideicon;
+  let current;
+  obsidianlucideicon = new obsidian_lucide_icon_default({ props: { name: "eye" }, $$inline: true });
+  const block2 = {
+    c: function create() {
+      create_component(obsidianlucideicon.$$.fragment);
+    },
+    m: function mount(target, anchor) {
+      mount_component(obsidianlucideicon, target, anchor);
+      current = true;
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidianlucideicon.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidianlucideicon.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      destroy_component(obsidianlucideicon, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block_22.name,
+    type: "if",
+    source: '(305:3) {#if guiPasswordInputType === \\"password\\"}',
+    ctx
+  });
+  return block2;
+}
+function create_control_slot_5(ctx) {
+  let input0;
+  let input0_required_value;
+  let t0;
+  let input1;
+  let input1_value_value;
+  let input1_required_value;
+  let t1;
+  let button;
+  let current_block_type_index;
+  let if_block;
+  let current;
+  let mounted;
+  let dispose;
+  const if_block_creators = [create_if_block_22, create_else_block5];
+  const if_blocks = [];
+  function select_block_type_2(ctx2, dirty) {
+    if (
+      /*guiPasswordInputType*/
+      ctx2[3] === "password"
+    ) return 0;
+    return 1;
+  }
+  current_block_type_index = select_block_type_2(ctx, -1);
+  if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+  const block2 = {
+    c: function create() {
+      var _a;
+      input0 = element("input");
+      t0 = space();
+      input1 = element("input");
+      t1 = space();
+      button = element("button");
+      if_block.c();
+      attr_dev(input0, "type", "text");
+      attr_dev(input0, "placeholder", "Enter your GUI username...");
+      attr_dev(input0, "id", "gui-username");
+      input0.required = input0_required_value = import_obsidian25.Platform.isMobileApp;
+      add_location(input0, file15, 276, 2, 8590);
+      attr_dev(
+        input1,
+        "type",
+        /*guiPasswordInputType*/
+        ctx[3]
+      );
+      attr_dev(input1, "placeholder", "Enter your GUI password...");
+      attr_dev(input1, "id", "gui-password");
+      input1.value = input1_value_value = /*parent*/
+      (_a = ctx[0].plugin.settings.gui_password) != null ? _a : "";
+      input1.required = input1_required_value = import_obsidian25.Platform.isMobileApp;
+      add_location(input1, file15, 287, 2, 8919);
+      add_location(button, file15, 298, 2, 9265);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, input0, anchor);
+      set_input_value(
+        input0,
+        /*parent*/
+        ctx[0].plugin.settings.gui_username
+      );
+      insert_dev(target, t0, anchor);
+      insert_dev(target, input1, anchor);
+      insert_dev(target, t1, anchor);
+      insert_dev(target, button, anchor);
+      if_blocks[current_block_type_index].m(button, null);
+      current = true;
+      if (!mounted) {
+        dispose = [
+          listen_dev(
+            input0,
+            "input",
+            /*input0_input_handler*/
+            ctx[17]
+          ),
+          listen_dev(
+            input0,
+            "change",
+            /*change_handler_4*/
+            ctx[18],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            input1,
+            "change",
+            /*change_handler_5*/
+            ctx[19],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button,
+            "click",
+            /*click_handler_4*/
+            ctx[20],
+            false,
+            false,
+            false,
+            false
+          )
+        ];
+        mounted = true;
+      }
+    },
+    p: function update2(ctx2, dirty) {
+      var _a;
+      if (dirty & /*parent*/
+      1 && input0.value !== /*parent*/
+      ctx2[0].plugin.settings.gui_username) {
+        set_input_value(
+          input0,
+          /*parent*/
+          ctx2[0].plugin.settings.gui_username
+        );
+      }
+      if (!current || dirty & /*guiPasswordInputType*/
+      8) {
+        attr_dev(
+          input1,
+          "type",
+          /*guiPasswordInputType*/
+          ctx2[3]
+        );
+      }
+      if (!current || dirty & /*parent*/
+      1 && input1_value_value !== (input1_value_value = /*parent*/
+      (_a = ctx2[0].plugin.settings.gui_password) != null ? _a : "") && input1.value !== input1_value_value) {
+        prop_dev(input1, "value", input1_value_value);
+      }
+      let previous_block_index = current_block_type_index;
+      current_block_type_index = select_block_type_2(ctx2, dirty);
+      if (current_block_type_index !== previous_block_index) {
+        group_outros();
+        transition_out(if_blocks[previous_block_index], 1, 1, () => {
+          if_blocks[previous_block_index] = null;
+        });
+        check_outros();
+        if_block = if_blocks[current_block_type_index];
+        if (!if_block) {
+          if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
+          if_block.c();
+        } else {
+        }
+        transition_in(if_block, 1);
+        if_block.m(button, null);
+      }
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(if_block);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(if_block);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(input0);
+        detach_dev(t0);
+        detach_dev(input1);
+        detach_dev(t1);
+        detach_dev(button);
+      }
+      if_blocks[current_block_type_index].d();
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_control_slot_5.name,
+    type: "slot",
+    source: '(276:1) <svelte:fragment slot=\\"control\\">',
+    ctx
+  });
+  return block2;
+}
+function create_control_slot_4(ctx) {
+  let button;
+  let obsidianlucideicon;
+  let current;
+  let mounted;
+  let dispose;
+  obsidianlucideicon = new obsidian_lucide_icon_default({ props: { name: "link" }, $$inline: true });
+  const block2 = {
+    c: function create() {
+      button = element("button");
+      create_component(obsidianlucideicon.$$.fragment);
+      attr_dev(button, "slot", "control");
+      attr_dev(button, "class", "mod-cta");
+      add_location(button, file15, 316, 1, 9703);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, button, anchor);
+      mount_component(obsidianlucideicon, button, null);
+      current = true;
+      if (!mounted) {
+        dispose = listen_dev(
+          button,
+          "click",
+          /*click_handler_5*/
+          ctx[21],
+          false,
+          false,
+          false,
+          false
+        );
+        mounted = true;
+      }
+    },
+    p: noop,
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidianlucideicon.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidianlucideicon.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(button);
+      }
+      destroy_component(obsidianlucideicon);
+      mounted = false;
+      dispose();
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_control_slot_4.name,
+    type: "slot",
+    source: "(317:1) ",
+    ctx
+  });
+  return block2;
+}
+function create_control_slot_3(ctx) {
+  let button;
+  let obsidianlucideicon;
+  let current;
+  let mounted;
+  let dispose;
+  obsidianlucideicon = new obsidian_lucide_icon_default({ props: { name: "cog" }, $$inline: true });
+  const block2 = {
+    c: function create() {
+      button = element("button");
+      create_component(obsidianlucideicon.$$.fragment);
+      attr_dev(button, "slot", "control");
+      add_location(button, file15, 353, 1, 10761);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, button, anchor);
+      mount_component(obsidianlucideicon, button, null);
+      current = true;
+      if (!mounted) {
+        dispose = listen_dev(
+          button,
+          "click",
+          /*click_handler_6*/
+          ctx[22],
+          false,
+          false,
+          false,
+          false
+        );
+        mounted = true;
+      }
+    },
+    p: noop,
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidianlucideicon.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidianlucideicon.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(button);
+      }
+      destroy_component(obsidianlucideicon);
+      mounted = false;
+      dispose();
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_control_slot_3.name,
+    type: "slot",
+    source: "(354:1) ",
+    ctx
+  });
+  return block2;
+}
+function create_if_block_14(ctx) {
+  let obsidiansettingsitem0;
+  let t;
+  let obsidiansettingsitem1;
+  let current;
+  obsidiansettingsitem0 = new obsidian_settings_item_default({
+    props: { name: "Plugin's Dev Mode", heading: true },
+    $$inline: true
+  });
+  obsidiansettingsitem1 = new obsidian_settings_item_default({
+    props: {
+      name: "Enable Plugin's Developer Mode",
+      description: "For the moment, the developer mode contains a Syncthing conflicts generator. It allows to test the plugin's conflict resolution system.",
+      $$slots: {
+        control: [create_control_slot_2],
+        description: [create_description_slot2]
+      },
+      $$scope: { ctx }
+    },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      create_component(obsidiansettingsitem0.$$.fragment);
+      t = space();
+      create_component(obsidiansettingsitem1.$$.fragment);
+    },
+    m: function mount(target, anchor) {
+      mount_component(obsidiansettingsitem0, target, anchor);
+      insert_dev(target, t, anchor);
+      mount_component(obsidiansettingsitem1, target, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, dirty) {
+      const obsidiansettingsitem1_changes = {};
+      if (dirty & /*$$scope, parent*/
+      268435457) {
+        obsidiansettingsitem1_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      obsidiansettingsitem1.$set(obsidiansettingsitem1_changes);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidiansettingsitem0.$$.fragment, local);
+      transition_in(obsidiansettingsitem1.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidiansettingsitem0.$$.fragment, local);
+      transition_out(obsidiansettingsitem1.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(t);
+      }
+      destroy_component(obsidiansettingsitem0, detaching);
+      destroy_component(obsidiansettingsitem1, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block_14.name,
+    type: "if",
+    source: "(369:0) {#if Platform.isDesktopApp}",
+    ctx
+  });
+  return block2;
+}
+function create_description_slot2(ctx) {
+  let t0;
+  let br2;
+  let t1;
+  const block2 = {
+    c: function create() {
+      t0 = text("For the moment, the developer mode contains a Syncthing conflicts\n			generator.\n			");
+      br2 = element("br");
+      t1 = text("\n			It allows to test the plugin's conflict resolution system.");
+      add_location(br2, file15, 377, 3, 11533);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, t0, anchor);
+      insert_dev(target, br2, anchor);
+      insert_dev(target, t1, anchor);
+    },
+    p: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(t0);
+        detach_dev(br2);
+        detach_dev(t1);
+      }
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_description_slot2.name,
+    type: "slot",
+    source: '(375:2) <svelte:fragment slot=\\"description\\">',
+    ctx
+  });
+  return block2;
+}
+function create_control_slot_2(ctx) {
+  let obsidiantoggle;
+  let current;
+  obsidiantoggle = new obsidian_toggle_default({
+    props: {
+      callback: (
+        /*func*/
+        ctx[23]
+      ),
+      slot: "control"
+    },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      create_component(obsidiantoggle.$$.fragment);
+    },
+    m: function mount(target, anchor) {
+      mount_component(obsidiantoggle, target, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, dirty) {
+      const obsidiantoggle_changes = {};
+      if (dirty & /*parent*/
+      1) obsidiantoggle_changes.callback = /*func*/
+      ctx2[23];
+      obsidiantoggle.$set(obsidiantoggle_changes);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidiantoggle.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidiantoggle.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      destroy_component(obsidiantoggle, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_control_slot_2.name,
+    type: "slot",
+    source: "(381:2) ",
+    ctx
+  });
+  return block2;
+}
+function create_if_block9(ctx) {
+  let obsidiansettingsitem0;
+  let t;
+  let obsidiansettingsitem1;
+  let current;
+  obsidiansettingsitem0 = new obsidian_settings_item_default({
+    props: { name: "Open Mobile app", heading: true },
+    $$inline: true
+  });
+  obsidiansettingsitem1 = new obsidian_settings_item_default({
+    props: {
+      name: "Open Syncthing mobile app",
+      description: "Open the Syncthing mobile app, if not it opens the Google Play Store page.",
+      $$slots: { control: [create_control_slot_12] },
+      $$scope: { ctx }
+    },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      create_component(obsidiansettingsitem0.$$.fragment);
+      t = space();
+      create_component(obsidiansettingsitem1.$$.fragment);
+    },
+    m: function mount(target, anchor) {
+      mount_component(obsidiansettingsitem0, target, anchor);
+      insert_dev(target, t, anchor);
+      mount_component(obsidiansettingsitem1, target, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, dirty) {
+      const obsidiansettingsitem1_changes = {};
+      if (dirty & /*$$scope, parent*/
+      268435457) {
+        obsidiansettingsitem1_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      obsidiansettingsitem1.$set(obsidiansettingsitem1_changes);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidiansettingsitem0.$$.fragment, local);
+      transition_in(obsidiansettingsitem1.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidiansettingsitem0.$$.fragment, local);
+      transition_out(obsidiansettingsitem1.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(t);
+      }
+      destroy_component(obsidiansettingsitem0, detaching);
+      destroy_component(obsidiansettingsitem1, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_if_block9.name,
+    type: "if",
+    source: "(395:0) {#if Platform.isMobileApp}",
+    ctx
+  });
+  return block2;
+}
+function create_control_slot_12(ctx) {
+  let button;
+  let mounted;
+  let dispose;
+  const block2 = {
+    c: function create() {
+      button = element("button");
+      button.textContent = "Open Syncthing on Mobile.";
+      add_location(button, file15, 401, 3, 12241);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, button, anchor);
+      if (!mounted) {
+        dispose = listen_dev(
+          button,
+          "click",
+          /*click_handler_7*/
+          ctx[24],
+          false,
+          false,
+          false,
+          false
+        );
+        mounted = true;
+      }
+    },
+    p: noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(button);
+      }
+      mounted = false;
+      dispose();
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_control_slot_12.name,
+    type: "slot",
+    source: '(401:2) <svelte:fragment slot=\\"control\\">',
+    ctx
+  });
+  return block2;
+}
+function create_control_slot2(ctx) {
+  let div;
+  let button0;
+  let obsidianlucideicon0;
+  let t0;
+  let t1;
+  let button1;
+  let obsidianlucideicon1;
+  let t2;
+  let t3;
+  let button2;
+  let obsidianlucideicon2;
+  let t4;
+  let current;
+  let mounted;
+  let dispose;
+  obsidianlucideicon0 = new obsidian_lucide_icon_default({ props: { name: "heart" }, $$inline: true });
+  obsidianlucideicon1 = new obsidian_lucide_icon_default({
+    props: { name: "github" },
+    $$inline: true
+  });
+  obsidianlucideicon2 = new obsidian_lucide_icon_default({ props: { name: "bug" }, $$inline: true });
+  const block2 = {
+    c: function create() {
+      div = element("div");
+      button0 = element("button");
+      create_component(obsidianlucideicon0.$$.fragment);
+      t0 = text("\n			Sponsor");
+      t1 = space();
+      button1 = element("button");
+      create_component(obsidianlucideicon1.$$.fragment);
+      t2 = text("\n			GitHub repo");
+      t3 = space();
+      button2 = element("button");
+      create_component(obsidianlucideicon2.$$.fragment);
+      t4 = text("\n			Report a bug");
+      attr_dev(button0, "class", "svelte-13bfvu7");
+      add_location(button0, file15, 422, 2, 12805);
+      attr_dev(button1, "class", "svelte-13bfvu7");
+      add_location(button1, file15, 431, 2, 12996);
+      attr_dev(button2, "class", "svelte-13bfvu7");
+      add_location(button2, file15, 440, 2, 13214);
+      attr_dev(div, "slot", "control");
+      attr_dev(div, "class", "footer svelte-13bfvu7");
+      add_location(div, file15, 421, 1, 12767);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+      append_dev(div, button0);
+      mount_component(obsidianlucideicon0, button0, null);
+      append_dev(button0, t0);
+      append_dev(div, t1);
+      append_dev(div, button1);
+      mount_component(obsidianlucideicon1, button1, null);
+      append_dev(button1, t2);
+      append_dev(div, t3);
+      append_dev(div, button2);
+      mount_component(obsidianlucideicon2, button2, null);
+      append_dev(button2, t4);
+      current = true;
+      if (!mounted) {
+        dispose = [
+          listen_dev(
+            button0,
+            "click",
+            /*click_handler_8*/
+            ctx[25],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button1,
+            "click",
+            /*click_handler_9*/
+            ctx[26],
+            false,
+            false,
+            false,
+            false
+          ),
+          listen_dev(
+            button2,
+            "click",
+            /*click_handler_10*/
+            ctx[27],
+            false,
+            false,
+            false,
+            false
+          )
+        ];
+        mounted = true;
+      }
+    },
+    p: noop,
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidianlucideicon0.$$.fragment, local);
+      transition_in(obsidianlucideicon1.$$.fragment, local);
+      transition_in(obsidianlucideicon2.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidianlucideicon0.$$.fragment, local);
+      transition_out(obsidianlucideicon1.$$.fragment, local);
+      transition_out(obsidianlucideicon2.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(div);
+      }
+      destroy_component(obsidianlucideicon0);
+      destroy_component(obsidianlucideicon1);
+      destroy_component(obsidianlucideicon2);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_control_slot2.name,
+    type: "slot",
+    source: "(422:1) ",
+    ctx
+  });
+  return block2;
+}
+function create_fragment18(ctx) {
+  let p;
+  let a;
+  let img0;
+  let img0_src_value;
+  let t0;
+  let img1;
+  let img1_src_value;
+  let t1;
+  let obsidiansettingsitem0;
+  let t2;
+  let t3;
+  let obsidiansettingsitem1;
+  let t4;
+  let obsidiansettingsitem2;
+  let t5;
+  let t6;
+  let t7;
+  let obsidiansettingsitem3;
+  let t8;
+  let obsidiansettingsitem4;
+  let t9;
+  let obsidiansettingsitem5;
+  let t10;
+  let obsidiansettingsitem6;
+  let t11;
+  let obsidiansettingsitem7;
+  let t12;
+  let obsidiansettingsitem8;
+  let t13;
+  let syncthingignorefiles;
+  let t14;
+  let t15;
+  let t16;
+  let obsidiansettingsitem9;
+  let current;
+  obsidiansettingsitem0 = new obsidian_settings_item_default({
+    props: {
+      name: "Syncthing Integration for Obsidian",
+      heading: true,
+      $$slots: { description: [create_description_slot_3] },
+      $$scope: { ctx }
+    },
+    $$inline: true
+  });
+  let if_block0 = !/*hasSyncthing*/
+  ctx[1] && create_if_block_7(ctx);
+  obsidiansettingsitem1 = new obsidian_settings_item_default({
+    props: {
+      name: "Syncthing API Key",
+      heading: true,
+      $$slots: {
+        control: [create_control_slot_9],
+        description: [create_description_slot_1]
+      },
+      $$scope: { ctx }
+    },
+    $$inline: true
+  });
+  obsidiansettingsitem2 = new obsidian_settings_item_default({
+    props: {
+      name: "Syncthing API Status",
+      $$slots: { control: [create_control_slot_8] },
+      $$scope: { ctx }
+    },
+    $$inline: true
+  });
+  let if_block1 = import_obsidian25.Platform.isDesktopApp && create_if_block_42(ctx);
+  let if_block2 = import_obsidian25.Platform.isMobileApp && create_if_block_32(ctx);
+  obsidiansettingsitem3 = new obsidian_settings_item_default({
+    props: {
+      name: "Syncthing base URL",
+      heading: true
+    },
+    $$inline: true
+  });
+  obsidiansettingsitem4 = new obsidian_settings_item_default({
+    props: {
+      name: "Set the Syncthing base URL",
+      description: "Please set your Syncthing base URL here. This address will be used to open the Syncthing GUI in your browser and to make API requests.",
+      $$slots: { control: [create_control_slot_6] },
+      $$scope: { ctx }
+    },
+    $$inline: true
+  });
+  obsidiansettingsitem5 = new obsidian_settings_item_default({
+    props: {
+      name: "Set GUI Credentials",
+      description: "Please set your Syncthing GUI credentials here. These credentials will be used to open the Syncthing GUI in your browser.",
+      $$slots: { control: [create_control_slot_5] },
+      $$scope: { ctx }
+    },
+    $$inline: true
+  });
+  obsidiansettingsitem6 = new obsidian_settings_item_default({
+    props: {
+      name: "Open Syncthing GUI",
+      description: "Open the Syncthing GUI in your browser.",
+      $$slots: { control: [create_control_slot_4] },
+      $$scope: { ctx }
+    },
+    $$inline: true
+  });
+  obsidiansettingsitem7 = new obsidian_settings_item_default({
+    props: {
+      name: "Syncthing Configuration",
+      heading: true
+    },
+    $$inline: true
+  });
+  obsidiansettingsitem8 = new obsidian_settings_item_default({
+    props: {
+      name: "In construction",
+      description: "This part is in construction.",
+      $$slots: { control: [create_control_slot_3] },
+      $$scope: { ctx }
+    },
+    $$inline: true
+  });
+  syncthingignorefiles = new syncthing_ignore_files_default({
+    props: { parent: (
+      /*parent*/
+      ctx[0]
+    ) },
+    $$inline: true
+  });
+  let if_block3 = import_obsidian25.Platform.isDesktopApp && create_if_block_14(ctx);
+  let if_block4 = import_obsidian25.Platform.isMobileApp && create_if_block9(ctx);
+  obsidiansettingsitem9 = new obsidian_settings_item_default({
+    props: {
+      heading: true,
+      $$slots: { control: [create_control_slot2] },
+      $$scope: { ctx }
+    },
+    $$inline: true
+  });
+  const block2 = {
+    c: function create() {
+      p = element("p");
+      a = element("a");
+      img0 = element("img");
+      t0 = space();
+      img1 = element("img");
+      t1 = space();
+      create_component(obsidiansettingsitem0.$$.fragment);
+      t2 = space();
+      if (if_block0) if_block0.c();
+      t3 = space();
+      create_component(obsidiansettingsitem1.$$.fragment);
+      t4 = space();
+      create_component(obsidiansettingsitem2.$$.fragment);
+      t5 = space();
+      if (if_block1) if_block1.c();
+      t6 = space();
+      if (if_block2) if_block2.c();
+      t7 = space();
+      create_component(obsidiansettingsitem3.$$.fragment);
+      t8 = space();
+      create_component(obsidiansettingsitem4.$$.fragment);
+      t9 = space();
+      create_component(obsidiansettingsitem5.$$.fragment);
+      t10 = space();
+      create_component(obsidiansettingsitem6.$$.fragment);
+      t11 = space();
+      create_component(obsidiansettingsitem7.$$.fragment);
+      t12 = space();
+      create_component(obsidiansettingsitem8.$$.fragment);
+      t13 = space();
+      create_component(syncthingignorefiles.$$.fragment);
+      t14 = space();
+      if (if_block3) if_block3.c();
+      t15 = space();
+      if (if_block4) if_block4.c();
+      t16 = space();
+      create_component(obsidiansettingsitem9.$$.fragment);
+      if (!src_url_equal(img0.src, img0_src_value = SyncthingLogo)) attr_dev(img0, "src", img0_src_value);
+      attr_dev(img0, "alt", "Syncthing's logo");
+      attr_dev(img0, "class", "svelte-13bfvu7");
+      add_location(img0, file15, 37, 2, 1678);
+      if (!src_url_equal(img1.src, img1_src_value = ObsidianLogo)) attr_dev(img1, "src", img1_src_value);
+      attr_dev(img1, "alt", "Obsidian's logo");
+      attr_dev(img1, "class", "svelte-13bfvu7");
+      add_location(img1, file15, 38, 2, 1731);
+      attr_dev(a, "href", "https://github.com/LBF38/obsidian-syncthing-integration");
+      attr_dev(a, "class", "svelte-13bfvu7");
+      add_location(a, file15, 36, 1, 1609);
+      attr_dev(p, "class", "banner svelte-13bfvu7");
+      add_location(p, file15, 35, 0, 1589);
+    },
+    l: function claim(nodes) {
+      throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, p, anchor);
+      append_dev(p, a);
+      append_dev(a, img0);
+      append_dev(a, t0);
+      append_dev(a, img1);
+      insert_dev(target, t1, anchor);
+      mount_component(obsidiansettingsitem0, target, anchor);
+      insert_dev(target, t2, anchor);
+      if (if_block0) if_block0.m(target, anchor);
+      insert_dev(target, t3, anchor);
+      mount_component(obsidiansettingsitem1, target, anchor);
+      insert_dev(target, t4, anchor);
+      mount_component(obsidiansettingsitem2, target, anchor);
+      insert_dev(target, t5, anchor);
+      if (if_block1) if_block1.m(target, anchor);
+      insert_dev(target, t6, anchor);
+      if (if_block2) if_block2.m(target, anchor);
+      insert_dev(target, t7, anchor);
+      mount_component(obsidiansettingsitem3, target, anchor);
+      insert_dev(target, t8, anchor);
+      mount_component(obsidiansettingsitem4, target, anchor);
+      insert_dev(target, t9, anchor);
+      mount_component(obsidiansettingsitem5, target, anchor);
+      insert_dev(target, t10, anchor);
+      mount_component(obsidiansettingsitem6, target, anchor);
+      insert_dev(target, t11, anchor);
+      mount_component(obsidiansettingsitem7, target, anchor);
+      insert_dev(target, t12, anchor);
+      mount_component(obsidiansettingsitem8, target, anchor);
+      insert_dev(target, t13, anchor);
+      mount_component(syncthingignorefiles, target, anchor);
+      insert_dev(target, t14, anchor);
+      if (if_block3) if_block3.m(target, anchor);
+      insert_dev(target, t15, anchor);
+      if (if_block4) if_block4.m(target, anchor);
+      insert_dev(target, t16, anchor);
+      mount_component(obsidiansettingsitem9, target, anchor);
+      current = true;
+    },
+    p: function update2(ctx2, [dirty]) {
+      const obsidiansettingsitem0_changes = {};
+      if (dirty & /*$$scope*/
+      268435456) {
+        obsidiansettingsitem0_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      obsidiansettingsitem0.$set(obsidiansettingsitem0_changes);
+      if (!/*hasSyncthing*/
+      ctx2[1]) {
+        if (if_block0) {
+          if (dirty & /*hasSyncthing*/
+          2) {
+            transition_in(if_block0, 1);
+          }
+        } else {
+          if_block0 = create_if_block_7(ctx2);
+          if_block0.c();
+          transition_in(if_block0, 1);
+          if_block0.m(t3.parentNode, t3);
+        }
+      } else if (if_block0) {
+        group_outros();
+        transition_out(if_block0, 1, 1, () => {
+          if_block0 = null;
+        });
+        check_outros();
+      }
+      const obsidiansettingsitem1_changes = {};
+      if (dirty & /*$$scope, parent, apiInputType*/
+      268435461) {
+        obsidiansettingsitem1_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      obsidiansettingsitem1.$set(obsidiansettingsitem1_changes);
+      const obsidiansettingsitem2_changes = {};
+      if (dirty & /*$$scope, parent*/
+      268435457) {
+        obsidiansettingsitem2_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      obsidiansettingsitem2.$set(obsidiansettingsitem2_changes);
+      if (import_obsidian25.Platform.isDesktopApp) if_block1.p(ctx2, dirty);
+      const obsidiansettingsitem4_changes = {};
+      if (dirty & /*$$scope, syncthingBaseUrl, parent*/
+      268435473) {
+        obsidiansettingsitem4_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      obsidiansettingsitem4.$set(obsidiansettingsitem4_changes);
+      const obsidiansettingsitem5_changes = {};
+      if (dirty & /*$$scope, guiPasswordInputType, parent*/
+      268435465) {
+        obsidiansettingsitem5_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      obsidiansettingsitem5.$set(obsidiansettingsitem5_changes);
+      const obsidiansettingsitem6_changes = {};
+      if (dirty & /*$$scope, parent, syncthingBaseUrl*/
+      268435473) {
+        obsidiansettingsitem6_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      obsidiansettingsitem6.$set(obsidiansettingsitem6_changes);
+      const obsidiansettingsitem8_changes = {};
+      if (dirty & /*$$scope, parent*/
+      268435457) {
+        obsidiansettingsitem8_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      obsidiansettingsitem8.$set(obsidiansettingsitem8_changes);
+      const syncthingignorefiles_changes = {};
+      if (dirty & /*parent*/
+      1) syncthingignorefiles_changes.parent = /*parent*/
+      ctx2[0];
+      syncthingignorefiles.$set(syncthingignorefiles_changes);
+      if (import_obsidian25.Platform.isDesktopApp) if_block3.p(ctx2, dirty);
+      if (import_obsidian25.Platform.isMobileApp) if_block4.p(ctx2, dirty);
+      const obsidiansettingsitem9_changes = {};
+      if (dirty & /*$$scope*/
+      268435456) {
+        obsidiansettingsitem9_changes.$$scope = { dirty, ctx: ctx2 };
+      }
+      obsidiansettingsitem9.$set(obsidiansettingsitem9_changes);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(obsidiansettingsitem0.$$.fragment, local);
+      transition_in(if_block0);
+      transition_in(obsidiansettingsitem1.$$.fragment, local);
+      transition_in(obsidiansettingsitem2.$$.fragment, local);
+      transition_in(if_block1);
+      transition_in(if_block2);
+      transition_in(obsidiansettingsitem3.$$.fragment, local);
+      transition_in(obsidiansettingsitem4.$$.fragment, local);
+      transition_in(obsidiansettingsitem5.$$.fragment, local);
+      transition_in(obsidiansettingsitem6.$$.fragment, local);
+      transition_in(obsidiansettingsitem7.$$.fragment, local);
+      transition_in(obsidiansettingsitem8.$$.fragment, local);
+      transition_in(syncthingignorefiles.$$.fragment, local);
+      transition_in(if_block3);
+      transition_in(if_block4);
+      transition_in(obsidiansettingsitem9.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(obsidiansettingsitem0.$$.fragment, local);
+      transition_out(if_block0);
+      transition_out(obsidiansettingsitem1.$$.fragment, local);
+      transition_out(obsidiansettingsitem2.$$.fragment, local);
+      transition_out(if_block1);
+      transition_out(if_block2);
+      transition_out(obsidiansettingsitem3.$$.fragment, local);
+      transition_out(obsidiansettingsitem4.$$.fragment, local);
+      transition_out(obsidiansettingsitem5.$$.fragment, local);
+      transition_out(obsidiansettingsitem6.$$.fragment, local);
+      transition_out(obsidiansettingsitem7.$$.fragment, local);
+      transition_out(obsidiansettingsitem8.$$.fragment, local);
+      transition_out(syncthingignorefiles.$$.fragment, local);
+      transition_out(if_block3);
+      transition_out(if_block4);
+      transition_out(obsidiansettingsitem9.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        detach_dev(p);
+        detach_dev(t1);
+        detach_dev(t2);
+        detach_dev(t3);
+        detach_dev(t4);
+        detach_dev(t5);
+        detach_dev(t6);
+        detach_dev(t7);
+        detach_dev(t8);
+        detach_dev(t9);
+        detach_dev(t10);
+        detach_dev(t11);
+        detach_dev(t12);
+        detach_dev(t13);
+        detach_dev(t14);
+        detach_dev(t15);
+        detach_dev(t16);
+      }
+      destroy_component(obsidiansettingsitem0, detaching);
+      if (if_block0) if_block0.d(detaching);
+      destroy_component(obsidiansettingsitem1, detaching);
+      destroy_component(obsidiansettingsitem2, detaching);
+      if (if_block1) if_block1.d(detaching);
+      if (if_block2) if_block2.d(detaching);
+      destroy_component(obsidiansettingsitem3, detaching);
+      destroy_component(obsidiansettingsitem4, detaching);
+      destroy_component(obsidiansettingsitem5, detaching);
+      destroy_component(obsidiansettingsitem6, detaching);
+      destroy_component(obsidiansettingsitem7, detaching);
+      destroy_component(obsidiansettingsitem8, detaching);
+      destroy_component(syncthingignorefiles, detaching);
+      if (if_block3) if_block3.d(detaching);
+      if (if_block4) if_block4.d(detaching);
+      destroy_component(obsidiansettingsitem9, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block2,
+    id: create_fragment18.name,
+    type: "component",
+    source: "",
+    ctx
+  });
+  return block2;
+}
+function instance18($$self, $$props, $$invalidate) {
+  let { $$slots: slots = {}, $$scope } = $$props;
+  validate_slots("Settings_view", slots, []);
+  var _a, _b, _c;
+  let { parent } = $$props;
+  let hasSyncthing = true;
+  let apiInputType = "password";
+  let guiPasswordInputType = "password";
+  let syncthingBaseUrl = "";
+  onMount(() => __awaiter(void 0, void 0, void 0, function* () {
+    $$invalidate(1, hasSyncthing = yield parent.syncthingController.hasSyncthing());
+  }));
+  function getAPIkey() {
+    return __awaiter(this, void 0, void 0, function* () {
+      parent.syncthingController.getAPIKey().then((key) => {
+        if (key instanceof Failure) {
+          new import_obsidian25.Notice(key.message);
+          return;
+        }
+        $$invalidate(0, parent.plugin.settings.api_key = key, parent);
+        parent.plugin.saveSettings();
+      });
+    });
+  }
+  $$self.$$.on_mount.push(function() {
+    if (parent === void 0 && !("parent" in $$props || $$self.$$.bound[$$self.$$.props["parent"]])) {
+      console_15.warn("<Settings_view> was created without expected prop 'parent'");
+    }
+  });
+  const writable_props = ["parent"];
+  Object.keys($$props).forEach((key) => {
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$" && key !== "slot") console_15.warn(`<Settings_view> was created with unknown prop '${key}'`);
+  });
+  const change_handler = async (event) => {
+    $$invalidate(0, parent.plugin.settings.api_key = event.currentTarget.value, parent);
+    await parent.plugin.saveSettings();
+  };
+  const click_handler = () => {
+    $$invalidate(2, apiInputType = apiInputType === "password" ? "text" : "password");
+  };
+  const click_handler_1 = async () => {
+    $$invalidate(0, parent.plugin.settings.api_key = "", parent);
+    await parent.plugin.saveSettings();
+  };
+  const click_handler_2 = async () => {
+    parent.syncthingController.getAPIStatus().then((status) => {
+      new import_obsidian25.Notice(`Syncthing Ping : ${status}`);
+    }).catch((error) => {
+      console.log("settings tab error: ", error);
+      new import_obsidian25.Notice(error.message);
+    });
+  };
+  const click_handler_3 = async () => {
+    parent.syncthingController.getCLIStatus().then((status) => {
+      new import_obsidian25.Notice(`Syncthing Ping : ${status}`);
+    }).catch((error) => {
+      new import_obsidian25.Notice(error.message);
+    });
+  };
+  const change_handler_1 = async (event) => {
+    console.log("select change: ", event, event.currentTarget.value);
+    if (!parent.plugin.settings.configuration.url) {
+      $$invalidate(
+        0,
+        parent.plugin.settings.configuration.url = {
+          protocol: "http",
+          ip_address: "localhost",
+          port: 8384
+        },
+        parent
+      );
+    }
+    if (event.currentTarget.value === "http" || event.currentTarget.value === "https") $$invalidate(0, parent.plugin.settings.configuration.url.protocol = event.currentTarget.value, parent);
+    await parent.plugin.saveSettings();
+  };
+  const change_handler_2 = async (event) => {
+    console.log("ip address change: ", event, event.currentTarget.value);
+    const valueChange = event.currentTarget.value;
+    if (!parent.plugin.settings.configuration.url) {
+      $$invalidate(
+        0,
+        parent.plugin.settings.configuration.url = {
+          protocol: "http",
+          ip_address: "localhost",
+          port: 8384
+        },
+        parent
+      );
+    }
+    $$invalidate(
+      0,
+      parent.plugin.settings.configuration.url.ip_address = valueChange === "" || !valueChange ? "localhost" : valueChange,
+      parent
+    );
+    await parent.plugin.saveSettings();
+  };
+  const change_handler_3 = async (event) => {
+    console.log("port change: ", event, event.currentTarget.value);
+    const valueChange = event.currentTarget.value;
+    if (!parent.plugin.settings.configuration.url) {
+      $$invalidate(
+        0,
+        parent.plugin.settings.configuration.url = {
+          protocol: "http",
+          ip_address: "localhost",
+          port: 8384
+        },
+        parent
+      );
+    }
+    $$invalidate(
+      0,
+      parent.plugin.settings.configuration.url.port = isNaN(parseInt(valueChange)) || !valueChange ? 8384 : parseInt(valueChange),
+      parent
+    );
+    await parent.plugin.saveSettings();
+  };
+  function input0_input_handler() {
+    parent.plugin.settings.gui_username = this.value;
+    $$invalidate(0, parent);
+  }
+  const change_handler_4 = async (event) => {
+    $$invalidate(0, parent.plugin.settings.gui_username = event.currentTarget.value, parent);
+    await parent.plugin.saveSettings();
+  };
+  const change_handler_5 = async (event) => {
+    $$invalidate(0, parent.plugin.settings.gui_password = event.currentTarget.value, parent);
+    await parent.plugin.saveSettings();
+  };
+  const click_handler_4 = () => {
+    $$invalidate(3, guiPasswordInputType = guiPasswordInputType === "password" ? "text" : "password");
+  };
+  const click_handler_5 = async () => {
+    var _a2, _b2, _c2;
+    if ((!parent.plugin.settings.gui_username || !parent.plugin.settings.gui_password) && import_obsidian25.Platform.isMobileApp) {
+      new import_obsidian25.Notice("Please set your GUI credentials first. There are needed on mobile app.");
+      return;
+    }
+    let url;
+    if (parent.plugin.settings.gui_username && parent.plugin.settings.gui_password) {
+      url = `${(_a2 = parent.plugin.settings.configuration.url) == null ? void 0 : _a2.protocol}://${parent.plugin.settings.gui_username}:${parent.plugin.settings.gui_password}@${(_b2 = parent.plugin.settings.configuration.url) == null ? void 0 : _b2.ip_address}:${(_c2 = parent.plugin.settings.configuration.url) == null ? void 0 : _c2.port}`;
+    } else {
+      url = syncthingBaseUrl;
+    }
+    open(url);
+  };
+  const click_handler_6 = async (event) => {
+    new import_obsidian25.Notice("This part is in construction.");
+    new ConfigurationModal(parent.app, parent.plugin).open();
+  };
+  const func2 = async (value) => {
+    $$invalidate(0, parent.plugin.settings.devMode = value, parent);
+    await parent.plugin.saveSettings();
+    parent.plugin.onunload();
+    parent.plugin.onload();
+  };
+  const click_handler_7 = () => {
+    if (!import_obsidian25.Platform.isAndroidApp) {
+      new import_obsidian25.Notice("The feature is not implemented for your platform. Please open the Syncthing app for your platform. You can create an issue on GitHub if you want to request this feature.", 5e3);
+      return;
+    }
+    parent.plugin.syncthingFromAndroid.openSyncthing();
+  };
+  const click_handler_8 = () => {
+    open("https://github.com/sponsors/LBF38");
+  };
+  const click_handler_9 = () => {
+    open("https://github.com/LBF38/obsidian-syncthing-integration");
+  };
+  const click_handler_10 = () => {
+    open("https://github.com/LBF38/obsidian-syncthing-integration/issues/new/choose");
+  };
+  $$self.$$set = ($$props2) => {
+    if ("parent" in $$props2) $$invalidate(0, parent = $$props2.parent);
+  };
+  $$self.$capture_state = () => ({
+    _a,
+    _b,
+    _c,
+    __awaiter,
+    Notice: import_obsidian25.Notice,
+    Platform: import_obsidian25.Platform,
+    Failure,
+    ConfigurationModal,
+    ObsidianLogo,
+    SyncthingLogo,
+    onMount,
+    ObsidianLucideIcon: obsidian_lucide_icon_default,
+    ObsidianSettingsItem: obsidian_settings_item_default,
+    ObsidianToggle: obsidian_toggle_default,
+    SyncthingIgnoreFiles: syncthing_ignore_files_default,
+    parent,
+    hasSyncthing,
+    apiInputType,
+    guiPasswordInputType,
+    syncthingBaseUrl,
+    getAPIkey
+  });
+  $$self.$inject_state = ($$props2) => {
+    if ("_a" in $$props2) $$invalidate(6, _a = $$props2._a);
+    if ("_b" in $$props2) $$invalidate(7, _b = $$props2._b);
+    if ("_c" in $$props2) $$invalidate(8, _c = $$props2._c);
+    if ("parent" in $$props2) $$invalidate(0, parent = $$props2.parent);
+    if ("hasSyncthing" in $$props2) $$invalidate(1, hasSyncthing = $$props2.hasSyncthing);
+    if ("apiInputType" in $$props2) $$invalidate(2, apiInputType = $$props2.apiInputType);
+    if ("guiPasswordInputType" in $$props2) $$invalidate(3, guiPasswordInputType = $$props2.guiPasswordInputType);
+    if ("syncthingBaseUrl" in $$props2) $$invalidate(4, syncthingBaseUrl = $$props2.syncthingBaseUrl);
+  };
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & /*parent, _a, _b, _c*/
+    449) {
+      $: $$invalidate(4, syncthingBaseUrl = `${$$invalidate(6, _a = parent.plugin.settings.configuration.url) === null || _a === void 0 ? void 0 : _a.protocol}://${$$invalidate(7, _b = parent.plugin.settings.configuration.url) === null || _b === void 0 ? void 0 : _b.ip_address}:${$$invalidate(8, _c = parent.plugin.settings.configuration.url) === null || _c === void 0 ? void 0 : _c.port}`);
+    }
+  };
+  return [
+    parent,
+    hasSyncthing,
+    apiInputType,
+    guiPasswordInputType,
+    syncthingBaseUrl,
+    getAPIkey,
+    _a,
+    _b,
+    _c,
+    change_handler,
+    click_handler,
+    click_handler_1,
+    click_handler_2,
+    click_handler_3,
+    change_handler_1,
+    change_handler_2,
+    change_handler_3,
+    input0_input_handler,
+    change_handler_4,
+    change_handler_5,
+    click_handler_4,
+    click_handler_5,
+    click_handler_6,
+    func2,
+    click_handler_7,
+    click_handler_8,
+    click_handler_9,
+    click_handler_10
+  ];
+}
+var Settings_view = class extends SvelteComponentDev {
+  constructor(options2) {
+    super(options2);
+    init(this, options2, instance18, create_fragment18, safe_not_equal, { parent: 0 }, add_css14);
+    dispatch_dev("SvelteRegisterComponent", {
+      component: this,
+      tagName: "Settings_view",
+      options: options2,
+      id: create_fragment18.name
+    });
+  }
+  get parent() {
+    throw new Error("<Settings_view>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+  set parent(value) {
+    throw new Error("<Settings_view>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+  }
+};
+var settings_view_default = Settings_view;
+
+// src/views/settings_tab.ts
+var SyncthingSettingTab = class extends import_obsidian26.PluginSettingTab {
+  constructor(app, plugin) {
+    super(app, plugin);
+    this.plugin = plugin;
+    this.syncthingController = plugin.syncthingController;
+  }
+  async display() {
+    const { containerEl } = this;
+    containerEl.empty();
+    new settings_view_default({
+      target: containerEl,
+      props: {
+        parent: this
+      }
+    });
+  }
+  syncthingConfiguration(containerEl) {
+    new import_obsidian26.Setting(containerEl).setName("Syncthing Configuration").setHeading().setDesc(
+      "This section will show the configuration of the Syncthing instance for the vault."
+    );
+    new import_obsidian26.Setting(containerEl).setName("This part is not implemented yet.");
+  }
+  async configurationSetting(containerEl) {
+    const configSetting = new import_obsidian26.Setting(containerEl).setName("Get Syncthing Configuration").setDesc(
+      "This button will get the configuration of the Syncthing instance for the vault."
+    );
+    configSetting.addButton((button) => {
+      button.setIcon("sync").setCta().onClick(async () => {
+        const configuration = await this.syncthingController.getConfiguration();
+        if (configuration instanceof Failure) {
+          configSetting.setName("Error").setDesc(
+            "Error getting configuration. Please try again later."
+          );
+          new import_obsidian26.Notice(
+            "Error getting configuration. Please try again later."
+          );
+          return;
+        }
+        this.plugin.settings.configuration = configuration;
+      });
+    });
+  }
+  /**
+   * Initiate a config table containing the folders and devices configured on the Syncthing instance.
+   */
+  async initConfigTable(containerEl, configuration) {
+    const configTable = containerEl.createEl("table");
+    configTable.appendChild(containerEl.createEl("tbody"));
+    const headerRow = configTable.createEl("thead").createEl("tr");
+    headerRow.createEl("th", { text: "Device ID" });
+    headerRow.createEl("th", { text: "Device Name" });
+    headerRow.createEl("th", { text: "Device Address" });
+    configuration.devices.forEach((device) => {
+      this.addConfigRowToTable(configTable, device);
+    });
+    return configTable;
+  }
+  /**
+   * This helper method should help to make new rows from the syncthing configuration given in params.
+   * @param tableEl - The table element to add the row to.
+   */
+  addConfigRowToTable(tableEl, deviceInfo) {
+    const rowEl = tableEl.appendChild(tableEl.createEl("tr"));
+    rowEl.appendChild(
+      tableEl.createEl("td", { text: deviceInfo.deviceID.slice(0, 8) })
+    );
+    rowEl.appendChild(tableEl.createEl("td", { text: deviceInfo.name }));
+    rowEl.appendChild(
+      tableEl.createEl("td", { text: deviceInfo.address.join(", ") })
+    );
+  }
+};
+
+// src/main.ts
+var DEFAULT_SETTINGS = {
+  configuration: {
+    url: {
+      protocol: "http",
+      ip_address: "localhost",
+      port: 8384
+    }
+  },
+  devMode: false
+};
+var _SyncthingPlugin = class _SyncthingPlugin extends import_obsidian27.Plugin {
+  constructor() {
+    super(...arguments);
+    this.PLUGIN_ID = "syncthing-integration";
+    this.pluginsElements = [];
+    this.syncthingFromCLI = new SyncthingFromCLI();
+    this.syncthingFromREST = new SyncthingFromREST(this);
+    this.syncthingFromAndroid = new SyncthingFromAndroid();
+    this.syncthingController = new SyncthingController(
+      this.syncthingFromCLI,
+      this.syncthingFromREST,
+      this.syncthingFromAndroid,
+      this
+    );
+    this.devModeController = new PluginDevModeController(
+      this
+    );
+  }
+  async onload() {
+    _SyncthingPlugin.loadCount++;
+    await this.loadSettings();
+    (0, import_obsidian27.addIcon)("syncthing", SyncthingLogoSVG);
+    if (!import_obsidian27.Platform.isMobileApp) {
+      this.statusBar = new SyncthingStatusBar(
+        this.addStatusBarItem(),
+        this
+      );
+      this.statusBar.onload();
+      this.pluginsElements.push(this.statusBar.status_bar);
+    }
+    const pluginSettingTab = new SyncthingSettingTab(this.app, this);
+    if (_SyncthingPlugin.loadCount === 1)
+      this.addSettingTab(pluginSettingTab);
+    const syncthingConflictManager = this.addRibbonIcon(
+      "syncthing",
+      "Open Syncthing conflict manager modal",
+      () => {
+        new ConflictsModal(this.app, this.syncthingController).open();
+      }
+    );
+    if (this.settings.devMode) {
+      new import_obsidian27.Notice("Dev mode is enabled.");
+      const devModeGenerator = this.addRibbonIcon(
+        "chevron-right-square",
+        "Generate Syncthing conflicts",
+        async () => {
+          new DevModeModal(
+            this.app,
+            new PluginDevModeController(this)
+          ).open();
+        }
+      );
+      this.addCommand({
+        id: "generate-syncthing-conflicts",
+        name: "Generate Syncthing conflicts",
+        icon: "chevron-right-square",
+        callback: async () => {
+          new DevModeModal(
+            this.app,
+            new PluginDevModeController(this)
+          ).open();
+        }
+      });
+      this.pluginsElements.push(devModeGenerator);
+    }
+    this.pluginsElements.push(syncthingConflictManager);
+    this.syncthingCommands();
+  }
+  onunload() {
+    var _a;
+    (_a = this.statusBar) == null ? void 0 : _a.onunload();
+    this.pluginsElements.forEach((element2) => element2.remove());
+  }
+  async loadSettings() {
+    this.settings = Object.assign(
+      {},
+      DEFAULT_SETTINGS,
+      await this.loadData()
+    );
+  }
+  async saveSettings() {
+    await this.saveData(this.settings);
+  }
+  // This method adds commands for the Syncthing Plugin
+  // It can be related to conflicts, the diff modal or other useful commands.
+  syncthingCommands() {
+    const commands = [
+      {
+        id: "syncthing-conflicts-modal",
+        name: "Open conflicts modal",
+        callback: () => {
+          new ConflictsModal(
+            this.app,
+            this.syncthingController
+          ).open();
+        }
+      },
+      {
+        id: "syncthing-diff-modal",
+        name: "Open diff modal",
+        editorCheckCallback: (checking, editor, ctx) => {
+          const file16 = ctx.file;
+          if (file16) {
+            if (!checking) {
+              new DiffModal(
+                this.app,
+                file16,
+                this.syncthingController
+              ).open();
+            }
+            return true;
+          }
+          return false;
+        }
+      },
+      {
+        id: "syncthing-configuration-modal",
+        name: "Open configuration modal",
+        callback: () => {
+          new ConfigurationModal(this.app, this).open();
+        }
+      },
+      {
+        id: "syncthing-plugin-settings",
+        name: "Open plugin settings",
+        callback: () => {
+          this.app.setting.open();
+          this.app.setting.openTabById(this.PLUGIN_ID);
+        }
+      },
+      {
+        id: "syncthing-bug-report",
+        name: "Report a bug / Suggest a new feature",
+        callback: () => {
+          open(
+            "https://github.com/LBF38/obsidian-syncthing-integration/issues/new/choose"
+          );
+        }
+      }
+      // {
+      // 	id: "syncthing-plugin-documentation",
+      // 	name: "Open online documentation",
+      // 	callback: () => {
+      // 		open(
+      // 			"https://LBF38.github.io/obsidian-syncthing-integration",
+      // 		);
+      // 	},
+      // },
+    ];
+    for (const command of commands) {
+      this.addCommand(command);
+    }
+  }
+};
+_SyncthingPlugin.loadCount = 0;
+var SyncthingPlugin = _SyncthingPlugin;
+
 
 /* nosourcemap */
