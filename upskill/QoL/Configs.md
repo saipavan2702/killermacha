@@ -15,12 +15,19 @@ https://github.com/pkazmier/ghostty-config/blob/main/config
 https://github.com/StevenJPx2/dotfiles
 https://github.com/KroneCorylus/ghostty-shader-playground
 https://github.com/0xhckr/ghostty-shaders
+https://github.com/paulalden/dotfiles
+https://github.com/alberti42/dotfiles
+https://github.com/ADemkin/yadm-dotfiles
+
+YT's
+https://www.youtube.com/watch?v=MHPRnM38Dyc
 
 ---
 ## ZSH
 
 YT's
 https://www.youtube.com/watch?v=eKkFbvanlP8
+https://www.youtube.com/watch?v=3fVAtaGhUyU
 
 Git's
 https://github.com/JanDeDobbeleer/oh-my-posh/discussions/5578
@@ -93,12 +100,14 @@ https://github.com/dgox16/dotfiles/blob/main/.config/nvim/lua/configs/lualine.lu
 https://github.com/fitiavana07/.vim/blob/main/vimrc
 https://github.com/craftzdog/dotfiles-public
 https://github.com/SalarAlo/neovim-configuration/tree/main
+https://gitlab.com/theblackdon/normie-nvim
 
 Blogs
 https://pastebin.com/LBMtvCiC
 
 YT's
 https://www.youtube.com/watch?v=FcQhRkAbg2Q
+https://www.youtube.com/watch?v=G89oddoYZl4
 
 ---
 
