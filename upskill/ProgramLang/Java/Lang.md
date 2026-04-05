@@ -123,7 +123,7 @@ Iterable  (interface)
 
 > **Rule:** Interfaces use `extends`, not `implements`. Only classes `implement` interfaces.
 
-# extends & implements — All Scenarios
+## extends & implements — All Scenarios
 
 ## The 2 Keywords, Simply Put
 
