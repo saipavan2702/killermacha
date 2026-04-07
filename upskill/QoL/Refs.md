@@ -84,6 +84,8 @@ https://github.com/greyboy-59/Greys-Obsidian-Vault
 https://github.com/frogpal/PenguinVault/
 https://github.com/frogpal/web-clipper-templates/
 https://github.com/CyanVoxel
+https://sergesreport.com/PROJECTS/Blog/All+Posts/How+to+setup+Obsidian+Homepage+to+keep+organized+and+productive
+https://substack.solorpgstudio.com/p/deploying-you-own-ttrpg-wiki-notes
 
 Macos
 [bashbunni_terminal_notifier](https://gist.github.com/bashbunni/f6b04fc4703903a71ce9f70c58345106)
