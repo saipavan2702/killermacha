@@ -4,6 +4,7 @@ tags:
   - tips
   - "#bash"
   - "#ref"
+  - "#git"
 date: 2025-12-07
 ---
 

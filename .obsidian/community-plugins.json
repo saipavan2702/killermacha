@@ -4,7 +4,6 @@
   "obsidian-importer",
   "obsidian-relative-line-numbers",
   "obsidian-style-settings",
-  "obsidian-minimal-settings",
   "colored-tags",
   "obsidian-excalidraw-plugin",
   "notebook-navigator",
@@ -13,5 +12,6 @@
   "dataview",
   "obsius-publish",
   "obsidian-tasks-plugin",
-  "obsidian-media-db-plugin"
+  "obsidian-media-db-plugin",
+  "obsidian-minimal-settings"
 ]
