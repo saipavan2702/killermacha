@@ -414,19 +414,6 @@ class BankAccount {
     }
 }
 ```
-
----
-
-## SOLID Principles
-
-1. **Single Responsibility**: One class, one job
-2. **Open/Closed**: Open for extension, closed for modification
-3. **Liskov Substitution**: Subclasses should be replaceable for parent
-4. **Interface Segregation**: Many small interfaces > one large interface
-5. **Dependency Inversion**: Depend on abstractions, not concrete classes
-
----
-
 ## Quick Reference Table
 
 | Need                                     | Pattern                  |
@@ -713,5 +700,6 @@ class User {
 }
 ```
 
+ [[SOLID principles]]
 https://www.geeksforgeeks.org/system-design/software-design-patterns/
 #ref 

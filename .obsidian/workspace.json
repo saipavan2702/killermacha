@@ -8,12 +8,54 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3e589755c7c73f97",
+            "id": "26ff80d67eb0786b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "upskill/ProgramLang/Python/Core.md",
+                "file": "upskill/Sys Des/Design Patterns.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Design Patterns"
+            }
+          },
+          {
+            "id": "94f505c3d505acb6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upskill/Sys Des/SOLID principles.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SOLID principles"
+            }
+          },
+          {
+            "id": "67a541ac94f3ae56",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upskill/ProgramLang/Perf Misc.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Perf Misc"
+            }
+          },
+          {
+            "id": "b065580a3aab6ff1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upskill/ProgramLang/GoLang/Core.md",
                 "mode": "source",
                 "source": false
               },
@@ -230,38 +272,40 @@
       "obsidian-media-db-plugin:Add new Media DB entry": false
     }
   },
-  "active": "3e589755c7c73f97",
+  "active": "26ff80d67eb0786b",
   "lastOpenFiles": [
-    "upskill/Sys Des/Core.md",
+    "upskill/Sys Des/SOLID principles.md",
     "upskill/Sys Des/Design Patterns.md",
-    "mmacha/aesthetic.md",
-    "mmacha/pswds.md",
-    "upskill/QoL/Projects/Ideas.md",
-    "upskill/ProgramLang/Java/Core.md",
-    "upskill/ProgramLang/Python/Core.md",
-    "upskill/Linux/Tips.md",
-    "upskill/Linux/Vim.md",
-    "upskill/Gen Misc/Space.md",
-    "upskill/Gen Misc/Math.md",
-    "upskill/Gen Misc",
+    "upskill/Sys Des/Core.md",
     "upskill/Sys Des/API Build.md",
-    "upskill/ProgramLang/GoLang/Core.md",
-    "upskill/DSA/Tree.md",
-    "upskill/ProgramLang/Python",
-    "upskill/ProgramLang/Java/SpringBoot.md",
-    "upskill/ProgramLang/GoLang",
+    "upskill/ProgramLang/Perf Misc.md",
     "upskill/QoL/Refs.md",
     "upskill/QoL/Configs.md",
-    "orcl/Weekly report.md",
+    "upskill/QoL/Projects/Ideas.md",
     "upskill/QoL/Digi Tools.md",
-    "upskill/DSA/Algos/BitMask.md",
+    "upskill/ProgramLang/GoLang/Core.md",
+    "cpp-obsidian/lessons/01-abstractions-have-cost.md",
+    "cpp-obsidian/CPP Lessons Dashboard.md",
+    "cpp-obsidian/lessons/07-responsibility.md",
+    "cpp-obsidian/lessons/04-compilation-safety.md",
+    "cpp-obsidian/lessons/03-design-not-tricks.md",
+    "cpp-obsidian/lessons/06-hardware-thinking.md",
+    "cpp-obsidian/lessons/05-concurrency.md",
+    "cpp-obsidian/lessons/02-manual-memory.md",
+    "cpp-obsidian/lessons",
+    "cpp-obsidian",
+    "upskill/Gen Misc/Space.md",
+    "upskill/Gen Misc/Math.md",
+    "upskill/ProgramLang/Python/Core.md",
+    "orcl/Weekly report.md",
+    "upskill/Linux/Vim.md",
+    "mmacha/aesthetic.md",
+    "mmacha/pswds.md",
+    "upskill/ProgramLang/Java/Core.md",
+    "upskill/Gen Misc",
+    "upskill/ProgramLang/Python",
+    "upskill/ProgramLang/GoLang",
     "upskill/ProgramLang/Java",
-    "2025-11-12.md",
-    "upskill/DSA/Sql.md",
-    "mmacha/movies.md",
-    "upskill/DSA/SegmenTree.md",
-    "upskill/DSA/Algos/Line Sweep.md",
-    "upskill/DSA/Algos/Binary search.md",
     "attachments/Pasted Image 20231213104704_187.png",
     "attachments/Exported image 20250529160106-3.png",
     "attachments/Pasted Image 20231213104704_082.png",
@@ -274,8 +318,6 @@
     "upskill/QoL/Projects",
     "upskill/QoL",
     "upskill/DSA/Algos",
-    "upskill/Linux",
-    "upskill/ProgramLang",
     "attachments/Pasted Image 20231213104704_171.png",
     "attachments/Pasted Image 20231213104704_137.png",
     "Untitled.canvas",
