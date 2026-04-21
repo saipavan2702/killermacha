@@ -13,6 +13,7 @@ There are mainly three types of Design Patterns
 
 ### 1. Singleton
 **Purpose**: Ensure only one instance of a class exists.
+**Cons**: Can't easily mock for UT; Needs thread-safe to avoid race condition 
 **Example**: Database connection, Logger
 ```java
 class Database {
