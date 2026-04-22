@@ -28,12 +28,11 @@ tags:
 - [ ] Scent of a woman
 - [ ] Irreversible
 - [x] Midnight in Paris ✅ 2025-12-02
-- [ ] Lord of the rings
+- [x] Lord of the rings ✅ 2026-04-22
 - [x] Memories of murder ✅ 2025-06-26
 - [ ] Prisoners
 - [ ] Truman show
 - [x] Wicked minds ✅ 2025-07-24
-- [ ] Dark series
 - [x] Grown ups ✅ 2025-06-04
 - [ ] 22nd jump street
 - [ ] Shogun
@@ -66,12 +65,7 @@ tags:
 - [ ] Silence of the Lambs
 - [ ] Wind River
 - [x] Project X ✅ 2025-07-23
-- [ ] Invincible sereis
-- [ ] The Boys series
-- [ ] Jack Ryan series
 - [x] LOTR ✅ 2026-01-18
-- [ ] House MD series
-- [ ] Shameless sereis
 - [x] 13 going on 30 ✅ 2025-06-26
 - [ ] Crazy stupid Love
 - [ ] The Proposal
@@ -149,6 +143,9 @@ tags:
 - [ ] Parasite
 - [ ] The Menu
 - [ ] Great Expectations
+- [x] Inglorious Bastards ✅ 2026-04-21
+- [ ] Lincoln Lawyer
+- [ ] Killer Joe
 
 
 ## Series
@@ -160,7 +157,15 @@ tags:
 - [ ] The Boys
 - [ ] The Office
 - [ ] Midnight Mass
-
+- [ ] Invincible sereis
+- [ ] The Boys series
+- [ ] Jack Ryan series
+- [ ] Dark series
+- [ ] House MD series
+- [ ] Shameless sereis
+- [ ] True Detective
+- [ ] Normal people
+- [ ] Finding Her Edge
 
 https://nothing-to-watch.port80.ch/
 #ref 

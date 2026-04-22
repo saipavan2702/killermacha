@@ -272,11 +272,12 @@
       "obsidian-media-db-plugin:Add new Media DB entry": false
     }
   },
-  "active": "26ff80d67eb0786b",
+  "active": "223b20e17abc186d",
   "lastOpenFiles": [
     "upskill/Sys Des/SOLID principles.md",
-    "orcl/Weekly report.md",
+    "mmacha/movies.md",
     "upskill/Sys Des/Design Patterns.md",
+    "orcl/Weekly report.md",
     "upskill/Sys Des/Core.md",
     "upskill/Sys Des/API Build.md",
     "upskill/ProgramLang/Perf Misc.md",
@@ -301,7 +302,6 @@
     "upskill/Linux/Vim.md",
     "mmacha/aesthetic.md",
     "mmacha/pswds.md",
-    "upskill/ProgramLang/Java/Core.md",
     "upskill/Gen Misc",
     "upskill/ProgramLang/Python",
     "upskill/ProgramLang/GoLang",

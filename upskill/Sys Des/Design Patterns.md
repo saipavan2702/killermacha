@@ -13,6 +13,7 @@ There are mainly three types of Design Patterns
 
 ### 1. Singleton
 **Purpose**: Ensure only one instance of a class exists.
+**Use when**: You need exactly one shared resource, like a logger or DB connection. Multiple instances would conflict or waste resources.
 **Cons**: Can't easily mock for UT; Needs thread-safe to avoid race condition 
 **Example**: Database connection, Logger
 ```java
@@ -24,10 +25,20 @@ class Database {
         return instance;
     }
 }
+
+// BAD: two separate loggers, each unaware of the other
+Logger a = new Logger();
+Logger b = new Logger();  // chaos: both write independently
+
+// GOOD: getInstance() always returns the same object
+Logger a = Logger.getInstance();
+Logger b = Logger.getInstance();  // a == b, exact same object
 ```
+> Hard to mock in unit tests because it is essentially a controlled global variable.
 
 ### 2. Factory Method
 **Purpose**: Create objects without specifying exact class.
+**Use when**: Which object to create depends on runtime data. Keeps `new` and `if/else` logic in one place instead of scattered everywhere.
 **Example**: Shape factory creating circles/squares
 ```java
 interface Shape { void draw(); }
@@ -37,7 +48,17 @@ class ShapeFactory {
         return new Square();
     }
 }
+
+// BAD: creation logic scattered everywhere you need a User
+User u;
+if (role.equals("admin"))     u = new AdminUser(id, name);
+else if (role.equals("mod"))  u = new ModUser(id, name);
+
+// GOOD: pass details to the factory, it handles branching internally
+User u = UserFactory.create("admin", 1, "John");
+// the switch/if lives inside Factory.create(), not here
 ```
+> Adding a new user type means editing the factory only, not every caller.
 
 ### 3. Abstract Factory
 **Purpose**: Create families of related objects.
@@ -53,6 +74,7 @@ class MacFactory implements UIFactory {...}
 
 ### 4. Builder
 **Purpose**: Construct complex objects step-by-step.
+**Use when**: An object has many optional fields. Instead of one giant constructor call, chain only the parts you need.
 **Example**: Building a Pizza with optional toppings
 ```java
 Pizza pizza = new Pizza.Builder()
@@ -60,7 +82,18 @@ Pizza pizza = new Pizza.Builder()
     .cheese(true)
     .pepperoni(true)
     .build();
+
+// BAD: one huge constructor, hard to read and easy to mess up argument order
+Request r = new Request("api.example.com", "POST", null, null, "Bearer token");
+
+// GOOD: chain only what you need, reads like plain English
+Request r = new RequestBuilder()
+    .url("api.example.com")
+    .method("POST")
+    .headers("Authorization: Bearer token")
+    .build();            // produces the final Request object
 ```
+> Each chained method returns `this`, allowing the next call to be chained.
 
 ### 5. Prototype
 **Purpose**: Clone existing objects instead of creating new ones.
@@ -109,6 +142,7 @@ class ExpensiveObject {
 
 ### 8. Adapter
 **Purpose**: Make incompatible interfaces work together.
+**Use when**: A third-party library gives data in a format your app does not expect. The adapter translates between the two without changing either side.
 **Example**: USB-C to USB-A adapter
 ```java
 class OldPrinter { void printOld(String text) {...} }
@@ -118,7 +152,24 @@ class PrinterAdapter implements ModernPrinter {
         oldPrinter.printOld(text);
     }
 }
+
+// Third-party API speaks Celsius + km, your app expects F + miles
+class WeatherAdapter implements WeatherApp {
+    private WeatherAPI api;  // the incompatible third-party
+
+    public double getTempF() {
+        return toFahrenheit(api.getTempC()); // translate on the fly
+    }
+
+    public double getDistanceMiles() {
+        return toMiles(api.getDistanceKm());
+    }
+}
+
+// Your app only ever calls WeatherAdapter, never the raw API directly
+WeatherApp w = new WeatherAdapter(thirdPartyApi);
 ```
+> Think: USB-C to HDMI dongle. Same idea, but in code.
 
 ### 9. Bridge
 **Purpose**: Separate abstraction from implementation.
@@ -158,6 +209,7 @@ coffee = new SugarDecorator(coffee);
 
 ### 12. Facade
 **Purpose**: Provide a simple interface to complex subsystems.
+**Use when**: Several complex subsystems must work together. Wrap them behind a single simple method so the caller does not need to know the internals.
 **Example**: Home theater system with one "Watch Movie" button
 ```java
 class HomeTheater {
@@ -168,7 +220,19 @@ class HomeTheater {
         sound.setVolume(5);
     }
 }
+
+// BAD: caller must orchestrate every subsystem manually
+if (PaymentProcessor.charge(cart)) {
+    if (InventorySystem.reserve(cart)) {
+        FraudChecker.verify(cart);  // ...and so on
+    }
+}
+
+// GOOD: one method call, all complexity hidden inside
+OrderFacade facade = new OrderFacade();
+facade.placeOrder(cart);  // payment + inventory + fraud, all handled
 ```
+> Like clicking "Buy Now" on a website: you do not see the backend, and you do not need to.
 
 ### 13. Flyweight
 **Purpose**: Share common data to save memory.
@@ -277,6 +341,7 @@ class Memento {
 
 ### 20. Observer
 **Purpose**: Notify multiple objects when one object changes.
+**Use when**: Many objects need to react when one object's state changes, without the source needing to know who is listening.
 **Example**: YouTube notifying subscribers when new video uploads
 ```java
 interface Observer { void update(String message); }
@@ -288,7 +353,25 @@ class Channel {
         }
     }
 }
+
+// BAD: polling, constantly checking if something changed
+while (true) {
+    for (User u : allMillionUsers) checkForNewVideo(u); // brutal and wasteful
+}
+
+// GOOD: subscribers register once, then get pushed a notification automatically
+class VideoChannel {
+    List<Subscriber> subs = new ArrayList<>();
+
+    void addSubscriber(Subscriber s) { subs.add(s); }
+
+    void upload(String title) {
+        // event fires: everyone in the list is notified instantly
+        for (Subscriber s : subs) s.notify(title);
+    }
+}
 ```
+> Like YouTube subscriptions: the channel pushes to you. You do not keep refreshing to check.
 
 ### 21. State
 **Purpose**: Change object behavior when its state changes.
@@ -308,6 +391,7 @@ class DraftState implements State {
 
 ### 22. Strategy
 **Purpose**: Choose algorithm at runtime.
+**Use when**: The same action has multiple implementations that need to be interchangeable without touching the surrounding code.
 **Example**: Payment methods (Credit Card, PayPal, Crypto)
 ```java
 interface PaymentStrategy { void pay(int amount); }
@@ -315,7 +399,22 @@ class ShoppingCart {
     PaymentStrategy payment;
     void checkout(int amount) { payment.pay(amount); }
 }
+
+// BAD: one big method with if/else for every transport type
+if (mode == "car")       driveToWork();
+else if (mode == "bike") cycleToWork();
+else if (mode == "bus")  takeBusToWork();
+
+// GOOD: inject any strategy object, Commuter stays the same
+Commuter commuter = new Commuter();
+
+commuter.setStrategy(new CarStrategy());
+commuter.goToWork();   // runs car logic
+
+commuter.setStrategy(new BikeStrategy()); // swap, zero changes elsewhere
+commuter.goToWork();   // runs bike logic
 ```
+> Core rule: program to an interface, not an implementation.
 
 ### 23. Template Method
 **Purpose**: Define skeleton of algorithm, let subclasses override steps.
@@ -703,4 +802,5 @@ class User {
 
  [[SOLID principles]]
 https://www.geeksforgeeks.org/system-design/software-design-patterns/
+https://www.youtube.com/watch?v=BJatgOiiht4
 #ref 
