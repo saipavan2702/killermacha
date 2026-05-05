@@ -78,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -287,8 +287,9 @@
       "obsidian-media-db-plugin:Add new Media DB entry": false
     }
   },
-  "active": "d4d490868fd93abb",
+  "active": "223b20e17abc186d",
   "lastOpenFiles": [
+    "upskill/QoL/Configs.md",
     "upskill/ProgramLang/GoLang/Core.md",
     "upskill/ProgramLang/Perf Misc.md",
     "upskill/Gen Misc/Math.md",
@@ -305,7 +306,6 @@
     "upskill/Sys Des/Core.md",
     "upskill/Sys Des/API Build.md",
     "upskill/QoL/Refs.md",
-    "upskill/QoL/Configs.md",
     "upskill/QoL/Projects/Ideas.md",
     "upskill/QoL/Digi Tools.md",
     "cpp-obsidian/lessons/01-abstractions-have-cost.md",
