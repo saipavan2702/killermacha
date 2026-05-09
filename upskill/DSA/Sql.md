@@ -128,3 +128,42 @@ SELECT manager_id, MIN(salary) FROM employees WHERE manager_id IS NOT NULL GROUP
     [] Represents any single character within the brackets 
     ^ Represents any character not in the brackets 
     {} Represents any escaped character 
+
+
+## SQL Optimization — 3 Steps
+
+### 1. See What's Happening
+
+```sql
+EXPLAIN ANALYZE
+SELECT * FROM orders o
+JOIN users u ON u.id = o.user_id;
+```
+Look for: `SEQ SCAN`, `Hash Join`, temp tables → signs of ignored indexes or missing ones.
+
+### 2. Fix the DB Layer
+
+```sql
+-- Don't do this
+SELECT * FROM orders;
+
+-- Do this
+SELECT id, user_id, total FROM orders WHERE status = 'paid';
+```
+- Index columns used in `WHERE`, `JOIN`, `ORDER BY`
+- Use **composite indexes** that match your actual filter patterns
+- Don't over-index — every index slows down writes
+
+### 3. Fix Queries & App Layer
+
+```sql
+-- Bad: query inside a loop (N+1)
+SELECT * FROM users WHERE id = 1;
+SELECT * FROM users WHERE id = 2; -- ...repeats
+
+-- Good: batch it
+SELECT * FROM users WHERE id IN (1, 2, 3, ...);
+```
+- **Eager load** associations you know you'll need
+- **Heavy reads** → replica | **Writes** → primary
+- Keep analytics off your primary DB

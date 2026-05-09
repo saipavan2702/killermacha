@@ -5,6 +5,78 @@ tags:
   - "#golang"
 date: 2025-12-24
 ---
+Yes, **both stack and heap are in RAM**.
+```code
+RAM
+├── Stack area
+├── Heap area
+├── Code area
+├── Global variables area
+└── Other runtime/OS memory
+```
+### Stack
+The **stack** is used for function calls and local variables.
+Example:
+```go
+func add() {
+	x := 10
+	y := 20
+	fmt.Println(x + y)
+}
+//Here `x` and `y` may live on the stack.
+//Stack memory is very fast and simple
+//function starts  -> memory added
+//function ends    -> memory removed
+```
+
+In Go, each goroutine has its own stack.
+```go
+go myFunction()
+```
+That goroutine gets its own stack memory.
+
+### Heap
+The **heap** is used for values that may need to live longer or have more flexible lifetime.
+Example:
+```go
+func createUser() *User {
+	user := User{Name: "Amit"}
+	return &user
+}
+//Here, `user` cannot be destroyed when the function ends because its address is returned.
+//Heap memory is managed by garbage collection.
+//object created
+//object used
+//no one references it anymore
+//GC cleans it later
+```
+### Very simple example
+```go
+func test() {
+	a := 10
+	b := &User{Name: "Amit"}
+
+	fmt.Println(a, b.Name)
+}
+//Stack:
+// a
+// b  ---- points to ----> Heap: User{Name: "Amit"}
+
+a := 10
+//`a` may be directly on the stack.
+
+b := &User{Name: "Amit"}
+//`b` itself may be on the stack, but the `User` object it points to may be on the heap.
+```
+
+Difference is **how they are used and cleaned**:
+```text
+Stack = temporary function memory
+Heap  = longer-living memory managed by GC
+```
+
+---
+## Channels
 Channels are Go’s way of letting **go routines communicate safely** with each other.  
 Think of a channel as a **pipe**: one go-routine sends values into it, another go routine receives values from it.
 
@@ -146,12 +218,11 @@ This ensures the main go routine only parses once the page is fully fetched.
 4. **select** → powerful for handling multiple channels & timeouts.  
 5. Channels are the backbone of **safe concurrency in Go**.
 
-
+---
+## Pointers
 Once you understand why we use pointers and when to use them, it becomes crystal clear. One such use is to pass a value as a param to a function.
 For example, if your param value is a datatype / struct which takes a lot of memory, for example let's take a struct which for example is 80 MB of good old int (hypothetical for understanding purpose), you don't want to pass the entire struct as a param, that's because by default golang makes a copy of each value passed as param to a function. This means your function will make a copy of the struct each time the function is called.
 So how do we solve this, we can instead point to the huge struct and tell the compiler - here is where the value resides (memory address), just check what's the value and directly work on that. Don't make any copies. That's what unpacking a pointer does. So you only pass an 8 byte pointer instead of 80 MB struct every time, which saves on CPU time and also memory.
-
-That as code would be -
 
 ```go
 package main
@@ -231,3 +302,130 @@ h := &big  // copy of one memory address — 8 bytes, done
 ```
 
 That's the entire trade-off. A pointer is just a **sticky note with an address on it** — lightweight, fast, and points Go to the real data.
+
+---
+
+## Interfaces
+
+An interface in Go is just a contract: "if you have this method, you qualify." You never say "I implement this interface" — Go checks automatically.
+```go
+// The contract
+type io.Writer interface {
+  Write(p []byte) (n int, err error)
+}
+
+// os.File has Write() → qualifies as io.Writer
+// net.Conn has Write() → qualifies as io.Writer
+// bytes.Buffer has Write() → qualifies as io.Writer
+```
+
+>[!tip]
+> Think of it like a power socket. Any plug with the right shape fits — it doesn't matter who made it or what it does inside.
+The core idea — an interface is just a shape-check. If your type has the right method signature, it fits. `io.Writer` requires exactly one method: Write([]byte) (int, error). Once you have that, any function accepting `io.Writer` will work with your type.
+> Also the print functions
+> 
+ > - Plain Print → always stdout
+ > - Fprint (F = file/writer) → you supply the destination
+>  - Sprint (S = string) → returns a string, no output at all
+
+```go
+package main
+
+import "fmt"
+
+// Define an interface
+type Shape interface {
+	Area() float64
+}
+
+// Define a struct
+type Rectangle struct {
+	Width  float64
+	Height float64
+}
+
+// Implement the interface method
+func (r Rectangle) Area() float64 {
+	return r.Width * r.Height
+}
+
+func printArea(s Shape) {
+	fmt.Println("Area:", s.Area())
+}
+
+func main() {
+	rect := Rectangle{
+		Width:  10,
+		Height: 5,
+	}
+	var _ Shape = Rectangle{} // compile-check
+	var _ Counter = (*Number)(nil) // similar for nil-pinter type
+
+	printArea(rect)
+}
+```
+
+A example on struct
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+)
+
+type UserWrong struct {
+	Name  string `json:"name"`
+	email string `json:"email"`
+	Age   int    `json:"age"`
+}
+
+type UserRight struct {
+	Name  string `json:"name"`
+	Email string `json:"email"`
+	Age   int    `json:"age"`
+}
+
+func main() {
+
+	wrong := UserWrong{
+		Name:  "Patrik",
+		email: "wrong@example.com",
+		Age:   90,
+	}
+
+	right := UserRight{
+		Name:  "Patrik",
+		Email: "right@example.com",
+		Age:   90,
+	}
+
+	wrongJSON, _ := json.Marshal(wrong)
+	rightJSON, _ := json.Marshal(right)
+
+	fmt.Println("Wrong User JSON:", string(wrongJSON))
+	fmt.Println("Right User JSON:", string(rightJSON))
+}
+```
+
+>[!tip]
+>| Verb  | Use               |
+| ----- | ----------------- |
+| `%v`  | Any value         |
+| `%+v` | Struct debugging  |
+| `%#v` | Go representation |
+| `%T`  | Type              |
+| `%d`  | Integer           |
+| `%f`  | Float             |
+| `%s`  | String            |
+| `%q`  | Quoted            |
+| `%t`  | Bool              |
+| `%p`  | Pointer           |
+| `%x`  | Hex               |
+| `%w`  | Wrap error        |
+
+
+### References
+https://www.youtube.com/watch?v=6DiCscb0gWk
+
+#ref #golang 
