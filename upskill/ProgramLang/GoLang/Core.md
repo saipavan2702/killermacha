@@ -81,34 +81,19 @@ Channels are Go’s way of letting **go routines communicate safely** with each 
 Think of a channel as a **pipe**: one go-routine sends values into it, another go routine receives values from it.
 
 ```go
-// Unbuffered channel
+// Unbuffered: send blocks until a receive happens.
 c := make(chan int)
 
-// Buffered channel with capacity 5
+// Buffered: can hold up to `N` values before blocking.
 c := make(chan string, 5)
-```
 
-- **Unbuffered**: send blocks until a receive happens.  
-- **Buffered**: can hold up to `N` values before blocking.
-
-```go
 c := make(chan int)
-
-// Send
-c <- 42
-
-// Receive
-x := <-c
+c <- 42 // Send
+x := <-c // Receive
 fmt.Println(x) // 42
 ```
-
-```
-[ Goroutine A ] --42--> [ Channel ] --> [ Goroutine B ]
-```
-
 - `c <- 42` puts `42` into the channel.  
 - `<-c` pulls the value out.
-
 ```go
 package main
 
@@ -210,13 +195,12 @@ parseHTML(url, content, &queue, &crawled, &db)
 
 This ensures the main go routine only parses once the page is fully fetched.
 
-## ✅ Key Takeaways
-
-1. **Unbuffered channels** → synchronize sender & receiver.  
-2. **Buffered channels** → allow limited queuing of messages.  
-3. **close + range** → clean way to signal completion.  
-4. **select** → powerful for handling multiple channels & timeouts.  
-5. Channels are the backbone of **safe concurrency in Go**.
+>[!info]
+>1. **Unbuffered channels** → synchronize sender & receiver.  
+>2.  **Buffered channels** → allow limited queuing of messages.  
+>3. **close + range** → clean way to signal completion.  
+>4. **select** → powerful for handling multiple channels & timeouts.  
+>5. Channels are the backbone of **safe concurrency in Go**.
 
 ---
 ## Pointers
