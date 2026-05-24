@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "upskill/Gen Misc/Math.md",
+                "file": "upskill/QoL/Refs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Math"
+              "title": "Refs"
             }
           }
         ],
@@ -99,8 +99,7 @@
               "title": "Notebook Navigator"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -247,12 +246,12 @@
   },
   "active": "870144d84166f11e",
   "lastOpenFiles": [
-    "upskill/Gen Misc/ET.md",
-    "upskill/Gen Misc/Math.md",
-    "upskill/Gen Misc/Space.md",
-    "upskill/QoL/Refs.md",
     "orcl/Weekly report.md",
+    "upskill/QoL/Refs.md",
+    "upskill/Gen Misc/Math.md",
+    "upskill/Gen Misc/ET.md",
     "upskill/QoL/Projects/Ideas.md",
+    "upskill/Gen Misc/Space.md",
     "upskill/QoL/Configs.md",
     "upskill/ProgramLang/GoLang/Core.md",
     "upskill/Sys Des/SOLID principles.md",

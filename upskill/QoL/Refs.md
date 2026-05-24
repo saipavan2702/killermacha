@@ -30,6 +30,7 @@ https://ashhad.in/list/
 https://seanprashad.com/leetcode-patterns/
 https://usaco.guide/
 https://cp-algorithms.com/index.html
+https://www.lets-code.co.in/articles/roadmap/
 
 ---
 ## Projects 
@@ -78,7 +79,6 @@ https://www.youtube.com/watch?v=SRavkMUYWzo
 https://github.com/rodgzilla/epstein_email_obsidian_vault/
 https://stephango.com/vault
 https://forum.obsidian.md/t/my-home-base-tutorial/108759
-https://github.com/jrcasey/RSS_Agent
 https://snippets.page/posts/sync-obsidian-notes-between-pc-and-android-with-syncthing/
 https://github.com/greyboy-59/Greys-Obsidian-Vault
 https://github.com/frogpal/PenguinVault/
@@ -134,4 +134,14 @@ Web's
 https://fmhy.net/
 
 ---
+## RSS feeds
 
+APIs
+https://currentsapi.services/en
+https://mediastack.com/
+https://www.freenewsapi.io/
+https://github.com/public-apis/public-apis
+https://freeapis.juheapi.com/
+https://headlinefeed.dev/
+https://github.com/plenaryapp/awesome-rss-feeds
+https://github.com/AboutRSS/ALL-about-RSS
