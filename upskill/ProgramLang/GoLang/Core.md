@@ -408,6 +408,16 @@ func main() {
 | `%x`  | Hex               |
 | `%w`  | Wrap error        |
 
+For  tags like Java : Go has build tags, not test annotations like `JUnit @Tag`.
+
+Example :
+```go
+//go:build integration
+package mypkg
+
+//Then run only files with that tag:
+go test -tags=integration ./...
+```
 
 ### References
 https://www.youtube.com/watch?v=6DiCscb0gWk

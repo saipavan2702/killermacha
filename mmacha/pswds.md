@@ -4,6 +4,7 @@ OCNA - Zaq_cruise_2702
 WSL - EDITH_z_27
 BugDB - EDITH_z_2702
 
+infynidock - license : `V4CVNMEM4K0E4VPG`
 
 To change pswd for wsl things
 
