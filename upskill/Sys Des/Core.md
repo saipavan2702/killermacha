@@ -1777,6 +1777,51 @@ wss.on('connection', (ws) => {
         }));
     });
 });
+
+
+// The above is pub/sub across multiple servers
+// For in-memory we do it similar to the below
+
+const pubSub = {
+    uniqueId: 1,
+    subscriber: {},
+    subscribe: function(event, cb) {
+        this.uniqueId = this.uniqueId + 1;
+        const uId = this.uniqueId;
+        const subscriber = this.subscriber;
+        if (!subscriber[event]) {
+            subscriber[event] = {}
+        }
+        subscriber[event] = {
+            ...subscriber[event],
+            [uId]: cb
+        }
+        return {
+            unsubscribe() {
+                delete subscriber[event][uId]
+            },
+        }
+    },
+    publish: function(event, data) {
+        if (!this.subscriber[event]) {
+            return;
+        }
+        for (let key in this.subscriber[event]) {
+            this.subscriber[event][key](data)
+        }
+    }
+}
+
+
+u = pubSub.subscribe('test', () => { console.log('cb called 1') })
+v = pubSub.subscribe('test', () => { console.log('cb called 2') })
+w = pubSub.subscribe('test', () => { console.log('cb called 3') })
+pubSub.publish('test')
+
+v.unsubscribe()
+pubSub.publish('test')
+w.unsubscribe()
+pubSub.publish('test’)
 ```
 
 **Flow:**
@@ -4920,3 +4965,7 @@ Essential Complexity is inherent to the problem. In Building payment system we h
 But Accidental Complexity is everything else sometimes you add code to the already existing 500-lines of code instead of refactoring it and optimising it. 
 
 
+>[!tip]
+>
+>How data communication happens in different steps
+>![[Pasted image 20260601002039.png|713]]

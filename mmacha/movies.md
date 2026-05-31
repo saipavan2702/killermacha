@@ -14,6 +14,7 @@ tags:
 - [ ] Uttama villain
 - [ ] Ozhivudivasathe Kali
 - [ ] Mahanadhi
+- [ ] Nay Varan bhat Loncha kon Nay koncha
 
 ## Holly 
 
@@ -146,6 +147,13 @@ tags:
 - [x] Inglorious Bastards ✅ 2026-04-21
 - [ ] Lincoln Lawyer
 - [ ] Killer Joe
+- [ ] Untamed Heart
+- [ ] EuroTrip
+- [ ] Harakiri
+- [ ] The Human Condition
+- [ ] The Nice Guys
+- [ ] The DaVinci Code
+- [ ] Black Bag
 
 
 ## Series
@@ -166,6 +174,7 @@ tags:
 - [ ] True Detective
 - [ ] Normal people
 - [ ] Finding Her Edge
+- [ ] Spartacus
 
 https://nothing-to-watch.port80.ch/
 #ref 

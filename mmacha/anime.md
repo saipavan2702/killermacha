@@ -27,6 +27,7 @@ tags:
 - [ ] Pluto
 - [ ] ACCA-13
 - [ ] Nura: rise of yokai clan
+- [ ] Osmosis Jones
 
 
 ## Movies

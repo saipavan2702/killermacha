@@ -60,5 +60,6 @@
   "baseline-style@@tab-top-left-style": "tab-top-left-icon",
   "baseline-style@@hide-vault-switcher-off": true,
   "iridium@@layout-desktop-only": "i-default-layout",
-  "iridium@@i-calendar-off": false
+  "iridium@@i-calendar-off": false,
+  "minimal-style@@image-muted": 1
 }

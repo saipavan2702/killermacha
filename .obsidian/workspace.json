@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "upskill/ProgramLang/GoLang/Core.md",
+                "file": "upskill/Sys Des/Core.md",
                 "mode": "source",
                 "source": false
               },
@@ -113,7 +113,8 @@
               "title": "Notebook Navigator"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -260,10 +261,20 @@
   },
   "active": "ca5a4536362291bc",
   "lastOpenFiles": [
-    "mmacha/pswds.md",
+    "attachments/Pasted image 20260601002039.png",
+    "attachments/communication_patterns_map_v2.svg",
+    "upskill/Sys Des/Core.md",
+    "attachments/Pasted image 20260531230835.png",
+    "upskill/Sys Des/API Build.md",
+    "upskill/Sys Des/Design Patterns.md",
     "upskill/ProgramLang/GoLang/Core.md",
-    "upskill/QoL/Refs.md",
+    "mmacha/movies.md",
     "orcl/Weekly report.md",
+    "mmacha/anime.md",
+    "upskill/ProgramLang/Java/Core.md",
+    "upskill/ProgramLang/Python/Core.md",
+    "mmacha/pswds.md",
+    "upskill/QoL/Refs.md",
     "upskill/Gen Misc/Math.md",
     "upskill/Gen Misc/ET.md",
     "upskill/QoL/Projects/Ideas.md",
@@ -278,14 +289,6 @@
     "upskill/DSA/DSA.md",
     "upskill/DSA/Algos/Binary search.md",
     "upskill/DSA/BackTrack.md",
-    "upskill/Sys Des/Design Patterns.md",
-    "mmacha/movies.md",
-    "upskill/Sys Des/Core.md",
-    "upskill/Sys Des/API Build.md",
-    "upskill/QoL/Digi Tools.md",
-    "cpp-obsidian/lessons/01-abstractions-have-cost.md",
-    "cpp-obsidian/CPP Lessons Dashboard.md",
-    "cpp-obsidian/lessons/07-responsibility.md",
     "cpp-obsidian/lessons",
     "cpp-obsidian",
     "upskill/Gen Misc",
@@ -304,8 +307,6 @@
     "upskill/QoL/Projects",
     "upskill/QoL",
     "upskill/DSA/Algos",
-    "attachments/Pasted Image 20231213104704_171.png",
-    "attachments/Pasted Image 20231213104704_137.png",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]

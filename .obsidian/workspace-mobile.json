@@ -11,14 +11,10 @@
             "id": "575b39194c0f6e76",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "upskill/system design/Design Patterns.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Design Patterns"
+              "title": "New tab"
             }
           }
         ]
