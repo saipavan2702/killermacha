@@ -18,7 +18,7 @@ tags:
 
 ## Holly 
 
-- [ ] Schindler's list
+- [x] Schindler's list ✅ 2026-06-06
 - [ ] Source Code
 - [ ] Hackers
 - [ ] Pirates of Silicon Valley
@@ -92,7 +92,7 @@ tags:
 - [x] Lisa Frankenstein ✅ 2026-01-14
 - [ ] Sleepless in Seattle
 - [ ] My Old ass
-- [ ] 10 things I hate about you
+- [x] 10 things I hate about you ✅ 2026-06-06
 - [ ] Amelia
 - [ ] Honey Don’t
 - [ ] The Talented Mr. Ripley
@@ -153,7 +153,9 @@ tags:
 - [ ] The Human Condition
 - [ ] The Nice Guys
 - [ ] The DaVinci Code
-- [ ] Black Bag
+- [ ] Black Breaking
+- [x] HouseMaid ✅ 2026-06-06
+- [x] The Perks of Being a Wallflower ✅ 2026-06-06
 
 
 ## Series

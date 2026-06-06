@@ -4,11 +4,8 @@ tags:
   - tips
   - "#bash"
   - "#ref"
-  - "#git"
 date: 2025-12-07
 ---
-
-
 ```bash
 # Some tips and tricks I've picked up along the way
 # these are some things I use almost everyday
@@ -99,32 +96,12 @@ exit
 | `crontab -e`                 | Edit cron jobs.                                 |
 | `crontab -l`                 | List cron jobs.                                 |
 | `!!`                         | Re-runs the previous command.                   |
+| `mkdir my-project; cd !$`    | Uses previous command argument                  |
 | `Ctrl + R`                   | Reverse-search your command history.            |
 | `man <command>`              | Shows documentation/manual for a command.       |
 | `ssh-keygen`                 | Generates an SSH key pair.                      |
 | `awk`                        | Text processing (e.g., extract columns).        |
 | `sed`                        | Stream editing (e.g., find & replace in files). |
-
-##  Git CLI Quick Reference
-
-```bash
-git add .                    # Stage all changes
-git restore --staged <file>  # Unstage file
-git log                      # View commit log
-git reset <commit>           # Reset to commit
-git stash                    # Stash current changes
-git stash pop                # Reapply stashed changes
-git stash clear              # Delete all stashes
-
-git remote add origin <url>  # Add remote repo
-git push origin master       # Push to remote master
-
-git fetch --all --prune      # Fetch & clean old branches
-git pull upstream main       # Pull latest from upstream
-git reset --hard upstream/main  # Reset to upstream state
-
-git rebase -i <commit>       # Interactive rebase (e.g., squash commits)
-```
 
 
 

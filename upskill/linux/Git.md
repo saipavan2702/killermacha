@@ -86,27 +86,27 @@ Beginner note: prefer `git switch` for branch movement and `git restore` for fil
 
 ## Remotes
 
-| Command | What it does |
-| --- | --- |
-| `git remote -v` | Show remotes |
-| `git remote add origin <url>` | Add a remote named `origin` |
-| `git remote rename origin upstream` | Rename a remote |
-| `git remote set-url origin <new-url>` | Change a remote URL |
-| `git push -u origin <branch>` | Push a branch and set upstream |
-| `git push` | Push current branch |
-| `git push origin HEAD` | Push current branch to same-named remote branch |
-| `git push --force-with-lease` | Force push more safely |
-| `git push origin HEAD --force` | Force push current branch; use carefully |
-| `git push origin <tag>` | Push one tag |
-| `git push origin --tags` | Push all tags |
-| `git push --delete origin <name>` | Delete a remote branch |
-| `git push -o ci.skip` | Push with a server option to skip CI, where supported |
-| `git push -o merge_request.create` | Push with a server option to create a merge request, where supported |
-| `git pull` | Fetch and merge latest changes |
-| `git pull origin <branch>` | Pull a specific branch |
-| `git pull --rebase` | Fetch and rebase instead of merge |
-| `git fetch` | Fetch branches/tags without merging |
-| `git fetch --prune` | Remove local refs for deleted remote branches |
+| Command                               | What it does                                                         |
+| ------------------------------------- | -------------------------------------------------------------------- |
+| `git remote -v`                       | Show remotes                                                         |
+| `git remote add origin <url>`         | Add a remote named `origin`                                          |
+| `git remote rename origin upstream`   | Rename a remote                                                      |
+| `git remote set-url origin <new-url>` | Change a remote URL                                                  |
+| `git push -u origin <branch>`         | Push a branch and set upstream                                       |
+| `git push`                            | Push current branch                                                  |
+| `git push origin HEAD`                | Push current branch to same-named remote branch                      |
+| `git push --force-with-lease`         | Force push more safely                                               |
+| `git push origin HEAD --force`        | Force push current branch; use carefully                             |
+| `git push origin <tag>`               | Push one tag                                                         |
+| `git push origin --tags`              | Push all tags                                                        |
+| `git push --delete origin <name>`     | Delete a remote branch                                               |
+| `git push -o ci.skip`                 | Push with a server option to skip CI, where supported                |
+| `git push -o merge_request.create`    | Push with a server option to create a merge request, where supported |
+| `git pull`                            | Fetch and merge latest changes                                       |
+| `git pull origin <branch>`            | Pull a specific branch                                               |
+| `git pull --rebase`                   | Fetch and rebase instead of merge                                    |
+| `git fetch`                           | Fetch branches/tags without merging                                  |
+| `git fetch --prune`                   | Remove local refs for deleted remote branches                        |
 
 ## Undo and Fix
 
