@@ -187,3 +187,112 @@ Vim sees a "real file" it can edit and save normally. Full editor powers unlocke
 - **Shell support:** Bash, Zsh, Ksh ✅ | POSIX sh ❌
 - **Lifetime:** Exists only during command execution
 - **Cleanup:** Automatic—no orphaned files
+
+
+###  Shape your own prompt
+
+Your prompt (`PS1`) deserves love. No plugins needed — pure Bash:
+
+```bash
+# ~/.bashrc
+# \u = user, \h = host, \w = working dir
+PS1='\[\e[32m\]\u@\h\[\e[0m\]:\[\e[34m\]\w\[\e[0m\]\$ '
+```
+
+###  ANSI escape codes — colors without a library
+
+No `chalk`, no `colorama`. Your terminal already speaks ANSI:
+
+```bash
+# Syntax: \e[<code>m ... \e[0m
+echo -e "\e[32m✓ success\e[0m"
+echo -e "\e[31m✗ error\e[0m"
+echo -e "\e[33m⚠ warning\e[0m"
+echo -e "\e[1;36mbold cyan\e[0m"
+
+# Reverse video — works on any terminal theme (dark or light)
+echo -e "\e[7m ATTENTION \e[0m  something important happened"
+```
+
+Wrap into helper functions:
+
+```bash
+ok()   { echo -e "\e[32m[OK]\e[0m $*"; }
+fail() { echo -e "\e[31m[FAIL]\e[0m $*"; }
+```
+
+###  Run things in the background
+
+Append `&` before executing to get your prompt back instantly:
+
+```bash
+sleep 100 &
+# [1] 48213  ← job number + PID
+
+jobs        # list background jobs
+fg %1       # bring job 1 to foreground
+Ctrl+Z      # suspend current foreground job
+bg %1       # resume a suspended job in background
+kill %1     # terminate it
+```
+
+> [!warning] Gotchas
+> - Job dies when you close the terminal → use `nohup cmd &` or `disown`
+> - Output still hits your terminal → redirect it:
+> ```bash
+> nohup ./script.sh > out.log 2>&1 &
+> ```
+> For long-lived processes, just use **tmux**.
+
+###  Everything is a file — meet `/proc`
+
+The kernel exposes system state as readable files:
+
+```bash
+cat /proc/cpuinfo      # CPU details
+cat /proc/meminfo      # memory usage
+cat /proc/loadavg      # load average
+cat /proc/uptime       # seconds since boot
+cat /proc/version      # kernel version
+```
+
+Per-process info at `/proc/<pid>/`:
+
+```bash
+cat /proc/$$/status                      # current shell status
+ls  /proc/$$/fd/                         # open file descriptors
+readlink /proc/$$/cwd                    # working directory
+cat /proc/$$/cmdline | tr '\0' ' '       # how it was invoked
+```
+
+Bonus on laptops:
+
+```bash
+cat /sys/class/power_supply/BAT0/capacity    # battery %
+cat /sys/class/thermal/thermal_zone0/temp    # CPU temp (millidegrees)
+```
+
+###  `strace` — see what a process is actually doing
+
+Attach to any running process and watch its system calls live. **Linux only.**
+
+```bash
+# Attach to a running process
+sudo strace -p <pid>
+
+# Quick demo
+yes > /dev/null &
+sudo strace -p $!
+```
+
+Useful flags:
+
+```bash
+strace -p <pid> -e trace=openat,read,write    # file I/O only
+strace -p <pid> -e trace=network              # network calls only
+strace -p <pid> -c                            # summary table at the end
+strace -f -pid <pid>                          # follow forked children
+```
+
+> [!tip] When something is "just hanging"
+> `strace` will often tell you in one line — blocked on a `read()` from a dead socket, or stuck on `openat()` for a missing config file.
