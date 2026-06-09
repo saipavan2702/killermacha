@@ -33,12 +33,14 @@ Git's
 https://github.com/JanDeDobbeleer/oh-my-posh/discussions/5578
 https://github.com/vraravam/dotfiles/tree/master
 https://gist.github.com/elliottminns/09a598082d77f795c88e93f7f73dba61
+https://github.com/mijndert/dotfiles
 
 Blogs
 https://medium.com/@Smyekh/tuning-my-terminal-how-zinit-made-my-zsh-setup-fast-flexible-and-actually-fun-5f6450589003
 https://scottspence.com/posts/speeding-up-my-zsh-shell
 https://blog.askesis.pl/post/2017/04/how-to-debug-zsh-startup-time.html
 https://joshblais.com/blog/
+https://mijndertstuij.nl/posts/what-i-got-wrong-about-fast-terminals/
 
 ---
 ## Aerospace
