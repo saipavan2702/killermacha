@@ -54,6 +54,7 @@ https://github.com/Qayyax/dot-files/blob/main/aerospace/.config/aerospace/aerosp
 https://github.com/mplusp/dotfiles
 https://github.com/robsteriam/dotfiles-public
 https://github.com/mehd-io/dotfiles/blob/backup-yabai/sketchybar/sketchybarrc
+https://github.com/florideanstarch/dotfiles/tree/main
 
 ---
 ## Tmux
