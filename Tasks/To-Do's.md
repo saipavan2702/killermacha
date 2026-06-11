@@ -1,0 +1,8 @@
+- [ ] HLD
+- [ ] LLD
+- [ ] Oracle DB 
+- [ ] AWS basics
+- [ ] GoLang
+- [ ] Spring Boot
+- [ ] SegmentTrees
+- [ ] DSA others

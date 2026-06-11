@@ -109,6 +109,7 @@ Influencer Blogs
 https://colecaccamise.com/
 https://nicknisi.com/
 https://ramx.in/
+https://jiteshcodes.com/
 
 MonkeyType
 https://monkeytype-wrapped.vercel.app/

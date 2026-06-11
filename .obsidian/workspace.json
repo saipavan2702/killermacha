@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "upskill/Sys Des/Design Patterns.md",
+                "file": "MultiLing/Inglis/Wocabulary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Design Patterns"
+              "title": "Wocabulary"
             }
           },
           {
@@ -98,8 +98,7 @@
               "title": "Notebook Navigator"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -246,16 +245,26 @@
   },
   "active": "63500852036f426e",
   "lastOpenFiles": [
+    "upskill/DSA/Misc.md",
+    "MultiLing/Inglis/Wocabulary.md",
+    "MultiLing/Inglis",
+    "MultiLing",
+    "upskill/ProgramLang/Misc.md",
+    "upskill/Sys Des/API Build.md",
+    "upskill/Web dev/backend-stack/Backend.md",
+    "upskill/CS Topics/Operating Sys.md",
+    "Tasks/To-Do's.md",
     "upskill/Sys Des/Core.md",
-    "upskill/Sys Des/Design Patterns.md",
     "upskill/QoL/Configs.md",
+    "upskill/Sys Des/Design Patterns.md",
+    "Tasks",
+    "upskill/QoL/Refs.md",
+    "mmacha/movies.md",
     "orcl/Weekly report.md",
     "2026-06-03.md",
     "upskill/Linux/Git.md",
     "upskill/Linux/Tips.md",
     "upskill/QoL/Projects/Ideas.md",
-    "mmacha/movies.md",
-    "upskill/QoL/Refs.md",
     "mov.md",
     "upskill/Linux/Vim.md",
     "2026-02-10.md",
@@ -266,15 +275,8 @@
     "attachments/Pasted image 20260601002039.png",
     "attachments/communication_patterns_map_v2.svg",
     "attachments/Pasted image 20260531230835.png",
-    "upskill/Sys Des/API Build.md",
     "upskill/ProgramLang/GoLang/Core.md",
     "mmacha/anime.md",
-    "upskill/ProgramLang/Java/Core.md",
-    "upskill/ProgramLang/Python/Core.md",
-    "mmacha/pswds.md",
-    "upskill/Gen Misc/Math.md",
-    "upskill/Gen Misc/ET.md",
-    "upskill/Gen Misc/Space.md",
     "cpp-obsidian/lessons",
     "cpp-obsidian",
     "upskill/Gen Misc",
@@ -289,9 +291,6 @@
     "attachments/Exported image 20250529160104-2.png",
     "attachments/Exported image 20250529160058-0.png",
     "upskill/QoL configs/Untitled",
-    "upskill/QoL/Projects",
-    "upskill/QoL",
-    "upskill/DSA/Algos",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
