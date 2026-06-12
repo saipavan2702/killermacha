@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fill Movie Album note frontmatter with TMDB poster and genres.
+"""Fill Movie Album note frontmatter with TMDB poster, genres, and directors.
 
 Reads TMDB_BEARER_TOKEN or TMDB_API_KEY from the environment.
 If the short API key is accidentally assigned to TMDB_BEARER_TOKEN, it is
@@ -52,6 +52,8 @@ QUERY_OVERRIDES = {
     "House": "House",
     "Inglourious Basterds": "Inglourious Basterds",
     "K": "K",
+    "King Arthur": "King Arthur: Legend of the Sword",
+    "King Arthur: Legend of the Sword": "King Arthur: Legend of the Sword",
     "Lord of the rings": "The Lord of the Rings: The Fellowship of the Ring",
     "LOTR": "The Lord of the Rings: The Return of the King",
     "The Lord of the Rings: The Fellowship of the Ring": "The Lord of the Rings: The Fellowship of the Ring",
@@ -111,6 +113,8 @@ YEAR_OVERRIDES = {
     "Brooklyn": "2015",
     "Harakiri": "1962",
     "K": "2012",
+    "King Arthur": "2017",
+    "King Arthur: Legend of the Sword": "2017",
     "Pride and Prejudice": "2005",
     "Shiva": "1989",
     "The Accountant": "2016",
@@ -126,6 +130,8 @@ IMDB_OVERRIDES = {
     "The Hobbit: An Unexpected Journey": "tt0903624",
     "The Hobbit: The Desolation of Smaug": "tt1170358",
     "The Hobbit: The Battle of the Five Armies": "tt2310332",
+    "King Arthur": "tt1972591",
+    "King Arthur: Legend of the Sword": "tt1972591",
     "Moana": "tt3521164",
     "Up": "tt1049413",
     "The World's End": "tt1213663",
@@ -357,6 +363,25 @@ def year_from(result: dict[str, Any], media_type: str) -> str:
     return value[:4] if re.match(r"^\d{4}", value) else ""
 
 
+def load_directors(result: dict[str, Any], media_type: str) -> list[str]:
+    if media_type not in ("movie", "anime-movie"):
+        return []
+    tmdb_id = result.get("id")
+    if not tmdb_id:
+        return []
+    payload = api_get(f"/movie/{tmdb_id}/credits", {"language": "en-US"})
+    directors: list[str] = []
+    seen: set[str] = set()
+    for person in payload.get("crew", []):
+        if person.get("job") != "Director":
+            continue
+        name = person.get("name")
+        if name and name not in seen:
+            directors.append(name)
+            seen.add(name)
+    return directors
+
+
 def metadata_from(result: dict[str, Any], media_type: str, genres: dict[int, str]) -> dict[str, Any]:
     poster_path = result.get("poster_path")
     genre_names = [genres[item] for item in result.get("genre_ids", []) if item in genres]
@@ -364,6 +389,7 @@ def metadata_from(result: dict[str, Any], media_type: str, genres: dict[int, str
         "poster": f"{IMAGE_BASE}{poster_path}" if poster_path else "",
         "industry": industry_from(result, media_type),
         "genres": genre_names,
+        "directors": load_directors(result, media_type),
     }
 
 
@@ -393,11 +419,30 @@ def has_real_poster(frontmatter: str) -> bool:
     return poster.startswith("http://") or poster.startswith("https://") or poster.startswith("[[")
 
 
+def has_list_field(frontmatter: str, key: str) -> bool:
+    lines = frontmatter.splitlines()
+    for index, line in enumerate(lines):
+        if re.match(rf"^{re.escape(key)}\s*:\s*\[\]\s*$", line):
+            return False
+        if not re.match(rf"^{re.escape(key)}\s*:\s*$", line):
+            continue
+        for item in lines[index + 1 :]:
+            if item and not item.startswith(" ") and re.match(r"^[A-Za-z0-9_.-]+\s*:", item):
+                return False
+            if item.startswith("  - "):
+                return True
+        return False
+    return False
+
+
 def has_genres(frontmatter: str) -> bool:
     if re.search(r"^genres:\s*\[\]\s*$", frontmatter, flags=re.M):
         return False
-    match = re.search(r"^genres:\s*$", frontmatter, flags=re.M)
-    return bool(match and re.search(r"^  - ", frontmatter, flags=re.M))
+    return has_list_field(frontmatter, "genres")
+
+
+def has_directors(frontmatter: str) -> bool:
+    return has_list_field(frontmatter, "directors")
 
 
 def main() -> int:
@@ -405,6 +450,7 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="show matches without editing notes")
     parser.add_argument("--force", action="store_true", help="refresh notes even when poster and genres already exist")
     parser.add_argument("--limit", type=int, default=0, help="limit number of notes processed")
+    parser.add_argument("--media-type", action="append", default=[], help="only process matching media_type values")
     parser.add_argument("--only", action="append", default=[], help="only process an exact title or note name")
     parser.add_argument("--sleep", type=float, default=0.6, help="delay between search requests")
     args = parser.parse_args()
@@ -425,9 +471,13 @@ def main() -> int:
             frontmatter, _ = parse_frontmatter(note.read_text(encoding="utf-8"))
             title = read_scalar(frontmatter, "title") or note.stem
             media_type = read_scalar(frontmatter, "media_type") or "movie"
+            if args.media_type and media_type not in args.media_type:
+                continue
             if args.only and title not in args.only and note.stem not in args.only:
                 continue
-            if not args.force and has_real_poster(frontmatter) and has_genres(frontmatter):
+            needs_directors = media_type in ("movie", "anime-movie")
+            has_required_directors = not needs_directors or has_directors(frontmatter)
+            if not args.force and has_real_poster(frontmatter) and has_genres(frontmatter) and has_required_directors:
                 continue
             result = search_title(title, media_type)
             time.sleep(args.sleep)
@@ -441,7 +491,8 @@ def main() -> int:
             matched_title = result.get("name") if media_type in ("series", "anime") else result.get("title")
             poster_flag = "poster" if metadata.get("poster") else "no poster"
             genre_flag = ", ".join(metadata.get("genres") or []) or "no genres"
-            print(f"MATCH {title} -> {matched_title} ({poster_flag}; {genre_flag})")
+            director_flag = ", ".join(metadata.get("directors") or []) or "no directors"
+            print(f"MATCH {title} -> {matched_title} ({poster_flag}; {genre_flag}; {director_flag})")
             if not args.dry_run:
                 update_note(note, metadata)
                 updated += 1

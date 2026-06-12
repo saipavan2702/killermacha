@@ -58,6 +58,7 @@ industry: ${JSON.stringify(industry)}
 watched: false
 watched_date:
 genres: []
+directors: []
 poster: ""
 tags:
 ${tagLines}
