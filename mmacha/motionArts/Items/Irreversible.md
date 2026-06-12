@@ -1,7 +1,7 @@
 ---
 title: "Irreversible"
 media_type: "movie"
-industry: "Hollywood"
+industry: "French cinema"
 watched: false
 watched_date:
 genres:
@@ -9,6 +9,8 @@ genres:
   - "Thriller"
   - "Crime"
 poster: "https://image.tmdb.org/t/p/w500/rxeDxo8FvZpLu6iplNpxdtAVnfu.jpg"
+directors:
+  - "Gaspar Noé"
 tags:
   - motion-art
   - movie

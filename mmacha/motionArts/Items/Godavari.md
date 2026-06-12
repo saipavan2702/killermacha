@@ -8,6 +8,8 @@ genres:
   - "Drama"
   - "Romance"
 poster: "https://image.tmdb.org/t/p/w500/3SDynWhHwPrQ3pjouFgTKqBrI02.jpg"
+directors:
+  - "Sekhar Kammula"
 tags:
   - motion-art
   - movie

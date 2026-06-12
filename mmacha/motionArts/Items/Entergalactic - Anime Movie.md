@@ -9,6 +9,8 @@ genres:
   - "Romance"
   - "Music"
 poster: "https://image.tmdb.org/t/p/w500/oMU3JpuKuasjAWIbUQgCaT6pco1.jpg"
+directors:
+  - "Fletcher Moules"
 tags:
   - motion-art
   - anime

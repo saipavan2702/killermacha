@@ -9,6 +9,9 @@ genres:
   - "Drama"
   - "Romance"
 poster: "https://image.tmdb.org/t/p/w500/p4RafgAPk558muOjnBMHhMArjS2.jpg"
+directors:
+  - "Glenn Ficarra"
+  - "John Requa"
 tags:
   - motion-art
   - movie

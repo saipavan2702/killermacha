@@ -9,6 +9,8 @@ genres:
   - "Fantasy"
   - "Romance"
 poster: "https://image.tmdb.org/t/p/w500/iNZdSIfhSCMtRILDNyhLn8UKeSG.jpg"
+directors:
+  - "Gary Winick"
 tags:
   - motion-art
   - movie

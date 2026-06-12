@@ -9,6 +9,8 @@ genres:
   - "Thriller"
   - "Mystery"
 poster: "https://image.tmdb.org/t/p/w500/knEIz1eNGl5MQDbrEAVWA7iRqF9.jpg"
+directors:
+  - "Stanley Kubrick"
 tags:
   - motion-art
   - movie

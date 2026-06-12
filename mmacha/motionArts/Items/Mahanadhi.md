@@ -9,6 +9,8 @@ genres:
   - "Family"
   - "Crime"
 poster: "https://image.tmdb.org/t/p/w500/2tfkpsl73EpKlBQygbKiYqtfpg5.jpg"
+directors:
+  - "Santhana Bharathi"
 tags:
   - motion-art
   - movie

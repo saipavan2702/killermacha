@@ -8,6 +8,8 @@ genres:
   - "Comedy"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/jrq1NoKvsxWCcffVOjegiYwloFN.jpg"
+directors:
+  - "Noah Baumbach"
 tags:
   - motion-art
   - movie

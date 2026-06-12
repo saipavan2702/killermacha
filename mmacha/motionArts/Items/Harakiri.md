@@ -9,6 +9,8 @@ genres:
   - "Drama"
   - "History"
 poster: "https://image.tmdb.org/t/p/w500/zK7HsOC7QxW1ldKIeFG8YJ5F2Eb.jpg"
+directors:
+  - "Masaki Kobayashi"
 tags:
   - motion-art
   - movie

@@ -7,6 +7,8 @@ watched_date:
 genres:
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/o9VXYOuaJxCEKOxbA86xqtwmqYn.jpg"
+directors:
+  - "Kenneth Lonergan"
 tags:
   - motion-art
   - movie

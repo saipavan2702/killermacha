@@ -10,6 +10,8 @@ genres:
   - "Crime"
   - "Action"
 poster: "https://image.tmdb.org/t/p/w500/oAdg6estkW0Ud9yBxEPPpHflszZ.jpg"
+directors:
+  - "Maria Sadowska"
 tags:
   - motion-art
   - movie

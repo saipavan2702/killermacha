@@ -9,6 +9,8 @@ genres:
   - "Drama"
   - "Thriller"
 poster: "https://image.tmdb.org/t/p/w500/mavrhr0ig2aCRR8d48yaxtD5aMQ.jpg"
+directors:
+  - "Sidney Lumet"
 tags:
   - motion-art
   - movie

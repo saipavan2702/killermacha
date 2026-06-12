@@ -9,6 +9,8 @@ genres:
   - "Romance"
   - "War"
 poster: "https://image.tmdb.org/t/p/w500/r0Iv2BiCFYDnzc6uU1q3AJ56igT.jpg"
+directors:
+  - "David Lean"
 tags:
   - motion-art
   - movie

@@ -10,6 +10,9 @@ genres:
   - "Animation"
   - "Fantasy"
 poster: "https://image.tmdb.org/t/p/w500/hUJ0UvQ5tgE2Z9WpfuduVSdiCiU.jpg"
+directors:
+  - "Gary Trousdale"
+  - "Kirk Wise"
 tags:
   - motion-art
   - anime

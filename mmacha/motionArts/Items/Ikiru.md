@@ -7,6 +7,8 @@ watched_date:
 genres:
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/dgNTS4EQDDVfkzJI5msKuHu2Ei3.jpg"
+directors:
+  - "Akira Kurosawa"
 tags:
   - motion-art
   - movie

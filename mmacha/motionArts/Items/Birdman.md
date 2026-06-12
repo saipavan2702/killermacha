@@ -5,9 +5,10 @@ industry: "Hollywood"
 watched: false
 watched_date:
 genres:
-  - "Drama"
-  - "Comedy"
-poster: "https://image.tmdb.org/t/p/w500/rHUg2AuIuLSIYMYFgavVwqt1jtc.jpg"
+  - "Documentary"
+poster: "https://image.tmdb.org/t/p/w500/9n0u3Ee7OUjgeyF5kIwahxkf4xm.jpg"
+directors:
+  - "Guy Bolongaro"
 tags:
   - motion-art
   - movie

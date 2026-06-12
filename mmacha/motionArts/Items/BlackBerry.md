@@ -9,6 +9,8 @@ genres:
   - "Drama"
   - "History"
 poster: "https://image.tmdb.org/t/p/w500/ePWKQzOnwabMcJsWYWIiy5p1Ofr.jpg"
+directors:
+  - "Matt Johnson"
 tags:
   - motion-art
   - movie
