@@ -1,17 +1,18 @@
 ---
-title: "Birdman"
-media_type: "movie"
-industry: "Hollywood"
+title: Birdman or (The Unexpected Virtue of Ignorance)
+media_type: movie
+industry: Hollywood
 watched: false
 watched_date:
 genres:
-  - "Documentary"
-poster: "https://image.tmdb.org/t/p/w500/9n0u3Ee7OUjgeyF5kIwahxkf4xm.jpg"
+  - Drama
+  - Comedy
+poster: https://image.tmdb.org/t/p/w500/rHUg2AuIuLSIYMYFgavVwqt1jtc.jpg
 directors:
-  - "Guy Bolongaro"
+  - Alejandro González Iñárritu
 tags:
   - motion-art
   - movie
 ---
 
-# Birdman
+# Birdman or (The Unexpected Virtue of Ignorance)

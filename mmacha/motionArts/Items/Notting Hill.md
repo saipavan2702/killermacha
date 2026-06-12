@@ -11,6 +11,8 @@ poster: https://image.tmdb.org/t/p/w500/hHRIf2XHeQMbyRb3HUx19SF5Ujw.jpg
 tags:
   - motion-art
   - movie
+directors:
+  - Roger Michell
 ---
 
 # Notting Hill

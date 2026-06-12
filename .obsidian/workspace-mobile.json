@@ -11,10 +11,13 @@
             "id": "575b39194c0f6e76",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "bases",
+              "state": {
+                "file": "mmacha/motionArts/Celluloid.base",
+                "viewName": "Movies"
+              },
+              "icon": "lucide-layout-grid",
+              "title": "Celluloid"
             }
           }
         ]
@@ -165,6 +168,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "templater-obsidian:Templater": false,
       "obsidian-media-db-plugin:Add new Media DB entry": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,

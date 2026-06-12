@@ -33,6 +33,8 @@ const LANGUAGE_INDUSTRY = {
 const QUERY_OVERRIDES = {
   "8\u00bd": "8\u00bd",
   "21 Jump Street": "21 Jump Street",
+  Birdman: "Birdman or (The Unexpected Virtue of Ignorance)",
+  "Birdman or (The Unexpected Virtue of Ignorance)": "Birdman or (The Unexpected Virtue of Ignorance)",
   Dark: "Dark",
   "Dark Knight": "The Dark Knight",
   Harakiri: "Harakiri",
@@ -87,6 +89,8 @@ const QUERY_OVERRIDES = {
 const YEAR_OVERRIDES = {
   "8\u00bd": "1963",
   "21 Jump Street": "2012",
+  Birdman: "2014",
+  "Birdman or (The Unexpected Virtue of Ignorance)": "2014",
   "Dark Knight": "2008",
   "The Dark Knight": "2008",
   "The Lord of the Rings: The Fellowship of the Ring": "2001",
@@ -120,6 +124,8 @@ const IMDB_OVERRIDES = {
   "The Hobbit: An Unexpected Journey": "tt0903624",
   "The Hobbit: The Desolation of Smaug": "tt1170358",
   "The Hobbit: The Battle of the Five Armies": "tt2310332",
+  Birdman: "tt2562232",
+  "Birdman or (The Unexpected Virtue of Ignorance)": "tt2562232",
   "King Arthur": "tt1972591",
   "King Arthur: Legend of the Sword": "tt1972591",
   "Dark Knight": "tt0468569",
