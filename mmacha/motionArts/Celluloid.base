@@ -1,0 +1,111 @@
+filters:
+  and:
+    - file.inFolder("mmacha/motionArts/Items")
+properties:
+  title:
+    displayName: Title
+  file.name:
+    displayName: File
+  poster:
+    displayName: Cover
+  media_type:
+    displayName: Type
+  industry:
+    displayName: Industry
+  watched:
+    displayName: Watched
+  watched_date:
+    displayName: Watched date
+  genres:
+    displayName: Genres
+views:
+  - type: cards
+    name: Movies
+    filters:
+      and:
+        - media_type == "movie"
+    order:
+      - title
+    limit: 200
+    image: poster
+    imageProperty: poster
+    imageFit: contain
+    imageAspectRatio: 1.5
+    cardSize: 260
+  - type: cards
+    name: Series
+    filters:
+      and:
+        - media_type == "series"
+    order:
+      - title
+    limit: 100
+    image: poster
+    imageProperty: poster
+    imageFit: contain
+    imageAspectRatio: 1.5
+    cardSize: 260
+  - type: cards
+    name: Anime
+    filters:
+      and:
+        - media_type == "anime"
+    order:
+      - title
+    limit: 100
+    image: poster
+    imageProperty: poster
+    imageFit: contain
+    imageAspectRatio: 1.5
+    cardSize: 260
+  - type: cards
+    name: Anime Movies
+    filters:
+      and:
+        - media_type == "anime-movie"
+    order:
+      - title
+    limit: 100
+    image: poster
+    imageProperty: poster
+    imageFit: contain
+    imageAspectRatio: 1.5
+    cardSize: 260
+  - type: cards
+    name: Watchlist
+    filters:
+      and:
+        - watched == false
+    order:
+      - title
+    limit: 250
+    image: poster
+    imageProperty: poster
+    imageFit: contain
+    imageAspectRatio: 1.5
+    cardSize: 260
+  - type: cards
+    name: Watched
+    filters:
+      and:
+        - watched == true
+    order:
+      - title
+    limit: 250
+    image: poster
+    imageProperty: poster
+    imageFit: contain
+    imageAspectRatio: 1.5
+    cardSize: 260
+  - type: table
+    name: All
+    order:
+      - title
+      - file.name
+      - media_type
+      - industry
+      - watched
+      - watched_date
+      - genres
+      - poster
+    limit: 300

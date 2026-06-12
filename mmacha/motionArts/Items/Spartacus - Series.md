@@ -1,0 +1,12 @@
+---
+title: "Spartacus"
+media_type: "series"
+industry: "Hollywood"
+watched: false
+watched_date:
+genres:
+  - "Drama"
+poster: "https://image.tmdb.org/t/p/w500/c2GKN4VHCj1dnjFMANRpGkCVBae.jpg"
+---
+
+# Spartacus
