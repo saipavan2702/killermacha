@@ -1,14 +1,14 @@
 ---
 title: Gladiator
 media_type: movie
-industry: "Hollywood"
-watched: false
+industry: Hollywood
+watched: true
 watched_date:
 genres:
-  - "Action"
-  - "Drama"
-  - "Adventure"
-poster: "https://image.tmdb.org/t/p/w500/wN2xWp1eIwCKOD0BHTcErTBv1Uq.jpg"
+  - Action
+  - Drama
+  - Adventure
+poster: https://image.tmdb.org/t/p/w500/wN2xWp1eIwCKOD0BHTcErTBv1Uq.jpg
 tags:
   - motion-art
   - movie

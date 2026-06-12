@@ -31,8 +31,8 @@ views:
     order:
       - title
     sort:
-      - property: file.ctime
-        direction: DESC
+      - property: file.name
+        direction: ASC
     limit: 200
     image: poster
     imageProperty: poster

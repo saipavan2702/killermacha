@@ -1,11 +1,3 @@
----
-title: Terminal and Productivity configs
-date: 2025-12-07
-tags:
-  - ref
-  - dotfiles
-  - "#qol"
----
 ## Ghostty
 
 Dotfiles
@@ -116,3 +108,4 @@ https://www.youtube.com/watch?v=G89oddoYZl4
 
 ---
 
+#ref #dotfiles #qol

@@ -1,12 +1,3 @@
----
-title: Stuff for upskill
-tags:
-  - "#dsa"
-  - "#project"
-  - "#qol"
-  - "#ref"
-date: 2025-12-08
----
 ## DSA
 
 Blogs
@@ -146,3 +137,5 @@ https://freeapis.juheapi.com/
 https://headlinefeed.dev/
 https://github.com/plenaryapp/awesome-rss-feeds
 https://github.com/AboutRSS/ALL-about-RSS
+
+#dsa #project #qol #ref

@@ -1,9 +1,3 @@
----
-
-excalidraw-plugin: parsed
-tags: [excalidraw]
-
----
 ==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
 
@@ -449,3 +443,5 @@ dwBbpW4gDeBHLYvjab5WnEplhEWmZjGTIAeVuE5t2LyBod+g5QCtBzfTAV4BTW4RjzBaQUKQqh0QP8Dn
 TyNoVLaEActr1ARYjdnABN2W4MVp6mtghAA2CIAA
 ```
 %%
+
+#excalidraw

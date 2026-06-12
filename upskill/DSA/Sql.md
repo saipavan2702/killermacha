@@ -1,10 +1,3 @@
----
-title: SQL
-date: 2026-01-01
-tags:
-  - tips
-  - sql
----
 **Basics**
 
 ```SQL
@@ -167,3 +160,5 @@ SELECT * FROM users WHERE id IN (1, 2, 3, ...);
 - **Eager load** associations you know you'll need
 - **Heavy reads** → replica | **Writes** → primary
 - Keep analytics off your primary DB
+
+#tips #sql

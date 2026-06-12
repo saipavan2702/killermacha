@@ -1,10 +1,3 @@
----
-title: Bit masking
-tags:
-  - "#dsa"
-  - "#ref"
-date: 2026-02-06
----
 ##  What is a Bitmasking?
 
 Imagine you have **4 light bulbs** in a row:
@@ -333,4 +326,6 @@ https://codeforces.com/blog/entry/18169
 https://codeforces.com/blog/entry/81516
 https://github.com/yash7xm/cp_notes
 
-#ref #dsa 
+#ref #dsa
+
+#dsa #ref

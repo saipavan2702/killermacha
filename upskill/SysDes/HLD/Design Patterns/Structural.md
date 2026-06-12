@@ -1,10 +1,3 @@
----
-title: Structural Design Patterns
-tags:
-  - sysdes
-  - ref
-  - design-patterns
----
 ### 1. Adapter
 **Purpose**: Make incompatible interfaces work together.
 **Use when**: A third-party library gives data in a format your app does not expect. The adapter translates between the two without changing either side.
@@ -128,3 +121,5 @@ class ImageProxy implements Image {
 ```
 
 ---
+
+#sysdes #ref #design-patterns

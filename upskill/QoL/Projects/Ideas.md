@@ -1,10 +1,3 @@
----
-title: Project Ideas
-date: 2025-12-08
-tags:
-  - "#project"
-  - ref
----
 Projects
 https://github.com/perghosh/Data-oriented-design
 https://gitlab.com/users/avey.dev/projects
@@ -35,3 +28,5 @@ https://www.youtube.com/watch?v=3GJcskn5mAg
 > 12.  Build Web3 apps using Thirdweb
 > 13.  Develop food recipes using Food APIs
 > 14.  Develop real-time trains detection using real-time APIs
+
+#project #ref

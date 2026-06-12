@@ -1,11 +1,3 @@
----
-title: Tips
-tags:
-  - tips
-  - "#bash"
-  - "#ref"
-date: 2025-12-07
----
 ```bash
 # Some tips and tricks I've picked up along the way
 # these are some things I use almost everyday
@@ -296,3 +288,5 @@ strace -f -pid <pid>                          # follow forked children
 
 > [!tip] When something is "just hanging"
 > `strace` will often tell you in one line — blocked on a `read()` from a dead socket, or stuck on `openat()` for a missing config file.
+
+#tips #bash #ref

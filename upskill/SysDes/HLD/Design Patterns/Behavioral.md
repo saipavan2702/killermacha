@@ -1,10 +1,3 @@
----
-title: Behavioral Design Patterns
-tags:
-  - sysdes
-  - ref
-  - design-patterns
----
 ### 1. Chain of Responsibility
 **Purpose**: Pass request through chain of handlers.
 **Example**: Customer support (Level 1 → Level 2 → Manager)
@@ -186,3 +179,5 @@ class TaxCalculator implements Visitor {
 ```
 
 ---
+
+#sysdes #ref #design-patterns

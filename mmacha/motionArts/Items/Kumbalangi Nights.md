@@ -1,14 +1,14 @@
 ---
-title: "Kumbalangi Nights"
-media_type: "movie"
-industry: "Mollywood"
+title: Kumbalangi Nights
+media_type: movie
+industry: Mollywood
 watched: true
-watched_date: "2025-06-12"
+watched_date: 2025-06-12
 genres:
-  - "Comedy"
-  - "Drama"
-  - "Romance"
-poster: "https://image.tmdb.org/t/p/w500/lJ3RvIirE2C7gdBKvPRaoQ3iCo2.jpg"
+  - Comedy
+  - Drama
+  - Romance
+poster: https://image.tmdb.org/t/p/w500/lJ3RvIirE2C7gdBKvPRaoQ3iCo2.jpg
 tags:
   - motion-art
   - movie

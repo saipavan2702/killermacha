@@ -1,10 +1,3 @@
----
-title: Golang
-tags:
-  - "#lang"
-  - "#golang"
-date: 2025-12-24
----
 Yes, **both stack and heap are in RAM**.
 ```code
 RAM
@@ -486,4 +479,6 @@ In Go, a type implements an interface automatically if it has all the methods re
 https://www.youtube.com/watch?v=6DiCscb0gWk
 https://www.youtube.com/watch?v=CIIrR5daWL4
 
-#ref #golang 
+#ref #golang
+
+#lang #golang

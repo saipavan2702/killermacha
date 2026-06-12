@@ -1,10 +1,3 @@
----
-title: api theory
-date: 2026-01-03
-tags:
-  - "#sysdes"
-  - "#ref"
----
 ## gRPC Overview
 
 The video provides a comprehensive breakdown of gRPC (Google Remote Procedure Call), a high-performance framework designed for efficient communication between distributed systems. It explains how gRPC leverages **Protocol Buffers** and **HTTP/2** to outperform traditional REST APIs.
@@ -887,6 +880,6 @@ root.querySelectorAll(".eh-tab").forEach(tab => {
 
 ### Ref
 https://www.youtube.com/watch?v=XDTov7xaD7g
-#ref 
+#ref
 
-
+#sysdes #ref

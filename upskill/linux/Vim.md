@@ -1,11 +1,3 @@
----
-title: Vim
-tags:
-  - vim
-  - bash
-  - ref
-date: 2025-12-23
----
 ## 🔀  Cursor Movement
 
 - `h` → move left
@@ -879,3 +871,5 @@ This allows AI tools or scripts to control your editor instance.
 
 
 #ref #vim
+
+#vim #bash #ref
