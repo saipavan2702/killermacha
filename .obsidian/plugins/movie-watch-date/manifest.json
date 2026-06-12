@@ -1,9 +1,0 @@
-{
-  "id": "movie-watch-date",
-  "name": "Movie Watch Date",
-  "version": "1.0.0",
-  "minAppVersion": "1.5.0",
-  "description": "Adds today's watched_date when a motionArts item is marked watched.",
-  "author": "mmacha",
-  "isDesktopOnly": false
-}

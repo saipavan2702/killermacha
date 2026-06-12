@@ -23,6 +23,7 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[3]
 ITEMS_DIR = ROOT / "mmacha" / "motionArts" / "Items"
+PLUGIN_DATA = ROOT / ".obsidian" / "plugins" / "mmacha-auto" / "data.json"
 API_BASE = "https://api.themoviedb.org/3"
 IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
 
@@ -48,6 +49,7 @@ QUERY_OVERRIDES = {
     "8½": "8½",
     "21 Jump Street": "21 Jump Street",
     "Dark": "Dark",
+    "Dark Knight": "The Dark Knight",
     "Harakiri": "Harakiri",
     "House": "House",
     "Inglourious Basterds": "Inglourious Basterds",
@@ -69,6 +71,7 @@ QUERY_OVERRIDES = {
     "The Accountant": "The Accountant",
     "The Boys": "The Boys",
     "The Human Condition": "The Human Condition I: No Greater Love",
+    "The Dark Knight": "The Dark Knight",
     "The Return": "The Return 2003",
     "Warrior": "Warrior",
     "Steins Gate": "Steins;Gate",
@@ -99,6 +102,8 @@ QUERY_OVERRIDES = {
 YEAR_OVERRIDES = {
     "8½": "1963",
     "21 Jump Street": "2012",
+    "Dark Knight": "2008",
+    "The Dark Knight": "2008",
     "The Lord of the Rings: The Fellowship of the Ring": "2001",
     "The Lord of the Rings: The Two Towers": "2002",
     "The Lord of the Rings: The Return of the King": "2003",
@@ -132,6 +137,8 @@ IMDB_OVERRIDES = {
     "The Hobbit: The Battle of the Five Armies": "tt2310332",
     "King Arthur": "tt1972591",
     "King Arthur: Legend of the Sword": "tt1972591",
+    "Dark Knight": "tt0468569",
+    "The Dark Knight": "tt0468569",
     "Moana": "tt3521164",
     "Up": "tt1049413",
     "The World's End": "tt1213663",
@@ -154,6 +161,13 @@ def api_auth() -> tuple[str | None, str | None]:
         return None, api_key_env
     if bearer_env:
         return None, bearer_env
+    if PLUGIN_DATA.exists():
+        with PLUGIN_DATA.open(encoding="utf-8") as handle:
+            plugin_token = (json.load(handle).get("tmdbBearerToken") or "").strip()
+        if looks_like_bearer_token(plugin_token):
+            return plugin_token, None
+        if plugin_token:
+            return None, plugin_token
 
     bearer = None
     api_key = None
