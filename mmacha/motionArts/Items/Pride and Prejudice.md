@@ -1,16 +1,18 @@
 ---
-title: "Pride and Prejudice"
-media_type: "movie"
-industry: "Hollywood"
+title: Pride and Prejudice
+media_type: movie
+industry: Hollywood
 watched: true
-watched_date: "2025-06-12"
+watched_date: 2025-06-12
 genres:
-  - "Drama"
-  - "Romance"
-poster: "https://image.tmdb.org/t/p/w500/o8UhmEbWPHmTUxP0lMuCoqNkbB3.jpg"
+  - Drama
+  - Romance
+poster: https://image.tmdb.org/t/p/w500/o8UhmEbWPHmTUxP0lMuCoqNkbB3.jpg
 tags:
   - motion-art
   - movie
+directors:
+  - Joe Wright
 ---
 
 # Pride and Prejudice

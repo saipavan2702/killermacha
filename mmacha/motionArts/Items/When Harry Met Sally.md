@@ -1,17 +1,19 @@
 ---
-title: "When Harry Met Sally..."
-media_type: "movie"
-industry: "Hollywood"
+title: When Harry Met Sally...
+media_type: movie
+industry: Hollywood
 watched: false
 watched_date:
 genres:
-  - "Comedy"
-  - "Romance"
-  - "Drama"
-poster: "https://image.tmdb.org/t/p/w500/rFOiFUhTMtDetqCGClC9PIgnC1P.jpg"
+  - Comedy
+  - Romance
+  - Drama
+poster: https://image.tmdb.org/t/p/w500/rFOiFUhTMtDetqCGClC9PIgnC1P.jpg
 tags:
   - motion-art
   - movie
+directors:
+  - Rob Reiner
 ---
 
 # When Harry Met Sally...

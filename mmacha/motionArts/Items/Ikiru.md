@@ -1,14 +1,14 @@
 ---
-title: "Ikiru"
-media_type: "movie"
-industry: "Japanese cinema"
+title: Ikiru
+media_type: movie
+industry: Japanese cinema
 watched: false
 watched_date:
 genres:
-  - "Drama"
-poster: "https://image.tmdb.org/t/p/w500/dgNTS4EQDDVfkzJI5msKuHu2Ei3.jpg"
+  - Drama
+poster: https://image.tmdb.org/t/p/w500/dgNTS4EQDDVfkzJI5msKuHu2Ei3.jpg
 directors:
-  - "Akira Kurosawa"
+  - Akira Kurosawa
 tags:
   - motion-art
   - movie

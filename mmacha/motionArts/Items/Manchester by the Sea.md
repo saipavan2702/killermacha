@@ -1,14 +1,14 @@
 ---
-title: "Manchester by the Sea"
-media_type: "movie"
-industry: "Hollywood"
+title: Manchester by the Sea
+media_type: movie
+industry: Hollywood
 watched: false
 watched_date:
 genres:
-  - "Drama"
-poster: "https://image.tmdb.org/t/p/w500/o9VXYOuaJxCEKOxbA86xqtwmqYn.jpg"
+  - Drama
+poster: https://image.tmdb.org/t/p/w500/o9VXYOuaJxCEKOxbA86xqtwmqYn.jpg
 directors:
-  - "Kenneth Lonergan"
+  - Kenneth Lonergan
 tags:
   - motion-art
   - movie

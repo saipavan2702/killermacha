@@ -1,15 +1,17 @@
 ---
-title: "The Good, the Bad and the Ugly"
-media_type: "movie"
-industry: "Hollywood"
+title: The Good, the Bad and the Ugly
+media_type: movie
+industry: Hollywood
 watched: false
 watched_date:
 genres:
-  - "Western"
-poster: "https://image.tmdb.org/t/p/w500/bX2xnavhMYjWDoZp1VM6VnU1xwe.jpg"
+  - Western
+poster: https://image.tmdb.org/t/p/w500/bX2xnavhMYjWDoZp1VM6VnU1xwe.jpg
 tags:
   - motion-art
   - movie
+directors:
+  - Sergio Leone
 ---
 
 # The Good, the Bad and the Ugly

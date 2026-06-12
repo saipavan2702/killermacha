@@ -1,15 +1,17 @@
 ---
-title: "Triangle"
-media_type: "movie"
-industry: "Hollywood"
+title: Triangle
+media_type: movie
+industry: Hollywood
 watched: false
 watched_date:
 genres:
-  - "Horror"
-poster: "https://image.tmdb.org/t/p/w500/cRlMrbc4Iof7vN0ZqHwJnMBYBLi.jpg"
+  - Horror
+poster: https://image.tmdb.org/t/p/w500/cRlMrbc4Iof7vN0ZqHwJnMBYBLi.jpg
 tags:
   - motion-art
   - movie
+directors:
+  - Christopher Smith
 ---
 
 # Triangle

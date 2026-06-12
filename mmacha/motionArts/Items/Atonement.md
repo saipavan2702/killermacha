@@ -1,15 +1,15 @@
 ---
 title: Atonement
 media_type: movie
-industry: "Hollywood"
+industry: Hollywood
 watched: true
-watched_date:
+watched_date: 2026-06-12
 genres:
-  - "Drama"
-  - "Romance"
-poster: "https://image.tmdb.org/t/p/w500/hMRIyBjPzxaSXWM06se3OcNjIQa.jpg"
+  - Drama
+  - Romance
+poster: https://image.tmdb.org/t/p/w500/hMRIyBjPzxaSXWM06se3OcNjIQa.jpg
 directors:
-  - "Joe Wright"
+  - Joe Wright
 tags:
   - motion-art
   - movie

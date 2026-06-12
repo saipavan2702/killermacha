@@ -1,14 +1,14 @@
 ---
 title: Grown Ups 2
 media_type: movie
-industry: "Hollywood"
+industry: Hollywood
 watched: true
-watched_date:
+watched_date: 2026-06-12
 genres:
-  - "Comedy"
-poster: "https://image.tmdb.org/t/p/w500/hT6ijOtjtYrnyDhN7VA2QWyGFAm.jpg"
+  - Comedy
+poster: https://image.tmdb.org/t/p/w500/hT6ijOtjtYrnyDhN7VA2QWyGFAm.jpg
 directors:
-  - "Dennis Dugan"
+  - Dennis Dugan
 tags:
   - motion-art
   - movie
