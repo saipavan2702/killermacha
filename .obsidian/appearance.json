@@ -6,5 +6,8 @@
   "baseFontSizeAction": true,
   "interfaceFontFamily": "Rubik",
   "textFontFamily": "Karla",
-  "monospaceFontFamily": "JetBrainsMono Nerd Font"
+  "monospaceFontFamily": "JetBrainsMono Nerd Font",
+  "enabledCssSnippets": [
+    "movie-album-filmstrip"
+  ]
 }

@@ -1,0 +1,12 @@
+{
+  "templates_folder": "mmacha/motionArts/Templates",
+  "trigger_on_file_creation": true,
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "mmacha/motionArts/Items",
+      "template": "mmacha/motionArts/Templates/Media Item.md"
+    }
+  ],
+  "syntax_highlighting": true
+}

@@ -11,5 +11,7 @@
   "obsidian-map-view",
   "dataview",
   "obsidian-media-db-plugin",
-  "obsidian-minimal-settings"
+  "obsidian-minimal-settings",
+  "templater-obsidian",
+  "unitade"
 ]
