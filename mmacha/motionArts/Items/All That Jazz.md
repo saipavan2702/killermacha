@@ -7,6 +7,8 @@ watched_date:
 genres:
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/culCEdj4srLljefgn4XKd6k3C5t.jpg"
+directors:
+  - "Bob Fosse"
 tags:
   - motion-art
   - movie

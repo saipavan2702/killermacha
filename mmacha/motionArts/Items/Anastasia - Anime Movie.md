@@ -10,6 +10,9 @@ genres:
   - "Fantasy"
   - "Adventure"
 poster: "https://image.tmdb.org/t/p/w500/bppGWGA8zq1sRvTdDJnUzVW9GcH.jpg"
+directors:
+  - "Don Bluth"
+  - "Gary Goldman"
 tags:
   - motion-art
   - anime

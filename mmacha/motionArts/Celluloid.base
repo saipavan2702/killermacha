@@ -18,6 +18,8 @@ properties:
     displayName: Watched date
   genres:
     displayName: Genres
+  directors:
+    displayName: Directors
   tags:
     displayName: Tags
 views:
@@ -112,6 +114,7 @@ views:
       - watched
       - watched_date
       - genres
+      - directors
       - poster
       - tags
     limit: 300

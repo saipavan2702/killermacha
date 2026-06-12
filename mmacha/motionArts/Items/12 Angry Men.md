@@ -7,6 +7,8 @@ watched_date:
 genres:
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/zhG3vKWyDRaZYoaww1UVAi29T9h.jpg"
+directors:
+  - "Sidney Lumet"
 tags:
   - motion-art
   - movie
