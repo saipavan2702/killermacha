@@ -9,6 +9,9 @@ genres:
   - "Drama"
   - "History"
 poster: "https://image.tmdb.org/t/p/w500/mbm8k3GFhXS0ROd9AD1gqYbIFbM.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Irishman

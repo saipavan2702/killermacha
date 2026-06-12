@@ -10,6 +10,9 @@ genres:
   - "Mystery"
   - "Thriller"
 poster: "https://image.tmdb.org/t/p/w500/qJf2TzE8nRTFbFMPJNW6c8mI0KU.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Primal Fear

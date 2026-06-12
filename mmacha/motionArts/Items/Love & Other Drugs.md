@@ -9,6 +9,9 @@ genres:
   - "Comedy"
   - "Romance"
 poster: "https://image.tmdb.org/t/p/w500/wZLM2uKJRYNchLmiCIjosX0rXy8.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Love & Other Drugs

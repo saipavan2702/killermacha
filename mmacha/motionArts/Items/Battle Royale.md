@@ -9,6 +9,9 @@ genres:
   - "Thriller"
   - "Action"
 poster: "https://image.tmdb.org/t/p/w500/aLGKAQKgzWpJ6egyWzzC11jXBRJ.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Battle Royale

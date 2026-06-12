@@ -8,6 +8,9 @@ genres:
   - "Drama"
   - "Comedy"
 poster: "https://image.tmdb.org/t/p/w500/4mwnjii4zreLDTYIDM2OxcuQUTu.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Uttama Villain

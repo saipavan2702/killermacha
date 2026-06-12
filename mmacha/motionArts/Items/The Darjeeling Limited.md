@@ -9,6 +9,9 @@ genres:
   - "Drama"
   - "Comedy"
 poster: "https://image.tmdb.org/t/p/w500/oSW5OVXTulaIXcoNwJAp5YEKpbP.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Darjeeling Limited

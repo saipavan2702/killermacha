@@ -12,6 +12,10 @@ genres:
   - "Family"
   - "Science Fiction"
 poster: "https://image.tmdb.org/t/p/w500/foZpSG88IQUCEBJE3unc5QzO6bQ.jpg"
+tags:
+  - motion-art
+  - anime
+  - movie
 ---
 
 # Osmosis Jones

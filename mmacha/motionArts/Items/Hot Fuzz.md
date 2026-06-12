@@ -9,6 +9,9 @@ genres:
   - "Action"
   - "Comedy"
 poster: "https://image.tmdb.org/t/p/w500/zPib4ukTSdXvHP9pxGkFCe34f3y.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Hot Fuzz

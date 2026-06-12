@@ -7,6 +7,9 @@ watched_date:
 genres:
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/8rgPyWjYZhsphSSxbXguMnhN7H0.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # La Haine

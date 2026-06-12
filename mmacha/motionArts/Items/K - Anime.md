@@ -8,6 +8,10 @@ genres:
   - "Action & Adventure"
   - "Animation"
 poster: "https://image.tmdb.org/t/p/w500/52eQfCm8yGEQHNZefyHr6uIysqt.jpg"
+tags:
+  - motion-art
+  - anime
+  - series
 ---
 
 # K

@@ -7,6 +7,9 @@ watched_date:
 genres:
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/c2GKN4VHCj1dnjFMANRpGkCVBae.jpg"
+tags:
+  - motion-art
+  - series
 ---
 
 # Spartacus

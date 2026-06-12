@@ -9,6 +9,9 @@ genres:
   - "Drama"
   - "History"
 poster: "https://image.tmdb.org/t/p/w500/zK7HsOC7QxW1ldKIeFG8YJ5F2Eb.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Harakiri

@@ -9,6 +9,9 @@ genres:
   - "Romance"
   - "Thriller"
 poster: "https://image.tmdb.org/t/p/w500/15uOEfqBNTVtDUT7hGBVCka0rZz.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Vertigo

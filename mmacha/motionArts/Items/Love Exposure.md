@@ -10,6 +10,9 @@ genres:
   - "Drama"
   - "Romance"
 poster: "https://image.tmdb.org/t/p/w500/3QSGUdzG374H7pOxIdKNBpeLEUk.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Love Exposure

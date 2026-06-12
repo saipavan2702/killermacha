@@ -9,6 +9,9 @@ genres:
   - "Drama"
   - "Romance"
 poster: "https://image.tmdb.org/t/p/w500/7Y9ILV1unpW9mLpGcqyGQU72LUy.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Lobster

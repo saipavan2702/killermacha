@@ -9,6 +9,10 @@ genres:
   - "Family"
   - "Fantasy"
 poster: "https://image.tmdb.org/t/p/w500/5m9njnidjR0syG2gpVPVgcEMB2X.jpg"
+tags:
+  - motion-art
+  - anime
+  - movie
 ---
 
 # Fantasia

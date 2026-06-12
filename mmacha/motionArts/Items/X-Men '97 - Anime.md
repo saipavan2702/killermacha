@@ -9,6 +9,10 @@ genres:
   - "Action & Adventure"
   - "Sci-Fi & Fantasy"
 poster: "https://image.tmdb.org/t/p/w500/9Ycz7yYRf9V4jk3YXwcZhFtbNcF.jpg"
+tags:
+  - motion-art
+  - anime
+  - series
 ---
 
 # X-Men '97

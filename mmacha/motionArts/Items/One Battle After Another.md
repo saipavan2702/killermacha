@@ -9,6 +9,9 @@ genres:
   - Crime
   - Comedy
 poster: https://image.tmdb.org/t/p/w500/lbBWwxBht4JFP5PsuJ5onpMqugW.jpg
+tags:
+  - motion-art
+  - movie
 ---
 
 # One Battle After Another

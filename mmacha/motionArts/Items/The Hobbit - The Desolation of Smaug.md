@@ -9,6 +9,9 @@ genres:
   - "Adventure"
   - "Action"
 poster: "https://image.tmdb.org/t/p/w500/xQYiXsheRCDBA39DOrmaw1aSpbk.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Hobbit: The Desolation of Smaug

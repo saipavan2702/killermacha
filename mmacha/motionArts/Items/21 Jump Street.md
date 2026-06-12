@@ -9,6 +9,9 @@ genres:
   - Comedy
   - Crime
 poster: https://image.tmdb.org/t/p/w500/8v3Sqv9UcIUC4ebmpKWROqPBINZ.jpg
+tags:
+  - motion-art
+  - movie
 ---
 
 # 21 Jump Street

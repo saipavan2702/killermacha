@@ -7,6 +7,9 @@ watched_date: "2025-06-12"
 genres:
   - "Action"
 poster: "https://image.tmdb.org/t/p/w500/fYqSOkix4rbDiZW0ACNnvZCpT6X.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Internship

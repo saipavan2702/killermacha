@@ -9,6 +9,9 @@ genres:
   - "Science Fiction"
   - "Mystery"
 poster: "https://image.tmdb.org/t/p/w500/nTr0lvAzeQmUjgSgDEHTJpnrxTz.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Source Code

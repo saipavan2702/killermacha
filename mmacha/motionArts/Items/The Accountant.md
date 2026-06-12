@@ -9,6 +9,9 @@ genres:
   - "Thriller"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/fceheXB5fC4WrLVuWJ6OZv9FXYr.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Accountant

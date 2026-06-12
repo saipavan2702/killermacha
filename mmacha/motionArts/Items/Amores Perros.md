@@ -8,6 +8,9 @@ genres:
   - "Drama"
   - "Thriller"
 poster: "https://image.tmdb.org/t/p/w500/A4lH22nlFF7MdalGfcvSrlC1ttt.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Amores Perros

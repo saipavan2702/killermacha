@@ -9,6 +9,9 @@ genres:
   - "Music"
   - "Thriller"
 poster: "https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Whiplash

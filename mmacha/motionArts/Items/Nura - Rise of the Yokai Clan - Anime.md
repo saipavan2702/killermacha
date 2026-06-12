@@ -9,6 +9,10 @@ genres:
   - "Sci-Fi & Fantasy"
   - "Action & Adventure"
 poster: "https://image.tmdb.org/t/p/w500/aeQOCeForAiquZMFEbCA602xrs2.jpg"
+tags:
+  - motion-art
+  - anime
+  - series
 ---
 
 # Nura: Rise of the Yokai Clan

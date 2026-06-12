@@ -9,6 +9,9 @@ genres:
   - "Romance"
   - "War"
 poster: "https://image.tmdb.org/t/p/w500/r0Iv2BiCFYDnzc6uU1q3AJ56igT.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Doctor Zhivago

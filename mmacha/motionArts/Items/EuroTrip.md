@@ -7,6 +7,9 @@ watched_date:
 genres:
   - "Comedy"
 poster: "https://image.tmdb.org/t/p/w500/iLdO4PwbZCCQSa9rchZMwuJm9xe.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # EuroTrip

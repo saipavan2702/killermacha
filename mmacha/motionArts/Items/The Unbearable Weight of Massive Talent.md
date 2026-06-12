@@ -9,6 +9,9 @@ genres:
   - "Comedy"
   - "Crime"
 poster: "https://image.tmdb.org/t/p/w500/aqhLeieyTpTUKPOfZ3jzo2La0Mq.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Unbearable Weight of Massive Talent

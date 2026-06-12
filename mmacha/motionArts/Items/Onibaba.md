@@ -7,6 +7,9 @@ watched_date:
 genres:
   - "Horror"
 poster: "https://image.tmdb.org/t/p/w500/xyPLG53OodhJtvfQEfcmC43l16O.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Onibaba

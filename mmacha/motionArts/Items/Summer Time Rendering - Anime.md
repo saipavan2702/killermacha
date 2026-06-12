@@ -9,6 +9,10 @@ genres:
   - "Drama"
   - "Mystery"
 poster: "https://image.tmdb.org/t/p/w500/m9e7chRW8Q8Go1Dv00RCUHbMoNe.jpg"
+tags:
+  - motion-art
+  - anime
+  - series
 ---
 
 # Summer Time Rendering

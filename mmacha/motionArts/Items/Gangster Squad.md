@@ -10,6 +10,9 @@ genres:
   - "Action"
   - "Thriller"
 poster: "https://image.tmdb.org/t/p/w500/wAuQNTBFBu2yXZsX6yLhUPiwTlW.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Gangster Squad

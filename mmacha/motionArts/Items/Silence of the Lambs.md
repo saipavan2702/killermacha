@@ -9,6 +9,9 @@ genres:
   - "Thriller"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/uS9m8OBk1A8eM9I042bx8XXpqAq.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Silence of the Lambs

@@ -9,6 +9,10 @@ genres:
   - "Fantasy"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/f4oZTcfGrVTXKTWg157AwikXqmP.jpg"
+tags:
+  - motion-art
+  - anime
+  - movie
 ---
 
 # The Boy and the Heron

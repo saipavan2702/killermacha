@@ -10,6 +10,10 @@ genres:
   - "Animation"
   - "Fantasy"
 poster: "https://image.tmdb.org/t/p/w500/hUJ0UvQ5tgE2Z9WpfuduVSdiCiU.jpg"
+tags:
+  - motion-art
+  - anime
+  - movie
 ---
 
 # Beauty and the Beast

@@ -8,6 +8,9 @@ genres:
   - "Sci-Fi & Fantasy"
   - "Action & Adventure"
 poster: "https://image.tmdb.org/t/p/w500/in1R2dDc421JxsoRWaIIAqVI2KE.jpg"
+tags:
+  - motion-art
+  - series
 ---
 
 # The Boys

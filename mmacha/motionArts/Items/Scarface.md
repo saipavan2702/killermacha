@@ -9,6 +9,9 @@ genres:
   - "Crime"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/iQ5ztdjvteGeboxtmRdXEChJOHh.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Scarface

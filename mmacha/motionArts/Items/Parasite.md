@@ -9,6 +9,9 @@ genres:
   - "Thriller"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Parasite

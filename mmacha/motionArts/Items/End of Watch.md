@@ -9,6 +9,9 @@ genres:
   - "Drama"
   - "Thriller"
 poster: "https://image.tmdb.org/t/p/w500/pDeVKQICkcdwwjHxGj0MeS14YJ6.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # End of Watch

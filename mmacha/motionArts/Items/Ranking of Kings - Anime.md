@@ -9,6 +9,10 @@ genres:
   - "Action & Adventure"
   - "Sci-Fi & Fantasy"
 poster: "https://image.tmdb.org/t/p/w500/ujMjMUi6z02uOfQEerEDC4rH6aG.jpg"
+tags:
+  - motion-art
+  - anime
+  - series
 ---
 
 # Ranking of Kings

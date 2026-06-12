@@ -8,6 +8,9 @@ genres:
   - "Romance"
   - "Comedy"
 poster: "https://image.tmdb.org/t/p/w500/3vQUQwdtfPt1Sl2GZrIECWWA0dk.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Under the Tuscan Sun

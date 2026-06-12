@@ -5,10 +5,13 @@ industry: "Hollywood"
 watched: false
 watched_date:
 genres:
-  - "Adventure"
-  - "Fantasy"
+  - "Comedy"
   - "Action"
-poster: "https://image.tmdb.org/t/p/w500/jGWpG4YhpQwVmjyHEGkxEkeRf0S.jpg"
+  - "Science Fiction"
+poster: "https://image.tmdb.org/t/p/w500/kpglnOBYmKn0AkkWDzGxzKHDbds.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The World's End

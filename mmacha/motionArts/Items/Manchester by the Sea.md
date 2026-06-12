@@ -7,6 +7,9 @@ watched_date:
 genres:
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/o9VXYOuaJxCEKOxbA86xqtwmqYn.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Manchester by the Sea

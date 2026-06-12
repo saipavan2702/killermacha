@@ -8,6 +8,9 @@ genres:
   - "Drama"
   - "War & Politics"
 poster: "https://image.tmdb.org/t/p/w500/7O4iVfOMQmdCSxhOg1WnzG1AgYT.jpg"
+tags:
+  - motion-art
+  - series
 ---
 
 # Shogun

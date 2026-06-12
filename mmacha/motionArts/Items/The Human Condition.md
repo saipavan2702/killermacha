@@ -9,6 +9,9 @@ genres:
   - "Drama"
   - "History"
 poster: "https://image.tmdb.org/t/p/w500/q7godavx5XEbeVxEeqi4pmiOKdI.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Human Condition

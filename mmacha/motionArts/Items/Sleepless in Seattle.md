@@ -9,6 +9,9 @@ genres:
   - "Drama"
   - "Romance"
 poster: "https://image.tmdb.org/t/p/w500/jAXfku1u1uaLGh4cUmK0ESf1pPu.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Sleepless in Seattle

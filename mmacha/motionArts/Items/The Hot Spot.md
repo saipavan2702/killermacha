@@ -9,6 +9,9 @@ genres:
   - "Crime"
   - "Thriller"
 poster: "https://image.tmdb.org/t/p/w500/iQCP69183K1QZo8bb23nkcLap3W.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Hot Spot

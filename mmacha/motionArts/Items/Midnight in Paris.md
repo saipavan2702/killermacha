@@ -9,6 +9,9 @@ genres:
   - "Comedy"
   - "Romance"
 poster: "https://image.tmdb.org/t/p/w500/4wBG5kbfagTQclETblPRRGihk0I.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Midnight in Paris

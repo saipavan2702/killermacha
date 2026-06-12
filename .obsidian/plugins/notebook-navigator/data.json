@@ -448,14 +448,14 @@
   "fileColors": {},
   "fileBackgroundColors": {},
   "folderIcons": {
-    "upskill/QoL": "simple-icons:qualys"
+    "upSkill/QoL": "simple-icons:qualys"
   },
   "folderColors": {},
   "folderBackgroundColors": {},
   "folderSortOverrides": {},
   "folderTreeSortOverrides": {},
   "folderAppearances": {
-    "upskill/Sys Des": {
+    "upSkill/SysDes": {
       "previewRows": 1
     }
   },

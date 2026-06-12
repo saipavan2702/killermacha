@@ -9,6 +9,9 @@ genres:
   - "Romance"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/rFOiFUhTMtDetqCGClC9PIgnC1P.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # When Harry Met Sally...

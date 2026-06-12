@@ -8,6 +8,9 @@ genres:
   - "Drama"
   - "Crime"
 poster: "https://image.tmdb.org/t/p/w500/w44lbLfseKtOZWRDdGmPqEqMBsA.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Nay Varan Bhat Loncha Kon Nai Koncha

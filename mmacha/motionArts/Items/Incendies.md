@@ -9,6 +9,9 @@ genres:
   - "War"
   - "Mystery"
 poster: "https://image.tmdb.org/t/p/w500/yH6DAQVgbyj72S66gN4WWVoTjuf.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Incendies

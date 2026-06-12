@@ -10,6 +10,10 @@ genres:
   - "Mystery"
   - "Comedy"
 poster: "https://image.tmdb.org/t/p/w500/bj9lZLRey7ZTWNbA9o3L0tW0HfW.jpg"
+tags:
+  - motion-art
+  - anime
+  - series
 ---
 
 # Steins;Gate

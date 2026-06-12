@@ -8,6 +8,9 @@ genres:
   - "Drama"
   - "Family"
 poster: "https://image.tmdb.org/t/p/w500/lsy3aEsEfYIHdLRk4dontZ4s85h.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Hachi: A Dog's Tale

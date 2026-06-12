@@ -9,6 +9,9 @@ genres:
   - "Romance"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/ujERk3aKABXU3NDXOAxEQYTHe9A.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # 10 Things I Hate About You

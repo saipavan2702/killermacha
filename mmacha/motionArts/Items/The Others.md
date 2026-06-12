@@ -9,6 +9,9 @@ genres:
   - "Mystery"
   - "Thriller"
 poster: "https://image.tmdb.org/t/p/w500/p8g1vlTvpM6nr2hMMiZ1fUlKF0D.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Others

@@ -9,6 +9,9 @@ genres:
   - "Crime"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/fttFT9kYkqvZOiDhv8IEfFnvuq1.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Ozhivudivasathe Kali

@@ -10,6 +10,10 @@ genres:
   - "Drama"
   - "Sci-Fi & Fantasy"
 poster: "https://image.tmdb.org/t/p/w500/1wif9a57obZA5N1UujiluoUahkI.jpg"
+tags:
+  - motion-art
+  - anime
+  - series
 ---
 
 # Afro Samurai

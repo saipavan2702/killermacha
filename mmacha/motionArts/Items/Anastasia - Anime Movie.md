@@ -10,6 +10,10 @@ genres:
   - "Fantasy"
   - "Adventure"
 poster: "https://image.tmdb.org/t/p/w500/bppGWGA8zq1sRvTdDJnUzVW9GcH.jpg"
+tags:
+  - motion-art
+  - anime
+  - movie
 ---
 
 # Anastasia

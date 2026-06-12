@@ -9,6 +9,10 @@ genres:
   - "Mystery"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/lz95Bn85XN2pAXbHcSQreiUMv5b.jpg"
+tags:
+  - motion-art
+  - anime
+  - series
 ---
 
 # Boogiepop and Others

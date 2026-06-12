@@ -43,6 +43,14 @@ if (currentPath !== targetPath) {
   await tp.file.move(`${folder}/${fileName}`);
 }
 const industry = mediaType === "anime" || mediaType === "anime-movie" ? "Anime" : "";
+const tagsByType = {
+  movie: ["motion-art", "movie"],
+  series: ["motion-art", "series"],
+  anime: ["motion-art", "anime", "series"],
+  "anime-movie": ["motion-art", "anime", "movie"],
+};
+const tags = tagsByType[mediaType] || ["motion-art"];
+const tagLines = tags.map((tag) => `  - ${tag}`).join("\n");
 tR += `---
 title: ${JSON.stringify(title)}
 media_type: "${mediaType}"
@@ -51,6 +59,8 @@ watched: false
 watched_date:
 genres: []
 poster: ""
+tags:
+${tagLines}
 ---
 
 # ${title}

@@ -5,10 +5,15 @@ industry: "Anime"
 watched: false
 watched_date:
 genres:
+  - "Animation"
   - "Comedy"
-  - "Action"
+  - "Family"
   - "Adventure"
-poster: "https://image.tmdb.org/t/p/w500/xwvJ3WzdJ1OCuDoY8LAxBUlQyig.jpg"
+poster: "https://image.tmdb.org/t/p/w500/mFvoEwSfLqbcWwFsDjQebn9bzFe.jpg"
+tags:
+  - motion-art
+  - anime
+  - movie
 ---
 
 # Up

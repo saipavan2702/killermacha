@@ -10,6 +10,9 @@ genres:
   - "Crime"
   - "Action"
 poster: "https://image.tmdb.org/t/p/w500/oAdg6estkW0Ud9yBxEPPpHflszZ.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Girls to Buy

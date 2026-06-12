@@ -9,6 +9,9 @@ genres:
   - "Thriller"
   - "War"
 poster: "https://image.tmdb.org/t/p/w500/7sfbEnaARXDDhKm0CZ7D7uc2sbo.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Inglourious Basterds

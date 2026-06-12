@@ -8,6 +8,9 @@ genres:
   - "Comedy"
   - "Romance"
 poster: "https://image.tmdb.org/t/p/w500/dKUubjvxO78XDts6VP1Ggcp4R9O.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Philadelphia Story

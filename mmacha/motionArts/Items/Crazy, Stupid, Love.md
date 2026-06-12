@@ -9,6 +9,9 @@ genres:
   - "Drama"
   - "Romance"
 poster: "https://image.tmdb.org/t/p/w500/p4RafgAPk558muOjnBMHhMArjS2.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Crazy, Stupid, Love.

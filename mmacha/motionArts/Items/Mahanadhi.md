@@ -9,6 +9,9 @@ genres:
   - "Family"
   - "Crime"
 poster: "https://image.tmdb.org/t/p/w500/2tfkpsl73EpKlBQygbKiYqtfpg5.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Mahanadhi

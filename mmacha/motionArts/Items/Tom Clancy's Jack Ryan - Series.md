@@ -8,6 +8,9 @@ genres:
   - "Action & Adventure"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/cO4py3L3q5GNPrA0qr1wVDrosK1.jpg"
+tags:
+  - motion-art
+  - series
 ---
 
 # Tom Clancy's Jack Ryan

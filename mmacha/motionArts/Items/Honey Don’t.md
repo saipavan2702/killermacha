@@ -9,6 +9,9 @@ genres:
   - "Crime"
   - "Thriller"
 poster: "https://image.tmdb.org/t/p/w500/fJm3kmd9NLZWypMas7g34oNFgbk.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Honey Don’t

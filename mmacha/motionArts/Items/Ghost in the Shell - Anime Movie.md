@@ -9,6 +9,10 @@ genres:
   - "Animation"
   - "Science Fiction"
 poster: "https://image.tmdb.org/t/p/w500/9gC88zYUBARRSThcG93MvW14sqx.jpg"
+tags:
+  - motion-art
+  - anime
+  - movie
 ---
 
 # Ghost in the Shell

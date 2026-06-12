@@ -8,6 +8,9 @@ genres:
   - "Drama"
   - "Mystery"
 poster: "https://image.tmdb.org/t/p/w500/iLUNqgNKuWn667kXCKztSxYbT3k.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Nymphomaniac

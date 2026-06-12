@@ -9,6 +9,10 @@ genres:
   - "Animation"
   - "Family"
 poster: "https://image.tmdb.org/t/p/w500/oQffRNjK8e19rF7xVYEN8ew0j7b.jpg"
+tags:
+  - motion-art
+  - anime
+  - movie
 ---
 
 # The Nightmare Before Christmas

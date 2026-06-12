@@ -8,6 +8,9 @@ genres:
   - "Comedy"
   - "Romance"
 poster: "https://image.tmdb.org/t/p/w500/4jS66Qmq2Ru5S2YzHVknGd4xJyT.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Serendipity

@@ -9,6 +9,9 @@ genres:
   - "Thriller"
   - "Crime"
 poster: "https://image.tmdb.org/t/p/w500/jsS3a3ep2KyBVmmiwaz3LvK49b1.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Prisoners

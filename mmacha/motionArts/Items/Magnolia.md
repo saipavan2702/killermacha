@@ -7,6 +7,9 @@ watched_date:
 genres:
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/tpfC325Jk6S38VTe5dDWjWtoyxr.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Magnolia

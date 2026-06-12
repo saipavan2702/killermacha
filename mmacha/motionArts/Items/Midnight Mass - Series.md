@@ -8,6 +8,9 @@ genres:
   - "Mystery"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/iYoMZYVD775MtBYJfv6OGY1FsnL.jpg"
+tags:
+  - motion-art
+  - series
 ---
 
 # Midnight Mass

@@ -11,6 +11,9 @@ genres:
   - "Fantasy"
   - "Romance"
 poster: "https://image.tmdb.org/t/p/w500/2FC9L9MrjBoGHYjYZjdWQdopVYb.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Princess Bride

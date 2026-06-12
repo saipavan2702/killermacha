@@ -9,6 +9,9 @@ genres:
   - "History"
   - "War"
 poster: "https://image.tmdb.org/t/p/w500/7paXMt2e3Tr5dLmEZOGgFEn2Vo7.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Bridge on the River Kwai

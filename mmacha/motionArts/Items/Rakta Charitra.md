@@ -9,6 +9,9 @@ genres:
   - "Crime"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/lx36zIYVOHfLVklyFlPYMCmlY7b.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Rakta Charitra

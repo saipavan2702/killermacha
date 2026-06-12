@@ -9,6 +9,9 @@ genres:
   - "Romance"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/6stnAm1wSek8ZrislwK4xGTyCnt.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Proposal

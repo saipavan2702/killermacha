@@ -8,6 +8,9 @@ genres:
   - "Drama"
   - "Crime"
 poster: "https://image.tmdb.org/t/p/w500/9OkCLM73MIU2CrKZbqiT8Ln1wY2.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Goodfellas

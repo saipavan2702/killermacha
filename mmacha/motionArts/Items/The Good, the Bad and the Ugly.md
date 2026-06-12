@@ -7,6 +7,9 @@ watched_date:
 genres:
   - "Western"
 poster: "https://image.tmdb.org/t/p/w500/bX2xnavhMYjWDoZp1VM6VnU1xwe.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Good, the Bad and the Ugly

@@ -9,6 +9,10 @@ genres:
   - "Animation"
   - "Family"
 poster: "https://image.tmdb.org/t/p/w500/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg"
+tags:
+  - motion-art
+  - anime
+  - movie
 ---
 
 # My Neighbor Totoro

@@ -8,6 +8,9 @@ genres:
   - "Romance"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/eDo0pNruy0Qgj6BdTyHIR4cxHY8.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Materialists

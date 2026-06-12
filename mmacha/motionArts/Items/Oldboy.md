@@ -10,6 +10,9 @@ genres:
   - "Mystery"
   - "Action"
 poster: "https://image.tmdb.org/t/p/w500/pWDtjs568ZfOTMbURQBYuT4Qxka.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Oldboy

@@ -9,6 +9,9 @@ genres:
   - "Drama"
   - "Romance"
 poster: "https://image.tmdb.org/t/p/w500/lJ3RvIirE2C7gdBKvPRaoQ3iCo2.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Kumbalangi Nights

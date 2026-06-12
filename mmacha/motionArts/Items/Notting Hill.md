@@ -8,6 +8,9 @@ genres:
   - "Romance"
   - "Comedy"
 poster: "https://image.tmdb.org/t/p/w500/hHRIf2XHeQMbyRb3HUx19SF5Ujw.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Notting Hill

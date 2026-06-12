@@ -9,6 +9,9 @@ genres:
   - "Drama"
   - "History"
 poster: "https://image.tmdb.org/t/p/w500/4c7QMp7JZl70K8x5oJuY40mckWx.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Amelia

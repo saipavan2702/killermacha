@@ -9,6 +9,9 @@ genres:
   - "Crime"
   - "Thriller"
 poster: "https://image.tmdb.org/t/p/w500/99X2SgyFunJFXGAYnDv3sb9pnUD.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Usual Suspects

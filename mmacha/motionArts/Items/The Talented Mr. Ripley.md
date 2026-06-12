@@ -9,6 +9,9 @@ genres:
   - "Crime"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/6ojHgqtIR41O2qLKa7LFUVj0cZa.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Talented Mr. Ripley

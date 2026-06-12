@@ -10,6 +10,9 @@ genres:
   - "Family"
   - "Fantasy"
 poster: "https://image.tmdb.org/t/p/w500/t3vaWRPSf6WjDSamIkKDs1iQWna.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Ratatouille

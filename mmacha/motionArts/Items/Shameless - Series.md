@@ -8,6 +8,9 @@ genres:
   - "Drama"
   - "Comedy"
 poster: "https://image.tmdb.org/t/p/w500/ifo31fMWLmyOVpdak9K0kY4jldQ.jpg"
+tags:
+  - motion-art
+  - series
 ---
 
 # Shameless

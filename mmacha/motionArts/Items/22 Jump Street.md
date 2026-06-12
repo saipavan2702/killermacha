@@ -9,6 +9,9 @@ genres:
   - Comedy
   - Action
 poster: https://image.tmdb.org/t/p/w500/850chzYHYbT3IISl6Q7dbBuFP2B.jpg
+tags:
+  - motion-art
+  - movie
 ---
 
 # 22 Jump Street

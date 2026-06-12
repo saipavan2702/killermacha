@@ -9,6 +9,9 @@ genres:
   - "History"
   - "War"
 poster: "https://image.tmdb.org/t/p/w500/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Schindler's list

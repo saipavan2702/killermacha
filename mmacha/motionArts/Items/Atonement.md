@@ -8,6 +8,9 @@ genres:
   - Drama
   - Romance
 poster: https://image.tmdb.org/t/p/w500/hMRIyBjPzxaSXWM06se3OcNjIQa.jpg
+tags:
+  - motion-art
+  - movie
 ---
 
 # Atonement

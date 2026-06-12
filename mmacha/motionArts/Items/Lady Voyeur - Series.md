@@ -8,6 +8,9 @@ genres:
   - "Drama"
   - "Mystery"
 poster: "https://image.tmdb.org/t/p/w500/5BqzppbUELOLDUSuS8d9mWz97iH.jpg"
+tags:
+  - motion-art
+  - series
 ---
 
 # Lady Voyeur

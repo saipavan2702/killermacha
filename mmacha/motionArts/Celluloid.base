@@ -18,6 +18,8 @@ properties:
     displayName: Watched date
   genres:
     displayName: Genres
+  tags:
+    displayName: Tags
 views:
   - type: cards
     name: Movies
@@ -26,6 +28,9 @@ views:
         - media_type == "movie"
     order:
       - title
+    sort:
+      - property: file.ctime
+        direction: DESC
     limit: 200
     image: poster
     imageProperty: poster
@@ -108,4 +113,5 @@ views:
       - watched_date
       - genres
       - poster
+      - tags
     limit: 300

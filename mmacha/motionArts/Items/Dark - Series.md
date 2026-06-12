@@ -10,6 +10,9 @@ genres:
   - "Sci-Fi & Fantasy"
   - "Mystery"
 poster: "https://image.tmdb.org/t/p/w500/1DLjjvSWMYo17B7wuz6YikB96hH.jpg"
+tags:
+  - motion-art
+  - series
 ---
 
 # Dark

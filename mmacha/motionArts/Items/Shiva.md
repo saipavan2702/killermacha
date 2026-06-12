@@ -9,6 +9,9 @@ genres:
   - "Drama"
   - "Crime"
 poster: "https://image.tmdb.org/t/p/w500/glgO02tTO5B4GAmybuzEsCMQK5O.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Shiva

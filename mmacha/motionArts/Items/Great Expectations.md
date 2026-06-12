@@ -9,6 +9,9 @@ genres:
   - "Drama"
   - "Romance"
 poster: "https://image.tmdb.org/t/p/w500/djLsfl3lm7BZKWsKfVZ2wM1ZMrP.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Great Expectations

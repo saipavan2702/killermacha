@@ -9,6 +9,9 @@ genres:
   - "Fantasy"
   - "Action"
 poster: "https://image.tmdb.org/t/p/w500/yHA9Fc37VmpUA5UncTxxo3rTGVA.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Hobbit: An Unexpected Journey

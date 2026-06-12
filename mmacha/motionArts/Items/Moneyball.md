@@ -7,6 +7,9 @@ watched_date:
 genres:
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/4yIQq1e6iOcaZ5rLDG3lZBP3j7a.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Moneyball

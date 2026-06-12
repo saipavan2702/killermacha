@@ -8,6 +8,9 @@ genres:
   - "Drama"
   - "Romance"
 poster: "https://image.tmdb.org/t/p/w500/o8UhmEbWPHmTUxP0lMuCoqNkbB3.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Pride and Prejudice

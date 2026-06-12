@@ -9,6 +9,9 @@ genres:
   - "Drama"
   - "Thriller"
 poster: "https://image.tmdb.org/t/p/w500/jcgUjx1QcupGzjntTVlnQ15lHqy.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Memories of Murder

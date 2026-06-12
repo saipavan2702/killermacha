@@ -10,6 +10,10 @@ genres:
   - "Family"
   - "Fantasy"
 poster: "https://image.tmdb.org/t/p/w500/wFSpyMsp7H0ttERbxY7Trlv8xry.jpg"
+tags:
+  - motion-art
+  - anime
+  - movie
 ---
 
 # Monsters, Inc.

@@ -84,8 +84,11 @@ QUERY_OVERRIDES = {
     "Brooklyn": "Brooklyn",
     "The Princess and Frog": "The Princess and the Frog",
     "My neighbour Totoro": "My Neighbor Totoro",
+    "Moana": "Moana",
+    "Up": "Up",
     "Wild Robot": "The Wild Robot",
     "Monster inc.": "Monsters, Inc.",
+    "The World's End": "The World's End",
     "Tim Burton's  The nightmare before christmas": "The Nightmare Before Christmas",
     "ghost in the shell": "Ghost in the Shell",
     "Boy and the Heron": "The Boy and the Heron",
@@ -101,6 +104,9 @@ YEAR_OVERRIDES = {
     "The Hobbit: The Desolation of Smaug": "2013",
     "The Hobbit: The Battle of the Five Armies": "2014",
     "The Lord of the Rings: The War of the Rohirrim": "2024",
+    "Moana": "2016",
+    "Up": "2009",
+    "The World's End": "2013",
     "Boogiepop and Others": "2019",
     "Brooklyn": "2015",
     "Harakiri": "1962",
@@ -120,6 +126,9 @@ IMDB_OVERRIDES = {
     "The Hobbit: An Unexpected Journey": "tt0903624",
     "The Hobbit: The Desolation of Smaug": "tt1170358",
     "The Hobbit: The Battle of the Five Armies": "tt2310332",
+    "Moana": "tt3521164",
+    "Up": "tt1049413",
+    "The World's End": "tt1213663",
 }
 
 

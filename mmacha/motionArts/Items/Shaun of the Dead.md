@@ -8,6 +8,9 @@ genres:
   - "Horror"
   - "Comedy"
 poster: "https://image.tmdb.org/t/p/w500/dgXPhzNJH8HFTBjXPB177yNx6RI.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Shaun of the Dead

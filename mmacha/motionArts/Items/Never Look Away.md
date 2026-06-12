@@ -9,6 +9,9 @@ genres:
   - "Romance"
   - "History"
 poster: "https://image.tmdb.org/t/p/w500/fn0Tp9SG0IQ3Nx8iHPYPiseLMWd.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Never Look Away

@@ -9,6 +9,9 @@ genres:
   - "Science Fiction"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/eCOtqtfvn7mxGl6nfmq4b1exJRc.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Her

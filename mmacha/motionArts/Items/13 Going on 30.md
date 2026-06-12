@@ -9,6 +9,9 @@ genres:
   - "Fantasy"
   - "Romance"
 poster: "https://image.tmdb.org/t/p/w500/iNZdSIfhSCMtRILDNyhLn8UKeSG.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # 13 Going on 30

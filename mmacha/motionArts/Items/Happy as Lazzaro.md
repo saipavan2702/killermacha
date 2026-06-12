@@ -8,6 +8,9 @@ genres:
   - "Drama"
   - "Fantasy"
 poster: "https://image.tmdb.org/t/p/w500/j4x1O6G0cbchHQwNsEZ0DntOJMJ.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # Happy as Lazzaro

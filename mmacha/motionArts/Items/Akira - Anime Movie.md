@@ -9,6 +9,10 @@ genres:
   - "Science Fiction"
   - "Action"
 poster: "https://image.tmdb.org/t/p/w500/neZ0ykEsPqxamsX6o5QNUFILQrz.jpg"
+tags:
+  - motion-art
+  - anime
+  - movie
 ---
 
 # Akira

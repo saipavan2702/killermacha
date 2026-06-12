@@ -8,6 +8,9 @@ genres:
   - "Comedy"
   - "Horror"
 poster: "https://image.tmdb.org/t/p/w500/fPtUgMcLIboqlTlPrq0bQpKK8eq.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # The Menu

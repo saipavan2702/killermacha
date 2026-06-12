@@ -8,6 +8,9 @@ genres:
   - "Comedy"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/yUs4Sw9AyTg2sA1qWBkNpD2mGSj.jpg"
+tags:
+  - motion-art
+  - movie
 ---
 
 # My Old Ass

@@ -10,6 +10,10 @@ genres:
   - "Fantasy"
   - "Family"
 poster: "https://image.tmdb.org/t/p/w500/v6nAUs62OJ4DXmnnmPFeVmMz8H9.jpg"
+tags:
+  - motion-art
+  - anime
+  - movie
 ---
 
 # The Princess and the Frog
