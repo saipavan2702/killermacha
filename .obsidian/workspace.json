@@ -34,8 +34,7 @@
               "title": "Architectural"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -244,12 +243,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "6827ffeb9077e3fa",
+  "active": "aaee5ed9184bfc0e",
   "lastOpenFiles": [
+    "mmacha/motionArts/Items/22 Jump Street.md",
+    "mmacha/motionArts/Celluloid.base",
+    "mmacha/motionArts/Items/10 Things I Hate About You.md",
+    "upSkill/SysDes/HLD/Design Patterns/Architectural.md",
     "upSkill/SysDes/LLD/SOLID principles.md",
     "upSkill/SysDes/HLD/API Build.md",
     "Lingo/Inglis/Wocabulary.md",
-    "mmacha/motionArts/Celluloid.base",
     "Excalidraw/Drawing 2026-06-11 23.22.44.excalidraw.md",
     "Lingo/Eśpanol/Objects.md",
     "mmacha/pswds.md",
@@ -270,10 +272,8 @@
     "upSkill/SysDes/Core.md",
     "upSkill/DSA/Algos/Binary search.md",
     "upSkill/CS Topics/Operating Sys.md",
-    "upSkill/SysDes/HLD/Design Patterns/Structural.md",
     "new-book-template-clipper.json",
     "new-post-video-template-clipper.json",
-    "mmacha/motionArts/Items/Untitled.md",
     "mmacha/motionArts/Tools/__pycache__/sync_tmdb_posters.cpython-314.pyc",
     "mmacha/motionArts/Tools/__pycache__",
     "upSkill/SysDes/HLD/Design Patterns",
