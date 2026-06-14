@@ -1,100 +1,3 @@
-## gRPC Overview
-
-The video provides a comprehensive breakdown of gRPC (Google Remote Procedure Call), a high-performance framework designed for efficient communication between distributed systems. It explains how gRPC leverages **Protocol Buffers** and **HTTP/2** to outperform traditional REST APIs.
-
-### **Core Concepts**
-
-* **Protocol Buffers (Protobuf):** A language-neutral mechanism for serialising structured data. Unlike JSON (text-based), Protobuf is binary, making it much smaller and faster to process.
-* **HTTP/2 Foundation:** gRPC uses HTTP/2 to enable features like **Multiplexing** (multiple requests over one connection), **Header Compression**, **Binary Framing**, and **Full Duplex** communication.
-* **Language Agnostic:** It allows services written in different languages (e.g., a Go backend and a Python AI service) to communicate as if they were calling local functions.
-
-### **The Four gRPC Communication Protocols**
-
-#### **1. Unary RPC**
-The simplest form, mirroring the traditional REST request-response model. The client sends a single request and gets a single response.
-* **Example:** A client sends a request to a "Math Service" with two numbers (`5` and `10`), and the server returns the sum (`15`).
-
-#### **2. Server Streaming RPC**
-The client sends one request, and the server returns a continuous stream of messages.
-* **Example:** A "Live Sports Score" service. You send one request for a specific match, and the server pushes updates (score changes, cards) to you in real-time as they happen.
-
-#### **3. Client Streaming RPC**
-The client sends a stream of multiple messages, and the server processes them and returns a single consolidated response at the end.
-* **Example:** Large file uploads or telemetry data. An IoT device streams thousands of sensor readings to a server, which then responds once with a "Success" or a summary report.
-
-#### **4. Bidirectional Streaming RPC**
-Both the client and server send a stream of messages simultaneously over a single persistent connection.
-* **Example:** A Chat Application. Both users can send and receive messages at the same time without waiting for the other to finish, or a financial trading platform streaming live stock ticks while accepting trade orders.
-
-### **Why use gRPC over REST?**
-
-* **Efficiency:** Binary serialisation is much more compact than JSON.
-* **Type Safety:** You define your data structures in `.proto` files, which prevents runtime errors by ensuring both client and server follow the same "contract."
-* **Performance:** Multiplexing reduces the overhead of opening multiple TCP connections, significantly lowering latency in microservices.
-
-## Pagination
-
-Pagination = dividing large data into small, loadable chunks so apps don't freeze and servers stay stable.
-Two approaches: **Offset** (simple) and **Cursor** (smart).
-### 1. Offset Pagination
-
-Tell the DB how many rows to **skip**, then return the next batch.
-
-```sql
-SELECT * FROM items LIMIT 10 OFFSET 20
--- skip first 20, return rows 21–30
-```
-
-```ts
-async function getItems(page: number, limit: number) {
-  const offset = (page - 1) * limit;
-  return db.query(`SELECT * FROM items LIMIT $1 OFFSET $2`, [limit, offset]);
-}
-```
-
-### Problems
-- **Slow at scale** — DB still scans all skipped rows before returning results
-- **Unstable** — new inserts shift data → duplicates or missing rows
-
-> ✅ Use when: data is **small or static**
-
----
-### 2. Cursor Pagination
-
-Use the **last seen ID** as a bookmark. DB jumps directly to it via index — no scanning. Two type: `key-based` & `time-based`
-
-```ts
-async function getItems(limit: number, cursor?: number) {
-  const where = cursor ? `WHERE id > ${cursor}` : '';
-  const rows = await db.query(
-    `SELECT * FROM items ${where} ORDER BY id ASC LIMIT $1`, [limit]
-  );
-  const nextCursor = rows.at(-1)?.id ?? null;
-  return { rows, nextCursor };
-}
-
-// First page
-const p1 = await getItems(10);
-// → { rows: [...], nextCursor: 162 }
-
-// Next page — pass the cursor
-const p2 = await getItems(10, p1.nextCursor);
-// → starts after id = 162
-```
-
-### Benefits
-- **Always fast** — no skipped row scanning
-- **Stable** — live data won't cause duplicates or gaps
-- Built for **infinite scroll** (Twitter, Instagram, etc.)
-
-> [!tip]
-> 
-> Offset says *"skip N rows"* — DB scans all of them.  
-> Cursor says *"start after this ID"* — DB jumps directly via index.
-
-
-## Auth types
-
 ```dataviewjs
 const tabs = [
   {
@@ -490,396 +393,218 @@ root.querySelectorAll(".auth-tab").forEach(function(tab) {
 ```
 
 
-## Error Handling
+Authentication answers "who are you?" Authorization answers "what are you allowed to do?"
 
-```dataviewjs
-const sections = [
-  {
-    num: "01",
-    lang: "TypeScript",
-    color: "#3178C6",
-    title: "Never forget await on async calls",
-    verdict: "DON'T",
-    useCase: "A function calls fetchUserProfile() but forgets the await. It returns true synchronously before the fetch completes. If the fetch fails, the error logs to console — where nobody looks.",
-    tip: "TypeScript won't always catch a missing await. Enable `@typescript-eslint/no-floating-promises` in your ESLint config — it flags unawaited Promises as errors.",
-    good: `// DO: always await async operations
-async function loadData(): Promise<boolean> {
-  await fetchUserProfile()  // error surfaces properly
-  return true
-}`,
-    bad: `// DON'T: fire-and-forget async call
-function loadData() {
-  fetchUserProfile()  // ← missing await
-  return true         // returns before fetch even starts
-  // errors silently logged to console and lost
-}`
-  },
-  {
-    num: "02",
-    lang: "TypeScript",
-    color: "#3178C6",
-    title: "Promise.all on mutations without rollback",
-    verdict: "DON'T",
-    useCase: "chargeCard() and reserveInventory() run in parallel. Card charge throws — Promise.all rejects immediately. But reserveInventory() may have already succeeded, leaving inventory permanently locked.",
-    tip: "Promise.all is safe for parallel reads. For mutations with side effects, run sequentially and implement explicit rollback on failure.",
-    good: `// DO: sequential mutations with rollback
-const charge = await chargeCard()
-try {
-  await reserveInventory()
-} catch (err) {
-  await refundCharge(charge.id)  // explicit rollback
-  throw err
-}`,
-    bad: `// DON'T: parallel mutations, no rollback
-await Promise.all([
-  chargeCard(),        // fails → rejects
-  reserveInventory()   // may have already succeeded
-])
-// result: charged card + locked inventory = broken state`
-  },
-  {
-    num: "03",
-    lang: "TypeScript",
-    color: "#3178C6",
-    title: "Massive catch blocks with instanceof chains",
-    verdict: "DON'T",
-    useCase: "Giant catch blocks with 5+ instanceof checks for AxiosError, TypeError, SyntaxError, NetworkError, plus an else fallback that nobody understands. Adding a new error type means editing every catch site.",
-    tip: "Create a normaliseError() utility that maps raw errors to domain types at the boundary. Catch blocks stay thin; domain errors carry all context your app needs.",
-    good: `// DO: normalise at the boundary, catch domain errors
-function normaliseError(err: unknown): AppError {
-  if (axios.isAxiosError(err))
-    return new NetworkError(err.message)
-  if (err instanceof SyntaxError)
-    return new ParseError(err.message)
-  return new UnknownError(String(err))
-}
+Most real APIs combine multiple auth ideas. For example, a web app may use OIDC for login, sessions for the browser, access tokens for API calls, refresh tokens for long-lived login, and API keys for developer integrations.
 
-try {
-  await fetchData()
-} catch (err) {
-  throw normaliseError(err)  // thin, consistent
-}`,
-    bad: `// DON'T: instanceof sprawl in every catch
-try {
-  await fetchData()
-} catch (err) {
-  if (err instanceof AxiosError) { ... }
-  else if (err instanceof TypeError) { ... }
-  else if (err instanceof SyntaxError) { ... }
-  else if (err instanceof NetworkError) { ... }
-  else { /* nobody knows what happens here */ }
-}`
-  },
-  {
-    num: "04",
-    lang: "Go",
-    color: "#00ADD8",
-    title: "Comma-ok assertion + %w wrapping",
-    verdict: "DO",
-    useCase: "Extracting a typed value from context.Context. Direct assertion panics if the key is absent — common in background jobs and unauthenticated routes that skip auth middleware.",
-    tip: "Always use comma-ok form for type assertions. Wrap errors with `fmt.Errorf(\"context: %w\", err)` so errors.Is() and errors.As() work anywhere up the call stack.",
-    good: `// DO: comma-ok check + %w wrapping
-val, ok := ctx.Value("user").(*User)
-if !ok || val == nil {
-    return fmt.Errorf("auth: no user in context")
-}
+## Quick Comparison
 
-if err != nil {
-    return fmt.Errorf("process payment: %w", err)
-    // %w preserves the chain for errors.Is / errors.As
-}`,
-    bad: `// DON'T: direct assertion — #1 production panic
-val := ctx.Value("user").(*User)
-// panics with nil pointer dereference if user absent
-// crashes the entire service on unauthenticated routes
-// or background jobs that skip auth middleware`
-  },
-  {
-    num: "05",
-    lang: "Go",
-    color: "#00ADD8",
-    title: "Pick one error strategy per codebase",
-    verdict: "DON'T",
-    useCase: "Four devs, four strategies in the same file: one wraps with %w, one logs and returns a zero value, one panics, one discards with _. At 50 engineers this becomes completely undebuggable.",
-    tip: "Agree on one strategy at architecture review time. Write a short ADR (Architecture Decision Record). Enforce it with golangci-lint rules like `errcheck` and `wrapcheck`.",
-    good: `// DO: one agreed strategy — always wrap with context
-func saveUser(db *DB, u User) error {
-    if err := db.Insert(u); err != nil {
-        return fmt.Errorf("saveUser: %w", err)
-    }
-    return nil
-}
-// consistent: every caller can use errors.Is / errors.As`,
-    bad: `// DON'T: four strategies in one codebase
-return fmt.Errorf("save user: %w", err) // Dev A
-log.Println(err); return User{}          // Dev B — zero value
-if err != nil { panic(err) }             // Dev C
-result, _ := db.Query(...)               // Dev D — discarded`
-  }
-];
+| Type | Identifies | Best for | Main advantage | Main weakness |
+| --- | --- | --- | --- | --- |
+| Basic Auth | User | Scripts, internal tools | Very simple | Sends credentials every request |
+| Digest Auth | User | Rare legacy HTTP auth | Password not sent directly | Mostly obsolete |
+| Session Auth | User | Server-rendered web apps | Easy revocation | Needs shared session store |
+| API Keys | App/project | Developer APIs, server-to-server | Simple app identity | Often long-lived and leak-prone |
+| Bearer Tokens | User/app | REST APIs, mobile apps | Simple stateless access | Stolen token means access |
+| JWT | User/app claims | Microservices, stateless APIs | Self-contained and verifiable | Hard revocation |
+| Access + Refresh | User/session | Production login systems | Short-lived access with long sessions | More moving parts |
+| OAuth 2.0 | Delegated access | Third-party access | App gets access without password | Not authentication by itself |
+| OpenID Connect | User identity | "Sign in with Google" style login | Standard identity layer | Must validate claims carefully |
+| SSO | Enterprise user | Company apps | Central login/offboarding/MFA | Depends on IdP setup |
 
-// ── helpers ──────────────────────────────────────────────────────────
-const esc = s => s
-  .replace(/&/g, "&amp;")
-  .replace(/</g, "&lt;")
-  .replace(/>/g, "&gt;");
+## Basic Auth
 
-// ── root ─────────────────────────────────────────────────────────────
-const root = dv.el("div", "", { attr: { id: "eh-root" } });
+Basic Auth sends `username:password` encoded with Base64 in every request header.
 
-root.innerHTML = `
-<style>
-  #eh-root {
-    font-family: var(--font-interface, sans-serif);
-    font-size: 14px;
-    color: var(--text-normal);
-    --bg:     var(--background-primary);
-    --bg2:    var(--background-secondary);
-    --border: var(--background-modifier-border);
-    --muted:  var(--text-muted);
-    --code:   var(--code-background, var(--background-secondary));
-    --mono:   var(--font-monospace, monospace);
-    --r: 8px;
-  }
-
-  /* ── top tab strip ── */
-  #eh-root .eh-tabs {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-    padding: 14px 14px 0;
-    border: 1px solid var(--border);
-    border-bottom: none;
-    border-radius: var(--r) var(--r) 0 0;
-    background: var(--bg2);
-  }
-  #eh-root .eh-tab {
-    padding: 8px 14px;
-    border-radius: 99px;
-    border: 1px solid var(--border);
-    background: var(--bg);
-    color: var(--muted);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: .05em;
-    cursor: pointer;
-    transition: all .15s;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 10px;
-  }
-  #eh-root .eh-tab:hover { color: var(--text-normal); }
-  #eh-root .eh-tab.active {
-    color: var(--text-normal);
-    background: color-mix(in srgb, var(--eh-accent) 14%, var(--bg));
-    border-color: color-mix(in srgb, var(--eh-accent) 40%, var(--border));
-  }
-  #eh-root .eh-badge {
-    font-size: 9px;
-    font-weight: 700;
-    padding: 2px 7px;
-    border-radius: 99px;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-  }
-
-  /* ── main panel ── */
-  #eh-root .eh-panel { display: none; }
-  #eh-root .eh-panel.active { display: block; }
-
-  #eh-root .eh-body {
-    border: 1px solid var(--border);
-    border-radius: 0 0 var(--r) var(--r);
-    background: var(--bg);
-    padding: 0;
-    overflow: hidden;
-  }
-
-  /* ── header strip ── */
-  #eh-root .eh-head {
-    padding: 18px 20px 14px;
-    border-bottom: 1px solid var(--border);
-  }
-  #eh-root .eh-kicker {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-  }
-  #eh-root .eh-title {
-    font-size: 20px;
-    font-weight: 700;
-    margin: 0 0 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  #eh-root .eh-verdict {
-    font-size: 10px;
-    font-weight: 800;
-    padding: 3px 10px;
-    border-radius: 99px;
-    letter-spacing: .07em;
-  }
-  #eh-root .verdict-do   { background: #27AE6020; color: #27AE60; }
-  #eh-root .verdict-dont { background: #E74C3C20; color: #E74C3C; }
-
-  #eh-root .eh-meta {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.65;
-    margin-bottom: 6px;
-  }
-  #eh-root .eh-meta b { color: var(--text-normal); font-weight: 600; }
-
-  /* ── code comparison ── */
-  #eh-root .eh-compare {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-  }
-  #eh-root .eh-col {
-    border-top: 1px solid var(--border);
-    overflow: hidden;
-  }
-  #eh-root .eh-col + .eh-col {
-    border-left: 1px solid var(--border);
-  }
-  #eh-root .eh-col-head {
-    padding: 8px 14px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  #eh-root .eh-col-head.good {
-    background: #27AE6012;
-    color: #27AE60;
-    border-bottom-color: #27AE6030;
-  }
-  #eh-root .eh-col-head.bad {
-    background: #E74C3C12;
-    color: #E74C3C;
-    border-bottom-color: #E74C3C30;
-  }
-  #eh-root .eh-col pre {
-    margin: 0;
-    padding: 14px 16px;
-    overflow-x: auto;
-    background: var(--code);
-    font-family: var(--mono);
-    font-size: 12px;
-    line-height: 1.72;
-    white-space: pre;
-  }
-
-  /* ── tip footer ── */
-  #eh-root .eh-tip {
-    border-top: 1px solid var(--border);
-    padding: 12px 20px;
-    font-size: 12.5px;
-    color: var(--muted);
-    line-height: 1.6;
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    background: var(--bg2);
-  }
-  #eh-root .eh-tip-icon {
-    font-weight: 700;
-    font-size: 14px;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-  #eh-root .eh-tip code {
-    font-family: var(--mono);
-    font-size: 11.5px;
-    background: var(--code);
-    padding: 1px 5px;
-    border-radius: 3px;
-    color: var(--text-normal);
-  }
-  #eh-root .eh-tip b { color: var(--text-normal); font-weight: 600; }
-
-  @media (max-width: 700px) {
-    #eh-root .eh-compare { grid-template-columns: 1fr; }
-    #eh-root .eh-col + .eh-col { border-left: none; border-top: 1px solid var(--border); }
-  }
-</style>
-
-<!-- Tab strip -->
-<div class="eh-tabs">
-  ${sections.map((s, i) => `
-    <button
-      class="eh-tab ${i === 0 ? "active" : ""}"
-      data-idx="${i}"
-      style="--eh-accent:${s.color}"
-    >
-      <span style="color:${s.color}">${s.num}</span>
-      <span class="eh-badge" style="background:${s.color}20;color:${s.color}">${s.lang}</span>
-    </button>
-  `).join("")}
-</div>
-
-<!-- Panels -->
-<div class="eh-body">
-  ${sections.map((s, i) => `
-    <div class="eh-panel ${i === 0 ? "active" : ""}" data-panel="${i}">
-      <div class="eh-head">
-        <div class="eh-kicker" style="color:${s.color}">Point ${s.num} · ${s.lang}</div>
-        <div class="eh-title">
-          ${s.title}
-          <span class="eh-verdict ${s.verdict === "DO" ? "verdict-do" : "verdict-dont"}">
-            ${s.verdict === "DO" ? "✓ DO" : "✕ DON'T"}
-          </span>
-        </div>
-        <div class="eh-meta">${s.useCase}</div>
-      </div>
-      <div class="eh-compare">
-        <div class="eh-col">
-          <div class="eh-col-head good">✓ Good pattern</div>
-          <pre><code>${esc(s.good)}</code></pre>
-        </div>
-        <div class="eh-col">
-          <div class="eh-col-head bad">✕ Avoid this</div>
-          <pre><code>${esc(s.bad)}</code></pre>
-        </div>
-      </div>
-      <div class="eh-tip">
-        <span class="eh-tip-icon" style="color:${s.color}">→</span>
-        <div>${s.tip}</div>
-      </div>
-    </div>
-  `).join("")}
-</div>
-`;
-
-// ── tab switching ──────────────────────────────────────────────────────
-root.querySelectorAll(".eh-tab").forEach(tab => {
-  tab.addEventListener("click", () => {
-    const idx = parseInt(tab.dataset.idx);
-    const s   = sections[idx];
-
-    root.querySelectorAll(".eh-tab").forEach((t, j) => {
-      t.classList.toggle("active", j === idx);
-      t.style.setProperty("--eh-accent", sections[j].color);
-    });
-
-    root.querySelectorAll(".eh-panel").forEach((p, j) => {
-      p.classList.toggle("active", j === idx);
-    });
-  });
-});
+```http
+Authorization: Basic dXNlcjpwYXNz
 ```
 
-### Ref
-https://www.youtube.com/watch?v=XDTov7xaD7g
-#ref
+Base64 is not encryption. Anyone can decode it, so Basic Auth must only be used over HTTPS.
 
-#sysdes #ref
+Use it for quick internal tools, scripts, and prototypes. Avoid it for production user-facing APIs.
+
+## Digest Auth
+
+Digest Auth improves on Basic Auth by using a challenge-response flow.
+
+| Step | What happens |
+| --- | --- |
+| 1 | Client requests a protected resource |
+| 2 | Server sends a nonce |
+| 3 | Client hashes username/password details with the nonce |
+| 4 | Server recomputes the hash and compares |
+
+The plain password does not travel over the network, but Digest Auth is mostly obsolete now. Modern systems usually use HTTPS plus tokens instead.
+
+## Session Auth
+
+Session Auth is the classic browser login pattern.
+
+| Step | What happens |
+| --- | --- |
+| 1 | User logs in |
+| 2 | Server creates a session record in DB/Redis |
+| 3 | Server sends a `sessionId` cookie |
+| 4 | Browser sends the cookie automatically |
+| 5 | Server looks up the session on every request |
+
+### Strengths
+
+- Easy to revoke: delete the session.
+- Good for traditional web apps.
+- Cookies can be protected with `HttpOnly`, `Secure`, and `SameSite`.
+
+### Weaknesses
+
+- Stateful: every server needs access to the session store.
+- Needs CSRF protection when cookie-based.
+
+## API Keys
+
+API keys identify an application, project, or developer account.
+
+```http
+x-api-key: sk_live_abc123
+```
+
+They are common for public developer APIs like maps, payments, email, and AI services.
+
+### Strengths
+
+- Simple to issue and revoke.
+- Good for rate limiting per app.
+- Easy for developers to use.
+
+### Weaknesses
+
+- Usually not tied to an individual user.
+- Often long-lived.
+- Can leak through repos, logs, frontend code, or URLs.
+
+Store API keys hashed in the database and show the plain key only once.
+
+## Bearer Tokens
+
+A bearer token means whoever holds the token gets access.
+
+```http
+Authorization: Bearer eyJhbGciOi...
+```
+
+Bearer tokens may be opaque random strings stored in a DB, or structured tokens like JWTs.
+
+### Strengths
+
+- Simple for APIs and mobile apps.
+- Works well with REST.
+- Can be stateless if using JWT.
+
+### Weaknesses
+
+- Stolen token equals access until expiry or revocation.
+- Storage matters: localStorage is risky because of XSS.
+
+Keep bearer tokens short-lived and store them carefully.
+
+## JWT
+
+JWT means JSON Web Token. It is a token format, not a full auth protocol.
+
+```text
+header.payload.signature
+```
+
+The payload is Base64URL-encoded, not encrypted. Anyone with the token can read the claims.
+
+### Strengths
+
+- Self-contained claims.
+- No DB lookup needed for every request.
+- Good for microservices because multiple services can verify the same token.
+
+### Weaknesses
+
+- Hard to revoke before expiry unless you keep a blocklist.
+- Token size can grow if too many claims are included.
+- Secrets must never be stored in the payload.
+
+Use short expiry. Prefer asymmetric signing like `RS256` when many services verify tokens.
+
+## Access + Refresh Tokens
+
+Production auth usually splits tokens:
+
+| Token | Lifespan | Purpose |
+| --- | --- | --- |
+| Access token | Short, often 5-15 minutes | Used for API calls |
+| Refresh token | Longer, days/weeks | Used only to get new access tokens |
+
+### Flow
+
+| Step | What happens |
+| --- | --- |
+| 1 | User logs in and receives both tokens |
+| 2 | Client sends access token to APIs |
+| 3 | Access token expires |
+| 4 | Client sends refresh token to `/refresh` |
+| 5 | Server issues a new access token |
+
+Rotate refresh tokens on every use and store refresh tokens hashed in the DB.
+
+## OAuth 2.0
+
+OAuth 2.0 is for delegated authorization.
+
+It lets an app access resources on behalf of a user without seeing the user's password. It answers: "What can this app access?"
+
+### Common Grant Types
+
+| Grant | Use case |
+| --- | --- |
+| Authorization Code | Web apps with a backend |
+| Authorization Code + PKCE | SPAs and mobile apps |
+| Client Credentials | Machine-to-machine auth |
+| Implicit | Deprecated |
+
+OAuth 2.0 alone does not prove user identity. For login identity, use OpenID Connect.
+
+## OpenID Connect
+
+OpenID Connect, or OIDC, is an identity layer on top of OAuth 2.0.
+
+It adds an ID token, usually a JWT, containing identity claims.
+
+| Claim | Meaning |
+| --- | --- |
+| `sub` | Stable user ID at the provider |
+| `iss` | Issuer |
+| `aud` | Audience, usually your client ID |
+| `exp` | Expiry |
+| `email` | User email if requested |
+
+Use `sub` as the stable foreign key, not email. Always validate `iss`, `aud`, `exp`, `nonce`, and signature.
+
+## SSO
+
+Single Sign-On is a login experience where one Identity Provider controls access to many apps.
+
+Common IdPs:
+
+- Okta
+- Azure AD / Microsoft Entra ID
+- Google Workspace
+- Auth0
+
+SSO is usually implemented using OIDC or SAML.
+
+### Why Enterprises Like SSO
+
+- One central login.
+- Central MFA policy.
+- Easier employee off-boarding.
+- Apps do not need to store passwords.
+
+For new apps, prefer OIDC. For older enterprise integrations, expect SAML.
+
+#sysdes #api #auth #authentication #authorization #oauth #jwt #sso

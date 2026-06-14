@@ -597,3 +597,6 @@ C[i][j]: i increments → jumps by entire row ❌
 A[i][k]: i increments → jumps by entire row ❌
 All three arrays accessed poorly!
 ```
+
+
+#dsa 

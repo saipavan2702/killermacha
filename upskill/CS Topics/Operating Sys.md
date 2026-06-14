@@ -157,3 +157,4 @@ These layers are a mix of OS **Device Drivers** and actual physical hardware (th
 
 Would you like me to explain how a specific action—like sending a WhatsApp message—travels through these layers from top to bottom?
 
+#operating-sys

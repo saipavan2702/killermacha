@@ -2,8 +2,6 @@
 - A **Class** is a user-defined data type that defines its **properties** (data members) and **functions** (member functions).  
 - It is the **logical representation** of the data.
 
----
-
 ## **Object**
 - An **Object** is a **run-time entity** and an **instance of a class**.  
 - An object can represent a person, place, or any real-world item.  
@@ -63,7 +61,6 @@ Polymorphism allows the **same interface** to represent different underlying for
 - **Constructor** → Special function, called automatically when an object is created. Used to initialise members.  
 - **Destructor** → Special function, called automatically when an object is destroyed. Prefixed with a `~` (tilde).
 
----
 
 ## **`this` Pointer**
 The `this` keyword refers to the **current instance** of the class.
@@ -73,13 +70,10 @@ Uses:
 2. Referring to instance variables of the class.  
 3. Declaring indexers.
 
----
 
 ## **Namespaces**
 - Used to **avoid ambiguity** when multiple identifiers (functions, variables, classes) have the same name.  
 - Helps in organizing large projects.
-
----
 
 ## **Friend Function**
 - A **non-member function** that can access the **private** and **protected** members of a class.  
