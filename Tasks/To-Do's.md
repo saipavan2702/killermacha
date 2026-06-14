@@ -6,3 +6,5 @@
 - [ ] Spring Boot
 - [ ] SegmentTrees
 - [ ] DSA others
+- [ ] Say we have a Java project what are the hurdles u get while migrating it to GoLang
+- [ ] differences betweeen GoLang and java and python so which use cases are fit for each

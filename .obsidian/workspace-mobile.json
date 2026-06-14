@@ -11,10 +11,24 @@
             "id": "575b39194c0f6e76",
             "type": "leaf",
             "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tasks/To-Do's.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "To-Do's"
+            }
+          },
+          {
+            "id": "140149819ba54c43",
+            "type": "leaf",
+            "state": {
               "type": "bases",
               "state": {
                 "file": "mmacha/motionArts/Celluloid.base",
-                "viewName": "Movies"
+                "viewName": "Series"
               },
               "icon": "lucide-layout-grid",
               "title": "Celluloid"
@@ -187,6 +201,11 @@
   },
   "active": "575b39194c0f6e76",
   "lastOpenFiles": [
+    "mmacha/motionArts/Celluloid.base",
+    "mmacha/motionArts/Items/Bad Boys.md",
+    "mmacha/motionArts/Items/Inglourious Basterds.md",
+    "mmacha/motionArts/Items/Eyes Wide Shut.md",
+    "Tasks/To-Do's.md",
     "mmacha/motionArts/Items/MEGALOBOX - Anime.md",
     "mmacha/motionArts/Items/Red Beard.md",
     "mmacha/motionArts/Items/Mulholland Drive.md",
@@ -207,11 +226,6 @@
     "mmacha/motionArts/Items/Nay Varan Bhat Loncha Kon Nai Koncha.md",
     "mmacha/motionArts/Items/Doctor Zhivago.md",
     "mmacha/motionArts/Items/21 Jump Street.md",
-    "mmacha/motionArts/Items/The Accountant.md",
-    "mmacha/motionArts/Items/The Invitation.md",
-    "mmacha/motionArts/Items/Happy as Lazzaro.md",
-    "mmacha/motionArts/Items/Anastasia - Anime Movie.md",
-    "mmacha/motionArts/Items/Triangle.md",
-    "mmacha/motionArts/Items/The Nightmare Before Christmas - Anime Movie.md"
+    "mmacha/motionArts/Items/The Accountant.md"
   ]
 }
