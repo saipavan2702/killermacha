@@ -61,5 +61,11 @@
   "baseline-style@@hide-vault-switcher-off": true,
   "iridium@@layout-desktop-only": "i-default-layout",
   "iridium@@i-calendar-off": false,
-  "minimal-style@@image-muted": 1
+  "minimal-style@@image-muted": 1,
+  "obsidian-velocity@@line-height-normal": "1.5",
+  "obsidian-velocity@@file-line-width-multiplier": 43.75,
+  "obsidian-velocity@@theme-paint-dark": "velocity-gray",
+  "obsidian-velocity@@color-highlight-rgb": "var(--highlight-green-rgb)",
+  "obsidian-velocity@@vl-layout-padding": "6px",
+  "obsidian-velocity@@override-default-font": true
 }

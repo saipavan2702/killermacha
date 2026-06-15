@@ -49,7 +49,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -116,7 +116,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 364.5
+    "width": 294.5
   },
   "right": {
     "id": "e5d2ad9fec6d31d0",
@@ -258,14 +258,26 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "ca5b567a5254433f",
+  "active": "6827ffeb9077e3fa",
   "lastOpenFiles": [
-    "orcl/Weekly report.md",
-    "upSkill/SysDes/HLD/API Build/Auth Types.md",
-    "upSkill/SysDes/HLD/API Build/Error Handling.md",
     "upSkill/SysDes/LLD/Oops!.md",
-    "upSkill/QoL/Configs.md",
+    "upSkill/SysDes/HLD/API Build/Auth Types.md",
     "mmacha/motionArts/Celluloid.base",
+    "mmacha/motionArts/Items/Sherlock - Series.md",
+    "mmacha/motionArts/Items/Succession - Series.md",
+    "mmacha/motionArts/Items/The Wire - Series.md",
+    "mmacha/motionArts/Items/Sopranos - Series.md",
+    "mmacha/motionArts/Items/The Last Seduction.md",
+    "mmacha/motionArts/Items/Femme Fatale.md",
+    "mmacha/motionArts/Items/Basic Instinct.md",
+    "mmacha/motionArts/Items/Body Heat.md",
+    "mmacha/motionArts/Items/Good Will Hunting.md",
+    "mmacha/motionArts/Items/Before Sunrise.md",
+    "mmacha/motionArts/Items/Pantheon - Anime.md",
+    "mmacha/motionArts/Items/ColdFish.md",
+    "orcl/Weekly report.md",
+    "upSkill/SysDes/HLD/API Build/Error Handling.md",
+    "upSkill/QoL/Configs.md",
     "mmacha/motionArts/Items/21 Jump Street.md",
     "mmacha/motionArts/Items/Dungeons & Dragons - Honour Among Thieves.md",
     "upSkill/SysDes/Core.md",
@@ -274,19 +286,6 @@
     "upSkill/Mock Int.md",
     "upSkill/Gen Misc/Math.md",
     "upSkill/SysDes/HLD/API Build/API Build.md",
-    "upSkill/Gen Misc/ET.md",
-    "upSkill/Gen Misc/Space.md",
-    "mmacha/aesthetic.md",
-    "mmacha/cc.md",
-    "mmacha/pswds.md",
-    "mmacha/watches.md",
-    "orcl/ora-info.md",
-    "upSkill/DSA/BackTrack.md",
-    "upSkill/DSA/Garph.md",
-    "upSkill/CS Topics/Operating Sys.md",
-    "upSkill/DSA/Misc.md",
-    "upSkill/ProgramLang/Java/SpringBoot.md",
-    "upSkill/ProgramLang/Java/Core.md",
     "upSkill/SysDes/HLD/API Build",
     "upSkill/SysDes/HLD/Auth Types",
     "mmacha/motionArts/Tools/__pycache__/sync_tmdb_posters.cpython-314.pyc",
