@@ -28,13 +28,14 @@
               "type": "bases",
               "state": {
                 "file": "mmacha/motionArts/Celluloid.base",
-                "viewName": "Series"
+                "viewName": "Watchlist"
               },
               "icon": "lucide-layout-grid",
               "title": "Celluloid"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -199,13 +200,13 @@
       "obsidian-map-view:Open map view": false
     }
   },
-  "active": "575b39194c0f6e76",
+  "active": "140149819ba54c43",
   "lastOpenFiles": [
+    "Tasks/To-Do's.md",
     "mmacha/motionArts/Celluloid.base",
     "mmacha/motionArts/Items/Bad Boys.md",
     "mmacha/motionArts/Items/Inglourious Basterds.md",
     "mmacha/motionArts/Items/Eyes Wide Shut.md",
-    "Tasks/To-Do's.md",
     "mmacha/motionArts/Items/MEGALOBOX - Anime.md",
     "mmacha/motionArts/Items/Red Beard.md",
     "mmacha/motionArts/Items/Mulholland Drive.md",

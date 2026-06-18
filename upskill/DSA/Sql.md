@@ -161,4 +161,150 @@ SELECT * FROM users WHERE id IN (1, 2, 3, ...);
 - **Heavy reads** → replica | **Writes** → primary
 - Keep analytics off your primary DB
 
+
+
+
+## Indexes
+
+Here an Index is a separate data structure that maps users email values directly to the physical location of the row on disk.
+
+```sql
+-- without index: sequential scan, reads every row
+SELECT * FROM users WHERE email = 'ali@example.com';
+ 
+-- create the index
+CREATE INDEX idx_users_email ON users(email);
+ 
+-- same query now: index lookup, jumps directly to the row
+SELECT * FROM users WHERE email = 'ali@example.com';
+
+```
+
+- Before Indexing it uses parallel sequential scan to fetch the rows.
+- After Indexing it uses index lookup to fetch the rows.
+
+Before Indexing we need to ask ourselves 4 questions:
+
+### Is this column queried in WHERE, JOIN, or ORDER BY?
+
+```sql
+-- login
+SELECT id, password_hash FROM users WHERE email = $1;
+ 
+-- duplicate check on signup
+SELECT id FROM users WHERE email = $1;
+ 
+-- password reset
+SELECT id, reset_token FROM users WHERE email = $1;
+```
+
+Email appears many times when `WHERE` is used; If the column rarely appears in filter index on it is not optimal.
+
+### Does the column have high cardinality?
+
+>Cardinality means column contains many unique values.
+
+So for Email cardinality is as high as it gets coz it is unique for each user. Indexes work best  on the columns with high cardinality as each lookup  returns few rows.
+Compare this to a low-cardinality column like `is_active` (boolean). Half the table is true, half is false. An index on `is_active` is nearly useless — Postgres often ignores it and does a sequential scan anyway because reading a huge chunk of the table through an index is slower than just scanning sequentially.
+
+
+### Is the table large enough to benefit from an index?
+
+At 1,000 rows a sequential scan is fast. 
+At 1,000,000 rows it becomes a problem. 
+At 10,000,000 rows it is a serious problem.
+
+The rule of thumb: tables under ~10,000 rows rarely need manual indexes beyond primary key and unique constraints. 
+Tables over 100,000 rows where slow queries exist — run `EXPLAIN ANALYZE` and look.
+
+
+### Does a unique constraint already exist?
+
+If you defined `email VARCHAR UNIQUE`, Postgres already created a unique index on that column automatically. We need to be careful before adding a redundant one.
+```sql
+-- check existing indexes on the users table
+SELECT indexname, indexdef
+FROM pg_indexes
+WHERE tablename = 'users';
+```
+
+
+## The Write Tax
+
+An Index is not one time cost. It occurs on every `INSERT, UPDATE, DELETE`. So when we insert a row, Postgres writes to every index that covers any column on that row. Ten Indexes on a table = ten index structures updated on every insert.
+
+```sql
+-- this one INSERT touches all indexes on the users table
+INSERT INTO users (id, email, name, status, country, created_at, ...)
+VALUES (...);
+```
+
+
+For a read-heavy table like users, this is fine trade-off. But for high-write tables like event logs, audit trails, metrics, message queues excessive indexes can degrade throughput.
+
+>`UPDATE` is worse than `INSERT` in some cases. If we update something Postgres removes old entry and inserts a new one. Two index operations per updated row. That's double the write tax.
+
+
+### Storage Bloat
+
+Each index is a separate on-disk structure. For large tables, indexes are not small.
+Let's say a user table with 10 million rows and a `VARCHAR (255)` email column - the index on email alone can cost several hundred megabytes. If we add 8 more indexes we will be compromising on gigabytes of storage.
+
+>Indexes that fit in memory(PostgresSQL's `shared_buffers`) are fast. Indexes that do not fit in memory  need disk reads - which will cause I/O bottlenecks.
+
+```sql
+-- check how much space your indexes are actually using
+SELECT
+  schemaname,
+  relname AS table_name,
+  indexrelname AS index_name,
+  idx_scan AS times_used,
+  pg_size_pretty(pg_relation_size(indexrelid)) AS index_size
+FROM pg_stat_user_indexes
+WHERE schemaname = 'public'
+  AND relname = 'users'
+ORDER BY pg_relation_size(indexrelid) DESC;
+```
+
+### Other factors
+
+Find unused indexes and remove them. Make sure before measuring the DB & Server has been running long enough for the stats to be meaningful. 
+```sql
+-- check when stats were last reset
+SELECT stats_reset FROM pg_stat_bgwriter;
+```
+
+Keep the index set clean. Rather than redundant indexes on different columns we can created composite indexes that can cover multiple columns. This is better in cases where having multiple partial-overlapping indexes which causes planner to make suboptimal choices.
+```sql
+-- if queries commonly filter on both status AND created_at together:
+-- bad: two separate indexes
+CREATE INDEX idx_users_status ON users(status);
+CREATE INDEX idx_users_created ON users(created_at);
+ 
+-- better: one composite index that covers the combined filter
+CREATE INDEX idx_users_status_created ON users(status, created_at);
+```
+
+
+### Decision rule
+
+```sql
+EXPLAIN ANALYZE the slow query
+  → identify Seq Scan + high rows removed
+    → create a targeted index
+      → EXPLAIN ANALYZE again to confirm index is used
+        → monitor pg_stat_user_indexes over time
+          → drop indexes with times_used near zero
+```
+
+> Measure first. Index second. Audit regularly.
+
+
+
+
+##### References
+https://sharafath.hashnode.dev/my-postgresql-query-went-from-57ms-to-1-4ms-on-a-1-million-row-table-i-didn-t-change-the-query-here-s-what-i-did
+
+#ref 
+
 #tips #sql
