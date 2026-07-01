@@ -1,0 +1,81 @@
+/* Graph view colors */
+
+.theme-dark {
+  --km-graph-node: #34d399;
+  --km-graph-node-focused: #7dd3fc;
+  --km-graph-node-tag: #facc15;
+  --km-graph-node-attachment: #c084fc;
+  --km-graph-node-unresolved: #fb7185;
+  --km-graph-line: rgba(148, 163, 184, 0.38);
+  --km-graph-line-highlight: #7dd3fc;
+  --km-graph-text: rgba(226, 232, 240, 0.88);
+  --km-graph-arrow: rgba(203, 213, 225, 0.72);
+}
+
+.theme-light {
+  --km-graph-node: #15803d;
+  --km-graph-node-focused: #0369a1;
+  --km-graph-node-tag: #2563eb;
+  --km-graph-node-attachment: #7e22ce;
+  --km-graph-node-unresolved: #dc2626;
+  --km-graph-line: rgba(71, 85, 105, 0.32);
+  --km-graph-line-highlight: #0284c7;
+  --km-graph-text: rgba(15, 23, 42, 0.82);
+  --km-graph-arrow: rgba(51, 65, 85, 0.66);
+}
+
+.theme-dark,
+.theme-light {
+  --graph-node: var(--km-graph-node);
+  --graph-node-focused: var(--km-graph-node-focused);
+  --graph-node-tag: var(--km-graph-node-tag);
+  --graph-node-attachment: var(--km-graph-node-attachment);
+  --graph-node-unresolved: var(--km-graph-node-unresolved);
+  --graph-line: var(--km-graph-line);
+}
+
+.graph-view.color-fill {
+  color: var(--km-graph-node);
+  opacity: 0.96;
+}
+
+.graph-view.color-fill-focused,
+.graph-view.color-fill-highlight {
+  color: var(--km-graph-node-focused);
+  opacity: 1;
+}
+
+.graph-view.color-fill-unresolved {
+  color: var(--km-graph-node-unresolved);
+  opacity: 0.95;
+}
+
+.graph-view.color-fill-tag {
+  color: var(--km-graph-node-tag);
+  opacity: 1;
+}
+
+.graph-view.color-fill-attachment {
+  color: var(--km-graph-node-attachment);
+  opacity: 0.95;
+}
+
+.graph-view.color-line {
+  color: var(--km-graph-line);
+  opacity: 1;
+}
+
+.graph-view.color-line-highlight {
+  color: var(--km-graph-line-highlight);
+  opacity: 0.95;
+}
+
+.graph-view.color-arrow {
+  color: var(--km-graph-arrow);
+  opacity: 1;
+}
+
+.graph-view.color-text {
+  color: var(--km-graph-text);
+  opacity: 1;
+}

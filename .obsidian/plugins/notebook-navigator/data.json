@@ -144,6 +144,7 @@
   "rootLevelSpacing": 0,
   "collapseBehavior": "all",
   "smartCollapse": true,
+  "excludeVaultRootFromCollapse": false,
   "collapseOtherBranchesOnExpand": false,
   "autoSelectFirstFileOnFocusChange": false,
   "autoExpandNavItems": false,
@@ -225,6 +226,7 @@
   "fileNameIconMap": {},
   "showCategoryIcons": false,
   "fileTypeIconMap": {},
+  "fileTypeIconPreset": "none",
   "fileNameRows": 1,
   "useFolderColorForTitles": false,
   "showFilePreview": true,
@@ -333,6 +335,12 @@
         "modifiers": []
       }
     ],
+    "pane:rename": [
+      {
+        "key": "Enter",
+        "modifiers": []
+      }
+    ],
     "navigation:collapse-or-parent": [
       {
         "key": "ArrowLeft",
@@ -404,6 +412,22 @@
         "key": "ArrowDown",
         "modifiers": [
           "Shift"
+        ]
+      }
+    ],
+    "list:manual-sort-up": [
+      {
+        "key": "ArrowUp",
+        "modifiers": [
+          "Mod"
+        ]
+      }
+    ],
+    "list:manual-sort-down": [
+      {
+        "key": "ArrowDown",
+        "modifiers": [
+          "Mod"
         ]
       }
     ],
@@ -503,7 +527,7 @@
     "#64748b",
     "#78716c"
   ],
-  "lastShownVersion": "3.1.4",
+  "lastShownVersion": "3.2.2",
   "rootFolderOrder": [],
   "rootTagOrder": [],
   "rootPropertyOrder": [],

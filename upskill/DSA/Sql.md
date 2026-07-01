@@ -302,6 +302,19 @@ EXPLAIN ANALYZE the slow query
 
 
 
+
+## Questions
+
+
+1. How to clean data in SQL?
+    -  Missing values - use coalesce() to replace null 
+    -  Remove Duplicates - use DISTINCT 
+    -  Standardise formats - making all values uppercase or lowercase 
+    -  Extra white spaces removal
+
+
+
+
 ##### References
 https://sharafath.hashnode.dev/my-postgresql-query-went-from-57ms-to-1-4ms-on-a-1-million-row-table-i-didn-t-change-the-query-here-s-what-i-did
 

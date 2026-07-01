@@ -4969,3 +4969,10 @@ But Accidental Complexity is everything else sometimes you add code to the alrea
 >
 >How data communication happens in different steps
 >![[Pasted image 20260601002039.png|713]]
+
+
+### References
+
+https://www.karanpratapsingh.com/courses/system-design
+
+#ref 

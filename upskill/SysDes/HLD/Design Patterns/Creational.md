@@ -21,8 +21,54 @@ Logger b = new Logger();  // chaos: both write independently
 Logger a = Logger.getInstance();
 Logger b = Logger.getInstance();  // a == b, exact same object
 ```
+
 > Hard to mock in unit tests because it is essentially a controlled global variable.
 
+We can solve this issue by using two methods:
+One is to use `volatile` which is a non-access modifier that ensures memory visibility of a variable across multiple threads by forcing reads and writes to occur directly in main memory rather than CPU caches.
+
+```java
+public class Singleton {
+    // volatile ensures changes are visible across threads
+    private static volatile Singleton instance;
+
+    private Singleton() {}  // private constructor blocks direct instantiation
+
+    public static Singleton getInstance() {
+        if (instance == null) {                    // first check (no lock)
+            synchronized (Singleton.class) {
+                if (instance == null) {            // second check (with lock)
+                    instance = new Singleton();
+                }
+            }
+        }
+        return instance;
+    }
+}
+```
+
+Another method we can achieve this is via
+
+```java
+public class Singleton {
+    // Class loading is inherently thread-safe in Java
+    private static final Singleton INSTANCE = new Singleton();
+
+    private Singleton() {}
+
+    public static Singleton getInstance() {
+        return INSTANCE;
+    }
+}
+```
+
+>[!info]
+>The JVM guarantees that static fields are initialized exactly once, when the class is first loaded — and class loading is inherently thread-safe. 
+ So you get thread safety for free, no synchronized, no volatile needed.
+The tradeoff: the instance is created eagerly (at class load time), even if nobody ever calls getInstance(). 
+The double-checked locking version is lazy (creates only when first needed) — better if the object is heavy and might not always be used.
+
+> Core idea: one shared resource, safely handed out to many concurrent callers.
 ### 2. Factory Method
 **Purpose**: Create objects without specifying exact class.
 **Use when**: Which object to create depends on runtime data. Keeps `new` and `if/else` logic in one place instead of scattered everywhere.

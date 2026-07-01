@@ -8,6 +8,7 @@
   "textFontFamily": "Karla",
   "monospaceFontFamily": "JetBrainsMono Nerd Font",
   "enabledCssSnippets": [
-    "movie-album-filmstrip"
+    "movie-album-filmstrip",
+    "graph-view-colors"
   ]
 }

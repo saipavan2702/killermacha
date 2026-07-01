@@ -21,49 +21,77 @@
             }
           },
           {
-            "id": "6827ffeb9077e3fa",
+            "id": "05c1b7573d0a3e35",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "upSkill/SysDes/HLD/API Build/Auth Types.md",
+                "file": "upSkill/DSA/SegmenTree.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Auth Types"
+              "title": "SegmenTree"
             }
           },
           {
-            "id": "ca5b567a5254433f",
+            "id": "7af1ab5e09353862",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "upSkill/SysDes/LLD/Inheritance vs Composition.md",
+                "file": "upSkill/ProgramLang/Java/SpringBoot.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Inheritance vs Composition"
+              "title": "SpringBoot"
             }
           },
           {
-            "id": "b79227c95d29f57f",
+            "id": "0e3af09081ea8050",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "upSkill/DSA/Sql.md",
+                "file": "mmacha/pswds.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sql"
+              "title": "pswds"
+            }
+          },
+          {
+            "id": "14ee29129adf3d4a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upSkill/SysDes/LLD/Design Examples.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Design Examples"
+            }
+          },
+          {
+            "id": "128accb127514f7b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "upSkill/ProgramLang/Java/IoC.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "IoC"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -130,7 +158,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 294.5
+    "width": 370.5
   },
   "right": {
     "id": "e5d2ad9fec6d31d0",
@@ -147,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "upskill/Gen Misc/Math.md",
+                "file": "upSkill/ProgramLang/GoLang/Context (ctx).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +185,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Math"
+              "title": "Backlinks for Context (ctx)"
             }
           },
           {
@@ -166,12 +194,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2025-11-12.md",
+                "file": "upSkill/ProgramLang/GoLang/Context (ctx).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2025-11-12"
+              "title": "Outgoing links from Context (ctx)"
             }
           },
           {
@@ -195,13 +223,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "upskill/Gen Misc/Math.md",
+                "file": "upSkill/ProgramLang/GoLang/Context (ctx).md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Math"
+              "title": "Outline of Context (ctx)"
             }
           },
           {
@@ -272,34 +300,35 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "ca5b567a5254433f",
+  "active": "128accb127514f7b",
   "lastOpenFiles": [
-    "upSkill/DSA/Sql.md",
-    "mmacha/motionArts/Celluloid.base",
-    "mmacha/motionArts/Items/Black Swan.md",
-    "mmacha/motionArts/Items/Funny Games.md",
-    "mmacha/motionArts/Items/Untitled 1.md",
-    "mmacha/motionArts/Items/I saw the Devil.md",
-    "mmacha/motionArts/Items/Untitled.md",
-    "mmacha/motionArts/Items/No Other Choice.md",
-    "mmacha/motionArts/Items/The Handmaiden.md",
-    "upSkill/SysDes/LLD/Inheritance vs Composition.md",
-    "upSkill/SysDes/LLD/SOLID principles.md",
-    "upSkill/SysDes/LLD/Oops!.md",
-    "upSkill/SysDes/HLD/API Build/Auth Types.md",
-    "mmacha/motionArts/Items/Sherlock - Series.md",
-    "mmacha/motionArts/Items/Succession - Series.md",
-    "mmacha/motionArts/Items/The Wire - Series.md",
-    "mmacha/motionArts/Items/Sopranos - Series.md",
-    "mmacha/motionArts/Items/The Last Seduction.md",
-    "mmacha/motionArts/Items/Femme Fatale.md",
-    "mmacha/motionArts/Items/Basic Instinct.md",
-    "mmacha/motionArts/Items/Body Heat.md",
-    "mmacha/motionArts/Items/Good Will Hunting.md",
-    "mmacha/motionArts/Items/Before Sunrise.md",
-    "mmacha/motionArts/Items/Pantheon - Anime.md",
-    "mmacha/motionArts/Items/ColdFish.md",
+    "2025-12-09.md",
+    "2025-11-12.md",
+    "2026-06-03.md",
+    "2026-01-06.md",
+    "upSkill/ProgramLang/Java/IoC.md",
     "orcl/Weekly report.md",
+    "upSkill/SysDes/LLD/Design Examples.md",
+    "mmacha/motionArts/Celluloid.base",
+    "mmacha/motionArts/Items/The Aviator.md",
+    "mmacha/motionArts/Items/Voicemails for Isabelle.md",
+    "mmacha/pswds.md",
+    "upSkill/ProgramLang/Java/SpringBoot.md",
+    "upSkill/ProgramLang/Java/Under.md",
+    "upSkill/SysDes/Core.md",
+    "upSkill/ProgramLang/Java/Core.md",
+    "Tasks/To-Do's.md",
+    "upSkill/DSA/SegmenTree.md",
+    "upSkill/CS Topics/HTTP Methods.md",
+    "upSkill/SysDes/LLD/Rate Limiter.md",
+    "upSkill/DSA/Sql.md",
+    "upSkill/SysDes/HLD/Design Patterns/Creational.md",
+    "upSkill/SysDes/LLD/LRU & LFU cache.md",
+    "upSkill/ProgramLang/GoLang/Event Bus.md",
+    "upSkill/SysDes/HLD/Design Patterns/Architectural.md",
+    "upSkill/SysDes/HLD/Design Patterns/Structural.md",
+    "upSkill/SysDes/HLD/Design Patterns/Core.md",
+    "upSkill/SysDes/HLD/Design Patterns/Behavioral.md",
     "upSkill/SysDes/HLD/API Build",
     "upSkill/SysDes/HLD/Auth Types",
     "mmacha/motionArts/Tools/__pycache__/sync_tmdb_posters.cpython-314.pyc",

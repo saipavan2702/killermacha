@@ -99,6 +99,7 @@ https://gitlab.com/theblackdon/normie-nvim
 https://github.com/ChrisTitusTech/neovim
 https://github.com/if-not-nil
 https://github.com/x0aa7i/dotfiles/tree/main
+https://github.com/IllyaStarikov/.dotfiles
 
 Blogs
 https://pastebin.com/LBMtvCiC

@@ -5,6 +5,7 @@ WSL - EDITH_z_27
 BugDB - EDITH_z_2702
 
 infynidock - license : `V4CVNMEM4K0E4VPG`
+deskmat - license :  `ceph_deskmat_KkuoFU0wV9pd2YqpNYaXKjsZ4CYcUfn5SWqzOWgeYyU`
 
 To change pswd for wsl things
 

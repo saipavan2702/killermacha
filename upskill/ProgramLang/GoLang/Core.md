@@ -479,6 +479,4 @@ In Go, a type implements an interface automatically if it has all the methods re
 https://www.youtube.com/watch?v=6DiCscb0gWk
 https://www.youtube.com/watch?v=CIIrR5daWL4
 
-#ref #golang
-
-#lang #golang
+#ref #golang #lang 

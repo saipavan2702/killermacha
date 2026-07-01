@@ -1,12 +1,13 @@
 ## 🗺️ The Big Picture
 
-| Letter | Principle | One-liner |
-|--------|-----------|-----------|
-| **S** | Single Responsibility | One class, one reason to change |
-| **O** | Open / Closed | Extend freely, modify never |
-| **L** | Liskov Substitution | Subclasses must keep their parent's promises |
-| **I** | Interface Segregation | Don't force clients to depend on what they don't use |
-| **D** | Dependency Inversion | Depend on abstractions, not concrete implementations |
+| Letter | Principle             | One-liner                                            |
+| ------ | --------------------- | ---------------------------------------------------- |
+| **S**  | Single Responsibility | One class, one reason to change                      |
+| **O**  | Open / Closed         | Extend freely, modify never                          |
+| **L**  | Liskov Substitution   | Subclasses must keep their parent's promises         |
+| **I**  | Interface Segregation | Don't force clients to depend on what they don't use |
+| **D**  | Dependency Inversion  | Depend on abstractions, not concrete implementations |
+|        |                       |                                                      |
 ## S — Single Responsibility Principle
 
 > **"A class should have only one reason to change."**
