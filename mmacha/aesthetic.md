@@ -104,7 +104,3 @@ style="width:350%; height:350px;">
 >	- 17 - 18 : grab a snack down stairs
 >	- 19 : finish what the fuck u were doing
 >	- 20: pick any choice
-
-
-https://nothing-to-watch.port80.ch/
-#ref 

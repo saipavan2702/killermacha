@@ -553,8 +553,4 @@ result, _ := db.Query(...)
 
 Tip: agree on one strategy in an ADR and enforce it with lint rules like `errcheck` and `wrapcheck`.
 
-## Ref
-
-https://www.youtube.com/watch?v=XDTov7xaD7g
-
-#sysdes #api #error-handling #ref
+#sysdes #api #error-handling

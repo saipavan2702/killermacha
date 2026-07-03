@@ -1,11 +1,11 @@
 {
-  "cssTheme": "Velocity",
+  "cssTheme": "Transparent",
   "theme": "obsidian",
   "baseFontSize": 14,
   "translucency": true,
   "baseFontSizeAction": true,
-  "interfaceFontFamily": "Rubik",
-  "textFontFamily": "Karla",
+  "interfaceFontFamily": "",
+  "textFontFamily": "",
   "monospaceFontFamily": "JetBrainsMono Nerd Font",
   "enabledCssSnippets": [
     "movie-album-filmstrip",

@@ -20,16 +20,12 @@
 - _**Amex membership rewards card**_
 - _**Amex Platinum Charge card**_
 
-  
 
-  
+Helpers :
+- https://www.gyftr.com/
+- https://www.cardexpert.in/
+- https://technofino.in/
+- https://thepointsguy.com/
+- https://livefromalounge.com/
 
-_**Sources:**_
-
-- _**GYFTR.com**_
-- _**www.cardexpert.in**_
-- _**www.technofino.in**_
-- _**www.thepointsguy.com**_
-- _**www.livefromalounge.com**_
-
-#personal #ref 
+#personal

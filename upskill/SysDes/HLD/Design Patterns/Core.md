@@ -284,8 +284,4 @@ class User {
 ```
 
  [[SOLID principles]]
-https://www.geeksforgeeks.org/system-design/software-design-patterns/
-https://www.youtube.com/watch?v=BJatgOiiht4
-#ref
-
-#sysdes #ref #design-patterns #core
+#sysdes #design-patterns #core

@@ -122,4 +122,4 @@ class ImageProxy implements Image {
 
 ---
 
-#sysdes #ref #design-patterns
+#sysdes #design-patterns

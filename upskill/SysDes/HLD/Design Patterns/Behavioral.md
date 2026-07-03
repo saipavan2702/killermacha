@@ -180,4 +180,4 @@ class TaxCalculator implements Visitor {
 
 ---
 
-#sysdes #ref #design-patterns
+#sysdes #design-patterns

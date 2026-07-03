@@ -171,4 +171,4 @@ class ExpensiveObject {
 
 ---
 
-#sysdes #ref #design-patterns
+#sysdes #design-patterns
