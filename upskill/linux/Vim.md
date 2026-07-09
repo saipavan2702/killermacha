@@ -870,6 +870,15 @@ nvim --server /tmp/nvimsocket --remote-send "ggI# Remote<Esc>"
 This allows AI tools or scripts to control your editor instance.
 
 
-#ref #vim
+---
 
-#vim #bash #ref
+## References
+
+> [!info] Source trail
+> Vim resources that support this note.
+
+- [Vim Resources](https://freedium-mirror.cfd/https%3A%2F%2Fmedium.com%2F%40sebastiancarlos%2F50-vim-mode-tips-for-ide-users-f7b525a794b3%3Fsource%3Demail-f55e20219663-1717307780365-digest.reader-d0b105d10f0a-f7b525a794b3----0-102------------------64b30a5d_4964_40b9_b674_80513292f7cb-1) - Vim mode tips.
+
+#vim
+
+#vim #bash

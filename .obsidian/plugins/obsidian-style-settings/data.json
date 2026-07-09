@@ -67,5 +67,6 @@
   "obsidian-velocity@@theme-paint-dark": "velocity-gray",
   "obsidian-velocity@@color-highlight-rgb": "var(--highlight-green-rgb)",
   "obsidian-velocity@@vl-layout-padding": "6px",
-  "obsidian-velocity@@override-default-font": true
+  "obsidian-velocity@@override-default-font": true,
+  "obsidian-transparent@@preset-mode": "preset-default"
 }

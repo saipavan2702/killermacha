@@ -928,7 +928,6 @@ public class ModernJava21Collections {
 
 
 
-
 > While writing data to File in Java make sure to close(flush) the cache once read/write operations are done.
 
 [[Design Patterns]] showcases the information related to the design principles needs to be followed while writing clean code.

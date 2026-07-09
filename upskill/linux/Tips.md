@@ -289,4 +289,16 @@ strace -f -pid <pid>                          # follow forked children
 > [!tip] When something is "just hanging"
 > `strace` will often tell you in one line — blocked on a `read()` from a dead socket, or stuck on `openat()` for a missing config file.
 
-#tips #bash #ref
+---
+
+## References
+
+> [!info] Source trail
+> Command-line references that support this note.
+
+- [Pure Shell Bible](https://github.com/dylanaraps/pure-sh-bible) - Shell scripting patterns.
+- [commandlinefu](https://www.commandlinefu.com/commands/browse) - Command examples.
+- [OverTheWire Wargames](https://overthewire.org/wargames/) - Shell/security practice.
+- [explainshell](https://explainshell.com/) - Explain shell commands.
+
+#tips #bash

@@ -321,11 +321,4 @@ Solution: https://youtu.be/lPLhmuWMRag
 4. https://www.spoj.com/problems/HIST2/
 5. https://codeforces.com/problemset/problem/895/C
 
-**References** 
-https://codeforces.com/blog/entry/18169
-https://codeforces.com/blog/entry/81516
-https://github.com/yash7xm/cp_notes
-
-#ref #dsa
-
-#dsa #ref
+#dsa

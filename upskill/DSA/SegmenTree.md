@@ -1,3 +1,5 @@
+Related: [[Upskill/DSA/Tree|Tree]] · [[Upskill/DSA/Algos/Binary search|Binary Search]] · [[Upskill/DSA/Algos/DP|DP]]
+
 We use this to do range sum queries.  
 It can be done with array or we can build tree using class data types.
  
@@ -84,6 +86,17 @@ public:
 };
 
 ```
+
+---
+
+## References
+
+> [!info] Source trail
+> Range-query references that belong with this note.
+
+- [Segment Tree](https://cp-algorithms.com/data_structures/segment_tree.html) - Canonical CP Algorithms explanation.
+- [Segment Trees Blog](https://letuskode.blogspot.com/2013/01/segtrees.html) - Alternate explanation.
+- [Fenwick Tree](https://medium.com/@florian_algo/fenwick-tree-binary-indexed-tree-explained-2347c9e1b1f8) - Related range-query data structure.
 
 - Using array rather than tree
 ```cpp
@@ -338,15 +351,3 @@ int main() {
 }
 
 ```
-
-_References_
-https://www.hackerearth.com/practice/data-structures/advanced-data-structures/trie-keyword-tree/practice-problems/
-https://medium.com/@florian_algo/fenwick-tree-binary-indexed-tree-explained-2347c9e1b1f8
-https://codeforces.com/blog/entry/57319
-https://codeforces.com/blog/entry/18051
-https://cp-algorithms.com/data_structures/segment_tree.html
-https://pastebin.com/wabDfjKi
-https://pastebin.com/bEEQsDr7
-https://pastebin.com/UJhuFA3a
-https://pastebin.com/jDMC5R2T
-#ref

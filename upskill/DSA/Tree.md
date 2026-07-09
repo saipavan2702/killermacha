@@ -1,3 +1,5 @@
+Related: [[Upskill/DSA/SegmenTree|SegmenTree]] · [[Upskill/DSA/Algos/Binary search|Binary Search]] · [[Upskill/DSA/Algos/DP|DP]]
+
 #basicop 
 - Basic Operations of Tree
 ```cpp
@@ -157,10 +159,3 @@ int main() {
 }
 
 ```
-
-
-## Hands-On📜
-[Pseudo-Palindromic Paths in a Binary Tree](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/)
-
-#ref
-

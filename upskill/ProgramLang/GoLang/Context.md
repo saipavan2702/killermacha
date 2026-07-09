@@ -371,4 +371,13 @@ func getUserFromDB(ctx context.Context, userID string) (string, error) {
 
 One cancel → entire chain stops. That's the whole power of context.
 
+---
+
+## References
+
+> [!info] Source trail
+> Context-specific reads that belong with this note.
+
+- [Complete Guide to Context in Golang](https://medium.com/@jamal.kaksouri/the-complete-guide-to-context-in-golang-efficient-concurrency-management-43d722f6eaea) - Context cancellation and concurrency management.
+
 #golang #lang

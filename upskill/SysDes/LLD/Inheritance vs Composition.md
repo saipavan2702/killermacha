@@ -168,7 +168,13 @@ When is Composition bad?
 -  We end up writing more boilerplate code.
 -  verbose wrapper methods
 
+---
 
-#### References
-https://www.youtube.com/watch?v=pbsTy5V_pxA
-#ref #java #oops 
+## References
+
+> [!info] Source trail
+> Composition references that support this note.
+
+- [Why the Best Codebases Barely Use Inheritance Anymore](https://www.youtube.com/watch?v=pbsTy5V_pxA) - Inheritance vs composition intuition.
+
+#java #oops 

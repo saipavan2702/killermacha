@@ -315,9 +315,14 @@ EXPLAIN ANALYZE the slow query
 
 
 
-##### References
-https://sharafath.hashnode.dev/my-postgresql-query-went-from-57ms-to-1-4ms-on-a-1-million-row-table-i-didn-t-change-the-query-here-s-what-i-did
+---
 
-#ref 
+## References
+
+> [!info] Source trail
+> Indexing and query optimization reads tied to this SQL note.
+
+- [PostgreSQL Indexing Story](https://sharafath.hashnode.dev/my-postgresql-query-went-from-57ms-to-1-4ms-on-a-1-million-row-table-i-didn-t-change-the-query-here-s-what-i-did) - Practical indexing example.
+- [SQL Query Optimization Story](https://freedium.cfd/https%3A%2F%2Fmedium.com%2F%40himanshusingour7%2Fnot-kidding-one-line-of-sql-brought-down-our-query-time-from-3s-to-300ms-6b1ed80c94ac%3Fsource%3Demail-f55e20219663-1757648611489-digest.reader--6b1ed80c94ac----1-99------------------6878a965_4d87_485b_9665_58a91aeb775f-1) - Query optimization case study.
 
 #tips #sql

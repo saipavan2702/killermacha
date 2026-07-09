@@ -2,9 +2,9 @@
 - [ ] LLD
 - [ ] Oracle DB 
 - [ ] AWS basics
-- [ ] GoLang
+- [ ] Golang
 - [ ] Spring Boot
 - [ ] SegmentTrees
 - [ ] DSA others
-- [ ] Say we have a Java project what are the hurdles u get while migrating it to GoLang
-- [ ] differences between GoLang and java and python so which use cases are fit for each
+- [ ] Say we have a Java project what are the hurdles u get while migrating it to Golang
+- [ ] differences between Golang and java and python so which use cases are fit for each

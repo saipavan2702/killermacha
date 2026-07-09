@@ -1,3 +1,5 @@
+Related: [[Upskill/DSA/DSA|DSA]] · [[Upskill/DSA/Tree|Tree]] · [[Upskill/DSA/SegmenTree|SegmenTree]]
+
 A technique to search in log(n) time over n elements by eliminating half of unwanted possibilities each time. We will observe the variant applications using this algorithm.
 
 ## Basic contains version

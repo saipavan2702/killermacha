@@ -237,8 +237,13 @@ ISP  →  Interfaces are lean; nothing is forced on anyone; Many small interface
 DIP  →  High-level logic is shielded from low-level detail; Depend on abstractions, not concrete classes
 ```
 
-#oops #sysdes 
+---
 
-### Ref
-https://www.youtube.com/watch?v=K7iVBAQHN8I
-#ref 
+## References
+
+> [!info] Source trail
+> SOLID references that support this note.
+
+- [6 Minutes to Finally Understand SOLID Principles](https://www.youtube.com/watch?v=K7iVBAQHN8I) - Quick SOLID overview.
+
+#oops #sysdes 

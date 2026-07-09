@@ -1,3 +1,5 @@
+Related: [[Upskill/DSA/DSA|DSA]] · [[Upskill/DSA/Tree|Tree]] · [[Upskill/DSA/SegmenTree|SegmenTree]]
+
 ## Minimum Ball Deletions — Interval DP
 
 ###  Problem Statement
@@ -126,10 +128,11 @@ Always iterate by **interval length** (short → long), so smaller subproblems a
 
 ---
 
+## References
+
+> [!info] Source trail
+> DP references that directly support this note.
+
+- [What is Interval DP?](https://www.youtube.com/watch?v=dv_dGwrazuE) - Interval DP intuition.
+
 #IntervalDP #dsa #dynamicprogramming 
-
-
-
-### Ref
-https://www.youtube.com/watch?v=dv_dGwrazuE
-#ref 
