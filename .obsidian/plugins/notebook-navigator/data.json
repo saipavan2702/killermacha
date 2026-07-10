@@ -60,7 +60,8 @@
           "transitionStyle": "hue",
           "scope": "root"
         }
-      }
+      },
+      "descendantExcludedFolders": []
     }
   ],
   "vaultTitle": "navigation",
@@ -280,6 +281,7 @@
   "calendarMonthHeadingFormat": "full",
   "calendarHighlightToday": true,
   "calendarShowFeatureImage": true,
+  "calendarShowTasks": true,
   "calendarMonthHighlights": {},
   "calendarShowWeekNumber": false,
   "calendarShowQuarter": false,
@@ -527,7 +529,7 @@
     "#64748b",
     "#78716c"
   ],
-  "lastShownVersion": "3.2.2",
+  "lastShownVersion": "3.2.3",
   "rootFolderOrder": [],
   "rootTagOrder": [],
   "rootPropertyOrder": [],

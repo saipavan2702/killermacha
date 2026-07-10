@@ -1,18 +1,15 @@
 [
-  "obsidian-git",
   "calendar",
-  "obsidian-importer",
   "obsidian-relative-line-numbers",
   "obsidian-style-settings",
   "colored-tags",
   "obsidian-excalidraw-plugin",
   "notebook-navigator",
   "various-complements",
-  "obsidian-map-view",
   "dataview",
-  "obsidian-media-db-plugin",
   "obsidian-minimal-settings",
   "templater-obsidian",
   "unitade",
-  "mmacha-auto"
+  "mmacha-auto",
+  "insert-unsplash-image"
 ]
