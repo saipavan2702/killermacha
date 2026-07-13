@@ -1,3 +1,8 @@
+# Git
+
+> [!summary]
+> A practical Git reference for everyday commits, branching, remotes, recovery, history inspection, and repository maintenance.
+
 This combines the commands from the Reddit cheat sheets plus useful commands suggested in the comments.
 
 Beginner note: prefer `git switch` for branch movement and `git restore` for file restoration. `git checkout` still works, but it does several unrelated jobs, so it is easier to teach later as legacy/multi-purpose Git.

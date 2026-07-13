@@ -1,3 +1,8 @@
+# Inheritance vs Composition
+
+> [!summary]
+> Inheritance models an is-a relationship; composition assembles behavior and usually offers looser coupling and safer evolution.
+
 The two different strategies to tackle the same problem i.e, `CODE REUSE`
 
 Let's look at **Inheritance**, say we have a Base class
@@ -168,13 +173,10 @@ When is Composition bad?
 -  We end up writing more boilerplate code.
 -  verbose wrapper methods
 
+#java #oops
+
 ---
 
 ## References
 
-> [!info] Source trail
-> Composition references that support this note.
-
 - [Why the Best Codebases Barely Use Inheritance Anymore](https://www.youtube.com/watch?v=pbsTy5V_pxA) - Inheritance vs composition intuition.
-
-#java #oops 

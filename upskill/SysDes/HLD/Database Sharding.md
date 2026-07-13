@@ -1,8 +1,8 @@
 # Database Sharding
 
-Source: [[Upskill/SysDes/Core#database-scaling|Database Scaling Techniques]]
+Related: [[Upskill/SysDes/HLD/Database Scaling|Database Scaling]]
 
-Related: [[Upskill/SysDes/HLD/Caching|Caching]] · [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]] · [[Upskill/SysDes/Core#Consistent Hashing|Consistent Hashing]] · [[QoL/Refs/SysDes|SysDes Refs]]
+Related: [[Upskill/SysDes/HLD/Caching|Caching]] · [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]] · [[Upskill/SysDes/HLD/Consistent Hashing|Consistent Hashing]] · [[QoL/Refs/SysDes|SysDes Refs]]
 
 ### 5. Database Sharding
 

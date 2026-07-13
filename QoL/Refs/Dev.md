@@ -1,21 +1,22 @@
 # Dev
 
-Related: [[Upskill/Index|Upskill Index]] · [[QoL/Refs/DSA|DSA]] · [[QoL/Refs/SysDes|SysDes]]
+Related: [[Upskill/Learning|Learning]] · [[QoL/Refs/DSA|DSA]] · [[QoL/Refs/SysDes|SysDes]]
 
 ## Topic Notes
 
 Moved topic-specific refs into their notes.
 
-- [[Upskill/ProgramLang/Golang/Core#References|Golang]]
+- [[Upskill/ProgramLang/Golang/Go#References|Go]]
 - [[Upskill/ProgramLang/Golang/Context#References|Golang Context]]
-- [[Upskill/WebDev/Frontend/javascript#References|JavaScript]]
-- [[Upskill/WebDev/Frontend/typescript#References|TypeScript]]
+- [[Upskill/WebDev/Frontend/JavaScript#References|JavaScript]]
+- [[Upskill/WebDev/Frontend/TypeScript#References|TypeScript]]
 - [[Upskill/WebDev/Frontend/Redux#References|Redux]]
-- [[Upskill/WebDev/Frontend/style.CSS#References|CSS]]
-- [[Upskill/WebDev/Frontend/Framer-Motion#References|Framer Motion]]
+- [[Upskill/WebDev/Frontend/CSS#References|CSS]]
+- [[Upskill/WebDev/Frontend/Framer Motion#References|Framer Motion]]
 - [[Upskill/WebDev/Devops/Docker#References|Docker]]
-- [[Upskill/Linux/Tips#References|Command Line & Linux]]
-- [[Upskill/Linux/Vim#References|Vim]]
+- [[Upskill/CS Topics/Databases/SQL#References|SQL and Databases]]
+- [[Upskill/Linux/Shell Tips#References|Command Line and Linux]]
+- [[Upskill/Linux/Vim/Vim#References|Vim]]
 
 ## Start Here
 
@@ -44,6 +45,7 @@ Moved topic-specific refs into their notes.
 - [Public APIs](https://github.com/public-apis/public-apis)
 - [Open Source Alternatives](https://github.com/btw-so/open-source-alternatives)
 - [Papers We Love](https://github.com/papers-we-love/papers-we-love)
+- [Self-Teaching Java and Spring](https://www.notion.so/SELF-TEACHING-JAVA-SPRING-26f82d2afbac807f8edeed9b17f9b6b3#26f82d2afbac8097a98cfdc0d83763aa)
 
 ## AI / ML
 

@@ -1,3 +1,4 @@
+# Examples
 
 1. **Parking Lot** — multi-floor, 2-wheelers and 4-wheelers
 2. **Text Editor with Cursor** — cursor movement, line reading, insert/delete
@@ -12,10 +13,8 @@
 
 ## References
 
-> [!info] Source trail
-> LLD practice references and example collections.
-
 - [Low Level Design Ultimatum](https://github.com/Prakash-sa/low-level-design-ultimatum) - LLD study path.
 - [Awesome Low Level Design](https://github.com/ashishps1/awesome-low-level-design) - LLD resource collection.
 - [Cracking Walnuts](https://crackingwalnuts.com/) - LLD practice.
 - [fiveyearsdev](https://fiveyearsdev.space/) - LLD/system design practice.
+

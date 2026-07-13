@@ -1,3 +1,8 @@
+# JavaScript
+
+> [!summary]
+> JavaScript combines lexical scope, prototypes, asynchronous event-loop execution, and first-class functions in a dynamic runtime.
+
 - It is a synchronous single -threaded  language.
 - The function can be invoked before it is compiled/encountered.
 - It stores functions as it is. Means when it is casted for output we can see whole function in output.
@@ -436,9 +441,6 @@ Hello from asyncFunc
 
 ## References
 
-> [!info] Source trail
-> JavaScript references that support this note.
-
 - [URLSearchParams](https://nodejs.org/api/url.html#class-urlsearchparams) - URL query handling.
 - [querystring](https://nodejs.org/api/querystring.html) - Node query-string utilities.
 - [JavaScript Questions](https://umarfarooquekhan.medium.com/top-10-javascript-interview-questions-9c337fa746f6) - Interview-style review.
@@ -450,3 +452,4 @@ Hello from asyncFunc
 - [Visual Guide to Node.js Event Loop](https://www.builder.io/blog/visual-guide-to-nodejs-event-loop) - Event loop diagrams.
 - [Debounce](https://www.30secondsofcode.org/js/s/debounce-function/#:~:text=Debouncing%20is%20a%20technique%20used,artificially%20create%20the%20necessary%20delay.) - Debounce helper.
 - [Throttling](https://javascript.plainenglish.io/debouncing-and-throttling-in-javascript-3c8f8cf5e645) - Debounce/throttle comparison.
+

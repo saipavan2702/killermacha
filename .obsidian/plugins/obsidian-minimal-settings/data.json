@@ -2,7 +2,7 @@
   "lightStyle": "minimal-light",
   "darkStyle": "minimal-dark",
   "lightScheme": "minimal-default-light",
-  "darkScheme": "minimal-things-dark",
+  "darkScheme": "minimal-default-dark",
   "editorFont": "",
   "lineHeight": 1.5,
   "lineWidth": 40,
@@ -16,8 +16,8 @@
   "iframeWidth": "iframe-default-width",
   "mapWidth": "map-default-width",
   "chartWidth": "chart-default-width",
-  "colorfulHeadings": true,
-  "colorfulFrame": true,
+  "colorfulHeadings": false,
+  "colorfulFrame": false,
   "colorfulActiveStates": false,
   "trimNames": true,
   "labeledNav": false,
@@ -29,6 +29,5 @@
   "underlineExternal": true,
   "folding": true,
   "lineNumbers": true,
-  "readableLineLength": false,
-  "devBlockWidth": false
+  "readableLineLength": false
 }

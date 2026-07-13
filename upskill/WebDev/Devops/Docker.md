@@ -1,3 +1,4 @@
+# Docker
 
 ## Quick Peek to Docker
 
@@ -27,13 +28,10 @@ docker exec -it(interactive)
 
  We sometimes see that two containers running on same port but its fine as we just have to bind them to different host ports along with some configuration.
 
+#docker
+
 ---
 
 ## References
 
-> [!info] Source trail
-> Docker references that support this note.
-
 - [Docker Commands](https://blog.arivappa.tech/docker-commands) - Command reference.
-
-#docker

@@ -1,3 +1,5 @@
+# Event Bus
+
 What Even Is an **Event Bus**?
 
 Imagine a radio station 📻.

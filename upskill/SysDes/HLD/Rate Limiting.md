@@ -1,6 +1,6 @@
 # Rate Limiting
 
-Source: [[Upskill/SysDes/Core|SysDes Core]]
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 Related: [[Upskill/SysDes/LLD/Rate Limiter|Rate Limiter LLD]] · [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]] · [[Upskill/SysDes/HLD/Caching|Caching]] · [[QoL/Refs/SysDes|SysDes Refs]]
 

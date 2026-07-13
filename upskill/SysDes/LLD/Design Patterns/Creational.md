@@ -1,3 +1,5 @@
+# Creational
+
 ### 1. Singleton
 **Purpose**: Ensure only one instance of a class exists.
 **Use when**: You need exactly one shared resource, like a logger or DB connection. Multiple instances would conflict or waste resources.

@@ -1,3 +1,5 @@
+# Behavioral
+
 ### 1. Chain of Responsibility
 **Purpose**: Pass request through chain of handlers.
 **Example**: Customer support (Level 1 → Level 2 → Manager)

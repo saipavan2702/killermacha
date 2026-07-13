@@ -1,3 +1,5 @@
+# Structural
+
 ### 1. Adapter
 **Purpose**: Make incompatible interfaces work together.
 **Use when**: A third-party library gives data in a format your app does not expect. The adapter translates between the two without changing either side.

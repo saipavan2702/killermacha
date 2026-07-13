@@ -1,3 +1,5 @@
+# Ideas
+
 Projects
 https://github.com/perghosh/Data-oriented-design
 https://gitlab.com/users/avey.dev/projects

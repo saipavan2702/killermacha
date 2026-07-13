@@ -1,6 +1,6 @@
 # Obsidian
 
-Related: [[Home|Home]] · [[QoL/Index|QoL Index]]
+Related: [[Home|Home]] · [[QoL/Resources|Resources]]
 
 ## Videos
 
@@ -15,7 +15,7 @@ Related: [[Home|Home]] · [[QoL/Index|QoL Index]]
 - [Web Clipper Templates](https://github.com/frogpal/web-clipper-templates/)
 - [CyanVoxel](https://github.com/CyanVoxel)
 - [niamos](https://github.com/pricklywiggles/niamos)
-
+- [Rainbell](https://github.com/Rainbell129/Obsidian-Homepage)
 ## Articles
 
 - [Steph Ango Vault](https://stephango.com/vault)

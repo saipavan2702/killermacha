@@ -1,3 +1,5 @@
+# Rate Limiter
+
 Let's say a in a twitch stream with many viewers and one is spamming a lot, without a rate limiter he can easily dominate the stream. So we rate limit his messages so that each user get's fair chance & attention.
 
 That's why a rate limiter is needed to control traffic for our service APIs. There are many type of rate limiters:

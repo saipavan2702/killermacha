@@ -1,6 +1,6 @@
 const { Notice, Plugin, PluginSettingTab, Setting, TFile, requestUrl } = require("obsidian");
 
-const MEDIA_FOLDER = "mmacha/motionArts/Items/";
+const MEDIA_FOLDER = "Macha/motionArts/Items/";
 const WATCHED_FIELD = "watched";
 const WATCHED_DATE_FIELD = "watched_date";
 const API_BASE = "https://api.themoviedb.org/3";
@@ -574,7 +574,7 @@ class MovieWatchDateSettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("TMDB API Read Access Token")
-      .setDesc("Used only for notes inside mmacha/motionArts/Items.")
+      .setDesc("Used only for notes inside Macha/motionArts/Items.")
       .addText((text) => {
         text.inputEl.type = "password";
         text

@@ -1,3 +1,5 @@
+# TypeScript
+
 #typescript 
 ```ts
 /**
@@ -139,8 +141,6 @@ We use decorators, so we could reuse the logic of logging function execution sta
 
 ## References
 
-> [!info] Source trail
-> TypeScript references that support this note.
-
 - [Decorators](https://medium.com/@InspireTech/what-are-decorators-in-typescript-and-how-to-use-decorators-d82d15c5851f#:~:text=A%20Decorator%20is%20a%20special,information%20about%20the%20decorated%20declaration.) - Decorator syntax and usage.
 - [React TypeScript Components](https://felixgerschau.com/react-typescript-components/) - React component typing.
+

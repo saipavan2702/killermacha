@@ -1,3 +1,8 @@
+# Context
+
+> [!summary]
+> Go context carries cancellation, deadlines, and request-scoped values across API boundaries and concurrent work.
+
 Context provides a mechanism to control the lifecycle, cancellation, and propagation of requests across multiple goroutines.
 This aids in the management of go routines.
 With context we can create hierarchies of goroutines and pass the information down the chain.
@@ -371,13 +376,10 @@ func getUserFromDB(ctx context.Context, userID string) (string, error) {
 
 One cancel → entire chain stops. That's the whole power of context.
 
+#golang #lang
+
 ---
 
 ## References
 
-> [!info] Source trail
-> Context-specific reads that belong with this note.
-
 - [Complete Guide to Context in Golang](https://medium.com/@jamal.kaksouri/the-complete-guide-to-context-in-golang-efficient-concurrency-management-43d722f6eaea) - Context cancellation and concurrency management.
-
-#golang #lang

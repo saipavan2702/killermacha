@@ -1,4 +1,7 @@
-## gRPC vs REST vs GraphQL vs SOAP
+# gRPC vs REST vs GraphQL vs SOAP
+
+> [!summary]
+> Choose an API style from client needs, schema guarantees, transport efficiency, caching, and organizational constraints.
 
 These four are common API styles/protocols. None is always "best"; the better choice depends on who consumes the API, how much performance matters, how strict the contract needs to be, and how flexible the client queries must be.
 

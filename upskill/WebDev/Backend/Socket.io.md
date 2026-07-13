@@ -1,3 +1,5 @@
+# Socket.io
+
 Socket.io is a javascript library which works by establishing a web socket connection. WebSocket is a communication protocol that provides full-duplex communication between users.
 
 Socket.io is built around an event-driven architecture. Both the server and the clients can emit and listen for events, allowing for a flexible and modular approach to handling different types of messages.

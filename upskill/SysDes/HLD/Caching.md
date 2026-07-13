@@ -1,8 +1,8 @@
 # Caching
 
-Source: [[Upskill/SysDes/Core|SysDes Core]]
+Map: [[Upskill/SysDes/System Design|System Design]]
 
-Related: [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]] · [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]] · [[Upskill/SysDes/LLD/LRU & LFU cache|LRU & LFU Cache]] · [[QoL/Refs/SysDes|SysDes Refs]]
+Related: [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]] · [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]] · [[Upskill/SysDes/LLD/LRU and LFU Cache|LRU & LFU Cache]] · [[QoL/Refs/SysDes|SysDes Refs]]
 
 ## Caching with Redis {#caching}
 

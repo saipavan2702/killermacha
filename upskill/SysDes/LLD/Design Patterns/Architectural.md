@@ -1,3 +1,5 @@
+# Architectural
+
 ### 1. MVC (Model-View-Controller)
 **Purpose**: Separate data, UI, and logic.
 - **Model**: User data

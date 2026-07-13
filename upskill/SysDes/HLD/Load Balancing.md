@@ -1,6 +1,6 @@
 # Load Balancing
 
-Source: [[Upskill/SysDes/Core|SysDes Core]]
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 Related: [[Upskill/SysDes/HLD/Caching|Caching]] · [[Upskill/SysDes/HLD/Rate Limiting|Rate Limiting]] · [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]] · [[QoL/Refs/SysDes|SysDes Refs]]
 

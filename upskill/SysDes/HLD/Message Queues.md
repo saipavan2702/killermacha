@@ -1,8 +1,8 @@
 # Message Queues
 
-Source: [[Upskill/SysDes/Core|SysDes Core]]
+Map: [[Upskill/SysDes/System Design|System Design]]
 
-Related: [[Upskill/SysDes/HLD/Rate Limiting|Rate Limiting]] · [[Upskill/SysDes/HLD/Caching|Caching]] · [[Upskill/SysDes/Core#Event-Driven Architecture|Event-Driven Architecture]] · [[QoL/Refs/SysDes|SysDes Refs]]
+Related: [[Upskill/SysDes/HLD/Rate Limiting|Rate Limiting]] · [[Upskill/SysDes/HLD/Caching|Caching]] · [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]] · [[QoL/Refs/SysDes|SysDes Refs]]
 
 ## Message Brokers & Kafka {#message-brokers}
 

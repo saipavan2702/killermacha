@@ -1,3 +1,5 @@
+# Redux
+
 This javascript library allows us to manage states across the files without the problem of prop-drilling.
 
 ```jsx
@@ -134,9 +136,7 @@ As for [createAsyncThnuk](https://github.com/saipavan2702/mern-template/tree/mas
 
 ## References
 
-> [!info] Source trail
-> Redux references that support this note.
-
 - [Redux Multiple Reducers](https://medium.com/@1992season/handling-multiple-stores-with-redux-toolkit-in-react-js-88b8278eeac8) - Multiple reducer setup.
 - [Redux Multiple Stores](https://www.geekyhub.in/post/handling-multiple-stores-in-react-redux-application/) - Store organization patterns.
 - [Purge Redux Persist State](https://stackoverflow.com/questions/68929107/how-to-purge-any-persisted-state-using-react-tool-kit-with-redux-persist) - Persist cleanup.
+

@@ -1,6 +1,11 @@
-React is an open source library. In which react.js is a [[javascript]] framework to build frontend.
+# React
 
-[[React basics]]
+> [!summary]
+> React builds interfaces from components and state; predictable data flow and rendering boundaries keep those components understandable.
+
+React is an open source library. In which react.js is a [[Upskill/WebDev/Frontend/JavaScript|JavaScript]] framework to build frontend.
+
+[[Upskill/WebDev/Frontend/React Basics|React Basics]]
 Class component of react
 ```jsx
 export default class Header extends React.Component {
@@ -43,7 +48,7 @@ class Title extends Component<Props>{};
 ```
 
 #typescript
-[[typescript]]
+[[Upskill/WebDev/Frontend/TypeScript|TypeScript]]
 We use react types/ properties to define the variable/event type we are about to perform. For example `React.FormEvent`, `React.ChangeEvent<HTMLInputElement>`
 
 Hooks are the functional components provided by react to simplify the developer handling various states and values.
@@ -59,7 +64,7 @@ Hooks are the functional components provided by react to simplify the developer 
 - #### useCallback
 - #### useContext
 
-[[Next.js]] uses React server components architecture introduced by react.
+[[Upskill/WebDev/Frontend/Next.js|Next.js]] uses the React Server Components architecture introduced by React.
 
 *Canvas API* is a html5 It provides a means for drawing graphics via `jsx or js` and can be interpreted via react too. It can be used for animation, game graphics, and real-time video processing.
 
@@ -346,5 +351,4 @@ export default App;
 - react-slick
 - react-spinners
 - react-dnd
-
 

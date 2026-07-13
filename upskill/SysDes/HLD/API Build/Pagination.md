@@ -1,4 +1,4 @@
-## Pagination
+# Pagination
 
 Pagination means dividing large data into small, loadable chunks so apps do not freeze and servers stay stable.
 

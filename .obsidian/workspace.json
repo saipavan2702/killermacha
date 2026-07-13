@@ -49,49 +49,35 @@
             }
           },
           {
-            "id": "281e0f65a6a35143",
+            "id": "f3b3f0fd3691e9b1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Upskill/SysDes/LLD/Design Patterns/Behavioral.md",
+                "file": "Upskill/SysDes/HLD/API Build/Auth Methods/Single Sign-On.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Behavioral"
+              "title": "Single Sign-On"
             }
           },
           {
-            "id": "029c888cc8073c18",
+            "id": "08f62ccdcbd7e5f1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Upskill/SysDes/Index.md",
+                "file": "Upskill/CS Topics/Concurrency-Parallelism-Async.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Index"
-            }
-          },
-          {
-            "id": "64a98a57e7007d48",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Upskill/ProgramLang/Java/Core.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Core"
+              "title": "Concurrency-Parallelism-Async"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -158,7 +144,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 429.5
+    "width": 428.5
   },
   "right": {
     "id": "e5d2ad9fec6d31d0",
@@ -245,6 +231,18 @@
               "icon": "lucide-archive",
               "title": "All properties"
             }
+          },
+          {
+            "id": "e9676ab9529d2e21",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {
+                "file": "Upskill/SysDes/HLD/API Build/Auth Methods/Single Sign-On.md"
+              },
+              "icon": "lucide-file-signature",
+              "title": "Footnotes"
+            }
           }
         ],
         "currentTab": 4
@@ -274,60 +272,55 @@
   "left-ribbon": {
     "hiddenItems": {
       "random-note:Open random note": false,
-      "obsidian-map-view:Open map view": false,
       "bases:Create new base": false,
       "graph:Open graph view": false,
-      "obsidian-git:Open Git source control": false,
       "switcher:Open quick switcher": false,
-      "canvas:Create new canvas": false,
-      "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "daily-notes:Open today's daily note": false,
-      "obsidian-importer:Open Importer": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "notebook-navigator:Notebook Navigator": false,
-      "obsidian-media-db-plugin:Add new Media DB entry": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "canvas:Create new canvas": false
     }
   },
-  "active": "64a98a57e7007d48",
+  "active": "f3b3f0fd3691e9b1",
   "lastOpenFiles": [
-    "Upskill/SysDes/Index.md",
-    "Upskill/SysDes/LLD/Design Patterns/Behavioral.md",
-    "Upskill/SysDes/LLD/Design Patterns/Creational.md",
-    "Upskill/SysDes/LLD/Design Patterns/Structural.md",
-    "Upskill/SysDes/LLD/Design Patterns/Core.md",
-    "Design Patterns.md",
+    "Upskill/SysDes/HLD/API Build/Pagination.md",
+    "Upskill/SysDes/HLD/API Build/Auth Methods/Custom JWT and Redis Authentication.md",
+    "Upskill/SysDes/HLD/API Build/Auth Methods/Single Sign-On.md",
+    "Upskill/CS Topics/Concurrency-Parallelism-Async.md",
+    "Upskill/SysDes/HLD/API Build/Auth Methods/Session Authentication.md",
+    "Upskill/SysDes/HLD/API Build/Authentication Methods.md",
+    "Upskill/SysDes/HLD/API Build/Auth Methods/OpenID Connect.md",
+    "Upskill/SysDes/HLD/API Build/Auth Methods/OAuth 2.0.md",
+    "Upskill/SysDes/HLD/API Build/Auth Methods/Access and Refresh Tokens.md",
+    "Upskill/SysDes/HLD/API Build/Auth Methods/JSON Web Tokens.md",
+    "Upskill/SysDes/HLD/API Build/Auth Methods/Bearer Tokens.md",
+    "Upskill/SysDes/HLD/API Build/Auth Methods/API Keys.md",
+    "Upskill/SysDes/HLD/API Build/Auth Methods/Digest Authentication.md",
+    "Upskill/SysDes/HLD/API Build/Auth Methods/Basic Authentication.md",
+    "Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview.md",
+    "Upskill/SysDes/HLD/API Build/Auth Methods",
+    "Upskill/SysDes/LLD/Design Patterns/Design Patterns.md",
+    "Upskill/SysDes/HLD/API Build/gRPC vs REST vs GraphQL vs SOAP.md",
     "Upskill/ProgramLang/Java/Concurrency.md",
-    "Upskill/SysDes/LLD/Rate Limiter.md",
-    "Orcl/Weekly report.md",
-    "Upskill/ProgramLang/Java/Core.md",
-    "QoL/Refs/Dev.md",
-    "QoL/Refs/Misc.md",
-    "Upskill/DSA/Algos/DP.md",
-    "QoL/Refs/DSA.md",
-    "Upskill/DSA/Sql.md",
+    "QoL/Refs/Obsidian.md",
+    "Upskill/SysDes/LLD/Design Patterns/Behavioral.md",
+    "Upskill/DSA/Algorithms/Backtracking.md",
     "Upskill/DSA/DSA.md",
-    "Upskill/DSA/SegmenTree.md",
-    "Upskill/Gen Misc/ET.md",
-    "Upskill/Gen Misc/Space.md",
-    "Upskill/DSA/Linked List.md",
-    "Upskill/DSA/Garph.md",
-    "Upskill/DSA/Algos/BackTrack.md",
-    "Upskill/CS Topics/HTTP Methods.md",
-    "Upskill/CS Topics/Operating Sys.md",
-    "QoL/Refs/SysDes.md",
-    "Upskill/Gen Misc/Math/Fractions.md",
+    "Upskill/ProgramLang/Java/Switch Statements and Expressions.md",
+    "Upskill/DSA/Algorithms/String Matching.md",
+    "Upskill/DSA/Algorithms/Bucket Sort.md",
+    "Upskill/DSA/Algorithms/Remainder Pair Counting.md",
+    "Upskill/CS Topics/Databases",
+    "Upskill/DSA/Data Structures",
+    "Upskill/DSA/Algorithms",
+    "Upskill/Linux/Vim",
+    "Upskill/ProgramLang/C++",
+    "Upskill/SysDes/Case Studies",
     "Upskill/Gen Misc/Math",
     "Macha/motionArts/Celluloid.base",
     "mmacha",
-    "Upskill/ProgramLang/Golang",
-    "new-book-template-clipper.json",
-    "new-post-video-template-clipper.json",
-    "QoL/Refs",
-    "Upskill/SysDes/HLD/API Build",
-    "upSkill/SysDes/HLD/Auth Types",
-    "mmacha/motionArts/Tools/__pycache__/sync_tmdb_posters.cpython-314.pyc",
     "attachments/Pasted image 20260601002039.png",
     "attachments/communication_patterns_map_v2.svg",
     "attachments/Pasted image 20260531230835.png",

@@ -3,6 +3,5 @@
 Moved into topic notes.
 
 - [[Upskill/DSA/DSA#References|DSA resource map]]
-- [[Upskill/DSA/SegmenTree#References|Segment Tree / Fenwick]]
-- [[Upskill/DSA/Sql#References|SQL]]
-- [[Upskill/DSA/Algos/DP#References|DP]]
+- [[Upskill/DSA/Data Structures/Segment Tree#References|Segment Tree / Fenwick]]
+- [[Upskill/DSA/Algorithms/Dynamic Programming#References|Dynamic Programming]]

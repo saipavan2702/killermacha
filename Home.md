@@ -404,13 +404,13 @@ const stats = hero.createDiv({ cls: "home-stats" });
 const actions = root.createDiv({ cls: "home-actions" });
 [
   ["Inbox.md", "Inbox", "quick capture", "inbox"],
-  ["Tasks/To-Do's.md", "Tasks", "open work", "check-square"],
+  ["Tasks/Tasks.md", "Tasks", "open work", "check-square"],
   ["QoL/Ideas.md", "Ideas", "capture sparks", "lightbulb"],
   ["QoL/Refs/Obsidian.md", "Obsidian", "vault notes", "gem"],
-  ["Upskill/Index.md", "Upskill", "learning map", "map"],
+  ["Upskill/Learning.md", "Learning", "topic map", "map"],
   ["Upskill/DSA/DSA.md", "DSA", "practice", "binary"],
-  ["Upskill/SysDes/Core.md", "SysDes", "architecture", "network"],
-  ["Macha/watches.md", "Watches", "personal shelf", "play"],
+  ["Upskill/SysDes/System Design.md", "System Design", "architecture", "network"],
+  ["Macha/Watches.md", "Watches", "personal shelf", "play"],
 ].forEach(args => actions.appendChild(openLink(...args)));
 
 const metrics = root.createDiv({ cls: "home-metrics" });

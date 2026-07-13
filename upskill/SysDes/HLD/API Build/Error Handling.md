@@ -1,4 +1,7 @@
-## Error Handling
+# Error Handling
+
+> [!summary]
+> A good API error contract separates internal causes from stable client-facing codes while preserving context for logs and recovery.
 
 ```dataviewjs
 const sections = [
@@ -553,13 +556,10 @@ result, _ := db.Query(...)
 
 Tip: agree on one strategy in an ADR and enforce it with lint rules like `errcheck` and `wrapcheck`.
 
+#sysdes #api #error-handling
+
 ---
 
 ## References
 
-> [!info] Source trail
-> Error-handling references that support this note.
-
 - [The Error Handling Problem That Followed Me Everywhere](https://www.youtube.com/watch?v=XDTov7xaD7g) - Cross-language error-handling ideas.
-
-#sysdes #api #error-handling

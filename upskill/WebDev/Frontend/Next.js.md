@@ -1,4 +1,9 @@
-In nextjs by default every component is server component. To use a component as client component we have to keep `"use client"` at the top of file.
+# Next.js
+
+> [!summary]
+> Next.js organizes React applications around routing, server rendering, data fetching, caching, and deployment boundaries.
+
+In Next.js, every component is a Server Component by default. Add `"use client"` at the top when a component requires client-side state, effects, or browser APIs.
 
 In this we have to follow some conventions in order to route files. Here every folder is a route, and all folders must be in app folder.
 We can practice nested routing here by creating some more folders inside folders.
