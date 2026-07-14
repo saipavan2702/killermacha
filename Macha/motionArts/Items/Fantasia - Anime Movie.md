@@ -27,5 +27,3 @@ tags:
   - anime
   - movie
 ---
-
-# Fantasia

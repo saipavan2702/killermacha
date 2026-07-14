@@ -15,6 +15,3 @@ tags:
 directors:
   - Lee Jeong-beom
 ---
-
-# The Man From Nowhere
-

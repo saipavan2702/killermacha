@@ -15,5 +15,3 @@ tags:
   - anime
   - series
 ---
-
-# Kabaneri of the Iron Fortress

@@ -14,5 +14,3 @@ tags:
 directors:
   - Audrey Wells
 ---
-
-# Under the Tuscan Sun

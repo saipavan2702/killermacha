@@ -13,5 +13,3 @@ tags:
 directors:
   - Clint Eastwood
 ---
-
-# Million Dollar Baby

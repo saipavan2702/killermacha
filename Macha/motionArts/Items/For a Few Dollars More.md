@@ -13,5 +13,3 @@ tags:
 directors:
   - Sergio Leone
 ---
-
-# For a Few Dollars More

@@ -16,5 +16,3 @@ tags:
 directors:
   - Emir Kusturica
 ---
-
-# Time of the Gypsies

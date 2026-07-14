@@ -14,5 +14,3 @@ tags:
   - anime
   - series
 ---
-
-# Nura: Rise of the Yokai Clan

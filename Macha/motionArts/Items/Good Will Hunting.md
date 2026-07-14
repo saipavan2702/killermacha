@@ -13,6 +13,3 @@ tags:
   - motion-art
   - movie
 ---
-
-# Good Will Hunting
-

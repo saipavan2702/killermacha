@@ -1,5 +1,3 @@
-# Macha
-
 > [!summary]
 > Personal notes, media tracking, aesthetics, and everyday reference material.
 

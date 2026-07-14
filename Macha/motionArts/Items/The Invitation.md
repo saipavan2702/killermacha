@@ -14,5 +14,3 @@ tags:
 directors:
   - Jessica M. Thompson
 ---
-
-# The Invitation

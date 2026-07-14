@@ -15,6 +15,3 @@ tags:
 directors:
   - Ridley Scott
 ---
-
-# Gladiator
-

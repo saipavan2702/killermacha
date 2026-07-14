@@ -18,5 +18,3 @@ directors:
   - Ron Clements
   - John Musker
 ---
-
-# The Princess and the Frog

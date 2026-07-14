@@ -17,5 +17,3 @@ tags:
 directors:
   - Kenji Kamiyama
 ---
-
-# The Lord of the Rings: The War of the Rohirrim

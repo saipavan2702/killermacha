@@ -13,5 +13,3 @@ tags:
   - motion-art
   - movie
 ---
-
-# A Fistful of Dollars

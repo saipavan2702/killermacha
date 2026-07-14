@@ -14,6 +14,3 @@ tags:
 directors:
   - Martin Scorsese
 ---
-
-# Taxi Driver
-

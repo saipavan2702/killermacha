@@ -14,5 +14,3 @@ tags:
   - motion-art
   - movie
 ---
-
-# Happy as Lazzaro

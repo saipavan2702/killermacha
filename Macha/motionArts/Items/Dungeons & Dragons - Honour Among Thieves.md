@@ -16,6 +16,3 @@ tags:
   - motion-art
   - movie
 ---
-
-# Dungeons & Dragons: Honour Among Thieves
-

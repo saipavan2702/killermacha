@@ -13,5 +13,3 @@ tags:
 directors:
   - Stephen Chbosky
 ---
-
-# The Perks of Being a Wallflower

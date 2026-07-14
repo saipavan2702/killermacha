@@ -15,5 +15,3 @@ tags:
 directors:
   - Steven Spielberg
 ---
-
-# Schindler's list

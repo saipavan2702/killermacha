@@ -16,5 +16,3 @@ tags:
 directors:
   - Hayao Miyazaki
 ---
-
-# Spirited Away

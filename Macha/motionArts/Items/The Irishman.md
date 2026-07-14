@@ -15,5 +15,3 @@ tags:
 directors:
   - Martin Scorsese
 ---
-
-# The Irishman

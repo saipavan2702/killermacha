@@ -13,6 +13,3 @@ tags:
   - motion-art
   - series
 ---
-
-# The Wire
-

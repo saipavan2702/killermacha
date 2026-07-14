@@ -15,6 +15,3 @@ tags:
 directors:
   - Paul Thomas Anderson
 ---
-
-# One Battle After Another
-

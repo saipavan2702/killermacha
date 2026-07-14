@@ -16,5 +16,3 @@ tags:
 directors:
   - Hayao Miyazaki
 ---
-
-# The Boy and the Heron

@@ -15,5 +15,3 @@ tags:
 directors:
   - Peter Jackson
 ---
-
-# The Hobbit: The Battle of the Five Armies

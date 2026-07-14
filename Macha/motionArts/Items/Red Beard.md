@@ -13,5 +13,3 @@ tags:
 directors:
   - Akira Kurosawa
 ---
-
-# Red Beard

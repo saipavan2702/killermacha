@@ -14,5 +14,3 @@ tags:
 directors:
   - Emerald Fennell
 ---
-
-# Wuthering Heights

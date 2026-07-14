@@ -15,5 +15,3 @@ tags:
 directors:
   - Peter Jackson
 ---
-
-# The Lord of the Rings: The Two Towers

@@ -19,5 +19,3 @@ directors:
   - Ron Clements
   - John Musker
 ---
-
-# Treasure planet

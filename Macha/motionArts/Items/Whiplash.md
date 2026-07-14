@@ -15,5 +15,3 @@ tags:
 directors:
   - Damien Chazelle
 ---
-
-# Whiplash

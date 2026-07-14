@@ -13,5 +13,3 @@ tags:
 directors:
   - Bennett Miller
 ---
-
-# Moneyball

@@ -15,5 +15,3 @@ tags:
 directors:
   - Sanal Kumar Sasidharan
 ---
-
-# Ozhivudivasathe Kali

@@ -15,6 +15,3 @@ tags:
   - motion-art
   - movie
 ---
-
-# Femme Fatale
-

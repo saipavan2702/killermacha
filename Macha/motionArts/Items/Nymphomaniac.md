@@ -14,5 +14,3 @@ tags:
 directors:
   - Lars von Trier
 ---
-
-# Nymphomaniac

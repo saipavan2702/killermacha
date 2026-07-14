@@ -14,5 +14,3 @@ tags:
 directors:
   - Edgar Wright
 ---
-
-# Shaun of the Dead

@@ -1,5 +1,3 @@
-# Credit Cards
-
 **For spending about 5L per annum**
 
 - Amazon pay ICICI card

@@ -15,5 +15,3 @@ tags:
   - motion-art
   - movie
 ---
-
-# Transformers: The Last Knight

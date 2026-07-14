@@ -18,5 +18,3 @@ tags:
   - anime
   - movie
 ---
-
-# Beauty and the Beast

@@ -14,6 +14,3 @@ tags:
   - motion-art
   - series
 ---
-
-# Sherlock
-

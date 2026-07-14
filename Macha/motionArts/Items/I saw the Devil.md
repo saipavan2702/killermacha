@@ -14,6 +14,3 @@ tags:
   - motion-art
   - movie
 ---
-
-# I saw the Devil
-

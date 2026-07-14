@@ -15,5 +15,3 @@ tags:
 directors:
   - Tom Gormican
 ---
-
-# The Unbearable Weight of Massive Talent

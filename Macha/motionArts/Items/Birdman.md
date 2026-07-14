@@ -14,5 +14,3 @@ tags:
   - motion-art
   - movie
 ---
-
-# Birdman or (The Unexpected Virtue of Ignorance)

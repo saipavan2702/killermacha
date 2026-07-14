@@ -2,8 +2,8 @@
 media_type: movie
 title: Voicemails for Isabelle
 industry: Hollywood
-watched: false
-watched_date:
+watched: true
+watched_date: 2026-07-14
 genres:
   - Romance
   - Comedy
@@ -14,6 +14,3 @@ tags:
   - motion-art
   - movie
 ---
-
-# Voicemails for Isabelle
-

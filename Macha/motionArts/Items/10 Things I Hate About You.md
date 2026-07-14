@@ -15,5 +15,3 @@ tags:
   - motion-art
   - movie
 ---
-
-# 10 Things I Hate About You

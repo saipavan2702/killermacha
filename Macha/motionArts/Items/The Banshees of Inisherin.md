@@ -14,6 +14,3 @@ tags:
 directors:
   - Martin McDonagh
 ---
-
-# The Banshees of Inisherin
-

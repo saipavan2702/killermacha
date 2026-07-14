@@ -15,5 +15,3 @@ tags:
 directors:
   - Anthony Minghella
 ---
-
-# The Talented Mr. Ripley

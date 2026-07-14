@@ -14,5 +14,3 @@ tags:
 directors:
   - Joe Wright
 ---
-
-# Pride and Prejudice

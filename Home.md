@@ -281,6 +281,10 @@ const allPages = dv.pages()
 const tasks = allPages.file.tasks.where(t => !t.completed);
 const recent = allPages.sort(p => p.file.mtime, "desc").slice(0, 7);
 const learning = dv.pages('"Upskill"').sort(p => p.file.mtime, "desc").slice(0, 6);
+const needsConnections = dv.pages('"Upskill"')
+  .where(p => p.file.path !== "Upskill/Learning.md" && p.file.outlinks.length < 2)
+  .sort(p => p.file.mtime, "desc")
+  .slice(0, 6);
 const media = dv.pages('"Macha/motionArts/Items"').sort(p => p.file.mtime, "desc").slice(0, 6);
 const daily = allPages
   .where(p => /^\d{4}-\d{2}-\d{2}$/.test(p.file.name))
@@ -379,7 +383,7 @@ captureInput.onkeydown = async (event) => {
   if (!text) return;
   const path = "Inbox.md";
   let file = app.vault.getAbstractFileByPath(path);
-  if (!file) file = await app.vault.create(path, "# Inbox\n");
+  if (!file) file = await app.vault.create(path, "");
   const stamp = window.moment().format("YYYY-MM-DD HH:mm");
   await app.vault.append(file, `\n- ${text} (${stamp})`);
   captureInput.value = "";
@@ -417,7 +421,7 @@ const metrics = root.createDiv({ cls: "home-metrics" });
 pill(metrics, "recent notes", recent.length);
 pill(metrics, "daily notes", daily.length);
 pill(metrics, "review queue", stale.length);
-pill(metrics, "task source", "Tasks");
+pill(metrics, "needs links", needsConnections.length);
 
 const grid = root.createDiv({ cls: "home-grid" });
 const main = grid.createDiv({ cls: "home-main" });
@@ -445,6 +449,13 @@ media.forEach(p => mediaPanel.appendChild(row(p, p.media_type ?? "media", "film"
 
 const dailyPanel = panel(side, "Daily Notes", "calendar-days");
 daily.forEach(p => dailyPanel.appendChild(row(p, window.moment(p.file.mtime.toJSDate()).format("MMM D"), "calendar")));
+
+const connectionsPanel = panel(side, "Needs Connections", "git-branch");
+if (needsConnections.length) {
+  needsConnections.forEach(p => connectionsPanel.appendChild(row(p, "add a related note", "link")));
+} else {
+  connectionsPanel.createDiv({ cls: "home-empty", text: "Learning notes are connected." });
+}
 
 const reviewPanel = panel(side, "Quiet Review", "archive-restore");
 stale.forEach(p => reviewPanel.appendChild(row(p, `touched ${window.moment(p.file.mtime.toJSDate()).fromNow()}`, "refresh-ccw")));

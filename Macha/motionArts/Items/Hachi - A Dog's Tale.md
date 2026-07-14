@@ -14,5 +14,3 @@ tags:
 directors:
   - Lasse Hallström
 ---
-
-# Hachi: A Dog's Tale

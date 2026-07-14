@@ -13,5 +13,3 @@ tags:
 directors:
   - Christopher Smith
 ---
-
-# Triangle

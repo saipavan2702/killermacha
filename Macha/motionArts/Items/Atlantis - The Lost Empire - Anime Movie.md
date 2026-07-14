@@ -18,5 +18,3 @@ tags:
   - anime
   - movie
 ---
-
-# Atlantis: The Lost Empire

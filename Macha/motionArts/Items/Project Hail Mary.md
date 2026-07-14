@@ -15,6 +15,3 @@ directors:
   - Phil Lord
   - Christopher Miller
 ---
-
-# Project Hail Mary
-

@@ -15,5 +15,3 @@ tags:
 directors:
   - William Friedkin
 ---
-
-# Killer Joe

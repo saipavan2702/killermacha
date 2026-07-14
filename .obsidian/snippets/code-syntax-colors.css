@@ -1,0 +1,60 @@
+/* Monokai Vibrant syntax colors from the current VS Code setup. */
+.theme-dark {
+  --code-normal: #f8f8f0;
+  --code-comment: #5c6370;
+  --code-function: #81f900;
+  --code-important: #ff3f4f;
+  --code-keyword: #ff3f4f;
+  --code-operator: #ff3f4f;
+  --code-property: #19d1e5;
+  --code-punctuation: #f8f8f0;
+  --code-string: #ffd945;
+  --code-tag: #ff3f4f;
+  --code-value: #e373ce;
+}
+
+.theme-dark :is(.cm-comment, .token.comment, .token.prolog, .token.doctype) {
+  color: #5c6370;
+  font-style: italic;
+}
+
+.theme-dark :is(.cm-attributeName, .token.attr-name) {
+  color: #81f900;
+}
+
+.theme-dark :is(.cm-typeName, .token.class-name, .token.builtin) {
+  color: #00a0e4;
+}
+
+.theme-dark :is(.cm-number, .token.number) {
+  color: #e373ce;
+}
+
+.theme-dark :is(.cm-bool, .token.boolean, .token.constant) {
+  color: #e373ce;
+}
+
+.theme-dark :is(.cm-meta, .token.directive, .token.macro) {
+  color: #19d1e5;
+}
+
+.theme-dark :is(.cm-variableName.cm-definition, .token.function) {
+  color: #81f900;
+}
+
+.theme-dark :is(.cm-variableName.cm-local, .token.parameter) {
+  color: #ff9700;
+  font-style: italic;
+}
+
+.theme-dark :is(.cm-variableName, .token.variable) {
+  color: #00a0e4;
+}
+
+.theme-dark :is(.cm-string, .token.string, .token.char) {
+  color: #ffd945;
+}
+
+.theme-dark :is(.cm-keyword, .cm-operator, .token.keyword, .token.operator) {
+  color: #ff3f4f;
+}

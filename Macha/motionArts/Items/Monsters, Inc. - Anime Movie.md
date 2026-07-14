@@ -17,5 +17,3 @@ tags:
 directors:
   - Pete Docter
 ---
-
-# Monsters, Inc.

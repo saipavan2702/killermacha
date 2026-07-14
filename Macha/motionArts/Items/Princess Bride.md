@@ -17,5 +17,3 @@ tags:
 directors:
   - Rob Reiner
 ---
-
-# Princess Bride

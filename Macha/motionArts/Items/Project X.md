@@ -13,5 +13,3 @@ tags:
 directors:
   - Nima Nourizadeh
 ---
-
-# Project X

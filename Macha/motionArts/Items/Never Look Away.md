@@ -15,5 +15,3 @@ tags:
 directors:
   - Florian Henckel von Donnersmarck
 ---
-
-# Never Look Away

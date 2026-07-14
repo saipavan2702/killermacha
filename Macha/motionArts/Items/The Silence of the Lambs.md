@@ -15,5 +15,3 @@ tags:
 directors:
   - Jonathan Demme
 ---
-
-# The Silence of the Lambs

@@ -51,13 +51,10 @@
   "cupertino@@font-ui-modifier": 0,
   "cupertino@@icon-size-modifier": 0,
   "cupertino@@dynamic-type-off": false,
-  "baseline-style@@font-interface-override": "Rubik",
   "baseline-style@@layout-style": "layout-baseline",
-  "baseline-style@@element-style": "input-cupertino",
+  "baseline-style@@element-style": "input-baseline",
   "baseline-style@@status-bar-style": "status-bar-baseline",
   "baseline-style@@accented-interface": true,
-  "baseline-style@@color-scheme-dark": "things-dark",
-  "baseline-style@@tab-top-left-style": "tab-top-left-icon",
   "baseline-style@@hide-vault-switcher-off": true,
   "iridium@@layout-desktop-only": "i-default-layout",
   "iridium@@i-calendar-off": false,
@@ -68,5 +65,9 @@
   "obsidian-velocity@@color-highlight-rgb": "var(--highlight-green-rgb)",
   "obsidian-velocity@@vl-layout-padding": "6px",
   "obsidian-velocity@@override-default-font": true,
-  "obsidian-transparent@@preset-mode": "preset-default"
+  "obsidian-transparent@@preset-mode": "preset-default",
+  "baseline-style@@tab-top-left-style": "tab-top-left-icon",
+  "baseline-style@@density-modifier": 0.75,
+  "baseline-style@@icon-stroke-modifier": 1.25,
+  "baseline-style@@color-scheme-dark": "notion-dark"
 }

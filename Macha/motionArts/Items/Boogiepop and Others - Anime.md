@@ -14,5 +14,3 @@ tags:
   - anime
   - series
 ---
-
-# Boogiepop and Others

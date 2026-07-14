@@ -14,5 +14,3 @@ tags:
 directors:
   - Mahesh Manjrekar
 ---
-
-# Nay Varan Bhat Loncha Kon Nai Koncha

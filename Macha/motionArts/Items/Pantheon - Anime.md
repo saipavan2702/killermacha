@@ -14,6 +14,3 @@ tags:
   - anime
   - series
 ---
-
-# Pantheon
-

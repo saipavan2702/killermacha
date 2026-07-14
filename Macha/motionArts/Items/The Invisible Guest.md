@@ -15,6 +15,3 @@ tags:
 directors:
   - Oriol Paulo
 ---
-
-# The Invisible Guest
-

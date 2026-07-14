@@ -15,5 +15,3 @@ tags:
 directors:
   - Nora Ephron
 ---
-
-# Sleepless in Seattle

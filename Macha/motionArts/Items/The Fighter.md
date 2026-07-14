@@ -13,5 +13,3 @@ tags:
 directors:
   - David O. Russell
 ---
-
-# The Fighter

@@ -15,5 +15,3 @@ tags:
   - motion-art
   - movie
 ---
-
-# 28 Years Later

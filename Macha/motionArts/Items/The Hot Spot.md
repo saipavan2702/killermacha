@@ -15,5 +15,3 @@ tags:
 directors:
   - Dennis Hopper
 ---
-
-# The Hot Spot

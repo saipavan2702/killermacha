@@ -14,5 +14,3 @@ directors:
   - Karim Amer
   - Jehane Noujaim
 ---
-
-# The Great Hack

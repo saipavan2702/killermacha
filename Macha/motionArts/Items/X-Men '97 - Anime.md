@@ -14,5 +14,3 @@ tags:
   - anime
   - series
 ---
-
-# X-Men '97

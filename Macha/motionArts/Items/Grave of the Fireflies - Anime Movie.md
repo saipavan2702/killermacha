@@ -14,5 +14,3 @@ tags:
   - anime
   - movie
 ---
-
-# Grave of the Fireflies

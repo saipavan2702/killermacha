@@ -14,5 +14,3 @@ tags:
 directors:
   - Robert Luketic
 ---
-
-# The Ugly Truth

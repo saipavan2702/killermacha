@@ -15,5 +15,3 @@ tags:
 directors:
   - Gavin O'Connor
 ---
-
-# The Accountant

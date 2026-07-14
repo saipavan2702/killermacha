@@ -15,5 +15,3 @@ tags:
 directors:
   - Shane Black
 ---
-
-# The Nice Guys

@@ -13,5 +13,3 @@ tags:
   - anime
   - series
 ---
-
-# Orb: On the Movements of the Earth

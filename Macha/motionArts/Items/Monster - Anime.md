@@ -15,5 +15,3 @@ tags:
   - anime
   - series
 ---
-
-# Monster

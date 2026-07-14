@@ -12,5 +12,3 @@ tags:
   - motion-art
   - series
 ---
-
-# The Boys

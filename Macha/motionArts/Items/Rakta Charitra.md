@@ -15,5 +15,3 @@ tags:
 directors:
   - Ram Gopal Varma
 ---
-
-# Rakta Charitra

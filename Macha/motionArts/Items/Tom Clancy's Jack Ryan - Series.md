@@ -12,5 +12,3 @@ tags:
   - motion-art
   - series
 ---
-
-# Tom Clancy's Jack Ryan

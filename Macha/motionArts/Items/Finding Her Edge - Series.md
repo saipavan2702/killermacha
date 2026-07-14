@@ -11,5 +11,3 @@ tags:
   - motion-art
   - series
 ---
-
-# Finding Her Edge

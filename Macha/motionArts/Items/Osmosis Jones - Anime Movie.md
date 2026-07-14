@@ -20,5 +20,3 @@ directors:
   - Bobby Farrelly
   - Peter Farrelly
 ---
-
-# Osmosis Jones

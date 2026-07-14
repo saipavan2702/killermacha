@@ -14,5 +14,3 @@ tags:
 directors:
   - Gavin O'Connor
 ---
-
-# Warrior

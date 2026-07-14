@@ -15,5 +15,3 @@ tags:
 directors:
   - Joachim Trier
 ---
-
-# The Worst Person in the World

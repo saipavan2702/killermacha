@@ -13,5 +13,3 @@ tags:
 directors:
   - Stephen Karam
 ---
-
-# The Humans

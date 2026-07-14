@@ -14,5 +14,3 @@ tags:
 directors:
   - Roger Michell
 ---
-
-# Notting Hill

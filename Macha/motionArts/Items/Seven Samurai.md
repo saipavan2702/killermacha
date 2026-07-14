@@ -14,5 +14,3 @@ tags:
 directors:
   - Akira Kurosawa
 ---
-
-# Seven Samurai

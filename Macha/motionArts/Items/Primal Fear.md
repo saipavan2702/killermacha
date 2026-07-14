@@ -16,5 +16,3 @@ tags:
 directors:
   - Gregory Hoblit
 ---
-
-# Primal Fear

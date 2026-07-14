@@ -16,5 +16,3 @@ tags:
   - motion-art
   - movie
 ---
-
-# Love Exposure

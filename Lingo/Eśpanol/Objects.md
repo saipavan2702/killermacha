@@ -1,5 +1,3 @@
-# Objects
-
 Maleta- Suitcase
 Boleto- ticket
 Hombre- man

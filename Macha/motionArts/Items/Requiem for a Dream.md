@@ -14,5 +14,3 @@ tags:
 directors:
   - Darren Aronofsky
 ---
-
-# Requiem for a Dream

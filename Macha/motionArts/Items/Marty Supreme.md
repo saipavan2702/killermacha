@@ -14,6 +14,3 @@ tags:
 directors:
   - Josh Safdie
 ---
-
-# Marty Supreme
-

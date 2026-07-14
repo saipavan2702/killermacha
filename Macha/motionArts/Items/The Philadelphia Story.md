@@ -14,5 +14,3 @@ tags:
 directors:
   - George Cukor
 ---
-
-# The Philadelphia Story

@@ -14,6 +14,3 @@ tags:
 directors:
   - Dev Patel
 ---
-
-# Monkey Man
-

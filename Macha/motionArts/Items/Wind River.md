@@ -16,5 +16,3 @@ tags:
 directors:
   - Taylor Sheridan
 ---
-
-# Wind River

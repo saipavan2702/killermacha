@@ -15,5 +15,3 @@ tags:
 directors:
   - Bong Joon Ho
 ---
-
-# Parasite

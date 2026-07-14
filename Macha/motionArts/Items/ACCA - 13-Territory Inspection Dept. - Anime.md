@@ -15,5 +15,3 @@ tags:
   - anime
   - series
 ---
-
-# ACCA: 13-Territory Inspection Dept.

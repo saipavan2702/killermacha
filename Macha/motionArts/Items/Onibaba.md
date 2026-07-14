@@ -13,5 +13,3 @@ tags:
 directors:
   - Kaneto Shindō
 ---
-
-# Onibaba

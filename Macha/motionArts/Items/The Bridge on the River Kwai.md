@@ -15,5 +15,3 @@ tags:
 directors:
   - David Lean
 ---
-
-# The Bridge on the River Kwai

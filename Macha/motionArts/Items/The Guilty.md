@@ -14,6 +14,3 @@ tags:
 directors:
   - Antoine Fuqua
 ---
-
-# The Guilty
-

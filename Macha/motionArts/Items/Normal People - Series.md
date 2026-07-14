@@ -11,5 +11,3 @@ tags:
   - motion-art
   - series
 ---
-
-# Normal People

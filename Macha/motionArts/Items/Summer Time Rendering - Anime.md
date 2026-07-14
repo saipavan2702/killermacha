@@ -14,5 +14,3 @@ tags:
   - anime
   - series
 ---
-
-# Summer Time Rendering

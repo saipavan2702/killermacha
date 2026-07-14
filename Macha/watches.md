@@ -1,5 +1,3 @@
-# Watches
-
 **Casio**
 
 - [G-shock 5000u](https://www.amazon.in/G-Shock-GW-5000U-1JF-Resistant-GW-5000-Shipped/dp/B098DGF6CM)

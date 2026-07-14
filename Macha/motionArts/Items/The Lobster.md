@@ -15,5 +15,3 @@ tags:
 directors:
   - Yorgos Lanthimos
 ---
-
-# The Lobster

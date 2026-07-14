@@ -16,5 +16,3 @@ tags:
 directors:
   - Mamoru Oshii
 ---
-
-# Ghost in the Shell

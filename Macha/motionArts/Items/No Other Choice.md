@@ -14,6 +14,3 @@ tags:
   - motion-art
   - movie
 ---
-
-# No Other Choice
-

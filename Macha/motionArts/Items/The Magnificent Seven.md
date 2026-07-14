@@ -13,5 +13,3 @@ tags:
 directors:
   - John Sturges
 ---
-
-# The Magnificent Seven

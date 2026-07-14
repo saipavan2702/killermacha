@@ -15,6 +15,3 @@ tags:
 directors:
   - Gus Van Sant
 ---
-
-# To Die For
-

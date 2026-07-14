@@ -18,5 +18,3 @@ directors:
   - John Musker
   - Ron Clements
 ---
-
-# Moana

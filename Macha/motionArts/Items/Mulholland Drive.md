@@ -15,6 +15,3 @@ tags:
 directors:
   - David Lynch
 ---
-
-# Mulholland Drive
-

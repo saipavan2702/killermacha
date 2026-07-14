@@ -15,5 +15,3 @@ tags:
 directors:
   - Peter Jackson
 ---
-
-# The Hobbit: The Desolation of Smaug

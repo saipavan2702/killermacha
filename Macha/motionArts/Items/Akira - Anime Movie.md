@@ -16,5 +16,3 @@ tags:
   - anime
   - movie
 ---
-
-# Akira

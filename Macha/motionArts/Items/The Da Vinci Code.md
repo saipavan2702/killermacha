@@ -14,5 +14,3 @@ tags:
 directors:
   - Ron Howard
 ---
-
-# The Da Vinci Code

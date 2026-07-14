@@ -15,5 +15,3 @@ tags:
 directors:
   - Rob Reiner
 ---
-
-# When Harry Met Sally...

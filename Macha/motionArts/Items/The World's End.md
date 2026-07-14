@@ -15,5 +15,3 @@ tags:
 directors:
   - Edgar Wright
 ---
-
-# The World's End

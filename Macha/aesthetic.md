@@ -1,5 +1,3 @@
-# Aesthetic
-
 ```dataviewjs
 const clockDiv = this.container.createDiv({ cls: "analog-clock-widget" });
 clockDiv.innerHTML = `

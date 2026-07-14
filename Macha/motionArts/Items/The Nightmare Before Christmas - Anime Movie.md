@@ -16,5 +16,3 @@ tags:
 directors:
   - Henry Selick
 ---
-
-# The Nightmare Before Christmas

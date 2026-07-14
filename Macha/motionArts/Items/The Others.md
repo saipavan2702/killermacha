@@ -15,5 +15,3 @@ tags:
 directors:
   - Alejandro Amenábar
 ---
-
-# The Others

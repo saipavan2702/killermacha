@@ -15,5 +15,3 @@ tags:
 directors:
   - Peter Jackson
 ---
-
-# The Hobbit: An Unexpected Journey

@@ -13,5 +13,3 @@ tags:
 directors:
   - Martin Brest
 ---
-
-# Scent of a Woman

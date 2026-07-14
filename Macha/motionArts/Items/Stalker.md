@@ -14,5 +14,3 @@ tags:
 directors:
   - Andrei Tarkovsky
 ---
-
-# Stalker

@@ -15,5 +15,3 @@ tags:
 directors:
   - Wes Anderson
 ---
-
-# The Darjeeling Limited

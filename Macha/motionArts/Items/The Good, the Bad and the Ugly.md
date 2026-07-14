@@ -13,5 +13,3 @@ tags:
 directors:
   - Sergio Leone
 ---
-
-# The Good, the Bad and the Ugly

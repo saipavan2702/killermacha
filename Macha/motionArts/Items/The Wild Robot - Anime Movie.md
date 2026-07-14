@@ -17,5 +17,3 @@ tags:
 directors:
   - Chris Sanders
 ---
-
-# The Wild Robot

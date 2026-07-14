@@ -16,5 +16,3 @@ tags:
 directors:
   - Brad Bird
 ---
-
-# Ratatouille

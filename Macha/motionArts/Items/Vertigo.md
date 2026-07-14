@@ -15,5 +15,3 @@ tags:
 directors:
   - Alfred Hitchcock
 ---
-
-# Vertigo

@@ -16,6 +16,3 @@ directors:
   - Josh Safdie
   - Benny Safdie
 ---
-
-# Uncut Gems
-

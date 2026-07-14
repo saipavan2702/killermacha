@@ -15,5 +15,3 @@ tags:
   - motion-art
   - movie
 ---
-
-# Transformers: Age of Extinction

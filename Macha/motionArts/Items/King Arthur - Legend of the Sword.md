@@ -15,5 +15,3 @@ tags:
   - motion-art
   - movie
 ---
-
-# King Arthur: Legend of the Sword

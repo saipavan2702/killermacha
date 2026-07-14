@@ -63,7 +63,5 @@ poster: ""
 tags:
 ${tagLines}
 ---
-
-# ${title}
 `;
 %>

@@ -17,5 +17,3 @@ tags:
 directors:
   - Jason Hreno
 ---
-
-# Wicked minds

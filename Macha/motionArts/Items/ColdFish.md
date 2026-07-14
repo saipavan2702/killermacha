@@ -16,6 +16,3 @@ tags:
   - motion-art
   - movie
 ---
-
-# ColdFish
-

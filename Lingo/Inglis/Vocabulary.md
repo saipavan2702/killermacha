@@ -1,3 +1,1 @@
-# Vocabulary
-
 **Impertinent** - Irrelevant, rude

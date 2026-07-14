@@ -15,5 +15,3 @@ tags:
 directors:
   - Coralie Fargeat
 ---
-
-# The Substance

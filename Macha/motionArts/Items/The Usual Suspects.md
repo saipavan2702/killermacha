@@ -15,5 +15,3 @@ tags:
 directors:
   - Bryan Singer
 ---
-
-# The Usual Suspects
