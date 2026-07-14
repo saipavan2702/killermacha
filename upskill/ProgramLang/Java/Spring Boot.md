@@ -1,8 +1,8 @@
-# Spring Boot
+Map: [[Upskill/ProgramLang/Java/Java|Java]]
 
 ## Bean vs Component
 
-`@Bean` is a method level annotation used by springboot  to add it to it's context registry. 
+`@Bean` is a method level annotation used by springboot  to add it to it's context registry.
 Objects that are managed by framework are called `Beans`.
 We generally use it under `@Configuration` annotation.
 
@@ -16,7 +16,7 @@ public class AppConfig {
 }
 ```
 
-Generally when spring starts up it will look for  annotations like `@Component`, `@Service`, `@Repository`, and `@Controller`. 
+Generally when spring starts up it will look for  annotations like `@Component`, `@Service`, `@Repository`, and `@Controller`.
 These are all special annotations of `@Component` and spring creates  an instance for each of them.
 
 But `@Bean` it's different. It doesn't  rely on scanning. It is created inside a configured class and when we run it, spring will create and register the bean.
@@ -42,7 +42,13 @@ Both `@Component` and `@Bean` result in Spring-managed beans, so their lifecycle
 
 However, because `@Bean` lets you write logic during bean creation, you can perform custom setup inside the method, which is not possible with `@Component `unless you use lifecycle annotations like `@PostConstruct`.
 
-Also 
+Also
 
 
-#java #springboot 
+
+## Related
+
+- [[Upskill/ProgramLang/Java/Inversion of Control|Inversion of Control]]
+- [[Upskill/ProgramLang/Java/Concurrency|Concurrency]]
+
+#java #springboot

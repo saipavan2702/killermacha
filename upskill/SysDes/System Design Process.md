@@ -1,7 +1,7 @@
-# System Design Process
-
 > [!summary]
 > A repeatable interview and architecture process: clarify requirements, estimate scale, divide the system, explain trade-offs, and validate operations.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## Step-by-Step Approach
 
@@ -146,7 +146,7 @@ const interviewDonts = [
 // Pattern library to remember
 
 const commonPatterns = {
-    
+
     'Read Heavy System': {
         solutions: [
             'Master-Slave architecture',
@@ -156,7 +156,7 @@ const commonPatterns = {
         ],
         examples: ['Social media feeds', 'News sites', 'E-commerce product catalogs']
     },
-    
+
     'Write Heavy System': {
         solutions: [
             'Database sharding',
@@ -166,7 +166,7 @@ const commonPatterns = {
         ],
         examples: ['Analytics', 'Logging systems', 'IoT data ingestion']
     },
-    
+
     'Low Latency Requirements': {
         solutions: [
             'In-memory databases (Redis)',
@@ -176,7 +176,7 @@ const commonPatterns = {
         ],
         examples: ['Gaming', 'Trading platforms', 'Real-time chat']
     },
-    
+
     'High Availability Required': {
         solutions: [
             'Multi-region deployment',
@@ -207,27 +207,31 @@ const commonPatterns = {
 
 >[!info]
 >### BackPressure
-This is a common pattern where a system needs to handle more requests than the receiving system can process in real-time. 
-In software engineering it is a mechanism where a consumer signals a producer to slow down data transmission when the system is overwhelmed. 
+This is a common pattern where a system needs to handle more requests than the receiving system can process in real-time.
+In software engineering it is a mechanism where a consumer signals a producer to slow down data transmission when the system is overwhelmed.
 This can be mitigated or tackled by doing intelligent buffer management.
 >
 >### Thundering Herd
-This occurs when multiple consumers try to access a resource at the same time from DB when cache/server gets expires/crashes. DB cannot handle such large requests coming at once. 
-This can be addressed by using 
->- cache stampede prevention 
+This occurs when multiple consumers try to access a resource at the same time from DB when cache/server gets expires/crashes. DB cannot handle such large requests coming at once.
+This can be addressed by using
+>- cache stampede prevention
 >- probabilistic early expiration
 >- request coalescing
 >
 >### Temporal Coupling
-This happens when two systems are dependent on each other in a way and things should happen in a specific order but nothing in the code enforces it. 
+This happens when two systems are dependent on each other in a way and things should happen in a specific order but nothing in the code enforces it.
 So we need to design API in such a way that it cannot call things out of order if called properly handled.
 >
 >### Essential Complexity vs. Accidental Complexity
-Essential Complexity is inherent to the problem. In Building payment system we handle failed transactions, retrying, reconciliation. 
-But Accidental Complexity is everything else sometimes you add code to the already existing 500-lines of code instead of refactoring it and optimising it. 
+Essential Complexity is inherent to the problem. In Building payment system we handle failed transactions, retrying, reconciliation.
+But Accidental Complexity is everything else sometimes you add code to the already existing 500-lines of code instead of refactoring it and optimising it.
 
 
 >[!tip]
 >
 >How data communication happens in different steps
 >![[Pasted image 20260601002039.png|713]]
+
+## Related
+
+- [[Upskill/SysDes/Case Studies/Designing Twitter|Designing Twitter]]

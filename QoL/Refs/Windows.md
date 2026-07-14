@@ -1,4 +1,4 @@
-# Windows
+Map: [[QoL/Resources|Resources]]
 
 ## Setups
 

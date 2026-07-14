@@ -1,4 +1,5 @@
-# Python Language Fundamentals
+Map: [[Upskill/ProgramLang/Python/Python|Python]]
+
 
 > [!summary]
 > Understand Python's evaluation and memory behavior before reaching for framework-level solutions.
@@ -78,7 +79,7 @@ def process_with_list(filename):
     """BAD: Loads entire file into memory"""
     with open(filename) as f:
         lines = f.readlines() # Memory spike!
-    
+
     for line in lines:
         process_line(line)
 
@@ -96,9 +97,13 @@ def compare_memory_usage(filename, num_lines=100000):
     # with open(filename) as f:
     #    lines = f.readlines()
     #    count = len(lines)
-    
+
     # Use generator (GOOD)
     count = 0
     for line in read_large_file(filename):
         count += 1
 ```
+
+## Related
+
+- [[Upskill/ProgramLang/Python/Application Structure|Application Structure]]

@@ -1,8 +1,6 @@
-# Tasks
-
 - [ ] HLD
 - [ ] LLD
-- [ ] Oracle DB 
+- [ ] Oracle DB
 - [ ] AWS basics
 - [ ] Golang
 - [ ] Spring Boot

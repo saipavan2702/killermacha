@@ -1,4 +1,5 @@
-# C++ Priority Queues
+Map: [[Upskill/ProgramLang/C++/C++|C++]]
+
 
 > [!summary]
 > Custom comparators control how C++ priority queues order compound values.
@@ -30,5 +31,11 @@ priority_queue<
     decltype(compare)
 > queue(compare);
 ```
+
+
+## Related
+
+- [[Upskill/ProgramLang/C++/Memory and Parameters|Memory and Parameters]]
+- [[Upskill/ProgramLang/Python vs C++ Performance|Python vs C++ Performance]]
 
 #cpp #data-structures

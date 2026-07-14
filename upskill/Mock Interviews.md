@@ -1,4 +1,4 @@
-# Mock Interviews
+Map: [[Upskill/Learning|Learning]]
 
 For every individual interview will be about 2-3hrs tentatively.
 The interview schema follows :-
@@ -13,7 +13,7 @@ Above mentioned timings are also tentative. If time not permits I may extend the
 
 *Keep in mind that interview will be hard and prepare accordingly, no mercy.*
 
- 
+
 
 DSA
 
@@ -40,13 +40,13 @@ CS Topics
 1. What is Database? Explain architectures? Normalisations?
 2. Increase throughput of database fetching?
 3. ACID properties? Indexing? Ensure transaction reliability?
-4. Explain OSI model significance? 
+4. Explain OSI model significance?
 5. How does information fetched upon entering url? Explain 3-way handshake?
 6. Networking devices from each layer?
 7. What is an Operating system?
 8. Scheduling algorithms
 9. Avoiding deadlocks
-10. Page fault? Semaphores? 
+10. Page fault? Semaphores?
 11. Virtual memory? Thrashing?
 
 
@@ -60,3 +60,7 @@ SQL
 6. Wildcard queries
 7. https://leetcode.com/problems/top-travellers/
 8. https://leetcode.com/problems/delete-duplicate-emails/description/
+
+## Related
+
+- [[Upskill/DSA/Practice Problems|Practice Problems]]

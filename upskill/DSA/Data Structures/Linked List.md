@@ -1,7 +1,7 @@
-# Linked List
-
 > [!summary]
 > Linked lists store values in nodes connected by pointers, making insertion and removal flexible while sacrificing random access.
+
+Map: [[Upskill/DSA/DSA|DSA]]
 
 Related: [[Upskill/DSA/Data Structures/XOR Linked List|XOR Linked List]]
 

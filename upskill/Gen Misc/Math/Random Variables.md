@@ -1,7 +1,7 @@
-# Random Variables
-
 > [!summary]
 > Random variables assign values to outcomes; expectation and probability distributions summarize how those values behave.
+
+Map: [[Upskill/Gen Misc/Math/Math|Math]]
 
 ## 7. Random Variables & Expected Value
 
@@ -52,3 +52,8 @@ A **Random Variable** translates random outcomes into numbers. **Expected Value 
 💡 **Tip:** If you can say "exactly," it's probably discrete. If you need "between X and Y," it's continuous.
 
 ---
+
+## Related
+
+- [[Upskill/Gen Misc/Math/Conditional Probability|Conditional Probability]]
+- [[Upskill/Gen Misc/Math/Recursive Probability|Recursive Probability]]

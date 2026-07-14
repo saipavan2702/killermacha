@@ -1,5 +1,3 @@
-# Ideas
-
 Projects
 https://github.com/perghosh/Data-oriented-design
 https://gitlab.com/users/avey.dev/projects
@@ -14,7 +12,7 @@ https://www.youtube.com/watch?v=9i1gQ7w2V24
 https://www.youtube.com/watch?v=NULWyn8Hqs8
 https://www.youtube.com/watch?v=3GJcskn5mAg
 
-## Projects 
+## Projects
 
 Gits
 https://github.com/afazio1/http-server-c/blob/main/src/main.c
@@ -41,4 +39,4 @@ https://github.com/mingodando
 > 13.  Develop food recipes using Food APIs
 > 14.  Develop real-time trains detection using real-time APIs
 
-#project #ref
+#project

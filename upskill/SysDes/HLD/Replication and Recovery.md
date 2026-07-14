@@ -1,7 +1,7 @@
-# Replication and Recovery
-
 > [!summary]
 > Replication, backups, and recovery objectives determine how a system survives failures and how much data it can afford to lose.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## Why Make Databases Redundant?
 
@@ -25,13 +25,13 @@ from datetime import datetime
 def daily_backup():
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     backup_name = f"backup_{timestamp}.sql"
-    
+
     # Create database snapshot
     os.system(f"pg_dump mydb > /backups/{backup_name}")
-    
+
     # Upload to S3
     os.system(f"aws s3 cp /backups/{backup_name} s3://my-backups/")
-    
+
     print(f"Backup completed: {backup_name}")
 
 # Schedule daily at 2 AM
@@ -47,10 +47,10 @@ while True:
 ```python
 def weekly_backup():
     timestamp = datetime.now().strftime("%Y%m%d")
-    
+
     # Full database export
     os.system(f"pg_dump -Fc mydb > /backups/weekly_{timestamp}.dump")
-    
+
     # Store in separate data center
     os.system(f"aws s3 cp /backups/weekly_{timestamp}.dump s3://backups-west/")
 
@@ -112,7 +112,7 @@ class DatabaseWithFailover {
             password: 'password',
             max: 20
         });
-        
+
         this.replica = new Pool({
             host: 'replica-db.example.com',
             port: 5432,
@@ -121,11 +121,11 @@ class DatabaseWithFailover {
             password: 'password',
             max: 20
         });
-        
+
         this.primaryHealthy = true;
         this.monitorPrimaryHealth();
     }
-    
+
     async monitorPrimaryHealth() {
         setInterval(async ()=> {
             try {
@@ -141,20 +141,20 @@ class DatabaseWithFailover {
             }
         }, 5000);  // Check every 5 seconds
     }
-    
+
     async promoteReplica() {
         console.log('🔄 Promoting replica to primary...');
         // In real scenario, trigger replica promotion command
         // pg_ctl promote -D /var/lib/postgresql/data
-        
+
         // Swap connections
         const temp = this.primary;
         this.primary = this.replica;
         this.replica = temp;
-        
+
         console.log('✅ Replica promoted to primary');
     }
-    
+
     async write(query, params) {
         // All writes go to primary
         try {
@@ -166,7 +166,7 @@ class DatabaseWithFailover {
             throw error;
         }
     }
-    
+
     async read(query, params) {
         // Read from replica if available (reduce primary load)
         try {
@@ -188,12 +188,12 @@ const db = new DatabaseWithFailover();
 // Write operations
 app.post('/users', async (req, res) => {
     const { name, email } = req.body;
-    
+
     const result = await db.write(
         'INSERT INTO users (name, email) VALUES ($1, $2) RETURNING *',
         [name, email]
     );
-    
+
     res.json(result.rows[0]);
 });
 
@@ -212,16 +212,16 @@ app.get('/users', async (req, res) => {
 // Primary waits for replica acknowledgment
 async function syncWrite(data) {
     const startTime = Date.now();
-    
+
     // Write to primary
     await primaryDB.write(data);
-    
+
     // Wait for replica to confirm
     await replicaDB.confirm(data);
-    
+
     const latency = Date.now() - startTime;
     console.log(`Write completed in ${latency}ms`);
-    
+
     return { status: 'success', latency };
 }
 
@@ -235,14 +235,14 @@ async function syncWrite(data) {
 // Primary doesn't wait for replica
 async function asyncWrite(data) {
     const startTime = Date.now();
-    
+
     // Write to primary
     await primaryDB.write(data);
-    
+
     // Return immediately
     const latency = Date.now() - startTime;
     console.log(`Write completed in ${latency}ms`);
-    
+
     // Replicate in background
     setImmediate(() => {
         replicaDB.write(data).catch(err => {
@@ -250,7 +250,7 @@ async function asyncWrite(data) {
             retryQueue.add(data);
         });
     });
-    
+
     return { status: 'success', latency };
 }
 
@@ -269,14 +269,14 @@ class MultiRegionDatabase {
             'ap-south': new Pool({ host: 'db-ap-south.example.com' })
         };
     }
-    
+
     async write(data) {
         // Write to primary region
         await this.regions['us-east'].query(
             'INSERT INTO users (name, email) VALUES ($1, $2)',
             [data.name, data.email]
         );
-        
+
         // Asynchronously replicate to other regions
         const replicationPromises = [
             this.regions['eu-west'].query(
@@ -288,7 +288,7 @@ class MultiRegionDatabase {
                 [data.name, data.email]
             )
         ];
-        
+
         // Don't wait for cross-region replication
         Promise.allSettled(replicationPromises).then(results => {
             results.forEach((result, index) => {
@@ -297,16 +297,16 @@ class MultiRegionDatabase {
                 }
             });
         });
-        
+
         return { status: 'success' };
     }
-    
+
     async read(userRegion) {
         // Read from nearest region for low latency
         const region = this.getClosestRegion(userRegion);
         return await this.regions[region].query('SELECT * FROM users');
     }
-    
+
     getClosestRegion(userRegion) {
         // Simple region mapping
         const regionMap = {
@@ -330,38 +330,38 @@ from datetime import datetime, timedelta
 class DatabaseBackupManager:
     def __init__(self):
         self.rds = boto3.client('rds')
-    
+
     def create_snapshot(self, db_instance_id):
         """Create manual snapshot"""
         snapshot_id = f"manual-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
-        
+
         response = self.rds.create_db_snapshot(
             DBSnapshotIdentifier=snapshot_id,
             DBInstanceIdentifier=db_instance_id
         )
-        
+
         print(f"Snapshot created: {snapshot_id}")
         return snapshot_id
-    
+
     def restore_to_point_in_time(self, source_db, target_db, restore_time):
         """Restore database to specific timestamp"""
-        
+
         response = self.rds.restore_db_instance_to_point_in_time(
             SourceDBInstanceIdentifier=source_db,
             TargetDBInstanceIdentifier=target_db,
             RestoreTime=restore_time,
             UseLatestRestorableTime=False
         )
-        
+
         print(f"Restoring to {restore_time}")
         return response
-    
+
     def list_available_backups(self, db_instance_id):
         """List all available snapshots"""
         snapshots = self.rds.describe_db_snapshots(
             DBInstanceIdentifier=db_instance_id
         )
-        
+
         for snapshot in snapshots['DBSnapshots']:
             print(f"Snapshot: {snapshot['DBSnapshotIdentifier']}")
             print(f"Created: {snapshot['SnapshotCreateTime']}")
@@ -393,45 +393,45 @@ class DisasterRecoveryOrchestrator {
         this.failover = 'us-west-2';
         this.activeRegion = this.primary;
     }
-    
+
     async detectDisaster() {
         const healthChecks = await Promise.allSettled([
             this.checkDatabaseHealth(this.primary),
             this.checkApplicationHealth(this.primary),
             this.checkNetworkHealth(this.primary)
         ]);
-        
+
         const failures = healthChecks.filter(r => r.status === 'rejected');
-        
+
         if (failures.length >= 2) {
             console.log('🚨 DISASTER DETECTED - Initiating failover');
             await this.initiateFailover();
         }
     }
-    
+
     async initiateFailover() {
         console.log('Step 1: Updating DNS to point to failover region');
         await this.updateDNS(this.failover);
-        
+
         console.log('Step 2: Promoting replica database in failover region');
         await this.promoteDatabase(this.failover);
-        
+
         console.log('Step 3: Redirecting traffic');
         await this.updateLoadBalancer(this.failover);
-        
+
         console.log('Step 4: Notifying team');
         await this.sendAlert('Failover completed to ' + this.failover);
-        
+
         this.activeRegion = this.failover;
-        
+
         console.log('✅ Failover complete - System operational in ' + this.failover);
     }
-    
+
     async checkDatabaseHealth(region) {
         const db = this.getDatabaseConnection(region);
         await db.query('SELECT 1');
     }
-    
+
     async updateDNS(targetRegion) {
         // Update Route53 DNS records
         const route53 = new AWS.Route53();
@@ -463,7 +463,7 @@ class BackupStrategy {
         this.RTO = rto;  // How quickly to recover (e.g., 1 hour)
         this.RPO = rpo;  // How much data loss acceptable (e.g., 5 minutes)
     }
-    
+
     getStrategy() {
         // RPO = 0 (zero data loss)
         if (this.RPO === 0) {
@@ -474,7 +474,7 @@ class BackupStrategy {
                 description: 'Synchronous replication to multiple regions'
             };
         }
-        
+
         // RPO < 5 minutes
         if (this.RPO < 5 * 60) {
             return {
@@ -484,7 +484,7 @@ class BackupStrategy {
                 cost: 'medium-high'
             };
         }
-        
+
         // RPO = 1 hour
         if (this.RPO === 60 * 60) {
             return {
@@ -493,7 +493,7 @@ class BackupStrategy {
                 cost: 'medium'
             };
         }
-        
+
         // RPO = 24 hours
         return {
             replication: 'none',
@@ -522,3 +522,8 @@ console.log(blogSystem.getStrategy());
 ```
 
 ---
+
+## Related
+
+- [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]
+- [[Upskill/SysDes/HLD/Database Scaling|Database Scaling]]

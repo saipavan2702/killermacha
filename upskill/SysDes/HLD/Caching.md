@@ -1,8 +1,6 @@
-# Caching
-
 Map: [[Upskill/SysDes/System Design|System Design]]
 
-Related: [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]] · [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]] · [[Upskill/SysDes/LLD/LRU and LFU Cache|LRU & LFU Cache]] · [[QoL/Refs/SysDes|SysDes Refs]]
+Related: [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]] · [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]] · [[Upskill/SysDes/LLD/LRU and LFU Cache|LRU & LFU Cache]] · [[Upskill/SysDes/System Design|System Design]]
 
 ## Caching with Redis {#caching}
 
@@ -195,11 +193,11 @@ async function getBlogsFromDB() {
 // Cache middleware
 async function cacheMiddleware(req, res, next) {
     const cacheKey = `blogs:all`;
-    
+
     try {
         // Try to get from cache
         const cachedData = await redis.get(cacheKey);
-        
+
         if (cachedData) {
             console.log('✅ Cache HIT');
             return res.json({
@@ -208,7 +206,7 @@ async function cacheMiddleware(req, res, next) {
                 responseTime: '20ms'
             });
         }
-        
+
         console.log('❌ Cache MISS');
         next(); // Proceed to route handler
     } catch (error) {
@@ -220,10 +218,10 @@ async function cacheMiddleware(req, res, next) {
 // GET /blogs route
 app.get('/blogs', cacheMiddleware, async (req, res) => {
     const blogs = await getBlogsFromDB();
-    
+
     // Store in cache with 24-hour expiry
     await redis.setex('blogs:all', 86400, JSON.stringify(blogs));
-    
+
     res.json({
         source: 'database',
         data: blogs,
@@ -235,11 +233,11 @@ app.get('/blogs', cacheMiddleware, async (req, res) => {
 app.post('/blogs', async (req, res) => {
     // Add blog to database (simulated)
     const newBlog = { id: 3, title: 'New Blog', content: 'New content' };
-    
+
     // Invalidate cache
     await redis.del('blogs:all');
     console.log('🗑️ Cache invalidated');
-    
+
     res.json({
         message: 'Blog created',
         data: newBlog

@@ -1,7 +1,7 @@
-# OpenID Connect
-
 > [!summary]
 > OpenID Connect adds a standard identity layer to OAuth 2.0 so a client can verify who authenticated and obtain agreed identity claims.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## Main Parties
 

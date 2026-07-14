@@ -1,7 +1,7 @@
-# Custom JWT and Redis Authentication
-
 > [!summary]
 > A custom JWT and Redis design issues tokens in your own service, checks active-token state on every request, and manually creates Spring Security authentication.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 > [!important]
 > This is a custom authentication architecture, not an SSO standard. It becomes SSO only when multiple applications deliberately trust the same custom identity service.
@@ -364,6 +364,11 @@ If every request must query Redis, an opaque random token may be simpler than a 
 With an external IdP, Spring's `oauth2ResourceServer(...jwt...)` filter validates signed tokens using the provider's public keys and fills the same `SecurityContextHolder`. It replaces the custom parsing and authentication filter. Redis is needed only if the design adds introspection, an allowlist, or a revocation denylist.
 
 See [[Single Sign-On]] for the complete comparison and [[Bearer Tokens]] for framework-managed API validation.
+
+
+## Related
+
+- [[Upskill/SysDes/HLD/API Build/Auth Methods/Single Sign-On|Single Sign-On]]
 
 #authentication #jwt
 

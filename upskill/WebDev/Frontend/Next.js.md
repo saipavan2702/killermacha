@@ -1,7 +1,7 @@
-# Next.js
-
 > [!summary]
 > Next.js organizes React applications around routing, server rendering, data fetching, caching, and deployment boundaries.
+
+Map: [[Upskill/WebDev/Web Development|Web Development]]
 
 In Next.js, every component is a Server Component by default. Add `"use client"` at the top when a component requires client-side state, effects, or browser APIs.
 
@@ -45,7 +45,7 @@ import items from '../../../data/items.json';
 export default function handler(req, res) {
   // Extract query parameters from URL
   const { search, page = 1, limit = 10, sort, filter } = req.query;
-  
+
   // Start with all items
   let filteredItems = items;
 
@@ -57,7 +57,7 @@ export default function handler(req, res) {
     );
   }
 
-  // 🏷️ FILTER FUNCTIONALITY  
+  // 🏷️ FILTER FUNCTIONALITY
   // Filter by categories: /api/items?filter=electronics,books
   if (filter) {
     const filters = filter.split(','); // Split comma-separated values
@@ -87,7 +87,7 @@ export default function handler(req, res) {
   res.status(200).json({
     data: paginatedItems,           // Current page items
     total: filteredItems.length,    // Total matching items
-    page: Number(page),             // Current page number  
+    page: Number(page),             // Current page number
     limit: Number(limit),           // Items per page
     totalPages: Math.ceil(filteredItems.length / limit) // Total pages
   });
@@ -120,7 +120,7 @@ export default function Home() {
     total: 0,
     totalPages: 0
   });
-  
+
   // Search and filter states
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -133,21 +133,21 @@ export default function Home() {
 
   const fetchItems = async () => {
     setLoading(true);
-    
+
     // Build query parameters
     const params = new URLSearchParams({
       page: pagination.page,
       limit: pagination.limit,
     });
-    
+
     if (searchTerm) params.append('search', searchTerm);
     if (selectedCategory) params.append('filter', selectedCategory);
     if (sortOption) params.append('sort', sortOption);
-    
+
     try {
       const response = await fetch(`/api/items?${params}`);
       const data = await response.json();
-      
+
       setItems(data.data);
       setPagination(prev => ({
         ...prev,
@@ -174,7 +174,7 @@ export default function Home() {
   return (
     <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
       <h1>Items Directory</h1>
-      
+
       {/* Search and Filter Controls */}
       <div style={{ marginBottom: '20px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
         <input
@@ -184,9 +184,9 @@ export default function Home() {
           onChange={(e) => setSearchTerm(e.target.value)}
           style={{ padding: '8px', minWidth: '200px' }}
         />
-        
-        <select 
-          value={selectedCategory} 
+
+        <select
+          value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
           style={{ padding: '8px' }}
         >
@@ -195,9 +195,9 @@ export default function Home() {
           <option value="fashion">Fashion</option>
           <option value="books">Books</option>
         </select>
-        
-        <select 
-          value={sortOption} 
+
+        <select
+          value={sortOption}
           onChange={(e) => setSortOption(e.target.value)}
           style={{ padding: '8px' }}
         >
@@ -207,7 +207,7 @@ export default function Home() {
           <option value="price:asc">Price Low-High</option>
           <option value="price:desc">Price High-Low</option>
         </select>
-        
+
         <button onClick={handleSearch} style={{ padding: '8px 16px' }}>
           Search
         </button>
@@ -219,14 +219,14 @@ export default function Home() {
       ) : (
         <>
           <p>Found {pagination.total} items</p>
-          
+
           {/* Items List */}
           <div style={{ display: 'grid', gap: '10px' }}>
             {items.map(item => (
-              <div key={item.id} style={{ 
-                border: '1px solid #ddd', 
-                padding: '15px', 
-                borderRadius: '5px' 
+              <div key={item.id} style={{
+                border: '1px solid #ddd',
+                padding: '15px',
+                borderRadius: '5px'
               }}>
                 <h3>{item.name}</h3>
                 <p>Category: {item.category}</p>
@@ -234,22 +234,22 @@ export default function Home() {
               </div>
             ))}
           </div>
-          
+
           {/* Pagination */}
           <div style={{ marginTop: '20px', textAlign: 'center' }}>
-            <button 
+            <button
               onClick={() => handlePageChange(pagination.page - 1)}
               disabled={pagination.page === 1}
               style={{ marginRight: '10px', padding: '5px 10px' }}
             >
               Previous
             </button>
-            
+
             <span>
               Page {pagination.page} of {pagination.totalPages}
             </span>
-            
-            <button 
+
+            <button
               onClick={() => handlePageChange(pagination.page + 1)}
               disabled={pagination.page === pagination.totalPages}
               style={{ marginLeft: '10px', padding: '5px 10px' }}
@@ -299,4 +299,10 @@ my-nextjs-project/
 
 
 
-#typescript 
+
+## Related
+
+- [[Upskill/WebDev/Frontend/React|React]]
+- [[Upskill/WebDev/Frontend/Redux|Redux]]
+
+#typescript

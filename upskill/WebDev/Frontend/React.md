@@ -1,9 +1,9 @@
-# React
-
 > [!summary]
 > React builds interfaces from components and state; predictable data flow and rendering boundaries keep those components understandable.
 
-React is an open source library. In which react.js is a [[Upskill/WebDev/Frontend/JavaScript|JavaScript]] framework to build frontend.
+Map: [[Upskill/WebDev/Web Development|Web Development]]
+
+React is an open-source library for building interfaces with [[Upskill/WebDev/Frontend/JavaScript/JavaScript|JavaScript]].
 
 [[Upskill/WebDev/Frontend/React Basics|React Basics]]
 Class component of react
@@ -31,7 +31,6 @@ export default function Header() {
 ```
 
 
-#typescript
 Functional Component with Typescript in React
 ``` tsx
 interface Props {}
@@ -40,14 +39,12 @@ const Title=({title, subtitle }: Props) =>{};
 type FC <P={}> = FunctionComponent<P>;
 ```
 
-#typescript 
 Class Components with TypeScript
 ```tsx
 interface Props {}
 class Title extends Component<Props>{};
 ```
 
-#typescript
 [[Upskill/WebDev/Frontend/TypeScript|TypeScript]]
 We use react types/ properties to define the variable/event type we are about to perform. For example `React.FormEvent`, `React.ChangeEvent<HTMLInputElement>`
 
@@ -73,12 +70,12 @@ React Profiler is used to identifying the performance bottlenecks in React appli
 One way is to use this via react dev tools and Profiler tab and we can record actions and observe the components behavior. Another is using Profiler API from React, we have to wrap the component by `<Profiler>` component and pass a callback func of `onRender`, it takes arguments of `{id,phase,actualTime,baseTime,startTime,commitTime}`.
 
 ```jsx 
-function onRender({values}){  
+function onRender({values}){
    console.log(values);
 }
 
-<Profiler id="App" onRender={onRender}>  
-	<App />  
+<Profiler id="App" onRender={onRender}>
+	<App />
 </Profiler>
 ```
 
@@ -88,35 +85,35 @@ If any component takes extra time rendering its components or, any large compone
 ---
 ## LWC Lifecycle Execution Order (Parent → Child)
 
-1. **Parent constructor**  
+1. **Parent constructor**
    - JavaScript creates the parent instance.
 
-2. **Parent connectedCallback()**  
-   - Parent is inserted into the DOM.  
+2. **Parent connectedCallback()**
+   - Parent is inserted into the DOM.
    - LWC starts rendering its template.
 
-3. **Child constructor**  
+3. **Child constructor**
    - While parsing the parent’s template, LWC encounters `<c-child>` and creates the child instance.
 
-4. **Child connectedCallback()**  
+4. **Child connectedCallback()**
    - Child is inserted into the DOM.
 
-5. **Child render()**  
+5. **Child render()**
    - Framework calls `render()` to build the child’s HTML.
 
-6. **Child renderedCallback()**  
-   - After child’s DOM is in place, this hook runs.  
+6. **Child renderedCallback()**
+   - After child’s DOM is in place, this hook runs.
    - ⚠️ This may run multiple times if reactive properties change.
 
-7. **Parent renderedCallback()**  
+7. **Parent renderedCallback()**
    - Only after **all children finish rendering**, the parent’s `renderedCallback()` executes.
 
 ## Key Takeaways
 
-- **Constructors** run first (parent → child).  
-- **connectedCallback** runs when inserted into DOM.  
-- **render() → renderedCallback** ensures DOM is ready.  
-- Parent’s `renderedCallback` always fires *after* all children’s rendering completes.  
+- **Constructors** run first (parent → child).
+- **connectedCallback** runs when inserted into DOM.
+- **render() → renderedCallback** ensures DOM is ready.
+- Parent’s `renderedCallback` always fires *after* all children’s rendering completes.
 
 ---
 ## `useMemo` Hook
@@ -328,13 +325,11 @@ export default App;
 
 ---
 
-#tips 
 - `npm run lint` to check linting errors in next/react.
 
 
 
 
-#tips 
 ## React utility libraries
 - react-compare-image
 - stripe
@@ -352,3 +347,9 @@ export default App;
 - react-spinners
 - react-dnd
 
+## Related
+
+- [[Upskill/WebDev/Frontend/React Basics|React Basics]]
+- [[Upskill/WebDev/Frontend/Next.js|Next.js]]
+
+#typescript

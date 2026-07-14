@@ -1,7 +1,7 @@
-# SQL
-
 > [!summary]
 > SQL notes covering querying, indexing, execution plans, and the trade-offs that make database access fast and reliable.
+
+Map: [[Upskill/CS Topics/Computer Science|Computer Science]]
 
 ## Basics
 
@@ -65,10 +65,10 @@ SELECT manager_id, MIN(salary) FROM employees WHERE manager_id IS NOT NULL GROUP
 > Running a `DELETE` statement without a `WHERE` clause in a production environment.
 > ```sql
 > DELETE FROM employees; -- Deletes EVERY record
-> 
+>
 > ```
-> 
-> 
+>
+>
 
 > [!CHECK] Best Practice
 > Always wrap destructive operations in a **Transaction** to verify the row count before finalizing.
@@ -80,29 +80,29 @@ SELECT manager_id, MIN(salary) FROM employees WHERE manager_id IS NOT NULL GROUP
 > -- If safe: COMMIT;
 > -- If error: ROLLBACK;
 > ```
-> 
+>
 
 > [!ERROR] Mistake
 > Using functions on indexed columns, which prevents the database from using the index (Index Suppression).
 > ```sql
 > -- ❌ SLOW: Index cannot be used
-> SELECT * FROM orders 
-> WHERE YEAR(order_date) = 2025; 
-> 
+> SELECT * FROM orders
+> WHERE YEAR(order_date) = 2025;
+>
 > ```
-> 
-> 
+>
+>
 
 > [!SUCCESS] Best Practice
 > Keep the indexed column "bare" so the query engine can perform an **Index Seek**.
 > ```sql
 > -- ✅ FAST: Index Seek enabled
-> SELECT * FROM orders 
+> SELECT * FROM orders
 > WHERE order_date >= '2025-01-01' AND order_date < '2026-01-01';
-> 
+>
 > ```
-> 
-> 
+>
+>
 
 > [!WARNING] Mistake
 > **Over-indexing**: Adding too many indexes to optimize a single query, which inadvertently slows down `INSERT`, `UPDATE`, and `DELETE` operations across the database.
@@ -112,20 +112,20 @@ SELECT manager_id, MIN(salary) FROM employees WHERE manager_id IS NOT NULL GROUP
 > * `JOIN` conditions
 > * `WHERE` filters
 > * `ORDER BY` clauses
-> 
-> 
+>
+>
 
 > [!TIP] The Solution
 > Repeatedly Googling `LEFT` vs `RIGHT` joins. The best practice is to stick to **LEFT JOIN** consistently to keep the mental model of "Left table = Primary source".
 
 
 - **Notes**
-    
-    % Represents zero or more characters  
-    _ Represents a single character  
-    [] Represents any single character within the brackets 
-    ^ Represents any character not in the brackets 
-    {} Represents any escaped character 
+
+    % Represents zero or more characters
+    _ Represents a single character
+    [] Represents any single character within the brackets
+    ^ Represents any character not in the brackets
+    {} Represents any escaped character
 
 
 ## Optimization Workflow
@@ -176,10 +176,10 @@ Here an Index is a separate data structure that maps users email values directly
 ```sql
 -- without index: sequential scan, reads every row
 SELECT * FROM users WHERE email = 'ali@example.com';
- 
+
 -- create the index
 CREATE INDEX idx_users_email ON users(email);
- 
+
 -- same query now: index lookup, jumps directly to the row
 SELECT * FROM users WHERE email = 'ali@example.com';
 
@@ -195,10 +195,10 @@ Before Indexing we need to ask ourselves 4 questions:
 ```sql
 -- login
 SELECT id, password_hash FROM users WHERE email = $1;
- 
+
 -- duplicate check on signup
 SELECT id FROM users WHERE email = $1;
- 
+
 -- password reset
 SELECT id, reset_token FROM users WHERE email = $1;
 ```
@@ -215,11 +215,11 @@ Compare this to a low-cardinality column like `is_active` (boolean). Half the ta
 
 ### Is the table large enough to benefit from an index?
 
-At 1,000 rows a sequential scan is fast. 
-At 1,000,000 rows it becomes a problem. 
+At 1,000 rows a sequential scan is fast.
+At 1,000,000 rows it becomes a problem.
 At 10,000,000 rows it is a serious problem.
 
-The rule of thumb: tables under ~10,000 rows rarely need manual indexes beyond primary key and unique constraints. 
+The rule of thumb: tables under ~10,000 rows rarely need manual indexes beyond primary key and unique constraints.
 Tables over 100,000 rows where slow queries exist — run `EXPLAIN ANALYZE` and look.
 
 
@@ -273,7 +273,7 @@ ORDER BY pg_relation_size(indexrelid) DESC;
 
 ### Other factors
 
-Find unused indexes and remove them. Make sure before measuring the DB & Server has been running long enough for the stats to be meaningful. 
+Find unused indexes and remove them. Make sure before measuring the DB & Server has been running long enough for the stats to be meaningful.
 ```sql
 -- check when stats were last reset
 SELECT stats_reset FROM pg_stat_bgwriter;
@@ -285,7 +285,7 @@ Keep the index set clean. Rather than redundant indexes on different columns we 
 -- bad: two separate indexes
 CREATE INDEX idx_users_status ON users(status);
 CREATE INDEX idx_users_created ON users(created_at);
- 
+
 -- better: one composite index that covers the combined filter
 CREATE INDEX idx_users_status_created ON users(status, created_at);
 ```
@@ -312,10 +312,15 @@ EXPLAIN ANALYZE the slow query
 
 
 1. How to clean data in SQL?
-    -  Missing values - use coalesce() to replace null 
-    -  Remove Duplicates - use DISTINCT 
-    -  Standardise formats - making all values uppercase or lowercase 
+    -  Missing values - use coalesce() to replace null
+    -  Remove Duplicates - use DISTINCT
+    -  Standardise formats - making all values uppercase or lowercase
     -  Extra white spaces removal
+
+
+## Related
+
+- [[Upskill/SysDes/HLD/SQL vs NoSQL|SQL vs NoSQL]]
 
 #sql #databases
 

@@ -1,4 +1,4 @@
-# Typing
+Map: [[QoL/Resources|Resources]]
 
 ## Tools
 

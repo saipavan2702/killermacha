@@ -1,7 +1,7 @@
-# Basic Authentication
-
 > [!summary]
 > Basic Auth sends a username and password with every request. It is simple, but safe only over HTTPS and best limited to controlled tools.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## How It Works
 

@@ -1,4 +1,5 @@
-# Editing Text in Vim
+Map: [[Upskill/Linux/Vim/Vim|Vim]]
+
 
 > [!summary]
 > Combine operators, motions, counts, repetition, and visual selections instead of treating editing as isolated shortcuts.
@@ -40,8 +41,8 @@
 
 ## 🔁 Number Manipulation
 
-- `Ctrl + a` → Increment number under cursor  
-- `Ctrl + x` → Decrement number  
+- `Ctrl + a` → Increment number under cursor
+- `Ctrl + x` → Decrement number
 - `g Ctrl + a` → Increment all selected numbers (visually)
 
 **Bonus:**
@@ -89,9 +90,9 @@ Esc → Apply to all selected lines
 
 Use the `:m` command to move lines:
 
-- `:m +1` — move line down by 1  
-- `:m -2` — move line up by 2  
-- `:m 3` — move line **after** line 3  
+- `:m +1` — move line down by 1
+- `:m -2` — move line up by 2
+- `:m 3` — move line **after** line 3
 
 **Steps:**
 
@@ -142,3 +143,8 @@ Will suggest:
   - `Ctrl+x Ctrl+n` — Keyword completion (current file)
 
 ---
+
+## Related
+
+- [[Upskill/Linux/Vim/Navigation and Selection|Navigation and Selection]]
+- [[Upskill/Linux/Vim/Search and Substitution|Search and Substitution]]

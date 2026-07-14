@@ -1,7 +1,7 @@
-# Database Scaling
-
 > [!summary]
 > Scale databases through indexing, partitioning, replication, multi-primary setups, and sharding based on the actual bottleneck.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 Scale **step-by-step** based on your actual needs. Don't over-engineer!
 
@@ -104,10 +104,10 @@ from North)            from South)
 def resolve_conflict(data1, data2):
     # Option 1: Last write wins
     return data1 if data1.timestamp > data2.timestamp else data2
-    
+
     # Option 2: Concatenate
     return data1 + " & " + data2
-    
+
     # Option 3: Accept both as separate records
     return [data1, data2]
 ```
@@ -124,3 +124,9 @@ Moved to [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]].
 4. **Extreme read-heavy** → Sharding + Master-Slave per shard
 
 ---
+
+## Related
+
+- [[Upskill/SysDes/HLD/SQL vs NoSQL|SQL vs NoSQL]]
+- [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]]
+- [[Upskill/SysDes/HLD/Replication and Recovery|Replication and Recovery]]

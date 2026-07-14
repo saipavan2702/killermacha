@@ -1,7 +1,7 @@
-# JSON Web Tokens
-
 > [!summary]
 > JWT is a compact format for signed or encrypted claims. It is a token format, not an authentication method or complete login protocol.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## Structure
 

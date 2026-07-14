@@ -1,5 +1,3 @@
-# Learning
-
 > [!summary]
 > Topic maps for computer science, programming, system design, mathematics, and technical practice.
 
@@ -7,18 +5,29 @@
 
 - [[Upskill/DSA/DSA|DSA]]
 - [[Upskill/SysDes/System Design|System Design]]
+- [[Upskill/CS Topics/Computer Science|Computer Science]]
+- [[Upskill/WebDev/Web Development|Web Development]]
+- [[Upskill/Linux/Linux|Linux and Tools]]
+- [[Upskill/Gen Misc/Math/Math|Mathematics]]
+
+## Programming Languages
+
 - [[Upskill/ProgramLang/Golang/Go|Go]]
 - [[Upskill/ProgramLang/Java/Java|Java]]
 - [[Upskill/ProgramLang/Python/Python|Python]]
+- [[Upskill/ProgramLang/C++/C++|C++]]
+
+## Practice and Review
+
+- [[Upskill/DSA/Practice Problems|DSA Practice Problems]]
+- [[Upskill/Mock Interviews|Mock Interviews]]
+- [[Upskill/Linux/Git/Git|Git]]
 - [[Upskill/Linux/Vim/Vim|Vim]]
 
-## Current Maps
+## Related
 
-- [[Upskill/DSA/Data Structures/Tree|Tree]]
-- [[Upskill/DSA/Data Structures/Segment Tree|Segment Tree]]
-- [[Upskill/DSA/Algorithms/Binary Search|Binary Search]]
-- [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]]
-- [[Upskill/Gen Misc/Math/Math|Math]]
+- [[QoL/Note System|Note System]]
+- [[QoL/Refs/Developer Resources|Developer Resources]]
 
 ## Recently Updated
 

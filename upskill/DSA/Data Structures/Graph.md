@@ -1,15 +1,15 @@
-# Graph
-
 > [!summary]
 > Graph problems become manageable after identifying vertices, edges, traversal state, and whether direction, weights, or cycles matter.
+
+Map: [[Upskill/DSA/DSA|DSA]]
 
 Related: [[Upskill/DSA/Data Structures/Tree|Tree]] · [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]]
 
 ## Bipartite Graph
 
-Used in whether we can colour in a way that no two adjacent nodes will have same colour or in other words making the tree into two subsets.  
+Used in whether we can colour in a way that no two adjacent nodes will have same colour or in other words making the tree into two subsets.
 We can use dfs/bfs in finding whether it is possible or not.
- 
+
 ```cpp
 #include <vector>
 using namespace std;
@@ -45,28 +45,28 @@ bool isBipartite(vector<vector<int>>& T) {
 ```
 ## Disjoint Set Union (Union-Find)
 ```cpp
-int find(int x, int P[]) {  
-if(P[x]==-1)  
+int find(int x, int P[]) {
+if(P[x]==-1)
 return x;
- 
-return find(P[x],P);  
+
+return find(P[x],P);
 }
- 
-void union(int u, int v, int P[]) {  
-int a=find(u, P);  
-int b=find(v, P);   if(a!=b)  
-P[a]=b;  
-}   bool isCycle(int V, vector\<int\>&adj[]) {  
-int P[V];  
+
+void union(int u, int v, int P[]) {
+int a=find(u, P);
+int b=find(v, P);   if(a!=b)
+P[a]=b;
+}   bool isCycle(int V, vector\<int\>&adj[]) {
+int P[V];
 memset(P,-1,sizeof(P));
- 
-for(int i=0;i\<V;i++) {  
-for(int e:adj[i]) {  
-if(find(e)==find(i) && i\<e)  
-return 1;   union(i,e,P);  
-}  
-}  
-return 0;  
+
+for(int i=0;i\<V;i++) {
+for(int e:adj[i]) {
+if(find(e)==find(i) && i\<e)
+return 1;   union(i,e,P);
+}
+}
+return 0;
 }
 ```
 
@@ -102,7 +102,7 @@ vector<int> dijkstra(int V, vector<vector<vector<int>>>& adj, int S) {
                 // If a better path is found, update the set and distance
                 if (dist[neighbor] != INT_MAX)
                     st.erase({dist[neighbor], neighbor});
-                
+
                 dist[neighbor] = d + weight;
                 st.insert({dist[neighbor], neighbor});
             }
@@ -112,11 +112,11 @@ vector<int> dijkstra(int V, vector<vector<vector<int>>>& adj, int S) {
     return dist;
 }
 ```
- 
+
 ## Bellman-Ford Algorithm
 
-First take every node at inf distance from source.  
-Now iterate V-1 times to relax or go through every node.  
+First take every node at inf distance from source.
+Now iterate V-1 times to relax or go through every node.
 Observe -ve cycle detection.
 
 ```cpp
@@ -163,7 +163,7 @@ We calculate indegrees for every node and we push the nodes having indegree as 0
 ## Practice Examples
 
 - ![[Exported image 20250529160058-0.png|700]]
-- We use simple bfs with distance array 
+- We use simple bfs with distance array
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -252,7 +252,7 @@ vector<int> topoSort(int V, vector<int> adj[]) {
 ```
 
 - ![[Exported image 20250529160101-1.png|700]]
-- We use union find to solve this problem 
+- We use union find to solve this problem
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -300,9 +300,9 @@ int main() {
     return 0;
 }
 ```
-              
+
 - ![[Exported image 20250529160104-2.png|700]]
-- The logic is if 1-\>n have shortest distance then n-\>node and 1-\>node should sum up to shortest distance. 
+- The logic is if 1-\>n have shortest distance then n-\>node and 1-\>node should sum up to shortest distance.
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -369,7 +369,7 @@ int main() {
 ```
 
 - ![[Exported image 20250529160106-3.png|700]]
-- We use 3D dp to solve this problem in an optimised way 
+- We use 3D dp to solve this problem in an optimised way
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -449,4 +449,5 @@ int main() {
     return 0;
 }
 ```
+
 #dsa #graph

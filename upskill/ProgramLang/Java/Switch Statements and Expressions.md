@@ -1,4 +1,5 @@
-# Java Switch Statements and Expressions
+Map: [[Upskill/ProgramLang/Java/Java|Java]]
+
 
 > [!summary]
 > Modern switch expressions return values and prevent accidental fall-through; traditional statements remain useful for imperative control flow.
@@ -186,3 +187,8 @@ System.out.println(result); // Output: Happy Tuesday
 4. **Expressions must be exhaustive** (all cases covered)
 
 ---
+
+## Related
+
+- [[Upskill/ProgramLang/Java/Java Fundamentals|Java Fundamentals]]
+- [[Upskill/ProgramLang/Java/Collections and Type Relationships|Collections and Type Relationships]]

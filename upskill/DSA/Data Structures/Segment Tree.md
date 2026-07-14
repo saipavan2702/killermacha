@@ -1,13 +1,13 @@
-# Segment Tree
-
 > [!summary]
 > Segment trees answer range queries and updates in logarithmic time by storing summaries over recursively divided intervals.
 
+Map: [[Upskill/DSA/DSA|DSA]]
+
 Related: [[Upskill/DSA/Data Structures/Tree|Tree]] · [[Upskill/DSA/Algorithms/Binary Search|Binary Search]] · [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]]
 
-We use this to do range sum queries.  
+We use this to do range sum queries.
 It can be done with array or we can build tree using class data types.
- 
+
 ## Pointer-Based Range Sum
 
 ```cpp
@@ -145,9 +145,9 @@ void update(int node, int start, int end, int idx, int val)
 int query(int node, int start, int end, int l, int r)
 {
     if(r < start or end < l) return 0;
-    
+
     if(l <= start and end <= r) return tree[node];
-    
+
     int mid = (start + end) / 2;
     int p1 = query(2*node, start, mid, l, r);
     int p2 = query(2*node+1, mid+1, end, l, r);
@@ -158,7 +158,7 @@ int query(int node, int start, int end, int l, int r)
 int main(){
 	int n;cin>>n;
 	A.resize(n);
-	tree.resize(4 * n); 
+	tree.resize(4 * n);
 	for(int &i:A)cin>>i;
 
 	build(1,0,n-1); //since in query we are using 1-indexing
@@ -166,7 +166,7 @@ int main(){
     update(1, 0, n-1, 2, 5);
 	query(1, 0, n-1, 1, 3);
 
-	return 0;	
+	return 0;
 }
 
 ```
@@ -187,7 +187,7 @@ For this
 Segment Tree Beats extends a segment tree for updates that ordinary lazy propagation cannot handle efficiently.
 
 for, breakCondition - if a number is less than x then no need to traverse. (max[seg]<x)
-	 tagCondition - 
+	 tagCondition -
 
 
 */
@@ -197,7 +197,7 @@ using namespace std;
 
 vector<int> A;
 vector<int> tree;
-vector<int> max_tree;  
+vector<int> max_tree;
 
 void build(int node, int start, int end) {
     if(start == end) {
@@ -214,18 +214,18 @@ void build(int node, int start, int end) {
 
 void range_mod(int node, int start, int end, int l, int r, int mod) {
     if(max_tree[node] < mod) return;
-    
+
     if(start == end) {
         A[start] %= mod;
         tree[node] = A[start];
         max_tree[node] = A[start];
         return;
     }
-    
+
     int mid = (start + end) / 2;
     if(l <= mid) range_mod(2*node + 1, start, mid, l, r, mod);
     if(r > mid) range_mod(2*node + 2, mid+1, end, l, r, mod);
-    
+
     tree[node] = tree[2*node + 1] + tree[2*node + 2];
     max_tree[node] = max(max_tree[2*node + 1], max_tree[2*node + 2]);
 }
@@ -236,7 +236,7 @@ void updateFromChildren(int v) {
 	tree[v].sum = tree[2 * v].sum + tree[2 * v + 1].sum;
 	tree[v].max = max(tree[2 * v].max, tree[2 * v + 1].max);
 }
-    
+
 void updateModEq(int v, int l, int r, int ql, int qr, int val) {
 	if (qr <= l || r <= ql || tree[v].max < val) {
 		return;
@@ -257,12 +257,12 @@ int main() {
     A.resize(n);
     tree.resize(4*n+1);
     max_tree.resize(4*n+1);
-    
+
     for(int i = 0; i < n; i++) cin >> A[i];
     build(0, 0, n-1);
-    
+
     range_mod(0, 0, n-1, 1, 4, 3);
-       
+
     return 0;
 }
 
@@ -275,13 +275,13 @@ int main() {
 #include <bits/stdc++.h>
 using namespace std;
 
-const int N = 1e5;  
-int tree[4 * N];    
-int lazy[4 * N];    
+const int N = 1e5;
+int tree[4 * N];
+int lazy[4 * N];
 
 void build(int node, int start, int end) {
     if (start == end) {
-        tree[node] = 0; 
+        tree[node] = 0;
     } else {
         int mid = (start + end) / 2;
         build(2 * node, start, mid);
@@ -299,7 +299,7 @@ void propagate(int node, int start, int end) {
             lazy[2 * node + 1] += lazy[node];
         }
 
-        lazy[node] = 0;  
+        lazy[node] = 0;
     }
 }
 
@@ -307,7 +307,7 @@ void update(int node, int start, int end, int l, int r, int val) {
     propagate(node, start, end);
 
     if (r < start || end < l)
-        return;  
+        return;
 
     if (l <= start && end <= r) {
         lazy[node] += val;
@@ -325,10 +325,10 @@ int query(int node, int start, int end, int l, int r) {
     propagate(node, start, end);
 
     if (r < start || end < l)
-        return 0;  
+        return 0;
 
     if (l <= start && end <= r)
-        return tree[node];  
+        return tree[node];
 
     int mid = (start + end) / 2;
     int sum1 = query(2 * node, start, mid, l, r);
@@ -337,10 +337,10 @@ int query(int node, int start, int end, int l, int r) {
 }
 
 int main() {
-    int n = 10; 
+    int n = 10;
     build(1, 0, n - 1);
-    update(1, 0, n - 1, 0, 3, 5); 
-    cout << query(1, 0, n - 1, 2, 5);   
+    update(1, 0, n - 1, 0, 3, 5);
+    cout << query(1, 0, n - 1, 2, 5);
 
     return 0;
 }

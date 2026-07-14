@@ -1,5 +1,3 @@
-# Resources
-
 > [!summary]
 > Tools, configurations, ideas, and broad reference collections that support the rest of the vault.
 
@@ -13,9 +11,10 @@
 ## Tech References
 
 - [[QoL/Refs/Obsidian|Obsidian]]
-- [[QoL/Refs/Dev|Dev]]
-- [[QoL/Refs/SysDes|SysDes]]
-- [[QoL/Refs/DSA|DSA]]
+- [[QoL/Refs/Developer Resources|Developer Resources]]
+- [[Upskill/CS Topics/Computer Science|Computer Science]]
+- [[Upskill/DSA/DSA|DSA]]
+- [[Upskill/SysDes/System Design|System Design]]
 
 ## System References
 
@@ -30,6 +29,11 @@
 - [[Upskill/Gen Misc/Math/Math|Math]]
 - [[QoL/Refs/General Resources|General Resources]]
 - [[QoL/Refs/Piracy|Piracy]]
+
+## Related
+
+- [[Home|Home]]
+- [[Upskill/Learning|Learning]]
 
 ## Recently Updated
 

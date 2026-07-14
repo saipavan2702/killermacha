@@ -1,7 +1,7 @@
-# Cache-Friendly Loops
-
 > [!summary]
 > Loop order affects spatial locality: traversing contiguous memory usually matters more than the surface shape of the algorithm.
+
+Map: [[DSA]]
 
 ✅ Best (IKJ order @ ~110-200ms):
 ```cpp
@@ -45,7 +45,7 @@ The core operation:
 
 Why IKJ is fastest:
 ```cpp
-for (i...) 
+for (i...)
     for (k...)
         for (j...)  // ← INNERMOST
             C[i][j] += A[i][k] * B[k][j]
@@ -68,6 +68,10 @@ C[i][j]: i increments → jumps by entire row ❌
 A[i][k]: i increments → jumps by entire row ❌
 All three arrays accessed poorly!
 ```
+
+
+
+## Related
 
 
 #dsa

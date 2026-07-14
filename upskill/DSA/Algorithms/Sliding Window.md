@@ -1,7 +1,7 @@
-# Sliding Window
-
 > [!summary]
 > Sliding window maintains a valid contiguous range while moving its left and right boundaries, often reducing nested scans to linear time.
+
+Map: [[Upskill/DSA/DSA|DSA]]
 
 ## Template
 
@@ -10,10 +10,10 @@ The standard template uses two pointers to control the current window.
 ```cpp
 int function(){
 	int i=0,j=0,ans=0;
-	
+
 	for (;j<N;++j) {
 	    for (;invalid();++i) {}
-	    ans=max(ans, j-i+1); 
+	    ans=max(ans, j-i+1);
 	}
 	return ans;
 }
@@ -37,5 +37,11 @@ public:
     }
 };
 ```
+
+
+## Related
+
+- [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]]
+- [[Upskill/DSA/Algorithms/Binary Search|Binary Search]]
 
 #dsa #sliding-window

@@ -1,4 +1,4 @@
-# Behavioral
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ### 1. Chain of Responsibility
 **Purpose**: Pass request through chain of handlers.
@@ -17,9 +17,9 @@ abstract class Handler {
 **Purpose**: Encapsulate requests as objects.
 **Example**: Remote control with undo/redo
 ```java
-interface Command { 
-    void execute(); 
-    void undo(); 
+interface Command {
+    void execute();
+    void undo();
 }
 class RemoteControl {
     Command command;
@@ -181,5 +181,11 @@ class TaxCalculator implements Visitor {
 ```
 
 ---
+
+
+## Related
+
+- [[Upskill/SysDes/LLD/Design Patterns/Structural|Structural]]
+- [[Upskill/SysDes/LLD/Design Patterns/Architectural|Architectural]]
 
 #sysdes #design-patterns

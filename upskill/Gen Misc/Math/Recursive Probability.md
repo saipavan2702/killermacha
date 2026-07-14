@@ -1,7 +1,7 @@
-# Recursive Probability
-
 > [!summary]
 > Recursive probability defines an expected result in terms of returning to the same state after an incomplete attempt.
+
+Map: [[Upskill/Gen Misc/Math/Math|Math]]
 
 ## 11. Recursive Probability
 
@@ -36,3 +36,7 @@ A shortcut for **infinite sequences** where the answer depends on itself. Set up
 > Solving: $E = 6$ flips expected to get HH in a row.
 
 *💡 General Study Tip: For each topic, try to create your own example — change the numbers or context. If you can make up a problem and solve it, you truly understand the concept.*
+
+## Related
+
+- [[Upskill/Gen Misc/Math/Random Variables|Random Variables]]

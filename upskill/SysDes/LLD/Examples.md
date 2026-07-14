@@ -1,4 +1,4 @@
-# Examples
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 1. **Parking Lot** — multi-floor, 2-wheelers and 4-wheelers
 2. **Text Editor with Cursor** — cursor movement, line reading, insert/delete
@@ -9,6 +9,11 @@
 7. **Notification / Pub-Sub System** — single FIFO queue, multiple publishers/subscribers, Observer pattern
 8. **Elevator System** — Moving Up / Moving Down / Idle states using the State pattern
 
+## Related
+
+- [[Upskill/SysDes/LLD/Design Patterns/Design Patterns|Design Patterns]]
+
+
 ---
 
 ## References
@@ -17,4 +22,3 @@
 - [Awesome Low Level Design](https://github.com/ashishps1/awesome-low-level-design) - LLD resource collection.
 - [Cracking Walnuts](https://crackingwalnuts.com/) - LLD practice.
 - [fiveyearsdev](https://fiveyearsdev.space/) - LLD/system design practice.
-

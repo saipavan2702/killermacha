@@ -1,8 +1,6 @@
-# Message Queues
-
 Map: [[Upskill/SysDes/System Design|System Design]]
 
-Related: [[Upskill/SysDes/HLD/Rate Limiting|Rate Limiting]] · [[Upskill/SysDes/HLD/Caching|Caching]] · [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]] · [[QoL/Refs/SysDes|SysDes Refs]]
+Related: [[Upskill/SysDes/HLD/Rate Limiting|Rate Limiting]] · [[Upskill/SysDes/HLD/Caching|Caching]] · [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]] · [[Upskill/SysDes/System Design|System Design]]
 
 ## Message Brokers & Kafka {#message-brokers}
 
@@ -14,12 +12,12 @@ Related: [[Upskill/SysDes/HLD/Rate Limiting|Rate Limiting]] · [[Upskill/SysDes/
 // Client waits for complete response
 app.post('/process-video', async (req, res) => {
     const video = req.body.video;
-    
+
     // This takes 10 minutes!
     await transcodeVideo(video);  // Client waits...
     await generateThumbnail(video);  // Still waiting...
     await extractAudio(video);  // Still waiting...
-    
+
     res.json({ message: 'Done!' });  // Finally responds after 10 mins
 });
 
@@ -32,15 +30,15 @@ app.post('/process-video', async (req, res) => {
 // Client gets immediate response
 app.post('/process-video', async (req, res) => {
     const video = req.body.video;
-    
+
     // Push task to message queue
     await messageQueue.publish('video-processing', {
         videoId: video.id,
         userId: req.user.id
     });
-    
+
     // Immediate response
-    res.json({ 
+    res.json({
         message: 'Video processing started',
         status: 'pending'
     });
@@ -53,7 +51,7 @@ messageQueue.subscribe('video-processing', async (message) => {
     await transcodeVideo(video);
     await generateThumbnail(video);
     await extractAudio(video);
-    
+
     // Notify user via email or push notification
     await notifyUser(message.userId, 'Processing complete!');
 });
@@ -168,17 +166,17 @@ kafka.subscribe('video-uploaded', 'metadata-group', async (message) => {
 ✅ Use Message Broker when:
 - Task is non-critical (can be delayed)
   Example: Sending emails, generating PDFs
-  
+
 - Task takes long time
   Example: Video processing, ML model training
-  
+
 - Need to decouple services
   Example: Order service → Payment service
 
 ❌ Use REST API when:
 - Need immediate response
   Example: User login, search queries
-  
+
 - Synchronous flow required
   Example: Payment confirmation before order completion
 ```
@@ -198,7 +196,7 @@ kafka.subscribe('video-uploaded', 'metadata-group', async (message) => {
 // Solution: Write to Kafka (high throughput)
 setInterval(async () => {
     const driverLocations = await getAllDriverLocations();
-    
+
     driverLocations.forEach(location => {
         kafka.produce('driver-locations', location);
     });
@@ -293,7 +291,7 @@ await producer.connect();
 await producer.send({
     topic: 'video-uploaded',
     messages: [
-        { 
+        {
             key: 'video-123',  // Used for partitioning
             value: JSON.stringify({
                 videoId: '123',

@@ -1,4 +1,4 @@
-# Piracy
+Map: [[QoL/Resources|Resources]]
 
 ## Books
 
@@ -11,4 +11,4 @@
 
 ## Indexes
 
-- https://fmhy.net/
+- [FMHY](https://fmhy.net/) - Community-maintained media and software index.

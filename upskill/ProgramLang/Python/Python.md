@@ -1,7 +1,7 @@
-# Python
-
 > [!summary]
 > A map of Python language behavior and practical patterns for reliable scripts and services.
+
+Map: [[Upskill/Learning|Learning]]
 
 ## Topics
 
@@ -43,5 +43,7 @@
 ## Related
 
 - [[Upskill/SysDes/LLD/Design Patterns/Design Patterns|Design Patterns]]
+- [[Upskill/ProgramLang/Golang/Go|Go]]
+- [[Upskill/ProgramLang/Java/Java|Java]]
 
-#lang #python
+#python

@@ -1,7 +1,7 @@
-# Bucket Sort
-
 > [!summary]
 > Bucket sort distributes values into ranges, sorts each range, and concatenates the buckets.
+
+Map: [[Upskill/DSA/DSA|DSA]]
 
 ## Implementations
 
@@ -10,7 +10,7 @@
 #include <iostream>
 using namespace std;
 void bucketsort(int a[], int n){ // function to implement bucket sort
-   int max = a[0]; 
+   int max = a[0];
    for (int i = 1; i < n; i++)
       if (a[i] > max)
          max = a[i];
@@ -55,7 +55,7 @@ void bucketSort(vector<int>& nums) {
     int l = *max_element(nums.begin(), nums.end());
     int diff = l - s;
 
-    if (diff == 0) return; 
+    if (diff == 0) return;
 
     double len = (diff) * 1.0 / (n - 1);
     vector<vector<int>> buckets(n);
@@ -86,5 +86,10 @@ int main() {
     return 0;
 }
 ```
+
+
+## Related
+
+- [[Upskill/DSA/Algorithms/Remainder Pair Counting|Remainder Pair Counting]]
 
 #dsa #sorting

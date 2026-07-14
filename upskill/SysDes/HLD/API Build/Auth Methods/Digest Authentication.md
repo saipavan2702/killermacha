@@ -1,7 +1,7 @@
-# Digest Authentication
-
 > [!summary]
 > Digest Auth uses a server challenge and a computed response so the password is not sent directly, but it is mainly a legacy compatibility method.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## Flow
 

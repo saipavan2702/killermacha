@@ -1,7 +1,7 @@
-# Big Data Systems
-
 > [!summary]
 > Big-data tools divide work across coordinated machines when one computer cannot process the data efficiently.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## When Single Machine Isn't Enough
 
@@ -142,32 +142,32 @@ class SparkCoordinator:
     def execute_job(self, data, transformation):
         # 1. Divide data into partitions
         partitions = self.partition_data(data, num_partitions=10)
-        
+
         # 2. Assign to workers
         tasks = []
         for partition in partitions:
             worker = self.get_available_worker()
             task = worker.process(partition, transformation)
             tasks.append(task)
-        
+
         # 3. Handle failures
         for task in tasks:
             if task.failed():
                 # Reassign to different worker
                 new_worker = self.get_available_worker()
                 new_worker.process(task.partition, transformation)
-        
+
         # 4. Collect results
         results = [task.result() for task in tasks]
-        
+
         # 5. Combine
         final_result = self.combine_results(results)
         return final_result
-    
+
     def get_available_worker(self):
         # Load balancing logic
         return min(self.workers, key=lambda w: w.current_load)
-    
+
     def monitor_workers(self):
         # Health checks
         for worker in self.workers:
@@ -194,3 +194,7 @@ class SparkCoordinator:
 - ❌ Small team without big data expertise
 
 ---
+
+## Related
+
+- [[Upskill/SysDes/HLD/Message Queues|Message Queues]]

@@ -1,4 +1,4 @@
-# Concurrency
+Map: [[Upskill/ProgramLang/Java/Java|Java]]
 
 In Java we can achieve concurrency by using threads and there are different ways to have concurrency.
 
@@ -87,7 +87,7 @@ Here we can see two examples where one type waits fro all threads to arrive and 
 - Workers wait on `startGate.await()` — they pause until something else (main) says go. That's a wait.
 - Main waits on `doneLatch.await()` — it pauses until all 5 workers finish. That's also a wait.
 
-So we can go for another type of scenario where nothing waits for another. 
+So we can go for another type of scenario where nothing waits for another.
 ```java
 import java.util.concurrent.*;
 import java.util.List;
@@ -151,4 +151,9 @@ public class IndependentPipelineDemo {
 }
 ```
 
-#concurrency #java 
+
+## Related
+
+- [[Upskill/ProgramLang/Java/Spring Boot|Spring Boot]]
+
+#concurrency #java

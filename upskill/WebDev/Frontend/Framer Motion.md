@@ -1,7 +1,7 @@
-# Framer Motion
-
 > [!summary]
 > Framer Motion combines declarative React animation with gestures, layout transitions, variants, and spring-based motion.
+
+Map: [[Upskill/WebDev/Web Development|Web Development]]
 
 Here we are creating an impression of button being pushed down when it's pressed down and on hover it gets bigger.
 ```jsx
@@ -34,7 +34,7 @@ import { motion } from "framer-motion";
 import Backdrop from "./Backdrop";
 import PropTypes from "prop-types";
 
-  
+
 export default function Modal({ handleClose, text = "Hi" }) {
   const dropIn = {
     hidden: {
@@ -57,7 +57,7 @@ export default function Modal({ handleClose, text = "Hi" }) {
     },
   };
 
-  
+
   return (
     <Backdrop onClick={handleClose}>
       <motion.div
@@ -88,7 +88,7 @@ In the above we are taking required props into variants and assigning them to va
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-  
+
 const Basics = () => {
   const [show, setShow] = useState(true);
   return (
@@ -178,7 +178,7 @@ const AnimationControl = () => {
     },
   };
 
-  
+
   return (
     <div
       style={{
@@ -250,16 +250,16 @@ We are going to check out view-based animations with the help of `useInView` hoo
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 
-  
+
 const ViewBased = () => {
   const ref = useRef(null);
   const isView = useInView(ref, { once: true });
-  
+
   useEffect(() => {
     console.log("🚀 ~ file: ViewBased.jsx:10 ~ useEffect ~ ̥:", isView);
   }, [isView]);
 
-  
+
   return (
     <>
       <div style={{ height: "150vh" }}></div>
@@ -282,10 +282,9 @@ const ViewBased = () => {
     </>
   );
 };
-  
+
 export default ViewBased;
 ```
-#tips 
 - Use `onClick((e)=>e.stopPropogation())` to make sure that modal does not disappear when it's clicked on.
 
 
@@ -296,9 +295,13 @@ export default ViewBased;
 [[React]]
 [[Upskill/WebDev/Frontend/CSS|CSS]]
 
+## Related
+
+- [[Upskill/WebDev/Frontend/CSS|CSS]]
+
+
 ---
 
 ## References
 
 - [Spring Animation Physics](https://blog.maximeheckel.com/posts/the-physics-behind-spring-animations/) - Spring motion intuition.
-

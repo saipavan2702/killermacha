@@ -1,7 +1,7 @@
-# Coupling and Dependency Injection
-
 > [!summary]
 > Depending on interfaces instead of concrete implementations makes Java code easier to replace, test, and extend.
+
+Map: [[Upskill/ProgramLang/Java/Java|Java]]
 
 ## Tight Coupling vs Loose Coupling
 
@@ -11,25 +11,25 @@ package com.tight.coupling;
 // 1. Database Class
 class UserDatabase {
     public String getUserDetails() {
-        return "User details from database"; 
+        return "User details from database";
     }
 }
 
 // 2. Manager Class (Tightly Coupled)
 class UserManager {
     // The dependency is hardcoded directly inside the class
-    private UserDatabase userDatabase = new UserDatabase(); 
+    private UserDatabase userDatabase = new UserDatabase();
 
     public String getUserInfo() {
-        return userDatabase.getUserDetails(); 
+        return userDatabase.getUserDetails();
     }
 }
 
 // 3. Main Example Class
 public class TightCouplingExample {
     public static void main(String[] args) {
-        UserManager userManager = new UserManager(); 
-        System.out.println(userManager.getUserInfo()); 
+        UserManager userManager = new UserManager();
+        System.out.println(userManager.getUserInfo());
     }
 }
 ```
@@ -40,14 +40,14 @@ package com.loose.coupling;
 
 // 1. The Interface (Contract)
 public interface UserDataProvider {
-    String getUserDetails(); 
+    String getUserDetails();
 }
 
 // 2. Implementation A: Original Database
 public class UserDatabaseProvider implements UserDataProvider {
     @Override
     public String getUserDetails() {
-        return "User details from database"; 
+        return "User details from database";
     }
 }
 
@@ -55,7 +55,7 @@ public class UserDatabaseProvider implements UserDataProvider {
 public class WebServiceDataProvider implements UserDataProvider {
     @Override
     public String getUserDetails() {
-        return "Fetching data from web service"; 
+        return "Fetching data from web service";
     }
 }
 
@@ -63,22 +63,22 @@ public class WebServiceDataProvider implements UserDataProvider {
 public class NewDatabaseProvider implements UserDataProvider {
     @Override
     public String getUserDetails() {
-        return "New database in action"; 
+        return "New database in action";
     }
 }
 
 // 5. Manager Class (Loosely Coupled)
 public class UserManager {
     // Depends on the interface, not a specific class
-    private UserDataProvider userDataProvider; 
+    private UserDataProvider userDataProvider;
 
     // Constructor Injection
     public UserManager(UserDataProvider userDataProvider) {
-        this.userDataProvider = userDataProvider; 
+        this.userDataProvider = userDataProvider;
     }
 
     public String getUserInfo() {
-        return userDataProvider.getUserDetails(); 
+        return userDataProvider.getUserDetails();
     }
 }
 
@@ -86,19 +86,23 @@ public class UserManager {
 public class LooseCouplingExample {
     public static void main(String[] args) {
         // Example 1: Using the original database
-        UserDataProvider databaseProvider = new UserDatabaseProvider(); 
-        UserManager userManagerWithDB = new UserManager(databaseProvider); 
-        System.out.println(userManagerWithDB.getUserInfo()); 
+        UserDataProvider databaseProvider = new UserDatabaseProvider();
+        UserManager userManagerWithDB = new UserManager(databaseProvider);
+        System.out.println(userManagerWithDB.getUserInfo());
 
         // Example 2: Easily switching to a Web Service
-        UserDataProvider webServiceProvider = new WebServiceDataProvider(); 
-        UserManager userManagerWithWS = new UserManager(webServiceProvider); 
-        System.out.println(userManagerWithWS.getUserInfo()); 
+        UserDataProvider webServiceProvider = new WebServiceDataProvider();
+        UserManager userManagerWithWS = new UserManager(webServiceProvider);
+        System.out.println(userManagerWithWS.getUserInfo());
 
         // Example 3: Easily switching to a New Database
-        UserDataProvider newDatabaseProvider = new NewDatabaseProvider(); 
-        UserManager userManagerWithNewDB = new UserManager(newDatabaseProvider); 
-        System.out.println(userManagerWithNewDB.getUserInfo()); 
+        UserDataProvider newDatabaseProvider = new NewDatabaseProvider();
+        UserManager userManagerWithNewDB = new UserManager(newDatabaseProvider);
+        System.out.println(userManagerWithNewDB.getUserInfo());
     }
 }
 ```
+
+## Related
+
+- [[Upskill/ProgramLang/Java/Inversion of Control|Inversion of Control]]

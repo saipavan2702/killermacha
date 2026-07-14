@@ -1,7 +1,7 @@
-# Shell Tips
-
 > [!summary]
 > Practical shell history, redirection, process, prompt, and terminal techniques for everyday Linux work.
+
+Map: [[Upskill/Linux/Linux|Linux]]
 
 ```bash
 # Some tips and tricks I've picked up along the way
@@ -294,7 +294,12 @@ strace -f -pid <pid>                          # follow forked children
 > [!tip] When something is "just hanging"
 > `strace` will often tell you in one line — blocked on a `read()` from a dead socket, or stuck on `openat()` for a missing config file.
 
-#tips #bash
+
+## Related
+
+- [[Upskill/Linux/Git/Git|Git]]
+
+#bash
 
 ---
 

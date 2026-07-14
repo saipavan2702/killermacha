@@ -20,8 +20,79 @@
               "icon": "lucide-file",
               "title": "Operating Systems"
             }
+          },
+          {
+            "id": "ea220f0bd50def12",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Home.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Home"
+            }
+          },
+          {
+            "id": "32d39a6cf066a8f9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "QoL/Ideas.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ideas"
+            }
+          },
+          {
+            "id": "b22380a81fd4ebaf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "QoL/Resources.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Resources"
+            }
+          },
+          {
+            "id": "ceafa557ce827913",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "QoL/Refs/Typing.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Typing"
+            }
+          },
+          {
+            "id": "465615976b87804a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Inbox.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Inbox"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -53,7 +124,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "typing",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,7 +155,8 @@
               "title": "Notebook Navigator"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -228,8 +300,13 @@
       "templates:Insert template": false
     }
   },
-  "active": "08f62ccdcbd7e5f1",
+  "active": "ceafa557ce827913",
   "lastOpenFiles": [
+    "QoL/Resources.md",
+    "QoL/Ideas.md",
+    "Home.md",
+    "Inbox.md",
+    "Upskill/CS Topics/Operating Systems.md",
     "Upskill/CS Topics/HTTP Methods.md",
     "Upskill/CS Topics/Computer Science.md",
     "Upskill/CS Topics/Cache-Friendly Loops.md",
@@ -252,11 +329,6 @@
     "Macha/motionArts/Items/10 Things I Hate About You.md",
     "Macha/motionArts/Items/21 Jump Street.md",
     "Macha/motionArts/Items/91 Days - Anime.md",
-    "Upskill/SysDes/LLD/Rate Limiter.md",
-    "QoL/Refs/Developer Resources.md",
-    "Upskill/ProgramLang/C++/C++.md",
-    "Upskill/Linux/Linux.md",
-    "Upskill/WebDev/Web Development.md",
     "Upskill/SysDes/HLD/API Build/Error Handling",
     "Upskill/DSA/Algorithms/Bitmasking",
     "Upskill/WebDev/Frontend/JavaScript",

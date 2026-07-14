@@ -1,11 +1,11 @@
-# Obsidian
+Map: [[QoL/Resources|Resources]]
 
-Related: [[Home|Home]] · [[QoL/Resources|Resources]]
+Related: [[Home|Home]]
 
 ## Videos
 
-- https://www.youtube.com/watch?v=AaCVP7zqOMU
-- https://www.youtube.com/watch?v=SRavkMUYWzo
+- [Obsidian for Mathematics Notes](https://www.youtube.com/watch?v=AaCVP7zqOMU) - Mathematics-focused note workflow.
+- [Obsidian Workflow Video](https://www.youtube.com/watch?v=SRavkMUYWzo) - Saved vault workflow reference.
 
 ## Vault Examples
 
@@ -16,10 +16,10 @@ Related: [[Home|Home]] · [[QoL/Resources|Resources]]
 - [CyanVoxel](https://github.com/CyanVoxel)
 - [niamos](https://github.com/pricklywiggles/niamos)
 - [Rainbell](https://github.com/Rainbell129/Obsidian-Homepage)
+
 ## Articles
 
 - [Steph Ango Vault](https://stephango.com/vault)
 - [Home Base Tutorial](https://forum.obsidian.md/t/my-home-base-tutorial/108759)
-- [Sync Obsidian with Syncthing](https://snippets.page/posts/sync-obsidian-notes-between-pc-and-android-with-syncthing/)
 - [Obsidian Homepage Setup](https://sergesreport.com/PROJECTS/Blog/All+Posts/How+to+setup+Obsidian+Homepage+to+keep+organized+and+productive)
 - [TTRPG Wiki Notes](https://substack.solorpgstudio.com/p/deploying-you-own-ttrpg-wiki-notes)

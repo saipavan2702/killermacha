@@ -1,5 +1,3 @@
-# System Design
-
 > [!summary]
 > Design systems by starting with requirements and scale, then choosing data, communication, and reliability patterns whose trade-offs fit the problem.
 
@@ -40,7 +38,7 @@
 ## APIs
 
 - [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview|Authentication Methods]]
-- [[Upskill/SysDes/HLD/API Build/Error Handling|Error Handling]]
+- [[Upskill/SysDes/HLD/API Build/Error Handling/Error Handling|Error Handling]]
 - [[Upskill/SysDes/HLD/API Build/Pagination|Pagination]]
 - [[Upskill/SysDes/HLD/API Build/gRPC vs REST vs GraphQL vs SOAP|API Styles]]
 

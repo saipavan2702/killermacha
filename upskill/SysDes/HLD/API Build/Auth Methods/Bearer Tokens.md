@@ -1,7 +1,7 @@
-# Bearer Tokens
-
 > [!summary]
 > A bearer token grants access to whoever possesses it, so confidentiality in transit and storage is the main security boundary.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## Request Example
 

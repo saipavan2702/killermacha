@@ -1,7 +1,7 @@
-# Capacity Estimation
-
 > [!summary]
 > Estimate traffic, storage, bandwidth, and compute with quick orders of magnitude before choosing architecture.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 Quick approximations for system requirements. **Don't spend more than 5 minutes on this in interviews.**
 
@@ -78,3 +78,8 @@ Total servers: 100 ÷ 4 = 25 servers
 ```
 
 ---
+
+## Related
+
+- [[Upskill/SysDes/HLD/Scaling Fundamentals|Scaling Fundamentals]]
+- [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]]

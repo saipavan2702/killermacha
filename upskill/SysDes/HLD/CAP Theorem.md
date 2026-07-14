@@ -1,7 +1,7 @@
-# CAP Theorem
-
 > [!summary]
 > During a network partition, a distributed system must trade between immediate consistency and availability.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 **CAP stands for:**
 - **C**onsistency
@@ -91,3 +91,7 @@ show_approximate_like_count()  # Might be off by a few
 ```
 
 ---
+
+## Related
+
+- [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]

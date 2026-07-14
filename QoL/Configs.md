@@ -1,5 +1,3 @@
-# Configs
-
 ## Dotfiles
 
 Git's
@@ -118,4 +116,4 @@ https://www.youtube.com/watch?v=G89oddoYZl4
 
 ---
 
-#ref #dotfiles #qol
+#dotfiles #qol

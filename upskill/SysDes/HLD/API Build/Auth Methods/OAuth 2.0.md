@@ -1,7 +1,7 @@
-# OAuth 2.0
-
 > [!summary]
 > OAuth 2.0 lets a client obtain limited access to a resource without receiving the user's password. It is delegated authorization, not user authentication by itself.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## Roles
 

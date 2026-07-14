@@ -1,4 +1,5 @@
-# Python Resource Management
+Map: [[Upskill/ProgramLang/Python/Python|Python]]
+
 
 > [!summary]
 > Context managers and finally blocks make remote connections and temporary resources clean up reliably.
@@ -78,3 +79,7 @@ def use_temp_script(ssh, local_path, remote_path, content):
 > `finally` runs even if the command fails — no temp file leaks on either side.
 
 ---
+
+## Related
+
+- [[Upskill/ProgramLang/Python/Configuration and Validation|Configuration and Validation]]

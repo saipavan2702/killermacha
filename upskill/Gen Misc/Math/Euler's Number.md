@@ -1,7 +1,7 @@
-# Euler's Number
-
 > [!summary]
 > Euler's number is the natural base for continuous growth, calculus, logarithms, probability, and complex analysis.
+
+Map: [[Upskill/Gen Misc/Math/Math|Math]]
 
 ## 1. Where It All Began: The Compound Interest Problem (1683)
 
@@ -167,4 +167,9 @@ This single equation unites:
 
 > $e$ is not a curiosity. It is the natural language in which continuous change speaks.
 
-#mathematics #calculus #number-theory
+
+## Related
+
+- [[Upskill/Gen Misc/Math/Continued Fractions|Continued Fractions]]
+
+#mathematics #calculus

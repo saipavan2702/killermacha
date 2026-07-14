@@ -1,7 +1,7 @@
-# Authentication Overview
-
 > [!summary]
 > Authentication proves who a caller is. Choose a method from the caller type, client environment, revocation needs, and trust boundary.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## Pick by Use Case
 
@@ -41,6 +41,11 @@
 ## Implementation Deep Dive
 
 - [[Custom JWT and Redis Authentication]] - How a stateful custom token filter differs from standards-based OIDC and Spring Resource Server validation.
+
+
+## Related
+
+- [[Upskill/SysDes/HLD/API Build/Error Handling/Error Handling|Error Handling]]
 
 #authentication #security
 

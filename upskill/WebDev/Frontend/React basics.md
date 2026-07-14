@@ -8,32 +8,32 @@ React Interview questions
 --------------------------------
 
 Q. hooks you use most often ?
-Ans. usestate and useeffect 
+Ans. usestate and useeffect
 
-Q. let's imagine I have two components where A 
-is the parent of B. How can I let B know about 
+Q. let's imagine I have two components where A
+is the parent of B. How can I let B know about
 state that lives in A ?
 Ans. using props (or)
 context,
 state management libraries (ex Redux)
 
 Q. Why would someone use the useEffect hook ?
-Ans. With useeffect, we essentially we able to 
+Ans. With useeffect, we essentially we able to
 execute certain logic, based on the conditions
-component mount - logic 
+component mount - logic
 component did update - logic
-component unmount - logic 
+component unmount - logic
 
-Q. If you need to setup a fully client-side rendered 
+Q. If you need to setup a fully client-side rendered
 SPA with React, what toolchain would you use ?
-Ans. create-react-app 
+Ans. create-react-app
 these are toolchains
 
 Q. Why would someone use React ?
 Ans. pretty-fast, render and re-render part of the website
 very quickly... single page applications... good ecosystems
 
-Q. Let imagine you want to redirect a user to another page on a 
+Q. Let imagine you want to redirect a user to another page on a
 button click, how would you go over implementing this ?
 Ans. link from react-router-dom
 or navigate hook from react-router-dom
@@ -45,10 +45,10 @@ Q. What comes to your mind if you're using .map to render something
 within your JSX and I say the word "index" ?
 Ans. key - need to look this later!! ^eSH9eeGR
 
-Some more 
+Some more
 ----------------------------
 
-1. Virtual DOM 
+1. Virtual DOM
     about virtual DOM
     virtual DOM vs real DOM
     how re-render works...
@@ -64,7 +64,7 @@ Some more
     Redux (external)
     context-api (internal react)
 
-5. what are the rules to be 
+5. what are the rules to be
 followed to use hooks in react ?
     we should only call hooks, outside
     should not call in functions, loops,
@@ -78,7 +78,7 @@ Required Javascript for React
 ---------------------------------------
 
 1. Arrow functions
-    functions with names 
+    functions with names
     functions without names(anonymous)
 2. Ternary operators
     &&, ||, ?:
@@ -128,7 +128,7 @@ Reconciliation
 
 All react does is create a tree of elements
 
-This is very fast, because React elements are just  
+This is very fast, because React elements are just
 plain javascript objects
 
 This is happening when we call the render() method ^PzDvwdgi
@@ -139,7 +139,7 @@ The next thing to do is to sync the virtual DOM with the real DOM
 
 During the initial render, there is no other way than to insert the full tree
 
-What if the tree of elements changes ? - 
+What if the tree of elements changes ? -
     React cannot just re-render the whole tree - in-efficient
     React compares the trees and finds the smallest number of operations
         to transform one tree into the other
@@ -169,7 +169,7 @@ In this case react is gonna check the elements
     ok first one is not modified - next
     ok second one is not modified - next
     ohh there is a new one - create new <li> for third and append it
-    
+
     that it's I am done with my job !! ^anxOBprp
 
 real DOM  -  new updated virtual DOM ^JajJOgos
@@ -178,36 +178,36 @@ In this case react doesn't know, that the element is added at the top
 then it is gonna check in regular manner
     ok first one is updated to spaceballs - update it, next
     ok second one also got updated - update it, next
-    ok we can see a new element (start trek) - add it 
+    ok we can see a new element (start trek) - add it
 
     that it's - done ^7F4viAaX
 
-Here comes our hero "KEY" -- 
-    
-    By using keys to the element,s we can indicate react, which are still same 
+Here comes our hero "KEY" --
+
+    By using keys to the element,s we can indicate react, which are still same
     so that we can save the dom manipulations - that's the point of react (minimizing the dom manipulations, as much as possible)
      ^xb2Eyaud
 
 using index as key, is not a good
-practice. as the indexes of 
-the elements may change in 
+practice. as the indexes of
+the elements may change in
 array...
 
-making it as unique as possible 
-will be the solution, which 
-lowers the dom manipulations 
-count and prevent unexpected 
+making it as unique as possible
+will be the solution, which
+lowers the dom manipulations
+count and prevent unexpected
 rendering ^adGXNDKC
 
 Rendering
 ---------------------------
 
 Rendering is handled by packages called renderers (React DOM, React Native, etc..)
-* React on its own is just a library that allows us to define components, elements 
+* React on its own is just a library that allows us to define components, elements
     and so on + it does the diffing part (difference of tree doms)
 
 Most of the actual implementation lives in the renderers
-They begin the reconciliation process. They generate the tree of elements and insert 
+They begin the reconciliation process. They generate the tree of elements and insert
     it wherever it has to be inserted
 
 

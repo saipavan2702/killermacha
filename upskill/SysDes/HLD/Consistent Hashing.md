@@ -1,7 +1,7 @@
-# Consistent Hashing
-
 > [!summary]
 > Consistent hashing limits key movement when nodes join or leave a distributed system.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## The Problem with Simple Hashing
 
@@ -45,34 +45,34 @@ class ConsistentHashing:
     def __init__(self):
         self.ring = {}  # position -> server
         self.sorted_positions = []
-    
+
     def _hash(self, key):
         # Returns value in [0, 2^32)
         return int(hashlib.md5(key.encode()).hexdigest(), 16)
-    
+
     def add_server(self, server_id):
         # Add server to ring
         position = self._hash(server_id)
         self.ring[position] = server_id
         self.sorted_positions = sorted(self.ring.keys())
         print(f"Added {server_id} at position {position}")
-    
+
     def remove_server(self, server_id):
         # Remove server from ring
         position = self._hash(server_id)
         del self.ring[position]
         self.sorted_positions = sorted(self.ring.keys())
         print(f"Removed {server_id} from position {position}")
-    
+
     def get_server(self, key):
         # Hash the key
         key_position = self._hash(key)
-        
+
         # Find nearest server clockwise
         for position in self.sorted_positions:
             if position >= key_position:
                 return self.ring[position]
-        
+
         # Wrap around to first server
         return self.ring[self.sorted_positions[0]]
 
@@ -131,44 +131,44 @@ class ConsistentHashingWithVirtualNodes:
         self.virtual_nodes = virtual_nodes
         self.ring = {}
         self.sorted_positions = []
-    
+
     def _hash(self, key):
         return int(hashlib.md5(key.encode()).hexdigest(), 16)
-    
+
     def add_server(self, server_id):
         # Add multiple virtual nodes for each server
         for i in range(self.virtual_nodes):
             virtual_key = f"{server_id}#{i}"
             position = self._hash(virtual_key)
             self.ring[position] = server_id
-        
+
         self.sorted_positions = sorted(self.ring.keys())
         print(f"Added {server_id} with {self.virtual_nodes} virtual nodes")
-    
+
     def remove_server(self, server_id):
         # Remove all virtual nodes
         positions_to_remove = [
             pos for pos, server in self.ring.items()
             if server == server_id
         ]
-        
+
         for pos in positions_to_remove:
             del self.ring[pos]
-        
+
         self.sorted_positions = sorted(self.ring.keys())
         print(f"Removed {server_id}")
-    
+
     def get_server(self, key):
         if not self.ring:
             return None
-        
+
         key_position = self._hash(key)
-        
+
         # Binary search for efficiency
         for position in self.sorted_positions:
             if position >= key_position:
                 return self.ring[position]
-        
+
         return self.ring[self.sorted_positions[0]]
 
 # Usage
@@ -198,3 +198,7 @@ ch.add_server("server_C")
 - Content Delivery Networks
 
 ---
+
+## Related
+
+- [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]]

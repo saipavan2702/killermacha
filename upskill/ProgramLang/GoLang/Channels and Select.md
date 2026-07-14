@@ -1,9 +1,10 @@
-# Go Channels and Select
+Map: [[Upskill/ProgramLang/Golang/Go|Go]]
+
 
 > [!summary]
 > Channels coordinate goroutines through explicit communication; select waits on multiple channel operations and timeouts.
 
-Channels are Go’s way of letting **go routines communicate safely** with each other.  
+Channels are Go’s way of letting **go routines communicate safely** with each other.
 Think of a channel as a **pipe**: one go-routine sends values into it, another go routine receives values from it.
 
 ```go
@@ -18,7 +19,7 @@ c <- 42 // Send
 x := <-c // Receive
 fmt.Println(x) // 42
 ```
-- `c <- 42` puts `42` into the channel.  
+- `c <- 42` puts `42` into the channel.
 - `<-c` pulls the value out.
 ```go
 package main
@@ -61,7 +62,7 @@ fmt.Println(<-c) // 2
 Channel buffer [ 1 | 2 ]  (capacity 2)
 ```
 
-- Sender can place 2 values before blocking.  
+- Sender can place 2 values before blocking.
 - Once buffer is full, sender **blocks** until a receiver consumes.
 
 ```go
@@ -122,17 +123,22 @@ parseHTML(url, content, &queue, &crawled, &db)
 This ensures the main go routine only parses once the page is fully fetched.
 
 >[!info]
->1. **Unbuffered channels** → synchronize sender & receiver.  
->2.  **Buffered channels** → allow limited queuing of messages.  
->3. **close + range** → clean way to signal completion.  
->4. **select** → powerful for handling multiple channels & timeouts.  
+>1. **Unbuffered channels** → synchronize sender & receiver.
+>2.  **Buffered channels** → allow limited queuing of messages.
+>3. **close + range** → clean way to signal completion.
+>4. **select** → powerful for handling multiple channels & timeouts.
 >5. Channels are the backbone of **safe concurrency in Go**.
 
 ---
+
+## Related
+
+- [[Upskill/ProgramLang/Golang/Interfaces|Interfaces]]
+- [[Upskill/ProgramLang/Golang/Synchronization|Synchronization]]
+
 
 ---
 
 ## References
 
 - [Building a Concurrent Cinema Booking System in Golang](https://www.youtube.com/watch?v=CIIrR5daWL4) - Practical channel and synchronization example.
-

@@ -1,4 +1,5 @@
-# Go Interfaces
+Map: [[Upskill/ProgramLang/Golang/Go|Go]]
+
 
 > [!summary]
 > Go interfaces are satisfied implicitly by method sets, allowing behavior-based composition without declaration-heavy inheritance.
@@ -19,7 +20,7 @@ type io.Writer interface {
 > Think of it like a power socket. Any plug with the right shape fits — it doesn't matter who made it or what it does inside.
 The core idea — an interface is just a shape-check. If your type has the right method signature, it fits. `io.Writer` requires exactly one method: Write([]byte) (int, error). Once you have that, any function accepting `io.Writer` will work with your type.
 > Also the print functions
-> 
+>
  > - Plain Print → always stdout
  > - Fprint (F = file/writer) → you supply the destination
 >  - Sprint (S = string) → returns a string, no output at all
@@ -130,3 +131,8 @@ package mypkg
 //Then run only files with that tag:
 go test -tags=integration ./...
 ```
+
+## Related
+
+- [[Upskill/ProgramLang/Golang/Memory and Pointers|Memory and Pointers]]
+- [[Upskill/ProgramLang/Golang/Channels and Select|Channels and Select]]

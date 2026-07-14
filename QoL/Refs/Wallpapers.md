@@ -1,4 +1,4 @@
-# Wallpapers
+Map: [[QoL/Resources|Resources]]
 
 ## GitHub
 
@@ -7,4 +7,4 @@
 
 ## Websites
 
-- https://archimg.cc/
+- [ArchImg](https://archimg.cc/) - Wallpaper and image collection.

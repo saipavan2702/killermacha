@@ -1,21 +1,22 @@
-# Vim Files, Buffers, and Windows
+Map: [[Upskill/Linux/Vim/Vim|Vim]]
+
 
 > [!summary]
 > Buffers hold files, windows display buffers, and sessions preserve a working layout.
 
 ## 🗂️ File and Buffer Management
 
-- `:e <file>` → Open a file  
-- `:w !sudo tee %` → Save with root privileges  
+- `:e <file>` → Open a file
+- `:w !sudo tee %` → Save with root privileges
 - `:saveas <filename>` → Save current file under a new name
 
 ### Buffer Commands
 
-- `:ls` or `:buffers` → List open buffers  
-- `:b <number>` → Switch to buffer by number  
-- `:bn` → Go to next buffer  
-- `:bp` → Go to previous buffer  
-- `:bd` → Delete (close) current buffer  
+- `:ls` or `:buffers` → List open buffers
+- `:b <number>` → Switch to buffer by number
+- `:bn` → Go to next buffer
+- `:bp` → Go to previous buffer
+- `:bd` → Delete (close) current buffer
 - `:bd!` → Force delete buffer without saving
 
 > 💡 Buffers are like open files. Deleting a buffer doesn't delete the file, it just removes it from memory.
@@ -24,10 +25,10 @@
 
 ## ✅ Tips & Good Practices
 
-- `gf` → Open file under cursor (path must exist)  
-- `*` → Search for word under cursor  
-- `%` → Jump to matching bracket/brace/paren  
-- `"*y`, `"*p` → Copy/paste via system clipboard  
+- `gf` → Open file under cursor (path must exist)
+- `*` → Search for word under cursor
+- `%` → Jump to matching bracket/brace/paren
+- `"*y`, `"*p` → Copy/paste via system clipboard
 - `:set clipboard=unnamedplus` → Use system clipboard automatically
 
 ---
@@ -101,8 +102,13 @@ vim -S ~/mysession.vim        " Load session later
 
 Use built-in file browsing inside Vim:
 
-- `:Explore` — Open netrw file browser in current window  
-- `:Vex` — Open in vertical split  
-- `:Sex` — Open in horizontal split  
+- `:Explore` — Open netrw file browser in current window
+- `:Vex` — Open in vertical split
+- `:Sex` — Open in horizontal split
 
 ---
+
+## Related
+
+- [[Upskill/Linux/Vim/Registers Macros and Repetition|Registers Macros and Repetition]]
+- [[Upskill/Linux/Vim/Command Line|Command Line]]

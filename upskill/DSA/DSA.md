@@ -1,5 +1,3 @@
-# DSA
-
 > [!summary]
 > Data structures organize information; algorithms define repeatable ways to search, transform, and reason about it efficiently.
 
@@ -15,7 +13,7 @@
 
 - [[Upskill/DSA/Algorithms/Backtracking|Backtracking]]
 - [[Upskill/DSA/Algorithms/Binary Search|Binary Search]]
-- [[Upskill/DSA/Algorithms/Bitmasking|Bitmasking]]
+- [[Upskill/DSA/Algorithms/Bitmasking/Bitmasking|Bitmasking]]
 - [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]]
 - [[Upskill/DSA/Algorithms/Line Sweep|Line Sweep]]
 - [[Upskill/DSA/Algorithms/Sliding Window|Sliding Window]]

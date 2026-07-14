@@ -1,6 +1,6 @@
-# MacOS
+Map: [[QoL/Resources|Resources]]
 
-Related: [[QoL/Refs/Dev|Dev]]
+Related: [[QoL/Refs/Developer Resources|Developer Resources]] · [[QoL/Workspace Setup|Workspace Setup]]
 
 ## Window / Keyboard Fixes
 
@@ -15,7 +15,7 @@ Related: [[QoL/Refs/Dev|Dev]]
 ## Apps
 
 - [Open Source Mac Apps](https://github.com/serhii-londar/open-source-mac-os-apps)
-- https://www.youtube.com/watch?v=0vFErGxD2QY&t=6s
+- [The Weirdest Way to Use a Mac](https://www.youtube.com/watch?v=0vFErGxD2QY&t=6s) - Terminal-first Mac tools and workflow.
 
 ## KDE Connect
 

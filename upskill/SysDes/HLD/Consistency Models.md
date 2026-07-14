@@ -1,7 +1,7 @@
-# Consistency Models
-
 > [!summary]
 > Consistency models define when distributed replicas must agree and which trade-offs are acceptable while they converge.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## Strong Consistency
 
@@ -69,17 +69,17 @@ class StrongConsistentDatabase:
     def __init__(self, nodes):
         self.master = nodes[0]
         self.replicas = nodes[1:]
-    
+
     def write(self, key, value):
         # Write to master
         self.master.write(key, value)
-        
+
         # Wait for ALL replicas to acknowledge
         acks = []
         for replica in self.replicas:
             ack = replica.write(key, value)  # Blocking call
             acks.append(ack)
-        
+
         # Only return success if ALL replicas acknowledged
         if all(acks):
             return {"status": "success", "consistency": "strong"}
@@ -87,7 +87,7 @@ class StrongConsistentDatabase:
             # Rollback if any replica failed
             self.master.rollback(key)
             return {"status": "failed"}
-    
+
     def read(self, key):
         # Can read from any node, guaranteed to be latest
         return self.master.read(key)
@@ -106,7 +106,7 @@ class QuorumDatabase:
         self.R = 2  # Read quorum
         # W + R > N ensures strong consistency
         # 3 + 2 > 4 ✓
-    
+
     def write(self, key, value):
         # Write to W nodes (not all)
         acks = 0
@@ -118,19 +118,19 @@ class QuorumDatabase:
                     break
             except:
                 continue
-        
+
         if acks >= self.W:
             return {"status": "success"}
         else:
             return {"status": "failed", "error": "Quorum not met"}
-    
+
     def read(self, key):
         # Read from R nodes
         values = []
         for node in self.nodes[:self.R]:
             value = node.read(key)
             values.append(value)
-        
+
         # Return most recent value (highest timestamp)
         return max(values, key=lambda v: v['timestamp'])
 ```
@@ -162,36 +162,36 @@ class RaftNode:
         self.voted_for = None
         self.log = []
         self.all_nodes = all_nodes
-    
+
     def request_vote(self):
         # Candidate asks for votes
         self.state = 'candidate'
         self.current_term += 1
         self.voted_for = self.id
-        
+
         votes = 1  # Vote for self
         for node in self.all_nodes:
             if node.vote(self.current_term, self.id):
                 votes += 1
-        
+
         # Need majority to become leader
         if votes > len(self.all_nodes) / 2:
             self.state = 'leader'
             print(f"Node {self.id} became leader")
-    
+
     def append_entry(self, entry):
         # Leader replicates to followers
         if self.state != 'leader':
             return False
-        
+
         self.log.append(entry)
-        
+
         # Replicate to majority of followers
         acks = 1  # Leader counts as ack
         for node in self.all_nodes:
             if node.replicate_log_entry(entry):
                 acks += 1
-        
+
         # Commit only if majority acknowledged
         if acks > len(self.all_nodes) / 2:
             self.commit_entry(entry)
@@ -210,23 +210,23 @@ class EventuallyConsistentDatabase:
     def __init__(self, nodes):
         self.master = nodes[0]
         self.replicas = nodes[1:]
-    
+
     def write(self, key, value):
         # Write to master immediately
         self.master.write(key, value)
-        
+
         # Return success immediately
         response = {"status": "success", "consistency": "eventual"}
-        
+
         # Asynchronously replicate to replicas (don't wait)
         for replica in self.replicas:
             threading.Thread(
                 target=replica.write,
                 args=(key, value)
             ).start()
-        
+
         return response
-    
+
     def read(self, key):
         # May return stale data if replica not yet updated
         node = random.choice(self.replicas)
@@ -244,7 +244,7 @@ class GossipNode:
         self.data = {}
         self.all_nodes = all_nodes
         self.version_vector = {node.id: 0 for node in all_nodes}
-    
+
     def write(self, key, value):
         # Write locally
         self.data[key] = {
@@ -253,24 +253,24 @@ class GossipNode:
             'timestamp': time.time()
         }
         self.version_vector[self.id] += 1
-    
+
     def gossip(self):
         # Periodically share data with random nodes
         while True:
             # Pick random subset of nodes
             peers = random.sample(self.all_nodes, k=3)
-            
+
             for peer in peers:
                 # Exchange data
                 peer_data = peer.get_data()
-                
+
                 # Merge data (keep newer versions)
                 for key, value in peer_data.items():
                     if key not in self.data:
                         self.data[key] = value
                     elif value['version'] > self.data[key]['version']:
                         self.data[key] = value
-            
+
             time.sleep(1)  # Gossip every second
 ```
 
@@ -295,13 +295,13 @@ class ConflictResolution:
             return value1
         else:
             return value2
-    
+
     def resolve_multi_master_conflict(self, master1_value, master2_value):
         # Same key updated in both masters
-        
+
         # Strategy 1: Last Write Wins
         return self.resolve_conflict(master1_value, master2_value)
-        
+
         # Strategy 2: Custom business logic
         if self.is_critical_data:
             # Keep both, manual reconciliation
@@ -310,7 +310,7 @@ class ConflictResolution:
                 'status': 'conflict',
                 'requires_manual_resolution': True
             }
-        
+
         # Strategy 3: Merge values
         if self.can_merge:
             return {
@@ -356,3 +356,8 @@ response = table.get_item(Key={'user_id': '123'})
 ```
 
 ---
+
+## Related
+
+- [[Upskill/SysDes/HLD/CAP Theorem|CAP Theorem]]
+- [[Upskill/SysDes/HLD/Replication and Recovery|Replication and Recovery]]

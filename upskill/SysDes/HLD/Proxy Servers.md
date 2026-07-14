@@ -1,7 +1,7 @@
-# Proxy Servers
-
 > [!summary]
 > Forward proxies represent clients; reverse proxies represent servers and centralize routing, security, and traffic control.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## Forward Proxy
 
@@ -36,7 +36,7 @@ class ForwardProxy {
             'netflix.com'
         ];
     }
-    
+
     async handleRequest(url) {
         // Check if site is blocked
         if (this.isBlocked(url)) {
@@ -45,12 +45,12 @@ class ForwardProxy {
                 message: 'Site blocked by company policy'
             };
         }
-        
+
         // Forward request
         const response = await fetch(url);
         return response;
     }
-    
+
     isBlocked(url) {
         return this.blockedSites.some(site => url.includes(site));
     }
@@ -67,20 +67,20 @@ class CachingForwardProxy {
     constructor() {
         this.cache = new Map();
     }
-    
+
     async handleRequest(url) {
         // Check cache first
         if (this.cache.has(url)) {
             console.log('✅ Cache HIT');
             return this.cache.get(url);
         }
-        
+
         console.log('❌ Cache MISS - Fetching from server');
         const response = await fetch(url);
-        
+
         // Cache the response
         this.cache.set(url, response);
-        
+
         return response;
     }
 }
@@ -105,21 +105,21 @@ class ReverseProxyLoadBalancer {
         this.servers = servers;
         this.currentIndex = 0;
     }
-    
+
     async handleRequest(req) {
         // Get next server (round-robin)
         const server = this.servers[this.currentIndex];
         this.currentIndex = (this.currentIndex + 1) % this.servers.length;
-        
+
         console.log(`Routing request to ${server.url}`);
-        
+
         // Forward to backend server
         const response = await fetch(`${server.url}${req.path}`, {
             method: req.method,
             headers: req.headers,
             body: req.body
         });
-        
+
         return response;
     }
 }
@@ -178,31 +178,31 @@ class ReverseProxywithCache {
         this.backend = backendUrl;
         this.cache = new Map();
     }
-    
+
     async handleRequest(req) {
         // Cache static assets
         if (this.isStaticAsset(req.path)) {
             const cacheKey = req.path;
-            
+
             if (this.cache.has(cacheKey)) {
                 console.log(`Cache HIT: ${req.path}`);
                 return this.cache.get(cacheKey);
             }
-            
+
             // Fetch from backend
             const response = await fetch(`${this.backend}${req.path}`);
-            
+
             // Cache for 1 hour
             this.cache.set(cacheKey, response);
             setTimeout(() => this.cache.delete(cacheKey), 3600000);
-            
+
             return response;
         }
-        
+
         // Dynamic requests - always go to backend
         return await fetch(`${this.backend}${req.path}`);
     }
-    
+
     isStaticAsset(path) {
         const staticExtensions = ['.jpg', '.png', '.css', '.js', '.pdf'];
         return staticExtensions.some(ext => path.endsWith(ext));
@@ -224,25 +224,25 @@ class SecureReverseProxy {
             '/api/orders': 'http://internal-order-service:7000'
         };
     }
-    
+
     async handleRequest(req) {
         // Rate limiting
         if (!this.checkRateLimit(req.ip)) {
             return { status: 429, message: 'Too many requests' };
         }
-        
+
         // Authentication
         if (!this.validateToken(req.headers.authorization)) {
             return { status: 401, message: 'Unauthorized' };
         }
-        
+
         // Route to internal service
         const targetService = this.routes[req.path];
-        
+
         if (!targetService) {
             return { status: 404, message: 'Not found' };
         }
-        
+
         // Internal services not exposed to internet
         const response = await fetch(targetService);
         return response;
@@ -277,7 +277,7 @@ const cache = new Map();
 // Reverse proxy server
 const server = http.createServer(async (req, res) => {
     console.log(`${req.method} ${req.url}`);
-    
+
     // 1. Check cache for static assets
     if (req.url.match(/\.(js|css|png|jpg|jpeg|gif)$/)) {
         if (cache.has(req.url)) {
@@ -287,7 +287,7 @@ const server = http.createServer(async (req, res) => {
             return;
         }
     }
-    
+
     // 2. Rate limiting
     const clientIP = req.socket.remoteAddress;
     if (!checkRateLimit(clientIP)) {
@@ -295,34 +295,34 @@ const server = http.createServer(async (req, res) => {
         res.end('Too Many Requests');
         return;
     }
-    
+
     // 3. Route to appropriate backend service
     let targetService = null;
-    
+
     for (const [path, service] of Object.entries(services)) {
         if (req.url.startsWith(path)) {
             targetService = service;
             break;
         }
     }
-    
+
     if (!targetService) {
         res.writeHead(404, { 'Content-Type': 'text/plain' });
         res.end('Route not found');
         return;
     }
-    
+
     // 4. Add custom headers
     req.headers['X-Forwarded-For'] = clientIP;
     req.headers['X-Proxy-By'] = 'Custom-Reverse-Proxy';
-    
+
     // 5. Forward request to backend
     proxy.web(req, res, { target: targetService }, (error) => {
         console.error('Proxy error:', error.message);
         res.writeHead(502, { 'Content-Type': 'text/plain' });
         res.end('Bad Gateway');
     });
-    
+
     // 6. Cache response for static assets
     proxy.on('proxyRes', (proxyRes, req, res) => {
         if (req.url.match(/\.(js|css|png|jpg)$/)) {
@@ -344,23 +344,23 @@ function checkRateLimit(ip) {
     const now = Date.now();
     const windowMs = 60000; // 1 minute
     const maxRequests = 100;
-    
+
     if (!requestCounts.has(ip)) {
         requestCounts.set(ip, []);
     }
-    
+
     const requests = requestCounts.get(ip);
-    
+
     // Remove old requests outside window
     const recentRequests = requests.filter(time => now - time < windowMs);
-    
+
     if (recentRequests.length >= maxRequests) {
         return false; // Rate limit exceeded
     }
-    
+
     recentRequests.push(now);
     requestCounts.set(ip, recentRequests);
-    
+
     return true;
 }
 
@@ -405,7 +405,7 @@ const app = express();
 app.get('/api/users', (req, res) => {
     console.log('User service received request');
     console.log('Headers:', req.headers['x-forwarded-for']);
-    
+
     res.json({
         service: 'user-service',
         users: [
@@ -421,3 +421,8 @@ app.listen(5001, () => {
 ```
 
 ---
+
+## Related
+
+- [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]]
+- [[Upskill/SysDes/HLD/Blob Storage and CDN|Blob Storage and CDN]]

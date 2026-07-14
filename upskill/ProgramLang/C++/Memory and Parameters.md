@@ -1,4 +1,5 @@
-# C++ Memory and Parameters
+Map: [[Upskill/ProgramLang/C++/C++|C++]]
+
 
 > [!summary]
 > Explicit ownership and parameter-passing semantics determine whether C++ code copies, aliases, leaks, or safely releases memory.
@@ -26,21 +27,21 @@ The previous memory block allocated by new int is still reserved in heap memory.
 However, we lost the address of that memory because p now points elsewhere.
 Since there's no way to free that memory now, it remains allocated indefinitely → Memory Leak!
 
-Now to deal with this, 
+Now to deal with this,
 ```cpp
 delete p;  // Free allocated memory
 p = nullptr;  // Avoid dangling pointer issues
 ```
 
-It is a good practice to assign null to the pointer after deletion. 
+It is a good practice to assign null to the pointer after deletion.
 A dangling pointer is a pointer that refers to a memory location that has been freed. Setting p = nullptr; ensures that it doesn't point to invalid memory.
 
 
 ### Pass by Value
 
 ```cpp
-void update(int x) { 
-    x = 20; 
+void update(int x) {
+    x = 20;
 }
 
 int main() {
@@ -55,14 +56,14 @@ Here we are passing c to update func, and that is a frame in stack where it stor
 ### Pass by Pointer
 
 ```cpp
-void update(int *p) { 
+void update(int *p) {
 	if(p==nullptr) return;
-    *p = 20; 
+    *p = 20;
 }
 
 int main() {
     int c = 10;
-    update(&c); // address of c 
+    update(&c); // address of c
     cout << c; // Prints 20
 }
 ```
@@ -73,8 +74,8 @@ Also always check while dereferencing a pointer that it is not null.
 ### Pass by Reference
 
 ```cpp
-void update(int &r) { 
-    r = 20; 
+void update(int &r) {
+    r = 20;
 }
 
 int main() {
@@ -93,7 +94,11 @@ void update(int &r) {
 
 int main() {
 	int *p = nullptr;
-	update (*p) ; 
+	update (*p) ;
 }
 //This gives error
 ```
+
+## Related
+
+- [[Upskill/ProgramLang/C++/Priority Queues|Priority Queues]]

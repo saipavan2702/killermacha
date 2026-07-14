@@ -1,7 +1,7 @@
-# Context
-
 > [!summary]
 > Go context carries cancellation, deadlines, and request-scoped values across API boundaries and concurrent work.
+
+Map: [[Upskill/ProgramLang/Golang/Go|Go]]
 
 Context provides a mechanism to control the lifecycle, cancellation, and propagation of requests across multiple goroutines.
 This aids in the management of go routines.
@@ -23,18 +23,18 @@ import (
 func main(){
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.second)
 	defer cancel()
-	
+
 	urls := []string{
 	  "https://api.example.com/users",
 	  "https://api.example.com/products",
 	  "https://api.example.com/orders",
 	}
-	
+
 	results := make(chan string)
 	for _, url := range urls {
 		go fetchAPI(ctx, url, results)
 	}
-	
+
 	for range urls {
 		fmt.Println(<-results)
 	}
@@ -46,14 +46,14 @@ func fetchAPI(ctx context.Context, url string, results chan<-string) {
 		results <- fmt.Sprintf("Error creating request for %s: %s", url, err.Error())
 		return
 	}
-	
+
 	client := http.DefaultClient
 	resp, err := client.Do(req)
-	
+
 	if err != nil {
 		results <- fmt.Sprintf("Error making request to %s: %s", url, err.Error())
 	}
-	
+
 	defer resp.Body.Close()
 	results <- fmt.Sprintf("Response from %s: %d", url, resp.StatusCode)
 }
@@ -78,11 +78,11 @@ import (
 func main(){
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 	defer cancel()
-	
+
 	go performTask(ctx)
-	
+
 	select {
-		case <- ctx.Done(): 
+		case <- ctx.Done():
 			fmt.Println("Task is timed out")
 	}
 }
@@ -98,7 +98,7 @@ func performTask(ctx context.Context){
 func propagateCtx(){
 	ctx := context.Background()
 	ctx = context.WithValue(ctx, "UserId", 123)
-	
+
 	go performTask2(ctx)
 	//
 }
@@ -110,10 +110,10 @@ func performTask2(ctx context.Context){
 func cancelCtx(){
 	ctx, cancel := context.WithCancel(context.Background())
 	go performTask3(ctx)
-	
+
 	time.Sleep(2*time.Second)
 	cancel()
-	
+
 	time.Sleep(1*time.Second)
 }
 
@@ -133,7 +133,7 @@ func performTask3(ctx context.Context){
 func deadlineCtx(){
 	ctx, cancel := context.WithDeadline(context.Background(), time.Now().Add(2*time.Second))
 	defer cancel()
-	
+
 	go performTask4(ctx)
 	time.Sleep(3*time.Second)
 }
@@ -163,16 +163,16 @@ import(
 func main(){
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 	defer cancel()
-	
+
 	db,err := sql.Open("postgres", "postgres://username:password@localhost/mydatabase?sslmode=disable")
-	
+
 	if err != nil {
 		fmt.Println("Error connecting to database", err)
 		return
 	}
-	
+
 	defer db.Close()
-	
+
 	rows, err := db.QueryContext(ctx, "SELECT * FROM users")
 	if err != nil {
 		fmt.Println("Error executing query:", err)
@@ -209,7 +209,7 @@ If a goroutine started with a context, but does not properly exit when that cont
 ```go
 func main(){
 	ctx := context.Background()  // ← Context #1 (no cancel, plain background)
-	
+
 	go func(ctx context.Context){
 		for {
 			select {
@@ -219,17 +219,17 @@ func main(){
 				default:
 					//do something
 			}
-			
+
 		}
 	}(ctx)
-	
+
 	time.Sleep(1 * time.Second)
 	cancel() // ← calls your custom cancel() function
 }
 
 func cancel(){
 	ctx, cancel := context.WithCancel(context.Background()) // ← Context #2 (brand new!)
-	cancel() // ← cancels Context #2, which nobody is using 
+	cancel() // ← cancels Context #2, which nobody is using
 }
 ```
 
@@ -244,14 +244,14 @@ func main() {
     for {
       select {
       case <-ctx.Done():
-        return // exit properly on cancellation  
+        return // exit properly on cancellation
       default:
         // do work
       }
     }
   }(ctx)
 
-  time.Sleep(1 * time.Second)  
+  time.Sleep(1 * time.Second)
 
   cancel()            // ✅ cancels the SAME ctx goroutine is watching
 }
@@ -348,7 +348,7 @@ func getUserFromDB(ctx context.Context, userID string) (string, error) {
 // Request failed: context deadline exceeded
 //
 //
-// Chain diagram 
+// Chain diagram
 //   │
 //   ├── creates ctx (3s timeout)
 //   │
@@ -376,7 +376,13 @@ func getUserFromDB(ctx context.Context, userID string) (string, error) {
 
 One cancel → entire chain stops. That's the whole power of context.
 
-#golang #lang
+
+## Related
+
+- [[Upskill/ProgramLang/Golang/Synchronization|Synchronization]]
+- [[Upskill/ProgramLang/Golang/Event Bus|Event Bus]]
+
+#golang
 
 ---
 

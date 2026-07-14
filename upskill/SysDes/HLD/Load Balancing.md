@@ -1,8 +1,6 @@
-# Load Balancing
-
 Map: [[Upskill/SysDes/System Design|System Design]]
 
-Related: [[Upskill/SysDes/HLD/Caching|Caching]] · [[Upskill/SysDes/HLD/Rate Limiting|Rate Limiting]] · [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]] · [[QoL/Refs/SysDes|SysDes Refs]]
+Related: [[Upskill/SysDes/HLD/Caching|Caching]] · [[Upskill/SysDes/HLD/Rate Limiting|Rate Limiting]] · [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]] · [[Upskill/SysDes/System Design|System Design]]
 
 ## Load Balancers {#load-balancers}
 
@@ -35,7 +33,7 @@ class RoundRobinLoadBalancer:
     def __init__(self, servers):
         self.servers = servers
         self.current = 0
-    
+
     def get_next_server(self):
         server = self.servers[self.current]
         self.current = (self.current + 1) % len(self.servers)
@@ -75,7 +73,7 @@ class WeightedRoundRobinLoadBalancer:
         for server, weight in servers_with_weights:
             self.servers.extend([server] * weight)
         self.current = 0
-    
+
     def get_next_server(self):
         server = self.servers[self.current]
         self.current = (self.current + 1) % len(self.servers)
@@ -103,13 +101,13 @@ lb = WeightedRoundRobinLoadBalancer([
 class LeastConnectionsLoadBalancer:
     def __init__(self, servers):
         self.connections = {server: 0 for server in servers}
-    
+
     def get_next_server(self):
         # Find server with minimum connections
         server = min(self.connections, key=self.connections.get)
         self.connections[server] += 1
         return server
-    
+
     def release_connection(self, server):
         self.connections[server] -= 1
 
@@ -137,7 +135,7 @@ import hashlib
 class HashBasedLoadBalancer:
     def __init__(self, servers):
         self.servers = servers
-    
+
     def get_next_server(self, client_id):
         # Hash client identifier
         hash_value = int(hashlib.md5(client_id.encode()).hexdigest(), 16)

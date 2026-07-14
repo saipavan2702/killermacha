@@ -1,7 +1,7 @@
-# Continued Fractions
-
 > [!summary]
 > Continued fractions expose the structure of irrational numbers and generate unusually efficient rational approximations.
+
+Map: [[Upskill/Gen Misc/Math/Math|Math]]
 
 > [!quote] The Big Idea
 > Every irrational number — no matter how chaotic its decimal looks — can be expressed as an infinite cascade of fractions. These cascades reveal deep patterns invisible in standard decimals.
@@ -65,7 +65,7 @@ $$\pi = [3;\; 7,\; 15,\; 1,\; \mathbf{292},\; 1,\; 1,\; 1,\; 2,\; \ldots]$$
 
 > [!warning] The Golden Rule of Large Quotients
 > A **large partial quotient** means the convergent computed **just before it** is an exceptionally accurate approximation.
-> 
+>
 > The $292$ in $\pi$'s sequence is enormous — so the fraction right before it must be extraordinary.
 
 That fraction is:
@@ -109,7 +109,7 @@ $$\left|\alpha - \frac{p}{q}\right| < \frac{1}{\sqrt{5} \cdot q^2}$$
 
 > [!math] The Significance
 > The $\sqrt{5}$ here **cannot be replaced by any larger number** without making the theorem false for some numbers.
-> 
+>
 > And which number sits exactly at this boundary? The **golden ratio** $\phi$ — it is the extremal case. Every other irrational number is "less irrational" than $\phi$.
 
 ---
@@ -141,7 +141,12 @@ $$e = 2 + \cfrac{1}{1 + \cfrac{1}{2 + \cfrac{1}{1 + \cfrac{1}{1 + \cfrac{1}{4 + 
 
 ---
 
-#mathematics #number-theory #continued-fractions #irrational-numbers #golden-ratio #pi
+
+## Related
+
+- [[Upskill/Gen Misc/Math/Euler's Number|Euler's Number]]
+
+#mathematics #number-theory
 
 ---
 

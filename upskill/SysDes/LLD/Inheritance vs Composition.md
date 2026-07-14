@@ -1,7 +1,7 @@
-# Inheritance vs Composition
-
 > [!summary]
 > Inheritance models an is-a relationship; composition assembles behavior and usually offers looser coupling and safer evolution.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 The two different strategies to tackle the same problem i.e, `CODE REUSE`
 
@@ -11,15 +11,15 @@ class Order {
 	String orderId;
 	List<Items> items;
 	double total;
-	
+
 	void calculateTotal() {
 		// sums up item price, applies tax
 	}
-	
+
 	void generateInvoice() {
 		// creates a formatted invoice
 	}
-	
+
 	abstract void ship()
 	abstract void track()
 }
@@ -52,7 +52,7 @@ class DigitalOrder extends Order {
 }
 ```
 
-So now developers are forced to implement/add a new layer 
+So now developers are forced to implement/add a new layer
 ```txt
 Order
 ├── PhysicalOrder  ← new layer just to hold ship() and track()
@@ -64,7 +64,7 @@ Order
 But now every class that used main base class Order.ship() is broken.
 
 >That's the fragility of inheritance — changing the parent breaks all children.
->When you put behaviour in a parent class, you're predicting that every future child will need it. 
+>When you put behaviour in a parent class, you're predicting that every future child will need it.
 >That prediction will eventually be wrong.
 
 The fix is to adapt **Composition**.
@@ -106,9 +106,9 @@ class DigitalDelivery {
 ```
 
  Bringing back the abstract methods we lost in Composition.
- 
+
  With composition the shippers don't share a parent, so you use an interface instead.
-In Inheritance 
+In Inheritance
 ```java
 List<Order> orders = new ArrayList<>();
 orders.add(new StandardOrder());
@@ -151,7 +151,7 @@ Instead of service creating delivery method we inject it from outside.
 
 ```java
 class OrderService {
-	
+
     // "I don't care HOW you deliver. Just give me something that can."
     public void processOrder(Order order, DeliveryMethod deliveryMethod) {
         // 1. validate order
@@ -172,6 +172,12 @@ service.processOrder(order, new DigitalDelivery()); // Digital delivery — same
 When is Composition bad?
 -  We end up writing more boilerplate code.
 -  verbose wrapper methods
+
+
+## Related
+
+- [[Upskill/SysDes/LLD/SOLID Principles|SOLID Principles]]
+- [[Upskill/SysDes/LLD/Design Patterns/Design Patterns|Design Patterns]]
 
 #java #oops
 

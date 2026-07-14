@@ -1,7 +1,7 @@
-# XOR Linked List
-
 > [!summary]
 > An XOR linked list stores the XOR of previous and next addresses, reducing pointer storage at the cost of safety and maintainability.
+
+Map: [[Upskill/DSA/DSA|DSA]]
 
 Related: [[Upskill/DSA/Data Structures/Linked List|Linked List]]
 

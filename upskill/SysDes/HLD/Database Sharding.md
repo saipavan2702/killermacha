@@ -1,8 +1,8 @@
-# Database Sharding
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 Related: [[Upskill/SysDes/HLD/Database Scaling|Database Scaling]]
 
-Related: [[Upskill/SysDes/HLD/Caching|Caching]] · [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]] · [[Upskill/SysDes/HLD/Consistent Hashing|Consistent Hashing]] · [[QoL/Refs/SysDes|SysDes Refs]]
+Related: [[Upskill/SysDes/HLD/Caching|Caching]] · [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]] · [[Upskill/SysDes/HLD/Consistent Hashing|Consistent Hashing]] · [[Upskill/SysDes/System Design|System Design]]
 
 ### 5. Database Sharding
 

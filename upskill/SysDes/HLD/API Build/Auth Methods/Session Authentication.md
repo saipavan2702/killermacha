@@ -1,7 +1,7 @@
-# Session Authentication
-
 > [!summary]
 > Session authentication stores login state on the server and gives the browser an opaque session identifier in a protected cookie.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## Flow
 

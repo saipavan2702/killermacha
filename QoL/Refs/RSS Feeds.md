@@ -1,12 +1,12 @@
-# RSS Feeds
+Map: [[QoL/Resources|Resources]]
 
 ## APIs
 
-- https://currentsapi.services/en
-- https://mediastack.com/
-- https://www.freenewsapi.io/
-- https://freeapis.juheapi.com/
-- https://headlinefeed.dev/
+- [Currents API](https://currentsapi.services/en) - Searchable news API.
+- [Mediastack](https://mediastack.com/) - News data API.
+- [Free News API](https://www.freenewsapi.io/) - Free-tier news feed API.
+- [Juhe Free APIs](https://freeapis.juheapi.com/) - Public API collection.
+- [HeadlineFeed](https://headlinefeed.dev/) - Developer-friendly headline feed.
 
 ## GitHub
 

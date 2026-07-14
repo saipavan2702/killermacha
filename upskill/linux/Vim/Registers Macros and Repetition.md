@@ -1,4 +1,5 @@
-# Vim Registers, Macros, and Repetition
+Map: [[Upskill/Linux/Vim/Vim|Vim]]
+
 
 > [!summary]
 > Registers store text, macros record actions, and the dot command repeats the last change.
@@ -57,3 +58,8 @@ cwnew<Esc>   " Changes the current word to 'new'
 ```
 
 ---
+
+## Related
+
+- [[Upskill/Linux/Vim/Search and Substitution|Search and Substitution]]
+- [[Upskill/Linux/Vim/Files Buffers and Windows|Files Buffers and Windows]]

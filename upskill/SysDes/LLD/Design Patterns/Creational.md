@@ -1,9 +1,9 @@
-# Creational
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ### 1. Singleton
 **Purpose**: Ensure only one instance of a class exists.
 **Use when**: You need exactly one shared resource, like a logger or DB connection. Multiple instances would conflict or waste resources.
-**Cons**: Can't easily mock for UT; Needs thread-safe to avoid race condition 
+**Cons**: Can't easily mock for UT; Needs thread-safe to avoid race condition
 **Example**: Database connection, Logger
 ```java
 class Database {
@@ -65,9 +65,9 @@ public class Singleton {
 ```
 
 >[!info]
->The JVM guarantees that static fields are initialized exactly once, when the class is first loaded — and class loading is inherently thread-safe. 
+>The JVM guarantees that static fields are initialized exactly once, when the class is first loaded — and class loading is inherently thread-safe.
  So you get thread safety for free, no synchronized, no volatile needed.
-The tradeoff: the instance is created eagerly (at class load time), even if nobody ever calls getInstance(). 
+The tradeoff: the instance is created eagerly (at class load time), even if nobody ever calls getInstance().
 The double-checked locking version is lazy (creates only when first needed) — better if the object is heavy and might not always be used.
 
 > Core idea: one shared resource, safely handed out to many concurrent callers.
@@ -172,5 +172,10 @@ class ExpensiveObject {
 ```
 
 ---
+
+
+## Related
+
+- [[Upskill/SysDes/LLD/Design Patterns/Structural|Structural]]
 
 #sysdes #design-patterns

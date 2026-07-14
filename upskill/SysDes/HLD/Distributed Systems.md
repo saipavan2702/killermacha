@@ -1,7 +1,7 @@
-# Distributed Systems
-
 > [!summary]
 > Distributed systems coordinate independent machines to improve scale and resilience despite partial failures.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## What is a Distributed System?
 
@@ -54,12 +54,12 @@ Combine results from all machines
 class DistributedPrimeCounter:
     def __init__(self, workers):
         self.workers = workers
-    
+
     def count_primes_distributed(self, start, end):
         # 1. Divide work
         chunk_size = (end - start) // len(self.workers)
         tasks = []
-        
+
         for i, worker in enumerate(self.workers):
             chunk_start = start + (i * chunk_size)
             chunk_end = chunk_start + chunk_size if i < len(self.workers)-1 else end
@@ -68,13 +68,13 @@ class DistributedPrimeCounter:
                 'start': chunk_start,
                 'end': chunk_end
             })
-        
+
         # 2. Assign tasks to workers
         results = []
         for task in tasks:
             result = task['worker'].count_primes(task['start'], task['end'])
             results.append(result)
-        
+
         # 3. Combine results
         total = sum(results)
         return total
@@ -87,7 +87,7 @@ class WorkerNode:
             if self.is_prime(num):
                 count += 1
         return count
-    
+
     def is_prime(self, n):
         if n < 2:
             return False
@@ -127,35 +127,35 @@ class Node:
         self.id = node_id
         self.all_nodes = all_nodes
         self.is_leader = False
-    
+
     def detect_leader_failure(self):
         # Periodically check leader health
         if not self.ping_leader():
             print(f"Node {self.id}: Leader is down!")
             self.start_election()
-    
+
     def start_election(self):
         print(f"Node {self.id}: Starting election")
-        
+
         # Find nodes with higher IDs
         higher_nodes = [n for n in self.all_nodes if n.id > self.id]
-        
+
         if not higher_nodes:
             # I have highest ID, I become leader
             self.become_leader()
         else:
             # Ask higher nodes to take over
             responses = [n.respond_to_election() for n in higher_nodes]
-            
+
             if not any(responses):
                 # No response from higher nodes, I become leader
                 self.become_leader()
-    
+
     def become_leader(self):
         self.is_leader = True
         print(f"Node {self.id}: I am the new leader!")
         self.announce_leadership()
-    
+
     def announce_leadership(self):
         for node in self.all_nodes:
             if node.id != self.id:
@@ -187,23 +187,23 @@ class Orchestrator:
         self.servers = servers
         self.is_leader = is_leader
         self.health_check_interval = 30  # seconds
-    
+
     def monitor_servers(self):
         while True:
             for server in self.servers:
                 if not self.check_health(server):
                     print(f"Server {server.id} is down!")
                     self.restart_server(server)
-            
+
             time.sleep(self.health_check_interval)
-    
+
     def check_health(self, server):
         try:
             response = requests.get(f"{server.url}/health", timeout=5)
             return response.status_code == 200
         except:
             return False
-    
+
     def restart_server(self, server):
         print(f"Restarting server {server.id}...")
         # Execute restart command (e.g., Docker, Kubernetes)
@@ -214,22 +214,22 @@ class LeaderOrchestrator(Orchestrator):
     def __init__(self, worker_orchestrators, servers):
         super().__init__(servers, is_leader=True)
         self.worker_orchestrators = worker_orchestrators
-    
+
     def monitor_all(self):
         # Monitor worker orchestrators
         threading.Thread(target=self.monitor_workers).start()
         # Monitor servers
         threading.Thread(target=self.monitor_servers).start()
-    
+
     def monitor_workers(self):
         while True:
             for worker in self.worker_orchestrators:
                 if not self.check_health(worker):
                     print(f"Worker orchestrator {worker.id} is down!")
                     self.restart_orchestrator(worker)
-            
+
             time.sleep(self.health_check_interval)
-    
+
     def restart_orchestrator(self, worker):
         print(f"Restarting worker orchestrator {worker.id}...")
         os.system(f"docker restart {worker.container_id}")
@@ -286,3 +286,7 @@ Worker Nodes (Followers):
 ```
 
 ---
+
+## Related
+
+- [[Upskill/SysDes/HLD/Microservices|Microservices]]

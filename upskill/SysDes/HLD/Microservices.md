@@ -1,7 +1,7 @@
-# Microservices
-
 > [!summary]
 > Microservices trade operational complexity for independent deployment, ownership, and scaling.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## Monolith vs Microservices
 
@@ -124,3 +124,8 @@ Team grows → More microservices
 - Want to avoid single point of failure
 
 ---
+
+## Related
+
+- [[Upskill/SysDes/HLD/Distributed Systems|Distributed Systems]]
+- [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]]

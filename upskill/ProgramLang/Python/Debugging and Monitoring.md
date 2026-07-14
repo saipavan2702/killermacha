@@ -1,4 +1,5 @@
-# Python Debugging and Monitoring
+Map: [[Upskill/ProgramLang/Python/Python|Python]]
+
 
 > [!summary]
 > Use logs, tracebacks, memory tracking, file monitoring, system-call tracing, and interactive debugging to explain failures instead of guessing.
@@ -47,31 +48,31 @@ def process_file(filename):
     """
     This function shows PROPER exception handling with logging
     """
-    
+
     try:
         logger.info(f"Opening file: {filename}")
-        
+
         with open(filename, 'r') as f:
             data = f.read()
             logger.info(f"Successfully read {len(data)} characters")
             return data
-        
+
     except FileNotFoundError:
         logger.error(f"ERROR: File '{filename}' not found!")
         logger.error("Check if the file path is correct")
         return None
-    
+
     except PermissionError:
         logger.error(f"ERROR: Permission denied for '{filename}'")
         logger.error("Check file permissions (chmod on Linux/Mac)")
         return None
-    
+
     except Exception as e:
         logger.error(f"Unexpected error: {type(e).__name__}")
         logger.error(f"Details: {e}")
         logger.debug("Full error trace:", exc_info=True)  # Full traceback
         return None
-    
+
     finally:
         logger.info("Finished processing file")
 
@@ -96,15 +97,15 @@ import tracemalloc
 def memory_hungry_function():
     tracemalloc.start()
     logger.info("Started memory tracking")
-    
+
     big_list = [i * i for i in range(1000000)]  # Creates 1 million numbers
-    
+
     current, peak = tracemalloc.get_traced_memory()
     logger.info(f"Current memory: {current / 1024 / 1024:.2f} MB")
     logger.info(f"Peak memory: {peak / 1024 / 1024:.2f} MB")
-    
+
     tracemalloc.stop()
-    
+
 # =============================================================================
 # STEP 4: WATCHDOG - Monitor File Changes in Real-Time
 # =============================================================================
@@ -125,11 +126,11 @@ class MyFileMonitor(FileSystemEventHandler):
     def on_modified(self, event):
         if not event.is_directory:
             logger.warning(f"⚠️  FILE MODIFIED: {event.src_path}")
-    
+
     def on_created(self, event):
         if not event.is_directory:
             logger.info(f"✅ FILE CREATED: {event.src_path}")
-    
+
     def on_deleted(self, event):
         if not event.is_directory:
             logger.error(f"❌ FILE DELETED: {event.src_path}")
@@ -137,11 +138,11 @@ class MyFileMonitor(FileSystemEventHandler):
 def start_watching_directory(path="./data"):
     event_handler = MyFileMonitor()
     observer = Observer()
-    
+
     # Tell observer: watch this directory, use this event handler
     observer.schedule(event_handler, path, recursive=False)
     observer.start()
-    
+
     logger.info(f"👀 Now watching directory: {path}")
     return observer
 
@@ -204,16 +205,16 @@ Add this line where you want to pause:
 
 def buggy_function(x, y):
     result = x + y
-    
+
     import pdb; pdb.set_trace()  # ← EXECUTION PAUSES HERE
-    
+
     # Now you can type commands:
     # (Pdb) print(x)      → Shows value of x
     # (Pdb) print(y)      → Shows value of y
     # (Pdb) n             → Next line
     # (Pdb) c             → Continue execution
     # (Pdb) l             → List code around current line
-    
+
     return result * 2
 
 # =============================================================================
@@ -224,19 +225,19 @@ def complete_monitoring_workflow():
     """
     THE FULL PROFESSIONAL WORKFLOW
     """
-    
+
     logger.info("="*60)
     logger.info("APPLICATION STARTED")
     logger.info("="*60)
-    
+
     # Step 1: Start memory tracking
     tracemalloc.start()
     logger.info("✓ Memory tracking started")
-    
+
     # Step 2: Start file monitoring
     observer = start_watching_directory("./data")
     logger.info("✓ File monitoring started")
-    
+
     try:
         # Step 3: Do your actual work with exception handling
         logger.info("Processing files...")
@@ -246,17 +247,17 @@ def complete_monitoring_workflow():
             logger.info("✓ File processed successfully")
         else:
             logger.error("✗ File processing failed")
-        
+
         # Step 4: Check memory usage
         current, peak = tracemalloc.get_traced_memory()
         logger.info(f"Memory usage: {current / 1024 / 1024:.2f} MB (peak: {peak / 1024 / 1024:.2f} MB)")
-        
+
         # If you suspect a specific section, add breakpoint:
         # import pdb; pdb.set_trace()
-        
+
     except Exception as e:
         logger.critical(f"CRITICAL ERROR: {e}", exc_info=True)
-    
+
     finally:
         # Step 5: Cleanup
         observer.stop()
@@ -282,9 +283,13 @@ if __name__ == "__main__":
     print("This is PRODUCTION Python.")
     print("\nWhen your script crashes at 3 AM, THIS is what saves you.\n")
     print("="*70)
-    
+
     import os
     os.makedirs("./data", exist_ok=True)
-    
+
     complete_monitoring_workflow()
 ```
+
+## Related
+
+- [[Upskill/ProgramLang/Python/Retries and Timeouts|Retries and Timeouts]]

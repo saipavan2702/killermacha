@@ -1,7 +1,7 @@
-# SQL vs NoSQL
-
 > [!summary]
 > Choose a database from data shape, consistency needs, query patterns, and scale rather than from popularity.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## SQL Databases
 
@@ -99,3 +99,8 @@ real_time_inventory_tracking → Cassandra
 ```
 
 ---
+
+## Related
+
+- [[Upskill/CS Topics/Databases/SQL|SQL]]
+- [[Upskill/SysDes/HLD/Database Scaling|Database Scaling]]

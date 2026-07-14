@@ -1,5 +1,3 @@
-# Note System
-
 Keep the vault easy to use: capture quickly, clarify later, and organize by meaning.
 
 ## Flow

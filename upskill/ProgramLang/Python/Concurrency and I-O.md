@@ -1,4 +1,5 @@
-# Python Concurrency and I-O
+Map: [[Upskill/ProgramLang/Python/Python|Python]]
+
 
 > [!summary]
 > Choose processes for isolated CPU work, threads for I/O, and explicit timeouts for subprocesses and network calls.
@@ -120,3 +121,7 @@ def wait_for_state(client, get_fn, resource_id, terminal_states, timeout=3600):
 ```
 
 ---
+
+## Related
+
+- [[Upskill/ProgramLang/Python/Retries and Timeouts|Retries and Timeouts]]

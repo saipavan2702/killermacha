@@ -1,7 +1,7 @@
-# SOLID Principles
-
 > [!summary]
 > SOLID principles guide dependency direction and responsibility boundaries so object-oriented code remains changeable.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## 🗺️ The Big Picture
 
@@ -241,6 +241,12 @@ LSP  →  Subclasses are trustworthy drop-in replacements; Subclasses should be 
 ISP  →  Interfaces are lean; nothing is forced on anyone; Many small interfaces > one large interface
 DIP  →  High-level logic is shielded from low-level detail; Depend on abstractions, not concrete classes
 ```
+
+
+## Related
+
+- [[Upskill/SysDes/LLD/Object-Oriented Programming|Object-Oriented Programming]]
+- [[Upskill/SysDes/LLD/Inheritance vs Composition|Inheritance vs Composition]]
 
 #oops #sysdes
 

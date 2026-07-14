@@ -1,4 +1,4 @@
-# Redux
+Map: [[Upskill/WebDev/Web Development|Web Development]]
 
 This javascript library allows us to manage states across the files without the problem of prop-drilling.
 
@@ -50,7 +50,7 @@ const store = configureStore({
 });
 
 
-// anyOtherFile.tsx 
+// anyOtherFile.tsx
 import { useSelector, useDispatch } from "react-redux";
 import { setAccount } from "../states/store";
 
@@ -82,7 +82,7 @@ import otherReducer from "./components/States/otherreducer.js";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import { PersistGate } from "redux-persist/integration/react";
-  
+
 const rootpersistConfig = {
   key: "root",
   storage,
@@ -94,13 +94,13 @@ const authPersistConfig = {
   storage,
 };
 
-  
+
 const rootReducer = combineReducers({
   auth: persistReducer(authPersistConfig, authReducer),
   other: otherReducer,
 });
 
-  
+
 const store = configureStore({
   reducer: persistReducer(rootpersistConfig, rootReducer),
   middleware: (getDefaultMiddleware) =>
@@ -132,6 +132,12 @@ If we have to purge the data  we can use `persist.purge("key")` but sometimes it
 
 As for [createAsyncThnuk](https://github.com/saipavan2702/mern-template/tree/master/frontend/src/features/auth) which helps in simplifying the process of handling asynchronous tasks and logic with the help of reduxjs/toolkit.
 
+## Related
+
+- [[Upskill/WebDev/Frontend/Next.js|Next.js]]
+- [[Upskill/WebDev/Frontend/Request Waterfalls|Request Waterfalls]]
+
+
 ---
 
 ## References
@@ -139,4 +145,3 @@ As for [createAsyncThnuk](https://github.com/saipavan2702/mern-template/tree/mas
 - [Redux Multiple Reducers](https://medium.com/@1992season/handling-multiple-stores-with-redux-toolkit-in-react-js-88b8278eeac8) - Multiple reducer setup.
 - [Redux Multiple Stores](https://www.geekyhub.in/post/handling-multiple-stores-in-react-redux-application/) - Store organization patterns.
 - [Purge Redux Persist State](https://stackoverflow.com/questions/68929107/how-to-purge-any-persisted-state-using-react-tool-kit-with-redux-persist) - Persist cleanup.
-

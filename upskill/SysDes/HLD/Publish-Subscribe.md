@@ -1,7 +1,7 @@
-# Publish-Subscribe
-
 > [!summary]
 > Publish-subscribe distributes real-time events to interested subscribers without tightly coupling producers and consumers.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## Pub/Sub vs Message Broker
 
@@ -79,7 +79,7 @@ subscriber.subscribe('chat-messages');
 // When Redis receives message, broadcast to all connected clients
 subscriber.on('message', (channel, message) => {
     const data = JSON.parse(message);
-    
+
     wss.clients.forEach(client => {
         if (client.userId === data.recipientId && client.readyState === WebSocket.OPEN) {
             client.send(JSON.stringify(data));
@@ -91,7 +91,7 @@ subscriber.on('message', (channel, message) => {
 wss.on('connection', (ws) => {
     ws.on('message', (msg) => {
         const data = JSON.parse(msg);
-        
+
         // Publish to Redis (all servers will receive)
         publisher.publish('chat-messages', JSON.stringify({
             senderId: data.senderId,
@@ -159,3 +159,8 @@ pubSub.publish('test’)
 ```
 
 ---
+
+## Related
+
+- [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]]
+- [[Upskill/SysDes/HLD/Message Queues|Message Queues]]

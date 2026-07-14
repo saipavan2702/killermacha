@@ -1,7 +1,7 @@
-# Binary Search
-
 > [!summary]
 > Binary search repeatedly removes half of an ordered search space and can find exact values, boundaries, or feasible answers in logarithmic time.
+
+Map: [[Upskill/DSA/DSA|DSA]]
 
 Related: [[Upskill/DSA/Data Structures/Tree|Tree]] · [[Upskill/DSA/Data Structures/Segment Tree|Segment Tree]]
 
@@ -15,10 +15,10 @@ class Solution {
         int n = nums.length;
         int low = 0;
         int high = n - 1;
-        
+
         while (low <= high) {
             int mid = low + (high - low) / 2;
-            
+
             if (key < nums[mid])
                 high = mid-1;
             else if (key > nums[mid])
@@ -40,10 +40,10 @@ class Solution {
         int low = 0;
         int high = n - 1;
         int ans=-1;
-        
+
         while (low <= high) {
             int mid = low + (high - low + 1) / 2;
-            
+
             if (nums[mid] > key)
                 high = mid-1;
             else if (nums[mid] < key)
@@ -67,10 +67,10 @@ class Solution {
         int low = 0;
         int high = n - 1;
         int ans=-1;
-        
+
         while (low <= high) {
             int mid = low + (high - low + 1) / 2;
-            
+
             if (nums[mid] > key)
                 high = mid-1;
             else if (nums[mid] < key)
@@ -94,10 +94,10 @@ class Solution {
         int low = 0;
         int high = n - 1;
         int ans=-1;
-        
+
         while (low <= high) {
             int mid = low + (high - low + 1) / 2;
-            
+
             if (nums[mid] > key)
                 ans=mid,high = mid-1;
             else if (nums[mid] < key)
@@ -119,10 +119,10 @@ class Solution {
         int low = 0;
         int high = n - 1;
         int ans=-1;
-        
+
         while (low <= high) {
             int mid = low + (high - low + 1) / 2;
-            
+
             if (nums[mid] > key)
                 high = mid-1;
             else if (nums[mid] < key)
@@ -139,7 +139,5 @@ class Solution {
 
 ## Practice
 [Maximum value at a given index](https://leetcode.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
-
-
 
 #dsa #binary-search

@@ -1,7 +1,7 @@
-# Single Sign-On
-
 > [!summary]
 > Single Sign-On lets a user authenticate once with a trusted Identity Provider and enter multiple applications without repeating the login ceremony.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 > [!important]
 > SSO is a trust relationship and user experience. JWT is a token format; Redis is a state store; OIDC and SAML are protocols that can implement SSO.

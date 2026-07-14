@@ -1,4 +1,5 @@
-# Go Synchronization
+Map: [[Upskill/ProgramLang/Golang/Go|Go]]
+
 
 > [!summary]
 > Mutexes, read-write locks, once guards, wait groups, and channels coordinate shared work between goroutines.
@@ -68,3 +69,8 @@ ch <- 1                 // lock
 In Go, a type implements an interface automatically if it has all the methods required by that interface.
 
 ---
+
+## Related
+
+- [[Upskill/ProgramLang/Golang/Channels and Select|Channels and Select]]
+- [[Upskill/ProgramLang/Golang/Context|Context]]

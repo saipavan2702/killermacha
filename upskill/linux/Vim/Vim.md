@@ -1,7 +1,7 @@
-# Vim
-
 > [!summary]
 > A practical map for navigating, editing, searching, and automating text in Vim and Neovim.
+
+Map: [[Upskill/Linux/Linux|Linux and Tools]]
 
 ## Topics
 
@@ -13,7 +13,7 @@
 - [[Upskill/Linux/Vim/Command Line|Command Line]]
 - [[Upskill/Linux/Vim/Shell Filters and Advanced Commands|Shell Filters and Advanced Commands]]
 
-## 📚 Help & Manual
+## Help and Manual
 ```vim
 K                " Open help for word under cursor
 :help <cmd>      " Help for command
@@ -21,13 +21,18 @@ K                " Open help for word under cursor
 ```
 
 ---
-## 🪄 Spell Check Shortcuts
+## Spell Check Shortcuts
 ```vim
 ]s / [s         " Next / previous misspelled word
 z=              " Show suggestions
 zg              " Add word to dictionary
 zw              " Mark word as incorrect
 ```
+
+
+## Related
+
+- [[Upskill/Linux/Git/Git|Git]]
 
 #vim #bash
 

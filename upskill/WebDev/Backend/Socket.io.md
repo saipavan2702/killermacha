@@ -1,4 +1,4 @@
-# Socket.io
+Map: [[Upskill/WebDev/Web Development|Web Development]]
 
 Socket.io is a javascript library which works by establishing a web socket connection. WebSocket is a communication protocol that provides full-duplex communication between users.
 
@@ -16,7 +16,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-  
+
 const server = app.listen(8080, () => console.log("Connected"));
 const io = socket(server, {
   cors: {
@@ -25,10 +25,10 @@ const io = socket(server, {
   },
 });
 
-  
+
 io.on("connection", (socket) => {
   console.log(`user connected: ${socket.id}`);
-  
+ 
   socket.on("join-room", (data) => {
     socket.join(data);
     console.log(`user joined: ${socket.id} to room ${data}`);
@@ -47,20 +47,20 @@ io.on("connection", (socket) => {
 
 Later after we enabled connection using `connection` namespace we have our socket and we can observe various events, when we write send-msg in client side it checks for the event send-msg in server side and does the function, that is to send data to `data.room` by emitting.
 
-Now for client side, 
+Now for client side,
 ```jsx
 //Chat.jsx
 import { io } from "socket.io-client";
 import { useState } from "react";
 import Message from "./Message";
 
-  
+
 const socket = io("http://localhost:8080"); //io.connect(host) can also be used
 
 const Chat = () => {
   const [room, setRoom] = useState("");
   const [name, setName] = useState("");
-  
+
   const handleRoom = (event) => {
     event.preventDefault();
     console.log(name);
@@ -100,14 +100,14 @@ const Message = ({ socket, name, room }) => {
     }
   };
 
-  
+
   useEffect(() => {
     msgRef.current = (data) => {
       setMsgList((prev) => [...prev, data]);
     };
-    
+   
     socket.on("onreceive-msg", msgRef.current);
-    
+   
     return () => {
       socket.off("onreceive-msg", msgRef.current);
     };
@@ -115,13 +115,13 @@ const Message = ({ socket, name, room }) => {
 
  /**
  another way to tackle re-render
- 
+
   useMemo(() => {
     socket.on("onreceive-msg", (data) => {
       setMsgList((prev) => [...prev, data]);
     });
   }, [socket]);
-   
+
   */
 
   return (
@@ -148,5 +148,8 @@ const Message = ({ socket, name, room }) => {
 
 Here we are using msgRef to tackle strict mode in react from pushing a msg twice into msgList, as it discards one state/render. Else we will get each message twice. Also, useMemo can be used to tackle the twice rendering.
 
-#tips
 *There wont be any http request while doing these socket things that's the beauty*
+
+## Related
+
+- [[Upskill/WebDev/Backend/Express.js|Express.js]]

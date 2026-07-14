@@ -1,6 +1,6 @@
-# Inversion of Control
+Map: [[Upskill/ProgramLang/Java/Java|Java]]
 
-Inversion of Control (IoC) is a design principle in software engineering . 
+Inversion of Control (IoC) is a design principle in software engineering .
 In general, we have control over object creation and lifecycle management but we give up the control and give it to external container/framework.
 
 For example without `IoC` our code would look like this:
@@ -20,7 +20,7 @@ public class NotificationService {
 }
 ```
 
-Problem is `NotificationService` is tightly coupled to `EmailSender`. 
+Problem is `NotificationService` is tightly coupled to `EmailSender`.
 But with IoC we can decouple them.
 ```java
 // The contract (interface)
@@ -63,4 +63,10 @@ public class NotificationService {
 
 
 
-#java #springboot 
+
+## Related
+
+- [[Upskill/ProgramLang/Java/Coupling and Dependency Injection|Coupling and Dependency Injection]]
+- [[Upskill/ProgramLang/Java/Spring Boot|Spring Boot]]
+
+#java #springboot

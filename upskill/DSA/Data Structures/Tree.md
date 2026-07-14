@@ -1,7 +1,7 @@
-# Tree
-
 > [!summary]
 > Trees model hierarchical relationships through parent-child links and support recursive traversal, search, and aggregation.
+
+Map: [[Upskill/DSA/DSA|DSA]]
 
 Related: [[Upskill/DSA/Data Structures/Segment Tree|Segment Tree]] · [[Upskill/DSA/Data Structures/Graph|Graph]]
 

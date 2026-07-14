@@ -1,4 +1,4 @@
-# Morse Code
+Map: [[Upskill/Learning|Learning]]
 
 ## The Core Idea
 

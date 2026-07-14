@@ -1,7 +1,7 @@
-# Java
-
 > [!summary]
 > A map of Java language fundamentals, collections, dependency design, concurrency, and Spring topics.
+
+Map: [[Upskill/Learning|Learning]]
 
 ## Language
 
@@ -22,5 +22,7 @@
 ## Related
 
 - [[Upskill/SysDes/LLD/Design Patterns/Design Patterns|Design Patterns]]
+- [[Upskill/ProgramLang/Golang/Go|Go]]
+- [[Upskill/ProgramLang/Python/Python|Python]]
 
-#lang #java
+#java

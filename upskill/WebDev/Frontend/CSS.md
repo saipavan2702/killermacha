@@ -1,4 +1,4 @@
-# CSS
+Map: [[Upskill/WebDev/Web Development|Web Development]]
 
 We can use & to select and modify nested classes.
 ```html
@@ -10,7 +10,7 @@ We can use & to select and modify nested classes.
 
 ```css
 .class1{
- & .class2{  
+ & .class2{
  }
 }
 ```
@@ -20,7 +20,7 @@ We can use & to select and modify nested classes.
 ## BEM
  It is an acronym for Block Element Modifiers. It is a naming technique to enable CSS more readable.
 ```html
-<!-- 
+<!--
 Online HTML, CSS and JavaScript editor to run code online.
 -->
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ Online HTML, CSS and JavaScript editor to run code online.
   <link rel="stylesheet" href="style.css" />
   <title>Browser</title>
 </head>
-  
+
 <body>
   <div class="card">
 	  <div class="card__header">
@@ -119,7 +119,7 @@ body {
 
 ```
 
-Here we can observe some things, firstly BEM is a naming convention and we write block element with `__element` and `--modifier` to denote the behavior or properties for the element. From example, `card__button` or `card__header` they are elements and behavior or property of button is denoted by `card__button--primary`. 
+Here we can observe some things, firstly BEM is a naming convention and we write block element with `__element` and `--modifier` to denote the behavior or properties for the element. From example, `card__button` or `card__header` they are elements and behavior or property of button is denoted by `card__button--primary`.
 
 
 Harry Roberts styl3
@@ -195,7 +195,6 @@ Exploring scope feature in css
 </div>
 ```
 
-#tips
 - `@import-normalize` is used to implement consistent styling.
 - use clamp instead of media-queries for smaller screens. `width:clamp(50%,700px,90%)`
 - `#rrggbbAA` AA denotes the opacity and for 50% opacity (255/2)=128 => 80 (hex)
@@ -204,10 +203,14 @@ Exploring scope feature in css
 
 [[Upskill/WebDev/Frontend/Framer Motion|Framer Motion]]
 
+## Related
+
+- [[Upskill/WebDev/Frontend/Framer Motion|Framer Motion]]
+
+
 ---
 
 ## References
 
 - [Fluid Media Queries in CSS](https://www.smashingmagazine.com/2022/01/modern-fluid-typography-css-clamp/) - Fluid typography and `clamp()`.
 - [Flexible Layouts Without Media Queries](https://blog.logrocket.com/flexible-layouts-without-media-queries/) - Responsive layout patterns.
-

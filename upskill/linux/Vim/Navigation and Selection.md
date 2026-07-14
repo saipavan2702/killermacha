@@ -1,4 +1,5 @@
-# Vim Navigation and Selection
+Map: [[Upskill/Linux/Vim/Vim|Vim]]
+
 
 > [!summary]
 > Vim becomes fast when movement expresses intent: words, lines, screens, jumps, and text objects.
@@ -40,15 +41,15 @@
 ---
 ## 📐 Visual Mode Selection
 
-- `v` → Start character-wise selection  
-- `V` → Start line-wise selection  
-- `Ctrl + v` → Start block (column) selection  
-- `o` → Switch selection anchor  
-- `y`, `d`, `p` → Yank, delete, or paste selection  
+- `v` → Start character-wise selection
+- `V` → Start line-wise selection
+- `Ctrl + v` → Start block (column) selection
+- `o` → Switch selection anchor
+- `y`, `d`, `p` → Yank, delete, or paste selection
 
 **Text Objects:**
-- `viw`, `vaw` → Visual inside / around word  
-- `vi"`, `va"` → Inside / around quotes  
+- `viw`, `vaw` → Visual inside / around word
+- `vi"`, `va"` → Inside / around quotes
 - `vi(`, `va(`, `vi{`, `va{` → Inside / around brackets/braces
 
 ###  Inside (`i`) vs Around (`a`)
@@ -73,9 +74,9 @@ Ctrl + i        " Jump forward in jumplist
 
 ## 🎯 The Power of `g` Commands
 
-- `g~` → Toggle case  
-- `gu` → Lowercase  
-- `gU` → Uppercase  
+- `g~` → Toggle case
+- `gu` → Lowercase
+- `gU` → Uppercase
 
 Apply them to motions like `w`, `aw`, or visual selections.
 
@@ -87,3 +88,7 @@ g~i"    " Toggle case inside double quotes
 ```
 
 ---
+
+## Related
+
+- [[Upskill/Linux/Vim/Editing Text|Editing Text]]

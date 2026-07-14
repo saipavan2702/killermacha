@@ -1,7 +1,7 @@
-# Access and Refresh Tokens
-
 > [!summary]
 > Short-lived access tokens limit exposure; longer-lived refresh tokens obtain replacements without making the user log in repeatedly.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## Different Jobs
 

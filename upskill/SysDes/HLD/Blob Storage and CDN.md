@@ -1,7 +1,7 @@
-# Blob Storage and CDN
-
 > [!summary]
 > Store large binary objects outside transactional databases and serve them through geographically distributed caches.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## What is Blob Storage?
 
@@ -63,19 +63,19 @@ app.post('/upload', upload.single('image'), async (req, res) => {
         Body: req.file.buffer,
         ContentType: req.file.mimetype
     };
-    
+
     try {
         const result = await s3.upload(params).promise();
-        
+
         // Store URL in database (not the file itself!)
         await database.users.update({
             userId: req.user.id,
             profileImage: result.Location
         });
-        
-        res.json({ 
+
+        res.json({
             message: 'Upload successful',
-            url: result.Location 
+            url: result.Location
         });
     } catch (error) {
         res.status(500).json({ error: 'Upload failed' });
@@ -213,3 +213,8 @@ const imageUrl = "https://d1234abcd.cloudfront.net/image.jpg";
 ```
 
 ---
+
+## Related
+
+- [[Upskill/SysDes/HLD/Proxy Servers|Proxy Servers]]
+- [[Upskill/SysDes/HLD/Caching|Caching]]

@@ -1,7 +1,7 @@
-# Scaling Fundamentals
-
 > [!summary]
 > Start with a simple client-server-database architecture, then scale only when traffic, reliability, or latency requires it.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 Most college projects work fine with a simple architecture:
 
@@ -110,10 +110,14 @@ After:  3 servers sharing the load via Load Balancer
 IF CPU usage > 90%:
     Launch new instance
     Distribute traffic
-    
+
 IF CPU usage < 20%:
     Terminate instance
     Consolidate traffic
 ```
 
 ---
+
+## Related
+
+- [[Upskill/SysDes/HLD/Capacity Estimation|Capacity Estimation]]

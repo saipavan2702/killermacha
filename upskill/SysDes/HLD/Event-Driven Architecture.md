@@ -1,7 +1,7 @@
-# Event-Driven Architecture
-
 > [!summary]
 > Event-driven systems communicate through facts that have happened, improving decoupling while introducing delivery and consistency trade-offs.
+
+Map: [[Upskill/SysDes/System Design|System Design]]
 
 ## Traditional vs Event-Driven
 
@@ -12,16 +12,16 @@
 app.post('/order', async (req, res) => {
     // 1. Create order
     const order = await createOrder(req.body);
-    
+
     // 2. Process payment (waits for response)
     const payment = await paymentService.charge(order.amount);
-    
+
     // 3. Update inventory (waits for response)
     await inventoryService.updateStock(order.items);
-    
+
     // 4. Send notification (waits for response)
     await notificationService.sendEmail(order.userId);
-    
+
     res.json({ orderId: order.id });  // Client waited for everything!
 });
 ```
@@ -38,10 +38,10 @@ app.post('/order', async (req, res) => {
 app.post('/order', async (req, res) => {
     // 1. Create order
     const order = await createOrder(req.body);
-    
+
     // 2. Process payment (critical - wait for this)
     const payment = await paymentService.charge(order.amount);
-    
+
     if (payment.success) {
         // 3. Publish event (fire and forget)
         await eventBus.publish('order.completed', {
@@ -50,7 +50,7 @@ app.post('/order', async (req, res) => {
             items: order.items,
             timestamp: Date.now()
         });
-        
+
         // 4. Immediate response to client
         res.json({ orderId: order.id, status: 'confirmed' });
     }
@@ -162,14 +162,14 @@ app.post('/order', async (req, res) => {
     try {
         // 1. Validate and create order
         const order = await createOrder(req.body);
-        
+
         // 2. Process payment
         const payment = await stripe.charges.create({
             amount: order.total * 100,
             currency: 'usd',
             source: req.body.paymentToken
         });
-        
+
         if (payment.status === 'succeeded') {
             // 3. Publish event
             await orderProducer.send({
@@ -189,8 +189,8 @@ app.post('/order', async (req, res) => {
                     })
                 }]
             });
-            
-            res.json({ 
+
+            res.json({
                 success: true,
                 orderId: order.id,
                 message: 'Order placed successfully'
@@ -209,17 +209,17 @@ await inventoryConsumer.subscribe({ topic: 'order-events' });
 await inventoryConsumer.run({
     eachMessage: async ({ message }) => {
         const event = JSON.parse(message.value.toString());
-        
+
         if (event.eventType === 'order.completed') {
             console.log('Updating inventory...');
-            
+
             for (const item of event.data.items) {
                 await database.products.updateOne(
                     { _id: item.productId },
                     { $inc: { stock: -item.quantity } }
                 );
             }
-            
+
             console.log('Inventory updated successfully');
         }
     }
@@ -233,10 +233,10 @@ await notificationConsumer.subscribe({ topic: 'order-events' });
 await notificationConsumer.run({
     eachMessage: async ({ message }) => {
         const event = JSON.parse(message.value.toString());
-        
+
         if (event.eventType === 'order.completed') {
             console.log('Sending notification...');
-            
+
             await sendEmail({
                 to: event.data.userEmail,
                 subject: 'Order Confirmation',
@@ -246,7 +246,7 @@ await notificationConsumer.run({
                     <p>Total: $${event.data.total}</p>
                 `
             });
-            
+
             console.log('Notification sent successfully');
         }
     }
@@ -260,10 +260,10 @@ await analyticsConsumer.subscribe({ topic: 'order-events' });
 await analyticsConsumer.run({
     eachMessage: async ({ message }) => {
         const event = JSON.parse(message.value.toString());
-        
+
         if (event.eventType === 'order.completed') {
             console.log('Recording analytics...');
-            
+
             await database.analytics.insert({
                 eventType: 'purchase',
                 userId: event.data.userId,
@@ -271,7 +271,7 @@ await analyticsConsumer.run({
                 itemCount: event.data.items.length,
                 timestamp: event.data.timestamp
             });
-            
+
             console.log('Analytics recorded');
         }
     }
@@ -285,3 +285,8 @@ await analyticsConsumer.run({
 - Each service can be in different programming language
 
 ---
+
+## Related
+
+- [[Upskill/SysDes/HLD/Microservices|Microservices]]
+- [[Upskill/SysDes/HLD/Publish-Subscribe|Publish-Subscribe]]

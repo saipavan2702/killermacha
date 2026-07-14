@@ -1,4 +1,4 @@
-# Express.js
+Map: [[Upskill/WebDev/Web Development|Web Development]]
 
 ### nodemon
 `npm i nodemon` is used to install nodemon in backend.
@@ -10,7 +10,7 @@ In typescript nodemon had to be installed and we need to update scripts in packa
 Above script to enable nodemon in typescript env. as --watch on folder server if we give file like index.ts it watches over file and triggers when change happens in any of those files, and --ext is where dictates which type of files should be monitored ts,json files, and --exec executes needed command ts-node index.ts to run index file.
 
 
-### URLSearchParams 
+### URLSearchParams
 
 while performing search we take up many parameters and filter elements to which we have to fetch database.
 
@@ -18,7 +18,7 @@ while performing search we take up many parameters and filter elements to which 
 const {URLSearchParams}=require("url");
 
 //queryString to obj
-const queryString="status=solved&difficulty=easy"; 
+const queryString="status=solved&difficulty=easy";
 //It kind of splits string at "&"
 const params= new URLSearchParams(queryString);
 
@@ -51,5 +51,12 @@ queryString.stringify({foo:"bar",baz:"real"},';',':');
 ```
 QueryString is more performant than URLSearchParams but it is not standard API, but URLSearchParams is available in browsers and we use it when performance is not critical and it is more browser compatible.
 
-#typescript 
 In typescript env we use `npm i --save-dev ts-node`.
+
+## Related
+
+- [[Upskill/CS Topics/HTTP Methods|HTTP Methods]]
+- [[Upskill/WebDev/Backend/Socket.io|Socket.io]]
+- [[Upskill/Linux/Linux|Linux]]
+
+#typescript

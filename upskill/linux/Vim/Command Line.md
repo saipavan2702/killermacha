@@ -1,4 +1,5 @@
-# Vim Command Line
+Map: [[Upskill/Linux/Vim/Vim|Vim]]
+
 
 > [!summary]
 > Vim's command line applies Ex commands, ranges, shell commands, and file statistics without leaving the editor.
@@ -14,7 +15,7 @@
 ---
 
 
-## Vim Shell 
+## Vim Shell
 - **`!{motion}`** - Filter text through a shell command in normal mode
 - **`!`** (in visual mode) - Filter selected text through a shell command
 - **`x`** - Delete selected text (useful before filtering)
@@ -34,7 +35,7 @@
 #### File Statistics
 - **`:r !wc -l -w -m filename.txt`** - Insert line count, word count, and character count
   - `-l` = lines
-  - `-w` = words  
+  - `-w` = words
   - `-m` = characters
 - **`:r !wc -l *.txt | sort -n`** - Count lines in multiple files and sort numerically
 
@@ -115,3 +116,8 @@ gv            " reselect last visual
 ```
 
 Here are your polished examples for using stdin/stdout with Vim commands:
+
+## Related
+
+- [[Upskill/Linux/Vim/Files Buffers and Windows|Files Buffers and Windows]]
+- [[Upskill/Linux/Vim/Shell Filters and Advanced Commands|Shell Filters and Advanced Commands]]
