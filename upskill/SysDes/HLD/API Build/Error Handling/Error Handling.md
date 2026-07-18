@@ -34,6 +34,7 @@ Translate internal errors into a stable client contract at the HTTP or RPC bound
 
 ## Related
 
+- [[Upskill/SysDes/LLD/Clean Code Patterns|Clean Code Patterns]]
 - [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview|Authentication Methods]]
 - [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]]
 - [[Upskill/SysDes/HLD/Message Queues|Message Queues]]

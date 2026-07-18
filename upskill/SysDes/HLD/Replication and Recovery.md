@@ -527,3 +527,6 @@ console.log(blogSystem.getStrategy());
 
 - [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]
 - [[Upskill/SysDes/HLD/Database Scaling|Database Scaling]]
+- [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]]
+- [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]]
+- [[Upskill/SysDes/HLD/Distributed Systems Papers/Hadoop Distributed File System|Hadoop Distributed File System]]

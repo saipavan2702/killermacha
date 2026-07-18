@@ -1,6 +1,6 @@
 Map: [[QoL/Resources|Resources]]
 
-Related: [[QoL/Refs/Developer Resources|Developer Resources]] · [[QoL/Workspace Setup|Workspace Setup]]
+Related: [[Dev Resources|Dev Resources]] · [[Workspace|Workspace]]
 
 ## Window / Keyboard Fixes
 

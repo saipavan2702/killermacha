@@ -1,0 +1,298 @@
+/* Mermaid diagrams tuned for the Transparent theme. */
+body.theme-dark {
+  --km-mermaid-surface: rgba(255, 255, 255, 0.035);
+  --km-mermaid-node: rgba(255, 255, 255, 0.055);
+  --km-mermaid-edge-bg: rgba(20, 23, 29, 0.88);
+  --km-mermaid-border: rgba(255, 255, 255, 0.1);
+  --km-mermaid-border-strong: rgba(203, 213, 225, 0.42);
+  --km-mermaid-shadow: rgba(0, 0, 0, 0.12);
+  --km-mermaid-text: var(--text-normal, #f1f5f9);
+  --km-mermaid-muted: var(--text-muted, #cbd5e1);
+  --km-mermaid-cyan: #7dd3fc;
+  --km-mermaid-cyan-bg: rgba(14, 165, 233, 0.13);
+  --km-mermaid-green: #34d399;
+  --km-mermaid-green-bg: rgba(16, 185, 129, 0.13);
+  --km-mermaid-yellow: #facc15;
+  --km-mermaid-yellow-bg: rgba(234, 179, 8, 0.13);
+  --km-mermaid-purple: #c084fc;
+  --km-mermaid-purple-bg: rgba(168, 85, 247, 0.13);
+  --km-mermaid-pink: #fb7185;
+  --km-mermaid-pink-bg: rgba(244, 63, 94, 0.13);
+}
+
+body.theme-light {
+  --km-mermaid-surface: rgba(255, 255, 255, 0.48);
+  --km-mermaid-node: rgba(255, 255, 255, 0.68);
+  --km-mermaid-edge-bg: rgba(248, 250, 252, 0.94);
+  --km-mermaid-border: rgba(15, 23, 42, 0.1);
+  --km-mermaid-border-strong: rgba(71, 85, 105, 0.4);
+  --km-mermaid-shadow: rgba(15, 23, 42, 0.09);
+  --km-mermaid-text: var(--text-normal, #0f172a);
+  --km-mermaid-muted: var(--text-muted, #64748b);
+  --km-mermaid-cyan: #0369a1;
+  --km-mermaid-cyan-bg: rgba(14, 165, 233, 0.09);
+  --km-mermaid-green: #15803d;
+  --km-mermaid-green-bg: rgba(22, 163, 74, 0.09);
+  --km-mermaid-yellow: #a16207;
+  --km-mermaid-yellow-bg: rgba(202, 138, 4, 0.1);
+  --km-mermaid-purple: #7e22ce;
+  --km-mermaid-purple-bg: rgba(147, 51, 234, 0.08);
+  --km-mermaid-pink: #be123c;
+  --km-mermaid-pink-bg: rgba(225, 29, 72, 0.08);
+}
+
+.mermaid {
+  box-sizing: border-box;
+  display: flex;
+  width: min(100%, 700px);
+  justify-content: center;
+  margin: 1.35rem auto;
+  padding: 1.15rem 1.25rem;
+  overflow-x: auto;
+  border: 1px solid var(--km-mermaid-border);
+  border-radius: 8px;
+  background: var(--km-mermaid-surface) !important;
+  box-shadow:
+    0 12px 30px -26px var(--km-mermaid-shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(10px) saturate(112%);
+  -webkit-backdrop-filter: blur(10px) saturate(112%);
+}
+
+/* Obsidian dark mode inverts Mermaid SVGs by default; custom colors must not. */
+body.theme-dark .mermaid > svg,
+body.theme-dark .mermaid svg {
+  filter: none !important;
+}
+
+.mermaid svg {
+  display: block;
+  width: 100% !important;
+  max-width: 650px !important;
+  max-height: 460px;
+  height: auto !important;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.mermaid:has(rect.actor) {
+  width: min(100%, 940px);
+}
+
+.mermaid:has(rect.actor) svg {
+  max-width: 890px !important;
+  max-height: 620px;
+}
+
+/* Mermaid uses both SVG text and HTML inside foreignObject labels. */
+.mermaid svg text,
+.mermaid svg text tspan {
+  color: var(--km-mermaid-text) !important;
+  fill: var(--km-mermaid-text) !important;
+  -webkit-text-fill-color: var(--km-mermaid-text) !important;
+  font-family: var(--font-interface) !important;
+  letter-spacing: 0 !important;
+}
+
+.mermaid svg foreignObject,
+.mermaid svg foreignObject * {
+  color: var(--km-mermaid-text) !important;
+  fill: var(--km-mermaid-text) !important;
+  -webkit-text-fill-color: var(--km-mermaid-text) !important;
+  font-family: var(--font-interface) !important;
+  letter-spacing: 0 !important;
+}
+
+.mermaid .nodeLabel,
+.mermaid .nodeLabel * {
+  color: var(--km-mermaid-text) !important;
+  -webkit-text-fill-color: var(--km-mermaid-text) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+.mermaid .nodeLabel p {
+  box-sizing: border-box;
+  margin: 0 !important;
+  padding: 4px 10px !important;
+  line-height: 1.35 !important;
+}
+
+.mermaid .node :is(rect, polygon, circle, ellipse, path),
+.mermaid .stateGroup rect,
+.mermaid .label-container {
+  fill: var(--km-mermaid-node) !important;
+  stroke: var(--km-mermaid-border-strong) !important;
+  stroke-width: 1.2px !important;
+  rx: 9px;
+  ry: 9px;
+}
+
+.mermaid .node.toneCyan :is(rect, polygon, circle, ellipse, path) {
+  fill: var(--km-mermaid-cyan-bg) !important;
+  stroke: var(--km-mermaid-cyan) !important;
+}
+
+.mermaid .node.toneGreen :is(rect, polygon, circle, ellipse, path) {
+  fill: var(--km-mermaid-green-bg) !important;
+  stroke: var(--km-mermaid-green) !important;
+}
+
+.mermaid .node.toneYellow :is(rect, polygon, circle, ellipse, path) {
+  fill: var(--km-mermaid-yellow-bg) !important;
+  stroke: var(--km-mermaid-yellow) !important;
+}
+
+.mermaid .node.tonePurple :is(rect, polygon, circle, ellipse, path) {
+  fill: var(--km-mermaid-purple-bg) !important;
+  stroke: var(--km-mermaid-purple) !important;
+}
+
+.mermaid .node.tonePink :is(rect, polygon, circle, ellipse, path) {
+  fill: var(--km-mermaid-pink-bg) !important;
+  stroke: var(--km-mermaid-pink) !important;
+}
+
+.mermaid .flowchart-link,
+.mermaid .edgePath path,
+.mermaid .transition {
+  fill: none !important;
+  stroke: var(--km-mermaid-muted) !important;
+  stroke-width: 1.25px !important;
+  opacity: 0.84;
+}
+
+.mermaid marker path,
+.mermaid .marker {
+  fill: var(--km-mermaid-muted) !important;
+  stroke: var(--km-mermaid-muted) !important;
+}
+
+.mermaid .edgeLabel,
+.mermaid .edgeLabel :is(div, span, p, text, tspan) {
+  color: var(--km-mermaid-muted) !important;
+  fill: var(--km-mermaid-muted) !important;
+  -webkit-text-fill-color: var(--km-mermaid-muted) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+.mermaid .edgeLabel rect,
+.mermaid .edgeLabel .labelBkg,
+.mermaid .edgeLabel foreignObject,
+.mermaid .edgeLabel foreignObject > div,
+.mermaid .edgeLabel foreignObject span {
+  fill: transparent !important;
+  background: transparent !important;
+  stroke: none !important;
+  opacity: 1 !important;
+}
+
+.mermaid .edgeLabel p {
+  margin: 0 !important;
+  padding: 2px 6px !important;
+  overflow: hidden;
+  line-height: 1.25 !important;
+  background: var(--km-mermaid-edge-bg) !important;
+  background-clip: padding-box;
+  border: 0 !important;
+  border-radius: 6px;
+}
+
+/* Sequence diagrams */
+.mermaid rect.actor {
+  fill: var(--km-mermaid-cyan-bg) !important;
+  stroke: var(--km-mermaid-cyan) !important;
+  stroke-width: 1.2px !important;
+  rx: 9px;
+  ry: 9px;
+}
+
+.mermaid text.actor,
+.mermaid text.actor tspan {
+  color: var(--km-mermaid-text) !important;
+  fill: var(--km-mermaid-text) !important;
+  -webkit-text-fill-color: var(--km-mermaid-text) !important;
+  font-size: 14px !important;
+  font-weight: 650 !important;
+}
+
+.mermaid .actor-line {
+  stroke: var(--km-mermaid-muted) !important;
+  stroke-width: 1px !important;
+  stroke-dasharray: 3 5;
+  opacity: 0.55;
+}
+
+.mermaid .messageLine0,
+.mermaid .messageLine1 {
+  stroke: var(--km-mermaid-muted) !important;
+  stroke-width: 1.2px !important;
+  opacity: 0.88;
+}
+
+.mermaid .messageText,
+.mermaid .messageText tspan,
+.mermaid .sequenceNumber {
+  color: var(--km-mermaid-text) !important;
+  fill: var(--km-mermaid-text) !important;
+  -webkit-text-fill-color: var(--km-mermaid-text) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+.mermaid :is(.activation0, .activation1, .activation2) {
+  fill: var(--km-mermaid-green-bg) !important;
+  stroke: var(--km-mermaid-green) !important;
+}
+
+.mermaid rect.note {
+  fill: var(--km-mermaid-yellow-bg) !important;
+  stroke: var(--km-mermaid-yellow) !important;
+  rx: 8px;
+  ry: 8px;
+}
+
+.mermaid .noteText,
+.mermaid .labelText,
+.mermaid .loopText {
+  color: var(--km-mermaid-text) !important;
+  fill: var(--km-mermaid-text) !important;
+  -webkit-text-fill-color: var(--km-mermaid-text) !important;
+}
+
+.mermaid .labelBox {
+  fill: var(--km-mermaid-purple-bg) !important;
+  stroke: var(--km-mermaid-purple) !important;
+}
+
+.mermaid .loopLine {
+  fill: transparent !important;
+  stroke: var(--km-mermaid-border-strong) !important;
+}
+
+.mermaid .cluster rect {
+  fill: transparent !important;
+  stroke: var(--km-mermaid-border) !important;
+  stroke-width: 1px !important;
+  stroke-dasharray: 4 5;
+  rx: 10px;
+  ry: 10px;
+}
+
+@media (max-width: 600px) {
+  .mermaid,
+  .mermaid:has(rect.actor) {
+    width: 100%;
+    padding: 0.85rem;
+  }
+
+  .mermaid .nodeLabel,
+  .mermaid .nodeLabel * {
+    font-size: 12px !important;
+  }
+
+  .mermaid .nodeLabel p {
+    padding: 3px 7px !important;
+  }
+}

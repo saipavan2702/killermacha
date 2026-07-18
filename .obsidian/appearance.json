@@ -10,6 +10,7 @@
   "enabledCssSnippets": [
     "movie-album-filmstrip",
     "graph-view-colors",
-    "code-syntax-colors"
+    "code-syntax-colors",
+    "mermaid-diagrams"
   ]
 }

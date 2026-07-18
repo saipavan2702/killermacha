@@ -127,6 +127,7 @@ class ImageProxy implements Image {
 
 ## Related
 
+- [[Upskill/SysDes/LLD/Clean Code Patterns|Clean Code Patterns]]
 - [[Upskill/SysDes/LLD/Design Patterns/Creational|Creational]]
 - [[Upskill/SysDes/LLD/Design Patterns/Behavioral|Behavioral]]
 

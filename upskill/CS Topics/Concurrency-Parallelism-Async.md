@@ -152,7 +152,7 @@ They solve different bottlenecks, so a system can combine them without treating 
 
 ## Related
 
-- [[Upskill/CS Topics/Operating Systems|Operating Systems]]
+- [[Upskill/CS Topics/Operating Systems/Operating Systems|Operating Systems]]
 - [[Upskill/CS Topics/Cache-Friendly Loops|Cache-Friendly Loops]]
 
 #computer-science #concurrency

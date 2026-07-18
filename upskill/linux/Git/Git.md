@@ -20,7 +20,7 @@ Map: [[Upskill/Linux/Linux|Linux]]
 ## Related
 
 - [[Upskill/Linux/Shell Tips|Shell Tips]]
-- [[QoL/Workspace Setup|Workspace Setup]]
+- [[Workspace|Workspace]]
 
 #git
 

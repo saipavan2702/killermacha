@@ -245,6 +245,7 @@ DIP  →  High-level logic is shielded from low-level detail; Depend on abstract
 
 ## Related
 
+- [[Upskill/SysDes/LLD/Clean Code Patterns|Clean Code Patterns]]
 - [[Upskill/SysDes/LLD/Object-Oriented Programming|Object-Oriented Programming]]
 - [[Upskill/SysDes/LLD/Inheritance vs Composition|Inheritance vs Composition]]
 

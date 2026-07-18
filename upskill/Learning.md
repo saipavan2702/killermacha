@@ -27,7 +27,7 @@
 ## Related
 
 - [[QoL/Note System|Note System]]
-- [[QoL/Refs/Developer Resources|Developer Resources]]
+- [[Dev Resources|Dev Resources]]
 
 ## Recently Updated
 

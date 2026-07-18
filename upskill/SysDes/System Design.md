@@ -45,6 +45,7 @@
 ## Low-Level Design
 
 - [[Upskill/SysDes/LLD/Object-Oriented Programming|Object-Oriented Programming]]
+- [[Upskill/SysDes/LLD/Clean Code Patterns|Clean Code Patterns]]
 - [[Upskill/SysDes/LLD/SOLID Principles|SOLID Principles]]
 - [[Upskill/SysDes/LLD/Inheritance vs Composition|Inheritance vs Composition]]
 - [[Upskill/SysDes/LLD/Design Patterns/Design Patterns|Design Patterns]]

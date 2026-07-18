@@ -5,7 +5,7 @@ Map: [[Upskill/Learning|Learning]]
 
 ## Foundations
 
-- [[Upskill/CS Topics/Operating Systems|Operating Systems]]
+- [[Upskill/CS Topics/Operating Systems/Operating Systems|Operating Systems]]
 - [[Upskill/CS Topics/Databases/SQL|SQL and Databases]]
 - [[Upskill/CS Topics/HTTP Methods|HTTP Methods]]
 

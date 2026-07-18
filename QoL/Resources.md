@@ -5,13 +5,13 @@
 
 - [[QoL/Ideas|Ideas]]
 - [[QoL/Configs|Configs]]
-- [[QoL/Workspace Setup|Workspace Setup]]
+- [[Workspace|Workspace]]
 - [[QoL/Note System|Note System]]
 
 ## Tech References
 
 - [[QoL/Refs/Obsidian|Obsidian]]
-- [[QoL/Refs/Developer Resources|Developer Resources]]
+- [[Dev Resources|Dev Resources]]
 - [[Upskill/CS Topics/Computer Science|Computer Science]]
 - [[Upskill/DSA/DSA|DSA]]
 - [[Upskill/SysDes/System Design|System Design]]
@@ -27,7 +27,7 @@
 - [[QoL/Refs/Typing|Typing]]
 - [[QoL/Refs/Wallpapers|Wallpapers]]
 - [[Upskill/Gen Misc/Math/Math|Math]]
-- [[QoL/Refs/General Resources|General Resources]]
+- [[Gen Resources|Gen Resources]]
 - [[QoL/Refs/Piracy|Piracy]]
 
 ## Related

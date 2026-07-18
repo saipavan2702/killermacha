@@ -4,95 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "e355e4676a156f02",
+        "id": "3f628676d275239d",
         "type": "tabs",
         "children": [
           {
-            "id": "08f62ccdcbd7e5f1",
+            "id": "bd6443c3c547f549",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Upskill/CS Topics/Operating Systems.md",
+                "file": "Upskill/SysDes/LLD/Rate Limiter.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Operating Systems"
-            }
-          },
-          {
-            "id": "ea220f0bd50def12",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Home.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Home"
-            }
-          },
-          {
-            "id": "32d39a6cf066a8f9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "QoL/Ideas.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Ideas"
-            }
-          },
-          {
-            "id": "b22380a81fd4ebaf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "QoL/Resources.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Resources"
-            }
-          },
-          {
-            "id": "ceafa557ce827913",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "QoL/Refs/Typing.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Typing"
-            }
-          },
-          {
-            "id": "465615976b87804a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Inbox.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Inbox"
+              "title": "Rate Limiter"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -124,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "typing",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -155,8 +84,7 @@
               "title": "Notebook Navigator"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -300,44 +228,44 @@
       "templates:Insert template": false
     }
   },
-  "active": "ceafa557ce827913",
+  "active": "bd6443c3c547f549",
   "lastOpenFiles": [
-    "QoL/Resources.md",
-    "QoL/Ideas.md",
-    "Home.md",
-    "Inbox.md",
-    "Upskill/CS Topics/Operating Systems.md",
-    "Upskill/CS Topics/HTTP Methods.md",
-    "Upskill/CS Topics/Computer Science.md",
-    "Upskill/CS Topics/Cache-Friendly Loops.md",
-    "Upskill/CS Topics/Databases/SQL.md",
-    "Upskill/CS Topics/Concurrency-Parallelism-Async.md",
-    "Upskill/SysDes/HLD/Event-Driven Architecture.md",
-    "Macha/Watches.md",
-    "Orcl/Oracle Information.md",
-    "Orcl/Weekly Report.md",
-    "Orcl/Oracle.md",
-    "Macha/Media Links.md",
-    "Macha/motionArts/Items/Voicemails for Isabelle.md",
-    "Macha/Macha.md",
-    "Macha/Credit Cards.md",
-    "Macha/Aesthetic.md",
+    "Upskill/CS Topics/Operating Systems/Deadlocks.md",
+    "QoL/Configs.md",
+    "Upskill/DSA/DSA.md",
+    "Upskill/DSA/Practice Problems.md",
+    "Upskill/ProgramLang/C++/Priority Queues.md",
+    "Tasks/Tasks.md",
+    "Upskill/SysDes/HLD/Distributed Systems Papers/Hadoop Distributed File System.md",
+    "Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra.md",
+    "Upskill/SysDes/HLD/Distributed Systems Papers/Google MapReduce.md",
+    "Upskill/SysDes/HLD/Distributed Systems Papers/Apache ZooKeeper.md",
+    "Upskill/SysDes/HLD/Distributed Systems Papers/Google Chubby.md",
+    "Upskill/SysDes/HLD/Distributed Systems Papers/Gossip and Failure Detection.md",
+    "Upskill/SysDes/HLD/Distributed Systems Papers/Google Bigtable.md",
+    "Upskill/SysDes/HLD/Distributed Systems Papers/Consistent Hashing Paper.md",
+    "Upskill/SysDes/HLD/Distributed Systems Papers/Apache Kafka Architecture.md",
+    "Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo.md",
+    "Upskill/SysDes/HLD/Distributed Systems Papers",
+    "Upskill/WebDev/Frontend/Frontend Architecture.md",
+    "Upskill/SysDes/LLD/Clean Code Patterns.md",
+    "Upskill/CS Topics/Operating Systems/OS Interview Questions.md",
+    "Upskill/CS Topics/Operating Systems/CPU Scheduling.md",
+    "Upskill/CS Topics/Operating Systems/Operating Systems.md",
+    "Upskill/CS Topics/Operating Systems/Kernel and System Calls.md",
+    "Upskill/CS Topics/Operating Systems/Virtual Memory.md",
+    "Upskill/CS Topics/Operating Systems/Synchronization.md",
+    "Upskill/CS Topics/Operating Systems/Storage and File Systems.md",
+    "Upskill/CS Topics/Operating Systems/Production Debugging.md",
+    "Upskill/CS Topics/Operating Systems",
+    "new-book-template-clipper.json",
+    "new-post-video-template-clipper.json",
     "Macha/motionArts/Celluloid.base",
-    "Macha/motionArts/Items/Wicked minds.md",
-    "Upskill/SysDes/HLD/API Build/Auth Methods/Single Sign-On.md",
-    "Upskill/ProgramLang/Java/Concurrency.md",
-    "Macha/motionArts/Items/10 Things I Hate About You.md",
-    "Macha/motionArts/Items/21 Jump Street.md",
-    "Macha/motionArts/Items/91 Days - Anime.md",
     "Upskill/SysDes/HLD/API Build/Error Handling",
     "Upskill/DSA/Algorithms/Bitmasking",
     "Upskill/WebDev/Frontend/JavaScript",
     "Upskill/Linux/Git",
     "Upskill/SysDes/HLD/API Build/Auth Methods",
-    "Upskill/CS Topics/Databases",
-    "Upskill/DSA/Data Structures",
-    "Upskill/DSA/Algorithms",
-    "Upskill/Linux/Vim",
     "attachments/Pasted image 20260601002039.png",
     "attachments/communication_patterns_map_v2.svg",
     "attachments/Pasted image 20260531230835.png",

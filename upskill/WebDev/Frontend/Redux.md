@@ -134,6 +134,7 @@ As for [createAsyncThnuk](https://github.com/saipavan2702/mern-template/tree/mas
 
 ## Related
 
+- [[Upskill/WebDev/Frontend/Frontend Architecture|Frontend Architecture]]
 - [[Upskill/WebDev/Frontend/Next.js|Next.js]]
 - [[Upskill/WebDev/Frontend/Request Waterfalls|Request Waterfalls]]
 

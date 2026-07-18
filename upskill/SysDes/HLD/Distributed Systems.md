@@ -285,6 +285,29 @@ Worker Nodes (Followers):
 # - System continues operating
 ```
 
+## Foundational Papers
+
+These notes explain the original design decisions, show the mechanism in code, and separate paper-era architecture from modern implementations.
+
+**Placement, storage, and consistency**
+
+- [[Upskill/SysDes/HLD/Distributed Systems Papers/Consistent Hashing Paper|Consistent Hashing Paper]] - stable placement as membership changes, plus random trees for hot objects.
+- [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]] - availability, sloppy quorums, vector clocks, hints, and anti-entropy.
+- [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Bigtable|Google Bigtable]] - sorted row keys, tablets, memtables, SSTables, and compaction.
+- [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]] - Dynamo-style distribution combined with Bigtable-style storage.
+
+**Membership and coordination**
+
+- [[Upskill/SysDes/HLD/Distributed Systems Papers/Gossip and Failure Detection|Gossip and Failure Detection]] - gossip families and SWIM-style probing, suspicion, and dissemination.
+- [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Chubby|Google Chubby]] - coarse locks, sessions, leases, cache invalidation, and fencing tokens.
+- [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache ZooKeeper|Apache ZooKeeper]] - znodes, ordered updates, watches, and coordination recipes.
+
+**Logs and batch data**
+
+- [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Kafka Architecture|Apache Kafka Architecture]] - partitioned logs, consumer offsets, retention, and replay.
+- [[Upskill/SysDes/HLD/Distributed Systems Papers/Hadoop Distributed File System|Hadoop Distributed File System]] - NameNode metadata, replicated blocks, and streaming pipelines.
+- [[Upskill/SysDes/HLD/Distributed Systems Papers/Google MapReduce|Google MapReduce]] - map, shuffle, reduce, retries, locality, and straggler handling.
+
 ---
 
 ## Related

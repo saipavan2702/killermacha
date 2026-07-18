@@ -29,6 +29,15 @@ The second application still runs the protocol. The skipped step is repeated use
 ## Standards-Based OIDC Flow
 
 ```mermaid
+---
+config:
+  sequence:
+    mirrorActors: false
+    diagramMarginX: 24
+    diagramMarginY: 18
+    actorMargin: 50
+    messageMargin: 40
+---
 sequenceDiagram
     participant U as User
     participant A as App A

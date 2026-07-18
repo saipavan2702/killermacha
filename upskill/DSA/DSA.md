@@ -24,8 +24,6 @@
 ## Practice
 
 - [[Upskill/DSA/Practice Problems|Practice Problems]]
-- [[Upskill/ProgramLang/C++/Priority Queues|C++ Priority Queues]]
-- [[Upskill/CS Topics/Databases/SQL|SQL and Indexing]]
 
 #dsa
 

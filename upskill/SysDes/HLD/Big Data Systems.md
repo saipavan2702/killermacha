@@ -198,3 +198,6 @@ class SparkCoordinator:
 ## Related
 
 - [[Upskill/SysDes/HLD/Message Queues|Message Queues]]
+- [[Upskill/SysDes/HLD/Distributed Systems Papers/Google MapReduce|Google MapReduce]]
+- [[Upskill/SysDes/HLD/Distributed Systems Papers/Hadoop Distributed File System|Hadoop Distributed File System]]
+- [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Bigtable|Google Bigtable]]

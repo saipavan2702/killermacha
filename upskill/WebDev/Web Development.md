@@ -9,6 +9,11 @@ Map: [[Upskill/Learning|Learning]]
 - [[Upskill/WebDev/Frontend/TypeScript|TypeScript]]
 - [[Upskill/WebDev/Frontend/CSS|CSS]]
 
+## Frontend Architecture
+
+- [[Upskill/WebDev/Frontend/Frontend Architecture|Frontend Architecture]]
+- [[Upskill/WebDev/Frontend/Request Waterfalls|Request Waterfalls]]
+
 ## React Ecosystem
 
 - [[Upskill/WebDev/Frontend/React Basics|React Basics]]
@@ -16,7 +21,6 @@ Map: [[Upskill/Learning|Learning]]
 - [[Upskill/WebDev/Frontend/Next.js|Next.js]]
 - [[Upskill/WebDev/Frontend/Redux|Redux]]
 - [[Upskill/WebDev/Frontend/Framer Motion|Framer Motion]]
-- [[Upskill/WebDev/Frontend/Request Waterfalls|Request Waterfalls]]
 
 ## Backend and Delivery
 

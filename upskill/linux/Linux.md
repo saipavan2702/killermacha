@@ -12,7 +12,7 @@ Map: [[Upskill/Learning|Learning]]
 ## Related
 
 - [[QoL/Configs|Configs]]
-- [[QoL/Workspace Setup|Workspace Setup]]
+- [[Workspace|Workspace]]
 - [[Upskill/WebDev/Devops/Docker|Docker]]
 
 #linux

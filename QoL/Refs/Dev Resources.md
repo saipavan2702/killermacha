@@ -45,3 +45,11 @@ Map: [[QoL/Resources|Resources]]
 - [LLMs from Scratch](https://github.com/rasbt/LLMs-from-scratch) - Implement language-model concepts.
 - [Machine Learning from Scratch](https://github.com/eriklindernoren/ML-From-Scratch) - Educational algorithm implementations.
 - [Made With ML](https://github.com/GokuMohandas/Made-With-ML) - Production machine-learning practices.
+
+## Personal / Influencer Blogs
+
+- [Nick Nisi](https://nicknisi.com/)
+- [Cole Caccamise](https://colecaccamise.com/)
+- [Ram X](https://ramx.in/)
+- [Jitesh Codes](https://jiteshcodes.com/)
+- [Trevor O](https://trevoro.net/)

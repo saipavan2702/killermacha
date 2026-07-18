@@ -166,4 +166,5 @@ Server-Side Execution: These components would execute on the server. This means 
 
 ## Related
 
+- [[Upskill/WebDev/Frontend/Frontend Architecture|Frontend Architecture]]
 - [[Upskill/WebDev/Frontend/Redux|Redux]]

@@ -202,3 +202,4 @@ ch.add_server("server_C")
 ## Related
 
 - [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]]
+- [[Upskill/SysDes/HLD/Distributed Systems Papers/Consistent Hashing Paper|Consistent Hashing Paper]]
