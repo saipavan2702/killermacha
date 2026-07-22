@@ -1,3 +1,6 @@
+Map: Vault root
+Connections: [[Upskill/Learning|Learning]], [[Macha/Macha|Macha]], [[QoL/Resources|Resources]], [[Tasks/Tasks|Tasks]]
+
 ```dataviewjs
 const { setIcon, Notice } = require("obsidian");
 const root = dv.container.createDiv({ cls: "home-shell" });

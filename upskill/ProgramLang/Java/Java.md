@@ -2,6 +2,7 @@
 > A map of Java language fundamentals, collections, dependency design, concurrency, and Spring topics.
 
 Map: [[Upskill/Learning|Learning]]
+Connections: [[Upskill/SysDes/LLD/Design Patterns/Design Patterns|Design Patterns]], [[Upskill/ProgramLang/Golang/Go|Go]], [[Upskill/ProgramLang/Python/Python|Python]]
 
 ## Language
 
@@ -18,11 +19,5 @@ Map: [[Upskill/Learning|Learning]]
 - [[Upskill/ProgramLang/Java/Spring Boot|Spring Boot]]
 
 > Close or flush file resources after Java read/write operations.
-
-## Related
-
-- [[Upskill/SysDes/LLD/Design Patterns/Design Patterns|Design Patterns]]
-- [[Upskill/ProgramLang/Golang/Go|Go]]
-- [[Upskill/ProgramLang/Python/Python|Python]]
 
 #java

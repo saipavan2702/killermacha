@@ -1,10 +1,11 @@
 > [!summary]
 > A deadlock is a cycle of work that cannot proceed because every participant waits for a resource held by another participant in the cycle.
 
+Map: [[Upskill/CS Topics/Operating Systems/Operating Systems|Operating Systems]]
+Connections: [[Upskill/CS Topics/Operating Systems/CPU Scheduling|CPU Scheduling]], [[Upskill/CS Topics/Operating Systems/Kernel and System Calls|Kernel and System Calls]]
+
 > [!tip] Plain-English version
 > The classic example: two people are eating with one fork and one knife between them. Person A grabs the fork and waits for the knife. Person B grabs the knife and waits for the fork. Neither will let go of what they're holding. Both wait forever. That's a deadlock — a closed loop of "I'm holding X, waiting for Y" where Y is held by someone waiting for X.
-
-Map: [[Upskill/CS Topics/Operating Systems/Operating Systems|Operating Systems]]
 
 ## The Four Necessary Conditions
 

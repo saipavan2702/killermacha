@@ -1,4 +1,5 @@
 Map: [[Upskill/ProgramLang/Java/Java|Java]]
+Connections: [[Upskill/ProgramLang/Java/Coupling and Dependency Injection|Coupling and Dependency Injection]], [[Upskill/ProgramLang/Java/Spring Boot|Spring Boot]]
 
 Inversion of Control (IoC) is a design principle in software engineering .
 In general, we have control over object creation and lifecycle management but we give up the control and give it to external container/framework.
@@ -63,10 +64,5 @@ public class NotificationService {
 
 
 
-
-## Related
-
-- [[Upskill/ProgramLang/Java/Coupling and Dependency Injection|Coupling and Dependency Injection]]
-- [[Upskill/ProgramLang/Java/Spring Boot|Spring Boot]]
 
 #java #springboot

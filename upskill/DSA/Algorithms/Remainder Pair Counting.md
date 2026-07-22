@@ -2,6 +2,7 @@
 > Count pairs whose sum is divisible by k by matching each remainder with its modular complement.
 
 Map: [[Upskill/DSA/DSA|DSA]]
+Connections: [[Upskill/DSA/Algorithms/Bucket Sort|Bucket Sort]], [[Upskill/DSA/Algorithms/String Matching|String Matching]]
 
 ## Complementary Remainders
 
@@ -28,10 +29,5 @@ int countPairsDivisibleByK(const vector<int>& a, int k) {
 }
 ```
 
-
-## Related
-
-- [[Upskill/DSA/Algorithms/Bucket Sort|Bucket Sort]]
-- [[Upskill/DSA/Algorithms/String Matching|String Matching]]
 
 #dsa #counting

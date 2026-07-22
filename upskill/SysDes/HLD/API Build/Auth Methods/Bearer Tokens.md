@@ -2,6 +2,7 @@
 > A bearer token grants access to whoever possesses it, so confidentiality in transit and storage is the main security boundary.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]], [[Upskill/SysDes/HLD/API Build/Auth Methods/JSON Web Tokens]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Access and Refresh Tokens]]
 
 ## Request Example
 
@@ -71,8 +72,6 @@ Always check:
 - A valid token with the wrong audience must not be accepted.
 
 Keep access tokens short-lived and never place them in query parameters unless a protocol leaves no safer option.
-
-Related: [[Authentication Overview]], [[JSON Web Tokens]], and [[Access and Refresh Tokens]]
 
 #authentication #api
 

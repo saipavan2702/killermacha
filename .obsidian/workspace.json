@@ -33,9 +33,51 @@
               "icon": "lucide-layout-grid",
               "title": "Celluloid"
             }
+          },
+          {
+            "id": "83ef1cf85bd19807",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2025-11-12.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-11-12"
+            }
+          },
+          {
+            "id": "40aab630feb1fe5b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2026-06-03.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-06-03"
+            }
+          },
+          {
+            "id": "a56da04b15e5de76",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Upskill/Learning.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Learning"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -234,10 +276,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f12002b2fbff99b8",
+  "active": "a56da04b15e5de76",
   "lastOpenFiles": [
-    "Macha/motionArts/Items/Obsession.md",
+    "2026-06-03.md",
+    "Upskill/SysDes/System Design Process.md",
+    "2025-11-12.md",
     "Macha/motionArts/Celluloid.base",
+    "Macha/motionArts/Items/Obsession.md",
     "Macha/motionArts/Items/Odyssey.md",
     "Macha/motionArts/Items/Atonement.md",
     "Macha/motionArts/Items/Dungeons & Dragons - Honour Among Thieves.md",
@@ -260,8 +305,6 @@
     "Upskill/SysDes/HLD/Distributed Systems Papers/Hadoop Distributed File System.md",
     "Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra.md",
     "Upskill/SysDes/HLD/Distributed Systems Papers/Google MapReduce.md",
-    "Upskill/SysDes/HLD/Distributed Systems Papers/Apache ZooKeeper.md",
-    "Upskill/SysDes/HLD/Distributed Systems Papers/Google Chubby.md",
     "Upskill/SysDes/HLD/Distributed Systems Papers",
     "Upskill/CS Topics/Operating Systems",
     "new-book-template-clipper.json",

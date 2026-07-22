@@ -2,6 +2,7 @@
 > Cassandra combines Dynamo-style decentralized partitioning and replication with a Bigtable-style wide-column, log-structured storage model. It's designed for high write availability, horizontal scale, and query-first schema design.
 
 Map: [[Upskill/SysDes/HLD/Distributed Systems|Distributed Systems]]
+Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Bigtable|Google Bigtable]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Gossip and Failure Detection|Gossip and Failure Detection]], [[Upskill/SysDes/HLD/SQL vs NoSQL|SQL vs NoSQL]]
 
 - **Authors:** Avinash Lakshman, Prashant Malik (Facebook)
 - **Published:** LADIS 2009 / ACM SIGOPS Operating Systems Review, 2010
@@ -216,13 +217,6 @@ The 2009 paper describes Facebook's early system and its pre-CQL data model. Mod
 3. Commit log → memtable → SSTables → compaction form the storage engine, same shape as Bigtable's.
 4. Consistency is tunable **per query**, but your application's invariants still need careful design regardless.
 5. Hints, read repair, and *scheduled* anti-entropy repair are what actually make replicas converge over time.
-
-## Related
-
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]] - the distribution and replication half of Cassandra's design.
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Bigtable|Google Bigtable]] - the data-model and storage-engine half.
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Gossip and Failure Detection|Gossip and Failure Detection]] - cluster membership and failure suspicion.
-- [[Upskill/SysDes/HLD/SQL vs NoSQL|SQL vs NoSQL]]
 
 ---
 

@@ -2,6 +2,7 @@
 > Consistent hashing limits key movement when nodes join or leave a distributed system.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Consistent Hashing Paper|Consistent Hashing Paper]]
 
 ## The Problem with Simple Hashing
 
@@ -198,8 +199,3 @@ ch.add_server("server_C")
 - Content Delivery Networks
 
 ---
-
-## Related
-
-- [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]]
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Consistent Hashing Paper|Consistent Hashing Paper]]

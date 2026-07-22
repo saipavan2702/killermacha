@@ -17,3 +17,6 @@ tags:
 directors:
   - Pete Docter
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

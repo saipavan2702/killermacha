@@ -2,6 +2,7 @@
 > A map of Python language behavior and practical patterns for reliable scripts and services.
 
 Map: [[Upskill/Learning|Learning]]
+Connections: [[Upskill/SysDes/LLD/Design Patterns/Design Patterns|Design Patterns]], [[Upskill/ProgramLang/Golang/Go|Go]], [[Upskill/ProgramLang/Java/Java|Java]]
 
 ## Topics
 
@@ -39,11 +40,5 @@ Map: [[Upskill/Learning|Learning]]
 | OCI resource lifecycle     | `oci.wait_until()` + `MaximumWaitTimeExceeded`      |
 
 
-
-## Related
-
-- [[Upskill/SysDes/LLD/Design Patterns/Design Patterns|Design Patterns]]
-- [[Upskill/ProgramLang/Golang/Go|Go]]
-- [[Upskill/ProgramLang/Java/Java|Java]]
 
 #python

@@ -2,6 +2,7 @@
 > A map of Go memory behavior, concurrency, interfaces, context, and event-driven patterns.
 
 Map: [[Upskill/Learning|Learning]]
+Connections: [[Upskill/ProgramLang/Java/Java|Java]], [[Upskill/ProgramLang/Python/Python|Python]], [[Upskill/CS Topics/Concurrency-Parallelism-Async|Concurrency, Parallelism, and Async]]
 
 ## Topics
 
@@ -11,12 +12,6 @@ Map: [[Upskill/Learning|Learning]]
 - [[Upskill/ProgramLang/Golang/Synchronization|Synchronization]]
 - [[Upskill/ProgramLang/Golang/Context|Context]]
 - [[Upskill/ProgramLang/Golang/Event Bus|Event Bus]]
-
-## Related
-
-- [[Upskill/ProgramLang/Java/Java|Java]]
-- [[Upskill/ProgramLang/Python/Python|Python]]
-- [[Upskill/CS Topics/Concurrency-Parallelism-Async|Concurrency, Parallelism, and Async]]
 
 #golang
 

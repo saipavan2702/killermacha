@@ -1,8 +1,8 @@
-Map: [[Upskill/DSA/DSA|DSA]]
-
-
 > [!summary]
 > A small working list of problems grouped by the technique they exercise.
+
+Map: [[Upskill/DSA/DSA|DSA]]
+Connections: [[Upskill/DSA/Algorithms/String Matching|String Matching]], [[Upskill/Mock Interviews|Mock Interviews]]
 
 ## Hashing
 
@@ -30,10 +30,5 @@ Map: [[Upskill/DSA/DSA|DSA]]
 - [Sorted Permutation Rank](https://www.interviewbit.com/problems/sorted-permutation-rank/)
 - [Pseudo-Palindromic Paths](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/)
 
-
-## Related
-
-- [[Upskill/DSA/Algorithms/String Matching|String Matching]]
-- [[Upskill/Mock Interviews|Mock Interviews]]
 
 #dsa #practice

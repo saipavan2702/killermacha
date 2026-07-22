@@ -2,6 +2,7 @@
 > Bucket sort distributes values into ranges, sorts each range, and concatenates the buckets.
 
 Map: [[Upskill/DSA/DSA|DSA]]
+Connections: [[Upskill/DSA/Algorithms/Remainder Pair Counting|Remainder Pair Counting]]
 
 ## Implementations
 
@@ -87,9 +88,5 @@ int main() {
 }
 ```
 
-
-## Related
-
-- [[Upskill/DSA/Algorithms/Remainder Pair Counting|Remainder Pair Counting]]
 
 #dsa #sorting

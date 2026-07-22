@@ -1,8 +1,8 @@
-Map: [[Upskill/ProgramLang/Python/Python|Python]]
-
-
 > [!summary]
 > Validate inputs at the boundary and parse configuration into a predictable internal shape.
+
+Map: [[Upskill/ProgramLang/Python/Python|Python]]
+Connections: [[Upskill/ProgramLang/Python/Application Structure|Application Structure]], [[Upskill/ProgramLang/Python/Resource Management|Resource Management]]
 
 ## Input Validation
 
@@ -61,8 +61,3 @@ inputs = Inputs(data)
 > Handles Java-style `.properties` files without a separate library. The `[root]` prefix tricks `configparser` into accepting section-less files.
 
 ---
-
-## Related
-
-- [[Upskill/ProgramLang/Python/Application Structure|Application Structure]]
-- [[Upskill/ProgramLang/Python/Resource Management|Resource Management]]

@@ -1,8 +1,8 @@
-Map: [[Upskill/ProgramLang/Java/Java|Java]]
-
-
 > [!summary]
 > The collection hierarchy and the extends-versus-implements rules define how Java types relate and which implementations fit each need.
+
+Map: [[Upskill/ProgramLang/Java/Java|Java]]
+Connections: [[Upskill/ProgramLang/Java/Switch Statements and Expressions|Switch Statements and Expressions]], [[Upskill/ProgramLang/Java/Collections and Generics Examples|Collections and Generics Examples]]
 
 ## Java Collections Hierarchy
 
@@ -137,8 +137,3 @@ interface Pet extends Animal { }         // ❌ Animal is a class, not interface
 - **`implements`** → fulfil an interface contract → **"I promise to have these methods"**
 
 ---
-
-## Related
-
-- [[Upskill/ProgramLang/Java/Switch Statements and Expressions|Switch Statements and Expressions]]
-- [[Upskill/ProgramLang/Java/Collections and Generics Examples|Collections and Generics Examples]]

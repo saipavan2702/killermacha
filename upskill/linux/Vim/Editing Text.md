@@ -1,8 +1,8 @@
-Map: [[Upskill/Linux/Vim/Vim|Vim]]
-
-
 > [!summary]
 > Combine operators, motions, counts, repetition, and visual selections instead of treating editing as isolated shortcuts.
+
+Map: [[Upskill/Linux/Vim/Vim|Vim]]
+Connections: [[Upskill/Linux/Vim/Navigation and Selection|Navigation and Selection]], [[Upskill/Linux/Vim/Search and Substitution|Search and Substitution]]
 
 ## ✍️  Insert Mode
 
@@ -143,8 +143,3 @@ Will suggest:
   - `Ctrl+x Ctrl+n` — Keyword completion (current file)
 
 ---
-
-## Related
-
-- [[Upskill/Linux/Vim/Navigation and Selection|Navigation and Selection]]
-- [[Upskill/Linux/Vim/Search and Substitution|Search and Substitution]]

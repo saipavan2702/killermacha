@@ -2,6 +2,7 @@
 > OAuth 2.0 lets a client obtain limited access to a resource without receiving the user's password. It is delegated authorization, not user authentication by itself.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/API Build/Auth Methods/OpenID Connect]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Access and Refresh Tokens]]
 
 ## Roles
 
@@ -84,8 +85,6 @@ An access token tells an API what access was delegated. It does not standardize 
 - Give tokens narrow audiences, scopes, and lifetimes.
 - Keep client secrets only in confidential server-side clients.
 - Validate tokens at every resource server.
-
-Related: [[Authentication Overview]], [[Access and Refresh Tokens]], and [[OpenID Connect]]
 
 #authentication #oauth
 

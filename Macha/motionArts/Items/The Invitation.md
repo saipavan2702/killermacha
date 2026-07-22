@@ -14,3 +14,6 @@ tags:
 directors:
   - Jessica M. Thompson
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

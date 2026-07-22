@@ -1,4 +1,5 @@
 Map: [[QoL/Resources|Resources]]
+Connections: [[QoL/Workspace|Workspace]]
 
 ## Tools
 

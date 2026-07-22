@@ -1,6 +1,9 @@
 > [!summary]
 > An OS thread is a schedulable execution context; language runtimes may multiplex many lighter tasks over a smaller or elastic set of OS threads.
 
+Map: [[Upskill/CS Topics/Operating Systems/Operating Systems|Operating Systems]]
+Connections: [[Upskill/CS Topics/Operating Systems/Synchronization|Synchronization]]
+
 > [!tip] Plain-English version
 > There are really three "sizes" of concurrency, from biggest/heaviest to smallest/lightest:
 > - **Process** = a whole separate apartment building (its own memory, totally isolated).
@@ -8,8 +11,6 @@
 > - **Runtime task** (goroutine / virtual thread / coroutine / future) = a sticky note the *language runtime* manages itself, cheap enough to have thousands of them, that gets temporarily assigned to a real OS thread only while it's actually doing work.
 >
 > The whole point of runtime tasks is: OS threads are relatively expensive to create and switch between, so if you have 100,000 "mostly waiting" jobs, you don't want 100,000 real OS threads — you want a runtime that can juggle them cheaply and only uses a handful of real OS threads underneath.
-
-Map: [[Upskill/CS Topics/Operating Systems/Operating Systems|Operating Systems]]
 
 ## Process, Thread, and Runtime Task
 

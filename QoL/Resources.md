@@ -1,6 +1,9 @@
 > [!summary]
 > Tools, configurations, ideas, and broad reference collections that support the rest of the vault.
 
+Map: [[Home|Home]]
+Connections: [[Upskill/Learning|Learning]], [[QoL/Workspace|Workspace]]
+
 ## Start Here
 
 - [[QoL/Ideas|Ideas]]
@@ -29,11 +32,6 @@
 - [[Upskill/Gen Misc/Math/Math|Math]]
 - [[Gen Resources|Gen Resources]]
 - [[QoL/Refs/Piracy|Piracy]]
-
-## Related
-
-- [[Home|Home]]
-- [[Upskill/Learning|Learning]]
 
 ## Recently Updated
 

@@ -2,6 +2,7 @@
 > Loop order affects spatial locality: traversing contiguous memory usually matters more than the surface shape of the algorithm.
 
 Map: [[DSA]]
+Connections: [[Upskill/CS Topics/Computer Science|Computer Science]]
 
 ✅ Best (IKJ order @ ~110-200ms):
 ```cpp
@@ -69,9 +70,6 @@ A[i][k]: i increments → jumps by entire row ❌
 All three arrays accessed poorly!
 ```
 
-
-
-## Related
 
 
 #dsa

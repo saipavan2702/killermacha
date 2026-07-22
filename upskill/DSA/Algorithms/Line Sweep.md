@@ -2,6 +2,7 @@
 > Line sweep sorts events along an axis and maintains only the active state needed to solve interval and geometry problems efficiently.
 
 Map: [[Upskill/DSA/DSA|DSA]]
+Connections: [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]], [[Upskill/DSA/Algorithms/Remainder Pair Counting|Remainder Pair Counting]], [[Upskill/DSA/Algorithms/Binary Search|Binary Search]]
 
 ## Maximum Overlapping Segments
 
@@ -121,7 +122,3 @@ int main() {
 ```
 
 #dsa #line-sweep
-
-## Related
-
-- [[Upskill/DSA/Algorithms/Binary Search|Binary Search]]

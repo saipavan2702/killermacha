@@ -1,3 +1,6 @@
+Map: [[Macha/Macha|Macha]]
+Connections: [[QoL/Refs/Wallpapers|Wallpapers]], [[Macha/Watches|Watches]]
+
 ```dataviewjs
 const clockDiv = this.container.createDiv({ cls: "analog-clock-widget" });
 clockDiv.innerHTML = `

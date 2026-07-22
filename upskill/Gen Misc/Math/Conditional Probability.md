@@ -2,6 +2,7 @@
 > Conditional, joint, marginal, total, and Bayesian probability describe how information changes the likelihood of events.
 
 Map: [[Upskill/Gen Misc/Math/Math|Math]]
+Connections: [[Upskill/Gen Misc/Math/Probability|Probability]], [[Upskill/Gen Misc/Math/Random Variables|Random Variables]]
 
 ## 5. Conditional Probability
 
@@ -101,8 +102,3 @@ $$P(A|B) = \frac{P(B|A) \times P(A)}{P(B)}$$
 > **Example 4 (Intuition):** Bayes' Rule = "How surprised should I be by this evidence?" Rare causes stay unlikely even with evidence — but evidence does update them.
 
 ---
-
-## Related
-
-- [[Upskill/Gen Misc/Math/Probability|Probability]]
-- [[Upskill/Gen Misc/Math/Random Variables|Random Variables]]

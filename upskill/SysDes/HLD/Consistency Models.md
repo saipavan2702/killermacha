@@ -2,6 +2,7 @@
 > Consistency models define when distributed replicas must agree and which trade-offs are acceptable while they converge.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/CAP Theorem|CAP Theorem]], [[Upskill/SysDes/HLD/Replication and Recovery|Replication and Recovery]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]]
 
 ## Strong Consistency
 
@@ -356,11 +357,3 @@ response = table.get_item(Key={'user_id': '123'})
 ```
 
 ---
-
-## Related
-
-- [[Upskill/SysDes/HLD/CAP Theorem|CAP Theorem]]
-- [[Upskill/SysDes/HLD/Replication and Recovery|Replication and Recovery]]
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]]
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]]
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache ZooKeeper|Apache ZooKeeper]]

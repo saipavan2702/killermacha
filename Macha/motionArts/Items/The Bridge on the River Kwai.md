@@ -15,3 +15,6 @@ tags:
 directors:
   - David Lean
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

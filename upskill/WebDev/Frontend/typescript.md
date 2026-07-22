@@ -1,4 +1,5 @@
 Map: [[Upskill/WebDev/Web Development|Web Development]]
+Connections: [[Upskill/WebDev/Frontend/JavaScript/JavaScript|JavaScript]], [[Upskill/WebDev/Frontend/React Basics|React Basics]]
 
 ```ts
 /**
@@ -135,11 +136,6 @@ I am 25 years old
 end: printAge
 ```
 We use decorators, so we could reuse the logic of logging function execution start and end. A wrapper function is created that logs the start and end of the wrapped function.
-
-## Related
-
-- [[Upskill/WebDev/Frontend/JavaScript/JavaScript|JavaScript]]
-- [[Upskill/WebDev/Frontend/React Basics|React Basics]]
 
 #typescript
 

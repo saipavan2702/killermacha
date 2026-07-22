@@ -2,6 +2,7 @@
 > JavaScript combines lexical scope, prototype-based objects, first-class functions, and asynchronous event-loop execution in a dynamic runtime.
 
 Map: [[Upskill/WebDev/Web Development|Web Development]]
+Connections: [[Upskill/WebDev/Frontend/TypeScript|TypeScript]], [[Upskill/WebDev/Frontend/React|React]], [[Upskill/WebDev/Backend/Express.js|Express.js]]
 
 ## Topics
 
@@ -14,12 +15,6 @@ Map: [[Upskill/WebDev/Web Development|Web Development]]
 
 - [`URLSearchParams`](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) for URL query parameters.
 - [`structuredClone`](https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone) for supported deep-clone cases.
-
-## Related
-
-- [[Upskill/WebDev/Frontend/TypeScript|TypeScript]]
-- [[Upskill/WebDev/Frontend/React|React]]
-- [[Upskill/WebDev/Backend/Express.js|Express.js]]
 
 #javascript
 

@@ -1,4 +1,5 @@
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/LLD/Design Patterns/Design Patterns|Design Patterns]]
 
 1. **Parking Lot** — multi-floor, 2-wheelers and 4-wheelers
 2. **Text Editor with Cursor** — cursor movement, line reading, insert/delete
@@ -8,11 +9,6 @@ Map: [[Upskill/SysDes/System Design|System Design]]
 6. **Movie Ticket Booking System** — halls, shows, booking/cancellation, city-level search
 7. **Notification / Pub-Sub System** — single FIFO queue, multiple publishers/subscribers, Observer pattern
 8. **Elevator System** — Moving Up / Moving Down / Idle states using the State pattern
-
-## Related
-
-- [[Upskill/SysDes/LLD/Design Patterns/Design Patterns|Design Patterns]]
-
 
 ---
 

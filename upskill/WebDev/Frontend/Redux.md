@@ -1,4 +1,5 @@
 Map: [[Upskill/WebDev/Web Development|Web Development]]
+Connections: [[Upskill/WebDev/Frontend/Frontend Architecture|Frontend Architecture]], [[Upskill/WebDev/Frontend/Next.js|Next.js]], [[Upskill/WebDev/Frontend/Request Waterfalls|Request Waterfalls]]
 
 This javascript library allows us to manage states across the files without the problem of prop-drilling.
 
@@ -131,13 +132,6 @@ For above code we are creating `persistStore()` this creates/sets data with key 
 If we have to purge the data  we can use `persist.purge("key")` but sometimes it affects whole environment so we use another method general like `localStorage.removeItem("persist:auth");`.
 
 As for [createAsyncThnuk](https://github.com/saipavan2702/mern-template/tree/master/frontend/src/features/auth) which helps in simplifying the process of handling asynchronous tasks and logic with the help of reduxjs/toolkit.
-
-## Related
-
-- [[Upskill/WebDev/Frontend/Frontend Architecture|Frontend Architecture]]
-- [[Upskill/WebDev/Frontend/Next.js|Next.js]]
-- [[Upskill/WebDev/Frontend/Request Waterfalls|Request Waterfalls]]
-
 
 ---
 

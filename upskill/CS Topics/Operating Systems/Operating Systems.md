@@ -1,10 +1,11 @@
 > [!summary]
 > An operating system turns hardware into safe, shareable abstractions: processes, threads, virtual memory, files, sockets, timers, and devices.
 
+Map: [[Upskill/CS Topics/Computer Science|Computer Science]]
+Connections: [[Upskill/CS Topics/Concurrency-Parallelism-Async|Concurrency, Parallelism, and Async]], [[Upskill/CS Topics/Cache-Friendly Loops|Cache-Friendly Loops]], [[Upskill/SysDes/System Design|System Design]]
+
 > [!tip] Plain-English version
 > Your computer has one (or a handful of) CPU, one pool of RAM, and one set of disks — but it runs dozens of programs "at once." The OS is the referee that makes that illusion work: it decides whose turn it is to use the CPU, pretends every program has its own private memory, and stops programs from stepping on each other's data. Everything in this whole note series is really just answering one question: **"how does the OS fake infinite, safe resources out of a small, shared, fragile set of real ones?"**
-
-Map: [[Upskill/CS Topics/Computer Science|Computer Science]]
 
 ## Why This Matters for an SDE2/SDE3
 
@@ -65,12 +66,6 @@ At this level, you should be able to:
 | **Context switch** | The act of pausing one thread and resuming another, including saving/restoring its state. |
 | **Page / paging** | RAM is chopped into fixed-size chunks (pages) so the OS can manage and swap memory in small pieces instead of huge blocks. |
 | **File descriptor** | A small number your program uses as a "handle" to refer to an open file, socket, or pipe. |
-
-## Related
-
-- [[Upskill/CS Topics/Concurrency-Parallelism-Async|Concurrency, Parallelism, and Async]]
-- [[Upskill/CS Topics/Cache-Friendly Loops|Cache-Friendly Loops]]
-- [[Upskill/SysDes/System Design|System Design]]
 
 #operating-systems
 

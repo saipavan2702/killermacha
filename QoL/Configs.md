@@ -1,3 +1,6 @@
+Map: [[QoL/Resources|Resources]]
+Connections: [[QoL/Ideas|Ideas]]
+
 ## Dotfiles
 
 Git's

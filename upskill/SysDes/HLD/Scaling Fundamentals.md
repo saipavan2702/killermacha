@@ -2,6 +2,7 @@
 > Start with a simple client-server-database architecture, then scale only when traffic, reliability, or latency requires it.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/Capacity Estimation|Capacity Estimation]]
 
 Most college projects work fine with a simple architecture:
 
@@ -117,7 +118,3 @@ IF CPU usage < 20%:
 ```
 
 ---
-
-## Related
-
-- [[Upskill/SysDes/HLD/Capacity Estimation|Capacity Estimation]]

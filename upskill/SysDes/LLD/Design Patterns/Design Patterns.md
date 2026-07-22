@@ -2,6 +2,7 @@
 > Design patterns name recurring object-design trade-offs so solutions can be communicated and reused without copying implementations blindly.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/LLD/Inheritance vs Composition|Inheritance vs Composition]], [[Upskill/SysDes/LLD/Examples|Examples]]
 
 ## Quick Reference Table
 | Need                                     | Pattern                  |
@@ -290,11 +291,6 @@ class User {
 
  [[Upskill/SysDes/LLD/SOLID Principles|SOLID Principles]]
 
-
-## Related
-
-- [[Upskill/SysDes/LLD/Inheritance vs Composition|Inheritance vs Composition]]
-- [[Upskill/SysDes/LLD/Examples|Examples]]
 
 #sysdes #design-patterns
 

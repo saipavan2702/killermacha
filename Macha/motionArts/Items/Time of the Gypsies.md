@@ -16,3 +16,6 @@ tags:
 directors:
   - Emir Kusturica
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

@@ -1,4 +1,5 @@
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/API Build/Error Handling/Error Handling|Error Handling]], [[Upskill/SysDes/HLD/API Build/gRPC vs REST vs GraphQL vs SOAP|gRPC vs REST vs GraphQL vs SOAP]]
 
 Pagination means dividing large data into small, loadable chunks so apps do not freeze and servers stay stable.
 
@@ -69,10 +70,5 @@ Offset says: "skip N rows." The database still has to walk past them.
 
 Cursor says: "start after this item." The database can jump through an index.
 
-
-## Related
-
-- [[Upskill/SysDes/HLD/API Build/Error Handling/Error Handling|Error Handling]]
-- [[Upskill/SysDes/HLD/API Build/gRPC vs REST vs GraphQL vs SOAP|gRPC vs REST vs GraphQL vs SOAP]]
 
 #sysdes #api

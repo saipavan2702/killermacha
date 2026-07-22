@@ -2,6 +2,7 @@
 > KMP reuses prefix information after a mismatch; Rabin-Karp uses rolling hashes to find candidate matches.
 
 Map: [[Upskill/DSA/DSA|DSA]]
+Connections: [[Upskill/DSA/Algorithms/Remainder Pair Counting|Remainder Pair Counting]], [[Upskill/DSA/Practice Problems|Practice Problems]]
 
 ## Knuth-Morris-Pratt (KMP)
 ```cpp
@@ -125,10 +126,5 @@ int strStr(string haystack, string needle) {
 }
 ```
 
-
-## Related
-
-- [[Upskill/DSA/Algorithms/Remainder Pair Counting|Remainder Pair Counting]]
-- [[Upskill/DSA/Practice Problems|Practice Problems]]
 
 #dsa #string-matching

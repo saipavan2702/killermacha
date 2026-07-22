@@ -18,3 +18,6 @@ directors:
   - John Musker
   - Ron Clements
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

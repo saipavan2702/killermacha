@@ -16,3 +16,6 @@ directors:
   - Josh Safdie
   - Benny Safdie
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

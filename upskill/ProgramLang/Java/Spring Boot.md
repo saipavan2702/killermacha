@@ -1,4 +1,5 @@
 Map: [[Upskill/ProgramLang/Java/Java|Java]]
+Connections: [[Upskill/ProgramLang/Java/Inversion of Control|Inversion of Control]], [[Upskill/ProgramLang/Java/Concurrency|Concurrency]]
 
 ## Bean vs Component
 
@@ -45,10 +46,5 @@ However, because `@Bean` lets you write logic during bean creation, you can perf
 Also
 
 
-
-## Related
-
-- [[Upskill/ProgramLang/Java/Inversion of Control|Inversion of Control]]
-- [[Upskill/ProgramLang/Java/Concurrency|Concurrency]]
 
 #java #springboot

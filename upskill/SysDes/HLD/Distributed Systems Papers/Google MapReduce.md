@@ -2,6 +2,7 @@
 > MapReduce turns a large batch job into deterministic map tasks, a key-based shuffle, and reduce tasks. The runtime — not the application — owns partitioning, placement, retries, data transfer, and straggler mitigation.
 
 Map: [[Upskill/SysDes/HLD/Distributed Systems|Distributed Systems]]
+Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Hadoop Distributed File System|Hadoop Distributed File System]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Bigtable|Google Bigtable]], [[Upskill/SysDes/HLD/Big Data Systems|Big Data Systems]], [[Upskill/CS Topics/Concurrency-Parallelism-Async|Concurrency, Parallelism, and Async]]
 
 - **Authors:** Jeffrey Dean, Sanjay Ghemawat (Google)
 - **Published:** OSDI 2004 (USENIX Symposium on Operating Systems Design and Implementation)
@@ -205,13 +206,6 @@ MapReduce remains a useful mental model even when the production engine you're u
 3. Partition-key distribution directly determines reducer balance.
 4. Safe re-execution requires deterministic, side-effect-free task code.
 5. Locality and backup tasks are the two mechanisms addressing network cost and long-tail workers respectively.
-
-## Related
-
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Hadoop Distributed File System|Hadoop Distributed File System]] - the open-source storage layer paired with Hadoop MapReduce.
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Bigtable|Google Bigtable]] - structured, lower-latency access rather than batch scans.
-- [[Upskill/SysDes/HLD/Big Data Systems|Big Data Systems]]
-- [[Upskill/CS Topics/Concurrency-Parallelism-Async|Concurrency, Parallelism, and Async]]
 
 ---
 

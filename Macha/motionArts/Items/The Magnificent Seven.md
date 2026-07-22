@@ -13,3 +13,6 @@ tags:
 directors:
   - John Sturges
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

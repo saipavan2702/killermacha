@@ -2,6 +2,7 @@
 > Replication, backups, and recovery objectives determine how a system survives failures and how much data it can afford to lose.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]], [[Upskill/SysDes/HLD/Database Scaling|Database Scaling]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]]
 
 ## Why Make Databases Redundant?
 
@@ -522,11 +523,3 @@ console.log(blogSystem.getStrategy());
 ```
 
 ---
-
-## Related
-
-- [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]
-- [[Upskill/SysDes/HLD/Database Scaling|Database Scaling]]
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]]
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]]
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Hadoop Distributed File System|Hadoop Distributed File System]]

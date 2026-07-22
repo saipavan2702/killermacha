@@ -2,6 +2,7 @@
 > SQL notes covering querying, indexing, execution plans, and the trade-offs that make database access fast and reliable.
 
 Map: [[Upskill/CS Topics/Computer Science|Computer Science]]
+Connections: [[Upskill/SysDes/HLD/SQL vs NoSQL|SQL vs NoSQL]]
 
 ## Basics
 
@@ -317,10 +318,6 @@ EXPLAIN ANALYZE the slow query
     -  Standardise formats - making all values uppercase or lowercase
     -  Extra white spaces removal
 
-
-## Related
-
-- [[Upskill/SysDes/HLD/SQL vs NoSQL|SQL vs NoSQL]]
 
 #sql #databases
 

@@ -2,6 +2,7 @@
 > A repeatable interview and architecture process: clarify requirements, estimate scale, divide the system, explain trade-offs, and validate operations.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/Case Studies/Designing Twitter|Designing Twitter]]
 
 ## Step-by-Step Approach
 
@@ -231,7 +232,3 @@ But Accidental Complexity is everything else sometimes you add code to the alrea
 >
 >How data communication happens in different steps
 >![[Pasted image 20260601002039.png|713]]
-
-## Related
-
-- [[Upskill/SysDes/Case Studies/Designing Twitter|Designing Twitter]]

@@ -2,6 +2,7 @@
 > Distributed systems coordinate independent machines to improve scale and resilience despite partial failures.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/Microservices|Microservices]]
 
 ## What is a Distributed System?
 
@@ -309,7 +310,3 @@ These notes explain the original design decisions, show the mechanism in code, a
 - [[Upskill/SysDes/HLD/Distributed Systems Papers/Google MapReduce|Google MapReduce]] - map, shuffle, reduce, retries, locality, and straggler handling.
 
 ---
-
-## Related
-
-- [[Upskill/SysDes/HLD/Microservices|Microservices]]

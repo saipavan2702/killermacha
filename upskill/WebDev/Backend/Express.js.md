@@ -1,4 +1,5 @@
 Map: [[Upskill/WebDev/Web Development|Web Development]]
+Connections: [[Upskill/CS Topics/HTTP Methods|HTTP Methods]], [[Upskill/WebDev/Backend/Socket.io|Socket.io]], [[Upskill/Linux/Linux|Linux]]
 
 ### nodemon
 `npm i nodemon` is used to install nodemon in backend.
@@ -52,11 +53,5 @@ queryString.stringify({foo:"bar",baz:"real"},';',':');
 QueryString is more performant than URLSearchParams but it is not standard API, but URLSearchParams is available in browsers and we use it when performance is not critical and it is more browser compatible.
 
 In typescript env we use `npm i --save-dev ts-node`.
-
-## Related
-
-- [[Upskill/CS Topics/HTTP Methods|HTTP Methods]]
-- [[Upskill/WebDev/Backend/Socket.io|Socket.io]]
-- [[Upskill/Linux/Linux|Linux]]
 
 #typescript

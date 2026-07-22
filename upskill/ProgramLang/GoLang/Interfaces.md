@@ -1,8 +1,8 @@
-Map: [[Upskill/ProgramLang/Golang/Go|Go]]
-
-
 > [!summary]
 > Go interfaces are satisfied implicitly by method sets, allowing behavior-based composition without declaration-heavy inheritance.
+
+Map: [[Upskill/ProgramLang/Golang/Go|Go]]
+Connections: [[Upskill/ProgramLang/Golang/Memory and Pointers|Memory and Pointers]], [[Upskill/ProgramLang/Golang/Channels and Select|Channels and Select]]
 
 An interface in Go is just a contract: "if you have this method, you qualify." You never say "I implement this interface" — Go checks automatically.
 ```go
@@ -131,8 +131,3 @@ package mypkg
 //Then run only files with that tag:
 go test -tags=integration ./...
 ```
-
-## Related
-
-- [[Upskill/ProgramLang/Golang/Memory and Pointers|Memory and Pointers]]
-- [[Upskill/ProgramLang/Golang/Channels and Select|Channels and Select]]

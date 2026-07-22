@@ -2,6 +2,7 @@
 > Recovery starts by identifying whether a change lives in the working tree, index, commits, or reflog, then choosing the least destructive command that fixes that layer.
 
 Map: [[Upskill/Linux/Git/Git|Git]]
+Connections: [[Upskill/Linux/Git/Everyday Git|Everyday Git]], [[Upskill/Linux/Git/Branches and Remotes|Branches and Remotes]]
 
 ## Undo by Layer
 
@@ -59,11 +60,6 @@ Map: [[Upskill/Linux/Git/Git|Git]]
 | `git checkout <branch>` | `git switch <branch>` |
 | `git checkout -b <name>` | `git switch -c <name>` |
 | `git checkout -- <file>` | `git restore <file>` |
-
-## Related
-
-- [[Upskill/Linux/Git/Everyday Git|Everyday Git]]
-- [[Upskill/Linux/Git/Branches and Remotes|Branches and Remotes]]
 
 #git
 

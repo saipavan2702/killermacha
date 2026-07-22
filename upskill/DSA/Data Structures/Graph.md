@@ -2,8 +2,7 @@
 > Graph problems become manageable after identifying vertices, edges, traversal state, and whether direction, weights, or cycles matter.
 
 Map: [[Upskill/DSA/DSA|DSA]]
-
-Related: [[Upskill/DSA/Data Structures/Tree|Tree]] · [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]]
+Connections: [[Upskill/DSA/Data Structures/Tree|Tree]], [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]]
 
 ## Bipartite Graph
 

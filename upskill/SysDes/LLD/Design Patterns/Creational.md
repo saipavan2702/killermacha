@@ -1,4 +1,5 @@
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/LLD/Design Patterns/Structural|Structural]]
 
 ### 1. Singleton
 **Purpose**: Ensure only one instance of a class exists.
@@ -173,9 +174,5 @@ class ExpensiveObject {
 
 ---
 
-
-## Related
-
-- [[Upskill/SysDes/LLD/Design Patterns/Structural|Structural]]
 
 #sysdes #design-patterns

@@ -15,3 +15,6 @@ tags:
 directors:
   - Bong Joon Ho
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

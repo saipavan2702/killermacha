@@ -1,8 +1,8 @@
-Map: [[Upskill/ProgramLang/Python/Python|Python]]
-
-
 > [!summary]
 > Understand Python's evaluation and memory behavior before reaching for framework-level solutions.
+
+Map: [[Upskill/ProgramLang/Python/Python|Python]]
+Connections: [[Upskill/ProgramLang/Python/Application Structure|Application Structure]]
 
 ## Mutable Default Arguments
 
@@ -103,7 +103,3 @@ def compare_memory_usage(filename, num_lines=100000):
     for line in read_large_file(filename):
         count += 1
 ```
-
-## Related
-
-- [[Upskill/ProgramLang/Python/Application Structure|Application Structure]]

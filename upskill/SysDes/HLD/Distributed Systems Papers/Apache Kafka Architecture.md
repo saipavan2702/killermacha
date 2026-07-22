@@ -2,6 +2,7 @@
 > Kafka models messaging as an append-only, partitioned log. Producers append records, consumers track their own offsets, and retention lets the same history be replayed independently by different readers.
 
 Map: [[Upskill/SysDes/HLD/Distributed Systems|Distributed Systems]]
+Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache ZooKeeper|Apache ZooKeeper]], [[Upskill/SysDes/HLD/Message Queues|Message Queues]], [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]], [[Upskill/SysDes/HLD/Publish-Subscribe|Publish-Subscribe]]
 
 - **Authors:** Jay Kreps, Neha Narkhede, Jun Rao (LinkedIn)
 - **Published:** NetDB Workshop 2011, Athens, Greece
@@ -153,13 +154,6 @@ The original 2011 paper focused on the partitioned log, consumer-controlled offs
 3. Consumers pull records and own their offsets — the broker doesn't push or track "read" state per consumer.
 4. Retention enables replay; acknowledgement doesn't delete a record.
 5. Delivery guarantees (at-least-once vs. at-most-once) depend entirely on the order of processing vs. committing.
-
-## Related
-
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache ZooKeeper|Apache ZooKeeper]] - Kafka's historical coordination dependency before KRaft.
-- [[Upskill/SysDes/HLD/Message Queues|Message Queues]]
-- [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]]
-- [[Upskill/SysDes/HLD/Publish-Subscribe|Publish-Subscribe]]
 
 ---
 

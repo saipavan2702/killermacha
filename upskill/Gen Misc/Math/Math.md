@@ -2,6 +2,7 @@
 > Practical mathematics notes organized around probability, number representation, and constants.
 
 Map: [[Upskill/Learning|Learning]]
+Connections: [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]], [[Upskill/DSA/Algorithms/Remainder Pair Counting|Remainder Pair Counting]]
 
 ## Probability
 
@@ -15,10 +16,5 @@ Map: [[Upskill/Learning|Learning]]
 
 - [[Upskill/Gen Misc/Math/Continued Fractions|Continued Fractions]]
 - [[Upskill/Gen Misc/Math/Euler's Number|Euler's Number]]
-
-## Related
-
-- [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]]
-- [[Upskill/DSA/Algorithms/Remainder Pair Counting|Remainder Pair Counting]]
 
 #mathematics

@@ -1,6 +1,5 @@
 Map: [[Upskill/SysDes/System Design|System Design]]
-
-Related: [[Upskill/SysDes/HLD/Rate Limiting|Rate Limiting]] · [[Upskill/SysDes/HLD/Caching|Caching]] · [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]] · [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Kafka Architecture|Apache Kafka Architecture]], [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]], [[Upskill/SysDes/HLD/Publish-Subscribe|Publish-Subscribe]], [[Upskill/SysDes/HLD/Rate Limiting|Rate Limiting]]
 
 ## Message Brokers & Kafka {#message-brokers}
 
@@ -331,9 +330,3 @@ Number of consumers ≤ Number of partitions
 **To add more consumers, increase partitions first!**
 
 ---
-
-## Related
-
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Kafka Architecture|Apache Kafka Architecture]]
-- [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]]
-- [[Upskill/SysDes/HLD/Publish-Subscribe|Publish-Subscribe]]

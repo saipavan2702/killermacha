@@ -2,6 +2,7 @@
 > An API key usually identifies a calling application or project, not the human using it.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Bearer Tokens]]
 
 ## Request Example
 
@@ -48,8 +49,6 @@ The visible prefix can identify the key record; the secret portion proves posses
 - Record owner, creation time, last use, and expiry.
 - Redact keys from logs and error reports.
 - Revoke quickly and alert on unusual use.
-
-Related: [[Authentication Overview]] and [[Bearer Tokens]]
 
 #authentication #api
 

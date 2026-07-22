@@ -14,3 +14,6 @@ tags:
 directors:
   - Lasse Hallström
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

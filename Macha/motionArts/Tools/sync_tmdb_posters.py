@@ -22,7 +22,7 @@ from urllib.request import Request, urlopen
 
 
 ROOT = Path(__file__).resolve().parents[3]
-ITEMS_DIR = ROOT / "mmacha" / "motionArts" / "Items"
+ITEMS_DIR = ROOT / "Macha" / "motionArts" / "Items"
 PLUGIN_DATA = ROOT / ".obsidian" / "plugins" / "mmacha-auto" / "data.json"
 API_BASE = "https://api.themoviedb.org/3"
 IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
@@ -91,6 +91,7 @@ QUERY_OVERRIDES = {
     "Orb": "Orb: On the Movements of the Earth",
     "ACCA-13": "ACCA: 13-Territory Inspection Dept.",
     "Nura: rise of yokai clan": "Nura: Rise of the Yokai Clan",
+    "Odyssey": "The Odyssey",
     "Atlantis the Lost empire": "Atlantis: The Lost Empire",
     "Boogiepop and Others": "Boogiepop and Others",
     "Brooklyn": "Brooklyn",
@@ -138,6 +139,9 @@ YEAR_OVERRIDES = {
     "Shiva": "1989",
     "The Accountant": "2016",
     "The Magnificent Seven": "1960",
+    "Obsession": "2026",
+    "Odyssey": "2026",
+    "The Odyssey": "2026",
     "Warrior": "2011",
 }
 
@@ -163,6 +167,9 @@ IMDB_OVERRIDES = {
     "Moana": "tt3521164",
     "Up": "tt1049413",
     "The World's End": "tt1213663",
+    "Obsession": "tt37287335",
+    "Odyssey": "tt33764258",
+    "The Odyssey": "tt33764258",
 }
 
 

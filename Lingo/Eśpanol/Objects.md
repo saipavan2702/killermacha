@@ -1,3 +1,6 @@
+Map: [[Upskill/Learning|Learning]]
+Connections: [[Lingo/Eśpanol/Pronouns]]
+
 Maleta- Suitcase
 Boleto- ticket
 Hombre- man

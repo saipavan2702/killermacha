@@ -14,3 +14,6 @@ tags:
 directors:
   - Akira Kurosawa
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

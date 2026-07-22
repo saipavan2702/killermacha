@@ -2,6 +2,7 @@
 > Big-data tools divide work across coordinated machines when one computer cannot process the data efficiently.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/Message Queues|Message Queues]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Google MapReduce|Google MapReduce]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Hadoop Distributed File System|Hadoop Distributed File System]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Bigtable|Google Bigtable]]
 
 ## When Single Machine Isn't Enough
 
@@ -194,10 +195,3 @@ class SparkCoordinator:
 - ❌ Small team without big data expertise
 
 ---
-
-## Related
-
-- [[Upskill/SysDes/HLD/Message Queues|Message Queues]]
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Google MapReduce|Google MapReduce]]
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Hadoop Distributed File System|Hadoop Distributed File System]]
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Bigtable|Google Bigtable]]

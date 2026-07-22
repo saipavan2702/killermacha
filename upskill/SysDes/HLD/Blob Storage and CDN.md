@@ -2,6 +2,7 @@
 > Store large binary objects outside transactional databases and serve them through geographically distributed caches.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/Proxy Servers|Proxy Servers]], [[Upskill/SysDes/HLD/Caching|Caching]]
 
 ## What is Blob Storage?
 
@@ -213,8 +214,3 @@ const imageUrl = "https://d1234abcd.cloudfront.net/image.jpg";
 ```
 
 ---
-
-## Related
-
-- [[Upskill/SysDes/HLD/Proxy Servers|Proxy Servers]]
-- [[Upskill/SysDes/HLD/Caching|Caching]]

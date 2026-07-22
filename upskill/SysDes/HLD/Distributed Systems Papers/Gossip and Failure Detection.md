@@ -2,6 +2,7 @@
 > Gossip spreads bounded information through repeated random peer exchanges. For a *practical* membership and failure detector built on gossip, the SWIM protocol adds direct probes, indirect probes, suspicion states, and piggybacked membership updates.
 
 Map: [[Upskill/SysDes/HLD/Distributed Systems|Distributed Systems]]
+Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]], [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]], [[Upskill/SysDes/HLD/Replication and Recovery|Replication and Recovery]]
 
 - **Survey paper:** Ken Birman, *The Promise, and Limitations, of Gossip Protocols*
 - **Failure detector:** Abhinandan Das, Indranil Gupta, Ashish Motivala, *SWIM: Scalable Weakly-consistent Infection-style Process Group Membership Protocol* (2002)
@@ -238,13 +239,6 @@ The transferable lesson, across all of them: **probe health, spread observations
 3. SWIM uses both direct and indirect probes to test multiple network paths before suspecting a node.
 4. A suspect state plus incarnation numbers together prevent false eviction of a merely-slow node.
 5. Gossip converges membership eventually; it does not replace consensus for decisions that need to be made *now*.
-
-## Related
-
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]] - uses gossip for membership and ring ownership.
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]] - combines gossip with phi-accrual failure detection.
-- [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]
-- [[Upskill/SysDes/HLD/Replication and Recovery|Replication and Recovery]]
 
 ---
 

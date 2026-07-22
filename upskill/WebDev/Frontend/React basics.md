@@ -1,3 +1,6 @@
+Map: [[Upskill/WebDev/Frontend/React|React]]
+Connections: [[Upskill/WebDev/Frontend/JavaScript/JavaScript|JavaScript]], [[Upskill/WebDev/Frontend/Frontend Architecture|Frontend Architecture]]
+
 ==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
 

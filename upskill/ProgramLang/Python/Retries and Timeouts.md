@@ -1,8 +1,8 @@
-Map: [[Upskill/ProgramLang/Python/Python|Python]]
-
-
 > [!summary]
 > Retry only transient failures, bound every wait, and make completion checks depend on meaningful state.
+
+Map: [[Upskill/ProgramLang/Python/Python|Python]]
+Connections: [[Upskill/ProgramLang/Python/Debugging and Monitoring|Debugging and Monitoring]], [[Upskill/ProgramLang/Python/Concurrency and I-O|Concurrency and I-O]]
 
 ## OCI Retry Strategy
 
@@ -166,8 +166,3 @@ run_with_timeout(300, long_running_task)
 > Unix only. For threads or Windows, use `concurrent.futures` with a `timeout` argument.
 
 ---
-
-## Related
-
-- [[Upskill/ProgramLang/Python/Debugging and Monitoring|Debugging and Monitoring]]
-- [[Upskill/ProgramLang/Python/Concurrency and I-O|Concurrency and I-O]]

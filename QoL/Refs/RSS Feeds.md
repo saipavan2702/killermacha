@@ -1,4 +1,5 @@
 Map: [[QoL/Resources|Resources]]
+Connections: [[QoL/Refs/Dev Resources|Dev Resources]], [[Upskill/Learning|Learning]]
 
 ## APIs
 

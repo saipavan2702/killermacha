@@ -2,6 +2,7 @@
 > Consistent hashing maps both resources and keys into one shared hash space, so a membership change moves only a limited share of keys. The original paper also introduced **random trees** to spread demand for unexpectedly hot objects — a half of the paper most modern summaries skip.
 
 Map: [[Upskill/SysDes/HLD/Distributed Systems|Distributed Systems]]
+Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]], [[Upskill/SysDes/HLD/Consistent Hashing|Consistent Hashing]], [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]]
 
 - **Authors:** David Karger, Eric Lehman, Tom Leighton, Rina Panigrahy, Matthew Levine, Daniel Lewin
 - **Published:** STOC 1997 (ACM Symposium on Theory of Computing)
@@ -183,13 +184,6 @@ Modern system-design discussions usually keep the ring and drop the random-tree 
 3. Joining or leaving only changes *nearby* intervals, not the whole dataset.
 4. Virtual nodes improve balance and let you weight machines by capacity.
 5. The original paper's random trees address hot demand; the ring alone does not.
-
-## Related
-
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]] - uses consistent hashing for decentralized partition placement.
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]] - uses token ranges and virtual nodes.
-- [[Upskill/SysDes/HLD/Consistent Hashing|Consistent Hashing]] - the broader implementation note.
-- [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]]
 
 ---
 

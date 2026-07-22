@@ -1,8 +1,8 @@
-Map: [[Upskill/ProgramLang/Golang/Go|Go]]
-
-
 > [!summary]
 > Channels coordinate goroutines through explicit communication; select waits on multiple channel operations and timeouts.
+
+Map: [[Upskill/ProgramLang/Golang/Go|Go]]
+Connections: [[Upskill/ProgramLang/Golang/Interfaces|Interfaces]], [[Upskill/ProgramLang/Golang/Synchronization|Synchronization]]
 
 Channels are Go’s way of letting **go routines communicate safely** with each other.
 Think of a channel as a **pipe**: one go-routine sends values into it, another go routine receives values from it.
@@ -128,14 +128,6 @@ This ensures the main go routine only parses once the page is fully fetched.
 >3. **close + range** → clean way to signal completion.
 >4. **select** → powerful for handling multiple channels & timeouts.
 >5. Channels are the backbone of **safe concurrency in Go**.
-
----
-
-## Related
-
-- [[Upskill/ProgramLang/Golang/Interfaces|Interfaces]]
-- [[Upskill/ProgramLang/Golang/Synchronization|Synchronization]]
-
 
 ---
 

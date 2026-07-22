@@ -2,6 +2,7 @@
 > Core computer-science ideas that support programming, data structures, systems, and performance reasoning.
 
 Map: [[Upskill/Learning|Learning]]
+Connections: [[Upskill/DSA/DSA|DSA]], [[Upskill/SysDes/System Design|System Design]], [[Upskill/WebDev/Web Development|Web Development]]
 
 ## Foundations
 
@@ -13,11 +14,5 @@ Map: [[Upskill/Learning|Learning]]
 
 - [[Upskill/CS Topics/Concurrency-Parallelism-Async|Concurrency, Parallelism, and Async]]
 - [[Upskill/CS Topics/Cache-Friendly Loops|Cache-Friendly Loops]]
-
-## Related
-
-- [[Upskill/DSA/DSA|DSA]]
-- [[Upskill/SysDes/System Design|System Design]]
-- [[Upskill/WebDev/Web Development|Web Development]]
 
 #computer-science

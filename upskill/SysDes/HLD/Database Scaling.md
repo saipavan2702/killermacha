@@ -2,6 +2,7 @@
 > Scale databases through indexing, partitioning, replication, multi-primary setups, and sharding based on the actual bottleneck.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/SQL vs NoSQL|SQL vs NoSQL]], [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]], [[Upskill/SysDes/HLD/Replication and Recovery|Replication and Recovery]]
 
 Scale **step-by-step** based on your actual needs. Don't over-engineer!
 
@@ -124,9 +125,3 @@ Moved to [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]].
 4. **Extreme read-heavy** → Sharding + Master-Slave per shard
 
 ---
-
-## Related
-
-- [[Upskill/SysDes/HLD/SQL vs NoSQL|SQL vs NoSQL]]
-- [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]]
-- [[Upskill/SysDes/HLD/Replication and Recovery|Replication and Recovery]]

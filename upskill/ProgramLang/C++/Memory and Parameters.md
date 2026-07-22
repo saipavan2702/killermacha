@@ -1,8 +1,8 @@
-Map: [[Upskill/ProgramLang/C++/C++|C++]]
-
-
 > [!summary]
 > Explicit ownership and parameter-passing semantics determine whether C++ code copies, aliases, leaks, or safely releases memory.
+
+Map: [[Upskill/ProgramLang/C++/C++|C++]]
+Connections: [[Upskill/ProgramLang/C++/Priority Queues|Priority Queues]]
 
 ## Memory Leaks
 
@@ -98,7 +98,3 @@ int main() {
 }
 //This gives error
 ```
-
-## Related
-
-- [[Upskill/ProgramLang/C++/Priority Queues|Priority Queues]]

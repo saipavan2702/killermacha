@@ -2,6 +2,7 @@
 > JavaScript executes one call stack at a time while host environments coordinate timers, I/O, and queued callbacks around that stack.
 
 Map: [[Upskill/WebDev/Frontend/JavaScript/JavaScript|JavaScript]]
+Connections: [[Upskill/CS Topics/Concurrency-Parallelism-Async|Concurrency, Parallelism, and Async]], [[Upskill/WebDev/Frontend/JavaScript/Scope Functions and Closures|Scope, Functions, and Closures]], [[Upskill/WebDev/Frontend/JavaScript/Debouncing and Throttling|Debouncing and Throttling]], [[Upskill/ProgramLang/Python/Concurrency and I-O|Python Concurrency and I/O]]
 
 ## Browser Event Loop
 
@@ -57,13 +58,6 @@ Important queue families include:
 - microtasks, including promises and Node's `process.nextTick`
 
 Avoid blocking the event-loop thread with long CPU work. Move CPU-heavy tasks to worker threads or another service when latency matters.
-
-## Related
-
-- [[Upskill/CS Topics/Concurrency-Parallelism-Async|Concurrency, Parallelism, and Async]]
-- [[Upskill/WebDev/Frontend/JavaScript/Scope Functions and Closures|Scope, Functions, and Closures]]
-- [[Upskill/WebDev/Frontend/JavaScript/Debouncing and Throttling|Debouncing and Throttling]]
-- [[Upskill/ProgramLang/Python/Concurrency and I-O|Python Concurrency and I/O]]
 
 #javascript #concurrency
 

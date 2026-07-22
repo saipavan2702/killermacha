@@ -1,10 +1,11 @@
 > [!summary]
 > The kernel protects hardware and shared resources; a system call is a controlled request from application code to that kernel.
 
+Map: [[Upskill/CS Topics/Operating Systems/Operating Systems|Operating Systems]]
+Connections: [[Upskill/CS Topics/Operating Systems/Deadlocks|Deadlocks]], [[Upskill/CS Topics/Operating Systems/OS Interview Questions|OS Interview Questions]]
+
 > [!tip] Plain-English version
 > Imagine the CPU/RAM/disk as a bank vault. Your program is a customer. It can't walk into the vault itself — it has to ask a bank teller (the kernel) to do it on their behalf, and the teller checks you're allowed before acting. A **system call** is literally that request-and-response over the counter: "read this file for me," "give me 4KB of memory," "send this data over the network." The kernel is the only code trusted to actually touch the vault.
-
-Map: [[Upskill/CS Topics/Operating Systems/Operating Systems|Operating Systems]]
 
 ## Kernel Responsibilities
 

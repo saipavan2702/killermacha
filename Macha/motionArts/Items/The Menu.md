@@ -14,3 +14,6 @@ tags:
 directors:
   - Mark Mylod
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

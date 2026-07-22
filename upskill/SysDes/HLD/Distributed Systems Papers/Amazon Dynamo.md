@@ -2,6 +2,7 @@
 > Dynamo keeps a key-value store writable during failures by combining partitioning, replication, version tracking, and background repair. Its central choice is **availability with application-visible conflict resolution**, rather than a single globally ordered history.
 
 Map: [[Upskill/SysDes/HLD/Distributed Systems|Distributed Systems]]
+Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Consistent Hashing Paper|Consistent Hashing Paper]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Gossip and Failure Detection|Gossip and Failure Detection]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]], [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]
 
 - **Authors:** Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall, Werner Vogels
 - **Published:** SOSP 2007 (ACM Symposium on Operating Systems Principles)
@@ -199,13 +200,6 @@ This same layered-repair model reappears almost unchanged in Cassandra, which ex
 3. Sloppy quorums and hints keep writes moving during temporary failures.
 4. Vector clocks distinguish real causality from genuine concurrency.
 5. Read repair and Merkle-tree anti-entropy make replicas converge later, not instantly.
-
-## Related
-
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Consistent Hashing Paper|Consistent Hashing Paper]] - the partitioning technique Dynamo builds on.
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Gossip and Failure Detection|Gossip and Failure Detection]] - how nodes learn about cluster membership.
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]] - Dynamo's distribution model combined with Bigtable's data model.
-- [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]
 
 ---
 

@@ -1,4 +1,5 @@
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/LLD/SOLID Principles|SOLID Principles]]
 
 ## **Class**
 - A **Class** is a user-defined data type that defines its **properties** (data members) and **functions** (member functions).
@@ -81,7 +82,3 @@ Uses:
 - A **non-member function** that can access the **private** and **protected** members of a class.
 - Declared using the `friend` keyword.
 - Provides flexibility but should be used sparingly to avoid breaking **encapsulation**.
-
-## Related
-
-- [[Upskill/SysDes/LLD/SOLID Principles|SOLID Principles]]

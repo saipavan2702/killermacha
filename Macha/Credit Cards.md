@@ -1,3 +1,6 @@
+Map: [[Macha/Macha|Macha]]
+Connections: [[QoL/Workspace|Workspace]]
+
 **For spending about 5L per annum**
 
 - Amazon pay ICICI card

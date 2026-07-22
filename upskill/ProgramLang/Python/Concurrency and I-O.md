@@ -1,8 +1,8 @@
-Map: [[Upskill/ProgramLang/Python/Python|Python]]
-
-
 > [!summary]
 > Choose processes for isolated CPU work, threads for I/O, and explicit timeouts for subprocesses and network calls.
+
+Map: [[Upskill/ProgramLang/Python/Python|Python]]
+Connections: [[Upskill/ProgramLang/Python/Retries and Timeouts|Retries and Timeouts]]
 
 ## Parallel Execution
 
@@ -121,7 +121,3 @@ def wait_for_state(client, get_fn, resource_id, terminal_states, timeout=3600):
 ```
 
 ---
-
-## Related
-
-- [[Upskill/ProgramLang/Python/Retries and Timeouts|Retries and Timeouts]]

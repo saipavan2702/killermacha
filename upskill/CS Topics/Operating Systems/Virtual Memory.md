@@ -1,10 +1,11 @@
 > [!summary]
 > Virtual memory gives each process an address space while the OS maps pages to RAM, files, shared mappings, or no physical memory yet.
 
+Map: [[Upskill/CS Topics/Operating Systems/Operating Systems|Operating Systems]]
+Connections: [[Upskill/CS Topics/Operating Systems/Threads and Runtime Tasks|Threads and Runtime Tasks]]
+
 > [!tip] Plain-English version
 > Every process thinks it owns a huge, private, continuous chunk of memory — addresses starting at 0 and going up. That's a fiction. Behind the scenes, the OS keeps a translation table (the "page table") that maps each little chunk of that fake address space to wherever the real data actually lives — a spot in physical RAM, a spot on disk, or nowhere yet (because it's never been touched). It's like a hotel where every guest is told "this is room 101," but the hotel secretly reassigns which physical room "101" maps to per guest, and can even move your stuff to storage if you haven't used your room in a while.
-
-Map: [[Upskill/CS Topics/Operating Systems/Operating Systems|Operating Systems]]
 
 ## Address Translation
 

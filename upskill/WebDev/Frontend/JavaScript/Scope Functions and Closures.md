@@ -2,6 +2,7 @@
 > A JavaScript function resolves names through its lexical scope and carries that surrounding environment with it when used as a closure.
 
 Map: [[Upskill/WebDev/Frontend/JavaScript/JavaScript|JavaScript]]
+Connections: [[Upskill/WebDev/Frontend/JavaScript/Event Loop and Node.js|Event Loop and Node.js]], [[Upskill/WebDev/Frontend/JavaScript/Objects Classes and Prototypes|Objects, Classes, and Prototypes]]
 
 ## Scope Chain
 
@@ -88,11 +89,6 @@ const team = {
   }
 };
 ```
-
-## Related
-
-- [[Upskill/WebDev/Frontend/JavaScript/Event Loop and Node.js|Event Loop and Node.js]]
-- [[Upskill/WebDev/Frontend/JavaScript/Objects Classes and Prototypes|Objects, Classes, and Prototypes]]
 
 #javascript #functions
 

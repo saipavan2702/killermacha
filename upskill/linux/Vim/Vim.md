@@ -2,6 +2,7 @@
 > A practical map for navigating, editing, searching, and automating text in Vim and Neovim.
 
 Map: [[Upskill/Linux/Linux|Linux and Tools]]
+Connections: [[Upskill/Linux/Git/Git|Git]]
 
 ## Topics
 
@@ -29,10 +30,6 @@ zg              " Add word to dictionary
 zw              " Mark word as incorrect
 ```
 
-
-## Related
-
-- [[Upskill/Linux/Git/Git|Git]]
 
 #vim #bash
 

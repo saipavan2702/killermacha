@@ -2,6 +2,7 @@
 > Framer Motion combines declarative React animation with gestures, layout transitions, variants, and spring-based motion.
 
 Map: [[Upskill/WebDev/Web Development|Web Development]]
+Connections: [[Upskill/WebDev/Frontend/CSS|CSS]]
 
 Here we are creating an impression of button being pushed down when it's pressed down and on hover it gets bigger.
 ```jsx
@@ -294,11 +295,6 @@ export default ViewBased;
 
 [[React]]
 [[Upskill/WebDev/Frontend/CSS|CSS]]
-
-## Related
-
-- [[Upskill/WebDev/Frontend/CSS|CSS]]
-
 
 ---
 

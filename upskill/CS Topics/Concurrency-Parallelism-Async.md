@@ -1,8 +1,8 @@
-Map: [[Upskill/CS Topics/Computer Science|Computer Science]]
-
-
 > [!summary]
 > Concurrency organizes overlapping work, parallelism runs work at the same instant, and async keeps waiting from blocking useful progress.
+
+Map: [[Upskill/CS Topics/Computer Science|Computer Science]]
+Connections: [[Upskill/ProgramLang/Java/Concurrency|Java Concurrency]], [[Upskill/ProgramLang/Golang/Channels and Select|Go Channels and Select]], [[Upskill/ProgramLang/Golang/Synchronization|Go Synchronization]], [[Upskill/ProgramLang/Python/Concurrency and I-O|Python Concurrency and I/O]]
 
 ## The Three-Way Comparison
 
@@ -141,19 +141,6 @@ They solve different bottlenecks, so a system can combine them without treating 
 - **More threads means faster:** not when contention and context switching dominate.
 - **CPU count limits concurrency:** it limits physical parallelism, not the number of tasks that can be in progress.
 - **No shared state means no coordination:** results, errors, timeouts, and cancellation still need a clear owner.
-
-## Related Notes
-
-- [[Upskill/ProgramLang/Java/Concurrency|Java Concurrency]]
-- [[Upskill/ProgramLang/Golang/Channels and Select|Go Channels and Select]]
-- [[Upskill/ProgramLang/Golang/Synchronization|Go Synchronization]]
-- [[Upskill/ProgramLang/Python/Concurrency and I-O|Python Concurrency and I/O]]
-
-
-## Related
-
-- [[Upskill/CS Topics/Operating Systems/Operating Systems|Operating Systems]]
-- [[Upskill/CS Topics/Cache-Friendly Loops|Cache-Friendly Loops]]
 
 #computer-science #concurrency
 

@@ -2,6 +2,7 @@
 > Performance comes from allocation, data layout, ownership, compilation, and concurrency choices more than from language stereotypes.
 
 Map: [[Upskill/Learning|Learning]]
+Connections: [[Upskill/ProgramLang/C++/Priority Queues|Priority Queues]]
 
 ## 01. Abstractions have cost
 
@@ -289,7 +290,3 @@ void process(int* data, size_t len) {
 auto buf = std::make_unique<int[]>(1000);
 process(buf.get(), 1000);
 ```
-
-## Related
-
-- [[Upskill/ProgramLang/C++/Priority Queues|Priority Queues]]

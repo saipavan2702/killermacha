@@ -15,3 +15,6 @@ tags:
 directors:
   - Steven Spielberg
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

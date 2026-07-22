@@ -2,8 +2,8 @@
 title: Primal Fear
 media_type: movie
 industry: Hollywood
-watched: false
-watched_date:
+watched: true
+watched_date: 2026-07-22
 genres:
   - Crime
   - Drama
@@ -16,3 +16,6 @@ tags:
 directors:
   - Gregory Hoblit
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

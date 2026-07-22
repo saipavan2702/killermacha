@@ -1,3 +1,6 @@
+Map: [[Home|Home]]
+Connections: [[Upskill/Learning|Learning]], [[QoL/Workspace|Workspace]]
+
 - [ ] HLD
 - [ ] LLD
 - [ ] Oracle DB

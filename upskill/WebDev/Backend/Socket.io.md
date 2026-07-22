@@ -1,4 +1,5 @@
 Map: [[Upskill/WebDev/Web Development|Web Development]]
+Connections: [[Upskill/WebDev/Backend/Express.js|Express.js]]
 
 Socket.io is a javascript library which works by establishing a web socket connection. WebSocket is a communication protocol that provides full-duplex communication between users.
 
@@ -149,7 +150,3 @@ const Message = ({ socket, name, room }) => {
 Here we are using msgRef to tackle strict mode in react from pushing a msg twice into msgList, as it discards one state/render. Else we will get each message twice. Also, useMemo can be used to tackle the twice rendering.
 
 *There wont be any http request while doing these socket things that's the beauty*
-
-## Related
-
-- [[Upskill/WebDev/Backend/Express.js|Express.js]]

@@ -15,3 +15,6 @@ tags:
 directors:
   - Woody Allen
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

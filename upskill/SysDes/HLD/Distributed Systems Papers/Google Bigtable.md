@@ -2,6 +2,7 @@
 > Bigtable is a sparse, distributed, versioned, sorted map. Its row-key order drives locality, tablets provide horizontal partitioning, and an LSM-style storage path turns random writes into sequential files plus background compaction.
 
 Map: [[Upskill/SysDes/HLD/Distributed Systems|Distributed Systems]]
+Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Chubby|Google Chubby]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]], [[Upskill/SysDes/HLD/Big Data Systems|Big Data Systems]], [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]]
 
 - **Authors:** Fay Chang, Jeffrey Dean, Sanjay Ghemawat, Wilson C. Hsieh, Deborah A. Wallach, Mike Burrows, Tushar Chandra, Andrew Fikes, Robert E. Gruber
 - **Published:** OSDI 2006 (USENIX Symposium on Operating Systems Design and Implementation)
@@ -172,13 +173,6 @@ The 2006 paper describes Google's internal architecture. Cloud Bigtable (the man
 3. Tablets split the ordered row space into independently assignable ranges.
 4. Commit log → memtable → SSTables → compaction is the storage engine, end to end.
 5. Design keys from your queries first, and actively guard against hot prefixes.
-
-## Related
-
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Chubby|Google Chubby]] - provides master election and coordination for Bigtable.
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]] - combines Bigtable's data model with Dynamo's distribution model.
-- [[Upskill/SysDes/HLD/Big Data Systems|Big Data Systems]]
-- [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]]
 
 ---
 

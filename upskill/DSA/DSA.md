@@ -1,6 +1,9 @@
 > [!summary]
 > Data structures organize information; algorithms define repeatable ways to search, transform, and reason about it efficiently.
 
+Map: [[Upskill/Learning|Learning]]
+Connections: [[Upskill/DSA/Practice Problems|Practice Problems]], [[Upskill/CS Topics/Computer Science|Computer Science]], [[Upskill/SysDes/System Design|System Design]]
+
 ## Data Structures
 
 - [[Upskill/DSA/Data Structures/Linked List|Linked List]]

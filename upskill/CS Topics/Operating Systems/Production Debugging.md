@@ -1,10 +1,11 @@
 > [!summary]
 > Diagnose from symptoms and resource queues: establish whether work is using CPU, ready for CPU, waiting on locks, faulting on memory, blocked on I/O, or waiting outside the host.
 
+Map: [[Upskill/CS Topics/Operating Systems/Operating Systems|Operating Systems]]
+Connections: [[Upskill/CS Topics/Operating Systems/Virtual Memory|Virtual Memory]]
+
 > [!tip] Plain-English version
 > This is the "putting it all together" note. Everything else in this series (processes, scheduling, memory, locks, filesystems) is background knowledge for answering one real-world question at 3am: **"why is this service slow/broken right now, and what specifically is it stuck on?"** The trick is always the same: figure out which of a handful of buckets the problem lives in (CPU? memory? locks? disk? network? a downstream service?) before trying to fix anything.
-
-Map: [[Upskill/CS Topics/Operating Systems/Operating Systems|Operating Systems]]
 
 ## A Repeatable Workflow
 

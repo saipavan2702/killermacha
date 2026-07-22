@@ -2,6 +2,7 @@
 > Branches separate lines of work; merge or rebase integrates them, while remotes exchange commit history with other repositories.
 
 Map: [[Upskill/Linux/Git/Git|Git]]
+Connections: [[Upskill/Linux/Git/Everyday Git|Everyday Git]], [[Upskill/Linux/Git/Recovery and History|Recovery and History]]
 
 ## Branches
 
@@ -56,11 +57,6 @@ Prefer `git switch` for branch movement. Older documentation often uses the mult
 | `git bisect good <commit>` | Mark a known-good commit |
 | `git bisect bad <commit>` | Mark a known-bad commit |
 | `git bisect reset` | End the bisect session |
-
-## Related
-
-- [[Upskill/Linux/Git/Everyday Git|Everyday Git]]
-- [[Upskill/Linux/Git/Recovery and History|Recovery and History]]
 
 #git
 

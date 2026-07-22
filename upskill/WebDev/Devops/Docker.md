@@ -1,4 +1,5 @@
 Map: [[Upskill/WebDev/Web Development|Web Development]]
+Connections: [[Upskill/Linux/Linux|Linux]]
 
 ## Quick Peek to Docker
 
@@ -28,10 +29,6 @@ docker exec -it(interactive)
 
  We sometimes see that two containers running on same port but its fine as we just have to bind them to different host ports along with some configuration.
 
-
-## Related
-
-- [[Upskill/Linux/Linux|Linux]]
 
 #docker
 

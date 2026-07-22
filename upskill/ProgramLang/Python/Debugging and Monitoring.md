@@ -1,8 +1,8 @@
-Map: [[Upskill/ProgramLang/Python/Python|Python]]
-
-
 > [!summary]
 > Use logs, tracebacks, memory tracking, file monitoring, system-call tracing, and interactive debugging to explain failures instead of guessing.
+
+Map: [[Upskill/ProgramLang/Python/Python|Python]]
+Connections: [[Upskill/ProgramLang/Python/Retries and Timeouts|Retries and Timeouts]]
 
 ## Practical Toolkit
 
@@ -289,7 +289,3 @@ if __name__ == "__main__":
 
     complete_monitoring_workflow()
 ```
-
-## Related
-
-- [[Upskill/ProgramLang/Python/Retries and Timeouts|Retries and Timeouts]]

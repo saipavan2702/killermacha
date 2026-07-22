@@ -1,4 +1,5 @@
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/LLD/Design Patterns/Behavioral|Behavioral]]
 
 ### 1. MVC (Model-View-Controller)
 **Purpose**: Separate data, UI, and logic.
@@ -65,9 +66,5 @@ class BankAccount {
 }
 ```
 
-
-## Related
-
-- [[Upskill/SysDes/LLD/Design Patterns/Behavioral|Behavioral]]
 
 #sysdes #design-patterns

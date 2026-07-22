@@ -2,6 +2,7 @@
 > Short-lived access tokens limit exposure; longer-lived refresh tokens obtain replacements without making the user log in repeatedly.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Bearer Tokens]], [[Upskill/SysDes/HLD/API Build/Auth Methods/OAuth 2.0]]
 
 ## Different Jobs
 
@@ -83,8 +84,6 @@ The transaction prevents two concurrent uses from both succeeding. Store a verif
 ## Revocation Events
 
 Revoke refresh tokens on logout, password reset, account disablement, device removal, suspicious reuse, or administrative action.
-
-Related: [[Authentication Overview]], [[Bearer Tokens]], and [[OAuth 2.0]]
 
 #authentication #oauth
 

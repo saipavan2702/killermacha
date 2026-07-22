@@ -1,6 +1,9 @@
 > [!summary]
 > Personal notes, media tracking, aesthetics, and everyday reference material.
 
+Map: [[Home|Home]]
+Connections: [[Macha/Media Links|Media Links]], [[Macha/Aesthetic|Aesthetic]], [[Macha/Watches|Watches]], [[Macha/Credit Cards|Credit Cards]]
+
 ## Start Here
 
 - [[Macha/Media Links|Media Links]]

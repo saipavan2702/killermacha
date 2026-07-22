@@ -2,8 +2,7 @@
 > Dynamic programming solves overlapping subproblems once and reuses their results through a carefully chosen state and transition.
 
 Map: [[Upskill/DSA/DSA|DSA]]
-
-Related: [[Upskill/DSA/Data Structures/Tree|Tree]] · [[Upskill/DSA/Data Structures/Segment Tree|Segment Tree]]
+Connections: [[Upskill/DSA/Data Structures/Tree|Tree]], [[Upskill/DSA/Data Structures/Segment Tree|Segment Tree]]
 
 ## Minimum Ball Deletions — Interval DP
 

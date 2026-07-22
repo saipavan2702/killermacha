@@ -1,4 +1,5 @@
 Map: [[Upskill/ProgramLang/Golang/Go|Go]]
+Connections: [[Upskill/ProgramLang/Golang/Context|Context]]
 
 What Even Is an **Event Bus**?
 
@@ -9,7 +10,3 @@ Imagine a radio station 📻.
 
 That's an event bus. Different parts of your app can talk to each other without knowing about each other.
 One part says "hey, something happened!" and anyone who cares gets notified.
-
-## Related
-
-- [[Upskill/ProgramLang/Golang/Context|Context]]

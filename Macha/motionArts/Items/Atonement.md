@@ -2,7 +2,7 @@
 title: Atonement
 media_type: movie
 industry: Hollywood
-watched: false
+watched: true
 watched_date: 2026-06-12
 genres:
   - Drama
@@ -14,3 +14,6 @@ tags:
   - motion-art
   - movie
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

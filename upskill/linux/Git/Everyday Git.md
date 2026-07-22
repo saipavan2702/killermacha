@@ -2,6 +2,7 @@
 > The everyday Git loop is inspect, stage intentionally, review the staged diff, commit one coherent change, and inspect the resulting history.
 
 Map: [[Upskill/Linux/Git/Git|Git]]
+Connections: [[Upskill/Linux/Git/Branches and Remotes|Branches and Remotes]], [[Upskill/Linux/Git/Recovery and History|Recovery and History]]
 
 ## Setup and Help
 
@@ -58,11 +59,6 @@ git log --oneline --graph --decorate -10
 
 > [!tip]
 > Prefer a small coherent commit over staging the entire working tree automatically. `git add -p` makes the boundary visible.
-
-## Related
-
-- [[Upskill/Linux/Git/Branches and Remotes|Branches and Remotes]]
-- [[Upskill/Linux/Git/Recovery and History|Recovery and History]]
 
 #git
 

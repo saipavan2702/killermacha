@@ -1,6 +1,5 @@
 Map: [[QoL/Resources|Resources]]
-
-Related: [[Home|Home]]
+Connections: [[QoL/Workspace|Workspace]], [[QoL/Configs|Configs]]
 
 ## Videos
 

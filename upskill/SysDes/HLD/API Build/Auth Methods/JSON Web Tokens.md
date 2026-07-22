@@ -2,6 +2,7 @@
 > JWT is a compact format for signed or encrypted claims. It is a token format, not an authentication method or complete login protocol.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Bearer Tokens]], [[Upskill/SysDes/HLD/API Build/Auth Methods/OpenID Connect]]
 
 ## Structure
 
@@ -61,8 +62,6 @@ Use a maintained library. Decoding without signature and claim validation does n
 
 > [!important]
 > Prefer asymmetric signing when many services verify tokens. The issuer keeps the private key; services receive only public verification keys.
-
-Related: [[Authentication Overview]], [[Bearer Tokens]], and [[OpenID Connect]]
 
 #authentication #jwt
 

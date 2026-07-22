@@ -2,6 +2,7 @@
 > Frontend architecture scales when features have clear ownership, dependencies move in predictable directions, and state and side effects stay close to the code that needs them.
 
 Map: [[Upskill/WebDev/Web Development|Web Development]]
+Connections: [[Upskill/SysDes/LLD/Clean Code Patterns|Clean Code Patterns]], [[Upskill/SysDes/LLD/SOLID Principles|SOLID Principles]], [[Upskill/WebDev/Frontend/React|React]], [[Upskill/WebDev/Frontend/Redux|Redux]]
 
 > [!important]
 > Frontend scalability is not only about traffic. It is the ability to add developers, features, and integrations without making every change slower or riskier.
@@ -145,14 +146,6 @@ Architecture should change when a real constraint appears, not whenever a new li
 - Can a vendor or API response change without spreading through the UI?
 - Is the performance work based on a measurement?
 - Does this change follow the architecture already used nearby?
-
-## Related
-
-- [[Upskill/SysDes/LLD/Clean Code Patterns|Clean Code Patterns]]
-- [[Upskill/SysDes/LLD/SOLID Principles|SOLID Principles]]
-- [[Upskill/WebDev/Frontend/React|React]]
-- [[Upskill/WebDev/Frontend/Redux|Redux]]
-- [[Upskill/WebDev/Frontend/Request Waterfalls|Request Waterfalls]]
 
 #frontend-architecture
 

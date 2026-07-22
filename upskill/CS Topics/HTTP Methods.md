@@ -2,6 +2,7 @@
 > HTTP methods express the intended operation, while safety, idempotency, caching, and status codes define how clients may repeat and interpret it.
 
 Map: [[Upskill/CS Topics/Computer Science|Computer Science]]
+Connections: [[Upskill/CS Topics/Concurrency-Parallelism-Async|Concurrency-Parallelism-Async]]
 
 ## The Core Idea
 
@@ -174,5 +175,3 @@ Do you want to INSPECT the server?
 ```
 
 Safe ⊂ Idempotent — everything safe is also idempotent, but not vice versa (`PUT`, `DELETE`).
-
-## Related

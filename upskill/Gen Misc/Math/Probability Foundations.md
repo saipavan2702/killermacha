@@ -2,6 +2,7 @@
 > Events, axioms, set operations, and counting rules form the vocabulary needed for every later probability problem.
 
 Map: [[Upskill/Gen Misc/Math/Math|Math]]
+Connections: [[Upskill/Gen Misc/Math/Probability|Probability]]
 
 ## 1. Events vs. Outcomes & Sample Spaces
 
@@ -121,7 +122,3 @@ Used when possibilities are in the millions. Always ask: **"Can I repeat?"** and
 > $\frac{8 \times 7 \times 6}{3!} = \frac{336}{6} = 56$ combinations.
 
 ---
-
-## Related
-
-- [[Upskill/Gen Misc/Math/Probability|Probability]]

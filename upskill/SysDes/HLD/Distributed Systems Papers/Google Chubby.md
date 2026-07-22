@@ -2,6 +2,7 @@
 > Chubby is a highly available service for coarse-grained locks and small, reliable metadata. Its important ideas are consensus-backed leadership, lease-based sessions, cache invalidation, and **sequencers** that fence stale lock holders.
 
 Map: [[Upskill/SysDes/HLD/Distributed Systems|Distributed Systems]]
+Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache ZooKeeper|Apache ZooKeeper]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Bigtable|Google Bigtable]], [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]
 
 - **Author:** Mike Burrows (Google)
 - **Published:** OSDI 2006 (USENIX Symposium on Operating Systems Design and Implementation)
@@ -142,12 +143,6 @@ The useful design question isn't "which API looks more like a lock?" — it's "w
 3. Sessions and leases bound how long a cached lock ownership belief can be trusted.
 4. Advisory locking is only safe when the protected resource itself validates ownership.
 5. A monotonic sequencer/generation fences off paused or partitioned former leaders.
-
-## Related
-
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache ZooKeeper|Apache ZooKeeper]] - an open-source coordination service influenced by Chubby.
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Bigtable|Google Bigtable]] - relies on Chubby for master election.
-- [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]
 
 ---
 

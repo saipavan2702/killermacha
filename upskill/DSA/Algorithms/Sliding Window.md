@@ -2,6 +2,7 @@
 > Sliding window maintains a valid contiguous range while moving its left and right boundaries, often reducing nested scans to linear time.
 
 Map: [[Upskill/DSA/DSA|DSA]]
+Connections: [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]], [[Upskill/DSA/Algorithms/Binary Search|Binary Search]]
 
 ## Template
 
@@ -38,10 +39,5 @@ public:
 };
 ```
 
-
-## Related
-
-- [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]]
-- [[Upskill/DSA/Algorithms/Binary Search|Binary Search]]
 
 #dsa #sliding-window

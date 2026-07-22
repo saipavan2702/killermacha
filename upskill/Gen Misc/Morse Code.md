@@ -1,4 +1,5 @@
 Map: [[Upskill/Learning|Learning]]
+Connections: [[Upskill/Gen Misc/Space|Space]]
 
 ## The Core Idea
 

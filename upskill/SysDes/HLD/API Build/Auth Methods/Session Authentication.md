@@ -2,6 +2,7 @@
 > Session authentication stores login state on the server and gives the browser an opaque session identifier in a protected cookie.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Single Sign-On]]
 
 ## Flow
 
@@ -46,8 +47,6 @@ The framework API varies, but the important properties are a random opaque ID, s
 - **Session theft:** use HTTPS, `Secure`, `HttpOnly`, short expiry, and device-aware monitoring.
 - **CSRF:** use `SameSite`, CSRF tokens, and origin checks for state-changing requests.
 - **Scaling:** use a shared session store or carefully designed sticky sessions.
-
-Related: [[Authentication Overview]] and [[Single Sign-On]]
 
 #authentication #web-security
 

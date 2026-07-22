@@ -2,6 +2,7 @@
 > Broad developer roadmaps, project collections, open-source references, and career material that do not belong to one technical concept note.
 
 Map: [[QoL/Resources|Resources]]
+Connections: [[Upskill/Learning|Learning]], [[Upskill/CS Topics/Computer Science|Computer Science]]
 
 ## Topic Maps
 

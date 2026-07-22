@@ -1,8 +1,8 @@
-Map: [[Upskill/ProgramLang/Python/Python|Python]]
-
-
 > [!summary]
 > Centralized logging, explicit lifecycle handling, and focused decorators make production scripts easier to operate.
+
+Map: [[Upskill/ProgramLang/Python/Python|Python]]
+Connections: [[Upskill/ProgramLang/Python/Language Fundamentals|Language Fundamentals]], [[Upskill/ProgramLang/Python/Configuration and Validation|Configuration and Validation]]
 
 ## Logging Setup
 
@@ -172,8 +172,3 @@ def log_method(func):
 > Use `@graceful` for user-facing messages. Use `@failsafe` when callers need to decide retry logic. Always use `@wraps` to preserve the function name.
 
 ---
-
-## Related
-
-- [[Upskill/ProgramLang/Python/Language Fundamentals|Language Fundamentals]]
-- [[Upskill/ProgramLang/Python/Configuration and Validation|Configuration and Validation]]

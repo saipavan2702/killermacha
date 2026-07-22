@@ -1,8 +1,8 @@
-Map: [[Upskill/ProgramLang/Java/Java|Java]]
-
-
 > [!summary]
 > A practical reference for modern Java collections, queues, maps, generics, bounds, and common operations.
+
+Map: [[Upskill/ProgramLang/Java/Java|Java]]
+Connections: [[Upskill/ProgramLang/Java/Collections and Type Relationships|Collections and Type Relationships]]
 
 ```java
 import java.util.*;
@@ -453,7 +453,3 @@ public class ModernJava21Collections {
     }
 }
 ```
-
-## Related
-
-- [[Upskill/ProgramLang/Java/Collections and Type Relationships|Collections and Type Relationships]]

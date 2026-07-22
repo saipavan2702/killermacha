@@ -2,6 +2,7 @@
 > Git records project history as commits and lets branches, remotes, and recovery tools shape how that history is created and shared.
 
 Map: [[Upskill/Linux/Linux|Linux]]
+Connections: [[Upskill/Linux/Shell Tips|Shell Tips]], [[QoL/Workspace|Workspace]]
 
 ## Start Here
 
@@ -16,11 +17,6 @@ Map: [[Upskill/Linux/Linux|Linux]]
 3. A **commit** is an immutable snapshot with a parent.
 4. A **branch** is a movable name pointing to a commit.
 5. A **remote** is another repository whose references you can fetch or update.
-
-## Related
-
-- [[Upskill/Linux/Shell Tips|Shell Tips]]
-- [[Workspace|Workspace]]
 
 #git
 

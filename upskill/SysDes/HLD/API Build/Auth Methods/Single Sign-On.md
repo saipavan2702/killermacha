@@ -2,6 +2,7 @@
 > Single Sign-On lets a user authenticate once with a trusted Identity Provider and enter multiple applications without repeating the login ceremony.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/API Build/Auth Methods/Custom JWT and Redis Authentication]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]], [[Upskill/SysDes/HLD/API Build/Auth Methods/OpenID Connect]], [[Upskill/SysDes/HLD/API Build/Auth Methods/OAuth 2.0]]
 
 > [!important]
 > SSO is a trust relationship and user experience. JWT is a token format; Redis is a state store; OIDC and SAML are protocols that can implement SSO.
@@ -269,8 +270,6 @@ Local logout destroys one app's session. IdP logout ends the central login sessi
 - **Resource Server starts login:** no; it validates API access tokens.
 - **SSO removes authorization:** every application must still enforce its own permissions.
 - **One logout automatically ends everything:** only if coordinated logout or revocation is designed.
-
-Related: [[Authentication Overview]], [[Custom JWT and Redis Authentication]], [[OpenID Connect]], [[OAuth 2.0]], [[Bearer Tokens]], and [[Session Authentication]]
 
 #authentication #sso
 

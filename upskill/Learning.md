@@ -1,6 +1,9 @@
 > [!summary]
 > Topic maps for computer science, programming, system design, mathematics, and technical practice.
 
+Map: [[Home|Home]]
+Connections: [[Upskill/DSA/DSA|DSA]], [[Upskill/SysDes/System Design|System Design]], [[Upskill/CS Topics/Computer Science|Computer Science]], [[Upskill/WebDev/Web Development|Web Development]]
+
 ## Start Here
 
 - [[Upskill/DSA/DSA|DSA]]
@@ -23,11 +26,6 @@
 - [[Upskill/Mock Interviews|Mock Interviews]]
 - [[Upskill/Linux/Git/Git|Git]]
 - [[Upskill/Linux/Vim/Vim|Vim]]
-
-## Related
-
-- [[QoL/Note System|Note System]]
-- [[Dev Resources|Dev Resources]]
 
 ## Recently Updated
 

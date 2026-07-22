@@ -1,6 +1,9 @@
 > [!summary]
 > Design systems by starting with requirements and scale, then choosing data, communication, and reliability patterns whose trade-offs fit the problem.
 
+Map: [[Upskill/Learning|Learning]]
+Connections: [[Upskill/CS Topics/Computer Science|Computer Science]], [[Upskill/WebDev/Web Development|Web Development]], [[Upskill/DSA/DSA|DSA]]
+
 ## Start Here
 
 - [[Upskill/SysDes/HLD/Scaling Fundamentals|Scaling Fundamentals]]

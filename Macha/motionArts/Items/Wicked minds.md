@@ -17,3 +17,6 @@ tags:
 directors:
   - Jason Hreno
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

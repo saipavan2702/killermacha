@@ -2,6 +2,7 @@
 > JavaScript objects inherit through prototype chains; class syntax provides a clearer surface over that same model.
 
 Map: [[Upskill/WebDev/Frontend/JavaScript/JavaScript|JavaScript]]
+Connections: [[Upskill/WebDev/Frontend/JavaScript/Scope Functions and Closures|Scope, Functions, and Closures]], [[Upskill/SysDes/LLD/Object-Oriented Programming|Object-Oriented Programming]], [[Upskill/SysDes/LLD/Inheritance vs Composition|Inheritance vs Composition]]
 
 ## Objects and References
 
@@ -80,12 +81,6 @@ person.greet(); // Hello Asha
 ```
 
 If a property is not found directly on `person`, JavaScript follows its prototype to `greeter`, then continues until the chain ends at `null`.
-
-## Related
-
-- [[Upskill/WebDev/Frontend/JavaScript/Scope Functions and Closures|Scope, Functions, and Closures]]
-- [[Upskill/SysDes/LLD/Object-Oriented Programming|Object-Oriented Programming]]
-- [[Upskill/SysDes/LLD/Inheritance vs Composition|Inheritance vs Composition]]
 
 #javascript #objects
 

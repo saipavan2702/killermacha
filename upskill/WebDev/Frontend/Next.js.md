@@ -2,6 +2,7 @@
 > Next.js organizes React applications around routing, server rendering, data fetching, caching, and deployment boundaries.
 
 Map: [[Upskill/WebDev/Web Development|Web Development]]
+Connections: [[Upskill/WebDev/Frontend/React|React]], [[Upskill/WebDev/Frontend/Redux|Redux]]
 
 In Next.js, every component is a Server Component by default. Add `"use client"` at the top when a component requires client-side state, effects, or browser APIs.
 
@@ -299,10 +300,5 @@ my-nextjs-project/
 
 
 
-
-## Related
-
-- [[Upskill/WebDev/Frontend/React|React]]
-- [[Upskill/WebDev/Frontend/Redux|Redux]]
 
 #typescript

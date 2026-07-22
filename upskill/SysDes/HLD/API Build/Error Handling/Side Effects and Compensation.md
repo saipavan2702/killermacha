@@ -2,6 +2,7 @@
 > Concurrent mutations can partially succeed; safe workflows either use one transaction or define explicit compensation for every completed step.
 
 Map: [[Upskill/SysDes/HLD/API Build/Error Handling/Error Handling|Error Handling]]
+Connections: [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]], [[Upskill/SysDes/HLD/Message Queues|Message Queues]], [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]], [[Upskill/ProgramLang/Python/Retries and Timeouts|Retries and Timeouts]]
 
 ## Why `Promise.all` Can Be Dangerous
 
@@ -53,13 +54,6 @@ Real compensation must be idempotent. A retry of `refundCharge` should not issue
 - define timeouts and dead-letter handling
 - expose stuck workflows through metrics and alerts
 - prefer parallelism for independent reads, not uncoordinated writes
-
-## Related
-
-- [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]]
-- [[Upskill/SysDes/HLD/Message Queues|Message Queues]]
-- [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]
-- [[Upskill/ProgramLang/Python/Retries and Timeouts|Retries and Timeouts]]
 
 #sysdes #reliability
 

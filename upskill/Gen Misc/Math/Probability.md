@@ -2,6 +2,7 @@
 > Probability measures uncertainty through events, conditional information, counting, expectation, and distributions.
 
 Map: [[Upskill/Gen Misc/Math/Math|Math]]
+Connections: [[Upskill/Gen Misc/Math/Probability Foundations|Probability Foundations]], [[Upskill/Gen Misc/Math/Conditional Probability|Conditional Probability]]
 
 ## Topics
 
@@ -12,11 +13,6 @@ Map: [[Upskill/Gen Misc/Math/Math|Math]]
 
 *Study actively: make up a small example for each concept and solve it without looking back.*
 
-
-## Related
-
-- [[Upskill/Gen Misc/Math/Probability Foundations|Probability Foundations]]
-- [[Upskill/Gen Misc/Math/Conditional Probability|Conditional Probability]]
 
 #probability #mathematics
 

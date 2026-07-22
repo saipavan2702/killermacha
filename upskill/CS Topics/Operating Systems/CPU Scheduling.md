@@ -1,10 +1,11 @@
 > [!summary]
 > CPU scheduling is a queueing problem: choose which runnable thread executes next while balancing latency, throughput, fairness, and predictability.
 
+Map: [[Upskill/CS Topics/Operating Systems/Operating Systems|Operating Systems]]
+Connections: [[Upskill/CS Topics/Operating Systems/Deadlocks|Deadlocks]]
+
 > [!tip] Plain-English version
 > Picture one cashier (the CPU) and a line of customers (runnable threads). The scheduler is the store manager deciding: do we serve people in the order they arrived? Do we serve whoever has the shortest order first? Do we give everyone a fixed 2-minute slot and rotate? Every scheduling algorithm below is really just a different store policy for "who gets served next," each with different trade-offs between speed for the whole line versus fairness to any one customer.
-
-Map: [[Upskill/CS Topics/Operating Systems/Operating Systems|Operating Systems]]
 
 ## The Real Unit of Scheduling
 

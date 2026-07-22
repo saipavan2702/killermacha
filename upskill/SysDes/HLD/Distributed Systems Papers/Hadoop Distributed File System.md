@@ -2,6 +2,7 @@
 > HDFS stores very large files as replicated blocks spread across DataNodes, while a single NameNode owns all filesystem metadata. Clients ask the NameNode *where* blocks live, then stream data directly to or from the DataNodes — the actual bytes never flow through the NameNode.
 
 Map: [[Upskill/SysDes/HLD/Distributed Systems|Distributed Systems]]
+Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Google MapReduce|Google MapReduce]], [[Upskill/SysDes/HLD/Big Data Systems|Big Data Systems]], [[Upskill/SysDes/HLD/Blob Storage and CDN|Blob Storage and CDN]], [[Upskill/SysDes/HLD/Replication and Recovery|Replication and Recovery]]
 
 - **Authors:** Konstantin Shvachko, Hairong Kuang, Sanjay Radia, Robert Chansler (Yahoo!)
 - **Published:** MSST 2010 (IEEE 26th Symposium on Mass Storage Systems and Technologies)
@@ -181,13 +182,6 @@ The 2010 paper documents the architecture and production experience of early HDF
 3. Large blocks and replication are the two pillars optimizing for streaming throughput and failure recovery.
 4. Writes flow through a DataNode pipeline, with acknowledgements traveling back in reverse.
 5. Tiny files and unbounded NameNode metadata growth are the classic HDFS anti-pattern to design against.
-
-## Related
-
-- [[Upskill/SysDes/HLD/Distributed Systems Papers/Google MapReduce|Google MapReduce]] - the compute model HDFS was designed to support in Hadoop.
-- [[Upskill/SysDes/HLD/Big Data Systems|Big Data Systems]]
-- [[Upskill/SysDes/HLD/Blob Storage and CDN|Blob Storage and CDN]]
-- [[Upskill/SysDes/HLD/Replication and Recovery|Replication and Recovery]]
 
 ---
 

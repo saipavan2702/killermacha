@@ -2,6 +2,7 @@
 > TypeScript error handling starts by awaiting every meaningful promise and narrowing `unknown` failures into stable application errors at system boundaries.
 
 Map: [[Upskill/SysDes/HLD/API Build/Error Handling/Error Handling|Error Handling]]
+Connections: [[Upskill/SysDes/HLD/API Build/Error Handling/Side Effects and Compensation|Side Effects and Compensation]], [[Upskill/WebDev/Frontend/TypeScript|TypeScript]], [[Upskill/ProgramLang/Python/Debugging and Monitoring|Debugging and Monitoring]]
 
 ## Await Every Meaningful Promise
 
@@ -71,12 +72,6 @@ try {
   throw normalizeError(error);
 }
 ```
-
-## Related
-
-- [[Upskill/SysDes/HLD/API Build/Error Handling/Side Effects and Compensation|Side Effects and Compensation]]
-- [[Upskill/WebDev/Frontend/TypeScript|TypeScript]]
-- [[Upskill/ProgramLang/Python/Debugging and Monitoring|Debugging and Monitoring]]
 
 #typescript #error-handling
 

@@ -1,8 +1,8 @@
-Map: [[Upskill/Linux/Vim/Vim|Vim]]
-
-
 > [!summary]
 > Buffers hold files, windows display buffers, and sessions preserve a working layout.
+
+Map: [[Upskill/Linux/Vim/Vim|Vim]]
+Connections: [[Upskill/Linux/Vim/Registers Macros and Repetition|Registers Macros and Repetition]], [[Upskill/Linux/Vim/Command Line|Command Line]]
 
 ## 🗂️ File and Buffer Management
 
@@ -107,8 +107,3 @@ Use built-in file browsing inside Vim:
 - `:Sex` — Open in horizontal split
 
 ---
-
-## Related
-
-- [[Upskill/Linux/Vim/Registers Macros and Repetition|Registers Macros and Repetition]]
-- [[Upskill/Linux/Vim/Command Line|Command Line]]

@@ -1,3 +1,6 @@
+Map: [[QoL/Resources|Resources]]
+Connections: [[QoL/Configs|Configs]]
+
 Projects
 https://github.com/perghosh/Data-oriented-design
 https://gitlab.com/users/avey.dev/projects

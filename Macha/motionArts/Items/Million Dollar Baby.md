@@ -13,3 +13,6 @@ tags:
 directors:
   - Clint Eastwood
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

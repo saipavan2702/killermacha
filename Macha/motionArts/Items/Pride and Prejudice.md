@@ -14,3 +14,6 @@ tags:
 directors:
   - Joe Wright
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

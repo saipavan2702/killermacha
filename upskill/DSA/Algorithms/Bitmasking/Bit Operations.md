@@ -2,6 +2,7 @@
 > A one-bit mask such as `1 << i` targets bit `i`; combine it with OR, AND, XOR, or complement to update and query state.
 
 Map: [[Upskill/DSA/Algorithms/Bitmasking/Bitmasking|Bitmasking]]
+Connections: [[Upskill/DSA/Algorithms/Bitmasking/Subset Enumeration|Subset Enumeration]], [[Upskill/DSA/Algorithms/Bitmasking/Bitmask Dynamic Programming|Bitmask Dynamic Programming]]
 
 ## Core Operations
 
@@ -79,10 +80,5 @@ In two's-complement arithmetic, `-x` is `~x + 1`. Every bit below the least-sign
 int x = 40;       // 101000
 int lsb = x & -x; // 001000 = 8
 ```
-
-## Related
-
-- [[Upskill/DSA/Algorithms/Bitmasking/Subset Enumeration|Subset Enumeration]]
-- [[Upskill/DSA/Algorithms/Bitmasking/Bitmask Dynamic Programming|Bitmask Dynamic Programming]]
 
 #dsa #bitmasking

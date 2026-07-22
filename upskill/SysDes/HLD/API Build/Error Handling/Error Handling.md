@@ -2,6 +2,7 @@
 > Good error handling makes failures visible, preserves their cause and context, and prevents partial work from being mistaken for success.
 
 Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/LLD/Clean Code Patterns|Clean Code Patterns]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview|Authentication Methods]], [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]], [[Upskill/SysDes/HLD/Message Queues|Message Queues]]
 
 ## Topics
 
@@ -31,14 +32,6 @@ Translate internal errors into a stable client contract at the HTTP or RPC bound
   }
 }
 ```
-
-## Related
-
-- [[Upskill/SysDes/LLD/Clean Code Patterns|Clean Code Patterns]]
-- [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview|Authentication Methods]]
-- [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]]
-- [[Upskill/SysDes/HLD/Message Queues|Message Queues]]
-- [[Upskill/ProgramLang/Python/Retries and Timeouts|Retries and Timeouts]]
 
 #sysdes #error-handling
 

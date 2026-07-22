@@ -1,8 +1,8 @@
-Map: [[Upskill/Linux/Vim/Vim|Vim]]
-
-
 > [!summary]
 > Vim becomes fast when movement expresses intent: words, lines, screens, jumps, and text objects.
+
+Map: [[Upskill/Linux/Vim/Vim|Vim]]
+Connections: [[Upskill/Linux/Vim/Editing Text|Editing Text]]
 
 ## 🔀  Cursor Movement
 
@@ -88,7 +88,3 @@ g~i"    " Toggle case inside double quotes
 ```
 
 ---
-
-## Related
-
-- [[Upskill/Linux/Vim/Editing Text|Editing Text]]

@@ -15,3 +15,6 @@ tags:
 directors:
   - Brian De Palma
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

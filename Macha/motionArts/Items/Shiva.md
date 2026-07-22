@@ -15,3 +15,6 @@ tags:
 directors:
   - Ram Gopal Varma
 ---
+
+Map: [[Macha/Macha|Macha]]
+Connections: [[Macha/Media Links|Media Links]]

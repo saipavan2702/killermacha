@@ -1,4 +1,5 @@
 Map: [[Upskill/Learning|Learning]]
+Connections: [[Upskill/DSA/Practice Problems|Practice Problems]]
 
 For every individual interview will be about 2-3hrs tentatively.
 The interview schema follows :-
@@ -60,7 +61,3 @@ SQL
 6. Wildcard queries
 7. https://leetcode.com/problems/top-travellers/
 8. https://leetcode.com/problems/delete-duplicate-emails/description/
-
-## Related
-
-- [[Upskill/DSA/Practice Problems|Practice Problems]]
