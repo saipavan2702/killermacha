@@ -20,8 +20,22 @@
               "icon": "lucide-file",
               "title": "Rate Limiter"
             }
+          },
+          {
+            "id": "f12002b2fbff99b8",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "Macha/motionArts/Celluloid.base",
+                "viewName": "Movies"
+              },
+              "icon": "lucide-layout-grid",
+              "title": "Celluloid"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -80,8 +94,8 @@
             "state": {
               "type": "notebook-navigator",
               "state": {},
-              "icon": "notebook-navigator",
-              "title": "Notebook Navigator"
+              "icon": "lucide-ghost",
+              "title": "notebook-navigator"
             }
           }
         ]
@@ -97,7 +111,6 @@
       {
         "id": "c863ad5af3f261ba",
         "type": "tabs",
-        "dimension": 60.535714285714285,
         "children": [
           {
             "id": "e8a4823d28971416",
@@ -187,17 +200,9 @@
               "icon": "lucide-file-signature",
               "title": "Footnotes"
             }
-          }
-        ],
-        "currentTab": 4
-      },
-      {
-        "id": "68bab7e96406684e",
-        "type": "tabs",
-        "dimension": 39.464285714285715,
-        "children": [
+          },
           {
-            "id": "677bd9dbbd89460a",
+            "id": "43870eec30494ab9",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -206,7 +211,8 @@
               "title": "Calendar"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -221,15 +227,30 @@
       "switcher:Open quick switcher": false,
       "command-palette:Open command palette": false,
       "daily-notes:Open today's daily note": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "notebook-navigator:Notebook Navigator": false,
-      "templater-obsidian:Templater": false,
-      "canvas:Create new canvas": false,
-      "templates:Insert template": false
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "bd6443c3c547f549",
+  "active": "f12002b2fbff99b8",
   "lastOpenFiles": [
+    "Macha/motionArts/Items/Obsession.md",
+    "Macha/motionArts/Celluloid.base",
+    "Macha/motionArts/Items/Odyssey.md",
+    "Macha/motionArts/Items/Atonement.md",
+    "Macha/motionArts/Items/Dungeons & Dragons - Honour Among Thieves.md",
+    "Macha/motionArts/Items/Primal Fear.md",
+    "Macha/motionArts/Items/Primal Fear 2.md",
+    "Macha/motionArts/Items/8½.md",
+    "Upskill/SysDes/LLD/Rate Limiter.md",
+    "Upskill/ProgramLang/Python/Retries and Timeouts.md",
+    "Upskill/ProgramLang/Python/Configuration and Validation.md",
+    "Upskill/ProgramLang/Python/Application Structure.md",
+    "QoL/Resources.md",
+    "Upskill/SysDes/LLD/Design Patterns/Architectural.md",
+    "Upskill/SysDes/HLD/API Build/Auth Methods/Basic Authentication.md",
     "Upskill/CS Topics/Operating Systems/Deadlocks.md",
     "QoL/Configs.md",
     "Upskill/DSA/DSA.md",
@@ -241,26 +262,10 @@
     "Upskill/SysDes/HLD/Distributed Systems Papers/Google MapReduce.md",
     "Upskill/SysDes/HLD/Distributed Systems Papers/Apache ZooKeeper.md",
     "Upskill/SysDes/HLD/Distributed Systems Papers/Google Chubby.md",
-    "Upskill/SysDes/HLD/Distributed Systems Papers/Gossip and Failure Detection.md",
-    "Upskill/SysDes/HLD/Distributed Systems Papers/Google Bigtable.md",
-    "Upskill/SysDes/HLD/Distributed Systems Papers/Consistent Hashing Paper.md",
-    "Upskill/SysDes/HLD/Distributed Systems Papers/Apache Kafka Architecture.md",
-    "Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo.md",
     "Upskill/SysDes/HLD/Distributed Systems Papers",
-    "Upskill/WebDev/Frontend/Frontend Architecture.md",
-    "Upskill/SysDes/LLD/Clean Code Patterns.md",
-    "Upskill/CS Topics/Operating Systems/OS Interview Questions.md",
-    "Upskill/CS Topics/Operating Systems/CPU Scheduling.md",
-    "Upskill/CS Topics/Operating Systems/Operating Systems.md",
-    "Upskill/CS Topics/Operating Systems/Kernel and System Calls.md",
-    "Upskill/CS Topics/Operating Systems/Virtual Memory.md",
-    "Upskill/CS Topics/Operating Systems/Synchronization.md",
-    "Upskill/CS Topics/Operating Systems/Storage and File Systems.md",
-    "Upskill/CS Topics/Operating Systems/Production Debugging.md",
     "Upskill/CS Topics/Operating Systems",
     "new-book-template-clipper.json",
     "new-post-video-template-clipper.json",
-    "Macha/motionArts/Celluloid.base",
     "Upskill/SysDes/HLD/API Build/Error Handling",
     "Upskill/DSA/Algorithms/Bitmasking",
     "Upskill/WebDev/Frontend/JavaScript",

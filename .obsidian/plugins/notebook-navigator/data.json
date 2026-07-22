@@ -201,6 +201,7 @@
   "showSelectedNavigationPills": false,
   "stickyGroupHeaders": true,
   "showFolderGroupPaths": true,
+  "showGroupHeaderItemCounts": false,
   "showCurrentFolderFilesAtBottom": false,
   "filterPinnedByFolder": false,
   "showQuickActions": true,
@@ -529,7 +530,7 @@
     "#64748b",
     "#78716c"
   ],
-  "lastShownVersion": "3.2.3",
+  "lastShownVersion": "3.2.4",
   "rootFolderOrder": [],
   "rootTagOrder": [],
   "rootPropertyOrder": [],

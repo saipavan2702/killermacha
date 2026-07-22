@@ -76,6 +76,7 @@ const QUERY_OVERRIDES = {
   Orb: "Orb: On the Movements of the Earth",
   "ACCA-13": "ACCA: 13-Territory Inspection Dept.",
   "Nura: rise of yokai clan": "Nura: Rise of the Yokai Clan",
+  Odyssey: "The Odyssey",
   "Atlantis the Lost empire": "Atlantis: The Lost Empire",
   "Boogiepop and Others": "Boogiepop and Others",
   Brooklyn: "Brooklyn",
@@ -123,6 +124,9 @@ const YEAR_OVERRIDES = {
   Shiva: "1989",
   "The Accountant": "2016",
   "The Magnificent Seven": "1960",
+  Obsession: "2026",
+  Odyssey: "2026",
+  "The Odyssey": "2026",
   Warrior: "2011",
 };
 
@@ -148,6 +152,9 @@ const IMDB_OVERRIDES = {
   Moana: "tt3521164",
   Up: "tt1049413",
   "The World's End": "tt1213663",
+  Obsession: "tt37287335",
+  Odyssey: "tt33764258",
+  "The Odyssey": "tt33764258",
 };
 
 module.exports = class MovieWatchDatePlugin extends Plugin {
