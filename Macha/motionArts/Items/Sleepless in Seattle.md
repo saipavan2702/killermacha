@@ -9,6 +9,11 @@ genres:
   - Drama
   - Romance
 poster: https://image.tmdb.org/t/p/w500/jAXfku1u1uaLGh4cUmK0ESf1pPu.jpg
+year: "1993"
+cast:
+  - "Meg Ryan"
+  - "Tom Hanks"
+  - "Ross Malinger"
 tags:
   - motion-art
   - movie

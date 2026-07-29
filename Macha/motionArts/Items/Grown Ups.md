@@ -9,6 +9,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/cQGM5k1NtU85n4TUlrOrwijSCcm.jpg
 directors:
   - Dennis Dugan
+year: "2010"
+cast:
+  - "Adam Sandler"
+  - "Kevin James"
+  - "Chris Rock"
 tags:
   - motion-art
   - movie

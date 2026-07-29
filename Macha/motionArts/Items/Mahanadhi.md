@@ -11,6 +11,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/2tfkpsl73EpKlBQygbKiYqtfpg5.jpg
 directors:
   - Santhana Bharathi
+year: "1994"
+cast:
+  - "Kamal Haasan"
+  - "Poornam Viswanathan"
+  - "S. N. Lakshmi"
 tags:
   - motion-art
   - movie

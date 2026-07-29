@@ -8,6 +8,11 @@ genres:
   - Drama
   - Romance
 poster: https://image.tmdb.org/t/p/w500/o8UhmEbWPHmTUxP0lMuCoqNkbB3.jpg
+year: "2005"
+cast:
+  - "Keira Knightley"
+  - "Matthew Macfadyen"
+  - "Brenda Blethyn"
 tags:
   - motion-art
   - movie

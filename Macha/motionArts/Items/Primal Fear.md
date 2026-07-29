@@ -10,6 +10,11 @@ genres:
   - Mystery
   - Thriller
 poster: https://image.tmdb.org/t/p/w500/qJf2TzE8nRTFbFMPJNW6c8mI0KU.jpg
+year: "1996"
+cast:
+  - "Richard Gere"
+  - "Laura Linney"
+  - "Edward Norton"
 tags:
   - motion-art
   - movie

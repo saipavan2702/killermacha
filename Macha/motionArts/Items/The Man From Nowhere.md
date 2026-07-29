@@ -9,6 +9,11 @@ genres:
   - Thriller
   - Crime
 poster: https://image.tmdb.org/t/p/w500/ld19CFIo27t41JXSGZdaPMUGTxh.jpg
+year: "2010"
+cast:
+  - "Won Bin"
+  - "Kim Sae-ron"
+  - "Kim Tae-hun"
 tags:
   - motion-art
   - movie

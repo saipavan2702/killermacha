@@ -11,6 +11,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/aLGKAQKgzWpJ6egyWzzC11jXBRJ.jpg
 directors:
   - Kinji Fukasaku
+year: "2000"
+cast:
+  - "Tatsuya Fujiwara"
+  - "Aki Maeda"
+  - "Takeshi Kitano"
 tags:
   - motion-art
   - movie

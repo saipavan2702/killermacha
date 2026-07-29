@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fill Movie Album note frontmatter with TMDB poster, genres, and directors.
+"""Fill motionArts note frontmatter with metadata from TMDB.
 
 Reads TMDB_BEARER_TOKEN or TMDB_API_KEY from the environment.
 If the short API key is accidentally assigned to TMDB_BEARER_TOKEN, it is
@@ -74,10 +74,13 @@ QUERY_OVERRIDES = {
     "Transformers: The Last Knight": "Transformers: The Last Knight",
     "The Magnificent Seven": "The Magnificent Seven",
     "Pride and Prejudice": "Pride & Prejudice",
-    "Shiva": "Shiva",
+    "Shiva": "Siva",
     "The Accountant": "The Accountant",
     "The Boys": "The Boys",
+    "Shogun": "Shōgun",
     "The Human Condition": "The Human Condition I: No Greater Love",
+    "Godavari": "Godavari",
+    "Rakta Charitra": "Rakht Charitra",
     "The Dark Knight": "The Dark Knight",
     "The Return": "The Return 2003",
     "Warrior": "Warrior",
@@ -131,6 +134,7 @@ YEAR_OVERRIDES = {
     "The World's End": "2013",
     "Boogiepop and Others": "2019",
     "Brooklyn": "2015",
+    "Godavari": "2006",
     "Harakiri": "1962",
     "K": "2012",
     "King Arthur": "2017",
@@ -139,10 +143,18 @@ YEAR_OVERRIDES = {
     "Shiva": "1989",
     "The Accountant": "2016",
     "The Magnificent Seven": "1960",
+    "Rakta Charitra": "2010",
+    "The Housemaid": "2025",
+    "The Internship": "2026",
     "Obsession": "2026",
     "Odyssey": "2026",
     "The Odyssey": "2026",
+    "Shogun": "2024",
     "Warrior": "2011",
+}
+
+DIRECTOR_OVERRIDES = {
+    "Finding Her Edge": ["Shamim Sarif", "Jacqueline Pepall"],
 }
 
 IMDB_OVERRIDES = {
@@ -167,6 +179,8 @@ IMDB_OVERRIDES = {
     "Moana": "tt3521164",
     "Up": "tt1049413",
     "The World's End": "tt1213663",
+    "Great Expectations": "tt0119223",
+    "Shiva": "tt0248428",
     "Obsession": "tt37287335",
     "Odyssey": "tt33764258",
     "The Odyssey": "tt33764258",
@@ -301,18 +315,33 @@ def set_field(frontmatter: str, key: str, value: Any) -> str:
     return "\n".join(lines)
 
 
-def find_by_imdb_id(title: str, media_type: str) -> dict[str, Any] | None:
+def find_by_imdb_id(
+    title: str,
+    media_type: str,
+    preferred_year: str = "",
+    preferred_poster_path: str = "",
+) -> dict[str, Any] | None:
     imdb_id = IMDB_OVERRIDES.get(title)
     if not imdb_id:
         return None
     payload = api_get(f"/find/{imdb_id}", {"external_source": "imdb_id"})
     key = "tv_results" if media_type in ("series", "anime") else "movie_results"
     results = payload.get(key) or []
-    return results[0] if results else None
+    result = results[0] if results else None
+    if result and preferred_year and result_year(result, media_type) != preferred_year:
+        return None
+    if result and preferred_poster_path and not preferred_year and result.get("poster_path") != preferred_poster_path:
+        return None
+    return result
 
 
-def search_title(title: str, media_type: str) -> dict[str, Any] | None:
-    exact_result = find_by_imdb_id(title, media_type)
+def search_title(
+    title: str,
+    media_type: str,
+    preferred_year: str = "",
+    preferred_poster_path: str = "",
+) -> dict[str, Any] | None:
+    exact_result = find_by_imdb_id(title, media_type, preferred_year, preferred_poster_path)
     if exact_result:
         return exact_result
 
@@ -332,7 +361,7 @@ def search_title(title: str, media_type: str) -> dict[str, Any] | None:
             "language": "en-US",
             "page": 1,
         }
-        year = YEAR_OVERRIDES.get(title)
+        year = "" if preferred_poster_path else preferred_year or YEAR_OVERRIDES.get(title)
         if year and media_type in ("series", "anime"):
             params["first_air_date_year"] = year
         elif year:
@@ -344,7 +373,26 @@ def search_title(title: str, media_type: str) -> dict[str, Any] | None:
         )
         results = payload.get("results") or []
         all_results.extend(results)
-    return choose_best_result(title, media_type, all_results)
+    if (
+        preferred_poster_path
+        and preferred_year
+        and not any(result.get("poster_path") == preferred_poster_path for result in all_results)
+    ):
+        for query in seen:
+            params = {
+                "query": query,
+                "include_adult": "false",
+                "language": "en-US",
+                "page": 1,
+            }
+            if media_type in ("series", "anime"):
+                params["first_air_date_year"] = preferred_year
+            else:
+                params["year"] = preferred_year
+                params["primary_release_year"] = preferred_year
+            payload = api_get(path, params)
+            all_results.extend(payload.get("results") or [])
+    return choose_best_result(title, media_type, all_results, preferred_year, preferred_poster_path)
 
 
 def normalized_title(value: str | None) -> str:
@@ -366,11 +414,17 @@ def result_year(result: dict[str, Any], media_type: str) -> str:
     return value[:4] if re.match(r"^\d{4}", value) else ""
 
 
-def choose_best_result(title: str, media_type: str, results: list[dict[str, Any]]) -> dict[str, Any] | None:
+def choose_best_result(
+    title: str,
+    media_type: str,
+    results: list[dict[str, Any]],
+    preferred_year: str = "",
+    preferred_poster_path: str = "",
+) -> dict[str, Any] | None:
     if not results:
         return None
     wanted_title = normalized_title(QUERY_OVERRIDES.get(title, title))
-    wanted_year = YEAR_OVERRIDES.get(title)
+    wanted_year = preferred_year or YEAR_OVERRIDES.get(title)
 
     def score(result: dict[str, Any]) -> tuple[int, float]:
         candidate = normalized_title(result_title(result, media_type))
@@ -384,6 +438,10 @@ def choose_best_result(title: str, media_type: str, results: list[dict[str, Any]
             points += 50
         elif wanted_year:
             points -= 20
+        if preferred_poster_path and result.get("poster_path") == preferred_poster_path:
+            points += 200
+        elif preferred_poster_path:
+            points -= 40
         if result.get("poster_path"):
             points += 5
         points += int(float(result.get("vote_count") or 0) > 50) * 5
@@ -399,39 +457,62 @@ def load_genres(media_type: str) -> dict[int, str]:
     return {item["id"]: item["name"] for item in payload.get("genres", [])}
 
 
-def year_from(result: dict[str, Any], media_type: str) -> str:
-    key = "first_air_date" if media_type in ("series", "anime") else "release_date"
-    value = result.get(key) or ""
-    return value[:4] if re.match(r"^\d{4}", value) else ""
-
-
-def load_directors(result: dict[str, Any], media_type: str) -> list[str]:
-    if media_type not in ("movie", "anime-movie"):
-        return []
+def load_credits(result: dict[str, Any], media_type: str) -> dict[str, Any]:
+    if media_type not in ("movie", "series", "anime-movie"):
+        return {"cast": [], "crew": []}
     tmdb_id = result.get("id")
     if not tmdb_id:
-        return []
-    payload = api_get(f"/movie/{tmdb_id}/credits", {"language": "en-US"})
-    directors: list[str] = []
+        return {"cast": [], "crew": []}
+    path = f"/tv/{tmdb_id}/aggregate_credits" if media_type == "series" else f"/movie/{tmdb_id}/credits"
+    return api_get(path, {"language": "en-US"})
+
+
+def directors_from(credits: dict[str, Any], media_type: str) -> list[str]:
+    directors: list[tuple[str, int]] = []
     seen: set[str] = set()
-    for person in payload.get("crew", []):
-        if person.get("job") != "Director":
+    for person in credits.get("crew", []):
+        if media_type == "series":
+            jobs = [job for job in person.get("jobs", []) if job.get("job") == "Director"]
+        else:
+            jobs = [{"episode_count": 1}] if person.get("job") == "Director" else []
+        if not jobs:
             continue
         name = person.get("name")
         if name and name not in seen:
-            directors.append(name)
+            episode_count = sum(int(job.get("episode_count") or 0) for job in jobs)
+            directors.append((name, episode_count))
             seen.add(name)
-    return directors
+    directors.sort(key=lambda item: item[1], reverse=True)
+    return [name for name, _ in directors[:3]]
+
+
+def cast_from(credits: dict[str, Any]) -> list[str]:
+    cast = sorted(credits.get("cast", []), key=lambda person: int(person.get("order") or 0))
+    names: list[str] = []
+    seen: set[str] = set()
+    for person in cast:
+        name = person.get("name")
+        if not name or name in seen:
+            continue
+        names.append(name)
+        seen.add(name)
+        if len(names) == 3:
+            break
+    return names
 
 
 def metadata_from(result: dict[str, Any], media_type: str, genres: dict[int, str]) -> dict[str, Any]:
     poster_path = result.get("poster_path")
     genre_names = [genres[item] for item in result.get("genre_ids", []) if item in genres]
+    credits = load_credits(result, media_type)
+    live_action = media_type in ("movie", "series")
     return {
         "poster": f"{IMAGE_BASE}{poster_path}" if poster_path else "",
         "industry": industry_from(result, media_type),
         "genres": genre_names,
-        "directors": load_directors(result, media_type),
+        "year": result_year(result, media_type) if live_action else "",
+        "directors": directors_from(credits, media_type),
+        "cast": cast_from(credits) if live_action else [],
     }
 
 
@@ -447,11 +528,14 @@ def industry_from(result: dict[str, Any], media_type: str) -> str:
     return ""
 
 
-def update_note(path: Path, metadata: dict[str, Any]) -> None:
+def update_note(path: Path, metadata: dict[str, Any], force: bool = False) -> None:
     text = path.read_text(encoding="utf-8")
     frontmatter, body = parse_frontmatter(text)
     for key, value in metadata.items():
-        if value not in ("", [], None):
+        if value in ("", [], None):
+            continue
+        has_existing_value = has_list_field(frontmatter, key) if isinstance(value, list) else bool(read_scalar(frontmatter, key))
+        if force or not has_existing_value:
             frontmatter = set_field(frontmatter, key, value)
     path.write_text(f"---\n{frontmatter}\n---\n{body}", encoding="utf-8")
 
@@ -459,6 +543,11 @@ def update_note(path: Path, metadata: dict[str, Any]) -> None:
 def has_real_poster(frontmatter: str) -> bool:
     poster = read_scalar(frontmatter, "poster")
     return poster.startswith("http://") or poster.startswith("https://") or poster.startswith("[[")
+
+
+def poster_path_from(value: str) -> str:
+    match = re.search(r"/(?:w\d+|original)(/[^?#]+)", value)
+    return match.group(1) if match else ""
 
 
 def has_list_field(frontmatter: str, key: str) -> bool:
@@ -471,7 +560,7 @@ def has_list_field(frontmatter: str, key: str) -> bool:
         for item in lines[index + 1 :]:
             if item and not item.startswith(" ") and re.match(r"^[A-Za-z0-9_.-]+\s*:", item):
                 return False
-            if item.startswith("  - "):
+            if item.startswith("  - ") and item[4:].strip():
                 return True
         return False
     return False
@@ -487,10 +576,15 @@ def has_directors(frontmatter: str) -> bool:
     return has_list_field(frontmatter, "directors")
 
 
+def has_cast(frontmatter: str) -> bool:
+    return has_list_field(frontmatter, "cast")
+
+
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Sync Movie Album posters from TMDB.")
+    parser = argparse.ArgumentParser(description="Sync motionArts metadata from TMDB.")
     parser.add_argument("--dry-run", action="store_true", help="show matches without editing notes")
-    parser.add_argument("--force", action="store_true", help="refresh notes even when poster and genres already exist")
+    parser.add_argument("--verify-matches", action="store_true", help="check existing poster and year matches without fetching credits")
+    parser.add_argument("--force", action="store_true", help="refresh notes even when all requested metadata exists")
     parser.add_argument("--limit", type=int, default=0, help="limit number of notes processed")
     parser.add_argument("--media-type", action="append", default=[], help="only process matching media_type values")
     parser.add_argument("--only", action="append", default=[], help="only process an exact title or note name")
@@ -503,6 +597,9 @@ def main() -> int:
 
     genre_cache: dict[str, dict[int, str]] = {}
     updated = 0
+    would_update = 0
+    verified = 0
+    mismatches = 0
     skipped = 0
     notes = sorted(ITEMS_DIR.glob("*.md"))
     if args.limit:
@@ -517,33 +614,70 @@ def main() -> int:
                 continue
             if args.only and title not in args.only and note.stem not in args.only:
                 continue
-            needs_directors = media_type in ("movie", "anime-movie")
+            live_action = media_type in ("movie", "series")
+            needs_directors = media_type in ("movie", "series", "anime-movie")
             has_required_directors = not needs_directors or has_directors(frontmatter)
-            if not args.force and has_real_poster(frontmatter) and has_genres(frontmatter) and has_required_directors:
+            has_required_year = not live_action or bool(read_scalar(frontmatter, "year"))
+            has_required_cast = not live_action or has_cast(frontmatter)
+            if (
+                not args.force
+                and not args.verify_matches
+                and has_real_poster(frontmatter)
+                and has_genres(frontmatter)
+                and has_required_directors
+                and has_required_year
+                and has_required_cast
+            ):
                 continue
-            result = search_title(title, media_type)
+            preferred_year = read_scalar(frontmatter, "year")
+            preferred_poster_path = poster_path_from(read_scalar(frontmatter, "poster"))
+            result = search_title(title, media_type, preferred_year, preferred_poster_path)
             time.sleep(args.sleep)
             if not result:
                 print(f"MISS  {title}")
                 skipped += 1
                 continue
+            if args.verify_matches:
+                verified += 1
+                issues = []
+                existing_year = read_scalar(frontmatter, "year")
+                matched_year = result_year(result, media_type)
+                existing_poster_path = poster_path_from(read_scalar(frontmatter, "poster"))
+                if live_action and existing_year and matched_year != existing_year:
+                    issues.append(f"year {existing_year} -> {matched_year}")
+                if issues:
+                    matched_title = result_title(result, media_type)
+                    print(f"MISMATCH {title} -> {matched_title}: {', '.join(issues)}")
+                    mismatches += 1
+                continue
             if media_type not in genre_cache:
                 genre_cache[media_type] = load_genres(media_type)
             metadata = metadata_from(result, media_type, genre_cache[media_type])
+            if title in DIRECTOR_OVERRIDES:
+                metadata["directors"] = DIRECTOR_OVERRIDES[title]
             matched_title = result.get("name") if media_type in ("series", "anime") else result.get("title")
             poster_flag = "poster" if metadata.get("poster") else "no poster"
             genre_flag = ", ".join(metadata.get("genres") or []) or "no genres"
+            year_flag = metadata.get("year") or "no year"
             director_flag = ", ".join(metadata.get("directors") or []) or "no directors"
-            print(f"MATCH {title} -> {matched_title} ({poster_flag}; {genre_flag}; {director_flag})")
+            cast_flag = ", ".join(metadata.get("cast") or []) or "no cast"
+            print(
+                f"MATCH {title} -> {matched_title} "
+                f"({poster_flag}; {year_flag}; {genre_flag}; {director_flag}; {cast_flag})"
+            )
+            would_update += 1
             if not args.dry_run:
-                update_note(note, metadata)
+                update_note(note, metadata, args.force)
                 updated += 1
         except Exception as exc:
             print(f"ERROR {note.name}: {exc}", file=sys.stderr)
             skipped += 1
 
+    if args.verify_matches:
+        print(f"verified: {verified}; mismatches: {mismatches}; skipped: {skipped}")
+        return 0 if mismatches == 0 and skipped == 0 else 2
     action = "would update" if args.dry_run else "updated"
-    print(f"{action}: {updated if not args.dry_run else len(notes) - skipped}; skipped: {skipped}")
+    print(f"{action}: {updated if not args.dry_run else would_update}; skipped: {skipped}")
     return 0 if skipped == 0 else 2
 
 

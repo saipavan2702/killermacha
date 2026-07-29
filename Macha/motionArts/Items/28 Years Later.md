@@ -11,6 +11,11 @@ genres:
 poster: "https://image.tmdb.org/t/p/w500/n5FygjEppOvac6yEaowi26nTyw3.jpg"
 directors:
   - "Danny Boyle"
+year: "2025"
+cast:
+  - "Aaron Taylor-Johnson"
+  - "Alfie Williams"
+  - "Ralph Fiennes"
 tags:
   - motion-art
   - movie

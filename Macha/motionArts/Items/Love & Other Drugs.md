@@ -11,6 +11,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/wZLM2uKJRYNchLmiCIjosX0rXy8.jpg
 directors:
   - Edward Zwick
+year: "2010"
+cast:
+  - "Jake Gyllenhaal"
+  - "Anne Hathaway"
+  - "Oliver Platt"
 tags:
   - motion-art
   - movie

@@ -11,6 +11,11 @@ genres:
 directors:
   - "Michael Bay"
 poster: "https://image.tmdb.org/t/p/w500/4N4sipl8T72tNE4earcctQa2Kw2.jpg"
+year: "2007"
+cast:
+  - "Shia LaBeouf"
+  - "Megan Fox"
+  - "Mark Ryan"
 tags:
   - motion-art
   - movie

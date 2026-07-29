@@ -11,6 +11,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/yH6DAQVgbyj72S66gN4WWVoTjuf.jpg
 directors:
   - Denis Villeneuve
+year: "2010"
+cast:
+  - "Lubna Azabal"
+  - "Mélissa Désormeaux-Poulin"
+  - "Maxim Gaudette"
 tags:
   - motion-art
   - movie

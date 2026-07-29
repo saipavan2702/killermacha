@@ -11,6 +11,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/pDeVKQICkcdwwjHxGj0MeS14YJ6.jpg
 directors:
   - David Ayer
+year: "2012"
+cast:
+  - "Jake Gyllenhaal"
+  - "Michael Peña"
+  - "Natalie Martinez"
 tags:
   - motion-art
   - movie

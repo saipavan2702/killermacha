@@ -11,6 +11,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/lJ3RvIirE2C7gdBKvPRaoQ3iCo2.jpg
 directors:
   - Madhu C. Narayanan
+year: "2019"
+cast:
+  - "Shane Nigam"
+  - "Soubin Shahir"
+  - "Sreenath Bhasi"
 tags:
   - motion-art
   - movie

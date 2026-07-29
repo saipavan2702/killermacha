@@ -9,6 +9,11 @@ genres:
   - Fantasy
   - Action
 poster: https://image.tmdb.org/t/p/w500/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg
+year: "2002"
+cast:
+  - "Elijah Wood"
+  - "Ian McKellen"
+  - "Viggo Mortensen"
 tags:
   - motion-art
   - movie

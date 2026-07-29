@@ -9,6 +9,11 @@ genres:
 poster: "https://image.tmdb.org/t/p/w500/lBwOEpwVeUAmrmglcstnaGcJq3Y.jpg"
 directors:
   - "Sergio Leone"
+year: "1964"
+cast:
+  - "Clint Eastwood"
+  - "Marianne Koch"
+  - "Gian Maria Volonté"
 tags:
   - motion-art
   - movie

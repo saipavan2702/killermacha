@@ -9,6 +9,11 @@ genres:
   - Adventure
   - Fantasy
 poster: https://image.tmdb.org/t/p/w500/xT98tLqatZPQApyRmlPL12LtiWp.jpg
+year: "2014"
+cast:
+  - "Ian McKellen"
+  - "Martin Freeman"
+  - "Richard Armitage"
 tags:
   - motion-art
   - movie

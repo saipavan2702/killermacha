@@ -7,6 +7,11 @@ watched_date: 2025-07-23
 genres:
   - Comedy
 poster: https://image.tmdb.org/t/p/w500/lUPDGT3lyRrq8SvWuNWG2DP64bR.jpg
+year: "2012"
+cast:
+  - "Thomas Mann"
+  - "Oliver Cooper"
+  - "Jonathan Daniel Brown"
 tags:
   - motion-art
   - movie

@@ -10,6 +10,11 @@ genres:
 directors:
   - Richard Linklater
 poster: https://image.tmdb.org/t/p/w500/kf1Jb1c2JAOqjuzA3H4oDM263uB.jpg
+year: "1995"
+cast:
+  - "Ethan Hawke"
+  - "Julie Delpy"
+  - "Andrea Eckert"
 tags:
   - motion-art
   - movie

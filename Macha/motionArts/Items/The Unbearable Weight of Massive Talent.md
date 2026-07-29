@@ -9,6 +9,11 @@ genres:
   - Comedy
   - Crime
 poster: https://image.tmdb.org/t/p/w500/aqhLeieyTpTUKPOfZ3jzo2La0Mq.jpg
+year: "2022"
+cast:
+  - "Nicolas Cage"
+  - "Pedro Pascal"
+  - "Sharon Horgan"
 tags:
   - motion-art
   - movie

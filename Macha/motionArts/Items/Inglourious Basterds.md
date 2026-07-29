@@ -11,6 +11,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/7sfbEnaARXDDhKm0CZ7D7uc2sbo.jpg
 directors:
   - Quentin Tarantino
+year: "2009"
+cast:
+  - "Brad Pitt"
+  - "Mélanie Laurent"
+  - "Christoph Waltz"
 tags:
   - motion-art
   - movie

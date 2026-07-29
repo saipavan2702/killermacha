@@ -9,6 +9,11 @@ genres:
   - Comedy
   - Romance
 poster: https://image.tmdb.org/t/p/w500/4wBG5kbfagTQclETblPRRGihk0I.jpg
+year: "2011"
+cast:
+  - "Owen Wilson"
+  - "Rachel McAdams"
+  - "Kathy Bates"
 tags:
   - motion-art
   - movie

@@ -9,6 +9,11 @@ genres:
   - Drama
   - Mystery
 poster: https://image.tmdb.org/t/p/w500/x7A59t6ySylr1L7aubOQEA480vM.jpg
+year: "2001"
+cast:
+  - "Naomi Watts"
+  - "Laura Harring"
+  - "Justin Theroux"
 tags:
   - motion-art
   - movie

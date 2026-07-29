@@ -11,6 +11,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/9uGHEgsiUXjCNq8wdq4r49YL8A1.jpg
 directors:
   - Mary Harron
+year: "2000"
+cast:
+  - "Christian Bale"
+  - "Justin Theroux"
+  - "Josh Lucas"
 tags:
   - motion-art
   - movie

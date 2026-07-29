@@ -8,6 +8,11 @@ genres:
   - Drama
   - Romance
 poster: https://image.tmdb.org/t/p/w500/2NTqe5MGx5YAXyQuMvwXSevNHeQ.jpg
+year: "1993"
+cast:
+  - "Christian Slater"
+  - "Marisa Tomei"
+  - "Rosie Perez"
 tags:
   - motion-art
   - movie

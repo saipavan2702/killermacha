@@ -9,6 +9,11 @@ genres:
   - Fantasy
   - Action
 poster: https://image.tmdb.org/t/p/w500/yHA9Fc37VmpUA5UncTxxo3rTGVA.jpg
+year: "2012"
+cast:
+  - "Martin Freeman"
+  - "Ian McKellen"
+  - "Richard Armitage"
 tags:
   - motion-art
   - movie

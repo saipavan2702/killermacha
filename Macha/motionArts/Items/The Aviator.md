@@ -9,6 +9,11 @@ genres:
 directors:
   - Martin Scorsese
 poster: https://image.tmdb.org/t/p/w500/lx4kWcZc3o9PaNxlQpEJZM17XUI.jpg
+year: "2004"
+cast:
+  - "Leonardo DiCaprio"
+  - "Cate Blanchett"
+  - "Kate Beckinsale"
 tags:
   - motion-art
   - movie

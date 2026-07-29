@@ -12,6 +12,11 @@ genres:
 directors:
   - Michael Bay
 poster: https://image.tmdb.org/t/p/w500/x1ygBecKHfXX4M2kRhmFKWfWbJc.jpg
+year: "1995"
+cast:
+  - "Will Smith"
+  - "Martin Lawrence"
+  - "Téa Leoni"
 tags:
   - motion-art
   - movie

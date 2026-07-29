@@ -8,6 +8,11 @@ genres:
   - Drama
   - Comedy
 poster: https://image.tmdb.org/t/p/w500/4mwnjii4zreLDTYIDM2OxcuQUTu.jpg
+year: "2015"
+cast:
+  - "Kamal Haasan"
+  - "K. Balachander"
+  - "K. Viswanath"
 tags:
   - motion-art
   - movie

@@ -9,6 +9,11 @@ genres:
   - Drama
   - Crime
 poster: https://image.tmdb.org/t/p/w500/glgO02tTO5B4GAmybuzEsCMQK5O.jpg
+year: "1989"
+cast:
+  - "Nagarjuna Akkineni"
+  - "Amala Akkineni"
+  - "Raghuvaran"
 tags:
   - motion-art
   - movie

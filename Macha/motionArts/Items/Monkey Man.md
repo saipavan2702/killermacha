@@ -8,6 +8,11 @@ genres:
   - Action
   - Thriller
 poster: https://image.tmdb.org/t/p/w500/4lhR4L2vzzjl68P1zJyCH755Oz4.jpg
+year: "2024"
+cast:
+  - "Dev Patel"
+  - "Sikandar Kher"
+  - "Makrand Deshpande"
 tags:
   - motion-art
   - movie

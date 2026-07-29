@@ -12,6 +12,11 @@ directors:
   - John Francis Daley
   - Jonathan Goldstein
 poster: https://image.tmdb.org/t/p/w500/v7UF7ypAqjsFZFdjksjQ7IUpXdn.jpg
+year: "2023"
+cast:
+  - "Chris Pine"
+  - "Michelle Rodriguez"
+  - "Justice Smith"
 tags:
   - motion-art
   - movie

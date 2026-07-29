@@ -11,6 +11,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/ePWKQzOnwabMcJsWYWIiy5p1Ofr.jpg
 directors:
   - Matt Johnson
+year: "2023"
+cast:
+  - "Jay Baruchel"
+  - "Glenn Howerton"
+  - "Matt Johnson"
 tags:
   - motion-art
   - movie

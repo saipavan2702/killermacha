@@ -9,6 +9,11 @@ genres:
   - Science Fiction
   - Mystery
 poster: https://image.tmdb.org/t/p/w500/nTr0lvAzeQmUjgSgDEHTJpnrxTz.jpg
+year: "2011"
+cast:
+  - "Jake Gyllenhaal"
+  - "Michelle Monaghan"
+  - "Vera Farmiga"
 tags:
   - motion-art
   - movie

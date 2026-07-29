@@ -10,6 +10,11 @@ genres:
   - Mystery
   - Action
 poster: https://image.tmdb.org/t/p/w500/pWDtjs568ZfOTMbURQBYuT4Qxka.jpg
+year: "2003"
+cast:
+  - "Choi Min-sik"
+  - "Yoo Ji-tae"
+  - "Kang Hye-jung"
 tags:
   - motion-art
   - movie

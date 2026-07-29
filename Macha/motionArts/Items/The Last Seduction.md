@@ -12,6 +12,11 @@ genres:
 directors:
   - John Dahl
 poster: https://image.tmdb.org/t/p/w500/kK8IiJDkz2Tv6DwaK60vJVHKH85.jpg
+year: "1994"
+cast:
+  - "Linda Fiorentino"
+  - "Peter Berg"
+  - "Bill Pullman"
 tags:
   - motion-art
   - movie

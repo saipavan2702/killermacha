@@ -8,6 +8,11 @@ genres:
   - Horror
   - Comedy
 poster: https://image.tmdb.org/t/p/w500/dgXPhzNJH8HFTBjXPB177yNx6RI.jpg
+year: "2004"
+cast:
+  - "Simon Pegg"
+  - "Nick Frost"
+  - "Kate Ashfield"
 tags:
   - motion-art
   - movie

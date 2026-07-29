@@ -9,6 +9,11 @@ genres:
   - Thriller
   - Drama
 poster: https://image.tmdb.org/t/p/w500/fceheXB5fC4WrLVuWJ6OZv9FXYr.jpg
+year: "2016"
+cast:
+  - "Ben Affleck"
+  - "Anna Kendrick"
+  - "J.K. Simmons"
 tags:
   - motion-art
   - movie

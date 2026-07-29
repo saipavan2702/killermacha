@@ -11,6 +11,11 @@ genres:
 poster: "https://image.tmdb.org/t/p/w500/9kKXH6eJpzoFGhCbTN3FVwSQK3n.jpg"
 directors:
   - "Guy Ritchie"
+year: "2017"
+cast:
+  - "Charlie Hunnam"
+  - "Jude Law"
+  - "Àstrid Bergès-Frisbey"
 tags:
   - motion-art
   - movie

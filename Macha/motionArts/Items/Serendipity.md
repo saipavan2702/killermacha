@@ -8,6 +8,11 @@ genres:
   - Comedy
   - Romance
 poster: https://image.tmdb.org/t/p/w500/4jS66Qmq2Ru5S2YzHVknGd4xJyT.jpg
+year: "2001"
+cast:
+  - "John Cusack"
+  - "Kate Beckinsale"
+  - "Jeremy Piven"
 tags:
   - motion-art
   - movie

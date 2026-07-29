@@ -10,6 +10,11 @@ genres:
 directors:
   - Lawrence Kasdan
 poster: https://image.tmdb.org/t/p/w500/5LipPcaW1J9IjAP7TOTesw8OcMS.jpg
+year: "1981"
+cast:
+  - "William Hurt"
+  - "Kathleen Turner"
+  - "Richard Crenna"
 tags:
   - motion-art
   - movie

@@ -7,6 +7,11 @@ watched_date: 2025-06-06
 genres:
   - Horror
 poster: https://image.tmdb.org/t/p/w500/A9bnRn05riOKWftvQlLKa2gl51n.jpg
+year: "1981"
+cast:
+  - "Isabelle Adjani"
+  - "Sam Neill"
+  - "Margit Carstensen"
 tags:
   - motion-art
   - movie

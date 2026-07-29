@@ -11,6 +11,11 @@ genres:
   - Thriller
   - TV Movie
 poster: https://image.tmdb.org/t/p/w500/A6A15cDR8mpdOxW4y7UzFanzbM0.jpg
+year: "2003"
+cast:
+  - "Angie Everhart"
+  - "Andrew W. Walker"
+  - "Winston Rekert"
 tags:
   - motion-art
   - movie

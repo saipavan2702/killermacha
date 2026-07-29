@@ -9,6 +9,11 @@ genres:
   - Crime
   - Thriller
 poster: https://image.tmdb.org/t/p/w500/iQCP69183K1QZo8bb23nkcLap3W.jpg
+year: "1990"
+cast:
+  - "Don Johnson"
+  - "Virginia Madsen"
+  - "Jennifer Connelly"
 tags:
   - motion-art
   - movie

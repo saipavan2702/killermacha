@@ -11,6 +11,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/eCOtqtfvn7mxGl6nfmq4b1exJRc.jpg
 directors:
   - Spike Jonze
+year: "2013"
+cast:
+  - "Joaquin Phoenix"
+  - "Scarlett Johansson"
+  - "Lynn Adrianna"
 tags:
   - motion-art
   - movie

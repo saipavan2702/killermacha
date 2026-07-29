@@ -10,6 +10,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/dc8BdKnDY5Iy28KzUGtHIXuqqFK.jpg
 directors:
   - Derek Cianfrance
+year: "2010"
+cast:
+  - "Ryan Gosling"
+  - "Michelle Williams"
+  - "John Doman"
 tags:
   - motion-art
   - movie

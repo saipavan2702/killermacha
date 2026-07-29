@@ -8,6 +8,11 @@ genres:
   - Drama
   - War
 poster: https://image.tmdb.org/t/p/w500/kMKyx1k8hWWscYFnPbnxxN4Eqo4.jpg
+year: "1987"
+cast:
+  - "Matthew Modine"
+  - "Adam Baldwin"
+  - "Vincent D'Onofrio"
 tags:
   - motion-art
   - movie

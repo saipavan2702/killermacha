@@ -11,6 +11,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/ujERk3aKABXU3NDXOAxEQYTHe9A.jpg
 directors:
   - Gil Junger
+year: "1999"
+cast:
+  - "Heath Ledger"
+  - "Julia Stiles"
+  - "Joseph Gordon-Levitt"
 tags:
   - motion-art
   - movie

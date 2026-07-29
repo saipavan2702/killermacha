@@ -9,6 +9,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/tpfC325Jk6S38VTe5dDWjWtoyxr.jpg
 directors:
   - Paul Thomas Anderson
+year: "1999"
+cast:
+  - "Tom Cruise"
+  - "Philip Baker Hall"
+  - "Philip Seymour Hoffman"
 tags:
   - motion-art
   - movie

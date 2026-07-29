@@ -9,6 +9,11 @@ genres:
   - Drama
   - Thriller
 poster: https://image.tmdb.org/t/p/w500/jcgUjx1QcupGzjntTVlnQ15lHqy.jpg
+year: "2003"
+cast:
+  - "Song Kang-ho"
+  - "Kim Sang-kyung"
+  - "Kim Roi-ha"
 tags:
   - motion-art
   - movie

@@ -9,6 +9,11 @@ genres:
   - History
   - War
 poster: https://image.tmdb.org/t/p/w500/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg
+year: "1993"
+cast:
+  - "Liam Neeson"
+  - "Ben Kingsley"
+  - "Ralph Fiennes"
 tags:
   - motion-art
   - movie

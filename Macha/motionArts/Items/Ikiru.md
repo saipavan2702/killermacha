@@ -9,6 +9,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/dgNTS4EQDDVfkzJI5msKuHu2Ei3.jpg
 directors:
   - Akira Kurosawa
+year: "1952"
+cast:
+  - "Takashi Shimura"
+  - "Haruo Tanaka"
+  - "Nobuo Kaneko"
 tags:
   - motion-art
   - movie

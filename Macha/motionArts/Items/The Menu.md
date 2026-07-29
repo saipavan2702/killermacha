@@ -8,6 +8,11 @@ genres:
   - Comedy
   - Horror
 poster: https://image.tmdb.org/t/p/w500/fPtUgMcLIboqlTlPrq0bQpKK8eq.jpg
+year: "2022"
+cast:
+  - "Anya Taylor-Joy"
+  - "Ralph Fiennes"
+  - "Nicholas Hoult"
 tags:
   - motion-art
   - movie

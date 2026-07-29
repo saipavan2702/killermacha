@@ -11,6 +11,11 @@ genres:
   - Fantasy
   - Romance
 poster: https://image.tmdb.org/t/p/w500/2FC9L9MrjBoGHYjYZjdWQdopVYb.jpg
+year: "1987"
+cast:
+  - "Cary Elwes"
+  - "Robin Wright"
+  - "Mandy Patinkin"
 tags:
   - motion-art
   - movie

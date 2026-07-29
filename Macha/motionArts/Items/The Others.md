@@ -9,6 +9,11 @@ genres:
   - Mystery
   - Thriller
 poster: https://image.tmdb.org/t/p/w500/p8g1vlTvpM6nr2hMMiZ1fUlKF0D.jpg
+year: "2001"
+cast:
+  - "Nicole Kidman"
+  - "Alakina Mann"
+  - "James Bentley"
 tags:
   - motion-art
   - movie

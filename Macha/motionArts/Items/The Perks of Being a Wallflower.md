@@ -7,6 +7,11 @@ watched_date: 2026-06-06
 genres:
   - Drama
 poster: https://image.tmdb.org/t/p/w500/aKCvdFFF5n80P2VdS7d8YBwbCjh.jpg
+year: "2012"
+cast:
+  - "Logan Lerman"
+  - "Emma Watson"
+  - "Ezra Miller"
 tags:
   - motion-art
   - movie

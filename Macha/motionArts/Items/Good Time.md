@@ -12,6 +12,11 @@ poster: https://image.tmdb.org/t/p/w500/yE1c9hj5Hf8a9KplAdRdhADqUro.jpg
 directors:
   - Benny Safdie
   - Josh Safdie
+year: "2017"
+cast:
+  - "Robert Pattinson"
+  - "Benny Safdie"
+  - "Buddy Duress"
 tags:
   - motion-art
   - movie

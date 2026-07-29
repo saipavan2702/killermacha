@@ -10,6 +10,11 @@ genres:
 directors:
   - Leah McKendrick
 poster: https://image.tmdb.org/t/p/w500/canZTWSxACSnAluir3dCtMxKpA1.jpg
+year: "2026"
+cast:
+  - "Zoey Deutch"
+  - "Nick Robinson"
+  - "Ciara Bravo"
 tags:
   - motion-art
   - movie

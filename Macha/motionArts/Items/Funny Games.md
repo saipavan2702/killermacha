@@ -1,16 +1,21 @@
 ---
 title: Funny Games
 media_type: movie
-industry: Hollywood
+industry: "Hollywood"
 watched: false
 watched_date:
 genres:
-  - 
+  - "Thriller"
+  - "Horror"
 directors:
-  - 
-poster: https://image.tmdb.org/t/p/w500/zs92sAOh3Q0kDIJkgaJFTBzSFka.jpg
+  - "Michael Haneke"
+poster: "https://image.tmdb.org/t/p/w500/zs92sAOh3Q0kDIJkgaJFTBzSFka.jpg"
+year: "2008"
+cast:
+  - "Naomi Watts"
+  - "Tim Roth"
+  - "Michael Pitt"
 tags:
-  - 
   - motion-art
   - movie
 ---

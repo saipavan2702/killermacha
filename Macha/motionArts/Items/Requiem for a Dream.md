@@ -8,6 +8,11 @@ genres:
   - Crime
   - Drama
 poster: https://image.tmdb.org/t/p/w500/9BTwsLaMVHOGFlmsSlx5QYCaXb.jpg
+year: "2000"
+cast:
+  - "Ellen Burstyn"
+  - "Jared Leto"
+  - "Jennifer Connelly"
 tags:
   - motion-art
   - movie

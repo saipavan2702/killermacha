@@ -9,6 +9,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/erzbMlcNHOdx24AXOcn2ZKA7R1q.jpg
 directors:
   - Peter Weir
+year: "1989"
+cast:
+  - "Robin Williams"
+  - "Robert Sean Leonard"
+  - "Ethan Hawke"
 tags:
   - motion-art
   - movie

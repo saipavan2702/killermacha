@@ -12,6 +12,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/oAdg6estkW0Ud9yBxEPPpHflszZ.jpg
 directors:
   - Maria Sadowska
+year: "2021"
+cast:
+  - "Paulina Gałązka"
+  - "Giulio Berruti"
+  - "Katarzyna Figura"
 tags:
   - motion-art
   - movie

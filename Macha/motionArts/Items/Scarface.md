@@ -9,6 +9,11 @@ genres:
   - Crime
   - Drama
 poster: https://image.tmdb.org/t/p/w500/iQ5ztdjvteGeboxtmRdXEChJOHh.jpg
+year: "1983"
+cast:
+  - "Al Pacino"
+  - "Steven Bauer"
+  - "Michelle Pfeiffer"
 tags:
   - motion-art
   - movie

@@ -10,6 +10,13 @@ genres:
   - "Sci-Fi & Fantasy"
   - "Mystery"
 poster: "https://image.tmdb.org/t/p/w500/1DLjjvSWMYo17B7wuz6YikB96hH.jpg"
+year: "2017"
+directors:
+  - "Baran bo Odar"
+cast:
+  - "Louis Hofmann"
+  - "Lisa Vicari"
+  - "Andreas Pietschmann"
 tags:
   - motion-art
   - series

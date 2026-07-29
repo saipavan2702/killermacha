@@ -12,6 +12,11 @@ poster: https://image.tmdb.org/t/p/w500/8v3Sqv9UcIUC4ebmpKWROqPBINZ.jpg
 directors:
   - Phil Lord
   - Christopher Miller
+year: "2012"
+cast:
+  - "Jonah Hill"
+  - "Channing Tatum"
+  - "Brie Larson"
 tags:
   - motion-art
   - movie

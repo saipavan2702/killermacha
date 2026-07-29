@@ -9,6 +9,11 @@ genres:
   - Fantasy
   - Action
 poster: https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg
+year: "2003"
+cast:
+  - "Elijah Wood"
+  - "Ian McKellen"
+  - "Viggo Mortensen"
 tags:
   - motion-art
   - movie

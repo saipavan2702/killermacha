@@ -8,6 +8,11 @@ genres:
   - Action
   - Drama
 poster: https://image.tmdb.org/t/p/w500/lOMGc8bnSwQhS4XyE1S99uH8NXf.jpg
+year: "1954"
+cast:
+  - "Toshirō Mifune"
+  - "Takashi Shimura"
+  - "Yoshio Inaba"
 tags:
   - motion-art
   - movie

@@ -8,6 +8,11 @@ genres:
   - Drama
   - Thriller
 poster: https://image.tmdb.org/t/p/w500/m8aR1k35oZMOzZ1kYWUyt401mwq.jpg
+year: "2021"
+cast:
+  - "Jake Gyllenhaal"
+  - "Ethan Hawke"
+  - "Riley Keough"
 tags:
   - motion-art
   - movie

@@ -9,6 +9,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/o9VXYOuaJxCEKOxbA86xqtwmqYn.jpg
 directors:
   - Kenneth Lonergan
+year: "2016"
+cast:
+  - "Casey Affleck"
+  - "Lucas Hedges"
+  - "Michelle Williams"
 tags:
   - motion-art
   - movie

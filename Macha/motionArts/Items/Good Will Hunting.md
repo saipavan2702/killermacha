@@ -9,6 +9,11 @@ genres:
 directors:
   - Gus Van Sant
 poster: https://image.tmdb.org/t/p/w500/z2FnLKpFi1HPO7BEJxdkv6hpJSU.jpg
+year: "1997"
+cast:
+  - "Matt Damon"
+  - "Robin Williams"
+  - "Ben Affleck"
 tags:
   - motion-art
   - movie

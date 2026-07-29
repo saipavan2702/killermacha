@@ -7,6 +7,11 @@ watched_date:
 genres:
   - Drama
 poster: https://image.tmdb.org/t/p/w500/gQsDWmkvzzJxlrc3HCqkfQRH11.jpg
+year: "2021"
+cast:
+  - "Richard Jenkins"
+  - "Jayne Houdyshell"
+  - "Amy Schumer"
 tags:
   - motion-art
   - movie

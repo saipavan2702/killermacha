@@ -9,6 +9,11 @@ genres:
   - Science Fiction
   - Thriller
 poster: https://image.tmdb.org/t/p/w500/lqoMzCcZYEFK729d6qzt349fB4o.jpg
+year: "2024"
+cast:
+  - "Demi Moore"
+  - "Margaret Qualley"
+  - "Dennis Quaid"
 tags:
   - motion-art
   - movie

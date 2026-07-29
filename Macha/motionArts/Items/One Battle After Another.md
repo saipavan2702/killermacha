@@ -9,6 +9,11 @@ genres:
   - Crime
   - Comedy
 poster: https://image.tmdb.org/t/p/w500/lbBWwxBht4JFP5PsuJ5onpMqugW.jpg
+year: "2025"
+cast:
+  - "Leonardo DiCaprio"
+  - "Sean Penn"
+  - "Chase Infiniti"
 tags:
   - motion-art
   - movie

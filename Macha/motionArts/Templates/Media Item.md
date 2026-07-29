@@ -51,6 +51,13 @@ const tagsByType = {
 };
 const tags = tagsByType[mediaType] || ["motion-art"];
 const tagLines = tags.map((tag) => `  - ${tag}`).join("\n");
+const liveActionFields = mediaType === "movie" || mediaType === "series"
+  ? `year:
+directors: []
+cast: []
+`
+  : `directors: []
+`;
 tR += `---
 title: ${JSON.stringify(title)}
 media_type: "${mediaType}"
@@ -58,8 +65,7 @@ industry: ${JSON.stringify(industry)}
 watched: false
 watched_date:
 genres: []
-directors: []
-poster: ""
+${liveActionFields}poster: ""
 tags:
 ${tagLines}
 ---

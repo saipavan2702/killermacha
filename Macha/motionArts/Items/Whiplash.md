@@ -9,6 +9,11 @@ genres:
   - Music
   - Thriller
 poster: https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg
+year: "2014"
+cast:
+  - "Miles Teller"
+  - "J.K. Simmons"
+  - "Paul Reiser"
 tags:
   - motion-art
   - movie

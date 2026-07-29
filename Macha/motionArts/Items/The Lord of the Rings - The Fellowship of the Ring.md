@@ -9,6 +9,11 @@ genres:
   - Fantasy
   - Action
 poster: https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg
+year: "2001"
+cast:
+  - "Elijah Wood"
+  - "Ian McKellen"
+  - "Viggo Mortensen"
 tags:
   - motion-art
   - movie

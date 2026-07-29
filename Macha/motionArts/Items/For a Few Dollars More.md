@@ -7,6 +7,11 @@ watched_date:
 genres:
   - Western
 poster: https://image.tmdb.org/t/p/w500/ooqASvA7qxlTVKL3KwOzBwy57Dh.jpg
+year: "1965"
+cast:
+  - "Clint Eastwood"
+  - "Lee Van Cleef"
+  - "Gian Maria Volonté"
 tags:
   - motion-art
   - movie

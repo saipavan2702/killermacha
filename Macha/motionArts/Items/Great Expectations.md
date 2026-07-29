@@ -10,6 +10,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/ynaFuVvW2jaG06pMV67dOhzMYfJ.jpg
 directors:
   - David Lean
+year: "1998"
+cast:
+  - "Ethan Hawke"
+  - "Gwyneth Paltrow"
+  - "Hank Azaria"
 tags:
   - motion-art
   - movie

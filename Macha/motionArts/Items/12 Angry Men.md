@@ -9,6 +9,11 @@ genres:
 poster: "https://image.tmdb.org/t/p/w500/zhG3vKWyDRaZYoaww1UVAi29T9h.jpg"
 directors:
   - "Sidney Lumet"
+year: "1957"
+cast:
+  - "Martin Balsam"
+  - "John Fiedler"
+  - "Lee J. Cobb"
 tags:
   - motion-art
   - movie

@@ -10,6 +10,11 @@ genres:
 poster: "https://image.tmdb.org/t/p/w500/A4lH22nlFF7MdalGfcvSrlC1ttt.jpg"
 directors:
   - "Alejandro G. Iñárritu"
+year: "2000"
+cast:
+  - "Emilio Echevarría"
+  - "Gael García Bernal"
+  - "Vanessa Bauche"
 tags:
   - motion-art
   - movie

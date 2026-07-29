@@ -8,6 +8,11 @@ genres:
   - Drama
   - Crime
 poster: https://image.tmdb.org/t/p/w500/w44lbLfseKtOZWRDdGmPqEqMBsA.jpg
+year: "2022"
+cast:
+  - "Kashmera Shah"
+  - "Ganesh Yadav"
+  - "Shashank Shende"
 tags:
   - motion-art
   - movie

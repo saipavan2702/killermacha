@@ -8,6 +8,11 @@ genres:
   - Science Fiction
   - Adventure
 poster: https://image.tmdb.org/t/p/w500/yihdXomYb5kTeSivtFndMy5iDmf.jpg
+year: "2026"
+cast:
+  - "Ryan Gosling"
+  - "Sandra Hüller"
+  - "James Ortiz"
 tags:
   - motion-art
   - movie

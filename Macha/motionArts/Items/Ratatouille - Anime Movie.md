@@ -1,7 +1,7 @@
 ---
 title: Ratatouille
-media_type: movie
-industry: Hollywood
+media_type: anime-movie
+industry: Anime
 watched: false
 watched_date:
 genres:
@@ -12,6 +12,7 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/t3vaWRPSf6WjDSamIkKDs1iQWna.jpg
 tags:
   - motion-art
+  - anime
   - movie
 directors:
   - Brad Bird

@@ -9,6 +9,11 @@ genres:
   - Romance
   - Science Fiction
 poster: https://image.tmdb.org/t/p/w500/cAh2pCiNPftsY3aSqJuIOde7uWr.jpg
+year: "2001"
+cast:
+  - "Tom Cruise"
+  - "Penélope Cruz"
+  - "Cameron Diaz"
 tags:
   - motion-art
   - movie

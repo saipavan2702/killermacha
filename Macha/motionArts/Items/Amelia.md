@@ -11,6 +11,11 @@ genres:
 poster: "https://image.tmdb.org/t/p/w500/4c7QMp7JZl70K8x5oJuY40mckWx.jpg"
 directors:
   - "Mira Nair"
+year: "2009"
+cast:
+  - "Hilary Swank"
+  - "Richard Gere"
+  - "Aaron Abrams"
 tags:
   - motion-art
   - movie

@@ -10,6 +10,11 @@ genres:
 directors:
   - Curry Barker
 poster: https://image.tmdb.org/t/p/w500/bRwnj8WEKBCvmfeUNOukJPwB43K.jpg
+year: "2026"
+cast:
+  - "Michael Johnston"
+  - "Inde Navarrette"
+  - "Cooper Tomlinson"
 tags:
   - motion-art
   - movie

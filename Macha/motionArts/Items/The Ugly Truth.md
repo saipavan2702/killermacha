@@ -8,6 +8,11 @@ genres:
   - Comedy
   - Romance
 poster: https://image.tmdb.org/t/p/w500/2rq96Ihbqb1eU3TEBVtgFlqbeX7.jpg
+year: "2009"
+cast:
+  - "Katherine Heigl"
+  - "Gerard Butler"
+  - "Eric Winter"
 tags:
   - motion-art
   - movie

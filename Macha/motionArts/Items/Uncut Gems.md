@@ -9,6 +9,11 @@ genres:
   - Thriller
   - Crime
 poster: https://image.tmdb.org/t/p/w500/6XN1vxHc7kUSqNWtaQKN45J5x2v.jpg
+year: "2019"
+cast:
+  - "Adam Sandler"
+  - "LaKeith Stanfield"
+  - "Julia Fox"
 tags:
   - motion-art
   - movie

@@ -9,6 +9,11 @@ genres:
   - Thriller
   - Drama
 poster: https://image.tmdb.org/t/p/w500/6Tt1TQeOI4TpXu1cBUgNGNGeznW.jpg
+year: "2012"
+cast:
+  - "Matthew McConaughey"
+  - "Emile Hirsch"
+  - "Juno Temple"
 tags:
   - motion-art
   - movie

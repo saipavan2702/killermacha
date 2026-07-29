@@ -9,6 +9,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/8rgPyWjYZhsphSSxbXguMnhN7H0.jpg
 directors:
   - Mathieu Kassovitz
+year: "1995"
+cast:
+  - "Vincent Cassel"
+  - "Hubert Koundé"
+  - "Saïd Taghmaoui"
 tags:
   - motion-art
   - movie

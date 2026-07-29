@@ -12,6 +12,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/3QSGUdzG374H7pOxIdKNBpeLEUk.jpg
 directors:
   - Sion Sono
+year: "2008"
+cast:
+  - "Takahiro Nishijima"
+  - "Hikari Mitsushima"
+  - "Sakura Ando"
 tags:
   - motion-art
   - movie

@@ -11,6 +11,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/iNZdSIfhSCMtRILDNyhLn8UKeSG.jpg
 directors:
   - Gary Winick
+year: "2004"
+cast:
+  - "Jennifer Garner"
+  - "Mark Ruffalo"
+  - "Judy Greer"
 tags:
   - motion-art
   - movie

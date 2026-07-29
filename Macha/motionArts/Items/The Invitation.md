@@ -8,6 +8,11 @@ genres:
   - Thriller
   - Horror
 poster: https://image.tmdb.org/t/p/w500/otZMaGHWnKPgOODF6SSVNGqbI4X.jpg
+year: "2016"
+cast:
+  - "Logan Marshall-Green"
+  - "Tammy Blanchard"
+  - "Emayatzy Corinealdi"
 tags:
   - motion-art
   - movie

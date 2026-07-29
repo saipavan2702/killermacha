@@ -8,6 +8,11 @@ genres:
   - Drama
   - Thriller
 poster: https://image.tmdb.org/t/p/w500/lYWEXbQgRTR4ZQleSXAgRbxAjvq.jpg
+year: "2025"
+cast:
+  - "Timothée Chalamet"
+  - "Gwyneth Paltrow"
+  - "Odessa A'zion"
 tags:
   - motion-art
   - movie

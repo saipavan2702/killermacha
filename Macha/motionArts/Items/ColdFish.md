@@ -12,6 +12,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/669GmEZsyMlPliURX5myHTStslv.jpg
 directors:
   - Sion Sono
+year: "2011"
+cast:
+  - "Mitsuru Fukikoshi"
+  - "Denden"
+  - "Asuka Kurosawa"
 tags:
   - motion-art
   - movie

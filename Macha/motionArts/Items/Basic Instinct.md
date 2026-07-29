@@ -10,6 +10,11 @@ genres:
 directors:
   - Paul Verhoeven
 poster: https://image.tmdb.org/t/p/w500/76Ts0yoHk8kVQj9MMnoMixhRWoh.jpg
+year: "1992"
+cast:
+  - "Michael Douglas"
+  - "Sharon Stone"
+  - "George Dzundza"
 tags:
   - motion-art
   - movie

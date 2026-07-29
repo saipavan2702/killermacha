@@ -12,6 +12,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/wAuQNTBFBu2yXZsX6yLhUPiwTlW.jpg
 directors:
   - Ruben Fleischer
+year: "2013"
+cast:
+  - "Josh Brolin"
+  - "Ryan Gosling"
+  - "Sean Penn"
 tags:
   - motion-art
   - movie

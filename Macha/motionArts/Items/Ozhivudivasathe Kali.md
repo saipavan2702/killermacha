@@ -9,6 +9,11 @@ genres:
   - Crime
   - Drama
 poster: https://image.tmdb.org/t/p/w500/fttFT9kYkqvZOiDhv8IEfFnvuq1.jpg
+year: "2016"
+cast:
+  - "Nisthar Ahamed"
+  - "Pradeep Kumar"
+  - "Girish Nair"
 tags:
   - motion-art
   - movie

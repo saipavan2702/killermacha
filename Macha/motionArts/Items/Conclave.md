@@ -8,6 +8,11 @@ genres:
   - Drama
   - Thriller
 poster: https://image.tmdb.org/t/p/w500/vYEyxF1UT779RiEalpMjUT6kfdf.jpg
+year: "2024"
+cast:
+  - "Ralph Fiennes"
+  - "Stanley Tucci"
+  - "John Lithgow"
 tags:
   - motion-art
   - movie

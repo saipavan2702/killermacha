@@ -9,6 +9,11 @@ genres:
   - Romance
   - History
 poster: https://image.tmdb.org/t/p/w500/fn0Tp9SG0IQ3Nx8iHPYPiseLMWd.jpg
+year: "2018"
+cast:
+  - "Tom Schilling"
+  - "Sebastian Koch"
+  - "Paula Beer"
 tags:
   - motion-art
   - movie

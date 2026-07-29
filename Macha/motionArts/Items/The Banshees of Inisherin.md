@@ -8,6 +8,11 @@ genres:
   - Drama
   - Comedy
 poster: https://image.tmdb.org/t/p/w500/4yFG6cSPaCaPhyJ1vtGOtMD1lgh.jpg
+year: "2022"
+cast:
+  - "Colin Farrell"
+  - "Brendan Gleeson"
+  - "Kerry Condon"
 tags:
   - motion-art
   - movie

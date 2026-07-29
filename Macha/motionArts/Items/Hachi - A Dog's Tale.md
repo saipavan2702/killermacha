@@ -8,6 +8,11 @@ genres:
   - Drama
   - Family
 poster: https://image.tmdb.org/t/p/w500/lsy3aEsEfYIHdLRk4dontZ4s85h.jpg
+year: "2009"
+cast:
+  - "Richard Gere"
+  - "Joan Allen"
+  - "Sarah Roemer"
 tags:
   - motion-art
   - movie

@@ -33,9 +33,36 @@
               "icon": "lucide-file",
               "title": "Rate Limiter"
             }
+          },
+          {
+            "id": "4e6de272fbe65501",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Upskill/SysDes/HLD/Rate Limiting.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Rate Limiting"
+            }
+          },
+          {
+            "id": "6b37d13fb00af6b2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Hashing methods.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Hashing methods"
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -234,9 +261,24 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3c9abc6e4908ddc9",
+  "active": "f12002b2fbff99b8",
   "lastOpenFiles": [
+    "Macha/motionArts/Items/Ratatouille - Anime Movie.md",
+    "Macha/motionArts/Items/12 Angry Men (1997).md",
+    "Macha/motionArts/Tools/__pycache__/sync_tmdb_posters.cpython-314.pyc",
+    "Macha/motionArts/Tools/__pycache__",
+    "Macha/motionArts/Items/12 Angry Men.md",
     "Macha/motionArts/Celluloid.base",
+    "Upskill/SysDes/HLD/Rate Limiting.md",
+    "Upskill/SysDes/LLD/Rate Limiter.md",
+    "Macha/motionArts/Items/The Silence of the Lambs.md",
+    "Macha/motionArts/Items/Sweet November.md",
+    "Untitled.md",
+    "Macha/motionArts/Items/Monsters vs Aliens - Anime Movie.md",
+    "Macha/motionArts/Items/Four Weddings and a Funeral.md",
+    "Macha/motionArts/Items/The Fall.md",
+    "Macha/motionArts/Items/John Q.md",
+    "Hashing methods.md",
     "2025-11-12.md",
     "2026-06-03.md",
     "Upskill/Learning.md",
@@ -248,20 +290,8 @@
     "Macha/motionArts/Items/Primal Fear.md",
     "Macha/motionArts/Items/Primal Fear 2.md",
     "Macha/motionArts/Items/8½.md",
-    "Upskill/SysDes/LLD/Rate Limiter.md",
     "Upskill/ProgramLang/Python/Retries and Timeouts.md",
     "Upskill/ProgramLang/Python/Configuration and Validation.md",
-    "Upskill/ProgramLang/Python/Application Structure.md",
-    "QoL/Resources.md",
-    "Upskill/SysDes/LLD/Design Patterns/Architectural.md",
-    "Upskill/SysDes/HLD/API Build/Auth Methods/Basic Authentication.md",
-    "Upskill/CS Topics/Operating Systems/Deadlocks.md",
-    "QoL/Configs.md",
-    "Upskill/DSA/DSA.md",
-    "Upskill/DSA/Practice Problems.md",
-    "Upskill/ProgramLang/C++/Priority Queues.md",
-    "Tasks/Tasks.md",
-    "Upskill/SysDes/HLD/Distributed Systems Papers/Hadoop Distributed File System.md",
     "Upskill/SysDes/HLD/Distributed Systems Papers",
     "Upskill/CS Topics/Operating Systems",
     "new-book-template-clipper.json",
@@ -269,8 +299,6 @@
     "Upskill/SysDes/HLD/API Build/Error Handling",
     "Upskill/DSA/Algorithms/Bitmasking",
     "Upskill/WebDev/Frontend/JavaScript",
-    "Upskill/Linux/Git",
-    "Upskill/SysDes/HLD/API Build/Auth Methods",
     "attachments/Pasted image 20260601002039.png",
     "attachments/communication_patterns_map_v2.svg",
     "attachments/Pasted image 20260531230835.png",

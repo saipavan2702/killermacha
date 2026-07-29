@@ -9,6 +9,11 @@ genres:
   - Thriller
   - Crime
 poster: https://image.tmdb.org/t/p/w500/jsS3a3ep2KyBVmmiwaz3LvK49b1.jpg
+year: "2013"
+cast:
+  - "Hugh Jackman"
+  - "Jake Gyllenhaal"
+  - "Viola Davis"
 tags:
   - motion-art
   - movie

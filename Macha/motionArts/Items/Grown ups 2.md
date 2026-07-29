@@ -9,6 +9,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/hT6ijOtjtYrnyDhN7VA2QWyGFAm.jpg
 directors:
   - Dennis Dugan
+year: "2013"
+cast:
+  - "Adam Sandler"
+  - "Kevin James"
+  - "Chris Rock"
 tags:
   - motion-art
   - movie

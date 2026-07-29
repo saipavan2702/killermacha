@@ -11,6 +11,11 @@ genres:
 directors:
   - "Michael Bay"
 poster: "https://image.tmdb.org/t/p/w500/pLBb0whOzVDtJvyD4DPeQyQNOqp.jpg"
+year: "2009"
+cast:
+  - "Shia LaBeouf"
+  - "Megan Fox"
+  - "Peter Cullen"
 tags:
   - motion-art
   - movie

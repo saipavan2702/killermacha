@@ -8,6 +8,11 @@ genres:
   - Crime
   - Drama
 poster: https://image.tmdb.org/t/p/w500/ekstpH614fwDX8DUln1a2Opz0N8.jpg
+year: "1976"
+cast:
+  - "Robert De Niro"
+  - "Jodie Foster"
+  - "Cybill Shepherd"
 tags:
   - motion-art
   - movie

@@ -11,6 +11,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/zPib4ukTSdXvHP9pxGkFCe34f3y.jpg
 directors:
   - Edgar Wright
+year: "2007"
+cast:
+  - "Simon Pegg"
+  - "Nick Frost"
+  - "Jim Broadbent"
 tags:
   - motion-art
   - movie

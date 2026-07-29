@@ -8,6 +8,13 @@ genres:
   - "Mystery"
   - "Drama"
 poster: "https://image.tmdb.org/t/p/w500/iYoMZYVD775MtBYJfv6OGY1FsnL.jpg"
+year: "2021"
+directors:
+  - "Mike Flanagan"
+cast:
+  - "Hamish Linklater"
+  - "Zach Gilford"
+  - "Kate Siegel"
 tags:
   - motion-art
   - series

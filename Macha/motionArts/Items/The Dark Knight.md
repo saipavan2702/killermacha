@@ -12,6 +12,11 @@ genres:
 directors:
   - Christopher Nolan
 poster: https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg
+year: "2008"
+cast:
+  - "Christian Bale"
+  - "Heath Ledger"
+  - "Aaron Eckhart"
 tags:
   - motion-art
   - movie

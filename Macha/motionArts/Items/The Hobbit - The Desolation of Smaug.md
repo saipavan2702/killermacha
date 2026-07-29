@@ -9,6 +9,11 @@ genres:
   - Adventure
   - Action
 poster: https://image.tmdb.org/t/p/w500/xQYiXsheRCDBA39DOrmaw1aSpbk.jpg
+year: "2013"
+cast:
+  - "Ian McKellen"
+  - "Martin Freeman"
+  - "Richard Armitage"
 tags:
   - motion-art
   - movie

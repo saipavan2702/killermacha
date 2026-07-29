@@ -9,6 +9,11 @@ genres:
   - Romance
   - Drama
 poster: https://image.tmdb.org/t/p/w500/6stnAm1wSek8ZrislwK4xGTyCnt.jpg
+year: "2009"
+cast:
+  - "Sandra Bullock"
+  - "Ryan Reynolds"
+  - "Malin Akerman"
 tags:
   - motion-art
   - movie

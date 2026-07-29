@@ -9,6 +9,11 @@ genres:
   - Mystery
   - Thriller
 poster: https://image.tmdb.org/t/p/w500/fptnZJbLzKUHeNlYrAynbyoL5YJ.jpg
+year: "2017"
+cast:
+  - "Mario Casas"
+  - "Ana Wagener"
+  - "Jose Coronado"
 tags:
   - motion-art
   - movie

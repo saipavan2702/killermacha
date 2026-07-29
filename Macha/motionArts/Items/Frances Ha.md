@@ -10,6 +10,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/jrq1NoKvsxWCcffVOjegiYwloFN.jpg
 directors:
   - Noah Baumbach
+year: "2013"
+cast:
+  - "Greta Gerwig"
+  - "Mickey Sumner"
+  - "Michael Zegen"
 tags:
   - motion-art
   - movie

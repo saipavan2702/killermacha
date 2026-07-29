@@ -9,6 +9,11 @@ genres:
   - Crime
   - Drama
 poster: https://image.tmdb.org/t/p/w500/6ojHgqtIR41O2qLKa7LFUVj0cZa.jpg
+year: "1999"
+cast:
+  - "Matt Damon"
+  - "Gwyneth Paltrow"
+  - "Jude Law"
 tags:
   - motion-art
   - movie

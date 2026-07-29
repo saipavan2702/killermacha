@@ -9,6 +9,11 @@ genres:
   - Romance
   - Comedy
 poster: https://image.tmdb.org/t/p/w500/1NxGNQchGBTHXJ6RShLY1IlZqWn.jpg
+year: "2021"
+cast:
+  - "Renate Reinsve"
+  - "Anders Danielsen Lie"
+  - "Herbert Nordrum"
 tags:
   - motion-art
   - movie

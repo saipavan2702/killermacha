@@ -11,6 +11,11 @@ genres:
 directors:
   - Brian De Palma
 poster: https://image.tmdb.org/t/p/w500/i2OgxmZVbIsJxaLiYMjCSewsLty.jpg
+year: "2002"
+cast:
+  - "Rebecca Romijn"
+  - "Antonio Banderas"
+  - "Peter Coyote"
 tags:
   - motion-art
   - movie

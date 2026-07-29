@@ -9,6 +9,11 @@ genres:
 poster: "https://image.tmdb.org/t/p/w500/culCEdj4srLljefgn4XKd6k3C5t.jpg"
 directors:
   - "Bob Fosse"
+year: "1979"
+cast:
+  - "Roy Scheider"
+  - "Jessica Lange"
+  - "Ann Reinking"
 tags:
   - motion-art
   - movie

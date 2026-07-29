@@ -9,6 +9,11 @@ genres:
   - Action
   - Science Fiction
 poster: https://image.tmdb.org/t/p/w500/kpglnOBYmKn0AkkWDzGxzKHDbds.jpg
+year: "2013"
+cast:
+  - "Simon Pegg"
+  - "Nick Frost"
+  - "Paddy Considine"
 tags:
   - motion-art
   - movie

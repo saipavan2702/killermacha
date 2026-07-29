@@ -10,6 +10,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/9OkCLM73MIU2CrKZbqiT8Ln1wY2.jpg
 directors:
   - Martin Scorsese
+year: "1990"
+cast:
+  - "Robert De Niro"
+  - "Ray Liotta"
+  - "Joe Pesci"
 tags:
   - motion-art
   - movie

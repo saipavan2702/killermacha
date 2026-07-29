@@ -8,6 +8,11 @@ genres:
   - Comedy
   - Drama
 poster: https://image.tmdb.org/t/p/w500/yUs4Sw9AyTg2sA1qWBkNpD2mGSj.jpg
+year: "2024"
+cast:
+  - "Maisy Stella"
+  - "Aubrey Plaza"
+  - "Percy Hynes White"
 tags:
   - motion-art
   - movie

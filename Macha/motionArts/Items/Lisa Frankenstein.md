@@ -9,6 +9,11 @@ genres:
   - Comedy
   - Romance
 poster: https://image.tmdb.org/t/p/w500/jAW7ZdIm4HLKB3g15uMOWYNdU8r.jpg
+year: "2024"
+cast:
+  - "Kathryn Newton"
+  - "Cole Sprouse"
+  - "Liza Soberano"
 tags:
   - motion-art
   - movie

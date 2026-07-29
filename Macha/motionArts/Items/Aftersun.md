@@ -9,6 +9,11 @@ genres:
 poster: "https://image.tmdb.org/t/p/w500/evKz85EKouVbIr51zy5fOtpNRPg.jpg"
 directors:
   - "Charlotte Wells"
+year: "2022"
+cast:
+  - "Paul Mescal"
+  - "Frankie Corio"
+  - "Brooklyn Toulson"
 tags:
   - motion-art
   - movie

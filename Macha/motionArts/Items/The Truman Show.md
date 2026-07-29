@@ -8,6 +8,11 @@ genres:
   - Comedy
   - Drama
 poster: https://image.tmdb.org/t/p/w500/vuza0WqY239yBXOadKlGwJsZJFE.jpg
+year: "1998"
+cast:
+  - "Jim Carrey"
+  - "Laura Linney"
+  - "Noah Emmerich"
 tags:
   - motion-art
   - movie

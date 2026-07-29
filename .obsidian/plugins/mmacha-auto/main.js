@@ -59,10 +59,13 @@ const QUERY_OVERRIDES = {
   "Transformers: The Last Knight": "Transformers: The Last Knight",
   "The Magnificent Seven": "The Magnificent Seven",
   "Pride and Prejudice": "Pride & Prejudice",
-  Shiva: "Shiva",
+  Shiva: "Siva",
   "The Accountant": "The Accountant",
   "The Boys": "The Boys",
+  Shogun: "Shōgun",
   "The Human Condition": "The Human Condition I: No Greater Love",
+  Godavari: "Godavari",
+  "Rakta Charitra": "Rakht Charitra",
   "The Dark Knight": "The Dark Knight",
   "The Return": "The Return 2003",
   Warrior: "Warrior",
@@ -116,6 +119,7 @@ const YEAR_OVERRIDES = {
   "The World's End": "2013",
   "Boogiepop and Others": "2019",
   Brooklyn: "2015",
+  Godavari: "2006",
   Harakiri: "1962",
   K: "2012",
   "King Arthur": "2017",
@@ -124,10 +128,18 @@ const YEAR_OVERRIDES = {
   Shiva: "1989",
   "The Accountant": "2016",
   "The Magnificent Seven": "1960",
+  "Rakta Charitra": "2010",
+  "The Housemaid": "2025",
+  "The Internship": "2026",
   Obsession: "2026",
   Odyssey: "2026",
   "The Odyssey": "2026",
+  Shogun: "2024",
   Warrior: "2011",
+};
+
+const DIRECTOR_OVERRIDES = {
+  "Finding Her Edge": ["Shamim Sarif", "Jacqueline Pepall"],
 };
 
 const IMDB_OVERRIDES = {
@@ -152,6 +164,8 @@ const IMDB_OVERRIDES = {
   Moana: "tt3521164",
   Up: "tt1049413",
   "The World's End": "tt1213663",
+  "Great Expectations": "tt0119223",
+  Shiva: "tt0248428",
   Obsession: "tt37287335",
   Odyssey: "tt33764258",
   "The Odyssey": "tt33764258",
@@ -301,13 +315,18 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
 
     this.syncing.add(file.path);
     try {
-      const result = await this.searchTitle(title, mediaType);
+      const preferredYear = this.scalar(frontmatter.year);
+      const preferredPosterPath = this.posterPath(this.scalar(frontmatter.poster));
+      const result = await this.searchTitle(title, mediaType, preferredYear, preferredPosterPath);
       if (!result) {
         return false;
       }
 
       const genreMap = await this.loadGenres(mediaType);
       const metadata = await this.metadataFrom(result, mediaType, genreMap);
+      if (DIRECTOR_OVERRIDES[title]) {
+        metadata.directors = DIRECTOR_OVERRIDES[title];
+      }
       await this.applyTmdbMetadata(file, metadata, mediaType, force);
       this.completedSync.add(file.path);
       return true;
@@ -317,14 +336,16 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
   }
 
   needsTmdbSync(file, frontmatter, mediaType) {
+    if (this.completedSync.has(file.path)) {
+      return false;
+    }
+
     const missingPoster = !this.hasValue(frontmatter.poster);
     const missingGenres = !this.hasListValue(frontmatter.genres);
     const missingDirectors = this.needsDirectors(mediaType) && !this.hasListValue(frontmatter.directors);
-
-    if (this.completedSync.has(file.path) && !missingPoster && !missingGenres) {
-      return false;
-    }
-    return missingPoster || missingGenres || missingDirectors;
+    const missingYear = this.needsLiveActionMetadata(mediaType) && !this.hasValue(frontmatter.year);
+    const missingCast = this.needsLiveActionMetadata(mediaType) && !this.hasListValue(frontmatter.cast);
+    return missingPoster || missingGenres || missingDirectors || missingYear || missingCast;
   }
 
   async applyTmdbMetadata(file, metadata, mediaType, force) {
@@ -338,8 +359,14 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       if (metadata.genres.length > 0 && (force || !this.hasListValue(frontmatter.genres))) {
         frontmatter.genres = metadata.genres;
       }
+      if (this.needsLiveActionMetadata(mediaType) && metadata.year && (force || !this.hasValue(frontmatter.year))) {
+        frontmatter.year = metadata.year;
+      }
       if (this.needsDirectors(mediaType) && metadata.directors.length > 0 && (force || !this.hasListValue(frontmatter.directors))) {
         frontmatter.directors = metadata.directors;
+      }
+      if (this.needsLiveActionMetadata(mediaType) && metadata.cast.length > 0 && (force || !this.hasListValue(frontmatter.cast))) {
+        frontmatter.cast = metadata.cast;
       }
     });
   }
@@ -347,16 +374,19 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
   async metadataFrom(result, mediaType, genreMap) {
     const posterPath = result.poster_path;
     const genres = (result.genre_ids || []).map((id) => genreMap.get(id)).filter(Boolean);
+    const credits = await this.loadCredits(result, mediaType);
     return {
       poster: posterPath ? `${IMAGE_BASE}${posterPath}` : "",
       industry: this.industryFrom(result, mediaType),
       genres,
-      directors: await this.loadDirectors(result, mediaType),
+      year: this.needsLiveActionMetadata(mediaType) ? this.resultYear(result, mediaType) : "",
+      directors: this.directorsFrom(credits, mediaType),
+      cast: this.needsLiveActionMetadata(mediaType) ? this.castFrom(credits) : [],
     };
   }
 
-  async searchTitle(title, mediaType) {
-    const imdbResult = await this.findByImdbId(title, mediaType);
+  async searchTitle(title, mediaType, preferredYear = "", preferredPosterPath = "") {
+    const imdbResult = await this.findByImdbId(title, mediaType, preferredYear, preferredPosterPath);
     if (imdbResult) {
       return imdbResult;
     }
@@ -380,7 +410,7 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
         language: "en-US",
         page: "1",
       };
-      const year = YEAR_OVERRIDES[title];
+      const year = preferredPosterPath ? "" : preferredYear || YEAR_OVERRIDES[title];
       if (year && this.isTvType(mediaType)) {
         params.first_air_date_year = year;
       } else if (year) {
@@ -390,10 +420,28 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       const payload = await this.apiGet(path, params);
       results.push(...(payload.results || []));
     }
-    return this.chooseBestResult(title, mediaType, results);
+    if (preferredPosterPath && preferredYear && !results.some((result) => result.poster_path === preferredPosterPath)) {
+      for (const query of seen) {
+        const params = {
+          query,
+          include_adult: "false",
+          language: "en-US",
+          page: "1",
+        };
+        if (this.isTvType(mediaType)) {
+          params.first_air_date_year = preferredYear;
+        } else {
+          params.year = preferredYear;
+          params.primary_release_year = preferredYear;
+        }
+        const payload = await this.apiGet(path, params);
+        results.push(...(payload.results || []));
+      }
+    }
+    return this.chooseBestResult(title, mediaType, results, preferredYear, preferredPosterPath);
   }
 
-  async findByImdbId(title, mediaType) {
+  async findByImdbId(title, mediaType, preferredYear = "", preferredPosterPath = "") {
     const imdbId = IMDB_OVERRIDES[title] || IMDB_OVERRIDES[QUERY_OVERRIDES[title]];
     if (!imdbId) {
       return null;
@@ -402,16 +450,23 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
     const payload = await this.apiGet(`/find/${imdbId}`, { external_source: "imdb_id" });
     const key = this.isTvType(mediaType) ? "tv_results" : "movie_results";
     const results = payload[key] || [];
-    return results[0] || null;
+    const result = results[0] || null;
+    if (result && preferredYear && this.resultYear(result, mediaType) !== preferredYear) {
+      return null;
+    }
+    if (result && preferredPosterPath && !preferredYear && result.poster_path !== preferredPosterPath) {
+      return null;
+    }
+    return result;
   }
 
-  chooseBestResult(title, mediaType, results) {
+  chooseBestResult(title, mediaType, results, preferredYear = "", preferredPosterPath = "") {
     if (results.length === 0) {
       return null;
     }
 
     const wantedTitle = this.normalizedTitle(QUERY_OVERRIDES[title] || title);
-    const wantedYear = YEAR_OVERRIDES[title];
+    const wantedYear = preferredYear || YEAR_OVERRIDES[title];
     const scored = results.map((result) => {
       const candidate = this.normalizedTitle(this.resultTitle(result, mediaType));
       const candidateYear = this.resultYear(result, mediaType);
@@ -426,6 +481,11 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
         points += 50;
       } else if (wantedYear) {
         points -= 20;
+      }
+      if (preferredPosterPath && result.poster_path === preferredPosterPath) {
+        points += 200;
+      } else if (preferredPosterPath) {
+        points -= 40;
       }
       if (result.poster_path) {
         points += 5;
@@ -453,22 +513,50 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
     return genres;
   }
 
-  async loadDirectors(result, mediaType) {
+  async loadCredits(result, mediaType) {
     if (!this.needsDirectors(mediaType) || !result.id) {
-      return [];
+      return { cast: [], crew: [] };
     }
 
-    const payload = await this.apiGet(`/movie/${result.id}/credits`, { language: "en-US" });
+    const path = mediaType === "series"
+      ? `/tv/${result.id}/aggregate_credits`
+      : `/movie/${result.id}/credits`;
+    return this.apiGet(path, { language: "en-US" });
+  }
+
+  directorsFrom(credits, mediaType) {
     const seen = new Set();
     const directors = [];
-    for (const person of payload.crew || []) {
-      if (person.job !== "Director" || !person.name || seen.has(person.name)) {
+    for (const person of credits.crew || []) {
+      const directingJobs = mediaType === "series"
+        ? (person.jobs || []).filter((job) => job.job === "Director")
+        : person.job === "Director"
+          ? [{ episode_count: 1 }]
+          : [];
+      if (directingJobs.length === 0 || !person.name || seen.has(person.name)) {
         continue;
       }
-      directors.push(person.name);
+      const episodeCount = directingJobs.reduce((total, job) => total + Number(job.episode_count || 0), 0);
+      directors.push({ name: person.name, episodeCount });
       seen.add(person.name);
     }
-    return directors;
+    directors.sort((a, b) => b.episodeCount - a.episodeCount);
+    return directors.slice(0, 3).map((director) => director.name);
+  }
+
+  castFrom(credits) {
+    const seen = new Set();
+    return [...(credits.cast || [])]
+      .sort((a, b) => Number(a.order || 0) - Number(b.order || 0))
+      .filter((person) => {
+        if (!person.name || seen.has(person.name)) {
+          return false;
+        }
+        seen.add(person.name);
+        return true;
+      })
+      .slice(0, 3)
+      .map((person) => person.name);
   }
 
   async apiGet(path, params) {
@@ -518,12 +606,21 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
     return /^\d{4}/.test(value) ? value.slice(0, 4) : "";
   }
 
+  posterPath(value) {
+    const match = String(value || "").match(/\/(?:w\d+|original)(\/[^?#]+)/);
+    return match ? match[1] : "";
+  }
+
   isTvType(mediaType) {
     return mediaType === "series" || mediaType === "anime";
   }
 
   needsDirectors(mediaType) {
-    return mediaType === "movie" || mediaType === "anime-movie";
+    return mediaType === "movie" || mediaType === "series" || mediaType === "anime-movie";
+  }
+
+  needsLiveActionMetadata(mediaType) {
+    return mediaType === "movie" || mediaType === "series";
   }
 
   isWatched(value) {
@@ -535,7 +632,7 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
   }
 
   hasListValue(value) {
-    return Array.isArray(value) && value.length > 0;
+    return Array.isArray(value) && value.some((item) => this.hasValue(item));
   }
 
   scalar(value) {
@@ -571,7 +668,7 @@ class MovieWatchDateSettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("Auto-sync TMDB")
-      .setDesc("Automatically fills poster, genres, industry, and directors for incomplete motionArts notes.")
+      .setDesc("Automatically fills poster, genres, industry, year, directors, and top cast for motionArts notes.")
       .addToggle((toggle) => {
         toggle.setValue(this.plugin.settings.autoSyncTmdb).onChange(async (value) => {
           this.plugin.settings.autoSyncTmdb = value;

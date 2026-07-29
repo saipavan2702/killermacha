@@ -10,6 +10,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/hMRIyBjPzxaSXWM06se3OcNjIQa.jpg
 directors:
   - Joe Wright
+year: "2007"
+cast:
+  - "James McAvoy"
+  - "Keira Knightley"
+  - "Saoirse Ronan"
 tags:
   - motion-art
   - movie

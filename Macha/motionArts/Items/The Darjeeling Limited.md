@@ -9,6 +9,11 @@ genres:
   - Drama
   - Comedy
 poster: https://image.tmdb.org/t/p/w500/oSW5OVXTulaIXcoNwJAp5YEKpbP.jpg
+year: "2007"
+cast:
+  - "Owen Wilson"
+  - "Adrien Brody"
+  - "Jason Schwartzman"
 tags:
   - motion-art
   - movie

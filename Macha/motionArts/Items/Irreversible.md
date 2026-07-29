@@ -11,6 +11,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/rxeDxo8FvZpLu6iplNpxdtAVnfu.jpg
 directors:
   - Gaspar Noé
+year: "2002"
+cast:
+  - "Monica Bellucci"
+  - "Vincent Cassel"
+  - "Albert Dupontel"
 tags:
   - motion-art
   - movie

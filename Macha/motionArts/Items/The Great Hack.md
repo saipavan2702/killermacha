@@ -7,6 +7,11 @@ watched_date:
 genres:
   - Documentary
 poster: https://image.tmdb.org/t/p/w500/uIrGgUzasEUA7v8uChRhUUFzLwE.jpg
+year: "2019"
+cast:
+  - "Brittany Kaiser"
+  - "David Carroll"
+  - "Paul-Olivier Dehaye"
 tags:
   - motion-art
   - movie

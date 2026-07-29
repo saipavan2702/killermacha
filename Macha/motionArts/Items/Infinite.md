@@ -11,6 +11,11 @@ genres:
 poster: https://image.tmdb.org/t/p/w500/niw2AKHz6XmwiRMLWaoyAOAti0G.jpg
 directors:
   - Antoine Fuqua
+year: "2021"
+cast:
+  - "Mark Wahlberg"
+  - "Chiwetel Ejiofor"
+  - "Sophie Cookson"
 tags:
   - motion-art
   - movie

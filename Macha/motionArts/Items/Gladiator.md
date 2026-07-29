@@ -9,6 +9,11 @@ genres:
   - Drama
   - Adventure
 poster: https://image.tmdb.org/t/p/w500/wN2xWp1eIwCKOD0BHTcErTBv1Uq.jpg
+year: "2000"
+cast:
+  - "Russell Crowe"
+  - "Joaquin Phoenix"
+  - "Connie Nielsen"
 tags:
   - motion-art
   - movie

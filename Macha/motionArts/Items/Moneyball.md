@@ -7,6 +7,11 @@ watched_date:
 genres:
   - Drama
 poster: https://image.tmdb.org/t/p/w500/4yIQq1e6iOcaZ5rLDG3lZBP3j7a.jpg
+year: "2011"
+cast:
+  - "Brad Pitt"
+  - "Jonah Hill"
+  - "Philip Seymour Hoffman"
 tags:
   - motion-art
   - movie

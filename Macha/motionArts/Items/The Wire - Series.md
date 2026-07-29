@@ -7,8 +7,16 @@ watched_date:
 genres:
   - Crime
   - Drama
-directors: []
+directors:
+  - "Ernest R. Dickerson"
+  - "Joe Chappelle"
+  - "Ed Bianchi"
 poster: https://image.tmdb.org/t/p/w500/4lbclFySvugI51fwsyxBTOm4DqK.jpg
+year: "2002"
+cast:
+  - "Dominic West"
+  - "Lance Reddick"
+  - "Sonja Sohn"
 tags:
   - motion-art
   - series

@@ -12,6 +12,11 @@ poster: https://image.tmdb.org/t/p/w500/850chzYHYbT3IISl6Q7dbBuFP2B.jpg
 directors:
   - Phil Lord
   - Christopher Miller
+year: "2014"
+cast:
+  - "Jonah Hill"
+  - "Channing Tatum"
+  - "Peter Stormare"
 tags:
   - motion-art
   - movie

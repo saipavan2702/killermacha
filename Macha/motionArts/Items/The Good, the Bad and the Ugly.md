@@ -7,6 +7,11 @@ watched_date:
 genres:
   - Western
 poster: https://image.tmdb.org/t/p/w500/bX2xnavhMYjWDoZp1VM6VnU1xwe.jpg
+year: "1966"
+cast:
+  - "Clint Eastwood"
+  - "Eli Wallach"
+  - "Lee Van Cleef"
 tags:
   - motion-art
   - movie

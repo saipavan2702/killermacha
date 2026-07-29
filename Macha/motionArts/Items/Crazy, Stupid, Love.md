@@ -12,6 +12,11 @@ poster: https://image.tmdb.org/t/p/w500/p4RafgAPk558muOjnBMHhMArjS2.jpg
 directors:
   - Glenn Ficarra
   - John Requa
+year: "2011"
+cast:
+  - "Steve Carell"
+  - "Ryan Gosling"
+  - "Julianne Moore"
 tags:
   - motion-art
   - movie

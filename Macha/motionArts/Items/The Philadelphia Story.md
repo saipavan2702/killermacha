@@ -8,6 +8,11 @@ genres:
   - Comedy
   - Romance
 poster: https://image.tmdb.org/t/p/w500/dKUubjvxO78XDts6VP1Ggcp4R9O.jpg
+year: "1940"
+cast:
+  - "Cary Grant"
+  - "Katharine Hepburn"
+  - "James Stewart"
 tags:
   - motion-art
   - movie
