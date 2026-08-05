@@ -54,3 +54,4 @@ Connections: [[Upskill/Learning|Learning]], [[Upskill/CS Topics/Computer Science
 - [Ram X](https://ramx.in/)
 - [Jitesh Codes](https://jiteshcodes.com/)
 - [Trevor O](https://trevoro.net/)
+- [Orcdev](https://www.orcdev.com/)

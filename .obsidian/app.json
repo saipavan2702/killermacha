@@ -9,5 +9,6 @@
   "attachmentFolderPath": "attachments",
   "alwaysUpdateLinks": true,
   "propertiesInDocument": "visible",
-  "showUnsupportedFiles": false
+  "showUnsupportedFiles": false,
+  "settingsPopoutWindow": false
 }

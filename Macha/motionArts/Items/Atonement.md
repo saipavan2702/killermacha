@@ -12,9 +12,9 @@ directors:
   - Joe Wright
 year: "2007"
 cast:
-  - "James McAvoy"
-  - "Keira Knightley"
-  - "Saoirse Ronan"
+  - James McAvoy
+  - Keira Knightley
+  - Saoirse Ronan
 tags:
   - motion-art
   - movie
