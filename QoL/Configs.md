@@ -23,6 +23,7 @@ https://github.com/pkazmier/ghostty-config/blob/main/config
 https://github.com/StevenJPx2/dotfiles
 https://github.com/KroneCorylus/ghostty-shader-playground
 https://github.com/0xhckr/ghostty-shaders
+https://github.com/sahaj-b/ghostty-cursor-shaders
 
 YT's
 https://www.youtube.com/watch?v=MHPRnM38Dyc

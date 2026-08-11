@@ -70,5 +70,7 @@
   "baseline-style@@density-modifier": 0.75,
   "baseline-style@@icon-stroke-modifier": 1.25,
   "baseline-style@@color-scheme-dark": "notion-dark",
-  "obsidian-transparent@@disable-modal-animation": false
+  "obsidian-transparent@@disable-modal-animation": false,
+  "obsidian-transparent@@obsidian-classic-tree": true,
+  "obsidian-transparent@@default-sync-error": false
 }

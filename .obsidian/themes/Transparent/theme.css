@@ -192,6 +192,38 @@ settings:
         max: 0.3
         step: 0.01
     -
+        id: code-tint-section
+        title: "Code Blocks / Inlines"
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: code-tint-color
+        title: "Code Block / Inline Color Tint"
+        description: "Pick the tint color for code blocks and inline code. Default: #B13D00."
+        type: variable-color
+        opacity: false
+        format: hex
+        default: '#B13D00'
+    -
+        id: code-block-tint-opacity
+        title: "Code Block Tint Intensity"
+        description: "How strongly the tint is applied to code blocks. Default: 0."
+        type: variable-number-slider
+        default: 0
+        min: 0
+        max: 0.35
+        step: 0.01
+    -
+        id: inline-code-tint-opacity
+        title: "Inline Code Tint Intensity"
+        description: "How strongly the tint is applied to inline code. Default: 0."
+        type: variable-number-slider
+        default: 0
+        min: 0
+        max: 0.35
+        step: 0.01
+    -
         id: animation-settings-section
         title: "⚛️ Animations"
         type: heading
@@ -303,6 +335,12 @@ settings:
         title: "Disable Drawer Dimming (beta)"
         description: "Removes the dimming and blur effect from sidebars. This only makes sense when sliding sidebars are enabled."
         type: class-toggle
+    -
+        id: obsidian-classic-tree
+        title: "Revert to Classic File Tree"
+        description: "Disables the modern, spacious layout for files and folders, reverting to Obsidian's default compact style."
+        type: class-toggle
+        default: false
 */
 /* ===================== Style Settings UI Premium Styling ===================== */
 
@@ -345,9 +383,14 @@ body:not(.enchanted-animations-present) .style-settings-container {
   --bg-tint-color-s: 100%;
   --bg-tint-color-l: 50%;
   --bg-tint-opacity: 0;
+  --code-tint-color: #b13d00;
+  --code-block-tint-opacity: 0;
+  --inline-code-tint-opacity: 0;
   /* 0 = off, zero GPU cost */
   --border-opacity: 0.063;
   --glass-opacity: 0;
+  --code-block-opacity: 0.24;
+  --inline-code-opacity: 0.18;
 
   --tr: #00000000;
 
@@ -403,6 +446,9 @@ body {
   --divider-width: 0px;
   --divider-color: var(--tr);
   --background-modifier-border: var(--tr);
+  --code-block-background: rgba(var(--code-background-rgb), var(--code-block-opacity));
+  --inline-code-background: rgba(var(--code-background-rgb), var(--inline-code-opacity));
+  --code-background: var(--code-block-background);
   --input-radius: 5px;
   --input-border-width: 1px;
   --scrollbar-width: 10px;
@@ -496,6 +542,7 @@ body .h-scroll-handle {
   --kolorboku: #1d1d1f;
   /* text color readable black */
   --tr06: rgba(255, 255, 255, 0.5);
+  --code-background-rgb: 255, 255, 255;
   /* Light, glass-like inputs */
   --interactive-normal: var(--tr06);
   --interactive-hover: rgba(255, 255, 255, 0.7);
@@ -523,6 +570,7 @@ body .h-scroll-handle {
   /* text color readable white */
   --brightness: 0.5;
   --tr06: #00000060;
+  --code-background-rgb: 0, 0, 0;
   --interactive-normal: var(--tr06);
   --interactive-hover: var(--tr06);
   --fakeblur: #0f0f0c;
@@ -633,6 +681,11 @@ body.theme-dark.bg-custom .app-container::before {
 }
 
 /* === GLASS / TRUE GLASS (both modes) === */
+.preset-true-glass {
+  --code-block-opacity: 0.16;
+  --inline-code-opacity: 0.12;
+}
+
 body.preset-true-glass .app-container::before,
 body.theme-light.preset-true-glass .app-container::before,
 body.theme-dark.preset-true-glass .app-container::before {
@@ -684,10 +737,76 @@ body.theme-dark.preset-true-glass .app-container::before {
 
 /* ===================== blurred background via pseudo-element ===================== */
 
-/* left menu text */
+/* left menu text - Base Theme Color */
 .nav-file-title,
 .nav-folder-title {
   color: var(--kolorboku);
+}
+
+/* ===================== File Explorer Layout Refinements ===================== */
+:root {
+  --nav-tree-pad-y: 0.5rem;
+  --nav-tree-pad-m: 0.625rem;
+  --nav-tree-boldness: 500;
+}
+
+body:not(.obsidian-classic-tree) .workspace-leaf-content .tree-item-self {
+  padding-top: var(--nav-tree-pad-y);
+  padding-bottom: var(--nav-tree-pad-y);
+  --nav-item-background-hover: hsla(0, 0%, 100%, 0.05);
+}
+
+body:not(.obsidian-classic-tree) .tree-item-self.mod-collapsible {
+  --icon-opacity: 1;
+  --nav-item-weight: var(--nav-tree-boldness);
+  --nav-item-weight-active: var(--nav-tree-boldness);
+  --nav-item-weight-hover: var(--nav-tree-boldness);
+  --nav-item-color: var(--text-muted);
+  --nav-item-color-hover: var(--text-muted);
+  --nav-item-color-active: var(--text-muted);
+}
+
+
+/* Clear standard visual clutter (shadows) */
+body:not(.obsidian-classic-tree) .workspace-split .tree-item-self.is-selected,
+body:not(.obsidian-classic-tree) .workspace-split .tree-item-self.has-focus {
+  box-shadow: none;
+}
+
+body:not(.obsidian-classic-tree) .workspace-split .tree-item-self.has-focus {
+  background-color: var(--background-modifier-hover);
+  --nav-item-background-hover: var(--background-modifier-hover);
+}
+
+body:not(.obsidian-classic-tree) .workspace-split .tree-item-self.is-selected {
+  background-color: var(--background-modifier-hover);
+  --nav-item-color-selected: var(--text-normal);
+}
+
+/* Drag handling */
+body:not(.obsidian-classic-tree) .workspace-split .tree-item-self.is-being-dragged {
+  --nav-collapse-icon-color: var(--text-normal);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: color-mix(in srgb, var(--text-normal) 15%, transparent);
+}
+
+body:not(.obsidian-classic-tree) .tree-item-self.is-being-dragged > .nav-file-tag {
+  color: var(--text-normal);
+}
+
+/* Touch adjustments */
+body:not(.obsidian-classic-tree).is-mobile .search-result-file-match,
+body:not(.obsidian-classic-tree).is-mobile .workspace-drawer-tab-options .workspace-tab-header-inner,
+body:not(.obsidian-classic-tree).is-mobile .workspace-leaf-content .tree-item-self {
+  padding-top: var(--nav-tree-pad-m);
+  padding-bottom: var(--nav-tree-pad-m);
+}
+
+body:not(.obsidian-classic-tree).is-mobile .nav-folder > .tree-item-children,
+body:not(.obsidian-classic-tree).is-mobile .nav-files-container > * {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2px 0;
 }
 
 .workspace-split.mod-root {
@@ -733,7 +852,6 @@ body.is-focused .workspace-tab-header-container .workspace-tab-header {
   --modal-background: var(--overlay-color);
   /* I think this is the best implementation */
   position: relative;
-  z-index: 1000;
 }
 
 .is-tablet .workspace-drawer-tab-options-list {
@@ -1033,12 +1151,34 @@ body .cm-html-embed thead tr>th {
 }
 
 /* Code block and inline code backgrounds */
-.cm-s-obsidian div.HyperMD-codeblock-bg,
-.cm-s-obsidian .cm-inline-code:not(.cm-formatting),
-.markdown-rendered pre,
-.markdown-rendered code,
-.cm-s-obsidian span.cm-inline-code {
-  background-color: var(--tr06);
+body .cm-s-obsidian div.HyperMD-codeblock-bg,
+body .cm-s-obsidian .HyperMD-codeblock-bg,
+body .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
+body .cm-s-obsidian div.HyperMD-codeblock-end-bg,
+body .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock,
+body .markdown-preview-view pre,
+body .markdown-rendered pre {
+  background-color: var(--code-block-background);
+  background-image: linear-gradient(
+      color-mix(in srgb, var(--code-tint-color) calc(var(--code-block-tint-opacity) * 100%), transparent),
+      color-mix(in srgb, var(--code-tint-color) calc(var(--code-block-tint-opacity) * 100%), transparent)
+  );
+  box-shadow: inset 0 0 0 9999px color-mix(in srgb, var(--code-tint-color) calc(var(--code-block-tint-opacity) * 100%), transparent);
+}
+
+body .cm-s-obsidian .cm-inline-code:not(.cm-formatting),
+body .cm-s-obsidian span.cm-inline-code:not(.cm-formatting),
+body .markdown-rendered code {
+  background-color: var(--inline-code-background);
+  background-image: linear-gradient(
+      color-mix(in srgb, var(--code-tint-color) calc(var(--inline-code-tint-opacity) * 100%), transparent),
+      color-mix(in srgb, var(--code-tint-color) calc(var(--inline-code-tint-opacity) * 100%), transparent)
+  );
+}
+
+body .markdown-rendered pre code {
+  background-color: transparent;
+  background-image: none;
 }
 
 
