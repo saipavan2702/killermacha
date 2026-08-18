@@ -389,8 +389,6 @@ body:not(.enchanted-animations-present) .style-settings-container {
   /* 0 = off, zero GPU cost */
   --border-opacity: 0.063;
   --glass-opacity: 0;
-  --code-block-opacity: 0.24;
-  --inline-code-opacity: 0.18;
 
   --tr: #00000000;
 
@@ -543,6 +541,8 @@ body .h-scroll-handle {
   /* text color readable black */
   --tr06: rgba(255, 255, 255, 0.5);
   --code-background-rgb: 255, 255, 255;
+  --code-block-opacity: 0.5;
+  --inline-code-opacity: 0.5;
   /* Light, glass-like inputs */
   --interactive-normal: var(--tr06);
   --interactive-hover: rgba(255, 255, 255, 0.7);
@@ -571,6 +571,8 @@ body .h-scroll-handle {
   --brightness: 0.5;
   --tr06: #00000060;
   --code-background-rgb: 0, 0, 0;
+  --code-block-opacity: 0.38;
+  --inline-code-opacity: 0.38;
   --interactive-normal: var(--tr06);
   --interactive-hover: var(--tr06);
   --fakeblur: #0f0f0c;
@@ -617,7 +619,8 @@ body:not(.is-mobile) .setting-item[data-id*="disable-drawer-dimming"] {
 }
 
 /* === BASE pseudo-element layout === */
-.app-container::before {
+.app-container::before,
+body.is-popout-window::before {
   content: "";
   position: fixed;
   inset: calc(-2 * var(--background-blur));
@@ -632,51 +635,59 @@ body:not(.is-mobile) .setting-item[data-id*="disable-drawer-dimming"] {
 
 /* === AUTO (default) === */
 /* Dark auto: base64 wallpaper, dimmed */
-body.theme-dark:not(.bg-gradient):not(.bg-solid):not(.bg-custom):not(.preset-true-glass) .app-container::before {
+body.theme-dark:not(.bg-gradient):not(.bg-solid):not(.bg-custom):not(.preset-true-glass) .app-container::before,
+body.theme-dark:not(.bg-gradient):not(.bg-solid):not(.bg-custom):not(.preset-true-glass).is-popout-window::before {
   background-image: var(--background-image-base64);
   filter: brightness(0.54) blur(var(--background-blur));
 }
 
 /* Light auto: soft gradient */
-body.theme-light:not(.bg-gradient):not(.bg-solid):not(.bg-custom):not(.preset-true-glass) .app-container::before {
+body.theme-light:not(.bg-gradient):not(.bg-solid):not(.bg-custom):not(.preset-true-glass) .app-container::before,
+body.theme-light:not(.bg-gradient):not(.bg-solid):not(.bg-custom):not(.preset-true-glass).is-popout-window::before {
   background-image: linear-gradient(var(--gradient-angle), var(--gradient-from) 0%, var(--gradient-to) 100%);
   background-color: unset;
   filter: blur(var(--background-blur));
 }
 
 /* === GRADIENT (both modes) === */
-body.bg-gradient .app-container::before {
+body.bg-gradient .app-container::before,
+body.bg-gradient.is-popout-window::before {
   background-image: linear-gradient(var(--gradient-angle), var(--gradient-from) 0%, var(--gradient-to) 100%);
   background-color: unset;
   filter: blur(var(--background-blur));
 }
 
-body.theme-dark.bg-gradient .app-container::before {
+body.theme-dark.bg-gradient .app-container::before,
+body.theme-dark.bg-gradient.is-popout-window::before {
   filter: brightness(0.75) blur(var(--background-blur));
 }
 
 /* === SOLID (from tint hue, both modes) === */
-body.theme-light.bg-solid .app-container::before {
+body.theme-light.bg-solid .app-container::before,
+body.theme-light.bg-solid.is-popout-window::before {
   background-image: none;
   background-color: hsl(var(--bg-tint-color-h), 30%, 90%);
   filter: blur(var(--background-blur));
 }
 
-body.theme-dark.bg-solid .app-container::before {
+body.theme-dark.bg-solid .app-container::before,
+body.theme-dark.bg-solid.is-popout-window::before {
   background-image: none;
   background-color: hsl(var(--bg-tint-color-h), 30%, 15%);
   filter: blur(var(--background-blur));
 }
 
 /* === CUSTOM URL (both modes) === */
-body.bg-custom .app-container::before {
+body.bg-custom .app-container::before,
+body.bg-custom.is-popout-window::before {
   background-image: var(--bg-custom-url);
   background-size: cover;
   background-position: center;
   filter: blur(var(--background-blur));
 }
 
-body.theme-dark.bg-custom .app-container::before {
+body.theme-dark.bg-custom .app-container::before,
+body.theme-dark.bg-custom.is-popout-window::before {
   filter: brightness(0.54) blur(var(--background-blur));
 }
 
@@ -687,19 +698,24 @@ body.theme-dark.bg-custom .app-container::before {
 }
 
 body.preset-true-glass .app-container::before,
+body.preset-true-glass.is-popout-window::before,
 body.theme-light.preset-true-glass .app-container::before,
-body.theme-dark.preset-true-glass .app-container::before {
+body.theme-light.preset-true-glass.is-popout-window::before,
+body.theme-dark.preset-true-glass .app-container::before,
+body.theme-dark.preset-true-glass.is-popout-window::before {
   background-image: none;
   filter: blur(var(--background-blur));
   -webkit-backdrop-filter: blur(var(--background-blur));
   backdrop-filter: blur(var(--background-blur));
 }
 
-body.theme-light.preset-true-glass .app-container::before {
+body.theme-light.preset-true-glass .app-container::before,
+body.theme-light.preset-true-glass.is-popout-window::before {
   background-color: rgba(255, 255, 255, var(--glass-opacity));
 }
 
-body.theme-dark.preset-true-glass .app-container::before {
+body.theme-dark.preset-true-glass .app-container::before,
+body.theme-dark.preset-true-glass.is-popout-window::before {
   background-color: rgba(0, 0, 0, var(--glass-opacity));
 }
 
@@ -809,9 +825,7 @@ body:not(.obsidian-classic-tree).is-mobile .nav-files-container > * {
   gap: 2px 0;
 }
 
-.workspace-split.mod-root {
-  background-color: var(--background-primary);
-}
+
 
 /* background image is now on .app-container::before, not here */
 .horizontal-main-container {
@@ -870,7 +884,6 @@ is-mobile - tablet and phone
 }
 
 .modal-bg {
-  width: 100%;
   background-color: var(--tr);
 }
 
@@ -1022,7 +1035,7 @@ input[type="range"] {
   max-height: 600px;
 }
 /* Button styling */
-button:not(.clickable-icon):not(.nn-icon-button):not(.nn-list-group-header-collapse-button):not(.nn-mobile-toolbar-button):not(.copy-code-button) { /* "nn" prefix = Notebook Navigator plugin integration */
+button:not(.clickable-icon):not(.nn-icon-button):not(.nn-list-group-header-collapse-button):not(.nn-mobile-toolbar-button):not(.copy-code-button):not([data-type="excalidraw"] *):not(.excalidraw *) { /* "nn" prefix = Notebook Navigator plugin integration */
   background-color: var(--color-accent);
   box-shadow: none;
   color: var(--text-on-accent);
@@ -1121,18 +1134,15 @@ body.is-phone:not(.enchanted-animations-present) .notice {
 
 /* graph view */
 .graph-controls {
-  background-color: #00000080;
-  -webkit-backdrop-filter:
-    /*brightness(var(--brightness))*/
-    blur(12px);
-  backdrop-filter:
-    /*brightness(var(--brightness))*/
-    blur(12px);
+  background-color: var(--tr);
+  -webkit-backdrop-filter: (12px);
+  backdrop-filter: blur(12px);
 }
 
 .graph-controls:not(.is-close) {
   box-shadow: none;
   border: 0px solid var(--tr);
+  background-color: #00000080;
 }
 
 /* Table border styling */
@@ -1708,7 +1718,7 @@ body.no-animation *::after {
 /* this is not my code in general it is inspired by */
 /* Benjamin Fernandez - github.com/benfernandezmedia */
 
-body:not(.disable-splash-screen):not(.no-animation):not(.enchanted-animations-present)::before {
+body:not(.disable-splash-screen):not(.no-animation):not(.enchanted-animations-present):not(.is-popout-window)::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -1718,7 +1728,7 @@ body:not(.disable-splash-screen):not(.no-animation):not(.enchanted-animations-pr
   animation: splashFade 2.5s ease forwards;
 }
 
-body:not(.disable-splash-screen):not(.no-animation):not(.enchanted-animations-present) .workspace {
+body:not(.disable-splash-screen):not(.no-animation):not(.enchanted-animations-present):not(.is-popout-window) .workspace {
   animation: vaultReveal 1.2s ease 1.2s backwards;
 }
 
@@ -2000,4 +2010,55 @@ body.is-ios .app-container .workspace-leaf-content,
 body.is-ios .app-container .view-content,
 body.is-ios .app-container .view-header {
   background-color: var(--tr);
+}
+
+/* ===================== Popout Windows ===================== */
+
+body.is-popout-window {
+  background-color: transparent;
+}
+
+body.is-popout-window::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--overlay-color);
+  pointer-events: none;
+}
+
+body.is-popout-window .modal,
+body.is-popout-window .modal-bg,
+body.is-popout-window .titlebar,
+body.is-popout-window .titlebar-button-container.mod-right,
+body.is-popout-window .modal.mod-settings .vertical-tab-header,
+body.is-popout-window .modal.mod-settings .vertical-tab-content-container,
+body.is-popout-window .modal.mod-settings .vertical-tab-content {
+  background-color: var(--tr);
+  --titlebar-background: var(--tr);
+  --titlebar-background-focused: var(--tr);
+  --modal-background: var(--tr);
+  --modal-sidebar-background: var(--tr);
+}
+
+body.is-popout-window .app-container,
+body.is-popout-window .workspace,
+body.is-popout-window .workspace-split,
+body.is-popout-window .workspace-leaf,
+body.is-popout-window .workspace-leaf-content,
+body.is-popout-window .view-content,
+body.is-popout-window .view-header {
+  background-color: var(--tr);
+}
+/* ===================== settings fixes ===================== */
+.setting-page-titlebar {
+    background-color: var(--tr);
+    box-shadow: 0px 0px 0px 0 var(--tr);
+}
+.setting-page-title {
+    font-size: var(--font-ui-medium);
+}
+/* ===================== excalidraw fixes ===================== */
+.excalidraw-search.document-search-container {
+    background-color: #00000060;
 }

@@ -18,7 +18,7 @@
   "errors": {},
   "debug_mode": false,
   "silence_errors": false,
-  "manifest_version": "3.2.7",
+  "manifest_version": "3.2.8",
   "compatibility_module": true,
   "safe_mode": true,
   "code_editor_settings": {

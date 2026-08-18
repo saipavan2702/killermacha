@@ -177,3 +177,7 @@ terraform {
   }
 }
 ```
+
+---
+## References
+https://www.youtube.com/watch?v=j5LfqB1eR4Q
