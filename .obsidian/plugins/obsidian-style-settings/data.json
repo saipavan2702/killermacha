@@ -72,5 +72,8 @@
   "baseline-style@@color-scheme-dark": "notion-dark",
   "obsidian-transparent@@disable-modal-animation": false,
   "obsidian-transparent@@obsidian-classic-tree": true,
-  "obsidian-transparent@@default-sync-error": false
+  "obsidian-transparent@@default-sync-error": false,
+  "obsidian-transparent@@ui-blur": 30,
+  "obsidian-transparent@@settings-blur": 30,
+  "obsidian-transparent@@background-blur": 80
 }

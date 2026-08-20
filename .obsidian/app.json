@@ -10,5 +10,5 @@
   "alwaysUpdateLinks": true,
   "propertiesInDocument": "visible",
   "showUnsupportedFiles": false,
-  "settingsPopoutWindow": false
+  "settingsPopoutWindow": true
 }

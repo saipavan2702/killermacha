@@ -114,6 +114,7 @@ const YEAR_OVERRIDES = {
   "Transformers: Dark of the Moon": "2011",
   "Transformers: Age of Extinction": "2014",
   "Transformers: The Last Knight": "2017",
+  "Scary Movie": "2000",
   Moana: "2016",
   Up: "2009",
   "The World's End": "2013",
