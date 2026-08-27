@@ -136,6 +136,7 @@
     "rpg-awesome": true,
     "simple-icons": true
   },
+  "showReleaseNotes": true,
   "checkForUpdatesOnStart": true,
   "pinNavigationBanner": true,
   "showNoteCount": true,
@@ -538,7 +539,7 @@
     "#64748b",
     "#78716c"
   ],
-  "lastShownVersion": "3.3.4",
+  "lastShownVersion": "3.3.5",
   "rootFolderOrder": [],
   "rootTagOrder": [],
   "rootPropertyOrder": [],

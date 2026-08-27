@@ -19,10 +19,13 @@ const currentTitle = tp.file.title && !/^Untitled/i.test(tp.file.title)
   ? tp.file.title.replace(/ - (Series|Anime Movie|Anime)$/i, "")
   : "";
 const titleInput = await tp.system.prompt(prompts[mediaType], currentTitle, true);
-const title = (titleInput || currentTitle).trim();
-if (!title) {
+const enteredTitle = (titleInput || currentTitle).trim();
+if (!enteredTitle) {
   throw new Error("Title is required");
 }
+const titleYearMatch = enteredTitle.match(/^(.*?)\s*\(((?:18|19|20)\d{2})\)\s*$/);
+const title = (titleYearMatch ? titleYearMatch[1] : enteredTitle).trim();
+const requestedYear = titleYearMatch ? titleYearMatch[2] : "";
 const fileBase = title
   .replace(/[\\/:]/g, " - ")
   .replace(/\s+/g, " ")
@@ -52,7 +55,7 @@ const tagsByType = {
 const tags = tagsByType[mediaType] || ["motion-art"];
 const tagLines = tags.map((tag) => `  - ${tag}`).join("\n");
 const liveActionFields = mediaType === "movie" || mediaType === "series"
-  ? `year:
+  ? `year:${requestedYear ? ` ${JSON.stringify(requestedYear)}` : ""}
 directors: []
 cast: []
 `

@@ -12,6 +12,7 @@ https://github.com/florideanstarch/dotfiles/tree/main
 https://github.com/IllyaStarikov/.dotfiles
 https://github.com/BreadOnPenguins/dots
 https://github.com/jakmaz/dotfiles
+https://github.com/DakshG07
 
 ---
 ## Ghostty

@@ -24,6 +24,7 @@ const LANGUAGE_INDUSTRY = {
   ko: "Korean cinema",
   fr: "French cinema",
   de: "German cinema",
+  da: "Danish cinema",
   it: "Italian cinema",
   es: "Spanish-language cinema",
   no: "Norwegian cinema",
@@ -115,6 +116,7 @@ const YEAR_OVERRIDES = {
   "Transformers: Age of Extinction": "2014",
   "Transformers: The Last Knight": "2017",
   "Scary Movie": "2000",
+  "The Hunt": "2012",
   Moana: "2016",
   Up: "2009",
   "The World's End": "2013",
@@ -141,6 +143,10 @@ const YEAR_OVERRIDES = {
 
 const DIRECTOR_OVERRIDES = {
   "Finding Her Edge": ["Shamim Sarif", "Jacqueline Pepall"],
+};
+
+const CAST_OVERRIDES = {
+  "The Hunt": ["Mads Mikkelsen", "Thomas Bo Larsen", "Annika Wedderkopp"],
 };
 
 const IMDB_OVERRIDES = {
@@ -171,6 +177,12 @@ const IMDB_OVERRIDES = {
   Odyssey: "tt33764258",
   "The Odyssey": "tt33764258",
 };
+
+function splitTitleYear(value) {
+  const title = String(value || "").trim();
+  const match = title.match(/^(.*?)\s*\(((?:18|19|20)\d{2})\)\s*$/);
+  return match ? { title: match[1].trim(), year: match[2] } : { title, year: "" };
+}
 
 module.exports = class MovieWatchDatePlugin extends Plugin {
   async onload() {
@@ -305,7 +317,8 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       return false;
     }
 
-    const title = this.scalar(frontmatter.title || file.basename);
+    const enteredTitle = this.scalar(frontmatter.title || file.basename);
+    const { title, year: titleYear } = splitTitleYear(enteredTitle);
     const mediaType = this.scalar(frontmatter.media_type || "movie");
     if (!title || /^Untitled/i.test(title) || !VALID_MEDIA_TYPES.has(mediaType)) {
       return false;
@@ -316,7 +329,7 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
 
     this.syncing.add(file.path);
     try {
-      const preferredYear = this.scalar(frontmatter.year);
+      const preferredYear = this.scalar(frontmatter.year) || titleYear;
       const preferredPosterPath = this.posterPath(this.scalar(frontmatter.poster));
       const result = await this.searchTitle(title, mediaType, preferredYear, preferredPosterPath);
       if (!result) {
@@ -327,6 +340,9 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       const metadata = await this.metadataFrom(result, mediaType, genreMap);
       if (DIRECTOR_OVERRIDES[title]) {
         metadata.directors = DIRECTOR_OVERRIDES[title];
+      }
+      if (CAST_OVERRIDES[title]) {
+        metadata.cast = CAST_OVERRIDES[title];
       }
       await this.applyTmdbMetadata(file, metadata, mediaType, force);
       this.completedSync.add(file.path);

@@ -48,9 +48,78 @@
               "icon": "lucide-file",
               "title": "Zero-Downtime DB Migration"
             }
+          },
+          {
+            "id": "23018eac0898eb6f",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "Macha/motionArts/Celluloid.base",
+                "viewName": "Movies"
+              },
+              "icon": "lucide-layout-grid",
+              "title": "Celluloid"
+            }
+          },
+          {
+            "id": "5dd96b74e19faa42",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Short Interview Que.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Short Interview Que"
+            }
+          },
+          {
+            "id": "533d24fdaef6560d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Upskill/DSA/Data Structures/B-Trees & B+ Trees.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "B-Trees & B+ Trees"
+            }
+          },
+          {
+            "id": "ef8674e23931a041",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Postgres.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Postgres"
+            }
+          },
+          {
+            "id": "034fba6d97b86c0e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "QoL/Configs.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Configs"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -251,36 +320,37 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4c0341409c17c71c",
+  "active": "23018eac0898eb6f",
   "lastOpenFiles": [
-    "Upskill/SysDes/LLD/Rate Limiter.md",
-    "Upskill/WebDev/Devops/Terraform.md",
-    "Upskill/Zero-Downtime DB Migration.md",
-    "Hashing methods.md",
+    "Macha/motionArts/Items/Of Love and Shadows.md",
+    "Macha/motionArts/Items/The Invite.md",
+    "Macha/motionArts/Items/Diary of a Wimpy Kid.md",
+    "Macha/motionArts/Items/Heretic.md",
+    "Macha/motionArts/Items/Sunshine.md",
+    "Macha/motionArts/Items/Chungking Express.md",
+    "Macha/motionArts/Items/Game Night.md",
+    "Macha/motionArts/Items/Neighbors.md",
+    "Macha/motionArts/Items/Booksmart.md",
+    "Macha/motionArts/Items/Horrible Bosses.md",
+    "Macha/motionArts/Items/We're the Millers.md",
     "Macha/motionArts/Celluloid.base",
-    "Macha/motionArts/Items/Sicario.md",
+    "Macha/motionArts/Items/This Is the End.md",
+    "Macha/motionArts/Items/Bridesmaids.md",
+    "Macha/motionArts/Items/The Other Guys.md",
+    "Macha/motionArts/Items/Front of the Class.md",
+    "Macha/motionArts/Items/Superbad.md",
+    "Macha/motionArts/Items/Remember Me.md",
+    "Macha/motionArts/Items/Serendipity.md",
+    "Macha/motionArts/Items/Hilda Furacão - Series.md",
+    "Upskill/Zero-Downtime DB Migration.md",
+    "Orcl/Weekly Report.md",
+    "Orcl/Oracle.md",
+    "Orcl/Oracle Information.md",
+    "Upskill/WebDev/Devops/Terraform.md",
+    "QoL/Configs.md",
+    "Postgres.md",
     "Macha/motionArts/Tools/__pycache__/sync_tmdb_posters.cpython-314.pyc",
     "Macha/motionArts/Tools/__pycache__",
-    "Macha/motionArts/Items/Materialists.md",
-    "Macha/motionArts/Items/Scary Movie.md",
-    "Macha/motionArts/Items/Frankie and Johnny.md",
-    "Macha/motionArts/Items/100 Girls.md",
-    "Macha/motionArts/Items/Untitled 1.md",
-    "Orcl/Weekly Report.md",
-    "QoL/Configs.md",
-    "Upskill/Learning.md",
-    "Upskill/WebDev/Frontend/TypeScript.md",
-    "Upskill/Linux/Git/Branches and Remotes.md",
-    "Upskill/Linux/Git/Git.md",
-    "Upskill/Linux/Git/Recovery and History.md",
-    "Upskill/Linux/Git/Everyday Git.md",
-    "QoL/Workspace.md",
-    "QoL/Refs/Obsidian.md",
-    "QoL/Resources.md",
-    "QoL/Ideas.md",
-    "QoL/Refs/Typing.md",
-    "QoL/Refs/Wallpapers.md",
-    "QoL/Refs/RSS Feeds.md",
     "Upskill/SysDes/HLD/Distributed Systems Papers",
     "Upskill/CS Topics/Operating Systems",
     "new-book-template-clipper.json",

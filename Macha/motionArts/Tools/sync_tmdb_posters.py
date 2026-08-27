@@ -39,6 +39,7 @@ LANGUAGE_INDUSTRY = {
     "ko": "Korean cinema",
     "fr": "French cinema",
     "de": "German cinema",
+    "da": "Danish cinema",
     "it": "Italian cinema",
     "es": "Spanish-language cinema",
     "no": "Norwegian cinema",
@@ -130,6 +131,7 @@ YEAR_OVERRIDES = {
     "Transformers: Age of Extinction": "2014",
     "Transformers: The Last Knight": "2017",
     "Scary Movie": "2000",
+    "The Hunt": "2012",
     "Moana": "2016",
     "Up": "2009",
     "The World's End": "2013",
@@ -156,6 +158,10 @@ YEAR_OVERRIDES = {
 
 DIRECTOR_OVERRIDES = {
     "Finding Her Edge": ["Shamim Sarif", "Jacqueline Pepall"],
+}
+
+CAST_OVERRIDES = {
+    "The Hunt": ["Mads Mikkelsen", "Thomas Bo Larsen", "Annika Wedderkopp"],
 }
 
 IMDB_OVERRIDES = {
@@ -403,6 +409,12 @@ def normalized_title(value: str | None) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
 
+def split_title_year(value: str) -> tuple[str, str]:
+    title = value.strip()
+    match = re.match(r"^(.*?)\s*\(((?:18|19|20)\d{2})\)\s*$", title)
+    return (match.group(1).strip(), match.group(2)) if match else (title, "")
+
+
 def result_title(result: dict[str, Any], media_type: str) -> str:
     if media_type in ("series", "anime"):
         return result.get("name") or result.get("original_name") or ""
@@ -609,11 +621,12 @@ def main() -> int:
     for note in notes:
         try:
             frontmatter, _ = parse_frontmatter(note.read_text(encoding="utf-8"))
-            title = read_scalar(frontmatter, "title") or note.stem
+            entered_title = read_scalar(frontmatter, "title") or note.stem
+            title, title_year = split_title_year(entered_title)
             media_type = read_scalar(frontmatter, "media_type") or "movie"
             if args.media_type and media_type not in args.media_type:
                 continue
-            if args.only and title not in args.only and note.stem not in args.only:
+            if args.only and title not in args.only and entered_title not in args.only and note.stem not in args.only:
                 continue
             live_action = media_type in ("movie", "series")
             needs_directors = media_type in ("movie", "series", "anime-movie")
@@ -630,7 +643,7 @@ def main() -> int:
                 and has_required_cast
             ):
                 continue
-            preferred_year = read_scalar(frontmatter, "year")
+            preferred_year = read_scalar(frontmatter, "year") or title_year
             preferred_poster_path = poster_path_from(read_scalar(frontmatter, "poster"))
             result = search_title(title, media_type, preferred_year, preferred_poster_path)
             time.sleep(args.sleep)
@@ -656,6 +669,8 @@ def main() -> int:
             metadata = metadata_from(result, media_type, genre_cache[media_type])
             if title in DIRECTOR_OVERRIDES:
                 metadata["directors"] = DIRECTOR_OVERRIDES[title]
+            if title in CAST_OVERRIDES:
+                metadata["cast"] = CAST_OVERRIDES[title]
             matched_title = result.get("name") if media_type in ("series", "anime") else result.get("title")
             poster_flag = "poster" if metadata.get("poster") else "no poster"
             genre_flag = ", ".join(metadata.get("genres") or []) or "no genres"
