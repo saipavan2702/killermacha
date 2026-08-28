@@ -1,5 +1,5 @@
 {
-  "cssTheme": "Transparent",
+  "cssTheme": "mmacha-theme",
   "theme": "obsidian",
   "baseFontSize": 13,
   "translucency": true,
@@ -7,10 +7,5 @@
   "interfaceFontFamily": "",
   "textFontFamily": "",
   "monospaceFontFamily": "JetBrainsMono Nerd Font",
-  "enabledCssSnippets": [
-    "movie-album-filmstrip",
-    "graph-view-colors",
-    "code-syntax-colors",
-    "mermaid-diagrams"
-  ]
+  "enabledCssSnippets": []
 }

@@ -1,8 +1,8 @@
-> [!summary]
-> Topic maps for computer science, programming, system design, mathematics, and technical practice.
-
 Map: [[Home|Home]]
 Connections: [[Upskill/DSA/DSA|DSA]], [[Upskill/SysDes/System Design|System Design]], [[Upskill/CS Topics/Computer Science|Computer Science]], [[Upskill/WebDev/Web Development|Web Development]]
+
+> [!summary]
+> Topic maps for computer science, programming, system design, mathematics, and technical practice.
 
 ## Start Here
 

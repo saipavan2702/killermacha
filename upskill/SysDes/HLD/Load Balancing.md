@@ -1,5 +1,5 @@
 Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/Caching|Caching]], [[Upskill/SysDes/HLD/Rate Limiting|Rate Limiting]], [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]]
+Connections: [[Upskill/SysDes/HLD/Caching|Caching]], [[Upskill/SysDes/LLD/Rate Limiter|Rate Limiting]], [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]]
 
 ## Load Balancers {#load-balancers}
 

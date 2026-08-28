@@ -1,8 +1,8 @@
-> [!summary]
-> Web development connects browser interfaces, client state, network behavior, backend services, and deployment.
-
 Map: [[Upskill/Learning|Learning]]
 Connections: [[Upskill/CS Topics/HTTP Methods|HTTP Methods]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview|Authentication Methods]], [[Upskill/SysDes/System Design|System Design]]
+
+> [!summary]
+> Web development connects browser interfaces, client state, network behavior, backend services, and deployment.
 
 ## Frontend Foundations
 

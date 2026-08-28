@@ -1,8 +1,8 @@
-> [!summary]
-> Core computer-science ideas that support programming, data structures, systems, and performance reasoning.
-
 Map: [[Upskill/Learning|Learning]]
 Connections: [[Upskill/DSA/DSA|DSA]], [[Upskill/SysDes/System Design|System Design]], [[Upskill/WebDev/Web Development|Web Development]]
+
+> [!summary]
+> Core computer-science ideas that support programming, data structures, systems, and performance reasoning.
 
 ## Foundations
 

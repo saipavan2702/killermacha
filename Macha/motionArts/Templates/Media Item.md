@@ -26,11 +26,12 @@ if (!enteredTitle) {
 const titleYearMatch = enteredTitle.match(/^(.*?)\s*\(((?:18|19|20)\d{2})\)\s*$/);
 const title = (titleYearMatch ? titleYearMatch[1] : enteredTitle).trim();
 const requestedYear = titleYearMatch ? titleYearMatch[2] : "";
-const fileBase = title
+const cleanTitle = title
   .replace(/[\\/:]/g, " - ")
   .replace(/\s+/g, " ")
   .trim()
   .replace(/\.+$/, "");
+const fileBase = requestedYear ? `${cleanTitle} (${requestedYear})` : cleanTitle;
 const suffix = suffixes[mediaType];
 let fileName = `${fileBase}${suffix}`;
 const folder = "Macha/motionArts/Items";

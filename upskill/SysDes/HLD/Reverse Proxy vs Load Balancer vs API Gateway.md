@@ -1,3 +1,9 @@
+Map: [[Upskill/SysDes/System Design|System Design]]
+Connections: [[Upskill/SysDes/HLD/Proxy Servers|Proxy Servers]], [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]], [[Upskill/SysDes/HLD/Microservices|Microservices]]
+
+> [!summary]
+> A reverse proxy hides and routes to backends, a load balancer spreads traffic, and an API gateway manages client-facing policy for services.
+
 ## Why people confuse these three
 
 All three sit between the client and your backend, receive a request, and forward it somewhere. That's where the similarity ends. As an app grows from a single server to a full microservices setup, three different problems show up, and each of these tools solves one of them:

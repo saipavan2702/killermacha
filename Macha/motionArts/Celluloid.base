@@ -40,7 +40,7 @@ views:
     sort:
       - property: file.name
         direction: ASC
-    limit: 200
+    limit: 300
     image: poster
     imageProperty: poster
     imageFit: contain
@@ -95,7 +95,7 @@ views:
         - watched == false
     order:
       - title
-    limit: 250
+    limit: 400
     image: poster
     imageProperty: poster
     imageFit: contain
@@ -108,7 +108,7 @@ views:
         - watched == true
     order:
       - title
-    limit: 250
+    limit: 400
     image: poster
     imageProperty: poster
     imageFit: contain
@@ -129,4 +129,4 @@ views:
       - cast
       - poster
       - tags
-    limit: 300
+    limit: 400

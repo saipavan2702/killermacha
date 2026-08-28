@@ -1,5 +1,5 @@
 Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Kafka Architecture|Apache Kafka Architecture]], [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]], [[Upskill/SysDes/HLD/Publish-Subscribe|Publish-Subscribe]], [[Upskill/SysDes/HLD/Rate Limiting|Rate Limiting]]
+Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Kafka Architecture|Apache Kafka Architecture]], [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]], [[Upskill/SysDes/HLD/Publish-Subscribe|Publish-Subscribe]], [[Upskill/SysDes/LLD/Rate Limiter|Rate Limiting]]
 
 ## Message Brokers & Kafka {#message-brokers}
 

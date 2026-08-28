@@ -1,8 +1,8 @@
-> [!summary]
-> Design systems by starting with requirements and scale, then choosing data, communication, and reliability patterns whose trade-offs fit the problem.
-
 Map: [[Upskill/Learning|Learning]]
 Connections: [[Upskill/CS Topics/Computer Science|Computer Science]], [[Upskill/WebDev/Web Development|Web Development]], [[Upskill/DSA/DSA|DSA]]
+
+> [!summary]
+> Design systems by starting with requirements and scale, then choosing data, communication, and reliability patterns whose trade-offs fit the problem.
 
 ## Start Here
 
@@ -19,7 +19,7 @@ Connections: [[Upskill/CS Topics/Computer Science|Computer Science]], [[Upskill/
 - [[Upskill/SysDes/HLD/Replication and Recovery|Replication and Recovery]]
 - [[Upskill/SysDes/HLD/Proxy Servers|Proxy Servers]]
 - [[Upskill/SysDes/HLD/Blob Storage and CDN|Blob Storage and CDN]]
-- [[Upskill/SysDes/HLD/Rate Limiting|Rate Limiting]]
+- [[Upskill/SysDes/LLD/Rate Limiter|Rate Limiting]]
 
 ## Data and Consistency
 

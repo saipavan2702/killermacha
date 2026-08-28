@@ -1,9 +1,9 @@
 {
   "id": "mmacha-auto",
-  "name": "mmacha-auto",
+  "name": "Motion Arts",
   "version": "1.1.0",
   "minAppVersion": "1.5.0",
-  "description": "Adds watched dates and TMDB metadata for motionArts items.",
+  "description": "Keeps Motion Arts items current with watched dates and TMDB metadata.",
   "author": "mmacha",
   "isDesktopOnly": false
 }

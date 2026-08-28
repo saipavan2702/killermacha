@@ -1,4 +1,4 @@
-> Pure data-structure notes: what these trees are, why they exist, how their operations work, and code examples. No database-specific material here — see `postgresql-internals.md` for how Postgres actually uses a B+Tree under the hood.
+> Pure data-structure notes: what these trees are, why they exist, how their operations work, and code examples. For the database-specific view, see [[Upskill/CS Topics/Databases/PostgreSQL Internals|PostgreSQL Internals]].
 
 ---
 

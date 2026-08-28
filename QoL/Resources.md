@@ -1,15 +1,14 @@
-> [!summary]
-> Tools, configurations, ideas, and broad reference collections that support the rest of the vault.
-
 Map: [[Home|Home]]
 Connections: [[Upskill/Learning|Learning]], [[QoL/Workspace|Workspace]]
+
+> [!summary]
+> Tools, configurations, ideas, and broad reference collections that support the rest of the vault.
 
 ## Start Here
 
 - [[QoL/Ideas|Ideas]]
 - [[QoL/Configs|Configs]]
 - [[Workspace|Workspace]]
-- [[QoL/Note System|Note System]]
 
 ## Tech References
 
@@ -30,7 +29,6 @@ Connections: [[Upskill/Learning|Learning]], [[QoL/Workspace|Workspace]]
 - [[QoL/Refs/Typing|Typing]]
 - [[QoL/Refs/Wallpapers|Wallpapers]]
 - [[Upskill/Gen Misc/Math/Math|Math]]
-- [[Gen Resources|Gen Resources]]
 - [[QoL/Refs/Piracy|Piracy]]
 
 ## Recently Updated
