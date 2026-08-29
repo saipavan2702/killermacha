@@ -1,13 +1,12 @@
+Tags: #dsa #line-sweep
+Map: [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]], [[Upskill/DSA/Algorithms/Remainder Pair Counting|Remainder Pair Counting]], [[Upskill/DSA/Algorithms/Binary Search|Binary Search]]
+
 > [!summary]
 > Line sweep sorts events along an axis and maintains only the active state needed to solve interval and geometry problems efficiently.
-
-Map: [[Upskill/DSA/DSA|DSA]]
-Connections: [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]], [[Upskill/DSA/Algorithms/Remainder Pair Counting|Remainder Pair Counting]], [[Upskill/DSA/Algorithms/Binary Search|Binary Search]]
-
 ## Maximum Overlapping Segments
 
 The below problem will give the maximum lines are intersected when we sweep a line across the segments.
- ```cpp
+```cpp
 #include <vector>
 #include <set>
 #include <algorithm>
@@ -120,5 +119,3 @@ int main() {
     return 0;
 }
 ```
-
-#dsa #line-sweep

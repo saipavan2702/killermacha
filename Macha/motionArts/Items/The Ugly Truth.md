@@ -20,5 +20,5 @@ directors:
   - Robert Luketic
 ---
 
-Map: [[Macha/Macha|Macha]]
 Connections: [[Macha/Media Links|Media Links]]
+

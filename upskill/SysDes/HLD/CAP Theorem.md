@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]
+
 > [!summary]
 > During a network partition, a distributed system must trade between immediate consistency and availability.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]
-
 **CAP stands for:**
 - **C**onsistency
 - **A**vailability

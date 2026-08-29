@@ -1,9 +1,8 @@
+Tags: #dsa #sliding-window
+Map: [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]], [[Upskill/DSA/Algorithms/Binary Search|Binary Search]]
+
 > [!summary]
 > Sliding window maintains a valid contiguous range while moving its left and right boundaries, often reducing nested scans to linear time.
-
-Map: [[Upskill/DSA/DSA|DSA]]
-Connections: [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]], [[Upskill/DSA/Algorithms/Binary Search|Binary Search]]
-
 ## Template
 
 The standard template uses two pointers to control the current window.
@@ -40,4 +39,3 @@ public:
 ```
 
 
-#dsa #sliding-window

@@ -20,5 +20,5 @@ directors:
   - "Paul Feig"
 ---
 
-Map: [[Macha/Macha|Macha]]
 Connections: [[Macha/Media Links|Media Links]]
+

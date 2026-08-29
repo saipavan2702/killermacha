@@ -1,5 +1,5 @@
-Map: [[Upskill/CS Topics/Computer Science|Computer Science]]
-Connections: [[Upskill/CS Topics/Databases/SQL|SQL]], [[Upskill/DSA/Data Structures/B-Trees & B+ Trees|B-Trees & B+ Trees]]
+Tags: #computer-science
+Map: [[Upskill/CS Topics/Databases/SQL|SQL]], [[Upskill/DSA/Data Structures/B-Trees & B+ Trees|B-Trees & B+ Trees]]
 
 > [!summary]
 > How PostgreSQL organizes data logically and physically, how MVCC and indexing work under the hood, and how Postgres compares with MySQL/InnoDB.
@@ -8,18 +8,18 @@ Connections: [[Upskill/CS Topics/Databases/SQL|SQL]], [[Upskill/DSA/Data Structu
 
 ## Table of Contents
 
-1. [Logical vs. Physical Structure](#1-logical-vs-physical-structure)
-2. [Logical Structure Deep Dive](#2-logical-structure-deep-dive)
-3. [Physical Storage — Inside `$PGDATA`](#3-physical-storage--inside-pgdata)
-4. [Pages, Tuples & the Shared Buffer](#4-pages-tuples--the-shared-buffer)
-5. [CTID & How Indexes Point to Data](#5-ctid--how-indexes-point-to-data)
-6. [MVCC: Why Postgres Never Updates In-Place](#6-mvcc-why-postgres-never-updates-in-place)
-7. [The Heap Fetch Bottleneck](#7-the-heap-fetch-bottleneck)
-8. [Vacuum, Snapshot Pinning & Table Bloat](#8-vacuum-snapshot-pinning--table-bloat)
-9. [B-Tree Indexes in Postgres](#9-b-tree-indexes-in-postgres)
-10. [Postgres vs. MySQL/InnoDB: Secondary Index Storage](#10-postgres-vs-mysqlinnodb-secondary-index-storage)
-11. [Full SQL Walkthrough](#11-full-sql-walkthrough)
-12. [Quick-Reference Summary](#12-quick-reference-summary)
+1. [[#1. Logical vs. Physical Structure|Logical vs. Physical Structure]]
+2. [[#2. Logical Structure Deep Dive|Logical Structure Deep Dive]]
+3. [[#3. Physical Storage — Inside `$PGDATA`|Physical Storage — Inside $PGDATA]]
+4. [[#4. Pages, Tuples & the Shared Buffer|Pages, Tuples & the Shared Buffer]]
+5. [[#5. CTID & How Indexes Point to Data|CTID & How Indexes Point to Data]]
+6. [[#6. MVCC: Why Postgres Never Updates In-Place|MVCC: Why Postgres Never Updates In-Place]]
+7. [[#7. The Heap Fetch Bottleneck|The Heap Fetch Bottleneck]]
+8. [[#8. Vacuum, Snapshot Pinning & Table Bloat|Vacuum, Snapshot Pinning & Table Bloat]]
+9. [[#9. B-Tree Indexes in Postgres|B-Tree Indexes in Postgres]]
+10. [[#10. Postgres vs. MySQL/InnoDB: Secondary Index Storage|Postgres vs. MySQL/InnoDB: Secondary Index Storage]]
+11. [[#11. Full SQL Walkthrough|Full SQL Walkthrough]]
+12. [[#12. Quick-Reference Summary|Quick-Reference Summary]]
 
 ---
 

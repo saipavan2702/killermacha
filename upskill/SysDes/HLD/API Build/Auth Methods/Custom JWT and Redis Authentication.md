@@ -1,9 +1,8 @@
+Tags: #sysdes #authentication #jwt
+Map: [[Upskill/SysDes/HLD/API Build/Auth Methods/Single Sign-On|Single Sign-On]]
+
 > [!summary]
 > A custom JWT and Redis design issues tokens in your own service, checks active-token state on every request, and manually creates Spring Security authentication.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/API Build/Auth Methods/Single Sign-On|Single Sign-On]]
-
 > [!important]
 > This is a custom authentication architecture, not an SSO standard. It becomes SSO only when multiple applications deliberately trust the same custom identity service.
 
@@ -367,7 +366,6 @@ With an external IdP, Spring's `oauth2ResourceServer(...jwt...)` filter validate
 See [[Single Sign-On]] for the complete comparison and [[Bearer Tokens]] for framework-managed API validation.
 
 
-#authentication #jwt
 
 ---
 

@@ -20,5 +20,5 @@ directors:
   - George Cukor
 ---
 
-Map: [[Macha/Macha|Macha]]
 Connections: [[Macha/Media Links|Media Links]]
+

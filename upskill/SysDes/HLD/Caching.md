@@ -1,5 +1,5 @@
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]], [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]], [[Upskill/SysDes/LLD/LRU and LFU Cache|LRU & LFU Cache]]
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]], [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]], [[Upskill/SysDes/LLD/LRU and LFU Cache|LRU & LFU Cache]]
 
 ## Caching with Redis {#caching}
 

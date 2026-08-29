@@ -1,2 +1,3 @@
-Map: [[Upskill/Learning|Learning]]
-Connections: [[Upskill/Gen Misc/Morse Code|Morse Code]]
+Tags: #upskill
+Map: [[Upskill/Gen Misc/Morse Code|Morse Code]]
+

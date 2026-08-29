@@ -1,9 +1,8 @@
+Tags: #dsa #dynamic-programming
+Map: [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]], [[Upskill/DSA/Algorithms/Bitmasking/Subset Enumeration|Subset Enumeration]], [[Upskill/DSA/Algorithms/Bitmasking/Bit Operations|Bit Operations]]
+
 > [!summary]
 > Bitmask DP stores which small set of items has been used, while the rest of the state records position, cost, or another problem-specific dimension.
-
-Map: [[Upskill/DSA/Algorithms/Bitmasking/Bitmasking|Bitmasking]]
-Connections: [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]], [[Upskill/DSA/Algorithms/Bitmasking/Subset Enumeration|Subset Enumeration]], [[Upskill/DSA/Algorithms/Bitmasking/Bit Operations|Bit Operations]]
-
 ## State Pattern
 
 A common assignment state is:
@@ -47,7 +46,6 @@ This assignment pattern has `2^n` states and up to `n` transitions per state, fo
 6. [SPOJ HIST2](https://www.spoj.com/problems/HIST2/)
 7. [Codeforces 895C](https://codeforces.com/problemset/problem/895/C)
 
-#dsa #dynamic-programming
 
 ---
 

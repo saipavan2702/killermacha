@@ -1,5 +1,5 @@
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/Database Scaling|Database Scaling]], [[Upskill/SysDes/HLD/Caching|Caching]], [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]], [[Upskill/SysDes/HLD/Consistent Hashing|Consistent Hashing]]
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Database Scaling|Database Scaling]], [[Upskill/SysDes/HLD/Caching|Caching]], [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]], [[Upskill/SysDes/HLD/Consistent Hashing|Consistent Hashing]]
 
 ### 5. Database Sharding
 

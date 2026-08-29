@@ -1,5 +1,5 @@
-Map: [[Upskill/ProgramLang/Java/Java|Java]]
-Connections: [[Upskill/ProgramLang/Java/Inversion of Control|Inversion of Control]], [[Upskill/ProgramLang/Java/Concurrency|Concurrency]]
+Tags: #java #springboot
+Map: [[Upskill/ProgramLang/Java/Inversion of Control|Inversion of Control]], [[Upskill/ProgramLang/Java/Concurrency|Concurrency]]
 
 ## Bean vs Component
 
@@ -47,4 +47,3 @@ Also
 
 
 
-#java #springboot

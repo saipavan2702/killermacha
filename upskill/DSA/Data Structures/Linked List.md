@@ -1,9 +1,8 @@
+Tags: #dsa #linked-list
+Map: [[Upskill/DSA/Data Structures/XOR Linked List|XOR Linked List]]
+
 > [!summary]
 > Linked lists store values in nodes connected by pointers, making insertion and removal flexible while sacrificing random access.
-
-Map: [[Upskill/DSA/DSA|DSA]]
-Connections: [[Upskill/DSA/Data Structures/XOR Linked List|XOR Linked List]]
-
 ## Basic Operations
 
 ```cpp
@@ -142,4 +141,3 @@ int main() {
 
 ```
 
-#dsa #linked-list

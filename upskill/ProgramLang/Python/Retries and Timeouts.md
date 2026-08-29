@@ -1,9 +1,8 @@
+Tags: #python
+Map: [[Upskill/ProgramLang/Python/Debugging and Monitoring|Debugging and Monitoring]], [[Upskill/ProgramLang/Python/Concurrency and I-O|Concurrency and I-O]]
+
 > [!summary]
 > Retry only transient failures, bound every wait, and make completion checks depend on meaningful state.
-
-Map: [[Upskill/ProgramLang/Python/Python|Python]]
-Connections: [[Upskill/ProgramLang/Python/Debugging and Monitoring|Debugging and Monitoring]], [[Upskill/ProgramLang/Python/Concurrency and I-O|Concurrency and I-O]]
-
 ## OCI Retry Strategy
 
 ```python

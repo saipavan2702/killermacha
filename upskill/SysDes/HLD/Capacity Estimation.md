@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Scaling Fundamentals|Scaling Fundamentals]], [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]]
+
 > [!summary]
 > Estimate traffic, storage, bandwidth, and compute with quick orders of magnitude before choosing architecture.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/Scaling Fundamentals|Scaling Fundamentals]], [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]]
-
 Quick approximations for system requirements. **Don't spend more than 5 minutes on this in interviews.**
 
 ## Memory Conversion Table (MUST MEMORIZE)

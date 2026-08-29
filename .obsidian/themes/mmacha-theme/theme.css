@@ -59,6 +59,10 @@ body {
   --input-radius: var(--radius-s);
   --button-radius: var(--radius-s);
   --tab-radius-active: var(--radius-s);
+  --tab-divider-color: var(--mmacha-border);
+  --tab-outline-color: transparent;
+  --tab-outline-width: 0px;
+  --tab-curve: 0px;
   --nav-item-radius: var(--radius-s);
   --tag-radius: var(--radius-s);
   --callout-radius: var(--radius-m);
@@ -85,6 +89,19 @@ body {
 .theme-dark {
   color-scheme: dark;
 
+  --color-base-00: #07080a;
+  --color-base-05: #0a0b0d;
+  --color-base-10: #0d0e10;
+  --color-base-20: #141518;
+  --color-base-25: #18191c;
+  --color-base-30: #24262a;
+  --color-base-35: #30333a;
+  --color-base-40: #464a52;
+  --color-base-50: #646870;
+  --color-base-60: #999ca3;
+  --color-base-70: #b9bcc2;
+  --color-base-100: #dedfe2;
+
   --mmacha-accent: #d3a126;
   --mmacha-accent-hover: #e2b74b;
   --mmacha-link: #78add3;
@@ -107,6 +124,8 @@ body {
   --mmacha-active: rgba(255, 255, 255, 0.075);
   --mmacha-focus: rgba(211, 161, 38, 0.42);
   --mmacha-shadow: rgba(0, 0, 0, 0.34);
+  --mmacha-tooltip-bg: #24262a;
+  --mmacha-tooltip-text: #f2f2f3;
 
   --background-primary: var(--mmacha-bg-main);
   --background-primary-alt: #121316;
@@ -121,6 +140,7 @@ body {
   --background-modifier-form-field-highlighted: rgba(255, 255, 255, 0.06);
   --background-modifier-box-shadow: var(--mmacha-shadow);
   --background-modifier-cover: rgba(0, 0, 0, 0.58);
+  --background-modifier-message: var(--mmacha-tooltip-bg);
 
   --text-normal: #dedfe2;
   --text-muted: #999ca3;
@@ -141,6 +161,30 @@ body {
   --interactive-accent-hover: var(--mmacha-accent-hover);
   --interactive-success: #78bd92;
 
+  --icon-color: var(--text-muted);
+  --icon-color-hover: var(--text-normal);
+  --icon-color-active: var(--mmacha-accent);
+  --icon-color-focused: var(--mmacha-accent);
+
+  --nav-item-color: var(--text-muted);
+  --nav-item-color-hover: var(--text-normal);
+  --nav-item-color-active: var(--text-normal);
+  --nav-item-color-selected: var(--text-normal);
+  --nav-item-color-highlighted: var(--mmacha-link);
+  --nav-item-background-hover: var(--mmacha-hover);
+  --nav-item-background-active: var(--mmacha-active);
+  --nav-item-background-selected: var(--mmacha-active);
+  --nav-heading-color: var(--text-muted);
+  --nav-heading-color-hover: var(--text-normal);
+
+  --tab-background-active: var(--mmacha-active);
+  --tab-text-color: var(--text-faint);
+  --tab-text-color-active: var(--text-normal);
+  --tab-text-color-focused: var(--text-muted);
+  --tab-text-color-focused-active: var(--text-normal);
+  --tab-text-color-focused-highlighted: var(--mmacha-link);
+  --tab-text-color-focused-active-current: var(--text-normal);
+
   --link-color: var(--mmacha-link);
   --link-color-hover: var(--mmacha-link-hover);
   --link-unresolved-color: #a8a4b8;
@@ -151,6 +195,7 @@ body {
   --titlebar-background-focused: var(--mmacha-bg-deep);
   --tab-container-background: var(--mmacha-bg-deep);
   --ribbon-background: var(--mmacha-bg-deep);
+  --ribbon-background-collapsed: var(--mmacha-bg-deep);
   --status-bar-background: var(--mmacha-bg-deep);
   --workspace-background-translucent: var(--mmacha-glass-deep);
   --divider-color: var(--mmacha-border);
@@ -190,6 +235,19 @@ body {
 .theme-light {
   color-scheme: light;
 
+  --color-base-00: #ffffff;
+  --color-base-05: #fcfcfb;
+  --color-base-10: #f8f8f7;
+  --color-base-20: #f1f2f3;
+  --color-base-25: #e9eaec;
+  --color-base-30: #dde0e3;
+  --color-base-35: #cfd2d6;
+  --color-base-40: #b3b7bd;
+  --color-base-50: #989da5;
+  --color-base-60: #656a72;
+  --color-base-70: #4d525a;
+  --color-base-100: #25282d;
+
   --mmacha-accent: #a16d00;
   --mmacha-accent-hover: #7f5600;
   --mmacha-link: #276b9b;
@@ -210,6 +268,8 @@ body {
   --mmacha-active: rgba(21, 24, 28, 0.075);
   --mmacha-focus: rgba(161, 109, 0, 0.38);
   --mmacha-shadow: rgba(21, 24, 28, 0.14);
+  --mmacha-tooltip-bg: #25282d;
+  --mmacha-tooltip-text: #f8f8f7;
 
   --background-primary: var(--mmacha-bg-main);
   --background-primary-alt: #f0f1f2;
@@ -224,11 +284,13 @@ body {
   --background-modifier-form-field-highlighted: rgba(21, 24, 28, 0.06);
   --background-modifier-box-shadow: var(--mmacha-shadow);
   --background-modifier-cover: rgba(21, 24, 28, 0.32);
+  --background-modifier-message: var(--mmacha-tooltip-bg);
 
   --text-normal: #25282d;
   --text-muted: #656a72;
   --text-faint: #989da5;
   --text-on-accent: #ffffff;
+  --text-on-accent-inverted: #25282d;
   --text-selection: rgba(39, 107, 155, 0.18);
   --text-highlight-bg: rgba(209, 160, 38, 0.25);
   --text-accent: var(--mmacha-link);
@@ -241,6 +303,31 @@ body {
   --interactive-hover: rgba(21, 24, 28, 0.065);
   --interactive-accent: var(--mmacha-accent);
   --interactive-accent-hover: var(--mmacha-accent-hover);
+  --interactive-success: #397c51;
+
+  --icon-color: var(--text-muted);
+  --icon-color-hover: var(--text-normal);
+  --icon-color-active: var(--mmacha-accent);
+  --icon-color-focused: var(--mmacha-accent);
+
+  --nav-item-color: var(--text-muted);
+  --nav-item-color-hover: var(--text-normal);
+  --nav-item-color-active: var(--text-normal);
+  --nav-item-color-selected: var(--text-normal);
+  --nav-item-color-highlighted: var(--mmacha-link);
+  --nav-item-background-hover: var(--mmacha-hover);
+  --nav-item-background-active: var(--mmacha-active);
+  --nav-item-background-selected: var(--mmacha-active);
+  --nav-heading-color: var(--text-muted);
+  --nav-heading-color-hover: var(--text-normal);
+
+  --tab-background-active: var(--mmacha-active);
+  --tab-text-color: var(--text-faint);
+  --tab-text-color-active: var(--text-normal);
+  --tab-text-color-focused: var(--text-muted);
+  --tab-text-color-focused-active: var(--text-normal);
+  --tab-text-color-focused-highlighted: var(--mmacha-link);
+  --tab-text-color-focused-active-current: var(--text-normal);
   --link-color: var(--mmacha-link);
   --link-color-hover: var(--mmacha-link-hover);
 
@@ -248,6 +335,7 @@ body {
   --titlebar-background-focused: var(--mmacha-bg-deep);
   --tab-container-background: var(--mmacha-bg-deep);
   --ribbon-background: var(--mmacha-bg-deep);
+  --ribbon-background-collapsed: var(--mmacha-bg-deep);
   --status-bar-background: var(--mmacha-bg-deep);
   --workspace-background-translucent: var(--mmacha-glass-deep);
   --divider-color: var(--mmacha-border);
@@ -335,10 +423,16 @@ body.is-translucent :is(.mod-sidedock, .workspace-ribbon, .modal, .menu, .sugges
 
 .workspace-tab-header.is-active {
   color: var(--text-normal);
+  border-color: transparent;
   background: var(--mmacha-active);
-  box-shadow:
-    inset 0 0 0 1px var(--mmacha-border),
-    inset 0 1px 0 color-mix(in srgb, var(--text-normal) 3.5%, transparent);
+  box-shadow: none;
+}
+
+/* Use one flat tab silhouette in both modes; native curve shadows can leave
+   pale or dark residue where translucent surfaces meet. */
+.workspace-tab-header.is-active::before,
+.workspace-tab-header.is-active::after {
+  box-shadow: none !important;
 }
 
 .workspace-tab-header-status-icon {
@@ -419,10 +513,6 @@ body.is-translucent :is(.mod-sidedock, .workspace-ribbon, .modal, .menu, .sugges
 .markdown-rendered a {
   text-decoration-thickness: 1px;
   text-underline-offset: 0.16em;
-}
-
-.cm-line.cm-active {
-  background: color-mix(in srgb, var(--text-normal) 2.5%, transparent);
 }
 
 .cm-gutters {
@@ -626,7 +716,7 @@ input[type="checkbox"]:checked {
   border: 1px solid var(--mmacha-border);
   border-radius: var(--radius-m);
   background: color-mix(in srgb, var(--text-normal) 1.6%, transparent);
-  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--text-normal) 2.5%, transparent);
+  box-shadow: none;
 }
 
 :is(.metadata-property, .metadata-add-button) {
@@ -779,16 +869,15 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .metadata-property[data-property-key="tags"] .multi-select-pill,
 .metadata-property-value[data-property-type="tags"] .multi-select-pill {
-  color: var(--text-muted) !important;
-  border: 1px solid var(--mmacha-border-strong);
-  background: color-mix(in srgb, var(--text-normal) 4%, transparent) !important;
+  border: 1px solid color-mix(in srgb, currentColor 28%, var(--mmacha-border));
+  box-shadow: none;
 }
 
 .metadata-property[data-property-key="tags"] .multi-select-pill:hover,
 .metadata-property-value[data-property-type="tags"] .multi-select-pill:hover {
-  color: var(--text-normal) !important;
-  border-color: color-mix(in srgb, var(--mmacha-accent) 30%, var(--mmacha-border));
-  background: color-mix(in srgb, var(--mmacha-accent) 8%, transparent) !important;
+  border-color: color-mix(in srgb, currentColor 52%, var(--mmacha-border));
+  filter: saturate(1.08) brightness(1.06);
+  transform: translateY(-1px);
 }
 
 .bases-query-container .conjunction.dropdown {
@@ -820,12 +909,41 @@ button:active,
 
 /* Menus, prompts, and settings */
 :is(.menu, .suggestion-container, .popover, .prompt, .modal, .tooltip) {
+  color: var(--text-normal);
   border: 1px solid var(--mmacha-border-strong);
   border-radius: var(--radius-l);
   background: var(--mmacha-glass-raised);
-  box-shadow:
-    0 18px 48px var(--mmacha-shadow),
-    inset 0 1px 0 color-mix(in srgb, var(--text-normal) 4%, transparent);
+  box-shadow: 0 18px 48px var(--mmacha-shadow);
+}
+
+.theme-light :is(.menu, .suggestion-container, .popover, .prompt, .modal) {
+  box-shadow: 0 10px 28px rgba(21, 24, 28, 0.1);
+}
+
+/* Tooltips sit above both light and dark surfaces, so give them a stable
+   high-contrast surface instead of inheriting menu glass colors. */
+.tooltip {
+  color: var(--mmacha-tooltip-text) !important;
+  border-color: color-mix(in srgb, var(--mmacha-tooltip-text) 14%, transparent) !important;
+  background: var(--mmacha-tooltip-bg) !important;
+  box-shadow: 0 8px 24px color-mix(in srgb, black 24%, transparent) !important;
+}
+
+.tooltip.mod-top .tooltip-arrow {
+  border-top-color: var(--mmacha-tooltip-bg) !important;
+}
+
+.tooltip.mod-bottom .tooltip-arrow,
+.tooltip .tooltip-arrow {
+  border-bottom-color: var(--mmacha-tooltip-bg) !important;
+}
+
+.tooltip.mod-right .tooltip-arrow {
+  border-right-color: var(--mmacha-tooltip-bg) !important;
+}
+
+.tooltip.mod-left .tooltip-arrow {
+  border-left-color: var(--mmacha-tooltip-bg) !important;
 }
 
 :is(.menu-item, .suggestion-item, .vertical-tab-nav-item) {
@@ -846,6 +964,11 @@ button:active,
 
 .modal.mod-settings :is(.vertical-tab-header, .vertical-tab-content-container, .vertical-tab-content) {
   background: transparent;
+}
+
+.theme-light .modal.mod-settings {
+  border-color: rgba(21, 24, 28, 0.12);
+  box-shadow: 0 18px 48px rgba(21, 24, 28, 0.12);
 }
 
 .modal-container.mod-dim .modal-bg {
@@ -882,6 +1005,10 @@ button:active,
   border-radius: var(--radius-m);
   background: var(--mmacha-glass-raised);
   box-shadow: 0 12px 30px var(--mmacha-shadow);
+}
+
+.theme-light :is(.canvas-card-menu, .canvas-controls, .graph-controls) {
+  box-shadow: 0 8px 22px rgba(21, 24, 28, 0.1);
 }
 
 .canvas-node-container {
@@ -1272,8 +1399,10 @@ body.theme-dark .mermaid svg {
 /* Motion Arts poster cards */
 /* mmacha movie plugin theme: restrained poster cards for Celluloid Bases views. */
 .bases-view {
+  --bases-cards-container-background: transparent;
   --bases-cards-background: transparent;
   --bases-cards-cover-background: transparent;
+  --bases-cards-border-width: 0px;
   --bases-cards-shadow: none;
   --bases-cards-shadow-hover: none;
 }
@@ -1298,43 +1427,14 @@ body.theme-dark .mermaid svg {
 }
 
 .bases-cards-cover {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 2 / 3 !important;
-  height: auto !important;
-  margin: auto;
-  padding: 0 !important;
-  border: 1px solid var(--background-modifier-border, rgba(255, 255, 255, 0.07));
   border-radius: var(--radius-m, 6px);
-  background: var(--background-secondary, #0a0b0d);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    0 8px 20px -14px rgba(0, 0, 0, 0.72);
-  transition:
-    transform var(--anim-duration-fast, 160ms) ease,
-    border-color var(--anim-duration-fast, 160ms) ease,
-    box-shadow var(--anim-duration-fast, 160ms) ease;
-}
-
-.bases-cards-cover :is(img, picture, picture > img, .image-embed, .internal-embed, .bases-cards-cover-image) {
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border-radius: inherit;
-  object-fit: contain !important;
-  background-size: contain !important;
-  background-position: center !important;
+  box-shadow: none !important;
+  transition: transform var(--anim-duration-fast, 160ms) ease;
 }
 
 .bases-cards-item:hover .bases-cards-cover {
   transform: translateY(-3px) scale(1.015);
-  border-color: var(--background-modifier-border-hover, rgba(255, 255, 255, 0.12));
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.12),
-    0 14px 28px -16px rgba(0, 0, 0, 0.78);
+  box-shadow: none !important;
 }
 
 .bases-cards-property.mod-title .bases-cards-line {
@@ -1358,6 +1458,21 @@ body.theme-dark .mermaid svg {
   line-height: 1.3;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.bases-cards-property[data-property-type="tags"] .multi-select-container,
+.bases-metadata-value[data-property-type="tags"] .multi-select-container {
+  justify-content: center;
+  gap: 5px;
+  padding-top: 2px;
+}
+
+.bases-cards-property[data-property-type="tags"] .multi-select-pill,
+.bases-metadata-value[data-property-type="tags"] .multi-select-pill {
+  --pill-padding-x: 0.55em;
+  --pill-padding-y: 0.16em;
+  border: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+  box-shadow: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

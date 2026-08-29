@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/CAP Theorem|CAP Theorem]], [[Upskill/SysDes/HLD/Replication and Recovery|Replication and Recovery]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]]
+
 > [!summary]
 > Consistency models define when distributed replicas must agree and which trade-offs are acceptable while they converge.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/CAP Theorem|CAP Theorem]], [[Upskill/SysDes/HLD/Replication and Recovery|Replication and Recovery]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]]
-
 ## Strong Consistency
 
 **Definition:** All reads return the most recent write, immediately.

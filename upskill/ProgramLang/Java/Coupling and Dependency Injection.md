@@ -1,9 +1,8 @@
+Tags: #java
+Map: [[Upskill/ProgramLang/Java/Inversion of Control|Inversion of Control]]
+
 > [!summary]
 > Depending on interfaces instead of concrete implementations makes Java code easier to replace, test, and extend.
-
-Map: [[Upskill/ProgramLang/Java/Java|Java]]
-Connections: [[Upskill/ProgramLang/Java/Inversion of Control|Inversion of Control]]
-
 ## Tight Coupling vs Loose Coupling
 
 ```java

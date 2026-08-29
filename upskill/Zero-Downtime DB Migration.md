@@ -1,5 +1,6 @@
-# Zero-Downtime Column Migration
+Tags: #upskill
 
+# Zero-Downtime Column Migration
 ## The problem
 
 Rolling deploys run old code (V1) and new code (V2) against the same database simultaneously.

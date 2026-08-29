@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Distributed Systems Papers/Consistent Hashing Paper|Consistent Hashing Paper]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Gossip and Failure Detection|Gossip and Failure Detection]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]], [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]
+
 > [!summary]
 > Dynamo keeps a key-value store writable during failures by combining partitioning, replication, version tracking, and background repair. Its central choice is **availability with application-visible conflict resolution**, rather than a single globally ordered history.
-
-Map: [[Upskill/SysDes/HLD/Distributed Systems|Distributed Systems]]
-Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Consistent Hashing Paper|Consistent Hashing Paper]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Gossip and Failure Detection|Gossip and Failure Detection]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]], [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]
-
 - **Authors:** Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati, Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall, Werner Vogels
 - **Published:** SOSP 2007 (ACM Symposium on Operating Systems Principles)
 

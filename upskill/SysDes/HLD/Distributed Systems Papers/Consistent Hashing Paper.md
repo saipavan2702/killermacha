@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]], [[Upskill/SysDes/HLD/Consistent Hashing|Consistent Hashing]], [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]]
+
 > [!summary]
 > Consistent hashing maps both resources and keys into one shared hash space, so a membership change moves only a limited share of keys. The original paper also introduced **random trees** to spread demand for unexpectedly hot objects — a half of the paper most modern summaries skip.
-
-Map: [[Upskill/SysDes/HLD/Distributed Systems|Distributed Systems]]
-Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Cassandra|Apache Cassandra]], [[Upskill/SysDes/HLD/Consistent Hashing|Consistent Hashing]], [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]]
-
 - **Authors:** David Karger, Eric Lehman, Tom Leighton, Rina Panigrahy, Matthew Levine, Daniel Lewin
 - **Published:** STOC 1997 (ACM Symposium on Theory of Computing)
 

@@ -1,9 +1,8 @@
+Tags: #sysdes #api
+Map: [[Upskill/SysDes/HLD/API Build/Pagination|Pagination]]
+
 > [!summary]
 > Choose an API style from client needs, schema guarantees, transport efficiency, caching, and organizational constraints.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/API Build/Pagination|Pagination]]
-
 These four are common API styles/protocols. None is always "best"; the better choice depends on who consumes the API, how much performance matters, how strict the contract needs to be, and how flexible the client queries must be.
 
 ## Quick Decision Guide
@@ -186,4 +185,3 @@ There is no universal winner.
 For most modern systems, start with REST. Move to GraphQL when frontend data-fetching becomes painful. Use gRPC behind the scenes for microservices that need speed and strict contracts. Use SOAP when the ecosystem forces it.
 
 
-#sysdes #api

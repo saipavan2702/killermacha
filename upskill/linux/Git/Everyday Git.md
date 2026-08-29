@@ -1,9 +1,8 @@
+Tags: #linux #git
+Map: [[Upskill/Linux/Git/Branches and Remotes|Branches and Remotes]], [[Upskill/Linux/Git/Recovery and History|Recovery and History]]
+
 > [!summary]
 > The everyday Git loop is inspect, stage intentionally, review the staged diff, commit one coherent change, and inspect the resulting history.
-
-Map: [[Upskill/Linux/Git/Git|Git]]
-Connections: [[Upskill/Linux/Git/Branches and Remotes|Branches and Remotes]], [[Upskill/Linux/Git/Recovery and History|Recovery and History]]
-
 ## Setup and Help
 
 | Command | Purpose |
@@ -60,7 +59,6 @@ git log --oneline --graph --decorate -10
 > [!tip]
 > Prefer a small coherent commit over staging the entire working tree automatically. `git add -p` makes the boundary visible.
 
-#git
 
 ---
 
@@ -68,3 +66,8 @@ git log --oneline --graph --decorate -10
 
 - [Everyday Git](https://git-scm.com/docs/everyday) - Task-oriented official command guide.
 - [Git Basics](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) - Repository and commit fundamentals.
+
+## Further references
+
+- [Git Reference](https://git-scm.com/docs) - Official command reference.
+- [Pro Git](https://git-scm.com/book/en/v2) - Officially hosted Git book covering concepts and workflows.

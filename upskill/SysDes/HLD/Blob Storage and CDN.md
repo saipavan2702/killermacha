@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Proxy Servers|Proxy Servers]], [[Upskill/SysDes/HLD/Caching|Caching]]
+
 > [!summary]
 > Store large binary objects outside transactional databases and serve them through geographically distributed caches.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/Proxy Servers|Proxy Servers]], [[Upskill/SysDes/HLD/Caching|Caching]]
-
 ## What is Blob Storage?
 
 **Blob = Binary Large Object**

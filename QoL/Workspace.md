@@ -1,5 +1,4 @@
-Map: [[QoL/Resources|Resources]]
-Connections: [[Home|Home]]
+Tags: #workspace #qol
 
 YT's
 https://www.youtube.com/watch?v=PpppVh3dJTg
@@ -22,4 +21,3 @@ https://homeofficeworld.com/best-monitor-for-programming-under-300/#BenQ_GW2785T
 https://www.amazon.ca/LG-32UL500-W-UHD-Monitor/dp/B0CRBLRF69?th=1&psc=1
 https://www.asus.com/content/mac-monitor/
 
-#workspace #qol

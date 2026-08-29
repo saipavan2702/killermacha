@@ -1,9 +1,8 @@
+Tags: #dsa #graph
+Map: [[Upskill/DSA/Data Structures/Tree|Tree]], [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]]
+
 > [!summary]
 > Graph problems become manageable after identifying vertices, edges, traversal state, and whether direction, weights, or cycles matter.
-
-Map: [[Upskill/DSA/DSA|DSA]]
-Connections: [[Upskill/DSA/Data Structures/Tree|Tree]], [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]]
-
 ## Bipartite Graph
 
 Used in whether we can colour in a way that no two adjacent nodes will have same colour or in other words making the tree into two subsets.
@@ -449,4 +448,3 @@ int main() {
 }
 ```
 
-#dsa #graph

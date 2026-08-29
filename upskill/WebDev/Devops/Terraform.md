@@ -1,5 +1,6 @@
-## 1. The Problem: "ClickOps"
+Tags: #webdev
 
+## 1. The Problem: "ClickOps"
 Most infrastructure starts small — one VPS, set up by hand. As the app grows, so does the infra:
 
 - A second server

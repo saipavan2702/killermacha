@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Distributed Systems Papers/Google MapReduce|Google MapReduce]], [[Upskill/SysDes/HLD/Big Data Systems|Big Data Systems]], [[Upskill/SysDes/HLD/Blob Storage and CDN|Blob Storage and CDN]], [[Upskill/SysDes/HLD/Replication and Recovery|Replication and Recovery]]
+
 > [!summary]
 > HDFS stores very large files as replicated blocks spread across DataNodes, while a single NameNode owns all filesystem metadata. Clients ask the NameNode *where* blocks live, then stream data directly to or from the DataNodes — the actual bytes never flow through the NameNode.
-
-Map: [[Upskill/SysDes/HLD/Distributed Systems|Distributed Systems]]
-Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Google MapReduce|Google MapReduce]], [[Upskill/SysDes/HLD/Big Data Systems|Big Data Systems]], [[Upskill/SysDes/HLD/Blob Storage and CDN|Blob Storage and CDN]], [[Upskill/SysDes/HLD/Replication and Recovery|Replication and Recovery]]
-
 - **Authors:** Konstantin Shvachko, Hairong Kuang, Sanjay Radia, Robert Chansler (Yahoo!)
 - **Published:** MSST 2010 (IEEE 26th Symposium on Mass Storage Systems and Technologies)
 

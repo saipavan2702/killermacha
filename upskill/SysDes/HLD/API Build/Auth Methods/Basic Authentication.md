@@ -1,9 +1,8 @@
+Tags: #sysdes #authentication #http
+Map: [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]]
+
 > [!summary]
 > Basic Auth sends a username and password with every request. It is simple, but safe only over HTTPS and best limited to controlled tools.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]]
-
 ## How It Works
 
 The client joins `username:password`, Base64-encodes it, and sends it in the `Authorization` header.
@@ -60,7 +59,6 @@ Use a credential provider or secret manager in a real application. Do not hard-c
 > [!warning]
 > Never accept Basic Auth over plain HTTP. Treat every captured header as a captured password.
 
-#authentication #http
 
 ---
 

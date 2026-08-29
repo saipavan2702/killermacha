@@ -1,9 +1,8 @@
+Tags: #mathematics
+Map: [[Upskill/Gen Misc/Math/Probability|Probability]], [[Upskill/Gen Misc/Math/Random Variables|Random Variables]]
+
 > [!summary]
 > Conditional, joint, marginal, total, and Bayesian probability describe how information changes the likelihood of events.
-
-Map: [[Upskill/Gen Misc/Math/Math|Math]]
-Connections: [[Upskill/Gen Misc/Math/Probability|Probability]], [[Upskill/Gen Misc/Math/Random Variables|Random Variables]]
-
 ## 5. Conditional Probability
 
 Probability **updates** when you get new information, shrinking your "universe".

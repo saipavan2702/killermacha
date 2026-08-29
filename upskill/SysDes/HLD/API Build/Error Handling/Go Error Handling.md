@@ -1,9 +1,8 @@
+Tags: #sysdes #golang #error-handling
+Map: [[Upskill/ProgramLang/Golang/Context|Context]], [[Upskill/SysDes/HLD/API Build/Error Handling/TypeScript Error Handling|TypeScript Error Handling]]
+
 > [!summary]
 > Idiomatic Go returns errors as values, wraps them with operation context, and inspects the resulting chain with `errors.Is` or `errors.As`.
-
-Map: [[Upskill/SysDes/HLD/API Build/Error Handling/Error Handling|Error Handling]]
-Connections: [[Upskill/ProgramLang/Golang/Go|Go]], [[Upskill/ProgramLang/Golang/Context|Context]], [[Upskill/SysDes/HLD/API Build/Error Handling/TypeScript Error Handling|TypeScript Error Handling]]
-
 ## Avoid Panic-Prone Assertions
 
 Use the comma-ok form when reading typed values from an interface or context.
@@ -59,7 +58,6 @@ A useful service convention is:
 
 Mixing wrapping, logging, panicking, discarding, and returning zero values at random makes failures hard to trace.
 
-#golang #error-handling
 
 ---
 

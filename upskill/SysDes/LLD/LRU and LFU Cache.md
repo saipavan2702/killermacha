@@ -1,2 +1,3 @@
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/LLD/Rate Limiter|Rate Limiter]]
+Tags: #sysdes
+Map: [[Upskill/SysDes/LLD/Rate Limiter|Rate Limiter]]
+

@@ -20,5 +20,5 @@ directors:
   - John Musker
 ---
 
-Map: [[Macha/Macha|Macha]]
 Connections: [[Macha/Media Links|Media Links]]
+

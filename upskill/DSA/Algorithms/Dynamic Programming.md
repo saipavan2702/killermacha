@@ -1,9 +1,8 @@
+Tags: #dsa #dynamic-programming
+Map: [[Upskill/DSA/Data Structures/Tree|Tree]], [[Upskill/DSA/Data Structures/Segment Tree|Segment Tree]]
+
 > [!summary]
 > Dynamic programming solves overlapping subproblems once and reuses their results through a carefully chosen state and transition.
-
-Map: [[Upskill/DSA/DSA|DSA]]
-Connections: [[Upskill/DSA/Data Structures/Tree|Tree]], [[Upskill/DSA/Data Structures/Segment Tree|Segment Tree]]
-
 ## Minimum Ball Deletions — Interval DP
 
 ### Problem Statement
@@ -130,7 +129,6 @@ Always iterate by **interval length** (short → long), so smaller subproblems a
 #### 5. The Mental Model
 > *"I'm looking at the leftmost ball. I can either pay 1 to kill it, or spend some moves to bring a same-colored friend next to it so they both die for free."*
 
-#dsa #dynamic-programming
 
 ---
 

@@ -1,9 +1,8 @@
+Tags: #computer-science
+Map: [[Upskill/CS Topics/Operating Systems/Deadlocks|Deadlocks]]
+
 > [!summary]
 > Synchronization establishes safe ordering and visibility when concurrent work accesses shared state.
-
-Map: [[Upskill/CS Topics/Operating Systems/Operating Systems|Operating Systems]]
-Connections: [[Upskill/CS Topics/Operating Systems/Deadlocks|Deadlocks]]
-
 > [!tip] Plain-English version
 > Imagine two people editing the same shared spreadsheet cell at the same time without talking to each other — one types "5," the other types "10" a split second later, and depending on timing either value could "win" or the cell could end up corrupted. **Synchronization** is the set of tools (locks, semaphores, queues) that make sure only the right people can touch shared data at the right times, in the right order, so the result is always correct no matter how the timing shakes out.
 

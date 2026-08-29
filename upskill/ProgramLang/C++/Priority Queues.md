@@ -1,9 +1,8 @@
+Tags: #cpp #data-structures
+Map: [[Upskill/ProgramLang/C++/Memory and Parameters|Memory and Parameters]], [[Upskill/ProgramLang/Python vs C++ Performance|Python vs C++ Performance]]
+
 > [!summary]
 > Custom comparators control how C++ priority queues order compound values.
-
-Map: [[Upskill/ProgramLang/C++/C++|C++]]
-Connections: [[Upskill/ProgramLang/C++/Memory and Parameters|Memory and Parameters]], [[Upskill/ProgramLang/Python vs C++ Performance|Python vs C++ Performance]]
-
 ## Struct Comparator
 
 ```cpp
@@ -33,4 +32,3 @@ priority_queue<
 ```
 
 
-#cpp #data-structures

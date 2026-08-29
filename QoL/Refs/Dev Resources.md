@@ -1,16 +1,14 @@
 > [!summary]
 > Broad developer roadmaps, project collections, open-source references, and career material that do not belong to one technical concept note.
 
-Map: [[QoL/Resources|Resources]]
-Connections: [[Upskill/Learning|Learning]], [[Upskill/CS Topics/Computer Science|Computer Science]]
 
 ## Topic Maps
 
-- [[Upskill/Learning|Learning]]
-- [[Upskill/DSA/DSA|DSA]]
-- [[Upskill/SysDes/System Design|System Design]]
-- [[Upskill/CS Topics/Computer Science|Computer Science]]
-- [[Upskill/WebDev/Web Development|Web Development]]
+- Learning
+- DSA
+- System Design
+- Computer Science
+- Web Development
 
 ## Roadmaps
 

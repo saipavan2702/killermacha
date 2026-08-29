@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Microservices|Microservices]]
+
 > [!summary]
 > Distributed systems coordinate independent machines to improve scale and resilience despite partial failures.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/Microservices|Microservices]]
-
 ## What is a Distributed System?
 
 **Single Machine Limitation:**

@@ -1,9 +1,8 @@
+Tags: #sysdes #authentication #http
+Map: [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]]
+
 > [!summary]
 > Digest Auth uses a server challenge and a computed response so the password is not sent directly, but it is mainly a legacy compatibility method.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]]
-
 ## Flow
 
 1. The client requests a protected resource.
@@ -61,7 +60,6 @@ Let the client library implement the challenge-response calculation. Reimplement
 > [!note]
 > Use Digest only when integrating with a system that already requires it. Do not choose it as the default for a new API.
 
-#authentication #http
 
 ---
 

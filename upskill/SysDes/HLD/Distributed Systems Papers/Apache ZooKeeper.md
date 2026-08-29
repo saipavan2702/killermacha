@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Chubby|Google Chubby]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Kafka Architecture|Apache Kafka Architecture]], [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]
+
 > [!summary]
 > ZooKeeper is a replicated coordination kernel built from a small hierarchical namespace, ordered updates, ephemeral and sequential nodes, and one-shot watches. Applications compose those primitives into elections, locks, membership, barriers, and configuration — using **recipes**, not a giant built-in API.
-
-Map: [[Upskill/SysDes/HLD/Distributed Systems|Distributed Systems]]
-Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Chubby|Google Chubby]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache Kafka Architecture|Apache Kafka Architecture]], [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]
-
 - **Authors:** Patrick Hunt, Mahadev Konar, Flavio P. Junqueira, Benjamin Reed (Yahoo! Research)
 - **Published:** USENIX ATC 2010 (USENIX Annual Technical Conference)
 

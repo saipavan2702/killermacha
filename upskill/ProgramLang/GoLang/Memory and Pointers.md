@@ -1,9 +1,8 @@
+Tags: #golang
+Map: [[Upskill/ProgramLang/Golang/Interfaces|Interfaces]]
+
 > [!summary]
 > Stack lifetime, heap escape, garbage collection, and pointer semantics determine when Go copies data and how long it remains alive.
-
-Map: [[Upskill/ProgramLang/Golang/Go|Go]]
-Connections: [[Upskill/ProgramLang/Golang/Interfaces|Interfaces]]
-
 ## Stack and Heap
 
 Yes, **both stack and heap are in RAM**.
@@ -163,3 +162,7 @@ h := &big  // copy of one memory address — 8 bytes, done
 That's the entire trade-off. A pointer is just a **sticky note with an address on it** — lightweight, fast, and points Go to the real data.
 
 ---
+
+## Further references
+
+- [Go for Bash Programmers - Part I: The Language](https://www.youtube.com/watch?v=6DiCscb0gWk) - Go basics from a shell-programmer perspective.

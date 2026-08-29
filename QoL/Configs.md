@@ -1,5 +1,4 @@
-Map: [[QoL/Resources|Resources]]
-Connections: [[QoL/Ideas|Ideas]]
+Tags: #dotfiles #qol
 
 ## Dotfiles
 
@@ -122,4 +121,3 @@ https://www.youtube.com/watch?v=G89oddoYZl4
 
 ---
 
-#dotfiles #qol

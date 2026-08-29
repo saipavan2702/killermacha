@@ -1,9 +1,7 @@
+Tags: #linux #bash
+
 > [!summary]
 > Practical shell history, redirection, process, prompt, and terminal techniques for everyday Linux work.
-
-Map: [[Upskill/Linux/Linux|Linux]]
-Connections: [[Upskill/Linux/Git/Git|Git]]
-
 ```bash
 # Some tips and tricks I've picked up along the way
 # these are some things I use almost everyday
@@ -296,7 +294,6 @@ strace -f -pid <pid>                          # follow forked children
 > `strace` will often tell you in one line — blocked on a `read()` from a dead socket, or stuck on `openat()` for a missing config file.
 
 
-#bash
 
 ---
 

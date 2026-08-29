@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache ZooKeeper|Apache ZooKeeper]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Bigtable|Google Bigtable]], [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]
+
 > [!summary]
 > Chubby is a highly available service for coarse-grained locks and small, reliable metadata. Its important ideas are consensus-backed leadership, lease-based sessions, cache invalidation, and **sequencers** that fence stale lock holders.
-
-Map: [[Upskill/SysDes/HLD/Distributed Systems|Distributed Systems]]
-Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache ZooKeeper|Apache ZooKeeper]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Bigtable|Google Bigtable]], [[Upskill/SysDes/HLD/Consistency Models|Consistency Models]]
-
 - **Author:** Mike Burrows (Google)
 - **Published:** OSDI 2006 (USENIX Symposium on Operating Systems Design and Implementation)
 

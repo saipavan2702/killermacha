@@ -1,5 +1,3 @@
-Map: Vault root
-Connections: [[Upskill/Learning|Learning]], [[Macha/Macha|Macha]], [[QoL/Resources|Resources]], [[Tasks/Tasks|Tasks]]
 
 ```dataviewjs
 const { setIcon, Notice } = require("obsidian");
@@ -270,7 +268,7 @@ const tasks = allPages.file.tasks.where(t => !t.completed);
 const recent = allPages.sort(p => p.file.mtime, "desc").slice(0, 7);
 const learning = dv.pages('"Upskill"').sort(p => p.file.mtime, "desc").slice(0, 6);
 const needsConnections = dv.pages('"Upskill"')
-  .where(p => p.file.path !== "Upskill/Learning.md" && p.file.outlinks.length < 2)
+  .where(p => p.file.outlinks.length < 2)
   .sort(p => p.file.mtime, "desc")
   .slice(0, 6);
 const media = dv.pages('"Macha/motionArts/Items"').sort(p => p.file.mtime, "desc").slice(0, 6);
@@ -399,9 +397,9 @@ const actions = root.createDiv({ cls: "home-actions" });
   ["Tasks/Tasks.md", "Tasks", "open work", "check-square"],
   ["QoL/Ideas.md", "Ideas", "capture sparks", "lightbulb"],
   ["QoL/Refs/Obsidian.md", "Obsidian", "vault notes", "gem"],
-  ["Upskill/Learning.md", "Learning", "topic map", "map"],
-  ["Upskill/DSA/DSA.md", "DSA", "practice", "binary"],
-  ["Upskill/SysDes/System Design.md", "System Design", "architecture", "network"],
+  ["Upskill/DSA/Practice Problems.md", "Practice", "DSA practice", "binary"],
+  ["Upskill/SysDes/System Design Process.md", "System Design", "architecture", "network"],
+  ["Macha/motionArts/Celluloid.base", "Motion Arts", "watchlist", "clapperboard"],
   ["Macha/Watches.md", "Watches", "personal shelf", "play"],
 ].forEach(args => actions.appendChild(openLink(...args)));
 

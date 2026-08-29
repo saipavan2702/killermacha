@@ -1,9 +1,8 @@
+Tags: #python
+Map: [[Upskill/ProgramLang/Python/Configuration and Validation|Configuration and Validation]]
+
 > [!summary]
 > Context managers and finally blocks make remote connections and temporary resources clean up reliably.
-
-Map: [[Upskill/ProgramLang/Python/Python|Python]]
-Connections: [[Upskill/ProgramLang/Python/Configuration and Validation|Configuration and Validation]]
-
 ## SSH Handler (Context Manager)
 
 ```python

@@ -1,5 +1,5 @@
-Map: [[Upskill/ProgramLang/Golang/Go|Go]]
-Connections: [[Upskill/ProgramLang/Golang/Context|Context]]
+Tags: #golang
+Map: [[Upskill/ProgramLang/Golang/Context|Context]]
 
 What Even Is an **Event Bus**?
 

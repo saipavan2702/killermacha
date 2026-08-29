@@ -1,9 +1,8 @@
+Tags: #python
+Map: [[Upskill/ProgramLang/Python/Application Structure|Application Structure]], [[Upskill/ProgramLang/Python/Resource Management|Resource Management]]
+
 > [!summary]
 > Validate inputs at the boundary and parse configuration into a predictable internal shape.
-
-Map: [[Upskill/ProgramLang/Python/Python|Python]]
-Connections: [[Upskill/ProgramLang/Python/Application Structure|Application Structure]], [[Upskill/ProgramLang/Python/Resource Management|Resource Management]]
-
 ## Input Validation
 
 Validate early. Collect **all** errors before raising — don't stop on the first one.

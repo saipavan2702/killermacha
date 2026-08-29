@@ -1,9 +1,8 @@
+Tags: #sysdes #java #oops
+Map: [[Upskill/SysDes/LLD/SOLID Principles|SOLID Principles]]
+
 > [!summary]
 > Inheritance models an is-a relationship; composition assembles behavior and usually offers looser coupling and safer evolution.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/LLD/SOLID Principles|SOLID Principles]], [[Upskill/SysDes/LLD/Design Patterns/Design Patterns|Design Patterns]]
-
 The two different strategies to tackle the same problem i.e, `CODE REUSE`
 
 Let's look at **Inheritance**, say we have a Base class
@@ -175,7 +174,6 @@ When is Composition bad?
 -  verbose wrapper methods
 
 
-#java #oops
 
 ---
 

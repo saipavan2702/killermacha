@@ -1,5 +1,4 @@
-Map: [[QoL/Resources|Resources]]
-Connections: [[QoL/Refs/Dev Resources|Dev Resources]], [[Upskill/Learning|Learning]]
+Tags: #rss-feed
 
 ## APIs
 
@@ -15,4 +14,3 @@ Connections: [[QoL/Refs/Dev Resources|Dev Resources]], [[Upskill/Learning|Learni
 - [All About RSS](https://github.com/AboutRSS/ALL-about-RSS)
 - [Public APIs](https://github.com/public-apis/public-apis)
 
-#rss-feed

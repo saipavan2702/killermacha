@@ -34,9 +34,6 @@ views:
         - media_type == "movie"
     order:
       - title
-      - year
-      - directors
-      - cast
     sort:
       - property: file.name
         direction: ASC
@@ -53,9 +50,6 @@ views:
         - media_type == "series"
     order:
       - title
-      - year
-      - directors
-      - cast
     limit: 100
     image: poster
     imageProperty: poster

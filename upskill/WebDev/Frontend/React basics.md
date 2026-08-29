@@ -1,5 +1,5 @@
-Map: [[Upskill/WebDev/Frontend/React|React]]
-Connections: [[Upskill/WebDev/Frontend/JavaScript/JavaScript|JavaScript]], [[Upskill/WebDev/Frontend/Frontend Architecture|Frontend Architecture]]
+Tags: #webdev #excalidraw
+Map: [[Upskill/WebDev/Frontend/Frontend Architecture|Frontend Architecture]]
 
 ==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
@@ -447,4 +447,3 @@ TyNoVLaEActr1ARYjdnABN2W4MVp6mtghAA2CIAA
 ```
 %%
 
-#excalidraw

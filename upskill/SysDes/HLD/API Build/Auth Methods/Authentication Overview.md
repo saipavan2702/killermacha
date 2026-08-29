@@ -1,9 +1,8 @@
+Tags: #sysdes #authentication #security
+Map: [[Upskill/SysDes/HLD/API Build/Error Handling/Error Handling|Error Handling]]
+
 > [!summary]
 > Authentication proves who a caller is. Choose a method from the caller type, client environment, revocation needs, and trust boundary.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/API Build/Error Handling/Error Handling|Error Handling]]
-
 ## Pick by Use Case
 
 | Need | Start with | Why |
@@ -44,7 +43,6 @@ Connections: [[Upskill/SysDes/HLD/API Build/Error Handling/Error Handling|Error 
 - [[Custom JWT and Redis Authentication]] - How a stateful custom token filter differs from standards-based OIDC and Spring Resource Server validation.
 
 
-#authentication #security
 
 ---
 

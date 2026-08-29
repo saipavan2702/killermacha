@@ -1,9 +1,8 @@
+Tags: #linux
+Map: [[Upskill/Linux/Vim/Command Line|Command Line]]
+
 > [!summary]
 > Filters, global commands, normal-mode replay, ranges, and external tools turn Vim into a programmable text-processing environment.
-
-Map: [[Upskill/Linux/Vim/Vim|Vim]]
-Connections: [[Upskill/Linux/Vim/Command Line|Command Line]]
-
 ## Piping Text Through External Commands
 
 **Basic Concept:**

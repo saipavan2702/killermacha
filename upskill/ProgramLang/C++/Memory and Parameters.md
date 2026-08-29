@@ -1,9 +1,8 @@
+Tags: #cpp
+Map: [[Upskill/ProgramLang/C++/Priority Queues|Priority Queues]]
+
 > [!summary]
 > Explicit ownership and parameter-passing semantics determine whether C++ code copies, aliases, leaks, or safely releases memory.
-
-Map: [[Upskill/ProgramLang/C++/C++|C++]]
-Connections: [[Upskill/ProgramLang/C++/Priority Queues|Priority Queues]]
-
 ## Memory Leaks
 
 Memory management in cpp while dealing with pointers there can be some memory leaks, so we should be careful.

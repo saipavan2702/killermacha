@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache ZooKeeper|Apache ZooKeeper]], [[Upskill/SysDes/HLD/Message Queues|Message Queues]], [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]], [[Upskill/SysDes/HLD/Publish-Subscribe|Publish-Subscribe]]
+
 > [!summary]
 > Kafka models messaging as an append-only, partitioned log. Producers append records, consumers track their own offsets, and retention lets the same history be replayed independently by different readers.
-
-Map: [[Upskill/SysDes/HLD/Distributed Systems|Distributed Systems]]
-Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Apache ZooKeeper|Apache ZooKeeper]], [[Upskill/SysDes/HLD/Message Queues|Message Queues]], [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]], [[Upskill/SysDes/HLD/Publish-Subscribe|Publish-Subscribe]]
-
 - **Authors:** Jay Kreps, Neha Narkhede, Jun Rao (LinkedIn)
 - **Published:** NetDB Workshop 2011, Athens, Greece
 

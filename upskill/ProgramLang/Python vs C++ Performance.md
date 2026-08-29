@@ -1,9 +1,8 @@
+Tags: #upskill
+Map: [[Upskill/ProgramLang/C++/Priority Queues|Priority Queues]]
+
 > [!summary]
 > Performance comes from allocation, data layout, ownership, compilation, and concurrency choices more than from language stereotypes.
-
-Map: [[Upskill/Learning|Learning]]
-Connections: [[Upskill/ProgramLang/C++/Priority Queues|Priority Queues]]
-
 ## 01. Abstractions have cost
 
 **Use case:** Parsing large files in tight loops. Python lists and dicts allocate heap objects dynamically on every operation. C++ fixed buffers avoid this entirely.

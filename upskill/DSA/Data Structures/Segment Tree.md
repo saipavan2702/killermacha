@@ -1,9 +1,8 @@
+Tags: #dsa #segment-tree
+Map: [[Upskill/DSA/Data Structures/Tree|Tree]], [[Upskill/DSA/Algorithms/Binary Search|Binary Search]], [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]]
+
 > [!summary]
 > Segment trees answer range queries and updates in logarithmic time by storing summaries over recursively divided intervals.
-
-Map: [[Upskill/DSA/DSA|DSA]]
-Connections: [[Upskill/DSA/Data Structures/Tree|Tree]], [[Upskill/DSA/Algorithms/Binary Search|Binary Search]], [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]]
-
 We use this to do range sum queries.
 It can be done with array or we can build tree using class data types.
 
@@ -346,7 +345,6 @@ int main() {
 
 ```
 
-#dsa #segment-tree
 
 ---
 

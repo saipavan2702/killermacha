@@ -1,9 +1,8 @@
+Tags: #golang
+Map: [[Upskill/ProgramLang/Golang/Synchronization|Synchronization]], [[Upskill/ProgramLang/Golang/Event Bus|Event Bus]]
+
 > [!summary]
 > Go context carries cancellation, deadlines, and request-scoped values across API boundaries and concurrent work.
-
-Map: [[Upskill/ProgramLang/Golang/Go|Go]]
-Connections: [[Upskill/ProgramLang/Golang/Synchronization|Synchronization]], [[Upskill/ProgramLang/Golang/Event Bus|Event Bus]]
-
 Context provides a mechanism to control the lifecycle, cancellation, and propagation of requests across multiple goroutines.
 This aids in the management of go routines.
 With context we can create hierarchies of goroutines and pass the information down the chain.
@@ -378,7 +377,6 @@ func getUserFromDB(ctx context.Context, userID string) (string, error) {
 One cancel → entire chain stops. That's the whole power of context.
 
 
-#golang
 
 ---
 

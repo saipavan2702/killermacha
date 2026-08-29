@@ -1,9 +1,8 @@
+Tags: #golang
+Map: [[Upskill/ProgramLang/Golang/Channels and Select|Channels and Select]], [[Upskill/ProgramLang/Golang/Context|Context]]
+
 > [!summary]
 > Mutexes, read-write locks, once guards, wait groups, and channels coordinate shared work between goroutines.
-
-Map: [[Upskill/ProgramLang/Golang/Go|Go]]
-Connections: [[Upskill/ProgramLang/Golang/Channels and Select|Channels and Select]], [[Upskill/ProgramLang/Golang/Context|Context]]
-
 ## Shared-State Primitives
 
 ```go

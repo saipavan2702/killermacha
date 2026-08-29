@@ -1,9 +1,7 @@
+Tags: #computer-science
+
 > [!summary]
 > Loop order affects spatial locality: traversing contiguous memory usually matters more than the surface shape of the algorithm.
-
-Map: [[DSA]]
-Connections: [[Upskill/CS Topics/Computer Science|Computer Science]]
-
 ✅ Best (IKJ order @ ~110-200ms):
 ```cpp
 
@@ -72,4 +70,3 @@ All three arrays accessed poorly!
 
 
 
-#dsa

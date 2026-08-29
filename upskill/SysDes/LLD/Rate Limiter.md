@@ -1,5 +1,5 @@
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/LLD/LRU and LFU Cache|LRU and LFU Cache]], [[Upskill/SysDes/HLD/Caching|Caching]]
+Tags: #sysdes
+Map: [[Upskill/SysDes/LLD/LRU and LFU Cache|LRU and LFU Cache]], [[Upskill/SysDes/HLD/Caching|Caching]]
 
 Let's say a in a twitch stream with many viewers and one is spamming a lot, without a rate limiter he can easily dominate the stream. So we rate limit his messages so that each user get's fair chance & attention.
 

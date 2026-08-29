@@ -1,9 +1,8 @@
+Tags: #linux
+Map: [[Upskill/Linux/Vim/Files Buffers and Windows|Files Buffers and Windows]], [[Upskill/Linux/Vim/Shell Filters and Advanced Commands|Shell Filters and Advanced Commands]]
+
 > [!summary]
 > Vim's command line applies Ex commands, ranges, shell commands, and file statistics without leaving the editor.
-
-Map: [[Upskill/Linux/Vim/Vim|Vim]]
-Connections: [[Upskill/Linux/Vim/Files Buffers and Windows|Files Buffers and Windows]], [[Upskill/Linux/Vim/Shell Filters and Advanced Commands|Shell Filters and Advanced Commands]]
-
 ## ⚡ Running External Commands
 ```vim
 :'<,'>!sort              " Sort lines

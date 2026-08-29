@@ -1,9 +1,8 @@
+Tags: #java
+Map: [[Upskill/ProgramLang/Java/Switch Statements and Expressions|Switch Statements and Expressions]]
+
 > [!summary]
 > Core rules for visibility, application entry points, constructors, and methods.
-
-Map: [[Upskill/ProgramLang/Java/Java|Java]]
-Connections: [[Upskill/ProgramLang/Java/Switch Statements and Expressions|Switch Statements and Expressions]]
-
 ## Access Modifiers
 Access modifiers describe the **visibility** of classes, variables, and methods.
 

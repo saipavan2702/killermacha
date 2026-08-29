@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Microservices|Microservices]], [[Upskill/SysDes/HLD/Publish-Subscribe|Publish-Subscribe]]
+
 > [!summary]
 > Event-driven systems communicate through facts that have happened, improving decoupling while introducing delivery and consistency trade-offs.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/Microservices|Microservices]], [[Upskill/SysDes/HLD/Publish-Subscribe|Publish-Subscribe]]
-
 ## Traditional vs Event-Driven
 
 **Traditional (Synchronous):**

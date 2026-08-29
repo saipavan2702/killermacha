@@ -1,9 +1,8 @@
+Tags: #sysdes #oops
+Map: [[Upskill/SysDes/LLD/Clean Code Patterns|Clean Code Patterns]], [[Upskill/SysDes/LLD/Object-Oriented Programming|Object-Oriented Programming]], [[Upskill/SysDes/LLD/Inheritance vs Composition|Inheritance vs Composition]]
+
 > [!summary]
 > SOLID principles guide dependency direction and responsibility boundaries so object-oriented code remains changeable.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/LLD/Clean Code Patterns|Clean Code Patterns]], [[Upskill/SysDes/LLD/Object-Oriented Programming|Object-Oriented Programming]], [[Upskill/SysDes/LLD/Inheritance vs Composition|Inheritance vs Composition]]
-
 ## 🗺️ The Big Picture
 
 | Letter | Principle             | One-liner                                            |
@@ -244,7 +243,6 @@ DIP  →  High-level logic is shielded from low-level detail; Depend on abstract
 ```
 
 
-#oops #sysdes
 
 ---
 

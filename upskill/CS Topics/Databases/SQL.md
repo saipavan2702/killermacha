@@ -1,9 +1,8 @@
+Tags: #computer-science #sql #databases
+Map: [[Upskill/SysDes/HLD/SQL vs NoSQL|SQL vs NoSQL]]
+
 > [!summary]
 > SQL notes covering querying, indexing, execution plans, and the trade-offs that make database access fast and reliable.
-
-Map: [[Upskill/CS Topics/Computer Science|Computer Science]]
-Connections: [[Upskill/SysDes/HLD/SQL vs NoSQL|SQL vs NoSQL]]
-
 ## Basics
 
 ```SQL
@@ -319,7 +318,6 @@ EXPLAIN ANALYZE the slow query
     -  Extra white spaces removal
 
 
-#sql #databases
 
 ---
 

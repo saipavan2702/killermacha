@@ -1,9 +1,8 @@
+Tags: #sysdes #clean-code
+Map: [[Upskill/SysDes/LLD/SOLID Principles|SOLID Principles]], [[Upskill/SysDes/LLD/Design Patterns/Structural|Structural Design Patterns]], [[Upskill/SysDes/HLD/API Build/Error Handling/Error Handling|Error Handling]], [[Upskill/WebDev/Frontend/Frontend Architecture|Frontend Architecture]]
+
 > [!summary]
 > Clean code reduces surprise by making business intent, boundaries, valid states, decisions, failures, and changes easy to see.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/LLD/SOLID Principles|SOLID Principles]], [[Upskill/SysDes/LLD/Design Patterns/Structural|Structural Design Patterns]], [[Upskill/SysDes/HLD/API Build/Error Handling/Error Handling|Error Handling]], [[Upskill/WebDev/Frontend/Frontend Architecture|Frontend Architecture]]
-
 > [!important]
 > Complexity does not disappear; it moves. Put it into clear names, boundaries, types, and focused changes instead of the next developer's head.
 
@@ -152,7 +151,6 @@ Small does not mean an arbitrary line limit. It means one coherent idea that a r
 - Are errors useful to clients, people, and operators?
 - Does the change contain one coherent purpose?
 
-#clean-code
 
 ---
 

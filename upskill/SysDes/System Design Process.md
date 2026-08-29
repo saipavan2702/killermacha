@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/Case Studies/Designing Twitter|Designing Twitter]]
+
 > [!summary]
 > A repeatable interview and architecture process: clarify requirements, estimate scale, divide the system, explain trade-offs, and validate operations.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/Case Studies/Designing Twitter|Designing Twitter]]
-
 ## Step-by-Step Approach
 
 ### Step 1: Understand Requirements (5-10 minutes)
@@ -232,3 +231,9 @@ But Accidental Complexity is everything else sometimes you add code to the alrea
 >
 >How data communication happens in different steps
 >![[Pasted image 20260601002039.png|713]]
+
+## Further references
+
+- [Karan Pratap Singh System Design](https://www.karanpratapsingh.com/courses/system-design) - System design course.
+- [System Design Primer](https://github.com/donnemartin/system-design-primer) - Broad HLD reference.
+- [System Design Ultimatum](https://github.com/Prakash-sa/system-design-ultimatum) - Broad HLD reference.

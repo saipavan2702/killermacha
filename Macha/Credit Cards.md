@@ -1,5 +1,4 @@
-Map: [[Macha/Macha|Macha]]
-Connections: [[QoL/Workspace|Workspace]]
+Tags: #personal
 
 **For spending about 5L per annum**
 
@@ -31,4 +30,3 @@ Helpers :
 - https://thepointsguy.com/
 - https://livefromalounge.com/
 
-#personal

@@ -20,5 +20,5 @@ directors:
   - Mahesh Manjrekar
 ---
 
-Map: [[Macha/Macha|Macha]]
 Connections: [[Macha/Media Links|Media Links]]
+

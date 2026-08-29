@@ -1,9 +1,8 @@
+Tags: #python
+Map: [[Upskill/ProgramLang/Python/Retries and Timeouts|Retries and Timeouts]]
+
 > [!summary]
 > Choose processes for isolated CPU work, threads for I/O, and explicit timeouts for subprocesses and network calls.
-
-Map: [[Upskill/ProgramLang/Python/Python|Python]]
-Connections: [[Upskill/ProgramLang/Python/Retries and Timeouts|Retries and Timeouts]]
-
 ## Parallel Execution
 
 ### Process pool — isolated workers (CPU-bound)

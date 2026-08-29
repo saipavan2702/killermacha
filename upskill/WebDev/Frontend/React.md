@@ -1,10 +1,9 @@
+Tags: #webdev #typescript
+Map: [[Upskill/WebDev/Frontend/React Basics|React Basics]], [[Upskill/WebDev/Frontend/Next.js|Next.js]]
+
 > [!summary]
 > React builds interfaces from components and state; predictable data flow and rendering boundaries keep those components understandable.
-
-Map: [[Upskill/WebDev/Web Development|Web Development]]
-Connections: [[Upskill/WebDev/Frontend/React Basics|React Basics]], [[Upskill/WebDev/Frontend/Next.js|Next.js]]
-
-React is an open-source library for building interfaces with [[Upskill/WebDev/Frontend/JavaScript/JavaScript|JavaScript]].
+React is an open-source library for building interfaces with JavaScript.
 
 [[Upskill/WebDev/Frontend/React Basics|React Basics]]
 Class component of react
@@ -348,4 +347,3 @@ export default App;
 - react-spinners
 - react-dnd
 
-#typescript

@@ -1,9 +1,8 @@
+Tags: #java
+Map: [[Upskill/ProgramLang/Java/Switch Statements and Expressions|Switch Statements and Expressions]], [[Upskill/ProgramLang/Java/Collections and Generics Examples|Collections and Generics Examples]]
+
 > [!summary]
 > The collection hierarchy and the extends-versus-implements rules define how Java types relate and which implementations fit each need.
-
-Map: [[Upskill/ProgramLang/Java/Java|Java]]
-Connections: [[Upskill/ProgramLang/Java/Switch Statements and Expressions|Switch Statements and Expressions]], [[Upskill/ProgramLang/Java/Collections and Generics Examples|Collections and Generics Examples]]
-
 ## Java Collections Hierarchy
 
 ### Memory trick: **"I Can List Quietly, Sets Don't Repeat"**

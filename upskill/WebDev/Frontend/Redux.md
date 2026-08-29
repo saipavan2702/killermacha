@@ -1,5 +1,5 @@
-Map: [[Upskill/WebDev/Web Development|Web Development]]
-Connections: [[Upskill/WebDev/Frontend/Frontend Architecture|Frontend Architecture]], [[Upskill/WebDev/Frontend/Next.js|Next.js]], [[Upskill/WebDev/Frontend/Request Waterfalls|Request Waterfalls]]
+Tags: #webdev
+Map: [[Upskill/WebDev/Frontend/Frontend Architecture|Frontend Architecture]], [[Upskill/WebDev/Frontend/Next.js|Next.js]], [[Upskill/WebDev/Frontend/Request Waterfalls|Request Waterfalls]]
 
 This javascript library allows us to manage states across the files without the problem of prop-drilling.
 

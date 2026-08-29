@@ -1,9 +1,8 @@
+Tags: #dsa #binary-search
+Map: [[Upskill/DSA/Data Structures/Tree|Tree]], [[Upskill/DSA/Data Structures/Segment Tree|Segment Tree]]
+
 > [!summary]
 > Binary search repeatedly removes half of an ordered search space and can find exact values, boundaries, or feasible answers in logarithmic time.
-
-Map: [[Upskill/DSA/DSA|DSA]]
-Connections: [[Upskill/DSA/Data Structures/Tree|Tree]], [[Upskill/DSA/Data Structures/Segment Tree|Segment Tree]]
-
 A technique to search in log(n) time over n elements by eliminating half of unwanted possibilities each time. We will observe the variant applications using this algorithm.
 
 ## Exact Match
@@ -139,4 +138,3 @@ class Solution {
 ## Practice
 [Maximum value at a given index](https://leetcode.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
 
-#dsa #binary-search

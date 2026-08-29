@@ -1,5 +1,4 @@
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/LLD/Design Patterns/Design Patterns|Design Patterns]]
+Tags: #sysdes
 
 1. **Parking Lot** — multi-floor, 2-wheelers and 4-wheelers
 2. **Text Editor with Cursor** — cursor movement, line reading, insert/delete

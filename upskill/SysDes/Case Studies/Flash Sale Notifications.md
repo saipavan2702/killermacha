@@ -1,5 +1,5 @@
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/Publish-Subscribe|Publish-Subscribe]], [[Upskill/SysDes/HLD/Blob Storage and CDN|Blob Storage and CDN]], [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]], [[Upskill/SysDes/HLD/Message Queues|Message Queues]]
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Publish-Subscribe|Publish-Subscribe]], [[Upskill/SysDes/HLD/Blob Storage and CDN|Blob Storage and CDN]], [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]], [[Upskill/SysDes/HLD/Message Queues|Message Queues]]
 
 > [!summary]
 > Fan out a time-sensitive notification through push topics, then protect the sale path with caching, rate limits, queues, and controlled admission.

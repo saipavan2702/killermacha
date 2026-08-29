@@ -1,9 +1,8 @@
+Tags: #python
+Map: [[Upskill/ProgramLang/Python/Application Structure|Application Structure]]
+
 > [!summary]
 > Understand Python's evaluation and memory behavior before reaching for framework-level solutions.
-
-Map: [[Upskill/ProgramLang/Python/Python|Python]]
-Connections: [[Upskill/ProgramLang/Python/Application Structure|Application Structure]]
-
 ## Mutable Default Arguments
 
 In Python, default arguments are evaluated **once**, at function definition time.

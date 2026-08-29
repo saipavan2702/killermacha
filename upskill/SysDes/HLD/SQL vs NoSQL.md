@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/CS Topics/Databases/SQL|SQL]], [[Upskill/SysDes/HLD/Database Scaling|Database Scaling]]
+
 > [!summary]
 > Choose a database from data shape, consistency needs, query patterns, and scale rather than from popularity.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/CS Topics/Databases/SQL|SQL]], [[Upskill/SysDes/HLD/Database Scaling|Database Scaling]]
-
 ## SQL Databases
 
 **Structure:** Tables with predefined schema

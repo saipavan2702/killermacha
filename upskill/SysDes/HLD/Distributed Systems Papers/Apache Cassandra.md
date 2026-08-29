@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Bigtable|Google Bigtable]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Gossip and Failure Detection|Gossip and Failure Detection]], [[Upskill/SysDes/HLD/SQL vs NoSQL|SQL vs NoSQL]]
+
 > [!summary]
 > Cassandra combines Dynamo-style decentralized partitioning and replication with a Bigtable-style wide-column, log-structured storage model. It's designed for high write availability, horizontal scale, and query-first schema design.
-
-Map: [[Upskill/SysDes/HLD/Distributed Systems|Distributed Systems]]
-Connections: [[Upskill/SysDes/HLD/Distributed Systems Papers/Amazon Dynamo|Amazon Dynamo]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Google Bigtable|Google Bigtable]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Gossip and Failure Detection|Gossip and Failure Detection]], [[Upskill/SysDes/HLD/SQL vs NoSQL|SQL vs NoSQL]]
-
 - **Authors:** Avinash Lakshman, Prashant Malik (Facebook)
 - **Published:** LADIS 2009 / ACM SIGOPS Operating Systems Review, 2010
 

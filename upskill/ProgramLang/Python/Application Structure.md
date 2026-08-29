@@ -1,9 +1,8 @@
+Tags: #python
+Map: [[Upskill/ProgramLang/Python/Language Fundamentals|Language Fundamentals]], [[Upskill/ProgramLang/Python/Configuration and Validation|Configuration and Validation]]
+
 > [!summary]
 > Centralized logging, explicit lifecycle handling, and focused decorators make production scripts easier to operate.
-
-Map: [[Upskill/ProgramLang/Python/Python|Python]]
-Connections: [[Upskill/ProgramLang/Python/Language Fundamentals|Language Fundamentals]], [[Upskill/ProgramLang/Python/Configuration and Validation|Configuration and Validation]]
-
 ## Logging Setup
 
 One config. Two streams: `debug` (everything) and `console` (user-visible only).

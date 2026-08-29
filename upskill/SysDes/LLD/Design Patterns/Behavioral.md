@@ -1,5 +1,5 @@
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/LLD/Design Patterns/Structural|Structural]], [[Upskill/SysDes/LLD/Design Patterns/Architectural|Architectural]]
+Tags: #sysdes #design-patterns
+Map: [[Upskill/SysDes/LLD/Design Patterns/Structural|Structural]], [[Upskill/SysDes/LLD/Design Patterns/Architectural|Architectural]]
 
 ### 1. Chain of Responsibility
 **Purpose**: Pass request through chain of handlers.
@@ -184,4 +184,3 @@ class TaxCalculator implements Visitor {
 ---
 
 
-#sysdes #design-patterns

@@ -1,9 +1,8 @@
+Tags: #computer-science
+Map: [[Upskill/CS Topics/Concurrency-Parallelism-Async|Concurrency-Parallelism-Async]]
+
 > [!summary]
 > HTTP methods express the intended operation, while safety, idempotency, caching, and status codes define how clients may repeat and interpret it.
-
-Map: [[Upskill/CS Topics/Computer Science|Computer Science]]
-Connections: [[Upskill/CS Topics/Concurrency-Parallelism-Async|Concurrency-Parallelism-Async]]
-
 ## The Core Idea
 
 HTTP methods are **labels for intent**. The server can technically do anything regardless of the method, but the label tells every piece of infrastructure in between — browsers, caches, proxies, crawlers, API tools — what kind of action to expect.

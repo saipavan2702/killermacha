@@ -1,5 +1,5 @@
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/LLD/SOLID Principles|SOLID Principles]]
+Tags: #sysdes
+Map: [[Upskill/SysDes/LLD/SOLID Principles|SOLID Principles]]
 
 ## **Class**
 - A **Class** is a user-defined data type that defines its **properties** (data members) and **functions** (member functions).

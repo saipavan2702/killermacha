@@ -1,9 +1,8 @@
+Tags: #dsa #subsets
+Map: [[Upskill/DSA/Algorithms/Backtracking|Backtracking]], [[Upskill/DSA/Algorithms/Bitmasking/Bit Operations|Bit Operations]], [[Upskill/DSA/Algorithms/Bitmasking/Bitmask Dynamic Programming|Bitmask Dynamic Programming]]
+
 > [!summary]
 > An `n`-item set has `2^n` subsets; the binary representation of each mask states which items belong to one subset.
-
-Map: [[Upskill/DSA/Algorithms/Bitmasking/Bitmasking|Bitmasking]]
-Connections: [[Upskill/DSA/Algorithms/Backtracking|Backtracking]], [[Upskill/DSA/Algorithms/Bitmasking/Bit Operations|Bit Operations]], [[Upskill/DSA/Algorithms/Bitmasking/Bitmask Dynamic Programming|Bitmask Dynamic Programming]]
-
 ## Enumerate Every Subset
 
 ```cpp
@@ -60,4 +59,3 @@ For `{a, b, c}`, element `a` appears in `{a}`, `{a,b}`, `{a,c}`, and `{a,b,c}`: 
 - enumerate all submasks of one mask: `O(2^k)` where `k` is its number of set bits
 - enumerate submasks for every `n`-bit mask: `O(3^n)` total
 
-#dsa #subsets

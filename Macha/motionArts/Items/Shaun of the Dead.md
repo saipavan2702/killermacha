@@ -20,5 +20,5 @@ directors:
   - Edgar Wright
 ---
 
-Map: [[Macha/Macha|Macha]]
 Connections: [[Macha/Media Links|Media Links]]
+

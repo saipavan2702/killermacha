@@ -1,9 +1,8 @@
+Tags: #sysdes #authentication #api
+Map: [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Bearer Tokens]]
+
 > [!summary]
 > An API key usually identifies a calling application or project, not the human using it.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Bearer Tokens]]
-
 ## Request Example
 
 ```http
@@ -50,7 +49,6 @@ The visible prefix can identify the key record; the secret portion proves posses
 - Redact keys from logs and error reports.
 - Revoke quickly and alert on unusual use.
 
-#authentication #api
 
 ---
 

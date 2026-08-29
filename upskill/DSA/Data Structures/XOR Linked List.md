@@ -1,9 +1,8 @@
+Tags: #dsa #linked-list
+Map: [[Upskill/DSA/Data Structures/Linked List|Linked List]]
+
 > [!summary]
 > An XOR linked list stores the XOR of previous and next addresses, reducing pointer storage at the cost of safety and maintainability.
-
-Map: [[Upskill/DSA/DSA|DSA]]
-Connections: [[Upskill/DSA/Data Structures/Linked List|Linked List]]
-
 A doubly linked list stores separate previous and next pointers. An XOR linked list stores one value containing the XOR of both addresses.
 
 ```c
@@ -66,4 +65,3 @@ int main()
 }
 ```
 
-#dsa #linked-list

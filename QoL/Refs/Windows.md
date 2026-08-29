@@ -1,5 +1,3 @@
-Map: [[QoL/Resources|Resources]]
-Connections: [[QoL/Workspace|Workspace]], [[QoL/Configs|Configs]]
 
 ## Setups
 

@@ -1,5 +1,5 @@
-Map: [[Upskill/ProgramLang/Java/Java|Java]]
-Connections: [[Upskill/ProgramLang/Java/Spring Boot|Spring Boot]]
+Tags: #java #concurrency
+Map: [[Upskill/ProgramLang/Java/Spring Boot|Spring Boot]]
 
 In Java we can achieve concurrency by using threads and there are different ways to have concurrency.
 
@@ -153,4 +153,3 @@ public class IndependentPipelineDemo {
 ```
 
 
-#concurrency #java

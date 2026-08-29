@@ -1,9 +1,8 @@
+Tags: #mathematics
+Map: [[Upskill/Gen Misc/Math/Conditional Probability|Conditional Probability]], [[Upskill/Gen Misc/Math/Recursive Probability|Recursive Probability]]
+
 > [!summary]
 > Random variables assign values to outcomes; expectation and probability distributions summarize how those values behave.
-
-Map: [[Upskill/Gen Misc/Math/Math|Math]]
-Connections: [[Upskill/Gen Misc/Math/Conditional Probability|Conditional Probability]], [[Upskill/Gen Misc/Math/Recursive Probability|Recursive Probability]]
-
 ## 7. Random Variables & Expected Value
 
 A **Random Variable** translates random outcomes into numbers. **Expected Value (EV)** is the long-run weighted average.

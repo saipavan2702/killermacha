@@ -1,9 +1,8 @@
+Tags: #webdev
+Map: [[Upskill/WebDev/Frontend/Frontend Architecture|Frontend Architecture]], [[Upskill/WebDev/Frontend/Redux|Redux]]
+
 > [!summary]
 > Independent requests should begin together or stream through boundaries instead of waiting on avoidable component-level dependencies.
-
-Map: [[Upskill/WebDev/Web Development|Web Development]]
-Connections: [[Upskill/WebDev/Frontend/Frontend Architecture|Frontend Architecture]], [[Upskill/WebDev/Frontend/Redux|Redux]]
-
 Think of we have a web page the user About section and Friends section need to fetch data separately on `/users/<id> and /users/<id>/friends`, If we fetch data in each component itself, it will cause the request waterfall issue.
 
 To solve this basic solution is to make a call for both of them in a Profile section and pass the results.

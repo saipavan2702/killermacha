@@ -1,9 +1,8 @@
+Tags: #linux
+Map: [[Upskill/Linux/Vim/Editing Text|Editing Text]], [[Upskill/Linux/Vim/Registers Macros and Repetition|Registers Macros and Repetition]]
+
 > [!summary]
 > Search locates text; substitution transforms it across a line, range, selection, or file.
-
-Map: [[Upskill/Linux/Vim/Vim|Vim]]
-Connections: [[Upskill/Linux/Vim/Editing Text|Editing Text]], [[Upskill/Linux/Vim/Registers Macros and Repetition|Registers Macros and Repetition]]
-
 ## 🔍 Vim: Searching
 
 - `/pattern` → search forward for `pattern`

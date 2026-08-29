@@ -1,9 +1,8 @@
+Tags: #dsa #bitmasking
+Map: [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]], [[Upskill/DSA/Algorithms/Backtracking|Backtracking]], [[Upskill/DSA/Data Structures/Segment Tree|Segment Tree]]
+
 > [!summary]
 > A bitmask represents a set of boolean choices inside an integer, making membership checks, subset enumeration, and compact DP states efficient.
-
-Map: [[Upskill/DSA/DSA|DSA]]
-Connections: [[Upskill/DSA/Algorithms/Dynamic Programming|Dynamic Programming]], [[Upskill/DSA/Algorithms/Backtracking|Backtracking]], [[Upskill/DSA/Data Structures/Segment Tree|Segment Tree]]
-
 ## Topics
 
 - [[Upskill/DSA/Algorithms/Bitmasking/Bit Operations|Bit Operations]] - Set, clear, toggle, query, and common bit tricks.
@@ -21,7 +20,6 @@ Use a bitmask when:
 
 For a mask named `mask`, bit `i` represents whether item `i` is present.
 
-#dsa #bitmasking
 
 ---
 

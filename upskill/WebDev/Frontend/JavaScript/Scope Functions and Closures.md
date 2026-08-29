@@ -1,9 +1,8 @@
+Tags: #webdev #javascript #functions
+Map: [[Upskill/WebDev/Frontend/JavaScript/Event Loop and Node.js|Event Loop and Node.js]], [[Upskill/WebDev/Frontend/JavaScript/Objects Classes and Prototypes|Objects, Classes, and Prototypes]]
+
 > [!summary]
 > A JavaScript function resolves names through its lexical scope and carries that surrounding environment with it when used as a closure.
-
-Map: [[Upskill/WebDev/Frontend/JavaScript/JavaScript|JavaScript]]
-Connections: [[Upskill/WebDev/Frontend/JavaScript/Event Loop and Node.js|Event Loop and Node.js]], [[Upskill/WebDev/Frontend/JavaScript/Objects Classes and Prototypes|Objects, Classes, and Prototypes]]
-
 ## Scope Chain
 
 Each function invocation gets its own execution context. A name is resolved in the current scope, then each enclosing lexical scope, and finally the global scope.
@@ -90,7 +89,6 @@ const team = {
 };
 ```
 
-#javascript #functions
 
 ---
 

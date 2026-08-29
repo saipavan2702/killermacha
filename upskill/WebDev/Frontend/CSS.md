@@ -1,5 +1,5 @@
-Map: [[Upskill/WebDev/Web Development|Web Development]]
-Connections: [[Upskill/WebDev/Frontend/Framer Motion|Framer Motion]]
+Tags: #webdev
+Map: [[Upskill/WebDev/Frontend/Framer Motion|Framer Motion]]
 
 We can use & to select and modify nested classes.
 ```html

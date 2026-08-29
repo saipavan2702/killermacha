@@ -1,5 +1,4 @@
-Map: [[QoL/Resources|Resources]]
-Connections: [[QoL/Configs|Configs]]
+Tags: #project
 
 Projects
 https://github.com/perghosh/Data-oriented-design
@@ -42,4 +41,3 @@ https://github.com/mingodando
 > 13.  Develop food recipes using Food APIs
 > 14.  Develop real-time trains detection using real-time APIs
 
-#project

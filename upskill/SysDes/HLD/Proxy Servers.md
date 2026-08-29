@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]], [[Upskill/SysDes/HLD/Blob Storage and CDN|Blob Storage and CDN]]
+
 > [!summary]
 > Forward proxies represent clients; reverse proxies represent servers and centralize routing, security, and traffic control.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]], [[Upskill/SysDes/HLD/Blob Storage and CDN|Blob Storage and CDN]]
-
 ## Forward Proxy
 
 **Acts on behalf of CLIENT**

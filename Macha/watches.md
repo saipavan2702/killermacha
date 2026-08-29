@@ -1,5 +1,4 @@
-Map: [[Macha/Macha|Macha]]
-Connections: [[Macha/Aesthetic|Aesthetic]]
+Tags: #personal
 
 **Casio**
 
@@ -15,4 +14,3 @@ Connections: [[Macha/Aesthetic|Aesthetic]]
 
 - [Nate JR](https://www.amazon.in/Fossil-Nate-Chronograph-Black-Watch-JR1401/dp/B008AXYWHQ/ref=sr_1_301?crid=3LOS8XY43ODUF&dib=eyJ2IjoiMSJ9.g49mr9GGcvD1jjunoowQgZs1q5tLKu9BMpw5F223aMnpdoG72vU7Z-U4haEO1uQDAvxNYuiR9FLz_ik_YA6K_xAraSfiayc7UF-NHfn6hVMW-jYK4nnbaJdve1ar8fgzuYJzomZqL4vuQAka0lxicfxgCZkHkv_jgaLdicl8-RLyb1MyWn_tSj0nebzKiXikBHyiU4X4PcY6ZDnOwQOtTr6oMgGLZi2Q-B5WbEW_MUha3J-U3xNGSE_VKTrR3GeEQM0FqG6izV-IKvukc6JtoZVKxbF02NRkYB-aBWesSRs.rdKodDM0O6K8YCm8JZJC7yUEw3aAz4XgifpYlJUd7Gs&dib_tag=se&keywords=watches+for+men&qid=1721477948&refinements=p_123%3A179010%7C230208%7C230542%7C235696%7C258694&rnid=91049095031&s=watches&sprefix=watches%2Caps%2C773&sr=1-301)
 
-#personal

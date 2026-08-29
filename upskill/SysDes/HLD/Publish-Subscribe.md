@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]], [[Upskill/SysDes/HLD/Message Queues|Message Queues]]
+
 > [!summary]
 > Publish-subscribe distributes real-time events to interested subscribers without tightly coupling producers and consumers.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/Event-Driven Architecture|Event-Driven Architecture]], [[Upskill/SysDes/HLD/Message Queues|Message Queues]]
-
 ## Pub/Sub vs Message Broker
 
 | Feature | Message Broker | Pub/Sub |

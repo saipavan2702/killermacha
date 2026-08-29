@@ -1,9 +1,8 @@
+Tags: #computer-science
+Map: [[Upskill/CS Topics/Operating Systems/Production Debugging|Production Debugging]]
+
 > [!summary]
 > A process is a protected resource container; runnable threads inside it are the units the scheduler actually executes.
-
-Map: [[Upskill/CS Topics/Operating Systems/Operating Systems|Operating Systems]]
-Connections: [[Upskill/CS Topics/Operating Systems/Production Debugging|Production Debugging]]
-
 > [!tip] Plain-English version
 > A **process** is like a sealed apartment: it has its own furniture (memory), its own mailbox (file descriptors), its own lease (permissions), and neighbors can't just walk in and rearrange your stuff. A **thread** is a person living inside that apartment — multiple threads (people) can share the same apartment (memory), but each has their own todo list and current task (registers/stack). A **context switch** is the building manager pausing one apartment's activity and letting another one proceed, carefully remembering exactly where the first one left off so it can resume later without losing its place.
 
@@ -107,3 +106,8 @@ A blocking syscall may cause all three: it's a function call into the runtime, w
 
 - [Linux `proc(5)`](https://man7.org/linux/man-pages/man5/proc.5.html) - Process state and runtime information exposed through `/proc`.
 - [Linux `fork(2)`](https://man7.org/linux/man-pages/man2/fork.2.html) - Actual parent/child memory and descriptor semantics.
+
+## Further references
+
+- [Operating Systems: Three Easy Pieces](https://pages.cs.wisc.edu/~remzi/OSTEP/) - Free textbook for deeper study and exercises.
+- [Linux man-pages project](https://www.kernel.org/doc/man-pages/) - Primary reference for Linux system-call behavior.

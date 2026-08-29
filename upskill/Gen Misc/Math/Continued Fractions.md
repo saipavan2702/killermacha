@@ -1,9 +1,8 @@
+Tags: #mathematics #number-theory
+Map: [[Upskill/Gen Misc/Math/Euler's Number|Euler's Number]]
+
 > [!summary]
 > Continued fractions expose the structure of irrational numbers and generate unusually efficient rational approximations.
-
-Map: [[Upskill/Gen Misc/Math/Math|Math]]
-Connections: [[Upskill/Gen Misc/Math/Euler's Number|Euler's Number]]
-
 > [!quote] The Big Idea
 > Every irrational number — no matter how chaotic its decimal looks — can be expressed as an infinite cascade of fractions. These cascades reveal deep patterns invisible in standard decimals.
 
@@ -143,7 +142,6 @@ $$e = 2 + \cfrac{1}{1 + \cfrac{1}{2 + \cfrac{1}{1 + \cfrac{1}{1 + \cfrac{1}{4 + 
 ---
 
 
-#mathematics #number-theory
 
 ---
 

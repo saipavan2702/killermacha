@@ -1,5 +1,3 @@
-Map: [[QoL/Resources|Resources]]
-Connections: [[Macha/Aesthetic|Aesthetic]]
 
 ## GitHub
 

@@ -491,9 +491,27 @@
   "fileColors": {},
   "fileBackgroundColors": {},
   "folderIcons": {
-    "QoL": "simple-icons:qualys"
+    "Upskill": "lucide:graduation-cap",
+    "Macha": "lucide:clapperboard",
+    "QoL": "lucide:sparkles",
+    "Tasks": "lucide:circle-check-big",
+    "Orcl": "simple-icons:oracle",
+    "Lingo": "lucide:languages",
+    "Excalidraw": "simple-icons:excalidraw",
+    "Templates": "lucide:layout-template",
+    "attachments": "lucide:paperclip"
   },
-  "folderColors": {},
+  "folderColors": {
+    "Upskill": "#60a5fa",
+    "Macha": "#f472b6",
+    "QoL": "#a78bfa",
+    "Tasks": "#fbbf24",
+    "Orcl": "#fb923c",
+    "Lingo": "#2dd4bf",
+    "Excalidraw": "#c084fc",
+    "Templates": "#94a3b8",
+    "attachments": "#67e8f9"
+  },
   "folderBackgroundColors": {},
   "folderSortOverrides": {},
   "folderTreeSortOverrides": {},

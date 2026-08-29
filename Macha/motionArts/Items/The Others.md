@@ -21,5 +21,5 @@ directors:
   - Alejandro Amenábar
 ---
 
-Map: [[Macha/Macha|Macha]]
 Connections: [[Macha/Media Links|Media Links]]
+

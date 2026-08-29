@@ -1,5 +1,3 @@
-Map: [[QoL/Resources|Resources]]
-Connections: [[Macha/Media Links|Media Links]]
 
 ## Books
 

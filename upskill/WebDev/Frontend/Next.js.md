@@ -1,9 +1,8 @@
+Tags: #webdev #typescript
+Map: [[Upskill/WebDev/Frontend/React|React]], [[Upskill/WebDev/Frontend/Redux|Redux]]
+
 > [!summary]
 > Next.js organizes React applications around routing, server rendering, data fetching, caching, and deployment boundaries.
-
-Map: [[Upskill/WebDev/Web Development|Web Development]]
-Connections: [[Upskill/WebDev/Frontend/React|React]], [[Upskill/WebDev/Frontend/Redux|Redux]]
-
 In Next.js, every component is a Server Component by default. Add `"use client"` at the top when a component requires client-side state, effects, or browser APIs.
 
 In this we have to follow some conventions in order to route files. Here every folder is a route, and all folders must be in app folder.
@@ -301,4 +300,3 @@ my-nextjs-project/
 
 
 
-#typescript

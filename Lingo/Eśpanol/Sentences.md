@@ -1,5 +1,3 @@
-Map: [[Upskill/Learning|Learning]]
-Connections: [[Lingo/Eśpanol/Pronouns]], [[Lingo/Eśpanol/Objects]]
 
 Some daily used sentences along with slang words.
 

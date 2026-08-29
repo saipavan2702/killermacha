@@ -1,5 +1,5 @@
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/LLD/Clean Code Patterns|Clean Code Patterns]], [[Upskill/SysDes/LLD/Design Patterns/Creational|Creational]], [[Upskill/SysDes/LLD/Design Patterns/Behavioral|Behavioral]]
+Tags: #sysdes #design-patterns
+Map: [[Upskill/SysDes/LLD/Clean Code Patterns|Clean Code Patterns]], [[Upskill/SysDes/LLD/Design Patterns/Creational|Creational]], [[Upskill/SysDes/LLD/Design Patterns/Behavioral|Behavioral]]
 
 ### 1. Adapter
 **Purpose**: Make incompatible interfaces work together.
@@ -126,4 +126,3 @@ class ImageProxy implements Image {
 ---
 
 
-#sysdes #design-patterns

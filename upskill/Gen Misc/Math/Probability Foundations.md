@@ -1,9 +1,8 @@
+Tags: #mathematics
+Map: [[Upskill/Gen Misc/Math/Probability|Probability]]
+
 > [!summary]
 > Events, axioms, set operations, and counting rules form the vocabulary needed for every later probability problem.
-
-Map: [[Upskill/Gen Misc/Math/Math|Math]]
-Connections: [[Upskill/Gen Misc/Math/Probability|Probability]]
-
 ## 1. Events vs. Outcomes & Sample Spaces
 
 Probability is about **events** (sets of outcomes), not single outcomes. The **sample space** is every possible thing that could happen.

@@ -1,9 +1,7 @@
+Tags: #sysdes
+
 > [!summary]
 > A worked system-design example covering tweet creation, timelines, search, follows, notifications, capacity, and observability.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/System Design Process|System Design Process]]
-
 ## Sub-System 1: Tweet Creation
 
 ```javascript

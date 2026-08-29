@@ -1,9 +1,8 @@
+Tags: #dsa #backtracking
+Map: [[Upskill/DSA/Algorithms/Bitmasking/Bitmasking|Bitmasking]]
+
 > [!summary]
 > Backtracking explores one choice at a time and abandons a branch as soon as it violates the problem constraints.
-
-Map: [[Upskill/DSA/DSA|DSA]]
-Connections: [[Upskill/DSA/Algorithms/Bitmasking/Bitmasking|Bitmasking]]
-
 ## Sudoku Solver
 
 ```cpp
@@ -71,4 +70,3 @@ vector<vector<int>> solve(vector<vector<int>>& s) {
 ```
 
 
-#dsa #backtracking

@@ -1,9 +1,8 @@
+Tags: #sysdes #authentication #api
+Map: [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]], [[Upskill/SysDes/HLD/API Build/Auth Methods/JSON Web Tokens]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Access and Refresh Tokens]]
+
 > [!summary]
 > A bearer token grants access to whoever possesses it, so confidentiality in transit and storage is the main security boundary.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]], [[Upskill/SysDes/HLD/API Build/Auth Methods/JSON Web Tokens]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Access and Refresh Tokens]]
-
 ## Request Example
 
 ```http
@@ -73,7 +72,6 @@ Always check:
 
 Keep access tokens short-lived and never place them in query parameters unless a protocol leaves no safer option.
 
-#authentication #api
 
 ---
 

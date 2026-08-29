@@ -1,9 +1,8 @@
+Tags: #sysdes #authentication #web-security
+Map: [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Single Sign-On]]
+
 > [!summary]
 > Session authentication stores login state on the server and gives the browser an opaque session identifier in a protected cookie.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Single Sign-On]]
-
 ## Flow
 
 1. The user submits credentials over HTTPS.
@@ -48,7 +47,6 @@ The framework API varies, but the important properties are a random opaque ID, s
 - **CSRF:** use `SameSite`, CSRF tokens, and origin checks for state-changing requests.
 - **Scaling:** use a shared session store or carefully designed sticky sessions.
 
-#authentication #web-security
 
 ---
 

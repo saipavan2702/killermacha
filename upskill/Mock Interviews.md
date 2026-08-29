@@ -1,5 +1,5 @@
-Map: [[Upskill/Learning|Learning]]
-Connections: [[Upskill/DSA/Practice Problems|Practice Problems]]
+Tags: #upskill
+Map: [[Upskill/DSA/Practice Problems|Practice Problems]]
 
 For every individual interview will be about 2-3hrs tentatively.
 The interview schema follows :-

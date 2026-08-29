@@ -1,9 +1,8 @@
+Tags: #python
+Map: [[Upskill/ProgramLang/Python/Retries and Timeouts|Retries and Timeouts]]
+
 > [!summary]
 > Use logs, tracebacks, memory tracking, file monitoring, system-call tracing, and interactive debugging to explain failures instead of guessing.
-
-Map: [[Upskill/ProgramLang/Python/Python|Python]]
-Connections: [[Upskill/ProgramLang/Python/Retries and Timeouts|Retries and Timeouts]]
-
 ## Practical Toolkit
 
 For any kind of debugging in Python we shud use logging, strace, and watchdog for more information about errors.

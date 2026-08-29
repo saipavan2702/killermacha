@@ -126,7 +126,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "upskill/system design/Design Patterns.md",
+            "file": "Home.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -145,7 +145,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "upskill/system design/Design Patterns.md",
+            "file": "Home.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           },
@@ -159,7 +159,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "upskill/system design/Design Patterns.md",
+            "file": "Home.md",
             "followCursor": false,
             "showSearch": false,
             "searchQuery": ""

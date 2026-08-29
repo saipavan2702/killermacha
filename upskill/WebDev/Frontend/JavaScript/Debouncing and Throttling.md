@@ -1,9 +1,8 @@
+Tags: #webdev #javascript #performance
+Map: [[Upskill/WebDev/Frontend/JavaScript/Event Loop and Node.js|Event Loop and Node.js]], [[Upskill/WebDev/Frontend/React|React]], [[Upskill/WebDev/Frontend/Request Waterfalls|Request Waterfalls]]
+
 > [!summary]
 > Debouncing waits for activity to stop; throttling limits activity to at most once per interval.
-
-Map: [[Upskill/WebDev/Frontend/JavaScript/JavaScript|JavaScript]]
-Connections: [[Upskill/WebDev/Frontend/JavaScript/Event Loop and Node.js|Event Loop and Node.js]], [[Upskill/WebDev/Frontend/React|React]], [[Upskill/WebDev/Frontend/Request Waterfalls|Request Waterfalls]]
-
 ## Choose the Behavior
 
 | Need | Technique | Typical example |
@@ -54,7 +53,6 @@ const reportScroll = throttle(() => {
 
 Production helpers may also support leading/trailing execution, cancellation, and flushing. Decide those semantics before choosing an implementation.
 
-#javascript #performance
 
 ---
 

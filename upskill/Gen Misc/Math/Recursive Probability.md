@@ -1,9 +1,8 @@
+Tags: #mathematics
+Map: [[Upskill/Gen Misc/Math/Random Variables|Random Variables]]
+
 > [!summary]
 > Recursive probability defines an expected result in terms of returning to the same state after an incomplete attempt.
-
-Map: [[Upskill/Gen Misc/Math/Math|Math]]
-Connections: [[Upskill/Gen Misc/Math/Random Variables|Random Variables]]
-
 ## 11. Recursive Probability
 
 A shortcut for **infinite sequences** where the answer depends on itself. Set up an algebraic equation based on the very first step.

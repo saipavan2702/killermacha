@@ -1,5 +1,5 @@
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/Proxy Servers|Proxy Servers]], [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]], [[Upskill/SysDes/HLD/Microservices|Microservices]]
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Proxy Servers|Proxy Servers]], [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]], [[Upskill/SysDes/HLD/Microservices|Microservices]]
 
 > [!summary]
 > A reverse proxy hides and routes to backends, a load balancer spreads traffic, and an API gateway manages client-facing policy for services.

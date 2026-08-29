@@ -21,5 +21,5 @@ directors:
   - Peter Farrelly
 ---
 
-Map: [[Macha/Macha|Macha]]
 Connections: [[Macha/Media Links|Media Links]]
+

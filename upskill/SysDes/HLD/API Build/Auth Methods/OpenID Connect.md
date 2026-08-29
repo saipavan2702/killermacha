@@ -1,9 +1,8 @@
+Tags: #sysdes #authentication #oidc
+Map: [[Upskill/SysDes/HLD/API Build/Auth Methods/Single Sign-On]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]], [[Upskill/SysDes/HLD/API Build/Auth Methods/OAuth 2.0]], [[Upskill/SysDes/HLD/API Build/Auth Methods/JSON Web Tokens]]
+
 > [!summary]
 > OpenID Connect adds a standard identity layer to OAuth 2.0 so a client can verify who authenticated and obtain agreed identity claims.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/API Build/Auth Methods/Single Sign-On]], [[Upskill/SysDes/HLD/API Build/Auth Methods/Authentication Overview]], [[Upskill/SysDes/HLD/API Build/Auth Methods/OAuth 2.0]], [[Upskill/SysDes/HLD/API Build/Auth Methods/JSON Web Tokens]]
-
 ## Main Parties
 
 - **End user:** the person authenticating.
@@ -76,7 +75,6 @@ Use `(issuer, subject)` as the database identity key. Treat email and profile fi
 
 OIDC is a common protocol used to build [[Single Sign-On]].
 
-#authentication #oidc
 
 ---
 

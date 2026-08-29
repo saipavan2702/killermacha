@@ -1,9 +1,8 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Consistent Hashing Paper|Consistent Hashing Paper]]
+
 > [!summary]
 > Consistent hashing limits key movement when nodes join or leave a distributed system.
-
-Map: [[Upskill/SysDes/System Design|System Design]]
-Connections: [[Upskill/SysDes/HLD/Database Sharding|Database Sharding]], [[Upskill/SysDes/HLD/Distributed Systems Papers/Consistent Hashing Paper|Consistent Hashing Paper]]
-
 ## The Problem with Simple Hashing
 
 **Simple Approach:**

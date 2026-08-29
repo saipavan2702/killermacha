@@ -1,5 +1,5 @@
-Map: [[Upskill/WebDev/Web Development|Web Development]]
-Connections: [[Upskill/WebDev/Backend/Express.js|Express.js]]
+Tags: #webdev
+Map: [[Upskill/WebDev/Backend/Express.js|Express.js]]
 
 Socket.io is a javascript library which works by establishing a web socket connection. WebSocket is a communication protocol that provides full-duplex communication between users.
 

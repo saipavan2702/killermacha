@@ -1,9 +1,8 @@
+Tags: #java
+Map: [[Upskill/ProgramLang/Java/Collections and Type Relationships|Collections and Type Relationships]]
+
 > [!summary]
 > Modern switch expressions return values and prevent accidental fall-through; traditional statements remain useful for imperative control flow.
-
-Map: [[Upskill/ProgramLang/Java/Java|Java]]
-Connections: [[Upskill/ProgramLang/Java/Java Fundamentals|Java Fundamentals]], [[Upskill/ProgramLang/Java/Collections and Type Relationships|Collections and Type Relationships]]
-
 ---
 ## Switch Statement with `:` (Colon Syntax)
 

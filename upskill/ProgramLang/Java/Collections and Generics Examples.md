@@ -1,9 +1,8 @@
+Tags: #java
+Map: [[Upskill/ProgramLang/Java/Collections and Type Relationships|Collections and Type Relationships]]
+
 > [!summary]
 > A practical reference for modern Java collections, queues, maps, generics, bounds, and common operations.
-
-Map: [[Upskill/ProgramLang/Java/Java|Java]]
-Connections: [[Upskill/ProgramLang/Java/Collections and Type Relationships|Collections and Type Relationships]]
-
 ```java
 import java.util.*;
 import java.util.concurrent.*;
