@@ -1,6 +1,6 @@
 /*
   mmacha-theme
-  Minimal black glass for reading, writing, coding, and connected notes.
+  Soft charcoal glass for reading, writing, coding, and connected notes.
 */
 
 /* @settings
@@ -89,48 +89,48 @@ body {
 .theme-dark {
   color-scheme: dark;
 
-  --color-base-00: #07080a;
-  --color-base-05: #0a0b0d;
-  --color-base-10: #0d0e10;
-  --color-base-20: #141518;
-  --color-base-25: #18191c;
-  --color-base-30: #24262a;
-  --color-base-35: #30333a;
-  --color-base-40: #464a52;
-  --color-base-50: #646870;
-  --color-base-60: #999ca3;
-  --color-base-70: #b9bcc2;
-  --color-base-100: #dedfe2;
+  --color-base-00: #101319;
+  --color-base-05: #12161c;
+  --color-base-10: #161a21;
+  --color-base-20: #1d222b;
+  --color-base-25: #232934;
+  --color-base-30: #303744;
+  --color-base-35: #3b4351;
+  --color-base-40: #505866;
+  --color-base-50: #707783;
+  --color-base-60: #a0a5ad;
+  --color-base-70: #c0c3c9;
+  --color-base-100: #e3e4e7;
 
   --mmacha-accent: #d3a126;
   --mmacha-accent-hover: #e2b74b;
   --mmacha-link: #78add3;
   --mmacha-link-hover: #a5c7df;
 
-  --mmacha-bg-deep: #07080a;
-  --mmacha-bg-side: #0a0b0d;
-  --mmacha-bg-main: #0d0e10;
-  --mmacha-bg-raised: #18191c;
-  --mmacha-bg-code: #08090b;
-  --mmacha-glass-deep: rgba(7, 8, 10, 0.94);
-  --mmacha-glass-side: rgba(10, 11, 13, 0.91);
-  --mmacha-glass-main: rgba(13, 14, 16, 0.9);
-  --mmacha-glass-raised: rgba(24, 25, 28, 0.92);
-  --mmacha-glass-settings: rgba(24, 25, 28, 0.84);
+  --mmacha-bg-deep: #101319;
+  --mmacha-bg-side: #13171e;
+  --mmacha-bg-main: #171b22;
+  --mmacha-bg-raised: #232934;
+  --mmacha-bg-code: #11151b;
+  --mmacha-glass-deep: rgba(16, 19, 25, 0.9);
+  --mmacha-glass-side: rgba(19, 23, 30, 0.86);
+  --mmacha-glass-main: rgba(23, 27, 34, 0.88);
+  --mmacha-glass-raised: rgba(35, 41, 52, 0.9);
+  --mmacha-glass-settings: rgba(35, 41, 52, 0.84);
 
-  --mmacha-border: rgba(255, 255, 255, 0.065);
-  --mmacha-border-strong: rgba(255, 255, 255, 0.11);
-  --mmacha-hover: rgba(255, 255, 255, 0.05);
-  --mmacha-active: rgba(255, 255, 255, 0.075);
+  --mmacha-border: rgba(224, 228, 236, 0.075);
+  --mmacha-border-strong: rgba(224, 228, 236, 0.13);
+  --mmacha-hover: rgba(224, 228, 236, 0.055);
+  --mmacha-active: rgba(224, 228, 236, 0.085);
   --mmacha-focus: rgba(211, 161, 38, 0.42);
-  --mmacha-shadow: rgba(0, 0, 0, 0.34);
-  --mmacha-tooltip-bg: #24262a;
+  --mmacha-shadow: rgba(0, 0, 0, 0.27);
+  --mmacha-tooltip-bg: #303744;
   --mmacha-tooltip-text: #f2f2f3;
 
-  --background-primary: var(--mmacha-bg-main);
-  --background-primary-alt: #121316;
-  --background-secondary: var(--mmacha-bg-side);
-  --background-secondary-alt: #141518;
+  --background-primary: var(--mmacha-glass-main);
+  --background-primary-alt: rgba(29, 34, 43, 0.9);
+  --background-secondary: var(--mmacha-glass-side);
+  --background-secondary-alt: rgba(29, 34, 43, 0.86);
   --background-modifier-border: var(--mmacha-border);
   --background-modifier-border-hover: var(--mmacha-border-strong);
   --background-modifier-border-focus: var(--mmacha-focus);
@@ -142,9 +142,9 @@ body {
   --background-modifier-cover: rgba(0, 0, 0, 0.58);
   --background-modifier-message: var(--mmacha-tooltip-bg);
 
-  --text-normal: #dedfe2;
-  --text-muted: #999ca3;
-  --text-faint: #646870;
+  --text-normal: #e3e4e7;
+  --text-muted: #a0a5ad;
+  --text-faint: #707783;
   --text-on-accent: #111214;
   --text-on-accent-inverted: #f2f2f3;
   --text-selection: rgba(120, 173, 211, 0.22);
@@ -391,6 +391,13 @@ body.is-translucent :is(.mod-sidedock, .workspace-ribbon, .modal, .menu, .sugges
 .workspace,
 .horizontal-main-container {
   background: var(--mmacha-bg-deep);
+}
+
+.theme-dark :is(.workspace, .horizontal-main-container) {
+  background:
+    radial-gradient(circle at 72% 8%, rgba(129, 200, 190, 0.045), transparent 34%),
+    radial-gradient(circle at 18% 88%, rgba(186, 187, 241, 0.04), transparent 38%),
+    var(--mmacha-bg-deep);
 }
 
 :is(.titlebar, .workspace-ribbon, .mod-sidedock, .workspace-sidedock-vault-profile) {

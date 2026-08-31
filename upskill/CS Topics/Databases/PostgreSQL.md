@@ -269,11 +269,11 @@ When a row is read or written, Postgres pulls the relevant 8 KB page from disk i
 
 Inside each cached page, rows are stored as **tuples** (row versions). Two structures grow toward each other from opposite ends to make full use of space:
 
-| Structure | Location | Grows | Purpose |
-|---|---|---|---|
-| **Line Pointers** | Top of page | Downward ↓ | Slot index (0, 1, 2…) → byte offset of a tuple |
-| **Tuples** | Bottom of page | Upward ↑ | Actual row data |
-| **The Heap** | — | — | The overall file/memory structure holding raw row data |
+| Structure         | Location       | Grows      | Purpose                                                |
+| ----------------- | -------------- | ---------- | ------------------------------------------------------ |
+| **Line Pointers** | Top of page    | Downward ↓ | Slot index (0, 1, 2…) → byte offset of a tuple         |
+| **Tuples**        | Bottom of page | Upward ↑   | Actual row data                                        |
+| **The Heap**      | —              | —          | The overall file/memory structure holding raw row data |
 
 ```
 Cached Page in Shared Buffer (RAM)
@@ -532,3 +532,8 @@ SELECT ctid, xmin, xmax, id, price FROM items;
 | **Tablespace**          | Maps a logical object to a physical disk location                                 |
 | **Postgres index leaf** | Points to CTID (heap tuple) directly                                              |
 | **InnoDB index leaf**   | Points to primary key value (clustered index)                                     |
+
+---
+### References
+[postgres internal structure](https://medium.com/@jramcloud1/the-internal-structure-of-postgresql-a-deep-dive-into-how-postgresql-organizes-data-7a0952ec0569)
+[B-tree vs B+ tree](https://medium.com/@akashsdas_dev/b-trees-and-b-trees-682d363df1f7)
