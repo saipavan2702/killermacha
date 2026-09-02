@@ -117,6 +117,7 @@
   "narrowSidebarCustomWidth": 350,
   "showTooltips": false,
   "showTooltipPath": true,
+  "showTooltipTags": false,
   "showTooltipWordCount": false,
   "desktopBackground": "separate",
   "useFloatingToolbars": true,
@@ -557,7 +558,7 @@
     "#64748b",
     "#78716c"
   ],
-  "lastShownVersion": "3.3.5",
+  "lastShownVersion": "3.3.6",
   "rootFolderOrder": [],
   "rootTagOrder": [],
   "rootPropertyOrder": [],
