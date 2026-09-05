@@ -34,7 +34,8 @@
               "title": "Celluloid"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -235,11 +236,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "21858bd3e2c7c2a8",
+  "active": "34ce9ea6f005fabf",
   "lastOpenFiles": [
+    "Macha/motionArts/Items/Kingdom of Heaven.md",
     "Macha/motionArts/Celluloid.base",
-    "Macha/motionArts/Items/Control (2007).md",
     "Upskill/SysDes/HLD/Caching.md",
+    "Macha/motionArts/Items/Control (2007).md",
     "Macha/motionArts/Items/Wild Tales.md",
     "Macha/motionArts/Items/The Intouchables.md",
     "Macha/motionArts/Items/The Love Hypothesis.md",
@@ -265,7 +267,6 @@
     "Macha/motionArts/Items/Sherlock - Series.md",
     "Macha/motionArts/Items/Game of Thrones - Series.md",
     "Macha/motionArts/Items/Amrutham - Series.md",
-    "Macha/motionArts/Items/Peaky Blinders - Series.md",
     "attachments/dashboard-assets/batman-silhouette.svg",
     "attachments/dashboard-assets/botanical-vine.png",
     "attachments/dashboard-assets/aesthetic-focus-1.gif",
