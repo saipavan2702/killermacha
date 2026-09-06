@@ -2,8 +2,8 @@
 media_type: movie
 title: Bad Boys
 industry: Hollywood
-watched: false
-watched_date:
+watched: true
+watched_date: 2026-09-05
 genres:
   - Action
   - Comedy
@@ -14,9 +14,9 @@ directors:
 poster: https://image.tmdb.org/t/p/w500/x1ygBecKHfXX4M2kRhmFKWfWbJc.jpg
 year: "1995"
 cast:
-  - "Will Smith"
-  - "Martin Lawrence"
-  - "Téa Leoni"
+  - Will Smith
+  - Martin Lawrence
+  - Téa Leoni
 tags:
   - motion-art
   - movie
