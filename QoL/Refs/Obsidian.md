@@ -25,3 +25,8 @@
 - [Quite a Simple Task System](https://www.reddit.com/r/ObsidianMD/comments/1vl36o9/quite_a_simple_task_system/) - Low-friction task cards, compact navigation, and restrained styling.
 - [Published Second Brains](https://www.reddit.com/r/ObsidianMD/comments/1w02e8m/please_share_your_publishedpublic_second_brains/) - A collection of public vaults and digital gardens.
 - [Eilleen's Everything Notebook](https://quartz.eilleeenz.com/) - Clear start-here navigation and topic exploration.
+
+
+## Helpers
+https://github.com/maxmilneaus/Obsidian-Webclipper-Templates
+https://github.com/sylumer/automators
