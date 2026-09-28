@@ -6,7 +6,7 @@
   "baseFontSizeAction": true,
   "interfaceFontFamily": "",
   "textFontFamily": "",
-  "monospaceFontFamily": "",
+  "monospaceFontFamily": "JetBrains Mono,JetBrainsMono Nerd Font",
   "enabledCssSnippets": [],
   "accentColor": ""
 }
