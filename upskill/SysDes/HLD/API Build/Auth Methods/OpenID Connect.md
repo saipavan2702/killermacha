@@ -75,7 +75,6 @@ Use `(issuer, subject)` as the database identity key. Treat email and profile fi
 
 OIDC is a common protocol used to build [[Single Sign-On]].
 
-
 ---
 
 ## References

@@ -60,7 +60,6 @@ Let the client library implement the challenge-response calculation. Reimplement
 > [!note]
 > Use Digest only when integrating with a system that already requires it. Do not choose it as the default for a new API.
 
-
 ---
 
 ## References

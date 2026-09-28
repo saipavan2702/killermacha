@@ -296,7 +296,3 @@ my-nextjs-project/
 │   └── items.json          # Mock data
 └── package.json
 ```
-
-
-
-

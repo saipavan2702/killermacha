@@ -54,7 +54,6 @@ Real compensation must be idempotent. A retry of `refundCharge` should not issue
 - expose stuck workflows through metrics and alerts
 - prefer parallelism for independent reads, not uncoordinated writes
 
-
 ---
 
 ## References

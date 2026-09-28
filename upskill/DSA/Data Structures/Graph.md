@@ -68,7 +68,6 @@ return 0;
 }
 ```
 
-
 ## Dijkstra's Algorithm
 
 We use a set to sort the upcoming distances as it sorts itself. We picks shortest distance from source in a weighted edge graph.
@@ -447,4 +446,3 @@ int main() {
     return 0;
 }
 ```
-

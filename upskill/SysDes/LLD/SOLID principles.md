@@ -242,8 +242,6 @@ ISP  →  Interfaces are lean; nothing is forced on anyone; Many small interface
 DIP  →  High-level logic is shielded from low-level detail; Depend on abstractions, not concrete classes
 ```
 
-
-
 ---
 
 ## References

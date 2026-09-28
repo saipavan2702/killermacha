@@ -30,7 +30,6 @@ export default function Header() {
 }
 ```
 
-
 Functional Component with Typescript in React
 ``` tsx
 interface Props {}
@@ -49,7 +48,6 @@ class Title extends Component<Props>{};
 We use react types/ properties to define the variable/event type we are about to perform. For example `React.FormEvent`, `React.ChangeEvent<HTMLInputElement>`
 
 Hooks are the functional components provided by react to simplify the developer handling various states and values.
-
 
 ## Hooks
 
@@ -80,7 +78,6 @@ function onRender({values}){
 ```
 
 If any component takes extra time rendering its components or, any large component that had to be rendered multiple times, we can simply memorize it using `React.memo(component)`, or using `useMemo` hooks.
-
 
 ---
 ## LWC Lifecycle Execution Order (Parent → Child)
@@ -327,9 +324,6 @@ export default App;
 
 - `npm run lint` to check linting errors in next/react.
 
-
-
-
 ## React utility libraries
 - react-compare-image
 - stripe
@@ -346,4 +340,3 @@ export default App;
 - react-slick
 - react-spinners
 - react-dnd
-

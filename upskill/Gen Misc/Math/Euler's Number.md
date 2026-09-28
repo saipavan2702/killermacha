@@ -166,5 +166,3 @@ This single equation unites:
 | **Complex Numbers** | $e^{i\pi} + 1 = 0$ — uniting the five fundamental constants |
 
 > $e$ is not a curiosity. It is the natural language in which continuous change speaks.
-
-

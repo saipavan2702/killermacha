@@ -133,8 +133,5 @@ class Solution {
 }
 ```
 
-
-
 ## Practice
 [Maximum value at a given index](https://leetcode.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
-

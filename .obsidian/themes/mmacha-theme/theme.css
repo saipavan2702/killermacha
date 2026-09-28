@@ -9,13 +9,6 @@ name: mmacha-theme
 id: mmacha-theme
 settings:
   -
-    id: mmacha-accent
-    title: Accent
-    type: variable-themed-color
-    format: hex
-    default-light: '#a16d00'
-    default-dark: '#d3a126'
-  -
     id: mmacha-link
     title: Links
     type: variable-themed-color
@@ -43,9 +36,11 @@ settings:
 */
 
 body {
-  --font-interface-theme: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-text-theme: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-monospace-theme: "JetBrainsMono Nerd Font", "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  /* Use the same platform-native sans stack for UI and note text. This keeps
+     typography predictable on synced devices that do not have Inter installed. */
+  --font-interface-theme: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-text-theme: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-monospace-theme: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
 
   --mmacha-motion: 160ms;
   --mmacha-line-width: 52rem;
@@ -102,8 +97,9 @@ body {
   --color-base-70: #c0c3c9;
   --color-base-100: #e3e4e7;
 
-  --mmacha-accent: #d3a126;
-  --mmacha-accent-hover: #e2b74b;
+  /* Follow Obsidian's native accent (including Appearance > Accent color). */
+  --mmacha-accent: var(--color-accent, #7c6cf2);
+  --mmacha-accent-hover: color-mix(in srgb, var(--mmacha-accent) 82%, white);
   --mmacha-link: #78add3;
   --mmacha-link-hover: #a5c7df;
 
@@ -116,13 +112,13 @@ body {
   --mmacha-glass-side: rgba(19, 23, 30, 0.86);
   --mmacha-glass-main: rgba(23, 27, 34, 0.88);
   --mmacha-glass-raised: rgba(35, 41, 52, 0.9);
-  --mmacha-glass-settings: rgba(35, 41, 52, 0.84);
+  --mmacha-glass-settings: rgba(35, 41, 52, 0.9);
 
   --mmacha-border: rgba(224, 228, 236, 0.075);
   --mmacha-border-strong: rgba(224, 228, 236, 0.13);
   --mmacha-hover: rgba(224, 228, 236, 0.055);
   --mmacha-active: rgba(224, 228, 236, 0.085);
-  --mmacha-focus: rgba(211, 161, 38, 0.42);
+  --mmacha-focus: color-mix(in srgb, var(--mmacha-accent) 42%, transparent);
   --mmacha-shadow: rgba(0, 0, 0, 0.27);
   --mmacha-tooltip-bg: #303744;
   --mmacha-tooltip-text: #f2f2f3;
@@ -148,7 +144,7 @@ body {
   --text-on-accent: #111214;
   --text-on-accent-inverted: #f2f2f3;
   --text-selection: rgba(120, 173, 211, 0.22);
-  --text-highlight-bg: rgba(211, 161, 38, 0.22);
+  --text-highlight-bg: color-mix(in srgb, var(--mmacha-accent) 22%, transparent);
   --text-accent: var(--mmacha-link);
   --text-accent-hover: var(--mmacha-link-hover);
   --text-success: #78bd92;
@@ -248,8 +244,8 @@ body {
   --color-base-70: #4d525a;
   --color-base-100: #25282d;
 
-  --mmacha-accent: #a16d00;
-  --mmacha-accent-hover: #7f5600;
+  --mmacha-accent: var(--color-accent, #7c6cf2);
+  --mmacha-accent-hover: color-mix(in srgb, var(--mmacha-accent) 82%, black);
   --mmacha-link: #276b9b;
   --mmacha-link-hover: #174e76;
   --mmacha-bg-deep: #e9eaec;
@@ -261,12 +257,12 @@ body {
   --mmacha-glass-side: rgba(241, 242, 243, 0.88);
   --mmacha-glass-main: rgba(248, 248, 247, 0.9);
   --mmacha-glass-raised: rgba(255, 255, 255, 0.92);
-  --mmacha-glass-settings: rgba(255, 255, 255, 0.84);
+  --mmacha-glass-settings: rgba(255, 255, 255, 0.91);
   --mmacha-border: rgba(21, 24, 28, 0.085);
   --mmacha-border-strong: rgba(21, 24, 28, 0.15);
   --mmacha-hover: rgba(21, 24, 28, 0.045);
   --mmacha-active: rgba(21, 24, 28, 0.075);
-  --mmacha-focus: rgba(161, 109, 0, 0.38);
+  --mmacha-focus: color-mix(in srgb, var(--mmacha-accent) 38%, transparent);
   --mmacha-shadow: rgba(21, 24, 28, 0.14);
   --mmacha-tooltip-bg: #25282d;
   --mmacha-tooltip-text: #f8f8f7;
@@ -292,7 +288,7 @@ body {
   --text-on-accent: #ffffff;
   --text-on-accent-inverted: #25282d;
   --text-selection: rgba(39, 107, 155, 0.18);
-  --text-highlight-bg: rgba(209, 160, 38, 0.25);
+  --text-highlight-bg: color-mix(in srgb, var(--mmacha-accent) 25%, transparent);
   --text-accent: var(--mmacha-link);
   --text-accent-hover: var(--mmacha-link-hover);
   --text-success: #397c51;
@@ -391,13 +387,6 @@ body.is-translucent :is(.mod-sidedock, .workspace-ribbon, .modal, .menu, .sugges
 .workspace,
 .horizontal-main-container {
   background: var(--mmacha-bg-deep);
-}
-
-.theme-dark :is(.workspace, .horizontal-main-container) {
-  background:
-    radial-gradient(circle at 72% 8%, rgba(129, 200, 190, 0.045), transparent 34%),
-    radial-gradient(circle at 18% 88%, rgba(186, 187, 241, 0.04), transparent 38%),
-    var(--mmacha-bg-deep);
 }
 
 :is(.titlebar, .workspace-ribbon, .mod-sidedock, .workspace-sidedock-vault-profile) {
@@ -903,7 +892,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 button:active,
 .clickable-icon:active {
-  transform: scale(0.97);
+  transform: none;
 }
 
 .checkbox-container {
@@ -997,6 +986,38 @@ button:active,
   color: var(--text-normal);
 }
 
+/* Community plugin rows use Obsidian's native setting-item structure.
+   Keep descriptions shrinkable and action controls at their intrinsic width. */
+.setting-item[data-plugin-id] {
+  align-items: flex-start;
+  column-gap: 10px;
+}
+
+.setting-item[data-plugin-id] > .setting-item-info {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.setting-item[data-plugin-id] .setting-item-description {
+  overflow-wrap: anywhere;
+}
+
+.setting-item[data-plugin-id] > .setting-item-control {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  min-width: max-content;
+  margin-inline-start: 8px;
+}
+
+.setting-item[data-plugin-id] .setting-item-control button {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
 /* Bases, Canvas, Graph, and utilities */
 :is(.bases-toolbar, .bases-table-container) {
   border-color: var(--mmacha-border);
@@ -1062,24 +1083,24 @@ button:active,
 /* Graph view colors */
 .theme-dark {
   --km-graph-node: #b9bec7;
-  --km-graph-node-focused: #d3a126;
+  --km-graph-node-focused: var(--mmacha-accent);
   --km-graph-node-tag: #78add3;
   --km-graph-node-attachment: #a9a0c5;
   --km-graph-node-unresolved: #d9797f;
   --km-graph-line: rgba(154, 157, 164, 0.3);
-  --km-graph-line-highlight: #d3a126;
+  --km-graph-line-highlight: var(--mmacha-accent);
   --km-graph-text: rgba(226, 232, 240, 0.88);
   --km-graph-arrow: rgba(203, 213, 225, 0.72);
 }
 
 .theme-light {
   --km-graph-node: #15803d;
-  --km-graph-node-focused: #0369a1;
+  --km-graph-node-focused: var(--mmacha-accent);
   --km-graph-node-tag: #2563eb;
   --km-graph-node-attachment: #7e22ce;
   --km-graph-node-unresolved: #dc2626;
   --km-graph-line: rgba(71, 85, 105, 0.32);
-  --km-graph-line-highlight: #0284c7;
+  --km-graph-line-highlight: var(--mmacha-accent);
   --km-graph-text: rgba(15, 23, 42, 0.82);
   --km-graph-arrow: rgba(51, 65, 85, 0.66);
 }
@@ -1527,6 +1548,8 @@ body.theme-dark .mermaid svg {
 @media (max-width: 700px) {
   body {
     --file-line-width: 100%;
+    --font-text-size: 16px;
+    --line-height-normal: 1.58;
   }
 
   .metadata-container {
@@ -1535,6 +1558,46 @@ body.theme-dark .mermaid svg {
 
   .workspace-drawer-inner {
     background: var(--background-secondary);
+  }
+
+  /* Keep note content comfortably inset while giving the phone screen its
+     full width. Tables and long code lines scroll inside the note. */
+  .markdown-preview-sizer {
+    padding-inline: 1rem !important;
+  }
+
+  .markdown-rendered table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .markdown-rendered :is(p, li, td, th, a) {
+    overflow-wrap: anywhere;
+  }
+
+  .markdown-rendered pre {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Reduce blur and transparency on mobile for steadier contrast and less
+     rendering work; preserve the same light/dark palette. */
+  body.is-translucent :is(.workspace, .horizontal-main-container, .mod-sidedock, .workspace-ribbon) {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  body.is-translucent.theme-dark :is(.workspace, .horizontal-main-container, .mod-sidedock, .workspace-ribbon) {
+    background: #101319;
+  }
+
+  body.is-translucent.theme-light :is(.workspace, .horizontal-main-container, .mod-sidedock, .workspace-ribbon) {
+    background: #f1f2f3;
+  }
+
+  .is-mobile :is(.clickable-icon, .nav-file-title, .nav-folder-title, .tree-item-self) {
+    min-height: 40px;
   }
 }
 

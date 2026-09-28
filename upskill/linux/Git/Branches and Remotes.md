@@ -57,7 +57,6 @@ Prefer `git switch` for branch movement. Older documentation often uses the mult
 | `git bisect bad <commit>` | Mark a known-bad commit |
 | `git bisect reset` | End the bisect session |
 
-
 ---
 
 ## References

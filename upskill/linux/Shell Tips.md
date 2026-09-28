@@ -99,8 +99,6 @@ exit
 | `awk`                        | Text processing (e.g., extract columns).        |
 | `sed`                        | Stream editing (e.g., find & replace in files). |
 
-
-
 ### `<(command)` - Input Substitution (Read From)
 
 ```bash
@@ -152,7 +150,6 @@ diff original.txt <(sed 's/rabbit/groundhog/I' original.txt)
 
 Shows exactly what changes without touching `original.txt`. Safe experimentation FTW.
 
-
 ```bash
 ./myprogram 2> >(tee errors.log) | less
 ```
@@ -168,7 +165,6 @@ tar cf - mydir | tee >(ssh server1 "tar xf -") >(ssh server2 "tar xf -") > /dev/
 - Both servers extract **in parallel** while receiving
 - `> /dev/null` → Discard the final copy (already went everywhere)
 
-
 ```bash
 cat file1 file2 | vi -  # Opens as stdin buffer, awkward to save
 ```
@@ -183,7 +179,6 @@ Vim sees a "real file" it can edit and save normally. Full editor powers unlocke
 - **Shell support:** Bash, Zsh, Ksh ✅ | POSIX sh ❌
 - **Lifetime:** Exists only during command execution
 - **Cleanup:** Automatic—no orphaned files
-
 
 ###  Shape your own prompt
 
@@ -292,8 +287,6 @@ strace -f -pid <pid>                          # follow forked children
 
 > [!tip] When something is "just hanging"
 > `strace` will often tell you in one line — blocked on a `read()` from a dead socket, or stuck on `openat()` for a missing config file.
-
-
 
 ---
 

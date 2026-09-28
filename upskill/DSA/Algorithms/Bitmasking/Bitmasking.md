@@ -20,7 +20,6 @@ Use a bitmask when:
 
 For a mask named `mask`, bit `i` represents whether item `i` is present.
 
-
 ---
 
 ## References

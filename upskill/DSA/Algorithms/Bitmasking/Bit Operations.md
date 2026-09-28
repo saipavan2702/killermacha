@@ -79,4 +79,3 @@ In two's-complement arithmetic, `-x` is `~x + 1`. Every bit below the least-sign
 int x = 40;       // 101000
 int lsb = x & -x; // 001000 = 8
 ```
-

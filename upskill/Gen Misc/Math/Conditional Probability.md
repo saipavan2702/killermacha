@@ -54,7 +54,6 @@ Used to track **two events at once** via a table. **Joint** = both happen togeth
 
 ---
 
-
 ## 9. Law of Total Probability
 
 Break multi-path problems down, calculate each route, and sum them.

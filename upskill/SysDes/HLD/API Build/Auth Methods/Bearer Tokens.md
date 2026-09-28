@@ -72,7 +72,6 @@ Always check:
 
 Keep access tokens short-lived and never place them in query parameters unless a protocol leaves no safer option.
 
-
 ---
 
 ## References

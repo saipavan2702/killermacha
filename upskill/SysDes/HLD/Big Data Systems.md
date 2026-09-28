@@ -193,4 +193,8 @@ class SparkCoordinator:
 - ❌ Low latency requirements (distributed has overhead)
 - ❌ Small team without big data expertise
 
+## References
+
+- [Building and scaling Notion's data lake](https://www.notion.com/blog/building-and-scaling-notions-data-lake) - CDC ingestion from sharded Postgres through Kafka and Hudi into S3, with Spark processing.
+
 ---

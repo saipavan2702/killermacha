@@ -28,8 +28,6 @@ docker exec -it(interactive)
 
  We sometimes see that two containers running on same port but its fine as we just have to bind them to different host ports along with some configuration.
 
-
-
 ---
 
 ## References

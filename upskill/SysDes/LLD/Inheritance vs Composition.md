@@ -144,7 +144,6 @@ DeliveryMethod method = new GroundShipper();   // ✅
 DeliveryMethod method = new DigitalDelivery(); // ✅ same type, different behaviour
  ```
 
-
 ### Dependency Injection
 
 Instead of service creating delivery method we inject it from outside.
@@ -172,8 +171,6 @@ service.processOrder(order, new DigitalDelivery()); // Digital delivery — same
 When is Composition bad?
 -  We end up writing more boilerplate code.
 -  verbose wrapper methods
-
-
 
 ---
 

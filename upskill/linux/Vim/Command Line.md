@@ -13,7 +13,6 @@ Map: [[Upskill/Linux/Vim/Files Buffers and Windows|Files Buffers and Windows]], 
 
 ---
 
-
 ## Vim Shell
 - **`!{motion}`** - Filter text through a shell command in normal mode
 - **`!`** (in visual mode) - Filter selected text through a shell command
@@ -42,7 +41,6 @@ Map: [[Upskill/Linux/Vim/Files Buffers and Windows|Files Buffers and Windows]], 
 - **`:r !ls -la`** - Insert directory listing
 - **`:r !whoami`** - Insert current username
 - **`:r !pwd`** - Insert current working directory
-
 
 - **`:sort`** - Sort lines alphabetically
 - **`:sort u`** - Sort lines and remove duplicates  similar to **`:%!sort | uniq`**

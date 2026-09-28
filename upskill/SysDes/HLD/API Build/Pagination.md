@@ -69,5 +69,3 @@ const p2 = await getItems(10, p1.nextCursor);
 Offset says: "skip N rows." The database still has to walk past them.
 
 Cursor says: "start after this item." The database can jump through an index.
-
-

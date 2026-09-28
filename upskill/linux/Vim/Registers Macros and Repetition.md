@@ -45,7 +45,6 @@ n@<char>        " Play macro n times (e.g., 5@a)
 
 ---
 
-
 ## 🔁 Dot Formula
 
 Make repeatable changes with the `.` command (repeat last change).

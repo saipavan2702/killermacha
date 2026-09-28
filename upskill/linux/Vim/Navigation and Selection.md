@@ -61,8 +61,6 @@ Map: [[Upskill/Linux/Vim/Editing Text|Editing Text]]
 
 ---
 
-
-
 ## 🚀 Jumplist Navigation
 ```vim
 Ctrl + o        " Jump back in jumplist

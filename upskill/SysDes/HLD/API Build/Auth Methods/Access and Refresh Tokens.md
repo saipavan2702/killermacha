@@ -84,7 +84,6 @@ The transaction prevents two concurrent uses from both succeeding. Store a verif
 
 Revoke refresh tokens on logout, password reset, account disablement, device removal, suspicious reuse, or administrative action.
 
-
 ---
 
 ## References

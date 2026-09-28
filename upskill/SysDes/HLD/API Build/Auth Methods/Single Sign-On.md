@@ -270,7 +270,6 @@ Local logout destroys one app's session. IdP logout ends the central login sessi
 - **SSO removes authorization:** every application must still enforce its own permissions.
 - **One logout automatically ends everything:** only if coordinated logout or revocation is designed.
 
-
 ---
 
 ## References

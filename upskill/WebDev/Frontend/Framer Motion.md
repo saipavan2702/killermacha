@@ -148,7 +148,6 @@ Now in above first we can see that transition has times feature and animate has 
 
 `<MotionConfig/>` gives another kind of expression like variant as the props passed to MotionConfig will be applied to it's children.
 
-
 Next is controlled animation. We control the animations via external events. We use `useAnimationControls` hook to enable this controlled animation.
 
 ```jsx
@@ -286,11 +285,6 @@ const ViewBased = () => {
 export default ViewBased;
 ```
 - Use `onClick((e)=>e.stopPropogation())` to make sure that modal does not disappear when it's clicked on.
-
-
-
-
-
 
 [[React]]
 [[Upskill/WebDev/Frontend/CSS|CSS]]

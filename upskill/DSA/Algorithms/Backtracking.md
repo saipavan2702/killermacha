@@ -5,68 +5,46 @@ Map: [[Upskill/DSA/Algorithms/Bitmasking/Bitmasking|Bitmasking]]
 > Backtracking explores one choice at a time and abandons a branch as soon as it violates the problem constraints.
 ## Sudoku Solver
 
+This solver assumes an `N × N` board where `N` is a perfect square and `0` marks an empty cell.
+
 ```cpp
 #include <vector>
 #include <cmath>
 using namespace std;
 
-bool fill(vector<vector<int>>& s, int i, int j, int x) {
-    int n;
-    n = s.size();
+bool isSafe(const vector<vector<int>>& board, int row, int col, int value) {
+    const int n = static_cast<int>(board.size());
+    const int boxSize = static_cast<int>(sqrt(n));
 
-    for (int r = 0; r < n; r++) {
-        if (s[i][r] == x)
-            return 0;
-        if (s[r][j] == x)
-            return 0;
+    for (int i = 0; i < n; ++i) {
+        if (board[row][i] == value || board[i][col] == value) return false;
     }
 
-    int rn, sr, sc;
-    rn = sqrt(n);
-    sr = (i / rn) * rn;
-    sc = (j / rn) * rn;
-
-    for (int r = sr; r < sr + rn; r++) {
-        for (int l = sc; l < sc + rn; l++) {
-            if (s[r][l] == x)
-                return 0;
+    const int boxRow = (row / boxSize) * boxSize;
+    const int boxCol = (col / boxSize) * boxSize;
+    for (int r = boxRow; r < boxRow + boxSize; ++r) {
+        for (int c = boxCol; c < boxCol + boxSize; ++c) {
+            if (board[r][c] == value) return false;
         }
     }
-
-    return 1;
+    return true;
 }
 
-bool solver(vector<vector<int>>& s, int i, int j) {
-    int n;
-    n = s.size();
+bool solveSudoku(vector<vector<int>>& board, int row = 0, int col = 0) {
+    const int n = static_cast<int>(board.size());
+    if (row == n) return true;
 
-    if (i == n)
-        return 1;
+    const int nextRow = col == n - 1 ? row + 1 : row;
+    const int nextCol = col == n - 1 ? 0 : col + 1;
+    if (board[row][col] != 0) return solveSudoku(board, nextRow, nextCol);
 
-    if (j == n)
-        return solver(s, i + 1, 0);
-
-    if (s[i][j] != 0)
-        return solve(s, i, j + 1);
-
-    for (int t = 1; t <= n; t++) {
-        if (fill(s, i, j, t)) {
-            s[i][j] = t;
-            bool after_fill = fill(s, i, j + 1, t);
-            if (after_fill)
-                return 1;
+    for (int value = 1; value <= n; ++value) {
+        if (isSafe(board, row, col, value)) {
+            board[row][col] = value;
+            if (solveSudoku(board, nextRow, nextCol)) return true;
+            board[row][col] = 0;
         }
     }
-
-    s[i][j] = 0;
-    return 0;
+    return false;
 }
-
-vector<vector<int>> solve(vector<vector<int>>& s) {
-    solver(s, 0, 0);
-    return s;
-}
-
 ```
-
-

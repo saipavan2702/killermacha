@@ -11,38 +11,28 @@
 
 ## Web Tools
 
-| Tool | Use it for | Link |
-| --- | --- | --- |
-| GitReverse | Turn a GitHub repository or live site into a structured prompt for an AI assistant. Replace `github.com` with `gitreverse.com` in a repository URL. | [gitreverse.com](https://gitreverse.com) |
-| GitHub Compare | See the complete difference between two commits or branches. Append `/compare/branch-one...branch-two` to a repository URL. | [GitHub docs](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits) |
-| DevDocs | Fast, offline-capable documentation browser for languages and frameworks. | [devdocs.io](https://devdocs.io) |
-| JSON Crack | Explore and edit deeply nested JSON as an interactive tree or graph. | [jsoncrack.com](https://jsoncrack.com) |
-| dbdiagram.io | Sketch database tables in a small DSL and generate an ER diagram as you type. | [dbdiagram.io](https://dbdiagram.io) |
-| roadmap.sh | Visual, role-based learning roadmaps for frontend, backend, DevOps, and more. | [roadmap.sh](https://roadmap.sh) |
-| Eagle Light | Local Chromium browser for agent-led tasks in signed-in sessions, with isolated workspaces. | Search **Eagle Light Citrolabs** |
+| Tool           | Use it for                                                                                                                                          | Link                                                                                                                                       |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| GitReverse     | Turn a GitHub repository or live site into a structured prompt for an AI assistant. Replace `github.com` with `gitreverse.com` in a repository URL. | [gitreverse.com](https://gitreverse.com)                                                                                                   |
+| GitHub Compare | See the complete difference between two commits or branches. Append `/compare/branch-one...branch-two` to a repository URL.                         | [GitHub docs](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits) |
+| DevDocs        | Fast, offline-capable documentation browser for languages and frameworks.                                                                           | [devdocs.io](https://devdocs.io)                                                                                                           |
+| JSON Crack     | Explore and edit deeply nested JSON as an interactive tree or graph.                                                                                | [jsoncrack.com](https://jsoncrack.com)                                                                                                     |
+| dbdiagram.io   | Sketch database tables in a small DSL and generate an ER diagram as you type.                                                                       | [dbdiagram.io](https://dbdiagram.io)                                                                                                       |
+| roadmap.sh     | Visual, role-based learning roadmaps for frontend, backend, DevOps, and more.                                                                       | [roadmap.sh](https://roadmap.sh)                                                                                                           |
+| Eagle Light    | Local Chromium browser for agent-led tasks in signed-in sessions, with isolated workspaces.                                                         | Search **Eagle Light Citrolabs**                                                                                                           |
 
 ## Browser Extensions
 
-| Tool | Use it for | Link |
-| --- | --- | --- |
-| Recall | Turn articles and videos into searchable AI notes; use augmented browsing to surface saved context on related pages. | [Chrome Web Store](https://chromewebstore.google.com/search/Recall) |
-| OneTab | Collapse tabs into named groups to reduce memory use; share a group as a single web page. | [Chrome Web Store](https://chromewebstore.google.com/search/OneTab) |
-| Unhook | Remove YouTube feeds, Shorts, recommendations, and comments to keep course watching focused. | [Chrome Web Store](https://chromewebstore.google.com/search/Unhook) |
-| Video Speed Controller | Control playback on most video sites—up to 16×—with shortcuts while skimming long videos. | [Chrome Web Store](https://chromewebstore.google.com/search/Video%20Speed%20Controller) |
-| Volume Master | Boost browser audio when 100% is not enough; keep below maximum to avoid crackling and distortion. | [Chrome Web Store](https://chromewebstore.google.com/search/Volume%20Master) |
-| Popper Blocker | Block pop-ups, login overlays, and anti-ad-block prompts on streaming and download sites. | [Chrome Web Store](https://chromewebstore.google.com/search/Popper%20Blocker) |
-| QuillBot | Check and rewrite text directly in fields; use **Fix All** for quick cleanup and **Humanize** for more natural phrasing. | [Chrome Web Store](https://chromewebstore.google.com/search/QuillBot) |
-| Momentum | Replace new tabs with a focus dashboard; set one daily priority where you will see it repeatedly. | [momentumdash.com](https://momentumdash.com) |
-| Dark Reader | Apply proper dark mode while preserving the original colors of images and media. | [darkreader.org](https://darkreader.org) |
-| NewsGuard | Quickly screen news credibility with journalist-rated shields, including beside some AI-response citations. | [newsguardtech.com](https://www.newsguardtech.com) |
-| Bitwarden | Generate, sync, and autofill passwords across unlimited devices on the free tier. | [bitwarden.com](https://bitwarden.com) |
-
-## Add an Entry
-
-Keep new items short and action-oriented:
-
-```md
-| Tool | One sentence: when to use it and why | [Link](https://example.com) |
-```
-
-Place it under the closest existing section; create a new section only when three or more related entries need it.
+| Tool                   | Use it for                                                                                                               | Link                                                                                    |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| Recall                 | Turn articles and videos into searchable AI notes; use augmented browsing to surface saved context on related pages.     | [Chrome Web Store](https://chromewebstore.google.com/search/Recall)                     |
+| OneTab                 | Collapse tabs into named groups to reduce memory use; share a group as a single web page.                                | [Chrome Web Store](https://chromewebstore.google.com/search/OneTab)                     |
+| Unhook                 | Remove YouTube feeds, Shorts, recommendations, and comments to keep course watching focused.                             | [Chrome Web Store](https://chromewebstore.google.com/search/Unhook)                     |
+| Video Speed Controller | Control playback on most video sites—up to 16×—with shortcuts while skimming long videos.                                | [Chrome Web Store](https://chromewebstore.google.com/search/Video%20Speed%20Controller) |
+| Volume Master          | Boost browser audio when 100% is not enough; keep below maximum to avoid crackling and distortion.                       | [Chrome Web Store](https://chromewebstore.google.com/search/Volume%20Master)            |
+| Popper Blocker         | Block pop-ups, login overlays, and anti-ad-block prompts on streaming and download sites.                                | [Chrome Web Store](https://chromewebstore.google.com/search/Popper%20Blocker)           |
+| QuillBot               | Check and rewrite text directly in fields; use **Fix All** for quick cleanup and **Humanize** for more natural phrasing. | [Chrome Web Store](https://chromewebstore.google.com/search/QuillBot)                   |
+| Momentum               | Replace new tabs with a focus dashboard; set one daily priority where you will see it repeatedly.                        | [momentumdash.com](https://momentumdash.com)                                            |
+| Dark Reader            | Apply proper dark mode while preserving the original colors of images and media.                                         | [darkreader.org](https://darkreader.org)                                                |
+| NewsGuard              | Quickly screen news credibility with journalist-rated shields, including beside some AI-response citations.              | [newsguardtech.com](https://www.newsguardtech.com)                                      |
+| Bitwarden              | Generate, sync, and autofill passwords across unlimited devices on the free tier.                                        | [bitwarden.com](https://bitwarden.com)                                                  |

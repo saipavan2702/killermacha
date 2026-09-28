@@ -13,6 +13,7 @@ https://www.youtube.com/watch?v=muJf6SwEaa0
 https://www.youtube.com/watch?v=9i1gQ7w2V24
 https://www.youtube.com/watch?v=NULWyn8Hqs8
 https://www.youtube.com/watch?v=3GJcskn5mAg
+https://www.youtube.com/watch?v=JSTUtRQ8Hwc
 
 ## Projects
 
@@ -23,7 +24,6 @@ https://github.com/AmanTahiliani/PeerNotes/blob/main/file_peer/peer_service.py
 https://github.com/devhulk/simple-colly-example/blob/main/crawler/crawler.go
 https://github.com/progFilthi
 https://github.com/mingodando
-
 
 >[!info]
 >1. Dioxus - cross-platform app framework for Rust.
@@ -40,4 +40,3 @@ https://github.com/mingodando
 > 12.  Build Web3 apps using Thirdweb
 > 13.  Develop food recipes using Food APIs
 > 14.  Develop real-time trains detection using real-time APIs
-

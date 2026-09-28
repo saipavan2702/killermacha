@@ -129,9 +129,9 @@ Always iterate by **interval length** (short → long), so smaller subproblems a
 #### 5. The Mental Model
 > *"I'm looking at the leftmost ball. I can either pay 1 to kill it, or spend some moves to bring a same-colored friend next to it so they both die for free."*
 
-
 ---
 
 ## References
 
 - [What is Interval DP?](https://www.youtube.com/watch?v=dv_dGwrazuE) - Interval DP intuition.
+- [Dynamic Programming Patterns](https://leetcode.com/discuss/post/4988261/dynamic-programming-patterns-by-sgupta99-hbhb/) - Pattern-based DP problem-solving guide.

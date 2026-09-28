@@ -59,7 +59,6 @@ Use a credential provider or secret manager in a real application. Do not hard-c
 > [!warning]
 > Never accept Basic Auth over plain HTTP. Treat every captured header as a captured password.
 
-
 ---
 
 ## References

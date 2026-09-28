@@ -1,11 +1,12 @@
 {
   "cssTheme": "mmacha-theme",
-  "theme": "system",
+  "theme": "obsidian",
   "baseFontSize": 13,
   "translucency": true,
   "baseFontSizeAction": true,
   "interfaceFontFamily": "",
   "textFontFamily": "",
   "monospaceFontFamily": "JetBrainsMono Nerd Font",
-  "enabledCssSnippets": []
+  "enabledCssSnippets": [],
+  "accentColor": ""
 }

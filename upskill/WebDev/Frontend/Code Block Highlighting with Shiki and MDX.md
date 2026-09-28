@@ -358,4 +358,3 @@ Expected result:
 - line 4 is highlighted
 - line 6 appears as an added line
 - line 7 appears as a removed line
-

@@ -46,7 +46,6 @@ This assignment pattern has `2^n` states and up to `n` transitions per state, fo
 6. [SPOJ HIST2](https://www.spoj.com/problems/HIST2/)
 7. [Codeforces 895C](https://codeforces.com/problemset/problem/895/C)
 
-
 ---
 
 ## References

@@ -81,7 +81,6 @@ person.greet(); // Hello Asha
 
 If a property is not found directly on `person`, JavaScript follows its prototype to `greeter`, then continues until the chain ends at `null`.
 
-
 ---
 
 ## References

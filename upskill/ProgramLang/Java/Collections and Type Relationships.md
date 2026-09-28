@@ -33,7 +33,6 @@ Iterable  (interface)
                                                                 └── implements → TreeSet
 ```
 
-
 ### Interface → Concrete Class (what `implements` what)
 
 | Concrete Class | Implements | Also extends |

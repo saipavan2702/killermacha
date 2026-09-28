@@ -32,7 +32,6 @@ print(add_items(3, [10]))  # [10, 3]
 * ❌ avoid mutable default arguments (`list=[]`, `dict={}`, `set=set()`).
 * ✅ use `None` and initialise inside the function.
 
-
 ## Recursion Limits
 
 Python has a configurable recursion-depth limit.
@@ -58,7 +57,6 @@ Why it crashes:
 - Hitting the OS / CPython stack limit → RecursionError
 
 Increasing the limit can postpone the crash—but not fix the underlying issue.
-
 
 ## Generators for Large Files
 

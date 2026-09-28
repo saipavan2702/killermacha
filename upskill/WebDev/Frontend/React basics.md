@@ -3,7 +3,6 @@ Map: [[Upskill/WebDev/Frontend/Frontend Architecture|Frontend Architecture]]
 
 ==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
-
 # Excalidraw Data
 
 ## Text Elements
@@ -212,7 +211,6 @@ Rendering is handled by packages called renderers (React DOM, React Native, etc.
 Most of the actual implementation lives in the renderers
 They begin the reconciliation process. They generate the tree of elements and insert
     it wherever it has to be inserted
-
 
 We usually only import ReactDOM once and call its render() method once ^cDXxPYo4
 
@@ -446,4 +444,3 @@ dwBbpW4gDeBHLYvjab5WnEplhEWmZjGTIAeVuE5t2LyBod+g5QCtBzfTAV4BTW4RjzBaQUKQqh0QP8Dn
 TyNoVLaEActr1ARYjdnABN2W4MVp6mtghAA2CIAA
 ```
 %%
-

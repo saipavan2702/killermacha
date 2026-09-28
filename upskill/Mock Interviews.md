@@ -14,8 +14,6 @@ Above mentioned timings are also tentative. If time not permits I may extend the
 
 *Keep in mind that interview will be hard and prepare accordingly, no mercy.*
 
-
-
 DSA
 
 1. https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/description/
@@ -24,8 +22,6 @@ DSA
 4. https://leetcode.com/problems/decode-ways/description/
 5. https://leetcode.com/problems/sum-of-subarray-minimums/description/
 6. https://leetcode.com/problems/trapping-rain-water/description/
-
-
 
 OOPs
 
@@ -49,7 +45,6 @@ CS Topics
 9. Avoiding deadlocks
 10. Page fault? Semaphores?
 11. Virtual memory? Thrashing?
-
 
 SQL
 

@@ -12,6 +12,7 @@ https://github.com/IllyaStarikov/.dotfiles
 https://github.com/BreadOnPenguins/dots
 https://github.com/jakmaz/dotfiles
 https://github.com/DakshG07
+https://github.com/JazzyGrim/dotfiles
 
 ---
 ## Ghostty
@@ -87,7 +88,6 @@ https://github.com/joshmedeski/dotfiles
 https://github.com/tom-delalande/setup/tree/main
 https://github.com/jmarcelomb/.dotfiles/blob/main/.config/tmux/tmux.conf
 
-
 Blogs
 https://micahkepe.com/blog/tmux-config/#preview-of-changes
 https://raine.dev/blog/my-tmux-setup/
@@ -102,7 +102,6 @@ https://github.com/MeanderingProgrammer/render-markdown.nvim
 https://github.com/axieax/urlview.nvim
 https://github.com/SvenBroeckling/nvim-0.12-config
 https://github.com/Piotr1215/dotfiles
-https://github.com/JazzyGrim/dotfiles
 https://github.com/dgox16/dotfiles/blob/main/.config/nvim/lua/configs/lualine.lua
 https://github.com/fitiavana07/.vim/blob/main/vimrc
 https://github.com/craftzdog/dotfiles-public
@@ -121,3 +120,6 @@ https://www.youtube.com/watch?v=G89oddoYZl4
 
 ---
 
+## Android
+
+- [Google Shortcuts Launcher](https://github.com/WSTxda/Google-Shortcuts-Launcher) - Adds shortcuts to Google app features from the Android launcher app drawer.

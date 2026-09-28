@@ -47,7 +47,6 @@ The framework API varies, but the important properties are a random opaque ID, s
 - **CSRF:** use `SameSite`, CSRF tokens, and origin checks for state-changing requests.
 - **Scaling:** use a shared session store or carefully designed sticky sessions.
 
-
 ---
 
 ## References

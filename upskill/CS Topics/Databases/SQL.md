@@ -118,7 +118,6 @@ SELECT manager_id, MIN(salary) FROM employees WHERE manager_id IS NOT NULL GROUP
 > [!TIP] The Solution
 > Repeatedly Googling `LEFT` vs `RIGHT` joins. The best practice is to stick to **LEFT JOIN** consistently to keep the mental model of "Left table = Primary source".
 
-
 - **Notes**
 
     % Represents zero or more characters
@@ -126,7 +125,6 @@ SELECT manager_id, MIN(salary) FROM employees WHERE manager_id IS NOT NULL GROUP
     [] Represents any single character within the brackets
     ^ Represents any character not in the brackets
     {} Represents any escaped character
-
 
 ## Optimization Workflow
 
@@ -165,9 +163,6 @@ SELECT * FROM users WHERE id IN (1, 2, 3, ...);
 - **Eager load** associations you know you'll need
 - **Heavy reads** → replica | **Writes** → primary
 - Keep analytics off your primary DB
-
-
-
 
 ## Indexes
 
@@ -212,7 +207,6 @@ Email appears many times when `WHERE` is used; If the column rarely appears in f
 So for Email cardinality is as high as it gets coz it is unique for each user. Indexes work best  on the columns with high cardinality as each lookup  returns few rows.
 Compare this to a low-cardinality column like `is_active` (boolean). Half the table is true, half is false. An index on `is_active` is nearly useless — Postgres often ignores it and does a sequential scan anyway because reading a huge chunk of the table through an index is slower than just scanning sequentially.
 
-
 ### Is the table large enough to benefit from an index?
 
 At 1,000 rows a sequential scan is fast.
@@ -221,7 +215,6 @@ At 10,000,000 rows it is a serious problem.
 
 The rule of thumb: tables under ~10,000 rows rarely need manual indexes beyond primary key and unique constraints.
 Tables over 100,000 rows where slow queries exist — run `EXPLAIN ANALYZE` and look.
-
 
 ### Does a unique constraint already exist?
 
@@ -233,7 +226,6 @@ FROM pg_indexes
 WHERE tablename = 'users';
 ```
 
-
 ## The Write Tax
 
 An Index is not one time cost. It occurs on every `INSERT, UPDATE, DELETE`. So when we insert a row, Postgres writes to every index that covers any column on that row. Ten Indexes on a table = ten index structures updated on every insert.
@@ -244,11 +236,9 @@ INSERT INTO users (id, email, name, status, country, created_at, ...)
 VALUES (...);
 ```
 
-
 For a read-heavy table like users, this is fine trade-off. But for high-write tables like event logs, audit trails, metrics, message queues excessive indexes can degrade throughput.
 
 >`UPDATE` is worse than `INSERT` in some cases. If we update something Postgres removes old entry and inserts a new one. Two index operations per updated row. That's double the write tax.
-
 
 ### Storage Bloat
 
@@ -290,7 +280,6 @@ CREATE INDEX idx_users_created ON users(created_at);
 CREATE INDEX idx_users_status_created ON users(status, created_at);
 ```
 
-
 ### Decision rule
 
 ```sql
@@ -304,20 +293,13 @@ EXPLAIN ANALYZE the slow query
 
 > Measure first. Index second. Audit regularly.
 
-
-
-
-
 ## Review Questions
-
 
 1. How to clean data in SQL?
     -  Missing values - use coalesce() to replace null
     -  Remove Duplicates - use DISTINCT
     -  Standardise formats - making all values uppercase or lowercase
     -  Extra white spaces removal
-
-
 
 ---
 

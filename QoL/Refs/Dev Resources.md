@@ -1,7 +1,6 @@
 > [!summary]
 > Broad developer roadmaps, project collections, open-source references, and career material that do not belong to one technical concept note.
 
-
 ## Topic Maps
 
 - Learning
@@ -53,3 +52,4 @@
 - [Jitesh Codes](https://jiteshcodes.com/)
 - [Trevor O](https://trevoro.net/)
 - [Orcdev](https://www.orcdev.com/)
+- [kuda.ai](https://kuda.ai/) - Programming and music theory.

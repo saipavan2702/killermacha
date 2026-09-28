@@ -64,7 +64,6 @@ Polymorphism allows the **same interface** to represent different underlying for
 - **Constructor** → Special function, called automatically when an object is created. Used to initialise members.
 - **Destructor** → Special function, called automatically when an object is destroyed. Prefixed with a `~` (tilde).
 
-
 ## **`this` Pointer**
 The `this` keyword refers to the **current instance** of the class.
 
@@ -72,7 +71,6 @@ Uses:
 1. Passing the current object as a parameter.
 2. Referring to instance variables of the class.
 3. Declaring indexers.
-
 
 ## **Namespaces**
 - Used to **avoid ambiguity** when multiple identifiers (functions, variables, classes) have the same name.
