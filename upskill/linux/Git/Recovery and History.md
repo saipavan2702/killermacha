@@ -60,7 +60,6 @@ Map: [[Upskill/Linux/Git/Everyday Git|Everyday Git]], [[Upskill/Linux/Git/Branch
 | `git checkout -b <name>` | `git switch -c <name>` |
 | `git checkout -- <file>` | `git restore <file>` |
 
-
 ---
 
 ## References

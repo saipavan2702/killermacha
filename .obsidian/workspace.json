@@ -4,49 +4,77 @@
     "type": "split",
     "children": [
       {
-        "id": "3f628676d275239d",
+        "id": "bbbbdf840653ce12",
         "type": "tabs",
         "children": [
           {
-            "id": "5a8b0ce52f12a144",
+            "id": "a57fa3e3ad62f7f7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "QoL/Configs.md",
+                "file": "Upskill/SysDes/LLD/Clean Code Patterns.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Configs"
+              "title": "Clean Code Patterns"
             }
           },
           {
-            "id": "f485beb257990d07",
+            "id": "a4857eb274b28a4c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "QoL/Refs/MacOS.md",
+                "file": "Upskill/SysDes/LLD/Design Patterns/Creational.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MacOS"
+              "title": "Creational"
             }
           },
           {
-            "id": "93f4472fc6c5300f",
+            "id": "7e35500e3b5aef98",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "QoL/Refs/Obsidian.md",
+                "file": "Upskill/SysDes/LLD/Design Patterns/Behavioral.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Obsidian"
+              "title": "Behavioral"
+            }
+          },
+          {
+            "id": "fe9445cd864ae62e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Upskill/ProgramLang/Java/Spring Boot Interview Questions.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Spring Boot Interview Questions"
+            }
+          },
+          {
+            "id": "e3aef839f13c0032",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Upskill/ProgramLang/Java/Collections and Generics Examples.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Collections and Generics Examples"
             }
           }
         ],
@@ -70,7 +98,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true,
+                "autoReveal": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -119,7 +147,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 379.0859375
+    "width": 330.11328125
   },
   "right": {
     "id": "e5d2ad9fec6d31d0",
@@ -251,34 +279,35 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "93f4472fc6c5300f",
+  "active": "7e35500e3b5aef98",
   "lastOpenFiles": [
-    "QoL/Configs.md",
-    "QoL/Refs/MacOS.md",
-    "QoL/Refs/Obsidian.md",
+    "Upskill/SysDes/LLD/Design Patterns/Creational.md",
+    "Upskill/ProgramLang/Java/Collections and Generics Examples.md",
     "Macha/motionArts/Celluloid.base",
-    "Macha/motionArts/Items/The Fisher King.md",
-    "Macha/motionArts/Items/The Craft (1996).md",
-    "QoL/Refs/Typing.md",
-    "Upskill/SysDes/Case Studies/Debug Slow API End Point.md",
-    "Tasks/Tasks.md",
-    "Home.md",
-    "Interview Quick Notes.md",
+    "Macha/motionArts/Items/Scorned.md",
+    "Upskill/ProgramLang/Java/Spring Boot Interview Questions.md",
     "Orcl/Weekly Report.md",
-    "Macha/motionArts/Items/ACCA - 13-Territory Inspection Dept. - Anime.md",
-    "Macha/motionArts/Items/Gladiator.md",
-    "Macha/motionArts/Items/Gladiator 2.md",
-    "Macha/motionArts/Items/American Gangster (2007).md",
-    "Macha/motionArts/Items/American Gangstar.md",
-    "Macha/motionArts/Items/Martian (2015).md",
-    "Macha/motionArts/Items/Martian.md",
-    "Macha/motionArts/Items/Coyote vs. Acme.md",
-    "Macha/motionArts/Items/Bridge to Terabithia.md",
-    "Macha/motionArts/Items/Remain (2027).md",
-    "Macha/motionArts/Items/Into the Wild.md",
-    "Lingo/Inglis/Vocabulary.md",
-    "Upskill/SysDes/Case Studies/Designing Twitter.md",
-    "Upskill/SysDes/Case Studies/Flash Sale Notifications.md",
+    "Upskill/SysDes/LLD/Design Patterns/Behavioral.md",
+    "Upskill/DSA/Practice Problems.md",
+    "QoL/Ideas.md",
+    "QoL/Workspace.md",
+    "QoL/Refs/Dev Tools & Extensions.md",
+    "Upskill/DSA/Data Structures/XOR Linked List.md",
+    "Upskill/DSA/Data Structures/Tree.md",
+    "Upskill/DSA/Data Structures/Segment Tree.md",
+    "QoL/Refs/Keyboards.md",
+    "QoL/Refs/Notion.md",
+    "QoL/Configs.md",
+    "Macha/motionArts/Items/The Love Hypothesis.md",
+    "Macha/motionArts/Items/The Lord of the Rings - The Two Towers.md",
+    "Macha/motionArts/Items/How to Lose a Guy in 10 Days.md",
+    "Macha/motionArts/Items/Yes Boss.md",
+    "Macha/motionArts/Items/Veer-Zaara.md",
+    "Macha/motionArts/Items/Student of the Year.md",
+    "Macha/motionArts/Items/Lootera.md",
+    "Macha/motionArts/Items/Ajab Prem Ki Ghazab Kahani.md",
+    "Macha/motionArts/Items/Hasee Toh Phasee.md",
+    "Macha/motionArts/Items/Vivah.md",
     "new-book-template-clipper.json",
     "attachments/Pasted image 20260601002039.png",
     "attachments/dashboard-assets/rain-pond.gif",

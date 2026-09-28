@@ -21,5 +21,3 @@ tags:
   - motion-art
   - series
 ---
-
-

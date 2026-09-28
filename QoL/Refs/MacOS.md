@@ -18,11 +18,9 @@
 ### Black Friday Deals
 https://github.com/mRs-/Black-Friday-Deals
 
-
 ## KDE Connect
 
 - [KDE Connect Tweak](https://github.com/0xEnma/Kde-connect-tweak)
-
 
 ## Automation Rules
 https://github.com/cyclelou/Automation
@@ -33,10 +31,8 @@ https://github.com/marekbrze/categorized-raycast-extensions
 https://github.com/raycast/script-commands
 https://github.com/WToa/raycast_extensions_by_downloads
 
-
 ## Quotes
 https://github.com/cyclelou/Amerpie
-
 
 ## Firefox
 https://github.com/yokoffing/Betterfox

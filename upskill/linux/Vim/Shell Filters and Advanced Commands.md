@@ -228,7 +228,6 @@ Insert current date at cursor position
 !ipsort
 ```
 
-
 ✨ **The Difference Between `!` and `w !`**
 - `!` = **Filter** (replace text with output)
 - `w !` = **Preview** (send text to command, show output, keep original)
@@ -240,7 +239,6 @@ Insert current date at cursor position
 ```vim
 :%!sort | uniq -c | sort -rn    " Sort, count, then sort by frequency
 ```
-
 
 A collection of powerful Neovim features that require no plugins.
 ### Shell Filters (`!`)
@@ -346,6 +344,5 @@ nvim --listen /tmp/nvimsocket
 nvim --server /tmp/nvimsocket --remote-send "ggI# Remote<Esc>"
 ```
 This allows AI tools or scripts to control your editor instance.
-
 
 ---

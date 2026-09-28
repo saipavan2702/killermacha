@@ -183,5 +183,3 @@ There is no universal winner.
 - **SOAP is better only when enterprise/legacy constraints require it**.
 
 For most modern systems, start with REST. Move to GraphQL when frontend data-fetching becomes painful. Use gRPC behind the scenes for microservices that need speed and strict contracts. Use SOAP when the ecosystem forces it.
-
-

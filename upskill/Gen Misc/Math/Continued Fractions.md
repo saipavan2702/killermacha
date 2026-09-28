@@ -12,7 +12,6 @@ $$x = a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{a_3 + \ddots}}}$$
 
 The values $a_0, a_1, a_2, \ldots$ are called **partial quotients** — they're always positive integers, and they completely characterize the number.
 
-
 ##  The Algorithm: How to Build One
 
 > [!tip] The Recipe (repeat forever)
@@ -140,8 +139,6 @@ $$e = 2 + \cfrac{1}{1 + \cfrac{1}{2 + \cfrac{1}{1 + \cfrac{1}{1 + \cfrac{1}{4 + 
 | $e$        | $[2; 1,1,4,1,1,6,\ldots]$    | Structured          | Infinite pattern proves irrationality         |
 
 ---
-
-
 
 ---
 

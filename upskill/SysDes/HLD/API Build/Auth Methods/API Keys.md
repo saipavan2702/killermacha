@@ -49,7 +49,6 @@ The visible prefix can identify the key record; the secret portion proves posses
 - Redact keys from logs and error reports.
 - Revoke quickly and alert on unusual use.
 
-
 ---
 
 ## References

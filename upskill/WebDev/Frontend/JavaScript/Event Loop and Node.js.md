@@ -58,7 +58,6 @@ Important queue families include:
 
 Avoid blocking the event-loop thread with long CPU work. Move CPU-heavy tasks to worker threads or another service when latency matters.
 
-
 ---
 
 ## References

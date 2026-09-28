@@ -12,8 +12,6 @@ Map: [[Upskill/Gen Misc/Math/Probability Foundations|Probability Foundations]], 
 
 *Study actively: make up a small example for each concept and solve it without looking back.*
 
-
-
 ---
 
 ## References

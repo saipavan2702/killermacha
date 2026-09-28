@@ -32,7 +32,6 @@ Translate internal errors into a stable client contract at the HTTP or RPC bound
 }
 ```
 
-
 ---
 
 ## References

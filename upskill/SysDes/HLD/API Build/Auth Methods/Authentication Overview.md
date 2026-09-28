@@ -42,8 +42,6 @@ Map: [[Upskill/SysDes/HLD/API Build/Error Handling/Error Handling|Error Handling
 
 - [[Custom JWT and Redis Authentication]] - How a stateful custom token filter differs from standards-based OIDC and Spring Resource Server validation.
 
-
-
 ---
 
 ## References

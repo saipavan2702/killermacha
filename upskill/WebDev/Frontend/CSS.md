@@ -16,8 +16,6 @@ We can use & to select and modify nested classes.
 }
 ```
 
-
-
 ## BEM
  It is an acronym for Block Element Modifiers. It is a naming technique to enable CSS more readable.
 ```html
@@ -122,7 +120,6 @@ body {
 
 Here we can observe some things, firstly BEM is a naming convention and we write block element with `__element` and `--modifier` to denote the behavior or properties for the element. From example, `card__button` or `card__header` they are elements and behavior or property of button is denoted by `card__button--primary`.
 
-
 Harry Roberts styl3
 ```css
 .block-name__element-name--modifier-name {/* Styles */}
@@ -199,8 +196,6 @@ Exploring scope feature in css
 - `@import-normalize` is used to implement consistent styling.
 - use clamp instead of media-queries for smaller screens. `width:clamp(50%,700px,90%)`
 - `#rrggbbAA` AA denotes the opacity and for 50% opacity (255/2)=128 => 80 (hex)
-
-
 
 [[Upskill/WebDev/Frontend/Framer Motion|Framer Motion]]
 

@@ -29,8 +29,6 @@ Map: [[Upskill/DSA/Algorithms/String Matching|String Matching]], [[Upskill/Mock 
 - [Sorted Permutation Rank](https://www.interviewbit.com/problems/sorted-permutation-rank/)
 - [Pseudo-Palindromic Paths](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/)
 
-
-
 ## Further references
 
 ### Roadmaps and Problem Sets
@@ -49,6 +47,9 @@ Map: [[Upskill/DSA/Algorithms/String Matching|String Matching]], [[Upskill/Mock 
 - [Codeforces blog 18051](https://codeforces.com/blog/entry/18051)
 - [Codeforces blog 18169](https://codeforces.com/blog/entry/18169)
 - [Codeforces blog 81516](https://codeforces.com/blog/entry/81516)
+- [LeetCode Company-Wise Interview Questions](https://github.com/snehasishroy/leetcode-companywise-interview-questions)
+- [LeetCode Premium](https://github.com/imsubhamsingh/leetcode-premium)
+- [Kamyu's LeetCode Solutions](https://github.com/kamyu104/LeetCode-Solutions)
 - [Trie Practice](https://www.hackerearth.com/practice/data-structures/advanced-data-structures/trie-keyword-tree/practice-problems/)
 - [A Code Daily](https://acodedaily.com/)
 - [Ashhad's List](https://ashhad.in/list/)
@@ -56,6 +57,7 @@ Map: [[Upskill/DSA/Algorithms/String Matching|String Matching]], [[Upskill/Mock 
 
 ### Code Collections
 
+- [CP Templates](https://github.com/rishabhxchoudhary/CP-Templates)
 - [DSA Bootcamp Java](https://github.com/kunal-kushwaha/DSA-Bootcamp-Java)
 - [CP Notes](https://github.com/yash7xm/cp_notes)
 - [Competitive Programming](https://github.com/Prakash-sa/Competitive-Programming)

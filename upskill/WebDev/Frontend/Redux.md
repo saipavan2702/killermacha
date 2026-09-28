@@ -63,7 +63,6 @@ dispatch(setAccount({ ...account, [event.target.name]: event.target.value }));
 
 But still we have to use localStorage to persist our data with normal redux toolkit, but redux persists allows us to persist our data across reloads.
 
-
 No for this upon observation we can persist the data as an extension from above code after we create reducer actions.
 ```jsx
 import {
@@ -127,7 +126,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 ```
 
 For above code we are creating `persistStore()` this creates/sets data with key we have given to localStorage. For example, in above code we are persisting root and auth separately it creates two localStorage data with keys provided root and auth.
-
 
 If we have to purge the data  we can use `persist.purge("key")` but sometimes it affects whole environment so we use another method general like `localStorage.removeItem("persist:auth");`.
 

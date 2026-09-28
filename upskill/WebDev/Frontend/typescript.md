@@ -240,7 +240,6 @@ end: printAge
 ```
 We use decorators, so we could reuse the logic of logging function execution start and end. A wrapper function is created that logs the start and end of the wrapped function.
 
-
 ---
 
 ## References

@@ -35,7 +35,6 @@ p = nullptr;  // Avoid dangling pointer issues
 It is a good practice to assign null to the pointer after deletion.
 A dangling pointer is a pointer that refers to a memory location that has been freed. Setting p = nullptr; ensures that it doesn't point to invalid memory.
 
-
 ### Pass by Value
 
 ```cpp

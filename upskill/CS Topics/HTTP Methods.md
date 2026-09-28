@@ -49,7 +49,6 @@ POST /orders  { "item": "keyboard" }
 → Send 5 times → 5 orders created ❌ not idempotent
 ```
 
-
 ## Method-by-Method Breakdown
 
 ### `GET` — Read something
@@ -62,7 +61,6 @@ GET /products?category=shoes&sort=price
 
 No body. No side effects. Cacheable.
 
-
 ### `HEAD` — Read headers only
 Identical to `GET`, but the server sends back only headers — no response body.
 
@@ -73,7 +71,6 @@ HEAD /files/report.pdf
 → Returns: Content-Length, Last-Modified, Content-Type — but not the file itself
 ```
 
-
 ### `OPTIONS` — Ask what's allowed
 The server responds with which methods are supported at that URL. Mostly used internally by browsers for CORS preflight checks.
 
@@ -81,7 +78,6 @@ The server responds with which methods are supported at that URL. Mostly used in
 OPTIONS /api/users
 → Allow: GET, POST, PUT, DELETE
 ```
-
 
 ### `QUERY` — Read with a body *(newer, not yet universal)*
 Like `GET`, but you can put the query in the request body. Designed for complex searches where the URL would get too long or awkward.
@@ -99,7 +95,6 @@ Still safe and idempotent — it's a read. No state changes.
 
 **Why not just use `POST /search`?** You could, and many APIs do. But `POST` implies something might change. `QUERY` signals clearly: this is still just a read.
 
-
 ### `POST` — Create or process
 The most flexible method. "Here's some data — do something with it."
 
@@ -112,7 +107,6 @@ POST /payments        → initiates a payment
 
 Not idempotent by default — sending twice may create two orders, two emails, two charges.
 
-
 ### `PUT` — Full replacement
 Replace the entire resource with what you're sending. If a field isn't in your body, it's gone.
 
@@ -124,7 +118,6 @@ PUT /users/42
 If user 42 had a `phone` field and you don't include it → it gets wiped.
 
 Idempotent: send it 5 times, the result is the same complete replacement.
-
 
 ### `PATCH` — Partial update
 Update only the fields you send. Everything else stays untouched.
@@ -145,7 +138,6 @@ PATCH /users/42 { "name": "Maya" }
 → Send 5 times → name is still Maya ✅ effectively idempotent
 ```
 
-
 ### `DELETE` — Remove a resource
 
 ```http
@@ -153,7 +145,6 @@ DELETE /posts/99
 ```
 
 Idempotent: deleting something that's already gone still results in it being gone. The server may return `200` the first time and `404` after, but the *state* is the same.
-
 
 ## Quick Decision Guide
 

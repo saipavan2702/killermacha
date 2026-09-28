@@ -58,3 +58,9 @@ def get_shard(user_region):
 1. **Complex Implementation:** You write the routing logic
 2. **Cross-Shard Queries:** Expensive to join data across shards
 3. **Lost Consistency:** Hard to maintain ACID across shards
+
+## References
+
+- [The data model behind Notion's flexibility](https://www.notion.com/blog/data-model-behind-notion) - Notion's block-based, graph-like data model and how blocks relate to each other.
+- [Herding elephants: Lessons learned from sharding Postgres at Notion](https://www.notion.com/blog/sharding-postgres-at-notion) - Application-level sharding, partition keys, data locality, and migration trade-offs.
+- [The Great Re-shard: adding Postgres capacity (again) with zero downtime](https://www.notion.com/blog/the-great-re-shard) - Horizontally re-sharding Postgres and PgBouncer without downtime.

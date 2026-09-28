@@ -151,7 +151,6 @@ Small does not mean an arbitrary line limit. It means one coherent idea that a r
 - Are errors useful to clients, people, and operators?
 - Does the change contain one coherent purpose?
 
-
 ---
 
 ## References

@@ -89,7 +89,6 @@ const team = {
 };
 ```
 
-
 ---
 
 ## References

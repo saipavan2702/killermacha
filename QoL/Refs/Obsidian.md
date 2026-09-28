@@ -1,4 +1,3 @@
-
 ## Videos
 
 - [Obsidian for Mathematics Notes](https://www.youtube.com/watch?v=AaCVP7zqOMU) - Mathematics-focused note workflow.
@@ -26,7 +25,15 @@
 - [Published Second Brains](https://www.reddit.com/r/ObsidianMD/comments/1w02e8m/please_share_your_publishedpublic_second_brains/) - A collection of public vaults and digital gardens.
 - [Eilleen's Everything Notebook](https://quartz.eilleeenz.com/) - Clear start-here navigation and topic exploration.
 
+## Web Clipper
 
-## Helpers
-https://github.com/maxmilneaus/Obsidian-Webclipper-Templates
-https://github.com/sylumer/automators
+- [Obsidian Web Clipper Templates](https://github.com/maxmilneaus/Obsidian-Webclipper-Templates) - Article and podcast templates using properties and Dataview; its LLM-assisted fields require an external model setup.
+
+## Podcasts
+
+- [Automators Podcast Vault](https://github.com/sylumer/automators) - Linked episode notes, transcripts, and automation references; useful for exploring automation topics in a real Obsidian vault.
+
+## Themes and workflows
+
+- [Isinglass](https://github.com/ameyxd/obsidian-isinglass) - Minimal frosted-glass theme reference with light and dark palettes; useful inspiration for restrained translucency, not a required replacement for this vault's theme.
+- [A simple vault system](https://www.reddit.com/r/ObsidianMD/comments/1vg3fed/my_system_for_people_who_want_to_keep_it_simple/) - Practical showcase focused on a small folder structure and low-maintenance organization.

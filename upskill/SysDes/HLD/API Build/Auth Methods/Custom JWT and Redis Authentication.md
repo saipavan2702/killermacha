@@ -365,8 +365,6 @@ With an external IdP, Spring's `oauth2ResourceServer(...jwt...)` filter validate
 
 See [[Single Sign-On]] for the complete comparison and [[Bearer Tokens]] for framework-managed API validation.
 
-
-
 ---
 
 ## References

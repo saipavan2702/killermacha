@@ -53,7 +53,6 @@ const reportScroll = throttle(() => {
 
 Production helpers may also support leading/trailing execution, cancellation, and flushing. Decide those semantics before choosing an implementation.
 
-
 ---
 
 ## References

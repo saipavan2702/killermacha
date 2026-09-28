@@ -52,7 +52,6 @@ Ctrl + w + c     " Close current window
 
 ---
 
-
 ## 📎 Copying Between Files
 
 ```vim

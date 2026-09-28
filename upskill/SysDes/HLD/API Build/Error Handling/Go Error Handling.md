@@ -58,7 +58,6 @@ A useful service convention is:
 
 Mixing wrapping, logging, panicking, discarding, and returning zero values at random makes failures hard to trace.
 
-
 ---
 
 ## References

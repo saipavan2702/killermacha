@@ -90,7 +90,6 @@ public:
 
 ```
 
-
 ## Array-Based Segment Tree
 ```cpp
 
@@ -168,7 +167,6 @@ int main(){
 }
 
 ```
-
 
 ## Segment Tree Beats
 ```cpp
@@ -267,7 +265,6 @@ int main() {
 
 ```
 
-
 ## Lazy Propagation
 ```cpp
 #include <bits/stdc++.h>
@@ -344,7 +341,6 @@ int main() {
 }
 
 ```
-
 
 ---
 

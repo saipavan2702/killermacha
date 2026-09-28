@@ -61,7 +61,6 @@ func fetchAPI(ctx context.Context, url string, results chan<-string) {
 
 So here we create a new httpRequest with context of cancellation if api call takes more than 5 seconds. Once any api call takes more than 5 seconds it cancels all other ongoing requests.
 
-
 ## Context with it's multiple applications
 
 Context can be created with different attributes such as timeout, deadline, and background etc. and also can be propagated across go functions. We can cancel the ongoing tasks after some timeout via context signalling. We can exit a task once it's past the given deadline via context signalling.
@@ -201,7 +200,6 @@ Here we are creating context with 2sec timeout and we open connection to Postgre
 >
 >Prefer Cancel over Timeout  - as `context.WithCancel` allows us to explicitly trigger cancellation and `context.WithTimeout` does automatic cancellation.
 
-
 ### Context & Goroutine leaks
 
 If a goroutine started with a context, but does not properly exit when that context is cancelled, it can result in a goroutine leak. The goroutine will persist even after operation is cancelled.
@@ -257,7 +255,6 @@ func main() {
 }
 ```
 
-
 ## New Features
 
 `WithoutCancel` — Detach a Child from Parent Cancellation
@@ -286,7 +283,6 @@ stop := context.AfterFunc(ctx, func() {
 stop()
 //Useful for: deferred cleanup tied to a context's lifetime.
 ```
-
 
 ## An Example of Context propagating
 
@@ -375,8 +371,6 @@ func getUserFromDB(ctx context.Context, userID string) (string, error) {
 > Cancel at the **top**, it automatically bubbles down to **every child** using that same `ctx`. You don't manually cancel each function — they all listen to `ctx.Done()` themselves.
 
 One cancel → entire chain stops. That's the whole power of context.
-
-
 
 ---
 

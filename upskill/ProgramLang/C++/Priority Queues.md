@@ -30,5 +30,3 @@ priority_queue<
     decltype(compare)
 > queue(compare);
 ```
-
-

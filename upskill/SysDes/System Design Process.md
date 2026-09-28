@@ -204,7 +204,6 @@ const commonPatterns = {
 - Read about how real companies solve these problems (engineering blogs)
 - Code your own versions of Redis, Load Balancer, etc. for deep understanding
 
-
 >[!info]
 >### BackPressure
 This is a common pattern where a system needs to handle more requests than the receiving system can process in real-time.
@@ -225,7 +224,6 @@ So we need to design API in such a way that it cannot call things out of order i
 >### Essential Complexity vs. Accidental Complexity
 Essential Complexity is inherent to the problem. In Building payment system we handle failed transactions, retrying, reconciliation.
 But Accidental Complexity is everything else sometimes you add code to the already existing 500-lines of code instead of refactoring it and optimising it.
-
 
 >[!tip]
 >

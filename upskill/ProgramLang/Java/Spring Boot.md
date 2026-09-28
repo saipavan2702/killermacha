@@ -1,6 +1,12 @@
 Tags: #java #springboot
 Map: [[Upskill/ProgramLang/Java/Inversion of Control|Inversion of Control]], [[Upskill/ProgramLang/Java/Concurrency|Concurrency]]
 
+Interview practice: [[Upskill/ProgramLang/Java/Spring Boot Interview Questions|Spring Boot Interview Questions]]
+
+## Resources
+
+- [Java Spring Microservices course source](https://github.com/chrisblakely01/java-spring-microservices) — multi-service example with API gateway, authentication, billing, patient, and analytics services, plus gRPC and integration-test material.
+
 ## Bean vs Component
 
 `@Bean` is a method level annotation used by springboot  to add it to it's context registry.
@@ -42,8 +48,3 @@ public class JacksonConfig {
 Both `@Component` and `@Bean` result in Spring-managed beans, so their lifecycle is controlled by the Spring container. This includes things like singleton vs prototype scope, lazy initialization, and dependency injection.
 
 However, because `@Bean` lets you write logic during bean creation, you can perform custom setup inside the method, which is not possible with `@Component `unless you use lifecycle annotations like `@PostConstruct`.
-
-Also
-
-
-

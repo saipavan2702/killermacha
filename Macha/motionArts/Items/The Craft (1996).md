@@ -20,5 +20,3 @@ tags:
   - motion-art
   - movie
 ---
-
-

@@ -84,8 +84,7 @@ Cons
 - Needs tuning of two parameters (bucket size + refill rate) to get right
 - Still needs a shared store (Redis) in distributed systems, same as the others
 
-
->[!tip] 
+>[!tip]
 >The controlled bursts are useful in case of heavy-sync of whatsapp messages after some 1hr of inactivity or any other syncing which needs some reasonable amount of api requests to be made.
 
 ## Rate Limiting Algorithms — Comparison
@@ -101,7 +100,6 @@ Cons
 | **Distributed system fit**   | Needs shared counter (Redis)       | Poor at scale                 | Good — scales well                         | Good — small fixed state, Redis + Lua friendly        |
 | **Predictability for user**  | High                               | Low                           | Medium-low                                 | Low-medium                                            |
 | **Real-world example**       | GitHub API (5000/hr)               | Rarely used in prod as-is     | Cloudflare                                 | Stripe (500 burst, 100/s sustained), OpenAI free tier |
-
 
 ## Cross questions
 
@@ -282,11 +280,10 @@ Client (Asia) → Asia Redis
 
 Some systems compromise with periodic async reconciliation (regional counters sync/merge in the background) — approximate in real time, self-correcting over time — though the article doesn't go into that implementation detail.
 
-
 >[!tip]
 >From bot protection we can use the following techniques:
 >
->- Honeypot (adding hidden attributes so that only bots can/will fill and can easily reject the submission; For  Example: 
+>- Honeypot (adding hidden attributes so that only bots can/will fill and can easily reject the submission; For  Example:
 >  `<input id="email" name="email" size="40" class="honeypot" tabindex="-1" aria-hidden="true" autocomplete="off">` )
 >- Captcha (I prefer Cloudflare Turnstile)
 >- Timer (set the timer which takes minimum time by a human to fill out form)

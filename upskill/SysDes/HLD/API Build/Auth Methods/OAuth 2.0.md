@@ -85,7 +85,6 @@ An access token tells an API what access was delegated. It does not standardize 
 - Keep client secrets only in confidential server-side clients.
 - Validate tokens at every resource server.
 
-
 ---
 
 ## References

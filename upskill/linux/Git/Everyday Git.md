@@ -59,7 +59,6 @@ git log --oneline --graph --decorate -10
 > [!tip]
 > Prefer a small coherent commit over staging the entire working tree automatically. `git add -p` makes the boundary visible.
 
-
 ---
 
 ## References

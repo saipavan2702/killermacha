@@ -62,7 +62,6 @@ Use a maintained library. Decoding without signature and claim validation does n
 > [!important]
 > Prefer asymmetric signing when many services verify tokens. The issuer keeps the private key; services receive only public verification keys.
 
-
 ---
 
 ## References

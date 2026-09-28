@@ -146,7 +146,6 @@ Architecture should change when a real constraint appears, not whenever a new li
 - Is the performance work based on a measurement?
 - Does this change follow the architecture already used nearby?
 
-
 ---
 
 ## References

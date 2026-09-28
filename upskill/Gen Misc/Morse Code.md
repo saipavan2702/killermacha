@@ -1,5 +1,4 @@
 Tags: #upskill
-Map: [[Upskill/Gen Misc/Space|Space]]
 
 ## The Core Idea
 

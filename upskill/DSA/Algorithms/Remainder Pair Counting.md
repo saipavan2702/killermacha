@@ -8,24 +8,22 @@ Map: [[Upskill/DSA/Algorithms/Bucket Sort|Bucket Sort]], [[Upskill/DSA/Algorithm
 ```cpp
 // Find the number of pairs of elements whose sum is divisible by k.
 
-#include <bits/stdc++.h>
+#include <stdexcept>
+#include <vector>
 using namespace std;
 
-int countPairsDivisibleByK(const vector<int>& a, int k) {
-    map<int, int> freq;
-    int ans = 0;
+long long countPairsDivisibleByK(const vector<int>& a, int k) {
+    if (k <= 0) throw invalid_argument("k must be positive");
 
-    for (int val : a) {
-        int res = val % k;
-        if (res != 0) {
-            ans += freq[k - res];
-        } else {
-            ans += freq[0];
-        }
-        freq[res]++;
+    vector<long long> freq(k, 0);
+    long long ans = 0;
+
+    for (long long value : a) {
+        const int remainder = static_cast<int>((value % k + k) % k);
+        const int complement = (k - remainder) % k;
+        ans += freq[complement];
+        ++freq[remainder];
     }
     return ans;
 }
 ```
-
-

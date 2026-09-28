@@ -141,7 +141,6 @@ They solve different bottlenecks, so a system can combine them without treating 
 - **CPU count limits concurrency:** it limits physical parallelism, not the number of tasks that can be in progress.
 - **No shared state means no coordination:** results, errors, timeouts, and cancellation still need a clear owner.
 
-
 ---
 
 ## References

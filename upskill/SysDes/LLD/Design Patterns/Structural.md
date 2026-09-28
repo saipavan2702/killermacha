@@ -124,5 +124,3 @@ class ImageProxy implements Image {
 ```
 
 ---
-
-

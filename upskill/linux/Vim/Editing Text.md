@@ -37,7 +37,6 @@ Map: [[Upskill/Linux/Vim/Navigation and Selection|Navigation and Selection]], [[
 
 ---
 
-
 ## 🔁 Number Manipulation
 
 - `Ctrl + a` → Increment number under cursor

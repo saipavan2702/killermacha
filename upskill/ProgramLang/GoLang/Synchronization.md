@@ -16,7 +16,6 @@ s.Lock()          // shorthand — promoted method, same thing
 s.Unlock()        // same as s.RWMutex.Unlock()
 ```
 
-
 **1. `sync.Mutex` — Basic lock**
 ```go
 var mu sync.Mutex
@@ -31,7 +30,6 @@ mu.Lock() / mu.Unlock()    // writing
 mu.RLock() / mu.RUnlock()  // reading
 ```
 > 👀 Many readers OR one writer. Never both at same time.
-
 
 **3. `sync.Once` — Run something only once**
 ```go
@@ -54,7 +52,6 @@ wg.Wait() // blocks until Done() called
 ```
 > ⏳ "Don't move on until all workers are finished."
 
-
 **5. Channels — Go's preferred way**
 ```go
 ch := make(chan int, 1) // buffered = acts like a lock
@@ -62,8 +59,6 @@ ch <- 1                 // lock
 <-ch                    // unlock
 ```
 > 💬 Go's motto: *"Don't communicate by sharing memory, share memory by communicating."* Channels are often cleaner than locks.
-
-
 
 In Go, a type implements an interface automatically if it has all the methods required by that interface.
 

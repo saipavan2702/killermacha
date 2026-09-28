@@ -16,10 +16,6 @@ But in the real world with millions or billions of users, this breaks down. You 
 - **Performance** (fast response times)
 - **Monitoring** (knowing what's happening)
 
-
-
-
-
 **System Design teaches you how to build systems that work at scale.**
 
 ---

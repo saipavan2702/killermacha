@@ -14,10 +14,10 @@ https://www.youtube.com/watch?v=PvxgOy86-sw
 https://www.youtube.com/watch?v=Jl_4BW-ubWo
 https://www.youtube.com/watch?v=-mqkjJflDGY
 https://www.youtube.com/watch?v=KuMUZ7F69eI
+https://www.youtube.com/watch?v=HYbLycIEY1I
 
 Web's
 https://www.amazon.in/Dell-S2721QS-Ultra-Thin-DisplayPort-Certified/dp/B08DQWG3JG
 https://homeofficeworld.com/best-monitor-for-programming-under-300/#BenQ_GW2785TC_27%E2%80%9D
 https://www.amazon.ca/LG-32UL500-W-UHD-Monitor/dp/B0CRBLRF69?th=1&psc=1
 https://www.asus.com/content/mac-monitor/
-
