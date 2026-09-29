@@ -62,6 +62,7 @@ Map: [[Upskill/DSA/Algorithms/String Matching|String Matching]], [[Upskill/Mock 
 - [CP Notes](https://github.com/yash7xm/cp_notes)
 - [Competitive Programming](https://github.com/Prakash-sa/Competitive-Programming)
 - [The Algorithms](https://github.com/thealgorithms)
+- [The Algorithms — Java](https://github.com/TheAlgorithms/Java/tree/master/src/main/java/com/thealgorithms/) - Java implementations of algorithms and data structures.
 - [Daily Coding Problem Solutions](https://github.com/ruppysuppy/Daily-Coding-Problem-Solutions)
 - [Pastebin snippet 1](https://pastebin.com/wabDfjKi)
 - [Pastebin snippet 2](https://pastebin.com/bEEQsDr7)

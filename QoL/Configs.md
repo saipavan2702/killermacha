@@ -13,6 +13,7 @@ https://github.com/BreadOnPenguins/dots
 https://github.com/jakmaz/dotfiles
 https://github.com/DakshG07
 https://github.com/JazzyGrim/dotfiles
+https://github.com/SeniorMars/dotfiles/
 
 ---
 ## Ghostty

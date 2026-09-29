@@ -78,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -279,10 +279,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7e35500e3b5aef98",
+  "active": "3c9abc6e4908ddc9",
   "lastOpenFiles": [
-    "Upskill/SysDes/LLD/Design Patterns/Creational.md",
+    "QoL/Configs.md",
     "Upskill/SysDes/LLD/Design Patterns/Behavioral.md",
+    "Upskill/SysDes/LLD/Design Patterns/Creational.md",
     "Upskill/ProgramLang/Java/Collections and Generics Examples.md",
     "Macha/motionArts/Celluloid.base",
     "Macha/motionArts/Items/Scorned.md",
@@ -297,7 +298,6 @@
     "Upskill/DSA/Data Structures/Segment Tree.md",
     "QoL/Refs/Keyboards.md",
     "QoL/Refs/Notion.md",
-    "QoL/Configs.md",
     "Macha/motionArts/Items/The Love Hypothesis.md",
     "Macha/motionArts/Items/The Lord of the Rings - The Two Towers.md",
     "Macha/motionArts/Items/How to Lose a Guy in 10 Days.md",
