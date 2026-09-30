@@ -3,6 +3,7 @@ Map: [[Upskill/ProgramLang/Java/Collections and Type Relationships|Collections a
 
 > [!summary]
 > A practical reference for modern Java collections, queues, maps, generics, bounds, and common operations.
+
 ```java
 import java.util.*;
 import java.util.concurrent.*;

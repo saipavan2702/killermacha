@@ -1,4 +1,5 @@
 Tags: #dsa
+Map: [[Upskill/DSA/Data Structures/Tree|Tree]], [[Upskill/CS Topics/Databases/PostgreSQL|PostgreSQL]]
 
 > Pure data-structure notes: what these trees are, why they exist, how their operations work, and code examples. For the database-specific view, see [[PostgreSQL|PostgreSQL]].
 ---

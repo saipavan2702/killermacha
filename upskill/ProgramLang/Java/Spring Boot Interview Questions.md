@@ -1,3 +1,6 @@
+Tags: #java #springboot #interview
+Map: [[Upskill/ProgramLang/Java/Spring Boot|Spring Boot]], [[Upskill/ProgramLang/Java/Java Fundamentals|Java Fundamentals]]
+
 ## Core Spring Boot
 
 ### 1. What is Spring Boot?

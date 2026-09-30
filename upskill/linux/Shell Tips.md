@@ -1,4 +1,5 @@
 Tags: #linux #bash
+Map: [[Upskill/Linux/Vim/Shell Filters and Advanced Commands|Shell Filters and Advanced Commands]], [[Upskill/Linux/Git/Everyday Git|Everyday Git]]
 
 > [!summary]
 > Practical shell history, redirection, process, prompt, and terminal techniques for everyday Linux work.

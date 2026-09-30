@@ -1,4 +1,5 @@
 Tags: #upskill
+Map: [[Upskill/DSA/Data Structures/Tree|Tree]]
 
 ## The Core Idea
 

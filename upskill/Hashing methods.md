@@ -1,3 +1,6 @@
+Tags: #sysdes #dsa
+Map: [[Upskill/SysDes/HLD/Consistent Hashing|Consistent Hashing]], [[Upskill/SysDes/HLD/Load Balancing|Load Balancing]]
+
 
 ```java
 import java.util.*;

@@ -1,4 +1,5 @@
 Tags: #sysdes
+Map: [[Upskill/SysDes/LLD/Object-Oriented Programming|Object-Oriented Programming]], [[Upskill/SysDes/LLD/SOLID Principles|SOLID Principles]]
 
 1. **Parking Lot** — multi-floor, 2-wheelers and 4-wheelers
 2. **Text Editor with Cursor** — cursor movement, line reading, insert/delete

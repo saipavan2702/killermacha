@@ -1,4 +1,5 @@
 Tags: #sysdes
+Map: [[Upskill/SysDes/System Design Process|System Design Process]], [[Upskill/SysDes/HLD/Scaling Fundamentals|Scaling Fundamentals]]
 
 > [!summary]
 > A worked system-design example covering tweet creation, timelines, search, follows, notifications, capacity, and observability.

@@ -1,4 +1,5 @@
 Tags: #computer-science
+Map: [[Upskill/CS Topics/Operating Systems/Virtual Memory|Virtual Memory]]
 
 > [!summary]
 > Loop order affects spatial locality: traversing contiguous memory usually matters more than the surface shape of the algorithm.

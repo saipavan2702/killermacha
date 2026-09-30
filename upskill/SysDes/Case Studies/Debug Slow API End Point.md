@@ -1,3 +1,6 @@
+Tags: #sysdes
+Map: [[Upskill/SysDes/HLD/Caching|Caching]], [[Upskill/SysDes/HLD/Database Scaling|Database Scaling]]
+
 **Core loop: Measure → Isolate → Fix.**
 Never skip straight to a fix — half the "fixes" people reach for (add a cache, add a server) just hide the real bug.
 

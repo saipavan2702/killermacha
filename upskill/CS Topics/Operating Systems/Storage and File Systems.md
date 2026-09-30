@@ -3,6 +3,7 @@ Map: [[Upskill/CS Topics/Operating Systems/Production Debugging|Production Debug
 
 > [!summary]
 > A filesystem turns persistent blocks into named objects while mediating caching, metadata, allocation, sharing, and crash consistency.
+
 > [!tip] Plain-English version
 > When you call `write()`, you probably assume your data is now safely on disk. It usually isn't — yet. Your bytes typically land in a buffer in memory first (both in your program and inside the OS), and only get physically written to the disk platter/flash chip later, either when the OS decides to flush it or when you explicitly ask for that guarantee (`fsync`). This note is mostly about that gap between "I called write and it returned" and "this data will actually survive a power outage."
 

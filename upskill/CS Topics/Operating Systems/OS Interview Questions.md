@@ -3,6 +3,7 @@ Map: [[Upskill/CS Topics/Operating Systems/Processes and Context Switching|Proce
 
 > [!summary]
 > Real SDE2-style OS interview questions, answered clearly, with pointers back to the deeper notes in this vault — plus a handful of classic topics (microkernels, spinlocks, IPC, disk scheduling) that weren't covered elsewhere.
+
 > [!tip] Plain-English version
 > This file is your "rapid-fire round" prep. Most of what interviewers ask is a compressed version of what's already in your other notes — this file drills those down into direct Q&A form, and fills in a few classic topics (segmentation, monitors, threading models, IPC) that are common in interviews but weren't in the deeper notes.
 

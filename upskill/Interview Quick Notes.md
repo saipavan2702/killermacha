@@ -1,3 +1,6 @@
+Tags: #webdev #interview
+Map: [[Upskill/WebDev/Frontend/Frontend Architecture|Frontend Architecture]], [[Upskill/Mock Interviews|Mock Interviews]]
+
 What is react?
 It is an Open-Source JavaScript library used for building user interfaces. It was developed by facebook and maintained by facebook.
 It gives us flexibilty to create re-usable UI components. 

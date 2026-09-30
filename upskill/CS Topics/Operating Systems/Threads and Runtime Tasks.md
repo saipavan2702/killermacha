@@ -3,6 +3,7 @@ Map: [[Upskill/CS Topics/Operating Systems/Synchronization|Synchronization]]
 
 > [!summary]
 > An OS thread is a schedulable execution context; language runtimes may multiplex many lighter tasks over a smaller or elastic set of OS threads.
+
 > [!tip] Plain-English version
 > There are really three "sizes" of concurrency, from biggest/heaviest to smallest/lightest:
 > - **Process** = a whole separate apartment building (its own memory, totally isolated).

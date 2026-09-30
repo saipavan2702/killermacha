@@ -1,4 +1,5 @@
-Tags: #upskill
+Tags: #upskill #sysdes
+Map: [[Upskill/SysDes/HLD/Replication and Recovery|Replication and Recovery]], [[Upskill/CS Topics/Databases/PostgreSQL|PostgreSQL]]
 
 # Zero-Downtime Column Migration
 ## The problem

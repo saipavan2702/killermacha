@@ -1,7 +1,7 @@
-Tags: #webdev
+Tags: #webdev #markdown #mdx #shiki #astro #react
+Map: [[Upskill/WebDev/Frontend/Frontend Architecture|Frontend Architecture]]
 
 # Code Block Highlighting with Shiki and MDX
-Tags: #webdev #markdown #mdx #shiki #astro #react
 
 ## What this is
 

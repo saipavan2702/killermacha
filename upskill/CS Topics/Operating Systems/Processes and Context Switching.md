@@ -3,6 +3,7 @@ Map: [[Upskill/CS Topics/Operating Systems/Production Debugging|Production Debug
 
 > [!summary]
 > A process is a protected resource container; runnable threads inside it are the units the scheduler actually executes.
+
 > [!tip] Plain-English version
 > A **process** is like a sealed apartment: it has its own furniture (memory), its own mailbox (file descriptors), its own lease (permissions), and neighbors can't just walk in and rearrange your stuff. A **thread** is a person living inside that apartment — multiple threads (people) can share the same apartment (memory), but each has their own todo list and current task (registers/stack). A **context switch** is the building manager pausing one apartment's activity and letting another one proceed, carefully remembering exactly where the first one left off so it can resume later without losing its place.
 
