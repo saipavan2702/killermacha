@@ -30,6 +30,7 @@
 
 ## Resource Collections
 
+- [Awesome Tauri Apps](https://github.com/chrysler-stone/awesome-tauri-apps) - Curated directory of apps built with Tauri.
 - [Free for Dev](https://github.com/ripienaar/free-for-dev) - Free service tiers for developers.
 - [Free Programming Books](https://github.com/EbookFoundation/free-programming-books) - Open programming books and courses.
 - [Engineering Blogs](https://github.com/kilimchoi/engineering-blogs) - Engineering-team publications.

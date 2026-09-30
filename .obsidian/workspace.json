@@ -147,7 +147,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 330.11328125
+    "width": 378.18359375
   },
   "right": {
     "id": "e5d2ad9fec6d31d0",
@@ -279,15 +279,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3c9abc6e4908ddc9",
+  "active": "fe9445cd864ae62e",
   "lastOpenFiles": [
-    "QoL/Configs.md",
-    "Upskill/SysDes/LLD/Design Patterns/Behavioral.md",
     "Upskill/SysDes/LLD/Design Patterns/Creational.md",
+    "Upskill/SysDes/LLD/Design Patterns/Behavioral.md",
+    "Upskill/ProgramLang/Java/Spring Boot Interview Questions.md",
     "Upskill/ProgramLang/Java/Collections and Generics Examples.md",
+    "QoL/Configs.md",
     "Macha/motionArts/Celluloid.base",
     "Macha/motionArts/Items/Scorned.md",
-    "Upskill/ProgramLang/Java/Spring Boot Interview Questions.md",
     "Orcl/Weekly Report.md",
     "Upskill/DSA/Practice Problems.md",
     "QoL/Ideas.md",
