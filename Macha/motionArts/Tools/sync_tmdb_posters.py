@@ -564,17 +564,33 @@ def poster_path_from(value: str) -> str:
 
 
 def has_list_field(frontmatter: str, key: str) -> bool:
+    """Preserve populated fields, including flow lists and indentless sequences.
+
+    This is a conservative presence check, not a general YAML parser. Unknown
+    nonempty values are preserved rather than risking a destructive overwrite.
+    """
     lines = frontmatter.splitlines()
     for index, line in enumerate(lines):
-        if re.match(rf"^{re.escape(key)}\s*:\s*\[\]\s*$", line):
-            return False
-        if not re.match(rf"^{re.escape(key)}\s*:\s*$", line):
+        match = re.match(rf"^{re.escape(key)}\s*:\s*(.*)$", line)
+        if not match:
             continue
+        value = match.group(1).strip()
+        # Only recognize unambiguously empty values. In particular, do not
+        # split at '#' because it can be part of a quoted value or a URL.
+        if re.fullmatch(r"(?:\[\s*\]|null|Null|NULL|~|\"\"|'')(?:\s+#.*)?", value):
+            return False
+        if value and not value.startswith("#"):
+            return True
         for item in lines[index + 1 :]:
-            if item and not item.startswith(" ") and re.match(r"^[A-Za-z0-9_.-]+\s*:", item):
-                return False
-            if item.startswith("  - ") and item[4:].strip():
+            stripped = item.strip()
+            if not stripped or stripped.startswith("#"):
+                continue
+            # YAML permits sequence items at the same indentation as the key.
+            if re.match(r"^-\s+", stripped) or stripped == "-":
                 return True
+            if item.startswith((" ", "\t")):
+                return True
+            return False
         return False
     return False
 
