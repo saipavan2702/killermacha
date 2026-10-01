@@ -1,6 +1,15 @@
 /*
   mmacha-theme
-  Soft charcoal glass for reading, writing, coding, and connected notes.
+  Native Obsidian interface, quiet glass, and mmacha note styling.
+
+  Design references (independently implemented; no external CSS imports):
+  Transparent by Oczko24 — separation of background and floating glass surfaces.
+  https://github.com/Oczko24/Obsidian-transparent
+  Isinglass — restrained blur and an opaque reduced-transparency fallback.
+  https://github.com/ameyxd/obsidian-isinglass
+  Kepano's vault — keep the interface simple and the content portable.
+  https://stephango.com/vault
+  Sources are also saved in QoL/Refs/Obsidian.md.
 */
 
 /* @settings
@@ -8,6 +17,32 @@
 name: mmacha-theme
 id: mmacha-theme
 settings:
+  -
+    id: mmacha-solid-ui
+    title: Solid interface
+    description: Use opaque floating panels and turn off interface blur.
+    type: class-toggle
+    default: false
+  -
+    id: mmacha-glass-opacity
+    title: Glass opacity
+    description: Opacity of desktop menus and dialogs. The window and notes stay solid.
+    type: variable-number-slider
+    default: 92
+    min: 85
+    max: 100
+    step: 1
+    format: '%'
+  -
+    id: mmacha-glass-blur
+    title: Interface blur
+    description: Frost on desktop floating panels only; disabled on phones and tablets.
+    type: variable-number-slider
+    default: 18
+    min: 0
+    max: 30
+    step: 2
+    format: px
   -
     id: mmacha-link
     title: Links
@@ -57,31 +92,13 @@ body {
   --line-height-normal: 1.62;
   --line-height-tight: 1.28;
 
-  --radius-s: 5px;
-  --radius-m: 7px;
-  --radius-l: 10px;
-  --input-radius: var(--radius-s);
-  --button-radius: var(--radius-s);
-  --tab-radius-active: var(--radius-s);
-  --tab-divider-color: var(--mmacha-border);
-  --tab-outline-color: transparent;
-  --tab-outline-width: 0px;
-  --tab-curve: 0px;
-  --nav-item-radius: var(--radius-s);
-  --tag-radius: var(--radius-s);
-  --callout-radius: var(--radius-m);
-  --modal-radius: var(--radius-l);
-  --menu-radius: var(--radius-m);
-  --checkbox-radius: 3px;
+  /* Scope note geometry; let Obsidian size and round its own interface. */
+  --mmacha-note-radius-s: 5px;
+  --mmacha-note-radius-m: 7px;
+  --mmacha-glass-blur: 18px;
+  --mmacha-glass-opacity: 92%;
+  --mmacha-floating: var(--mmacha-bg-raised);
 
-  --divider-width: 1px;
-  --input-border-width: 1px;
-  --input-height: 30px;
-  --input-padding: 0 9px;
-  --dropdown-padding-start: 9px;
-  --dropdown-padding-end: 2.35em;
-  --scrollbar-width: 10px;
-  --icon-stroke: 1.8px;
   --bold-weight: 650;
 
   --anim-duration-superfast: calc(var(--mmacha-motion) * 0.5);
@@ -117,11 +134,6 @@ body {
   --mmacha-bg-main: #171b22;
   --mmacha-bg-raised: #232934;
   --mmacha-bg-code: #11151b;
-  --mmacha-glass-deep: rgba(16, 19, 25, 0.9);
-  --mmacha-glass-side: rgba(19, 23, 30, 0.86);
-  --mmacha-glass-main: rgba(23, 27, 34, 0.88);
-  --mmacha-glass-raised: rgba(35, 41, 52, 0.9);
-  --mmacha-glass-settings: rgba(35, 41, 52, 0.9);
 
   --mmacha-border: rgba(224, 228, 236, 0.075);
   --mmacha-border-strong: rgba(224, 228, 236, 0.13);
@@ -132,10 +144,10 @@ body {
   --mmacha-tooltip-bg: #303744;
   --mmacha-tooltip-text: #f2f2f3;
 
-  --background-primary: var(--mmacha-glass-main);
-  --background-primary-alt: rgba(29, 34, 43, 0.9);
-  --background-secondary: var(--mmacha-glass-side);
-  --background-secondary-alt: rgba(29, 34, 43, 0.86);
+  --background-primary: var(--mmacha-bg-main);
+  --background-primary-alt: #1d222b;
+  --background-secondary: var(--mmacha-bg-side);
+  --background-secondary-alt: #1d222b;
   --background-modifier-border: var(--mmacha-border);
   --background-modifier-border-hover: var(--mmacha-border-strong);
   --background-modifier-border-focus: var(--mmacha-focus);
@@ -182,8 +194,8 @@ body {
   --nav-heading-color: var(--text-muted);
   --nav-heading-color-hover: var(--text-normal);
 
-  --tab-background-active: var(--mmacha-active);
-  --tab-text-color: var(--text-faint);
+  --tab-background-active: var(--background-primary);
+  --tab-text-color: var(--text-muted);
   --tab-text-color-active: var(--text-normal);
   --tab-text-color-focused: var(--text-muted);
   --tab-text-color-focused-active: var(--text-normal);
@@ -202,7 +214,7 @@ body {
   --ribbon-background: var(--mmacha-bg-deep);
   --ribbon-background-collapsed: var(--mmacha-bg-deep);
   --status-bar-background: var(--mmacha-bg-deep);
-  --workspace-background-translucent: var(--mmacha-glass-deep);
+  --workspace-background-translucent: var(--background-secondary);
   --divider-color: var(--mmacha-border);
   --divider-color-hover: var(--mmacha-border-strong);
   --hr-color: var(--mmacha-border-strong);
@@ -262,11 +274,6 @@ body {
   --mmacha-bg-main: #f8f8f7;
   --mmacha-bg-raised: #ffffff;
   --mmacha-bg-code: #f1f2f4;
-  --mmacha-glass-deep: rgba(233, 234, 236, 0.9);
-  --mmacha-glass-side: rgba(241, 242, 243, 0.88);
-  --mmacha-glass-main: rgba(248, 248, 247, 0.9);
-  --mmacha-glass-raised: rgba(255, 255, 255, 0.92);
-  --mmacha-glass-settings: rgba(255, 255, 255, 0.91);
   --mmacha-border: rgba(21, 24, 28, 0.085);
   --mmacha-border-strong: rgba(21, 24, 28, 0.15);
   --mmacha-hover: rgba(21, 24, 28, 0.045);
@@ -326,8 +333,8 @@ body {
   --nav-heading-color: var(--text-muted);
   --nav-heading-color-hover: var(--text-normal);
 
-  --tab-background-active: var(--mmacha-active);
-  --tab-text-color: var(--text-faint);
+  --tab-background-active: var(--background-primary);
+  --tab-text-color: var(--text-muted);
   --tab-text-color-active: var(--text-normal);
   --tab-text-color-focused: var(--text-muted);
   --tab-text-color-focused-active: var(--text-normal);
@@ -342,7 +349,7 @@ body {
   --ribbon-background: var(--mmacha-bg-deep);
   --ribbon-background-collapsed: var(--mmacha-bg-deep);
   --status-bar-background: var(--mmacha-bg-deep);
-  --workspace-background-translucent: var(--mmacha-glass-deep);
+  --workspace-background-translucent: var(--background-secondary);
   --divider-color: var(--mmacha-border);
   --hr-color: var(--mmacha-border-strong);
   --scrollbar-bg: transparent;
@@ -366,115 +373,52 @@ body {
   --code-value: #8f4d91;
 }
 
-/* Translucent mode: one blur layer per major surface, never per row or card. */
-body.is-translucent.theme-dark {
-  --background-primary: var(--mmacha-glass-main);
-  --background-secondary: var(--mmacha-glass-side);
-  --titlebar-background: var(--mmacha-glass-deep);
-  --titlebar-background-focused: var(--mmacha-glass-deep);
-  --tab-container-background: var(--mmacha-glass-deep);
-  --ribbon-background: var(--mmacha-glass-deep);
-  --status-bar-background: var(--mmacha-glass-deep);
+/* Keep Obsidian's native workspace, tab curves, dividers and control geometry.
+   The window surface remains opaque even when native translucency is enabled.
+   Only floating desktop panels use glass, so exposed edges cannot wash out. */
+body {
+  --modal-background: var(--mmacha-floating);
+  --menu-background: var(--mmacha-floating);
 }
 
-body.is-translucent.theme-light {
-  --background-primary: var(--mmacha-glass-main);
-  --background-secondary: var(--mmacha-glass-side);
-  --titlebar-background: var(--mmacha-glass-deep);
-  --titlebar-background-focused: var(--mmacha-glass-deep);
-  --tab-container-background: var(--mmacha-glass-deep);
-  --ribbon-background: var(--mmacha-glass-deep);
-  --status-bar-background: var(--mmacha-glass-deep);
-}
-
-body.is-translucent :is(.mod-sidedock, .workspace-ribbon, .modal, .menu, .suggestion-container) {
-  backdrop-filter: blur(16px) saturate(105%);
-  -webkit-backdrop-filter: blur(16px) saturate(105%);
-}
-
-/* Frame and workspace */
-.workspace,
-.horizontal-main-container {
-  background: var(--mmacha-bg-deep);
-}
-
-:is(.titlebar, .workspace-ribbon, .mod-sidedock, .workspace-sidedock-vault-profile) {
-  background: var(--background-secondary);
-  border-color: var(--mmacha-border);
-}
-
-.workspace-split.mod-root :is(.workspace-tab-container, .view-content) {
+/* Native translucency clears leaves; keep every note surface readable. */
+.workspace-split.mod-root .view-content {
   background: var(--background-primary);
 }
 
-:is(.workspace-tab-header-container, .view-header) {
-  background: var(--tab-container-background);
-  border-color: var(--mmacha-border);
-  box-shadow: none;
+@supports (backdrop-filter: blur(1px)) {
+  body:not(.is-mobile):not(.mmacha-solid-ui) {
+    --mmacha-floating: color-mix(in srgb, var(--mmacha-bg-raised) clamp(85%, var(--mmacha-glass-opacity), 100%), transparent);
+  }
+
+  body:not(.is-mobile):not(.mmacha-solid-ui) :is(.modal, .menu, .suggestion-container, .popover) {
+    background-color: var(--mmacha-floating);
+    backdrop-filter: blur(var(--mmacha-glass-blur));
+    -webkit-backdrop-filter: blur(var(--mmacha-glass-blur));
+  }
 }
 
-.workspace-tab-header {
-  color: var(--text-faint);
-  border-radius: var(--radius-s);
-  transition:
-    color var(--mmacha-motion) ease,
-    background-color var(--mmacha-motion) ease;
+/* Small icon increase through native/plugin tokens, without resizing rows.
+   Notebook Navigator already uses larger navigation icons on mobile. */
+.workspace-ribbon,
+.mod-sidedock {
+  --icon-l: 20px;
 }
 
-.workspace-tab-header:hover {
-  color: var(--text-muted);
-  background: var(--mmacha-hover);
+body:not(.is-mobile) .notebook-navigator {
+  --nn-nav-icon-size: 18px;
+  --nn-file-icon-size: 18px;
 }
 
-.workspace-tab-header.is-active {
-  color: var(--text-normal);
-  border-color: transparent;
-  background: var(--mmacha-active);
-  box-shadow: none;
+/* The settings pane inherits one surface; avoid opaque blocks over the frost. */
+.modal.mod-settings {
+  --settings-background: var(--mmacha-floating);
 }
 
-/* Use one flat tab silhouette in both modes; native curve shadows can leave
-   pale or dark residue where translucent surfaces meet. */
-.workspace-tab-header.is-active::before,
-.workspace-tab-header.is-active::after {
-  box-shadow: none !important;
-}
-
-.workspace-tab-header-status-icon {
-  color: var(--mmacha-accent);
-}
-
-:is(.workspace-leaf-resize-handle, .workspace-split.mod-vertical > .workspace-leaf-resize-handle) {
-  border-color: var(--mmacha-border);
-}
-
-/* Navigation */
-:is(.nav-file-title, .nav-folder-title, .tree-item-self) {
-  min-height: 27px;
-  border-radius: var(--radius-s);
-  color: var(--text-muted);
-  transition:
-    color var(--mmacha-motion) ease,
-    background-color var(--mmacha-motion) ease;
-}
-
-:is(.nav-file-title, .nav-folder-title, .tree-item-self):hover {
-  color: var(--text-normal);
-  background: var(--mmacha-hover);
-}
-
-:is(.nav-file-title.is-active, .tree-item-self.is-selected) {
-  color: var(--text-normal);
-  background: var(--mmacha-active);
-  box-shadow: inset 2px 0 0 var(--mmacha-accent);
-}
-
-.tree-item-children {
-  border-color: color-mix(in srgb, var(--text-normal) 5%, transparent);
-}
-
-.nav-buttons-container {
-  gap: 2px;
+/* Keep tooltip text readable without depending on what is underneath. */
+.tooltip {
+  --background-modifier-message: var(--mmacha-tooltip-bg);
+  --text-on-accent: var(--mmacha-tooltip-text);
 }
 
 /* Typography and notes */
@@ -561,7 +505,7 @@ input[type="checkbox"]:checked {
   padding: 0.48rem 0.9rem;
   color: var(--text-muted);
   border-inline-start: 2px solid color-mix(in srgb, var(--mmacha-accent) 72%, transparent);
-  border-radius: 0 var(--radius-s) var(--radius-s) 0;
+  border-radius: 0 var(--mmacha-note-radius-s) var(--mmacha-note-radius-s) 0;
   background: color-mix(in srgb, var(--text-normal) 1.8%, transparent);
 }
 
@@ -569,7 +513,7 @@ input[type="checkbox"]:checked {
   --callout-border-width: 1px;
   --callout-border-opacity: 0.2;
   --callout-title-size: 0.9em;
-  border-radius: var(--radius-m);
+  border-radius: var(--mmacha-note-radius-m);
   background: color-mix(in srgb, rgb(var(--callout-color)) 5%, var(--background-primary));
   box-shadow: none;
 }
@@ -593,7 +537,7 @@ input[type="checkbox"]:checked {
 .markdown-rendered pre {
   padding: 1rem 1.05rem;
   border: 1px solid var(--mmacha-border);
-  border-radius: var(--radius-m);
+  border-radius: var(--mmacha-note-radius-m);
   background: var(--code-background);
 }
 
@@ -603,7 +547,7 @@ input[type="checkbox"]:checked {
 }
 
 :is(code, .cm-inline-code) {
-  border-radius: var(--radius-s);
+  border-radius: var(--mmacha-note-radius-s);
 }
 
 :not(pre) > code,
@@ -702,7 +646,7 @@ input[type="checkbox"]:checked {
 :is(.markdown-rendered table, .cm-html-embed table) {
   overflow: hidden;
   border: 1px solid var(--table-border-color);
-  border-radius: var(--radius-m);
+  border-radius: var(--mmacha-note-radius-m);
   border-collapse: separate;
   border-spacing: 0;
 }
@@ -719,20 +663,20 @@ input[type="checkbox"]:checked {
   margin-bottom: 1.25rem;
   padding: 0.5rem 0.65rem;
   border: 1px solid var(--mmacha-border);
-  border-radius: var(--radius-m);
+  border-radius: var(--mmacha-note-radius-m);
   background: color-mix(in srgb, var(--text-normal) 1.6%, transparent);
   box-shadow: none;
 }
 
 :is(.metadata-property, .metadata-add-button) {
-  border-radius: var(--radius-s);
+  border-radius: var(--mmacha-note-radius-s);
 }
 
 /* Tags and embeds */
 :is(.tag, a.tag) {
   color: var(--text-muted);
   border: 1px solid var(--mmacha-border);
-  border-radius: var(--radius-s);
+  border-radius: var(--mmacha-note-radius-s);
   background: color-mix(in srgb, var(--text-normal) 3.2%, transparent);
   font-size: 0.82em;
   font-weight: 550;
@@ -747,253 +691,16 @@ input[type="checkbox"]:checked {
 
 :is(.internal-embed, .markdown-embed, .file-embed) {
   border-color: var(--mmacha-border);
-  border-radius: var(--radius-m);
+  border-radius: var(--mmacha-note-radius-m);
   box-shadow: none;
 }
 
 .markdown-rendered img:not(.emoji) {
-  border-radius: var(--radius-m);
+  border-radius: var(--mmacha-note-radius-m);
 }
 
-/* Controls */
-:is(input:not([type="checkbox"]):not([type="range"]), textarea, .search-input-container input) {
-  color: var(--text-normal);
-  border-color: var(--mmacha-border);
-  border-radius: var(--radius-s);
-  background-color: var(--background-modifier-form-field);
-  box-shadow: none;
-  transition:
-    border-color var(--mmacha-motion) ease,
-    box-shadow var(--mmacha-motion) ease,
-    background-color var(--mmacha-motion) ease;
-}
-
-:is(input:not([type="checkbox"]):not([type="range"]), textarea):focus {
-  border-color: var(--mmacha-focus);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--mmacha-accent) 8%, transparent);
-}
-
-:is(select, .dropdown, .combobox-button) {
-  min-height: var(--input-height);
-  padding-inline-start: var(--dropdown-padding-start);
-  padding-inline-end: var(--dropdown-padding-end);
-  color: var(--text-normal);
-  border: 1px solid var(--mmacha-border);
-  border-radius: var(--radius-s);
-  background-color: var(--background-modifier-form-field);
-  box-shadow: none;
-  cursor: pointer;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  transition:
-    border-color var(--mmacha-motion) ease,
-    box-shadow var(--mmacha-motion) ease,
-    background-color var(--mmacha-motion) ease;
-}
-
-/* macOS paints native select arrows on a separate light panel. Draw one
-   integrated chevron so the icon and field always share the same surface. */
-:is(select, .dropdown) {
-  appearance: none;
-  -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='m3.5 5.25 3.5 3.5 3.5-3.5' stroke='%23999ca3' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-position: right 9px center;
-  background-repeat: no-repeat;
-  background-size: 14px 14px;
-}
-
-.theme-light :is(select, .dropdown) {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='m3.5 5.25 3.5 3.5 3.5-3.5' stroke='%23656a72' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-}
-
-:is(select, .dropdown) option {
-  color: var(--text-normal);
-  background: var(--mmacha-bg-raised);
-}
-
-.combobox-button {
-  padding-inline-end: 9px;
-}
-
-:is(select, .dropdown, .combobox-button):focus-visible {
-  border-color: var(--mmacha-focus);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--mmacha-accent) 8%, transparent);
-  outline: none;
-}
-
-input[type="number"] {
-  min-width: 5.5rem;
-  padding-inline-end: 2.15em;
-  font-variant-numeric: tabular-nums;
-}
-
-input[type="number"]::-webkit-inner-spin-button {
-  margin-inline-start: 6px;
-}
-
-.multi-select-container {
-  align-items: center;
-  min-height: var(--input-height);
-  gap: 4px;
-  padding: 3px 6px;
-}
-
-.multi-select-input {
-  min-width: 6ch;
-  padding: 0 2px;
-  border: 0;
-  background: transparent;
-  box-shadow: none;
-}
-
-.multi-select-pill {
-  --pill-padding-x: 0.55em;
-  --pill-padding-y: 0.16em;
-  max-width: 100%;
-  border-radius: var(--radius-s);
-  line-height: var(--line-height-tight);
-}
-
-.multi-select-pill-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.multi-select-pill-remove-button {
-  flex: 0 0 auto;
-  width: 18px;
-  height: 18px;
-  margin-inline-end: 2px;
-  border-radius: 4px;
-}
-
-.metadata-property-value[data-property-type="tags"] .multi-select-container {
-  padding-block: 3px;
-}
-
-.metadata-property[data-property-key="tags"] .multi-select-pill,
-.metadata-property-value[data-property-type="tags"] .multi-select-pill {
-  border: 1px solid color-mix(in srgb, currentColor 28%, var(--mmacha-border));
-  box-shadow: none;
-}
-
-.metadata-property[data-property-key="tags"] .multi-select-pill:hover,
-.metadata-property-value[data-property-type="tags"] .multi-select-pill:hover {
-  border-color: color-mix(in srgb, currentColor 52%, var(--mmacha-border));
-  filter: saturate(1.08) brightness(1.06);
-  transform: translateY(-1px);
-}
-
-.bases-query-container .conjunction.dropdown {
-  min-width: 4.5rem;
-}
-
-:is(button, .clickable-icon) {
-  border-radius: var(--radius-s);
-  box-shadow: none;
-  transition:
-    color var(--mmacha-motion) ease,
-    background-color var(--mmacha-motion) ease,
-    border-color var(--mmacha-motion) ease,
-    transform var(--anim-duration-superfast) ease;
-}
-
-button:active,
-.clickable-icon:active {
-  transform: none;
-}
-
-.checkbox-container {
-  box-shadow: none;
-}
-
-.checkbox-container.is-enabled {
-  background: var(--mmacha-accent);
-}
-
-/* Menus, prompts, and settings */
-:is(.menu, .suggestion-container, .popover, .prompt, .modal, .tooltip) {
-  color: var(--text-normal);
-  border: 1px solid var(--mmacha-border-strong);
-  border-radius: var(--radius-l);
-  background: var(--mmacha-glass-raised);
-  box-shadow: 0 18px 48px var(--mmacha-shadow);
-}
-
-.theme-light :is(.menu, .suggestion-container, .popover, .prompt, .modal) {
-  box-shadow: 0 10px 28px rgba(21, 24, 28, 0.1);
-}
-
-/* Tooltips sit above both light and dark surfaces, so give them a stable
-   high-contrast surface instead of inheriting menu glass colors. */
-.tooltip {
-  color: var(--mmacha-tooltip-text) !important;
-  border-color: color-mix(in srgb, var(--mmacha-tooltip-text) 14%, transparent) !important;
-  background: var(--mmacha-tooltip-bg) !important;
-  box-shadow: 0 8px 24px color-mix(in srgb, black 24%, transparent) !important;
-}
-
-.tooltip.mod-top .tooltip-arrow {
-  border-top-color: var(--mmacha-tooltip-bg) !important;
-}
-
-.tooltip.mod-bottom .tooltip-arrow,
-.tooltip .tooltip-arrow {
-  border-bottom-color: var(--mmacha-tooltip-bg) !important;
-}
-
-.tooltip.mod-right .tooltip-arrow {
-  border-right-color: var(--mmacha-tooltip-bg) !important;
-}
-
-.tooltip.mod-left .tooltip-arrow {
-  border-left-color: var(--mmacha-tooltip-bg) !important;
-}
-
-:is(.menu-item, .suggestion-item, .vertical-tab-nav-item) {
-  border-radius: var(--radius-s);
-}
-
-:is(.menu-item, .suggestion-item, .vertical-tab-nav-item).is-selected,
-.vertical-tab-nav-item.is-active {
-  color: var(--text-normal);
-  background: var(--mmacha-active);
-}
-
-.modal.mod-settings {
-  --settings-background: var(--mmacha-glass-settings);
-  --modal-background: var(--mmacha-glass-settings);
-  background: var(--mmacha-glass-settings);
-}
-
-.modal.mod-settings :is(.vertical-tab-header, .vertical-tab-content-container, .vertical-tab-content) {
-  background: transparent;
-}
-
-.theme-light .modal.mod-settings {
-  border-color: rgba(21, 24, 28, 0.12);
-  box-shadow: 0 18px 48px rgba(21, 24, 28, 0.12);
-}
-
-.modal-container.mod-dim .modal-bg {
-  background: rgba(0, 0, 0, 0.54);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
-.setting-item {
-  border-color: var(--mmacha-border);
-}
-
-.setting-item-control {
-  gap: 8px;
-  min-width: 0;
-}
-
-.setting-item-heading {
-  color: var(--text-normal);
-}
+/* Controls, dropdown arrows, focus rings, menus, and property editors use
+   Obsidian's native layout and accessibility behavior. */
 
 /* Community plugin rows use Obsidian's native setting-item structure.
    Keep descriptions shrinkable and action controls at their intrinsic width. */
@@ -1027,50 +734,6 @@ button:active,
   white-space: nowrap;
 }
 
-/* Bases, Canvas, Graph, and utilities */
-:is(.bases-toolbar, .bases-table-container) {
-  border-color: var(--mmacha-border);
-  background: color-mix(in srgb, var(--background-primary) 92%, transparent);
-}
-
-.bases-table-container {
-  border-radius: var(--radius-m);
-}
-
-:is(.canvas-card-menu, .canvas-controls, .graph-controls) {
-  border: 1px solid var(--mmacha-border-strong);
-  border-radius: var(--radius-m);
-  background: var(--mmacha-glass-raised);
-  box-shadow: 0 12px 30px var(--mmacha-shadow);
-}
-
-.theme-light :is(.canvas-card-menu, .canvas-controls, .graph-controls) {
-  box-shadow: 0 8px 22px rgba(21, 24, 28, 0.1);
-}
-
-.canvas-node-container {
-  border-radius: var(--radius-m);
-}
-
-.status-bar {
-  color: var(--text-faint);
-  border: 1px solid var(--mmacha-border);
-  background: var(--status-bar-background);
-  box-shadow: none;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb-bg);
-  border: 3px solid transparent;
-  background-clip: padding-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-active-thumb-bg);
-  border: 3px solid transparent;
-  background-clip: padding-box;
-}
-
 /* Mermaid owns its surface; avoid a panel inside another panel. */
 :is(.cm-preview-code-block, .cm-embed-block, .cm-embed-block.cm-lang-mermaid, .el-pre, .block-language-mermaid):has(.mermaid),
 :is(.cm-embed-block.cm-lang-mermaid, .block-language-mermaid) {
@@ -1091,9 +754,9 @@ button:active,
 /* Integrated visual extras: graph, Mermaid, and Motion Arts cards. */
 /* Graph view colors */
 .theme-dark {
-  --km-graph-node: #b9bec7;
+  --km-graph-node: #88c4aa;
   --km-graph-node-focused: var(--mmacha-accent);
-  --km-graph-node-tag: #78add3;
+  --km-graph-node-tag: #d6b978;
   --km-graph-node-attachment: #a9a0c5;
   --km-graph-node-unresolved: #d9797f;
   --km-graph-line: rgba(154, 157, 164, 0.3);
@@ -1464,7 +1127,7 @@ body.theme-dark .mermaid svg {
 }
 
 .bases-cards-cover {
-  border-radius: var(--radius-m, 6px);
+  border-radius: var(--mmacha-note-radius-m, 6px);
   box-shadow: none !important;
   transition: transform var(--anim-duration-fast, 160ms) ease;
 }
@@ -1523,22 +1186,7 @@ body.theme-dark .mermaid svg {
 }
 
 
-/* Restrained motion */
-@keyframes mmacha-surface-enter {
-  from {
-    opacity: 0;
-    transform: translateY(3px) scale(0.995);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-:is(.menu, .suggestion-container, .prompt, .modal) {
-  animation: mmacha-surface-enter var(--anim-duration-fast) cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
+/* Let native menus and modals own their entrance animations. */
 @media (prefers-reduced-motion: reduce) {
   body {
     --mmacha-motion: 0ms;
@@ -1590,23 +1238,19 @@ body.theme-dark .mermaid svg {
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Reduce blur and transparency on mobile for steadier contrast and less
-     rendering work; preserve the same light/dark palette. */
-  body.is-translucent :is(.workspace, .horizontal-main-container, .mod-sidedock, .workspace-ribbon) {
+
+}
+
+/* Opaque fallbacks for OS accessibility settings and high-contrast use. */
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  body:not(.is-mobile):not(.mmacha-solid-ui) {
+    --mmacha-floating: var(--mmacha-bg-raised);
+  }
+
+  body:not(.is-mobile):not(.mmacha-solid-ui) :is(.modal, .menu, .suggestion-container, .popover),
+  .mermaid {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-  }
-
-  body.is-translucent.theme-dark :is(.workspace, .horizontal-main-container, .mod-sidedock, .workspace-ribbon) {
-    background: #101319;
-  }
-
-  body.is-translucent.theme-light :is(.workspace, .horizontal-main-container, .mod-sidedock, .workspace-ribbon) {
-    background: #f1f2f3;
-  }
-
-  .is-mobile :is(.clickable-icon, .nav-file-title, .nav-folder-title, .tree-item-self) {
-    min-height: 40px;
   }
 }
 

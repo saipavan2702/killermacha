@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -84,7 +84,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true,
+                "autoReveal": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -265,20 +265,21 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3c9abc6e4908ddc9",
+  "active": "e3aef839f13c0032",
   "lastOpenFiles": [
+    "Macha/motionArts/Celluloid.base",
+    "Macha/motionArts/Items/Lock, Stock and Two Smoking Barrels.md",
     "Upskill/SysDes/LLD/Design Patterns/Behavioral.md",
     "Upskill/ProgramLang/Java/Collections and Generics Examples.md",
-    "Macha/motionArts/Items/Veer-Zaara.md",
-    "Upskill/SysDes/LLD/Design Patterns/Creational.md",
     "Upskill/SysDes/LLD/Clean Code Patterns.md",
+    "Upskill/SysDes/LLD/Design Patterns/Creational.md",
+    "Macha/motionArts/Items/Veer-Zaara.md",
     "Upskill/ProgramLang/Java/Spring Boot Interview Questions.md",
     "Macha/motionArts/Tools/test_sync_tmdb_posters.py",
     "Templates/Article Notes.md",
     "Templates/Coding Problem.md",
     "Templates/Topic.md",
     "QoL/Configs.md",
-    "Macha/motionArts/Celluloid.base",
     "Macha/motionArts/Items/Scorned.md",
     "Orcl/Weekly Report.md",
     "Upskill/DSA/Practice Problems.md",
@@ -293,8 +294,6 @@
     "Macha/motionArts/Items/The Love Hypothesis.md",
     "Macha/motionArts/Items/The Lord of the Rings - The Two Towers.md",
     "Macha/motionArts/Items/How to Lose a Guy in 10 Days.md",
-    "Macha/motionArts/Items/Yes Boss.md",
-    "Macha/motionArts/Items/Student of the Year.md",
     "new-book-template-clipper.json",
     "attachments/Pasted image 20260601002039.png",
     "attachments/dashboard-assets/rain-pond.gif",

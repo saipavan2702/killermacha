@@ -75,5 +75,6 @@
   "obsidian-transparent@@default-sync-error": false,
   "obsidian-transparent@@ui-blur": 30,
   "obsidian-transparent@@settings-blur": 30,
-  "obsidian-transparent@@background-blur": 80
+  "obsidian-transparent@@background-blur": 80,
+  "mmacha-theme@@mmacha-solid-ui": false
 }
