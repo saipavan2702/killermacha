@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "upskill/SysDes/System Design Process.md",
+                "file": "Lingo/Eśpanol/Sentences.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "System Design Process"
+              "title": "Sentences"
             }
           }
         ]
@@ -186,9 +186,9 @@
   },
   "active": "140149819ba54c43",
   "lastOpenFiles": [
+    "upskill/SysDes/System Design Process.md",
     "Macha/watches.md",
     "Macha/motionArts/Celluloid.base",
-    "upskill/SysDes/System Design Process.md",
     "Interview Quick Notes.md",
     "Tasks/Tasks.md",
     "Tasks/To-Do's.md",
