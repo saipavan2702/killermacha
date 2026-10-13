@@ -14,8 +14,9 @@ https://github.com/jakmaz/dotfiles
 https://github.com/DakshG07
 https://github.com/JazzyGrim/dotfiles
 https://github.com/SeniorMars/dotfiles/
-- [fkabs/dotfiles](https://github.com/fkabs/dotfiles) — Zsh aliases, shell functions, and startup configuration.
-- [mariocesar/dotfiles](https://github.com/mariocesar/dotfiles/tree/main) — Shared shell aliases, helpers, and macOS/Linux configuration.
+[fkabs/dotfiles](https://github.com/fkabs/dotfiles) 
+[mariocesar/dotfiles](https://github.com/mariocesar/dotfiles/tree/main) 
+https://github.com/FractalCodeRicardo/dev-config
 
 ---
 ## Ghostty
@@ -43,9 +44,9 @@ Git's
 https://github.com/JanDeDobbeleer/oh-my-posh/discussions/5578
 https://github.com/vraravam/dotfiles/tree/master
 https://gist.github.com/elliottminns/09a598082d77f795c88e93f7f73dba61
-- [fkabs Zsh configuration](https://github.com/fkabs/dotfiles/tree/main/zsh/.config/zsh) — Aliases, autoloaded functions, and completion caching.
-- [mariocesar shell aliases](https://github.com/mariocesar/dotfiles/blob/main/common/.aliases) — File listings, search helpers, Git, and network commands.
-- [houssamouhra/zsh-config](https://github.com/houssamouhra/zsh-config) — Modular Zsh configuration with deferred plugins, cached completions, and a native Git-aware prompt; reference for startup performance and shell maintenance.
+[fkabs Zsh configuration](https://github.com/fkabs/dotfiles/tree/main/zsh/.config/zsh) 
+[mariocesar shell aliases](https://github.com/mariocesar/dotfiles/blob/main/common/.aliases) 
+[houssamouhra/zsh-config](https://github.com/houssamouhra/zsh-config) 
 
 Blogs
 https://medium.com/@Smyekh/tuning-my-terminal-how-zinit-made-my-zsh-setup-fast-flexible-and-actually-fun-5f6450589003
@@ -128,4 +129,4 @@ https://www.youtube.com/watch?v=G89oddoYZl4
 
 ## Android
 
-- [Google Shortcuts Launcher](https://github.com/WSTxda/Google-Shortcuts-Launcher) - Adds shortcuts to Google app features from the Android launcher app drawer.
+[Google Shortcuts Launcher](https://github.com/WSTxda/Google-Shortcuts-Launcher) - Adds shortcuts to Google app features from the Android launcher app drawer.
