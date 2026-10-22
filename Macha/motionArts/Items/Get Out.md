@@ -2,8 +2,8 @@
 media_type: movie
 title: Get Out
 industry: Hollywood
-watched: false
-watched_date:
+watched: true
+watched_date: 2026-10-21
 genres:
   - Mystery
   - Thriller
