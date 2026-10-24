@@ -48,9 +48,22 @@
               "icon": "lucide-file",
               "title": "Behavioral"
             }
+          },
+          {
+            "id": "f19864fa889e0878",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "Macha/motionArts/Celluloid.base",
+                "viewName": "Movies"
+              },
+              "icon": "lucide-layout-grid",
+              "title": "Celluloid"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -252,8 +265,9 @@
       "mmacha-auto:Add media to library": false
     }
   },
-  "active": "3c9abc6e4908ddc9",
+  "active": "f19864fa889e0878",
   "lastOpenFiles": [
+    "Upskill/SysDes/LLD/Design Patterns/Behavioral.md",
     "Lingo/Inglis/Vocabulary.md",
     "Macha/motionArts/Celluloid.base",
     "Macha/motionArts/Library/Wistoria- Wand and Sword - Manga.md",
@@ -279,7 +293,6 @@
     "Macha/motionArts/Tools/test_media_library.cjs",
     "Macha/motionArts/Library",
     "Macha/motionArts/Items/Get Out.md",
-    "Upskill/SysDes/LLD/Design Patterns/Behavioral.md",
     "Upskill/SysDes/LLD/Design Patterns/Creational.md",
     "Macha/motionArts/Items/The Hunt.md",
     "Upskill/SysDes/LLD/Clean Code Patterns.md",
