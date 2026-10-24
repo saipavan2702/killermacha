@@ -1,9 +1,7 @@
 ---
-title: The Nightmare Before Christmas
 media_type: anime-movie
-industry: Anime
-watched: false
-watched_date:
+title: The Nightmare Before Christmas
+year: ""
 genres:
   - Fantasy
   - Animation
@@ -13,8 +11,12 @@ tags:
   - motion-art
   - anime
   - movie
+watched: false
+watched_date:
+industry: Anime
 directors:
   - Henry Selick
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

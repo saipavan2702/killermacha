@@ -1,23 +1,24 @@
 ---
-title: The Guilty
 media_type: movie
+title: The Guilty
 industry: Hollywood
 watched: false
 watched_date:
 genres:
   - Drama
   - Thriller
-poster: https://image.tmdb.org/t/p/w500/m8aR1k35oZMOzZ1kYWUyt401mwq.jpg
 year: "2021"
+directors:
+  - Antoine Fuqua
 cast:
-  - "Jake Gyllenhaal"
-  - "Ethan Hawke"
-  - "Riley Keough"
+  - Jake Gyllenhaal
+  - Ethan Hawke
+  - Riley Keough
+poster: https://image.tmdb.org/t/p/w500/m8aR1k35oZMOzZ1kYWUyt401mwq.jpg
 tags:
   - motion-art
   - movie
-directors:
-  - Antoine Fuqua
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

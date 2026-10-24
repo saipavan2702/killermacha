@@ -1,9 +1,7 @@
 ---
-title: The Boy and the Heron
 media_type: anime-movie
-industry: Anime
-watched: false
-watched_date:
+title: The Boy and the Heron
+year: ""
 genres:
   - Animation
   - Fantasy
@@ -13,8 +11,12 @@ tags:
   - motion-art
   - anime
   - movie
+watched: false
+watched_date:
+industry: Anime
 directors:
   - Hayao Miyazaki
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

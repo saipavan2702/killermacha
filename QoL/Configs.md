@@ -17,6 +17,7 @@ https://github.com/SeniorMars/dotfiles/
 [fkabs/dotfiles](https://github.com/fkabs/dotfiles) 
 [mariocesar/dotfiles](https://github.com/mariocesar/dotfiles/tree/main) 
 https://github.com/FractalCodeRicardo/dev-config
+https://github.com/ChristianLempa/dotfiles
 
 ---
 ## Ghostty
@@ -111,12 +112,13 @@ https://github.com/SvenBroeckling/nvim-0.12-config
 https://github.com/Piotr1215/dotfiles
 https://github.com/dgox16/dotfiles/blob/main/.config/nvim/lua/configs/lualine.lua
 https://github.com/fitiavana07/.vim/blob/main/vimrc
-https://github.com/craftzdog/dotfiles-public
+https://github.com/craftzdog/dotfiles
 https://github.com/SalarAlo/neovim-configuration/tree/main
 https://gitlab.com/theblackdon/normie-nvim
 https://github.com/ChrisTitusTech/neovim
 https://github.com/if-not-nil
 https://github.com/x0aa7i/dotfiles/tree/main
+https://github.com/mcauley-penney/nvim
 
 Blogs
 https://pastebin.com/LBMtvCiC

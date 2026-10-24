@@ -1,6 +1,6 @@
 ---
-title: Yes Boss
 media_type: movie
+title: Yes Boss
 industry: India
 watched: false
 watched_date:
@@ -19,6 +19,7 @@ poster: https://image.tmdb.org/t/p/w500/ayp76lRwyp5izlZVnxcZscgHofH.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

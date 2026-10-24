@@ -1,9 +1,7 @@
 ---
-title: The Princess and the Frog
 media_type: anime-movie
-industry: Anime
-watched: false
-watched_date:
+title: The Princess and the Frog
+year: ""
 genres:
   - Animation
   - Romance
@@ -14,9 +12,13 @@ tags:
   - motion-art
   - anime
   - movie
+watched: false
+watched_date:
+industry: Anime
 directors:
   - Ron Clements
   - John Musker
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

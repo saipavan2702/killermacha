@@ -1,6 +1,6 @@
 ---
-title: Student of the Year
 media_type: movie
+title: Student of the Year
 industry: India
 watched: false
 watched_date:
@@ -19,6 +19,7 @@ poster: https://image.tmdb.org/t/p/w500/yQIph97KwXmMiXu1kOWPj065P8J.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

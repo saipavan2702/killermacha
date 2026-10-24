@@ -1,9 +1,7 @@
 ---
-title: Monsters, Inc.
 media_type: anime-movie
-industry: Anime
-watched: false
-watched_date:
+title: Monsters, Inc.
+year: ""
 genres:
   - Animation
   - Comedy
@@ -14,8 +12,12 @@ tags:
   - motion-art
   - anime
   - movie
+watched: false
+watched_date:
+industry: Anime
 directors:
   - Pete Docter
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

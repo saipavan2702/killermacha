@@ -1,6 +1,6 @@
 ---
-title: Hasee Toh Phasee
 media_type: movie
+title: Hasee Toh Phasee
 industry: India
 watched: false
 watched_date:
@@ -18,6 +18,7 @@ poster: https://image.tmdb.org/t/p/w500/umLscI7JOZECRY7G9sICOid6MFT.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

@@ -1,6 +1,6 @@
 ---
-title: End of Watch
 media_type: movie
+title: End of Watch
 industry: Hollywood
 watched: false
 watched_date:
@@ -8,17 +8,18 @@ genres:
   - Crime
   - Drama
   - Thriller
-poster: https://image.tmdb.org/t/p/w500/pDeVKQICkcdwwjHxGj0MeS14YJ6.jpg
+year: "2012"
 directors:
   - David Ayer
-year: "2012"
 cast:
-  - "Jake Gyllenhaal"
-  - "Michael Peña"
-  - "Natalie Martinez"
+  - Jake Gyllenhaal
+  - Michael Peña
+  - Natalie Martinez
+poster: https://image.tmdb.org/t/p/w500/pDeVKQICkcdwwjHxGj0MeS14YJ6.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

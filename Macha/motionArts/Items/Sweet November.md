@@ -7,17 +7,18 @@ watched_date:
 genres:
   - Drama
   - Romance
+year: "2001"
 directors:
   - Pat O'Connor
-poster: https://image.tmdb.org/t/p/w500/3biEHZSBSYqSkawU2sQyNbLcjgE.jpg
-year: "2001"
 cast:
-  - "Keanu Reeves"
-  - "Charlize Theron"
-  - "Jason Isaacs"
+  - Keanu Reeves
+  - Charlize Theron
+  - Jason Isaacs
+poster: https://image.tmdb.org/t/p/w500/3biEHZSBSYqSkawU2sQyNbLcjgE.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

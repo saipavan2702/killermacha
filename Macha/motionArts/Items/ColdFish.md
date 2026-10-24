@@ -1,6 +1,6 @@
 ---
-title: ColdFish
 media_type: movie
+title: ColdFish
 industry: Japanese cinema
 watched: false
 watched_date:
@@ -9,17 +9,18 @@ genres:
   - Thriller
   - Crime
   - Horror
-poster: https://image.tmdb.org/t/p/w500/669GmEZsyMlPliURX5myHTStslv.jpg
+year: "2011"
 directors:
   - Sion Sono
-year: "2011"
 cast:
-  - "Mitsuru Fukikoshi"
-  - "Denden"
-  - "Asuka Kurosawa"
+  - Mitsuru Fukikoshi
+  - Denden
+  - Asuka Kurosawa
+poster: https://image.tmdb.org/t/p/w500/669GmEZsyMlPliURX5myHTStslv.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

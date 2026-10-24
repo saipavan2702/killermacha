@@ -19,4 +19,5 @@ poster: https://image.tmdb.org/t/p/w500/wYoDpWInsBEVSmWStnRH06ddoyk.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---

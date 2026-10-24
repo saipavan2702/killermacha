@@ -1,9 +1,9 @@
 {
   "id": "mmacha-auto",
   "name": "Motion Arts",
-  "version": "1.1.0",
+  "version": "1.2.1",
   "minAppVersion": "1.5.0",
-  "description": "Keeps Motion Arts items current with watched dates and TMDB metadata.",
+  "description": "Media library for movies, TV, anime, manga, and games: metadata, covers, progress, and ratings.",
   "author": "mmacha",
   "isDesktopOnly": false
 }

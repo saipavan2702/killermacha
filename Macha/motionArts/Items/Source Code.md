@@ -1,6 +1,6 @@
 ---
-title: Source Code
 media_type: movie
+title: Source Code
 industry: Hollywood
 watched: false
 watched_date:
@@ -8,17 +8,18 @@ genres:
   - Thriller
   - Science Fiction
   - Mystery
-poster: https://image.tmdb.org/t/p/w500/nTr0lvAzeQmUjgSgDEHTJpnrxTz.jpg
 year: "2011"
+directors:
+  - Duncan Jones
 cast:
-  - "Jake Gyllenhaal"
-  - "Michelle Monaghan"
-  - "Vera Farmiga"
+  - Jake Gyllenhaal
+  - Michelle Monaghan
+  - Vera Farmiga
+poster: https://image.tmdb.org/t/p/w500/nTr0lvAzeQmUjgSgDEHTJpnrxTz.jpg
 tags:
   - motion-art
   - movie
-directors:
-  - Duncan Jones
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

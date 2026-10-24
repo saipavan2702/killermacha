@@ -9,17 +9,18 @@ genres:
   - Action
   - Crime
   - Thriller
+year: "2008"
 directors:
   - Christopher Nolan
-poster: https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg
-year: "2008"
 cast:
-  - "Christian Bale"
-  - "Heath Ledger"
-  - "Aaron Eckhart"
+  - Christian Bale
+  - Heath Ledger
+  - Aaron Eckhart
+poster: https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

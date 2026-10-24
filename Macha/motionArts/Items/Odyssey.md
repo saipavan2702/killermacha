@@ -8,17 +8,18 @@ genres:
   - Adventure
   - Action
   - Fantasy
+year: "2026"
 directors:
   - Christopher Nolan
-poster: https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg
-year: "2026"
 cast:
-  - "Matt Damon"
-  - "Tom Holland"
-  - "Anne Hathaway"
+  - Matt Damon
+  - Tom Holland
+  - Anne Hathaway
+poster: https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

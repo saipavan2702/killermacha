@@ -1,6 +1,6 @@
 ---
-title: Gangster Squad
 media_type: movie
+title: Gangster Squad
 industry: Hollywood
 watched: false
 watched_date:
@@ -9,17 +9,18 @@ genres:
   - Drama
   - Action
   - Thriller
-poster: https://image.tmdb.org/t/p/w500/wAuQNTBFBu2yXZsX6yLhUPiwTlW.jpg
+year: "2013"
 directors:
   - Ruben Fleischer
-year: "2013"
 cast:
-  - "Josh Brolin"
-  - "Ryan Gosling"
-  - "Sean Penn"
+  - Josh Brolin
+  - Ryan Gosling
+  - Sean Penn
+poster: https://image.tmdb.org/t/p/w500/wAuQNTBFBu2yXZsX6yLhUPiwTlW.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

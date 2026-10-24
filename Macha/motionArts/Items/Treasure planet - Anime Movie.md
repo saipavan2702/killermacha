@@ -1,9 +1,7 @@
 ---
-title: Treasure planet
 media_type: anime-movie
-industry: Anime
-watched: false
-watched_date:
+title: Treasure planet
+year: ""
 genres:
   - Science Fiction
   - Adventure
@@ -15,9 +13,13 @@ tags:
   - motion-art
   - anime
   - movie
+watched: false
+watched_date:
+industry: Anime
 directors:
   - Ron Clements
   - John Musker
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

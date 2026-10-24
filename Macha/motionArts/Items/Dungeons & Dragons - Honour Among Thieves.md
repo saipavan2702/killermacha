@@ -8,18 +8,19 @@ genres:
   - Adventure
   - Fantasy
   - Comedy
+year: "2023"
 directors:
   - John Francis Daley
   - Jonathan Goldstein
-poster: https://image.tmdb.org/t/p/w500/v7UF7ypAqjsFZFdjksjQ7IUpXdn.jpg
-year: "2023"
 cast:
-  - "Chris Pine"
-  - "Michelle Rodriguez"
-  - "Justice Smith"
+  - Chris Pine
+  - Michelle Rodriguez
+  - Justice Smith
+poster: https://image.tmdb.org/t/p/w500/v7UF7ypAqjsFZFdjksjQ7IUpXdn.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

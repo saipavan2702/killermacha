@@ -1,9 +1,7 @@
 ---
-title: "The Lord of the Rings: The War of the Rohirrim"
 media_type: anime-movie
-industry: Anime
-watched: true
-watched_date: 2026-06-12
+title: "The Lord of the Rings: The War of the Rohirrim"
+year: ""
 genres:
   - Animation
   - Fantasy
@@ -14,8 +12,12 @@ tags:
   - motion-art
   - anime
   - movie
+watched: true
+watched_date: 2026-06-12
+industry: Anime
 directors:
   - Kenji Kamiyama
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

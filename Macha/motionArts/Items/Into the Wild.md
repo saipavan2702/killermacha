@@ -1,8 +1,8 @@
 ---
 media_type: movie
-watched: false
 title: Into the Wild
 industry: Hollywood
+watched: false
 watched_date:
 genres:
   - Adventure
@@ -18,4 +18,5 @@ poster: https://image.tmdb.org/t/p/w500/jnLnLYP5pGDfri04gxtAqAvkHMw.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---

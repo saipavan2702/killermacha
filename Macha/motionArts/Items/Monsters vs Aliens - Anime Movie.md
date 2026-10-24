@@ -1,9 +1,7 @@
 ---
-title: Monsters vs Aliens
 media_type: anime-movie
-industry: Anime
-watched: false
-watched_date:
+title: Monsters vs Aliens
+year: ""
 genres:
   - Animation
   - Family
@@ -14,9 +12,13 @@ tags:
   - motion-art
   - anime
   - movie
+watched: false
+watched_date:
+industry: Anime
 directors:
   - Rob Letterman
   - Conrad Vernon
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

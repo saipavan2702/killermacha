@@ -1,6 +1,6 @@
 ---
-title: Veer-Zaara
 media_type: movie
+title: Veer-Zaara
 industry: India
 watched: false
 watched_date:
@@ -18,6 +18,7 @@ poster: https://image.tmdb.org/t/p/w500/j267YqLvKAHeyykTflxzpgVgviQ.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

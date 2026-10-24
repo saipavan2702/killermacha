@@ -8,17 +8,18 @@ genres:
   - Mystery
   - Crime
   - Thriller
+year: "2002"
 directors:
   - Brian De Palma
-poster: https://image.tmdb.org/t/p/w500/i2OgxmZVbIsJxaLiYMjCSewsLty.jpg
-year: "2002"
 cast:
-  - "Rebecca Romijn"
-  - "Antonio Banderas"
-  - "Peter Coyote"
+  - Rebecca Romijn
+  - Antonio Banderas
+  - Peter Coyote
+poster: https://image.tmdb.org/t/p/w500/i2OgxmZVbIsJxaLiYMjCSewsLty.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

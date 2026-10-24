@@ -1,6 +1,6 @@
 ---
-title: Slumdog Millionaire
 media_type: movie
+title: Slumdog Millionaire
 industry: Hollywood
 watched: false
 watched_date:
@@ -18,6 +18,7 @@ poster: https://image.tmdb.org/t/p/w500/5leCCi7ZF0CawAfM5Qo2ECKPprc.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

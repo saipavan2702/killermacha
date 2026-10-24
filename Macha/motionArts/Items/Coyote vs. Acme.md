@@ -1,8 +1,8 @@
 ---
 media_type: movie
-watched: false
 title: Coyote vs. Acme
 industry: Hollywood
+watched: false
 watched_date:
 genres:
   - Comedy
@@ -19,4 +19,5 @@ poster: https://image.tmdb.org/t/p/w500/vhv7lBWYM0DUuNU2a0V7Rhq21dD.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---

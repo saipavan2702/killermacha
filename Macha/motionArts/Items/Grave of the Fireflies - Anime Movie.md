@@ -1,18 +1,20 @@
 ---
-title: Grave of the Fireflies
 media_type: anime-movie
-industry: Anime
-watched: false
-watched_date:
+title: Grave of the Fireflies
+year: ""
 genres:
   - Drama
 poster: https://image.tmdb.org/t/p/w500/im6u58cPa9HlH5DqSnZGy0O37l5.jpg
-directors:
-  - Tōya Satō
 tags:
   - motion-art
   - anime
   - movie
+watched: false
+watched_date:
+industry: Anime
+directors:
+  - Tōya Satō
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

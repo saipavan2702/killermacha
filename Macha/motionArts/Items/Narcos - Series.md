@@ -1,13 +1,17 @@
 ---
-title: Narcos
 media_type: series
-industry: Hollywood
-watched: false
-watched_date:
+title: Narcos
+year: "2015"
 genres:
   - Crime
   - Drama
-year: "2015"
+poster: https://image.tmdb.org/t/p/w500/rTmal9fDbwh5F0waol2hq35U4ah.jpg
+tags:
+  - motion-art
+  - series
+watched: false
+watched_date:
+industry: Hollywood
 directors:
   - Andrés Baiz
   - Josef Kubota Wladyka
@@ -16,10 +20,7 @@ cast:
   - Wagner Moura
   - Pedro Pascal
   - Matias Varela
-poster: https://image.tmdb.org/t/p/w500/rTmal9fDbwh5F0waol2hq35U4ah.jpg
-tags:
-  - motion-art
-  - series
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

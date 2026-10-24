@@ -1,9 +1,7 @@
 ---
-title: Osmosis Jones
 media_type: anime-movie
-industry: Anime
-watched: false
-watched_date:
+title: Osmosis Jones
+year: ""
 genres:
   - Action
   - Adventure
@@ -16,9 +14,13 @@ tags:
   - motion-art
   - anime
   - movie
+watched: false
+watched_date:
+industry: Anime
 directors:
   - Bobby Farrelly
   - Peter Farrelly
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

@@ -1,23 +1,24 @@
 ---
-title: Untamed Heart
 media_type: movie
+title: Untamed Heart
 industry: Hollywood
 watched: false
 watched_date:
 genres:
   - Drama
   - Romance
-poster: https://image.tmdb.org/t/p/w500/2NTqe5MGx5YAXyQuMvwXSevNHeQ.jpg
 year: "1993"
+directors:
+  - Tony Bill
 cast:
-  - "Christian Slater"
-  - "Marisa Tomei"
-  - "Rosie Perez"
+  - Christian Slater
+  - Marisa Tomei
+  - Rosie Perez
+poster: https://image.tmdb.org/t/p/w500/2NTqe5MGx5YAXyQuMvwXSevNHeQ.jpg
 tags:
   - motion-art
   - movie
-directors:
-  - Tony Bill
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

@@ -1,13 +1,17 @@
 ---
-title: Mr. Robot
 media_type: series
-industry: Hollywood
-watched: false
-watched_date:
+title: Mr. Robot
+year: "2015"
 genres:
   - Crime
   - Drama
-year: "2015"
+poster: https://image.tmdb.org/t/p/w500/kv1nRqgebSsREnd7vdC2pSGjpLo.jpg
+tags:
+  - motion-art
+  - series
+watched: false
+watched_date:
+industry: Hollywood
 directors:
   - Sam Esmail
   - Jim McKay
@@ -16,10 +20,7 @@ cast:
   - Rami Malek
   - Christian Slater
   - Carly Chaikin
-poster: https://image.tmdb.org/t/p/w500/kv1nRqgebSsREnd7vdC2pSGjpLo.jpg
-tags:
-  - motion-art
-  - series
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

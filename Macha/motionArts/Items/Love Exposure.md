@@ -1,6 +1,6 @@
 ---
-title: Love Exposure
 media_type: movie
+title: Love Exposure
 industry: Japanese cinema
 watched: false
 watched_date:
@@ -9,17 +9,18 @@ genres:
   - Comedy
   - Drama
   - Romance
-poster: https://image.tmdb.org/t/p/w500/3QSGUdzG374H7pOxIdKNBpeLEUk.jpg
+year: "2008"
 directors:
   - Sion Sono
-year: "2008"
 cast:
-  - "Takahiro Nishijima"
-  - "Hikari Mitsushima"
-  - "Sakura Ando"
+  - Takahiro Nishijima
+  - Hikari Mitsushima
+  - Sakura Ando
+poster: https://image.tmdb.org/t/p/w500/3QSGUdzG374H7pOxIdKNBpeLEUk.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

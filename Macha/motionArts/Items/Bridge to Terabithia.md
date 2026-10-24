@@ -1,8 +1,8 @@
 ---
 media_type: movie
-watched: false
 title: Bridge to Terabithia
 industry: Hollywood
+watched: false
 watched_date:
 genres:
   - Adventure
@@ -19,4 +19,5 @@ poster: https://image.tmdb.org/t/p/w500/3xFxGodKPMFLheS8rujFSmLfcq4.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---

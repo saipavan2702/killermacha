@@ -7,17 +7,18 @@ watched_date:
 genres:
   - Thriller
   - Crime
+year: "1981"
 directors:
   - Lawrence Kasdan
-poster: https://image.tmdb.org/t/p/w500/5LipPcaW1J9IjAP7TOTesw8OcMS.jpg
-year: "1981"
 cast:
-  - "William Hurt"
-  - "Kathleen Turner"
-  - "Richard Crenna"
+  - William Hurt
+  - Kathleen Turner
+  - Richard Crenna
+poster: https://image.tmdb.org/t/p/w500/5LipPcaW1J9IjAP7TOTesw8OcMS.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

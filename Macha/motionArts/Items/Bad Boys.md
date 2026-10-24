@@ -9,17 +9,18 @@ genres:
   - Comedy
   - Crime
   - Thriller
+year: "1995"
 directors:
   - Michael Bay
-poster: https://image.tmdb.org/t/p/w500/x1ygBecKHfXX4M2kRhmFKWfWbJc.jpg
-year: "1995"
 cast:
   - Will Smith
   - Martin Lawrence
   - Téa Leoni
+poster: https://image.tmdb.org/t/p/w500/x1ygBecKHfXX4M2kRhmFKWfWbJc.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

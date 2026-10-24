@@ -1,0 +1,10 @@
+.motion-arts-form { width: min(620px, 92vw); }
+.motion-arts-form .motion-arts-preview { display: flex; gap: 18px; align-items: flex-start; }
+.motion-arts-form .motion-arts-preview img { border-radius: 6px; flex: 0 0 auto; object-fit: contain; }
+.motion-arts-form .motion-arts-preview p { color: var(--text-muted); font-size: var(--font-smaller); margin-top: 0; }
+.motion-arts-form .motion-arts-hint { color: var(--text-muted); font-size: var(--font-smaller); }
+.motion-arts-form .motion-arts-error { color: var(--text-error); }
+.motion-arts-form .motion-arts-error:empty { display: none; }
+.motion-arts-form details { margin: 16px 0; }
+.motion-arts-form summary { cursor: pointer; color: var(--text-muted); padding: 8px 0; }
+@media (max-width: 480px) { .motion-arts-form .motion-arts-preview { flex-direction: column; } }

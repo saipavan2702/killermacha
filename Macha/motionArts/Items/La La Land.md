@@ -1,6 +1,6 @@
 ---
-title: La La Land
 media_type: movie
+title: La La Land
 industry: Hollywood
 watched: false
 watched_date:
@@ -19,6 +19,7 @@ poster: https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

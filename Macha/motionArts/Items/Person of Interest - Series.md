@@ -1,14 +1,18 @@
 ---
-title: Person of Interest
 media_type: series
-industry: Hollywood
-watched: false
-watched_date:
+title: Person of Interest
+year: "2011"
 genres:
   - Action & Adventure
   - Crime
   - Sci-Fi & Fantasy
-year: "2011"
+poster: https://image.tmdb.org/t/p/w500/f8aIvYk5h7Z8EP3dinCmVgQFYow.jpg
+tags:
+  - motion-art
+  - series
+watched: false
+watched_date:
+industry: Hollywood
 directors:
   - Chris Fisher
   - Richard J. Lewis
@@ -17,10 +21,7 @@ cast:
   - Jim Caviezel
   - Michael Emerson
   - Kevin Chapman
-poster: https://image.tmdb.org/t/p/w500/f8aIvYk5h7Z8EP3dinCmVgQFYow.jpg
-tags:
-  - motion-art
-  - series
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

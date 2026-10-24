@@ -1,14 +1,18 @@
 ---
-title: Game of Thrones
 media_type: series
-industry: Hollywood
-watched: true
-watched_date: 2026-08-31
+title: Game of Thrones
+year: "2011"
 genres:
   - Sci-Fi & Fantasy
   - Drama
   - Action & Adventure
-year: "2011"
+poster: https://image.tmdb.org/t/p/w500/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg
+tags:
+  - motion-art
+  - series
+watched: true
+watched_date: 2026-08-31
+industry: Hollywood
 directors:
   - David Nutter
   - Alan Taylor
@@ -17,10 +21,7 @@ cast:
   - Peter Dinklage
   - Kit Harington
   - Sean Bean
-poster: https://image.tmdb.org/t/p/w500/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg
-tags:
-  - motion-art
-  - series
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

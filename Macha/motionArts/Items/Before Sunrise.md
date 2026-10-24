@@ -7,17 +7,18 @@ watched_date:
 genres:
   - Drama
   - Romance
+year: "1995"
 directors:
   - Richard Linklater
-poster: https://image.tmdb.org/t/p/w500/kf1Jb1c2JAOqjuzA3H4oDM263uB.jpg
-year: "1995"
 cast:
-  - "Ethan Hawke"
-  - "Julie Delpy"
-  - "Andrea Eckert"
+  - Ethan Hawke
+  - Julie Delpy
+  - Andrea Eckert
+poster: https://image.tmdb.org/t/p/w500/kf1Jb1c2JAOqjuzA3H4oDM263uB.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

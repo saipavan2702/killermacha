@@ -1,6 +1,6 @@
 ---
-title: Zootopia
 media_type: movie
+title: Zootopia
 industry: Hollywood
 watched: false
 watched_date:
@@ -21,6 +21,7 @@ poster: https://image.tmdb.org/t/p/w500/hlK0e0wAQ3VLuJcsfIYPvb4JVud.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

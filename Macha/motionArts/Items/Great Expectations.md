@@ -1,23 +1,24 @@
 ---
-title: Great Expectations
 media_type: movie
+title: Great Expectations
 industry: Hollywood
 watched: false
 watched_date:
 genres:
   - Drama
   - Romance
-poster: https://image.tmdb.org/t/p/w500/ynaFuVvW2jaG06pMV67dOhzMYfJ.jpg
+year: "1998"
 directors:
   - David Lean
-year: "1998"
 cast:
-  - "Ethan Hawke"
-  - "Gwyneth Paltrow"
-  - "Hank Azaria"
+  - Ethan Hawke
+  - Gwyneth Paltrow
+  - Hank Azaria
+poster: https://image.tmdb.org/t/p/w500/ynaFuVvW2jaG06pMV67dOhzMYfJ.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

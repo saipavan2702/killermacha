@@ -1,26 +1,27 @@
 ---
 media_type: series
 title: Sherlock
-industry: Hollywood
-watched: true
-watched_date: 2026-06-15
+year: "2010"
 genres:
   - Crime
   - Drama
   - Mystery
-directors:
-  - "Paul McGuigan"
-  - "Nick Hurran"
-  - "Euros Lyn"
 poster: https://image.tmdb.org/t/p/w500/7WTsnHkbA0FaG6R9twfFde0I9hl.jpg
-year: "2010"
-cast:
-  - "Benedict Cumberbatch"
-  - "Martin Freeman"
-  - "Una Stubbs"
 tags:
   - motion-art
   - series
+watched: true
+watched_date: 2026-06-15
+industry: Hollywood
+directors:
+  - Paul McGuigan
+  - Nick Hurran
+  - Euros Lyn
+cast:
+  - Benedict Cumberbatch
+  - Martin Freeman
+  - Una Stubbs
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

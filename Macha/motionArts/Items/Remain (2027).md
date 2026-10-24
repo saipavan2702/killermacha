@@ -1,8 +1,8 @@
 ---
 media_type: movie
-watched: false
 title: Remain
 industry: Hollywood
+watched: false
 watched_date:
 genres:
   - Romance
@@ -19,4 +19,5 @@ poster: https://image.tmdb.org/t/p/w500/5hPNq5h2y8Ux6nPBRMEwZ8npVTp.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---

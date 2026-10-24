@@ -6,7 +6,7 @@
 ## Vault Examples
 
 - [Epstein Email Obsidian Vault](https://github.com/rodgzilla/epstein_email_obsidian_vault/)
-- [Grey's Obsidian Vault](https://github.com/greyboy-59/Greys-Obsidian-Vault)
+- [Grey's Obsidian Vault](https://github.com/greyboy-59/Greys-Obsidian-Vault) - Hobby dashboards and media-tracking Bases; borrow individual ideas for the existing vault.
 - [PenguinVault](https://github.com/frogpal/PenguinVault/)
 - [Web Clipper Templates](https://github.com/frogpal/web-clipper-templates/)
 - [CyanVoxel](https://github.com/CyanVoxel)
@@ -14,6 +14,11 @@
 - [Rainbell](https://github.com/Rainbell129/Obsidian-Homepage)
 - [Amethyst Cards Test Vault](https://github.com/kaelri/amethyst-cards-test-vault) - Compact task cards and a quiet dark workspace.
 - [Kepano's Obsidian Vault](https://github.com/kepano/kepano-obsidian) - A bottom-up, content-first vault structure.
+
+## Dashboards and Media Tracking
+
+- [Obsidian Dashboard Gallery](https://github.com/InlitX/Obsidian-Dashboard-Gallery) - Home dashboard examples using a note and CSS snippet, with Dataview-powered widgets; adapt navigation to this vault.
+- [Lorebase](https://github.com/Murchi1k/obsidian-lorebase-plugin) - Markdown-based game, book, manga, and screen-media tracking with progress and statistics. Reference for extending the existing media structure; check property compatibility before adopting.
 
 ## Articles
 

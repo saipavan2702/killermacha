@@ -1,9 +1,7 @@
 ---
-title: Mulan
 media_type: anime-movie
-industry: Anime
-watched: false
-watched_date:
+title: Mulan
+year: ""
 genres:
   - Animation
   - Family
@@ -13,9 +11,13 @@ tags:
   - motion-art
   - anime
   - movie
+watched: false
+watched_date:
+industry: Anime
 directors:
   - Tony Bancroft
   - Barry Cook
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

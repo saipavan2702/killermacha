@@ -1,22 +1,23 @@
 ---
-title: Chernobyl
 media_type: series
-industry: Hollywood
-watched: false
-watched_date:
+title: Chernobyl
+year: "2019"
 genres:
   - Drama
-year: "2019"
+poster: https://image.tmdb.org/t/p/w500/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg
+tags:
+  - motion-art
+  - series
+watched: false
+watched_date:
+industry: Hollywood
 directors:
   - Johan Renck
 cast:
   - Jared Harris
   - Stellan Skarsgård
   - Emily Watson
-poster: https://image.tmdb.org/t/p/w500/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg
-tags:
-  - motion-art
-  - series
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

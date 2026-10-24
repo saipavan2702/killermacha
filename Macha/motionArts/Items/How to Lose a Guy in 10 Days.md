@@ -1,6 +1,6 @@
 ---
-title: How to Lose a Guy in 10 Days
 media_type: movie
+title: How to Lose a Guy in 10 Days
 industry: Hollywood
 watched: true
 watched_date: 2026-09-27
@@ -18,6 +18,7 @@ poster: https://image.tmdb.org/t/p/w500/2dlftyPz7mTYbrsPvTogyFmYd7d.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

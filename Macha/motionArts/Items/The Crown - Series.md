@@ -1,12 +1,16 @@
 ---
-title: The Crown
 media_type: series
-industry: Hollywood
-watched: false
-watched_date:
+title: The Crown
+year: "2016"
 genres:
   - Drama
-year: "2016"
+poster: https://image.tmdb.org/t/p/w500/1M876KPjulVwppEpldhdc8V4o68.jpg
+tags:
+  - motion-art
+  - series
+watched: false
+watched_date:
+industry: Hollywood
 directors:
   - Benjamin Caron
   - Jessica Hobbs
@@ -15,10 +19,7 @@ cast:
   - Imelda Staunton
   - Jonathan Pryce
   - Olivia Colman
-poster: https://image.tmdb.org/t/p/w500/1M876KPjulVwppEpldhdc8V4o68.jpg
-tags:
-  - motion-art
-  - series
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

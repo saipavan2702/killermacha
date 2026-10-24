@@ -1,6 +1,6 @@
 ---
-title: 100 Girls
 media_type: movie
+title: 100 Girls
 industry: Hollywood
 watched: false
 watched_date:
@@ -19,5 +19,6 @@ poster: https://image.tmdb.org/t/p/w500/sspDghFACtzitHyNV4sMBQcQKsg.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 Connections: [[Macha/Media Links|Media Links]]

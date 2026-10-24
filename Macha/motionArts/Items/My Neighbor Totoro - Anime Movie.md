@@ -1,9 +1,7 @@
 ---
-title: My Neighbor Totoro
 media_type: anime-movie
-industry: Anime
-watched: false
-watched_date:
+title: My Neighbor Totoro
+year: ""
 genres:
   - Fantasy
   - Animation
@@ -13,8 +11,12 @@ tags:
   - motion-art
   - anime
   - movie
+watched: false
+watched_date:
+industry: Anime
 directors:
   - Hayao Miyazaki
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

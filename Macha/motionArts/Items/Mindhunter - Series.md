@@ -1,13 +1,17 @@
 ---
-title: Mindhunter
 media_type: series
-industry: Hollywood
-watched: false
-watched_date:
+title: Mindhunter
+year: "2017"
 genres:
   - Drama
   - Crime
-year: "2017"
+poster: https://image.tmdb.org/t/p/w500/fbKE87mojpIETWepSbD5Qt741fp.jpg
+tags:
+  - motion-art
+  - series
+watched: false
+watched_date:
+industry: Hollywood
 directors:
   - David Fincher
   - Carl Franklin
@@ -16,10 +20,7 @@ cast:
   - Jonathan Groff
   - Holt McCallany
   - Hannah Gross
-poster: https://image.tmdb.org/t/p/w500/fbKE87mojpIETWepSbD5Qt741fp.jpg
-tags:
-  - motion-art
-  - series
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

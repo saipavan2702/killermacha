@@ -1,9 +1,7 @@
 ---
-title: Moana
 media_type: anime-movie
-industry: Anime
-watched: false
-watched_date:
+title: Moana
+year: ""
 genres:
   - Adventure
   - Comedy
@@ -14,9 +12,13 @@ tags:
   - motion-art
   - anime
   - movie
+watched: false
+watched_date:
+industry: Anime
 directors:
   - John Musker
   - Ron Clements
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

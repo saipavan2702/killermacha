@@ -48,23 +48,9 @@
               "icon": "lucide-file",
               "title": "Behavioral"
             }
-          },
-          {
-            "id": "42be3b097d366a0f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lingo/Inglis/Vocabulary.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Vocabulary"
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -262,42 +248,47 @@
       "templates:Insert template": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "notebook-navigator:Notebook Navigator": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "mmacha-auto:Add media to library": false
     }
   },
-  "active": "42be3b097d366a0f",
+  "active": "3c9abc6e4908ddc9",
   "lastOpenFiles": [
-    "Macha/motionArts/Celluloid.base",
-    "Macha/motionArts/Items/Get Out.md",
     "Lingo/Inglis/Vocabulary.md",
+    "Macha/motionArts/Celluloid.base",
+    "Macha/motionArts/Library/Wistoria- Wand and Sword - Manga.md",
+    "Macha/motionArts/Library/Grand Blue Dreaming - Manga.md",
+    "Macha/motionArts/Library/Blue Lock - Manga.md",
+    "Macha/motionArts/Library/Bleach - Manga.md",
+    "Macha/motionArts/Library/Berserk - Manga.md",
+    "Macha/motionArts/Library/Naruto - Manga.md",
+    "Macha/motionArts/Library/Vagabond - Manga.md",
+    "Macha/motionArts/Library/One Piece - Manga.md",
+    "Macha/motionArts/Items/8 Mile.md",
+    "Macha/motionArts/Library/The Vow - Movie.md",
+    "Macha/motionArts/Library/The Hobbit - Book.md",
+    "Macha/motionArts/Library/Ghost of Tsushima DIRECTOR'S CUT - Game.md",
+    "Macha/motionArts/Library/Stardew Valley - Game.md",
+    "Macha/motionArts/Library/Untitled 1.md",
+    "Macha/motionArts/Library/Untitled.md",
+    "QoL/Refs/Obsidian.md",
+    "QoL/Configs.md",
+    "Macha/motionArts/Library Guide.md",
+    "Macha/motionArts/Tools/__pycache__/sync_tmdb_posters.cpython-315.pyc",
+    "Macha/motionArts/Tools/__pycache__",
+    "Macha/motionArts/Tools/test_media_library.cjs",
+    "Macha/motionArts/Library",
+    "Macha/motionArts/Items/Get Out.md",
     "Upskill/SysDes/LLD/Design Patterns/Behavioral.md",
     "Upskill/SysDes/LLD/Design Patterns/Creational.md",
     "Macha/motionArts/Items/The Hunt.md",
     "Upskill/SysDes/LLD/Clean Code Patterns.md",
     "Macha/motionArts/Items/The Truman Show.md",
-    "Macha/motionArts/Items/The Ugly Truth.md",
-    "Orcl/Weekly Report.md",
-    "Macha/motionArts/Items/The Nice Guys.md",
-    "Upskill/Linux/Git/Recovery and History.md",
-    "Upskill/Linux/Git/Branches and Remotes.md",
-    "Upskill/Linux/Git/Everyday Git.md",
-    "QoL/Configs.md",
     "new-post-video-template-clipper.json",
     "new-book-template-clipper.json",
-    "Upskill/Mock Interviews.md",
-    "Orcl/Oracle Information.md",
-    "Orcl/Oracle.md",
     "attachments/Exported image 20250529160101-1.png",
     "attachments/Exported image 20250529160058-0.png",
-    "Upskill/ProgramLang/Java/Collections and Generics Examples.md",
-    "Macha/motionArts/Items/Lock, Stock and Two Smoking Barrels.md",
-    "Macha/motionArts/Items/Veer-Zaara.md",
-    "Upskill/ProgramLang/Java/Spring Boot Interview Questions.md",
     "Macha/motionArts/Tools/test_sync_tmdb_posters.py",
-    "Templates/Article Notes.md",
-    "Templates/Coding Problem.md",
-    "Templates/Topic.md",
-    "Macha/motionArts/Items/Scorned.md",
     "attachments/Pasted image 20260601002039.png",
     "attachments/dashboard-assets/rain-pond.gif",
     "attachments/dashboard-assets/plant-cluster.png",
@@ -308,10 +299,6 @@
     "attachments/dashboard-assets/aesthetic-focus-3.gif",
     "Templates",
     "Macha/motionArts/Tools/__pycache__/sync_tmdb_posters.cpython-314.pyc",
-    "Macha/motionArts/Tools/__pycache__",
-    "Upskill/SysDes/HLD/Distributed Systems Papers",
-    "Upskill/CS Topics/Operating Systems",
-    "Upskill/SysDes/HLD/API Build/Error Handling",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]

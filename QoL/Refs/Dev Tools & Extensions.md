@@ -8,6 +8,7 @@
 | Files to Prompt | Select files from a checkbox tree and bundle them into an AI-ready XML prompt. Paste the response back to apply file updates. | [VS Code Marketplace](https://marketplace.visualstudio.com/search?term=files%20to%20prompt&target=VS&category=All%20categories&sortBy=Relevance) |
 | Mobile View | Preview a site at multiple device widths side by side—useful for quick responsive-layout checks. | [VS Code Marketplace](https://marketplace.visualstudio.com/search?term=mobile%20view&target=VS&category=All%20categories&sortBy=Relevance) |
 | Port forwarding | Share a local development server through a public or private link. Open the **Ports** tab in VS Code’s bottom panel. | Built in |
+| Neovim Statusline for VS Code | Optional for later: mode-colored status bar, cursor, and line highlights when using **VSCode Neovim**. Requires **VSCode Neovim** and **Custom UI Style**; does not apply to terminal Neovim. | [GitHub and setup instructions](https://github.com/why-trv/vscode-neovim-statusline) |
 
 ## Web Tools
 

@@ -1,6 +1,6 @@
 ---
-title: 13 Going on 30
 media_type: movie
+title: 13 Going on 30
 industry: Hollywood
 watched: true
 watched_date: 2025-06-26
@@ -8,17 +8,18 @@ genres:
   - Comedy
   - Fantasy
   - Romance
-poster: https://image.tmdb.org/t/p/w500/iNZdSIfhSCMtRILDNyhLn8UKeSG.jpg
+year: "2004"
 directors:
   - Gary Winick
-year: "2004"
 cast:
-  - "Jennifer Garner"
-  - "Mark Ruffalo"
-  - "Judy Greer"
+  - Jennifer Garner
+  - Mark Ruffalo
+  - Judy Greer
+poster: https://image.tmdb.org/t/p/w500/iNZdSIfhSCMtRILDNyhLn8UKeSG.jpg
 tags:
   - motion-art
   - movie
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]

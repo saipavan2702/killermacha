@@ -1,22 +1,23 @@
 ---
-title: The Humans
 media_type: movie
+title: The Humans
 industry: Hollywood
 watched: false
 watched_date:
 genres:
   - Drama
-poster: https://image.tmdb.org/t/p/w500/gQsDWmkvzzJxlrc3HCqkfQRH11.jpg
 year: "2021"
+directors:
+  - Stephen Karam
 cast:
-  - "Richard Jenkins"
-  - "Jayne Houdyshell"
-  - "Amy Schumer"
+  - Richard Jenkins
+  - Jayne Houdyshell
+  - Amy Schumer
+poster: https://image.tmdb.org/t/p/w500/gQsDWmkvzzJxlrc3HCqkfQRH11.jpg
 tags:
   - motion-art
   - movie
-directors:
-  - Stephen Karam
+favorite: false
 ---
 
 Connections: [[Macha/Media Links|Media Links]]
