@@ -15,11 +15,11 @@ metadata_provider: anilist
 metadata_id: "87395"
 chapter_total: 0
 chapter_current: 0
-chapter_released: 84
+chapter_released: 112
 favorite: false
-chapter_source: https://www.mangaupdates.com/series/u63f9zm/grand-blue
-chapter_provider_id: "65672018770"
+chapter_source: https://kmanga.kodansha.com/title/10058
 chapter_checked: 2026-10-24
+chapter_count_kind: official
 ---
 
 ## My notes

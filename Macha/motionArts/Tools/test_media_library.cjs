@@ -253,7 +253,7 @@ test('unified refresh checks current manga releases even if metadata fails', asy
 
 test('MangaUpdates chapter lookup matches title and year and rejects ambiguous results', async () => {
  const e=setup();
- e.network(r=>r.url.endsWith('/search')?{status:200,json:{results:[{record:{series_id:123,title:'Berserk',year:'1989'}},{record:{series_id:456,title:'Berserk',year:'2023'}}]}}:{status:200,json:{latest_chapter:386,url:'https://www.mangaupdates.com/series/example'}});
+ e.network(r=>r.url.endsWith('/search')?{status:200,json:{results:[{record:{series_id:123,title:'Berserk',year:'1989'}},{record:{series_id:456,title:'Berserk',year:'2023'}}]}}:{status:200,json:{title:'Berserk',year:'1989',latest_chapter:386,url:'https://www.mangaupdates.com/series/example'}});
  const result=await e.plugin.mangaUpdatesChapters({title:'Berserk',year:1989});
  assert.equal(result.released,386);assert.equal(result.providerId,'123');
  await assert.rejects(e.plugin.mangaUpdatesChapters({title:'Berserk'}),/unambiguous/);
@@ -261,12 +261,12 @@ test('MangaUpdates chapter lookup matches title and year and rejects ambiguous r
 });
 
 test('community chapter counts below published volume counts are rejected', async () => {
- const e=setup();e.network(()=>({status:200,json:{latest_chapter:2,status:'37 Volumes (Hiatus)'}}));
+ const e=setup();e.network(()=>({status:200,json:{title:'Vagabond',latest_chapter:2,status:'37 Volumes (Hiatus)'}}));
  await assert.rejects(e.plugin.mangaUpdatesChapters({title:'Vagabond',chapter_provider_id:'123'}),/inconsistent/);
 });
 
 test('alternate titles must be confirmed by the provider before linking chapters', async () => {
- const e=setup();e.network(r=>r.url.endsWith('/search')?{status:200,json:{results:[{record:{title:'Grand Blue',year:'2014',series_id:42}}]}}:{status:200,json:{associated:[{title:'Grand Blue Dreaming'}],latest_chapter:84,status:'20 Volumes'}});
+ const e=setup();e.network(r=>r.url.endsWith('/search')?{status:200,json:{results:[{record:{title:'Grand Blue',year:'2014',series_id:42}}]}}:{status:200,json:{title:'Grand Blue',year:'2014',associated:[{title:'Grand Blue Dreaming'}],latest_chapter:84,status:'20 Volumes'}});
  const result=await e.plugin.mangaUpdatesChapters({title:'Grand Blue Dreaming',year:2014});assert.equal(result.providerId,'42');
 });
 
@@ -274,4 +274,86 @@ test('refresh from a Base offers a media picker and cancellation performs no ref
  const e=setup();e.note('Naruto',{title:'Naruto',media_type:'manga'});e.plugin.app.workspace.getActiveFile=()=>null;
  let called=false;e.plugin.refreshLibraryMetadata=async()=>{called=true;};
  const task=e.plugin.selectMediaToRefresh();assert.equal(e.modals.length,1);e.modals[0].close();await task;assert.equal(called,false);
+});
+
+// Public publisher metadata captured 2026-10-24, reduced to fields used by the checker.
+const kodanshaFixtures = JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/kodansha-chapters.json'), 'utf8'));
+function nuxtHtml(object) {
+  const table = [];
+  const encode = value => {
+    const index = table.length; table.push(null);
+    table[index] = Array.isArray(value) ? value.map(encode) : value && typeof value === 'object'
+      ? Object.fromEntries(Object.entries(value).map(([key, item]) => [key, encode(item)])) : value;
+    return index;
+  };
+  encode(object);
+  return `<script type="application/json" id="__NUXT_DATA__">${JSON.stringify(table)}</script>`;
+}
+function publisherNetwork(env, fixture) {
+  env.network(request => ({status:200, text:nuxtHtml(request.url.includes('/episode/')
+    ? fixture.episode : {...fixture.title, episode_id_list:fixture.episode_ids})}));
+}
+test('publisher fixtures resolve numbered chapters rather than episode counts, including paid split chapters', async () => {
+  for (const [index, expected] of [69,365,112].entries()) {
+    const e=setup(), fixture=kodanshaFixtures[index]; publisherNetwork(e,fixture);
+    const result=await e.plugin.releasedChapters({title:fixture.title.title_name});
+    assert.equal(result.released,expected); assert.equal(result.kind,'official');
+    assert.equal(result.source,`https://kmanga.kodansha.com/title/${fixture.title.title_id}`);
+  }
+});
+test('publisher refresh upgrades stale community counts and preserves reading progress', async () => {
+  const e=setup();publisherNetwork(e,kodanshaFixtures[0]);
+  const fm={media_type:'manga',title:'Wistoria: Wand and Sword',year:2020,chapter_current:12.5,chapter_released:33,chapter_provider_id:'32295189380'};
+  const file=e.note('Wistoria',fm);const result=await e.plugin.checkReleasedChapters(true,file);
+  assert.equal(result.updated,1);assert.equal(fm.chapter_released,69);assert.equal(fm.chapter_current,12.5);
+  assert.equal(fm.chapter_provider_id,undefined);assert.equal(fm.chapter_count_kind,'official');
+  assert.equal(e.requests.some(r=>r.url.includes('mangaupdates')),false);
+});
+test('wrong title, future chapters, malformed data and publisher failures retain verified data', async () => {
+  for (const mode of ['wrong title','future','malformed','unavailable']) {
+    const e=setup(),fixture=plain(kodanshaFixtures[0]);
+    if(mode==='wrong title')fixture.title.title_name='Another Manga';
+    if(mode==='future')fixture.episode.start_time='2099-01-01 10:00:00';
+    publisherNetwork(e,fixture);
+    if(mode==='malformed')e.network(()=>({status:200,text:'<html>blocked</html>'}));
+    if(mode==='unavailable')e.network(()=>({status:503}));
+    const fm={media_type:'manga',title:'Wistoria: Wand and Sword',chapter_released:69,chapter_current:14,chapter_checked:'2026-10-01',chapter_count_kind:'official'};
+    const before=plain(fm);const result=await e.plugin.checkReleasedChapters(true,e.note('Wistoria',fm));
+    assert.equal(result.unavailable,1);assert.deepEqual(fm,before);
+  }
+});
+test('unnumbered extras are skipped and decimals retain their chapter number', async () => {
+  const e=setup(),fixture=plain(kodanshaFixtures[0]);
+  e.network(request=>{
+    if(!request.url.includes('/episode/'))return {status:200,text:nuxtHtml({...fixture.title,episode_id_list:[368844,368845]})};
+    const extra=request.url.endsWith('368845');
+    return {status:200,text:nuxtHtml({...fixture.episode,episode_id:extra?368845:368844,episode_name:extra?'Extra Holiday':'Chapter 69.5 Bonus'})};
+  });
+  assert.equal((await e.plugin.releasedChapters({title:fixture.title.title_name})).released,69.5);
+});
+test('saved community IDs are revalidated and explicitly labelled', async () => {
+  const e=setup();e.network(()=>({status:200,json:{title:'Wrong Manga',year:'2020',latest_chapter:999}}));
+  await assert.rejects(e.plugin.mangaUpdatesChapters({title:'Wistoria: Wand and Sword',year:2020,chapter_provider_id:'123'}),/identity/);
+  e.network(()=>({status:200,json:{title:'Berserk',year:'1989',latest_chapter:386}}));
+  assert.equal((await e.plugin.mangaUpdatesChapters({title:'Berserk',year:1989,chapter_provider_id:'123'})).kind,'community');
+});
+test('lower results are unavailable rather than marked freshly verified, and official final numbering survives catalog refresh', async () => {
+  const e=setup();publisherNetwork(e,kodanshaFixtures[0]);
+  const fm={media_type:'manga',title:'Wistoria: Wand and Sword',chapter_released:70,chapter_checked:'2026-10-01'};
+  const result=await e.plugin.checkReleasedChapters(true,e.note('Wistoria',fm));
+  assert.equal(result.updated,0);assert.equal(result.unavailable,1);assert.equal(fm.chapter_checked,'2026-10-01');
+  const bleach={media_type:'manga',title:'Bleach',chapter_total:686,chapter_released:686,chapter_count_kind:'official',chapter_source:'https://www.viz.com/shonenjump/chapters/bleach'};
+  await e.plugin.applyLibraryMetadata(e.note('Bleach',bleach),{media_type:'manga',chapter_total:706});
+  assert.equal(bleach.chapter_total,686);assert.equal(bleach.chapter_released,686);
+});
+
+test('VIZ gets priority over saved community IDs and verified official sources never fall back on failure', async () => {
+  const e=setup();e.network(()=>({status:200,text:'<a href="/shonenjump/one-piece-chapter-1196/chapter/51757">Read</a>'}));
+  const result=await e.plugin.releasedChapters({title:'One Piece',chapter_provider_id:'123'});
+  assert.equal(result.released,1196);assert.equal(result.kind,'official');assert.equal(e.requests.length,1);
+  e.network(()=>({status:503}));
+  await assert.rejects(e.plugin.releasedChapters({title:'One Piece',chapter_count_kind:'official',chapter_source:'https://www.viz.com/shonenjump/chapters/one-piece'}),/Official source unavailable/);
+  assert.equal(e.requests.some(r=>r.url.includes('mangaupdates')),false);
+  const compact=e.plugin.compactLibraryMetadata({media_type:'manga',title:'Wistoria',chapter_released:69,chapter_count_kind:'official',chapter_source:'https://kmanga.kodansha.com/title/10016'});
+  assert.equal(compact.chapter_count_kind,'official');
 });

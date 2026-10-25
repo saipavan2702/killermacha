@@ -849,8 +849,8 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       metadata.status = "planned";
       if (kind === "manga" && !Number(metadata.chapter_total)) {
         try {
-          const chapters = await this.mangaUpdatesChapters(metadata);
-          Object.assign(metadata, { chapter_released: chapters.released, chapter_source: chapters.source, chapter_provider_id: chapters.providerId, chapter_checked: this.today() });
+          const chapters = await this.releasedChapters(metadata);
+          Object.assign(metadata, { chapter_released: chapters.released, chapter_source: chapters.source, chapter_provider_id: chapters.providerId, chapter_count_kind: chapters.kind, chapter_checked: this.today() });
         } catch (_) { /* Keep creation available even when chapter services are unavailable. */ }
       }
       const values = await libraryForm(this.app, `Add ${LIBRARY_LABELS[kind].toLowerCase()} to your library`, this.libraryFields(metadata, true), (values) => this.validateLibrary({ ...metadata, ...values }), metadata, { compact: true, submitLabel: "Add to library" });
@@ -942,7 +942,7 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       result.chapter_current = data.chapter_current || 0;
       result.chapter_total = data.chapter_total || 0;
       result.chapter_released = Math.max(Number(data.chapter_released || 0), Number(data.chapter_total || 0));
-      for (const key of ["chapter_source", "chapter_checked", "chapter_provider_id"]) if (data[key]) result[key] = data[key];
+      for (const key of ["chapter_source", "chapter_checked", "chapter_provider_id", "chapter_count_kind"]) if (data[key]) result[key] = data[key];
     }
     if (screen) {
       result.industry = data.industry || "";
@@ -1078,8 +1078,10 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
         if (["title", "media_type", "metadata_provider", "metadata_id", "watched", "watched_date", "tags", "status", "rating", "favorite", "started_date", "completed_date", "related_media", "showcase"].includes(key)) continue;
         if (value === "" || value == null || (Array.isArray(value) && !value.length)) continue;
         if (key === "chapter_released") {
+          if (fm.chapter_count_kind === "official" && fm.chapter_source && Number(fm.chapter_total) > 0) continue;
           if (Number(value) > Number(fm[key] || 0)) fm[key] = value;
         } else if (key.endsWith("_total")) {
+          if (key === "chapter_total" && fm.chapter_count_kind === "official" && fm.chapter_source && Number(fm.chapter_total) > 0) continue;
           // Unknown provider totals must not erase known totals or invalidate progress.
           if (Number(value) > 0 && Number(value) >= Number(fm[key.replace("_total", "_current")] || 0)) fm[key] = value;
         } else if (!this.hasValue(fm[key]) || (Array.isArray(fm[key]) && !fm[key].length)) fm[key] = value;
@@ -1089,6 +1091,70 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
         fm.metadata_id = identity.metadata_id;
       }
     });
+  }
+
+  // Nuxt stores scalar values by index. Read only the documented public title/episode
+  // fields from its JSON payload; never execute scripts from publisher HTML.
+  kodanshaPayload(html) {
+    const raw = String(html).match(/<script\b[^>]*id=["']__NUXT_DATA__["'][^>]*>([\s\S]*?)<\/script>/i);
+    if (!raw) throw new Error("Publisher data unavailable");
+    const table = JSON.parse(raw[1]);
+    if (!Array.isArray(table)) throw new Error("Publisher data changed");
+    const value = index => Number.isInteger(index) && index >= 0 ? table[index] : undefined;
+    return { table, value };
+  }
+
+  kodanshaTitleId(data) {
+    const explicit = String(data.chapter_source || "").match(/^https:\/\/kmanga\.kodansha\.com\/title\/(\d+)(?:\/episode\/\d+)?\/?$/);
+    if (explicit) return explicit[1];
+    // Publisher IDs checked against the exact title. Other manga can opt in with
+    // their official K MANGA title URL in chapter_source.
+    const known = { "wistoria wand and sword": [2020, "10016"], "blue lock": [2018, "10008"], "grand blue dreaming": [2014, "10058"] };
+    const match = known[this.normalizedTitle(data.title)];
+    return match && (!data.year || Number(data.year) === match[0]) ? match[1] : null;
+  }
+
+  async kodanshaChapters(data, id) {
+    const root = `https://kmanga.kodansha.com/title/${id}`;
+    const { table, value } = this.kodanshaPayload(await this.libraryRequest(root, undefined, true));
+    const title = table.find(x => x && !Array.isArray(x) && typeof x === "object" && String(value(x.title_id)) === id && x.episode_id_list !== undefined);
+    if (!title || this.normalizedTitle(value(title.title_name)) !== this.normalizedTitle(data.title)) throw new Error("Publisher title mismatch");
+    const episodes = value(title.episode_id_list);
+    if (!Array.isArray(episodes)) throw new Error("Publisher episodes unavailable");
+    // Entries may be split into parts or end with an unnumbered extra. Never use
+    // total_episode_count (136 entries can represent only 69 numbered chapters).
+    for (const ref of episodes.slice(-5).reverse()) {
+      const episodeId = String(value(ref));
+      if (!/^\d+$/.test(episodeId)) continue;
+      const episode = this.kodanshaPayload(await this.libraryRequest(`${root}/episode/${episodeId}`, undefined, true));
+      const row = episode.table.find(x => x && !Array.isArray(x) && typeof x === "object" && String(episode.value(x.title_id)) === id && String(episode.value(x.episode_id)) === episodeId && x.episode_name !== undefined);
+      if (!row) continue;
+      const date = String(episode.value(row.start_time) || "");
+      if (!/^\d{4}-\d{2}-\d{2}/.test(date) || date.slice(0, 10) > this.today()) continue;
+      const number = String(episode.value(row.episode_name)).match(/^chapter\s+(\d+(?:\.\d+)?)(?=\s|\(|$)/i);
+      if (number && Number(number[1]) > 0) return { released: Number(number[1]), source: root, kind: "official" };
+    }
+    throw new Error("No released numbered publisher chapter");
+  }
+
+  async releasedChapters(data) {
+    const kodanshaId = this.kodanshaTitleId(data);
+    if (kodanshaId) {
+      // A linked publisher failure must not silently relabel an old community
+      // number as freshly verified publisher data.
+      return this.kodanshaChapters(data, kodanshaId);
+    }
+    const listing = this.chapterListing({ ...data, media_type: "manga", chapter_total: 0 });
+    if (listing) {
+      try {
+        const html = await this.libraryRequest(listing.url, undefined, true);
+        const pattern = new RegExp(`/shonenjump/${listing.slug}-chapter-(\\d+(?:\\.\\d+)?)/chapter/\\d+`, "g");
+        const chapters = [...html.matchAll(pattern)].map(m => Number(m[1]));
+        if (chapters.length) return { released: Math.max(...chapters), source: listing.url, kind: "official" };
+      } catch (_) { /* Try the explicitly labelled community fallback. */ }
+    }
+    if (data.chapter_count_kind === "official") throw new Error("Official source unavailable; verified count kept");
+    return this.mangaUpdatesChapters(data);
   }
 
   async mangaUpdatesChapters(data) {
@@ -1108,12 +1174,15 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       id = String(matches[0].series_id);
     }
     const record = await this.libraryRequest(`${root}/${id}`);
+    const titles = [record.title, ...(record.associated || []).map(x => x.title)];
+    if (!titles.some(title => this.normalizedTitle(title) === this.normalizedTitle(data.title))
+      || (data.year && String(record.year) !== String(data.year))) throw new Error("Chapter source identity mismatch");
     const released = Number(record.latest_chapter);
     // Community release feeds can restart chapter numbering; reject obvious inconsistencies.
     const volumes = Number(String(record.status || "").match(/(\d+)\s+Volumes?/i)?.[1] || 0);
     if (volumes > released) throw new Error("Chapter source uses inconsistent numbering; saved count kept");
     if (!Number.isFinite(released) || released <= 0) throw new Error("Chapter count unavailable");
-    return { released, source: record.url || `https://www.mangaupdates.com/series.html?id=${id}`, providerId: String(id) };
+    return { released, source: record.url || `https://www.mangaupdates.com/series.html?id=${id}`, providerId: String(id), kind: "community" };
   }
 
   chapterListing(data) {
@@ -1145,30 +1214,24 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
         if (this.chapterCheckStopped) break;
         attempts[listing.slug] = day;
         try {
-          let released, source = listing.url, providerId;
-          try {
-            if (listing.data.chapter_provider_id) throw new Error("Use linked MangaUpdates source");
-            const html = await this.libraryRequest(listing.url, undefined, true);
-            const pattern = new RegExp(`/shonenjump/${listing.slug}-chapter-(\\d+)/chapter/\\d+`, "g");
-            const chapters = [...html.matchAll(pattern)].map(m => Number(m[1]));
-            if (!chapters.length) throw new Error("No publisher listing");
-            released = Math.max(...chapters);
-          } catch (_) {
-            const fallback = await this.mangaUpdatesChapters(listing.data);
-            ({ released, source, providerId } = fallback);
-          }
+          const { released, source, providerId, kind } = await this.releasedChapters(listing.data);
           if (this.chapterCheckStopped) break;
           for (const file of listing.files) {
+            let verified = false;
             await this.app.fileManager.processFrontMatter(file, fm => {
               if (this.chapterListing(fm)?.slug !== listing.slug) return;
               if (released < Number(fm.chapter_released || 0)) return;
               fm.chapter_released = released;
               fm.chapter_source = source;
               if (providerId) fm.chapter_provider_id = providerId;
+              else delete fm.chapter_provider_id;
+              fm.chapter_count_kind = kind;
               fm.chapter_checked = day;
+              verified = true;
             });
+            if (verified) summary.updated += 1;
+            else summary.unavailable += 1;
           }
-          summary.updated += listing.files.length;
         } catch (_) { summary.unavailable += listing.files.length; }
       }
       if (groups.size && !this.chapterCheckStopped) {

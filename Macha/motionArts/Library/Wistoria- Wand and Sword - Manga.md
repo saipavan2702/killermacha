@@ -15,11 +15,11 @@ tags:
 metadata_provider: anilist
 metadata_id: "125116"
 chapter_total: 0
-chapter_released: 33
+chapter_released: 69
 chapter_current: 0
-chapter_source: https://www.mangaupdates.com/series/eu3pzlw/tsue-to-tsurugi-no-wistoria
+chapter_source: https://kmanga.kodansha.com/title/10016
 chapter_checked: 2026-10-24
-chapter_provider_id: "32295189380"
+chapter_count_kind: official
 favorite: false
 ---
 

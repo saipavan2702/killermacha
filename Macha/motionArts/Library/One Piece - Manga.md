@@ -18,6 +18,7 @@ chapter_total: 0
 chapter_released: 1196
 favorite: false
 chapter_source: https://www.viz.com/shonenjump/chapters/one-piece
-chapter_checked: 2026-10-24
+chapter_checked: 2026-10-25
+chapter_count_kind: official
 ---
 ## My notes

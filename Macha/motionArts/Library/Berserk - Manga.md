@@ -23,7 +23,8 @@ favorite: false
 started_date: 2026-10-24
 chapter_source: https://www.mangaupdates.com/series/njeqwry/berserk
 chapter_provider_id: "51239621230"
-chapter_checked: 2026-10-24
+chapter_checked: 2026-10-25
+chapter_count_kind: community
 ---
 
 ## My notes

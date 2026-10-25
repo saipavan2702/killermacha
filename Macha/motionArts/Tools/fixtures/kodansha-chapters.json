@@ -1,0 +1,65 @@
+[
+  {
+    "title": {
+      "title_id": 10016,
+      "title_name": "Wistoria: Wand and Sword",
+      "total_episode_count": 136
+    },
+    "episode_ids": [
+      367390,
+      367956,
+      367957,
+      368844,
+      368845
+    ],
+    "episode": {
+      "title_id": 10016,
+      "episode_id": 368845,
+      "episode_name": "Chapter 69(2) THE SWORDS\u2019 LAMENT",
+      "start_time": "2026-10-07 10:00:00",
+      "is_page_visible": 0
+    }
+  },
+  {
+    "title": {
+      "title_id": 10008,
+      "title_name": "Blue Lock",
+      "total_episode_count": 371
+    },
+    "episode_ids": [
+      368404,
+      368601,
+      368828,
+      369026,
+      369111
+    ],
+    "episode": {
+      "title_id": 10008,
+      "episode_id": 369111,
+      "episode_name": "CHAPTER 365 OTHERWORLDLY",
+      "start_time": "2026-10-20 10:00:00",
+      "is_page_visible": 0
+    }
+  },
+  {
+    "title": {
+      "title_id": 10058,
+      "title_name": "Grand Blue Dreaming",
+      "total_episode_count": 259
+    },
+    "episode_ids": [
+      366590,
+      367419,
+      367420,
+      367929,
+      367930
+    ],
+    "episode": {
+      "title_id": 10058,
+      "episode_id": 367930,
+      "episode_name": "Chapter 112(2) Plans",
+      "start_time": "2026-09-06 10:00:00",
+      "is_page_visible": 0
+    }
+  }
+]

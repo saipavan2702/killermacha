@@ -13,11 +13,11 @@ tags:
 metadata_provider: anilist
 metadata_id: "106130"
 chapter_total: 0
-chapter_released: 272
+chapter_released: 365
 chapter_current: 0
-chapter_source: https://www.mangaupdates.com/series/joxc7wz/blue-lock
+chapter_source: https://kmanga.kodansha.com/title/10008
 chapter_checked: 2026-10-24
-chapter_provider_id: "42866050067"
+chapter_count_kind: official
 favorite: false
 ---
 

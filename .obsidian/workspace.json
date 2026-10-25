@@ -48,22 +48,9 @@
               "icon": "lucide-file",
               "title": "Behavioral"
             }
-          },
-          {
-            "id": "f19864fa889e0878",
-            "type": "leaf",
-            "state": {
-              "type": "bases",
-              "state": {
-                "file": "Macha/motionArts/Celluloid.base",
-                "viewName": "Movies"
-              },
-              "icon": "lucide-layout-grid",
-              "title": "Celluloid"
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -265,12 +252,15 @@
       "mmacha-auto:Add media to library": false
     }
   },
-  "active": "f19864fa889e0878",
+  "active": "7e35500e3b5aef98",
   "lastOpenFiles": [
-    "Upskill/SysDes/LLD/Design Patterns/Behavioral.md",
-    "Lingo/Inglis/Vocabulary.md",
+    "Macha/motionArts/Library/Black Clover - Manga.md",
     "Macha/motionArts/Celluloid.base",
     "Macha/motionArts/Library/Wistoria- Wand and Sword - Manga.md",
+    "Macha/motionArts/Tools/fixtures/kodansha-chapters.json",
+    "Macha/motionArts/Tools/fixtures",
+    "Upskill/SysDes/LLD/Design Patterns/Behavioral.md",
+    "Lingo/Inglis/Vocabulary.md",
     "Macha/motionArts/Library/Grand Blue Dreaming - Manga.md",
     "Macha/motionArts/Library/Blue Lock - Manga.md",
     "Macha/motionArts/Library/Bleach - Manga.md",
@@ -296,7 +286,6 @@
     "Upskill/SysDes/LLD/Design Patterns/Creational.md",
     "Macha/motionArts/Items/The Hunt.md",
     "Upskill/SysDes/LLD/Clean Code Patterns.md",
-    "Macha/motionArts/Items/The Truman Show.md",
     "new-post-video-template-clipper.json",
     "new-book-template-clipper.json",
     "attachments/Exported image 20250529160101-1.png",
@@ -310,8 +299,6 @@
     "attachments/dashboard-assets/aesthetic-focus-1.gif",
     "attachments/dashboard-assets/aesthetic-focus-2.gif",
     "attachments/dashboard-assets/aesthetic-focus-3.gif",
-    "Templates",
-    "Macha/motionArts/Tools/__pycache__/sync_tmdb_posters.cpython-314.pyc",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
