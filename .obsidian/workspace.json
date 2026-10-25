@@ -48,9 +48,22 @@
               "icon": "lucide-file",
               "title": "Behavioral"
             }
+          },
+          {
+            "id": "7907ea43cb46bdb8",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "Macha/motionArts/Celluloid.base",
+                "viewName": "Movies"
+              },
+              "icon": "lucide-layout-grid",
+              "title": "Celluloid"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -252,15 +265,17 @@
       "mmacha-auto:Add media to library": false
     }
   },
-  "active": "7e35500e3b5aef98",
+  "active": "7907ea43cb46bdb8",
   "lastOpenFiles": [
+    "Macha/motionArts/Library/Watching the Detectives - Movie.md",
+    "Macha/motionArts/Celluloid.base",
+    "Macha/motionArts/Library/ELDEN RING - Game.md",
     "Upskill/SysDes/LLD/Clean Code Patterns.md",
-    "Upskill/SysDes/LLD/Design Patterns/Creational.md",
     "Upskill/SysDes/LLD/Design Patterns/Behavioral.md",
+    "Upskill/SysDes/LLD/Design Patterns/Creational.md",
     "Macha/motionArts/Tools/__pycache__/sync_tmdb_posters.cpython-315.pyc",
     "Macha/motionArts/Tools/__pycache__/test_sync_tmdb_posters.cpython-315.pyc",
     "Macha/motionArts/Tools/__pycache__",
-    "Macha/motionArts/Celluloid.base",
     "Macha/motionArts/Library/Red Dead Redemption 2 - Game.md",
     "Macha/motionArts/Library/Black Clover - Manga.md",
     "Macha/motionArts/Library/Wistoria- Wand and Sword - Manga.md",
@@ -283,11 +298,8 @@
     "Macha/motionArts/Library/Untitled.md",
     "QoL/Refs/Obsidian.md",
     "QoL/Configs.md",
-    "Macha/motionArts/Library Guide.md",
     "Macha/motionArts/Tools/test_media_library.cjs",
     "Macha/motionArts/Library",
-    "Macha/motionArts/Items/Get Out.md",
-    "Macha/motionArts/Items/The Hunt.md",
     "new-post-video-template-clipper.json",
     "new-book-template-clipper.json",
     "attachments/Exported image 20250529160101-1.png",
