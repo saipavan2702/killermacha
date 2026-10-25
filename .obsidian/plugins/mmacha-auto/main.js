@@ -182,12 +182,11 @@ const IMDB_OVERRIDES = {
 // Search providers and the search → review → Markdown flow are inspired by Lorebase:
 // https://github.com/Murchi1k/obsidian-lorebase-plugin (MIT). No dependency on Lorebase.
 const LIBRARY_FOLDER = "Macha/motionArts/Library";
-const LIBRARY_LABELS = { movie: "Movie", series: "TV show", "anime-movie": "Anime Movie", anime: "Anime", manga: "Manga", game: "Game" };
+const LIBRARY_LABELS = { movie: "Movie", series: "TV show", "anime-movie": "Anime Movie", anime: "Anime", game: "Game" };
 const LIBRARY_TYPES = new Set(Object.keys(LIBRARY_LABELS));
 const LIBRARY_PROGRESS = {
   anime: ["episode_current", "episode_total"],
   series: ["season_current", "season_total", "episode_current", "episode_total"],
-  manga: ["chapter_current", "chapter_total", "chapter_released"],
   game: ["hours_played"],
 };
 const LIBRARY_NUMBERS = [...new Set(Object.values(LIBRARY_PROGRESS).flat()), "rating"];
@@ -286,9 +285,6 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
     this.genreCache = new Map();
     this.missingTokenNoticeShown = false;
 
-    this.chapterCheckStopped = false;
-    this.app.workspace.onLayoutReady(() => { if (!this.chapterCheckStopped) void this.checkReleasedChapters(); });
-    this.registerInterval(window.setInterval(() => void this.checkReleasedChapters(), 60 * 60 * 1000));
     this.addSettingTab(new MovieWatchDateSettingTab(this.app, this));
     this.addRibbonIcon("library", "Add media to library", () => this.addLibraryItem());
     // Route only Celluloid's native New action through our reviewed creation flow.
@@ -352,7 +348,6 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
   }
 
   onunload() {
-    this.chapterCheckStopped = true;
     for (const timer of this.pending.values()) {
       window.clearTimeout(timer);
     }
@@ -847,12 +842,6 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
         metadata = await this.libraryDetails(picked);
       }
       metadata.status = "planned";
-      if (kind === "manga" && !Number(metadata.chapter_total)) {
-        try {
-          const chapters = await this.releasedChapters(metadata);
-          Object.assign(metadata, { chapter_released: chapters.released, chapter_source: chapters.source, chapter_provider_id: chapters.providerId, chapter_count_kind: chapters.kind, chapter_checked: this.today() });
-        } catch (_) { /* Keep creation available even when chapter services are unavailable. */ }
-      }
       const values = await libraryForm(this.app, `Add ${LIBRARY_LABELS[kind].toLowerCase()} to your library`, this.libraryFields(metadata, true), (values) => this.validateLibrary({ ...metadata, ...values }), metadata, { compact: true, submitLabel: "Add to library" });
       if (!values) return;
       const fields = { ...metadata, ...values, media_type: kind };
@@ -872,9 +861,9 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
     ] : [];
     if (creating) return fields;
     fields.push({ key: "status", label: "Status", value: data.status || (this.isWatched(data.watched) ? "completed" : "planned"),
-      choices: { planned: "Planned", active: data.media_type === "game" ? "Playing" : data.media_type === "manga" ? "Reading" : "Watching", completed: "Completed", paused: "Paused", dropped: "Dropped" } });
+      choices: { planned: "Planned", active: data.media_type === "game" ? "Playing" : "Watching", completed: "Completed", paused: "Paused", dropped: "Dropped" } });
     const counts = LIBRARY_PROGRESS[data.media_type] || [];
-    for (const key of counts) fields.push({ key, label: ({chapter_current:"Chapters read",chapter_total:"Final chapter total (0 if ongoing/unknown)",chapter_released:"Chapters released so far (0 if unknown)"})[key] || key.replaceAll("_", " "), value: data[key] ?? 0, number: true });
+    for (const key of counts) fields.push({ key, label: key.replaceAll("_", " "), value: data[key] ?? 0, number: true });
     fields.push({ key: "rating", label: "Your rating (0–5; 0 means unrated)", value: data.rating ?? 0, number: true });
     fields.push({ key: "related_media", label: "Related notes (use [[note links]])", value: data.related_media || "" });
     fields.push({ key: "favorite", label: "Favorite", value: data.favorite === true, toggle: true });
@@ -888,10 +877,10 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       if (data[key] === undefined) continue;
       const value = Number(data[key]);
       if (!Number.isFinite(value) || value < 0) throw new Error(`${key.replaceAll("_", " ")} must be a nonnegative number.`);
-      if (key !== "hours_played" && !key.startsWith("chapter_") && key !== "rating" && !Number.isInteger(value)) throw new Error(`${key.replaceAll("_", " ")} must be a whole number.`);
+      if (key !== "hours_played" && key !== "rating" && !Number.isInteger(value)) throw new Error(`${key.replaceAll("_", " ")} must be a whole number.`);
     }
     if (Number(data.rating || 0) > 5) throw new Error("Rating must be between 0 and 5.");
-    for (const prefix of ["season", "episode", "chapter", "volume"]) {
+    for (const prefix of ["season", "episode"]) {
       if (Number(data[`${prefix}_total`]) > 0 && Number(data[`${prefix}_current`]) > Number(data[`${prefix}_total`])) {
         throw new Error(`${prefix} progress cannot exceed the total. Use 0 for an unknown total.`);
       }
@@ -938,17 +927,10 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
     for (const key of ["metadata_provider", "metadata_id", ...(LIBRARY_PROGRESS[data.media_type] || [])]) {
       if (data[key] !== undefined && data[key] !== "") result[key] = data[key];
     }
-    if (data.media_type === "manga") {
-      result.chapter_current = data.chapter_current || 0;
-      result.chapter_total = data.chapter_total || 0;
-      result.chapter_released = Math.max(Number(data.chapter_released || 0), Number(data.chapter_total || 0));
-      for (const key of ["chapter_source", "chapter_checked", "chapter_provider_id", "chapter_count_kind"]) if (data[key]) result[key] = data[key];
-    }
     if (screen) {
       result.industry = data.industry || "";
       if (data.directors?.length) result.directors = data.directors;
     }
-    if (data.media_type === "manga" && data.authors?.length) result.authors = data.authors;
     if (data.media_type === "series") {
       if (data.directors?.length) result.directors = data.directors;
       if (data.cast?.length) result.cast = data.cast.slice(0, 3);
@@ -1005,11 +987,6 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       await this.app.fileManager.processFrontMatter(file, (fm) => {
         Object.assign(fm, values);
         this.updateLibraryDates(fm);
-        if (file.path.startsWith(`${LIBRARY_FOLDER}/`)) {
-          const compact = this.compactLibraryMetadata(fm);
-          for (const key of Object.keys(fm)) delete fm[key];
-          Object.assign(fm, compact);
-        }
       });
     } catch (error) { new Notice(`Motion Arts: ${error.message || error}`); }
   }
@@ -1033,6 +1010,7 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
     try {
       const data = this.app.metadataCache.getFileCache(file)?.frontmatter;
       if (!data) throw new Error("Note metadata is not ready.");
+      if (!LIBRARY_TYPES.has(data.media_type)) throw new Error("Unsupported library type.");
       try {
         if (data.metadata_provider && data.metadata_id) {
           await this.applyLibraryMetadata(file, await this.libraryDetails(data));
@@ -1042,10 +1020,6 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
           messages.push(changed ? "TMDB metadata refreshed" : "No TMDB changes; check the token or title if details are missing");
         } else messages.push("Link a provider to refresh catalog details");
       } catch (error) { messages.push(`Metadata unavailable: ${error.message || error}`); }
-      if (this.chapterListing(data)) {
-        const result = await this.checkReleasedChapters(true, file);
-        messages.push(!result ? "Chapter check already running" : result.unavailable ? "Chapter source unavailable; saved count kept" : result.updated ? "Released chapters checked" : "No chapter update needed");
-      }
       new Notice(`Motion Arts: ${messages.join(". ")}.`);
     } catch (error) { new Notice(`Motion Arts: ${error.message || error}`); }
     finally { this.mediaRefreshBusy = false; }
@@ -1077,11 +1051,7 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       for (const [key, value] of Object.entries(updated)) {
         if (["title", "media_type", "metadata_provider", "metadata_id", "watched", "watched_date", "tags", "status", "rating", "favorite", "started_date", "completed_date", "related_media", "showcase"].includes(key)) continue;
         if (value === "" || value == null || (Array.isArray(value) && !value.length)) continue;
-        if (key === "chapter_released") {
-          if (fm.chapter_count_kind === "official" && fm.chapter_source && Number(fm.chapter_total) > 0) continue;
-          if (Number(value) > Number(fm[key] || 0)) fm[key] = value;
-        } else if (key.endsWith("_total")) {
-          if (key === "chapter_total" && fm.chapter_count_kind === "official" && fm.chapter_source && Number(fm.chapter_total) > 0) continue;
+        if (key.endsWith("_total")) {
           // Unknown provider totals must not erase known totals or invalidate progress.
           if (Number(value) > 0 && Number(value) >= Number(fm[key.replace("_total", "_current")] || 0)) fm[key] = value;
         } else if (!this.hasValue(fm[key]) || (Array.isArray(fm[key]) && !fm[key].length)) fm[key] = value;
@@ -1093,172 +1063,18 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
     });
   }
 
-  // Nuxt stores scalar values by index. Read only the documented public title/episode
-  // fields from its JSON payload; never execute scripts from publisher HTML.
-  kodanshaPayload(html) {
-    const raw = String(html).match(/<script\b[^>]*id=["']__NUXT_DATA__["'][^>]*>([\s\S]*?)<\/script>/i);
-    if (!raw) throw new Error("Publisher data unavailable");
-    const table = JSON.parse(raw[1]);
-    if (!Array.isArray(table)) throw new Error("Publisher data changed");
-    const value = index => Number.isInteger(index) && index >= 0 ? table[index] : undefined;
-    return { table, value };
-  }
-
-  kodanshaTitleId(data) {
-    const explicit = String(data.chapter_source || "").match(/^https:\/\/kmanga\.kodansha\.com\/title\/(\d+)(?:\/episode\/\d+)?\/?$/);
-    if (explicit) return explicit[1];
-    // Publisher IDs checked against the exact title. Other manga can opt in with
-    // their official K MANGA title URL in chapter_source.
-    const known = { "wistoria wand and sword": [2020, "10016"], "blue lock": [2018, "10008"], "grand blue dreaming": [2014, "10058"] };
-    const match = known[this.normalizedTitle(data.title)];
-    return match && (!data.year || Number(data.year) === match[0]) ? match[1] : null;
-  }
-
-  async kodanshaChapters(data, id) {
-    const root = `https://kmanga.kodansha.com/title/${id}`;
-    const { table, value } = this.kodanshaPayload(await this.libraryRequest(root, undefined, true));
-    const title = table.find(x => x && !Array.isArray(x) && typeof x === "object" && String(value(x.title_id)) === id && x.episode_id_list !== undefined);
-    if (!title || this.normalizedTitle(value(title.title_name)) !== this.normalizedTitle(data.title)) throw new Error("Publisher title mismatch");
-    const episodes = value(title.episode_id_list);
-    if (!Array.isArray(episodes)) throw new Error("Publisher episodes unavailable");
-    // Entries may be split into parts or end with an unnumbered extra. Never use
-    // total_episode_count (136 entries can represent only 69 numbered chapters).
-    for (const ref of episodes.slice(-5).reverse()) {
-      const episodeId = String(value(ref));
-      if (!/^\d+$/.test(episodeId)) continue;
-      const episode = this.kodanshaPayload(await this.libraryRequest(`${root}/episode/${episodeId}`, undefined, true));
-      const row = episode.table.find(x => x && !Array.isArray(x) && typeof x === "object" && String(episode.value(x.title_id)) === id && String(episode.value(x.episode_id)) === episodeId && x.episode_name !== undefined);
-      if (!row) continue;
-      const date = String(episode.value(row.start_time) || "");
-      if (!/^\d{4}-\d{2}-\d{2}/.test(date) || date.slice(0, 10) > this.today()) continue;
-      const number = String(episode.value(row.episode_name)).match(/^chapter\s+(\d+(?:\.\d+)?)(?=\s|\(|$)/i);
-      if (number && Number(number[1]) > 0) return { released: Number(number[1]), source: root, kind: "official" };
-    }
-    throw new Error("No released numbered publisher chapter");
-  }
-
-  async releasedChapters(data) {
-    const kodanshaId = this.kodanshaTitleId(data);
-    if (kodanshaId) {
-      // A linked publisher failure must not silently relabel an old community
-      // number as freshly verified publisher data.
-      return this.kodanshaChapters(data, kodanshaId);
-    }
-    const listing = this.chapterListing({ ...data, media_type: "manga", chapter_total: 0 });
-    if (listing) {
-      try {
-        const html = await this.libraryRequest(listing.url, undefined, true);
-        const pattern = new RegExp(`/shonenjump/${listing.slug}-chapter-(\\d+(?:\\.\\d+)?)/chapter/\\d+`, "g");
-        const chapters = [...html.matchAll(pattern)].map(m => Number(m[1]));
-        if (chapters.length) return { released: Math.max(...chapters), source: listing.url, kind: "official" };
-      } catch (_) { /* Try the explicitly labelled community fallback. */ }
-    }
-    if (data.chapter_count_kind === "official") throw new Error("Official source unavailable; verified count kept");
-    return this.mangaUpdatesChapters(data);
-  }
-
-  async mangaUpdatesChapters(data) {
-    const root = "https://api.mangaupdates.com/v1/series";
-    let id = data.chapter_provider_id;
-    if (!/^\d+$/.test(String(id || ""))) {
-      const search = await this.libraryRequest(`${root}/search`, { search: data.title, page: 1, perpage: 25 });
-      const candidates = (search.results || []).map(x => x.record).filter(x => x && (!data.year || String(x.year) === String(data.year)));
-      const matches = candidates.filter(x => this.normalizedTitle(x.title) === this.normalizedTitle(data.title));
-      if (!matches.length) {
-        for (const candidate of candidates.slice(0, 5)) {
-          const details = await this.libraryRequest(`${root}/${candidate.series_id}`);
-          if ((details.associated || []).some(alias => this.normalizedTitle(alias.title) === this.normalizedTitle(data.title))) matches.push(candidate);
-        }
-      }
-      if (matches.length !== 1) throw new Error("No unambiguous chapter source found");
-      id = String(matches[0].series_id);
-    }
-    const record = await this.libraryRequest(`${root}/${id}`);
-    const titles = [record.title, ...(record.associated || []).map(x => x.title)];
-    if (!titles.some(title => this.normalizedTitle(title) === this.normalizedTitle(data.title))
-      || (data.year && String(record.year) !== String(data.year))) throw new Error("Chapter source identity mismatch");
-    const released = Number(record.latest_chapter);
-    // Community release feeds can restart chapter numbering; reject obvious inconsistencies.
-    const volumes = Number(String(record.status || "").match(/(\d+)\s+Volumes?/i)?.[1] || 0);
-    if (volumes > released) throw new Error("Chapter source uses inconsistent numbering; saved count kept");
-    if (!Number.isFinite(released) || released <= 0) throw new Error("Chapter count unavailable");
-    return { released, source: record.url || `https://www.mangaupdates.com/series.html?id=${id}`, providerId: String(id), kind: "community" };
-  }
-
-  chapterListing(data) {
-    if (data.media_type !== "manga" || Number(data.chapter_total) > 0) return null;
-    // Explicit official listing overrides title-derived matching. Never request arbitrary URLs.
-    const explicit = String(data.chapter_source || "").match(/^https:\/\/www\.viz\.com\/shonenjump\/chapters\/([a-z0-9-]+)\/?$/);
-    const slug = explicit?.[1] || String(data.title || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-    if (!slug) return null;
-    return { slug, url: `https://www.viz.com/shonenjump/chapters/${slug}` };
-  }
-
-  async checkReleasedChapters(force = false, targetFile = null) {
-    if (this.chapterCheckStopped || this.chapterCheckBusy) return;
-    this.chapterCheckBusy = true;
-    const day = this.today();
-    const attempts = this.settings.chapterCheckAttempts || {};
-    const groups = new Map();
-    const summary = { updated: 0, unavailable: 0 };
-    try {
-      for (const file of targetFile ? [targetFile] : this.app.vault.getMarkdownFiles()) {
-        if (!this.isMediaNote(file)) continue;
-        const data = this.app.metadataCache.getFileCache(file)?.frontmatter || {};
-        const listing = this.chapterListing(data);
-        if (!listing || (!force && attempts[listing.slug] === day)) continue;
-        if (!groups.has(listing.slug)) groups.set(listing.slug, { ...listing, data, files: [] });
-        groups.get(listing.slug).files.push(file);
-      }
-      for (const listing of groups.values()) {
-        if (this.chapterCheckStopped) break;
-        attempts[listing.slug] = day;
-        try {
-          const { released, source, providerId, kind } = await this.releasedChapters(listing.data);
-          if (this.chapterCheckStopped) break;
-          for (const file of listing.files) {
-            let verified = false;
-            await this.app.fileManager.processFrontMatter(file, fm => {
-              if (this.chapterListing(fm)?.slug !== listing.slug) return;
-              if (released < Number(fm.chapter_released || 0)) return;
-              fm.chapter_released = released;
-              fm.chapter_source = source;
-              if (providerId) fm.chapter_provider_id = providerId;
-              else delete fm.chapter_provider_id;
-              fm.chapter_count_kind = kind;
-              fm.chapter_checked = day;
-              verified = true;
-            });
-            if (verified) summary.updated += 1;
-            else summary.unavailable += 1;
-          }
-        } catch (_) { summary.unavailable += listing.files.length; }
-      }
-      if (groups.size && !this.chapterCheckStopped) {
-        this.settings.chapterCheckAttempts = attempts;
-        delete this.settings.chapterCheckAttempt;
-        await this.saveSettings();
-      }
-      if (force && !targetFile) new Notice(`Motion Arts: ${summary.updated} manga checked; ${summary.unavailable} unavailable. Saved counts never decrease.`);
-    } catch (error) {
-      if (force && !targetFile) new Notice(`Motion Arts: chapter check unavailable. Saved counts kept. ${error.message || error}`);
-    } finally { this.chapterCheckBusy = false; }
-    return summary;
-  }
-
-  async libraryRequest(url, body, asText = false) {
+  async libraryRequest(url, body) {
     let timer;
     let response;
     try {
       response = await Promise.race([
         requestUrl({ url, method: body ? "POST" : "GET", throw: false,
-          headers: { Accept: asText ? "text/html" : "application/json", ...(body ? { "Content-Type": "application/json" } : {}) },
+          headers: { Accept: "application/json", ...(body ? { "Content-Type": "application/json" } : {}) },
           ...(body ? { body: JSON.stringify(body) } : {}) }),
         new Promise((_, reject) => { timer = window.setTimeout(() => reject(new Error("Provider timed out. Try again later or create a manual entry.")), 12000); }),
       ]);
     } finally { window.clearTimeout(timer); }
     if (response.status >= 400) throw new Error(`Provider returned HTTP ${response.status}. Try again later or create a manual entry.`);
-    if (asText) return response.text || "";
     const data = response.json || JSON.parse(response.text);
     if (data.errors?.length) throw new Error(data.errors[0].message || "Provider request failed.");
     return data;
@@ -1284,7 +1100,7 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       const data = await this.libraryRequest("https://graphql.anilist.co", {
         query: `query ($search: String, $type: MediaType) { Page(perPage: 12) { media(search: $search, type: $type, sort: SEARCH_MATCH) {
           id title { english romaji } startDate { year } format coverImage { large }
-        } } }`, variables: { search: query, type: kind === "manga" ? "MANGA" : "ANIME" },
+        } } }`, variables: { search: query, type: "ANIME" },
       });
       return (data.data?.Page?.media || []).map((item) => ({
         title: item.title.english || item.title.romaji, year: item.startDate?.year || "", format: item.format,
@@ -1331,21 +1147,20 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
         year: data.release_date?.date?.match(/\b\d{4}\b/)?.[0] || "", source_url: `https://store.steampowered.com/app/${item.metadata_id}/`,
       };
     }
-    if (!["anime", "manga"].includes(kind)) throw new Error("Provider does not match this library.");
+    if (kind !== "anime") throw new Error("Provider does not match this library.");
     if (item.metadata_provider === "anilist") {
       const data = await this.libraryRequest("https://graphql.anilist.co", {
         query: `query ($id: Int, $type: MediaType) { Media(id: $id, type: $type) {
-          id title { english romaji } description(asHtml: false) genres episodes chapters volumes format
+          id title { english romaji } description(asHtml: false) genres episodes format
           startDate { year } coverImage { extraLarge large } studios(isMain: true) { nodes { name } } siteUrl
-        } }`, variables: { id: Number(item.metadata_id), type: kind === "manga" ? "MANGA" : "ANIME" },
+        } }`, variables: { id: Number(item.metadata_id), type: "ANIME" },
       });
       const media = data.data?.Media;
       if (!media) throw new Error("AniList details are unavailable.");
       return { title: media.title.english || media.title.romaji, media_type: kind, metadata_provider: "anilist", metadata_id: String(media.id),
         description: plainLibraryText(media.description), poster: media.coverImage?.extraLarge || media.coverImage?.large || "",
         genres: media.genres || [], year: media.startDate?.year || "", format: media.format || "", source_url: media.siteUrl || "",
-        ...(kind === "anime" ? { episode_total: media.episodes || 0, studios: (media.studios?.nodes || []).map((s) => s.name) }
-          : { chapter_total: media.chapters || 0, volume_total: media.volumes || 0 }),
+        ...{ episode_total: media.episodes || 0, studios: (media.studios?.nodes || []).map((s) => s.name) },
       };
     }
     if (item.metadata_provider === "jikan") {
@@ -1354,9 +1169,8 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       if (!media) throw new Error("MyAnimeList details are unavailable.");
       return { title: media.title_english || media.title, media_type: kind, metadata_provider: "jikan", metadata_id: String(media.mal_id),
         description: plainLibraryText(media.synopsis), poster: media.images?.jpg?.large_image_url || "", genres: (media.genres || []).map((g) => g.name),
-        year: media.year || String((media.aired || media.published)?.from || "").slice(0, 4), format: media.type || "", source_url: media.url || "",
-        ...(kind === "anime" ? { episode_total: media.episodes || 0, studios: (media.studios || []).map((s) => s.name) }
-          : { chapter_total: media.chapters || 0, volume_total: media.volumes || 0, authors: (media.authors || []).map((a) => a.name) }),
+        year: media.year || String(media.aired?.from || "").slice(0, 4), format: media.type || "", source_url: media.url || "",
+        ...{ episode_total: media.episodes || 0, studios: (media.studios || []).map((s) => s.name) },
       };
     }
     throw new Error("Unknown metadata provider.");

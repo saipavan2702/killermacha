@@ -8,7 +8,6 @@ filters:
         - media_type == "series"
         - media_type == "anime"
         - media_type == "anime-movie"
-        - media_type == "manga"
         - media_type == "game"
 properties:
   title:
@@ -45,16 +44,6 @@ properties:
     displayName: Episodes watched
   episode_total:
     displayName: Total episodes
-  chapter_current:
-    displayName: Chapters read
-  chapter_released:
-    displayName: Chapters released
-  chapter_total:
-    displayName: Final chapter total
-  volume_current:
-    displayName: Volumes read
-  volume_total:
-    displayName: Total volumes
   hours_played:
     displayName: Hours played
   started_date:
@@ -69,8 +58,6 @@ properties:
     displayName: Publishers
   studios:
     displayName: Studios
-  authors:
-    displayName: Authors
   metadata_provider:
     displayName: Provider
   source_url:
@@ -126,18 +113,6 @@ views:
     order:
       - title
     limit: 100
-    image: poster
-    imageProperty: poster
-    imageFit: contain
-    imageAspectRatio: 1.5
-    cardSize: 260
-  - type: cards
-    name: Manga
-    filters:
-      and:
-        - media_type == "manga"
-    order:
-      - title
     image: poster
     imageProperty: poster
     imageFit: contain
@@ -219,9 +194,6 @@ views:
       - season_total
       - episode_current
       - episode_total
-      - chapter_current
-      - chapter_total
-      - chapter_released
       - hours_played
       - started_date
       - completed_date
@@ -230,5 +202,4 @@ views:
       - industry
       - directors
       - cast
-      - authors
       - poster

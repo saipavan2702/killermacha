@@ -3,7 +3,7 @@
   "name": "Motion Arts",
   "version": "1.2.1",
   "minAppVersion": "1.5.0",
-  "description": "Media library for movies, TV, anime, manga, and games: metadata, covers, progress, and ratings.",
+  "description": "Media library for movies, TV, anime, and games: metadata, covers, progress, and ratings.",
   "author": "mmacha",
   "isDesktopOnly": false
 }

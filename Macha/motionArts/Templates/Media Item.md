@@ -1,6 +1,6 @@
 <%*
-const mediaTypes = ["movie", "series", "anime", "anime-movie", "manga", "game"];
-const labels = ["Movie", "Series", "Anime", "Anime Movie", "Manga", "Game"];
+const mediaTypes = ["movie", "series", "anime", "anime-movie", "game"];
+const labels = ["Movie", "Series", "Anime", "Anime Movie", "Game"];
 const pickedType = await tp.system.suggester(labels, mediaTypes, true, "Media type");
 const mediaType = pickedType || "movie";
 const suffixes = {
@@ -8,7 +8,6 @@ const suffixes = {
   series: " - Series",
   anime: " - Anime",
   "anime-movie": " - Anime Movie",
-  manga: " - Manga",
   game: " - Game",
 };
 const prompts = {
@@ -16,11 +15,10 @@ const prompts = {
   series: "Series title",
   anime: "Anime title",
   "anime-movie": "Anime movie title",
-  manga: "Manga title",
   game: "Game title",
 };
 const currentTitle = tp.file.title && !/^Untitled/i.test(tp.file.title)
-  ? tp.file.title.replace(/ - (Series|Anime Movie|Anime|Manga|Game)$/i, "")
+  ? tp.file.title.replace(/ - (Series|Anime Movie|Anime|Game)$/i, "")
   : "";
 const titleInput = await tp.system.prompt(prompts[mediaType], currentTitle, true);
 const enteredTitle = (titleInput || currentTitle).trim();
@@ -56,7 +54,6 @@ const tagsByType = {
   series: ["motion-art", "series"],
   anime: ["motion-art", "anime", "series"],
   "anime-movie": ["motion-art", "anime", "movie"],
-  manga: ["media-library", "manga"],
   game: ["media-library", "game"],
 };
 const tags = tagsByType[mediaType] || ["motion-art"];
@@ -69,19 +66,14 @@ cast: []
   : mediaType === "anime" || mediaType === "anime-movie" ? `directors: []
 ` : `year:
 `;
-const trackingFields = ["anime", "manga", "game"].includes(mediaType)
+const trackingFields = ["anime", "game"].includes(mediaType)
   ? `` + (mediaType === "anime" ? `episode_current: 0
 episode_total: 0
-`
-    : mediaType === "manga" ? `chapter_current: 0
-chapter_total: 0
-chapter_released: 0
-authors: []
 `
     : `hours_played: 0
 `)
   : "";
-const watchedFields = ["manga", "game"].includes(mediaType) ? "" : "watched: false\nwatched_date:\n";
+const watchedFields = ["game"].includes(mediaType) ? "" : "watched: false\nwatched_date:\n";
 tR += `---
 title: ${JSON.stringify(title)}
 media_type: "${mediaType}"

@@ -6,21 +6,20 @@
 
 Click **New** in the standalone Celluloid Base, use the **Add media to library** ribbon icon, or run **Motion Arts: Add media to library** from the command palette. Choose the type, enter a title, choose online search or manual entry, and click **Continue**. Review the selected result, then click **Add to library**. Cancelling creates no note.
 
-New entries go into `Macha/motionArts/Library`; existing entries in `Items` appear in the same Base. Matching entries open the existing note. The **Media Item** Templater template supports all six types for manual creation.
+New entries go into `Macha/motionArts/Library`; existing entries in `Items` appear in the same Base. Matching entries open the existing note. The **Media Item** Templater template supports all five types for manual creation.
 
 | Media | Online source | Progress |
 | --- | --- | --- |
 | Movies / anime movies | TMDB, using your existing token | Status and watched date |
 | TV shows | TMDB, using your existing token | Seasons and overall episodes |
 | Anime | AniList; Jikan fallback | Episodes |
-| Manga | AniList; Jikan fallback | Chapters |
 | Games | Steam | Hours played |
 
-Anime, manga and game searches need no new key. Use manual entry for games outside Steam or when providers are unavailable. TV episode totals cover the entire show.
+Anime and game searches need no new key. Use manual entry for games outside Steam or when providers are unavailable. TV episode totals cover the entire show.
 
 ## Track and edit
 
-Run **Motion Arts: Edit library progress and rating** from a media note. Statuses are planned, active, completed, paused, and dropped. Active appears as Watching, Reading, or Playing. Rating is 0–5, with 0 meaning unrated. Progress totals of 0 mean unknown. The editor also supports favorites and related `[[note links]]`.
+Run **Motion Arts: Edit library progress and rating** from a media note. Statuses are planned, active, completed, paused, and dropped. Active appears as Watching or Playing. Rating is 0–5, with 0 meaning unrated. Progress totals of 0 mean unknown. The editor also supports favorites and related `[[note links]]`.
 
 Starting sets a missing start date; completion sets a missing completion date. Existing dates are retained. For tracked screen media, status controls the legacy watched checkbox: use status once tracking is enabled. Cards display only covers and titles; use the **Manage** table for details.
 
@@ -40,25 +39,8 @@ Inspired by [Lorebase](https://github.com/Murchi1k/obsidian-lorebase-plugin) (MI
 
 The standalone Base New-button integration is scoped to Celluloid and Obsidian's current English toolbar. The command and ribbon are the fallback for embedded Bases, other languages, or toolbar changes.
 
-The view menu contains six media categories, **Watchlist**, **Watched**, **Active**, **Favorites**, and **Manage**. Manage combines metadata and progress editing in one table. Empty progress columns are normal for media types that do not use those fields.
+The view menu contains five media categories, **Watchlist**, **Watched**, **Active**, **Favorites**, and **Manage**. Manage combines metadata and progress editing in one table. Empty progress columns are normal for media types that do not use those fields.
 
 ## Compact properties
 
 New entries save only core catalog fields and relevant progress counters. Movies follow the existing 8 Mile schema, with up to three cast members and a blank `watched_date` until watched. Other screen media also include `watched` and `watched_date`. Non-movie provider IDs remain for accurate refresh. Default ratings and empty related links, synopsis, runtime, and other descriptive payloads are omitted; the search preview still shows the synopsis. Non-default personal tracking values and note bodies are retained. Existing Items and Library notes use the same compact core, with a visible favorite checkbox. Custom fields and note bodies are retained.
-
-### Manga chapters
-
-`chapter_current` is the last chapter you read. `chapter_total` is the final total for a finished manga (0 means ongoing or unknown). `chapter_released` is the latest known published chapter, so you can compare your progress even before the manga finishes. Volume counters are no longer used. A released count can become stale and does not prevent you from recording newer progress.
-
-Provider refresh retrieves catalog totals where available. AniList/Jikan do not reliably return published-to-date counts for ongoing manga, and catalog totals can include extras rather than match the last numbered chapter. A verified official final total is preserved when catalog metadata refreshes.
-
-Ongoing manga checks once per day while Obsidian is open; the hourly scheduler picks up newly added manga. Creation and **Refresh media** use the same chapter resolver. Wistoria (2020), Blue Lock (2018), and Grand Blue Dreaming (2014) use verified K MANGA title IDs automatically. Other Kodansha titles can use a `https://kmanga.kodansha.com/title/ID` URL in `chapter_source`; the publisher title must match the note. The checker reads public title/episode metadata, skips future-dated entries and unnumbered extras, and treats split entries such as `Chapter 69(2)` as chapter 69, never as 136 uploaded parts. It checks up to the last five entries; if none has usable chapter numbering, the saved count remains unchanged.
-
-Other titles try VIZ’s official listing first, including when an old MangaUpdates ID exists. An explicit VIZ `/shonenjump/chapters/...` URL supports differently named titles. If no official source is available, MangaUpdates is a **community release-feed fallback**: its `latest_chapter` may be years behind publication. `chapter_count_kind` distinguishes `official` from `community`; community counts are not verified publication totals. MangaUpdates matches title/aliases and year, rejects ambiguous results, and rechecks saved source identities. Linked official sources never silently fall back to community data. Failed or lower results preserve the count, source, reading progress and successful `chapter_checked` date. A lower result is reported as unavailable, not freshly checked.
-Open an entry and run **Motion Arts: Refresh media** from Cmd+P to refresh its catalog details and, for ongoing manga, its released chapter count in one action. Finished manga with a known final total are skipped by the released-chapter checker. No background checks run after Obsidian closes.
-
-### Broader manga coverage and simpler creation
-
-Creation asks for a title and a search-result confirmation. Manual entry is optional. Cover changes, status, ratings and reading progress are edited after saving. Change the `poster` property in the note to replace its cover. New ongoing manga attempts the same publisher-first chapter lookup immediately. Unsupported or ambiguous matches remain unknown; saved progress is never replaced.
-
-Lorebase reference checked on 2026-10-24: its MangaUpdates provider also uses `latest_chapter`; its MangaDex provider sums the English aggregate’s uploaded chapter entries. Neither establishes the latest officially numbered chapter for every title, so these values are not interchangeable.
