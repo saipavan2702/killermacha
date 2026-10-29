@@ -87,6 +87,7 @@
     "calendarPlacement": "synced",
     "calendarLeftPlacement": "synced",
     "calendarWeeksToShow": "synced",
+    "defaultListMode": "synced",
     "compactItemHeight": "local",
     "compactItemHeightScaleText": "local",
     "featureImageSize": "synced",
@@ -143,6 +144,7 @@
   },
   "showReleaseNotes": true,
   "checkForUpdatesOnStart": true,
+  "showMarkdownPointBannerAtTop": true,
   "pinNavigationBanner": true,
   "showNoteCount": true,
   "separateNoteCounts": true,
@@ -521,6 +523,7 @@
   "folderBackgroundColors": {},
   "folderSortOverrides": {},
   "folderTreeSortOverrides": {},
+  "folderChildOrder": {},
   "folderAppearances": {
     "Upskill/SysDes": {
       "previewRows": 1
@@ -531,12 +534,14 @@
   "tagBackgroundColors": {},
   "tagSortOverrides": {},
   "tagTreeSortOverrides": {},
+  "tagChildOrder": {},
   "tagAppearances": {},
   "propertyIcons": {},
   "propertyColors": {},
   "propertyBackgroundColors": {},
   "propertySortOverrides": {},
   "propertyTreeSortOverrides": {},
+  "propertyChildOrder": {},
   "propertyAppearances": {},
   "virtualFolderColors": {},
   "virtualFolderBackgroundColors": {},
@@ -563,8 +568,7 @@
     "#64748b",
     "#78716c"
   ],
-  "lastShownVersion": "3.4.3",
-  "rootFolderOrder": [],
+  "lastShownVersion": "3.5.0",
   "rootTagOrder": [],
   "rootPropertyOrder": [],
   "useEmbeddedImageFallback": true,

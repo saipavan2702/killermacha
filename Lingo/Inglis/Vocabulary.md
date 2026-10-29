@@ -1,4 +1,14 @@
 **Impertinent** - Irrelevant, rude
 sceptic
 dogmatism
-nihilistic
+nihilistic/nihilism
+Hedonism
+Marxism
+Epicureanism
+Stoicism
+Pyrrhonism
+Pragamtism
+Cynicism
+Solipsism
+Resplendent
+adorneth
