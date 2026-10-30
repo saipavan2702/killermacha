@@ -14,7 +14,7 @@
               "type": "bases",
               "state": {
                 "file": "Macha/motionArts/Celluloid.base",
-                "viewName": "Anime Movies"
+                "viewName": "Movies"
               },
               "icon": "lucide-layout-grid",
               "title": "Celluloid"
@@ -186,10 +186,11 @@
   },
   "active": "140149819ba54c43",
   "lastOpenFiles": [
+    "Macha/motionArts/Library/Spies in Disguise - Anime Movie.md",
+    "Macha/motionArts/Celluloid.base",
     "Lingo/Eśpanol/Sentences.md",
     "upskill/SysDes/System Design Process.md",
     "Macha/watches.md",
-    "Macha/motionArts/Celluloid.base",
     "Interview Quick Notes.md",
     "Tasks/Tasks.md",
     "Tasks/To-Do's.md",
@@ -212,7 +213,6 @@
     "mmacha/motionArts/Items/ACCA - 13-Territory Inspection Dept. - Anime.md",
     "mmacha/motionArts/Items/The Internship.md",
     "mmacha/motionArts/Items/The Da Vinci Code.md",
-    "mmacha/motionArts/Items/The Proposal.md",
-    "mmacha/motionArts/Items/The Silence of the Lambs.md"
+    "mmacha/motionArts/Items/The Proposal.md"
   ]
 }
