@@ -276,7 +276,7 @@ function splitTitleYear(value) {
   return match ? { title: match[1].trim(), year: match[2] } : { title, year: "" };
 }
 
-module.exports = class MovieWatchDatePlugin extends Plugin {
+module.exports = class MotionArtsPlugin extends Plugin {
   async onload() {
     await this.loadSettings();
     this.pending = new Map();
@@ -285,7 +285,7 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
     this.genreCache = new Map();
     this.missingTokenNoticeShown = false;
 
-    this.addSettingTab(new MovieWatchDateSettingTab(this.app, this));
+    this.addSettingTab(new MotionArtsSettingTab(this.app, this));
     this.addRibbonIcon("library", "Add media to library", () => this.addLibraryItem());
     // Route only Celluloid's native New action through our reviewed creation flow.
     // The command and ribbon remain available if Obsidian changes its toolbar markup.
@@ -330,21 +330,11 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       },
     });
 
-    this.registerEvent(
-      this.app.vault.on("create", (file) => {
-        if (this.isMediaNote(file)) {
-          this.scheduleCheck(file, 0);
-        }
-      })
-    );
-
-    this.registerEvent(
-      this.app.vault.on("modify", (file) => {
-        if (this.isMediaNote(file)) {
-          this.scheduleCheck(file, 0);
-        }
-      })
-    );
+    for (const event of ["create", "modify"]) {
+      this.registerEvent(this.app.vault.on(event, (file) => {
+        if (this.isMediaNote(file)) this.scheduleCheck(file, 0);
+      }));
+    }
   }
 
   onunload() {
@@ -424,16 +414,16 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
   async syncCurrentMedia(file) {
     const frontmatter = this.app.metadataCache.getFileCache(file)?.frontmatter;
     if (!frontmatter) {
-      new Notice("mmacha-auto: note metadata is not ready yet.");
+      new Notice("Motion Arts: note metadata is not ready yet.");
       return;
     }
 
     try {
       const updated = await this.syncTmdbIfNeeded(file, frontmatter, true);
-      new Notice(updated ? "mmacha-auto: TMDB sync complete." : "mmacha-auto: nothing to sync.");
+      new Notice(updated ? "Motion Arts: TMDB sync complete." : "Motion Arts: nothing to sync.");
     } catch (error) {
       console.error(error);
-      new Notice(`mmacha-auto: TMDB sync failed. ${error.message || error}`);
+      new Notice(`Motion Arts: TMDB sync failed. ${error.message || error}`);
     }
   }
 
@@ -541,51 +531,17 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       return imdbResult;
     }
 
-    const path = this.isTvType(mediaType) ? "/search/tv" : "/search/movie";
-    const queries = [QUERY_OVERRIDES[title] || title, title];
-    if (title === "K") {
-      queries.push("K Project", "K");
-    }
+    const queries = new Set([QUERY_OVERRIDES[title] || title, title]);
+    if (title === "K") queries.add("K Project");
 
-    const seen = new Set();
+    const year = preferredPosterPath ? "" : preferredYear || YEAR_OVERRIDES[title];
     const results = [];
     for (const query of queries) {
-      if (seen.has(query)) {
-        continue;
-      }
-      seen.add(query);
-      const params = {
-        query,
-        include_adult: "false",
-        language: "en-US",
-        page: "1",
-      };
-      const year = preferredPosterPath ? "" : preferredYear || YEAR_OVERRIDES[title];
-      if (year && this.isTvType(mediaType)) {
-        params.first_air_date_year = year;
-      } else if (year) {
-        params.year = year;
-        params.primary_release_year = year;
-      }
-      const payload = await this.apiGet(path, params);
-      results.push(...(payload.results || []));
+      results.push(...await this.searchTmdb(query, mediaType, year));
     }
-    if (preferredPosterPath && preferredYear && !results.some((result) => result.poster_path === preferredPosterPath)) {
-      for (const query of seen) {
-        const params = {
-          query,
-          include_adult: "false",
-          language: "en-US",
-          page: "1",
-        };
-        if (this.isTvType(mediaType)) {
-          params.first_air_date_year = preferredYear;
-        } else {
-          params.year = preferredYear;
-          params.primary_release_year = preferredYear;
-        }
-        const payload = await this.apiGet(path, params);
-        results.push(...(payload.results || []));
+    if (preferredPosterPath && preferredYear && !results.some(result => result.poster_path === preferredPosterPath)) {
+      for (const query of queries) {
+        results.push(...await this.searchTmdb(query, mediaType, preferredYear));
       }
     }
     return this.chooseBestResult(title, mediaType, results, preferredYear, preferredPosterPath);
@@ -711,16 +667,20 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
 
   async apiGet(path, params) {
     const query = new URLSearchParams(params || {}).toString();
-    const url = `${API_BASE}${path}${query ? `?${query}` : ""}`;
-    const response = await requestUrl({
-      url,
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        Authorization: `Bearer ${this.settings.tmdbBearerToken}`,
-      },
+    return this.libraryRequest(`${API_BASE}${path}${query ? `?${query}` : ""}`, null, {
+      Authorization: `Bearer ${this.settings.tmdbBearerToken}`,
     });
-    return response.json || JSON.parse(response.text);
+  }
+
+  async searchTmdb(query, mediaType, year = "") {
+    const type = this.isTvType(mediaType) ? "tv" : "movie";
+    const params = { query, include_adult: "true", language: "en-US", page: "1" };
+    if (year) {
+      if (type === "tv") params.first_air_date_year = year;
+      else Object.assign(params, { year, primary_release_year: year });
+    }
+    const data = await this.apiGet(`/search/${type}`, params);
+    return data.results || [];
   }
 
   industryFrom(result, mediaType) {
@@ -826,7 +786,7 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
         Object.entries(LIBRARY_LABELS).map(([value, title]) => ({ title, value })));
       if (!kind) return;
       const input = await libraryForm(this.app, `Add ${LIBRARY_LABELS[kind].toLowerCase()}`, [
-        { key: "title", label: "Title", value: "", placeholder: "Enter a title to find…" },
+        { key: "title", label: "Title", value: "", placeholder: "Enter a title or IMDb ID / URL to find…" },
       ], (values) => { if (!values.title.trim()) throw new Error("Enter a title to continue."); }, {}, { searchActions: true, description: "Find the title and cover online, or add your own entry." });
       if (!input) return;
       if (!input.title.trim()) throw new Error("Enter a title.");
@@ -931,10 +891,7 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       result.industry = data.industry || "";
       if (data.directors?.length) result.directors = data.directors;
     }
-    if (data.media_type === "series") {
-      if (data.directors?.length) result.directors = data.directors;
-      if (data.cast?.length) result.cast = data.cast.slice(0, 3);
-    }
+    if (data.media_type === "series" && data.cast?.length) result.cast = data.cast.slice(0, 3);
     if (data.status && data.status !== "planned" && !(screen && data.status === "completed")) result.status = data.status;
     if (Number(data.rating) > 0) result.rating = data.rating;
     result.favorite = data.favorite === true;
@@ -1063,13 +1020,13 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
     });
   }
 
-  async libraryRequest(url, body) {
+  async libraryRequest(url, body, headers = {}) {
     let timer;
     let response;
     try {
       response = await Promise.race([
         requestUrl({ url, method: body ? "POST" : "GET", throw: false,
-          headers: { Accept: "application/json", ...(body ? { "Content-Type": "application/json" } : {}) },
+          headers: { Accept: "application/json", ...(body ? { "Content-Type": "application/json" } : {}), ...headers },
           ...(body ? { body: JSON.stringify(body) } : {}) }),
         new Promise((_, reject) => { timer = window.setTimeout(() => reject(new Error("Provider timed out. Try again later or create a manual entry.")), 12000); }),
       ]);
@@ -1087,8 +1044,16 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
     if (["movie", "series", "anime-movie"].includes(kind)) {
       if (!this.settings.tmdbBearerToken) throw new Error("Add your TMDB token in Motion Arts settings or use manual entry.");
       const type = kind === "series" ? "tv" : "movie";
-      const data = await this.apiGet(`/search/${type}`, { query });
-      return (data.results || []).slice(0, 12).map(m => ({ title: m.title || m.name, year: (m.release_date || m.first_air_date || "").slice(0, 4), media_type: kind, metadata_provider: "tmdb", metadata_id: String(m.id) }));
+      const imdbId = query.match(/^(?:https?:\/\/)?(?:www\.|m\.)?imdb\.com\/title\/(tt\d+)(?:[/?#]|$)/i)?.[1]
+        || query.match(/^(tt\d+)$/i)?.[1];
+      let results;
+      if (imdbId) {
+        const found = await this.apiGet(`/find/${imdbId}`, { external_source: "imdb_id" });
+        results = found[type === "tv" ? "tv_results" : "movie_results"] || [];
+      } else {
+        results = await this.searchTmdb(query, kind);
+      }
+      return results.slice(0, 12).map(m => ({ title: m.title || m.name, year: (m.release_date || m.first_air_date || "").slice(0, 4), media_type: kind, metadata_provider: "tmdb", metadata_id: String(m.id) }));
     }
     if (kind === "game") {
       const data = await this.libraryRequest(`https://store.steampowered.com/api/storesearch/?term=${encodeURIComponent(query)}&l=english&cc=US`);
@@ -1098,6 +1063,7 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
     }
     try {
       const data = await this.libraryRequest("https://graphql.anilist.co", {
+        // Omitting isAdult includes both regular and adult titles.
         query: `query ($search: String, $type: MediaType) { Page(perPage: 12) { media(search: $search, type: $type, sort: SEARCH_MATCH) {
           id title { english romaji } startDate { year } format coverImage { large }
         } } }`, variables: { search: query, type: "ANIME" },
@@ -1108,7 +1074,7 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       }));
     } catch (error) {
       new Notice("Motion Arts: AniList unavailable; trying MyAnimeList via Jikan.");
-      const data = await this.libraryRequest(`https://api.jikan.moe/v4/${kind}?q=${encodeURIComponent(query)}&limit=12`);
+      const data = await this.libraryRequest(`https://api.jikan.moe/v4/${kind}?q=${encodeURIComponent(query)}&limit=12&sfw=false`);
       return (data.data || []).map((item) => ({
         title: item.title_english || item.title, year: item.year || "", format: item.type,
         poster: item.images?.jpg?.large_image_url || "", media_type: kind, metadata_provider: "jikan", metadata_id: String(item.mal_id),
@@ -1160,7 +1126,7 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       return { title: media.title.english || media.title.romaji, media_type: kind, metadata_provider: "anilist", metadata_id: String(media.id),
         description: plainLibraryText(media.description), poster: media.coverImage?.extraLarge || media.coverImage?.large || "",
         genres: media.genres || [], year: media.startDate?.year || "", format: media.format || "", source_url: media.siteUrl || "",
-        ...{ episode_total: media.episodes || 0, studios: (media.studios?.nodes || []).map((s) => s.name) },
+        episode_total: media.episodes || 0, studios: (media.studios?.nodes || []).map((s) => s.name),
       };
     }
     if (item.metadata_provider === "jikan") {
@@ -1170,7 +1136,7 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       return { title: media.title_english || media.title, media_type: kind, metadata_provider: "jikan", metadata_id: String(media.mal_id),
         description: plainLibraryText(media.synopsis), poster: media.images?.jpg?.large_image_url || "", genres: (media.genres || []).map((g) => g.name),
         year: media.year || String(media.aired?.from || "").slice(0, 4), format: media.type || "", source_url: media.url || "",
-        ...{ episode_total: media.episodes || 0, studios: (media.studios || []).map((s) => s.name) },
+        episode_total: media.episodes || 0, studios: (media.studios || []).map((s) => s.name),
       };
     }
     throw new Error("Unknown metadata provider.");
@@ -1181,11 +1147,11 @@ module.exports = class MovieWatchDatePlugin extends Plugin {
       return;
     }
     this.missingTokenNoticeShown = true;
-    new Notice("mmacha-auto: add your TMDB bearer token in plugin settings.");
+    new Notice("Motion Arts: add your TMDB bearer token in plugin settings.");
   }
 };
 
-class MovieWatchDateSettingTab extends PluginSettingTab {
+class MotionArtsSettingTab extends PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
     this.plugin = plugin;
@@ -1207,7 +1173,7 @@ class MovieWatchDateSettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("TMDB API Read Access Token")
-      .setDesc("Used only for notes inside Macha/motionArts/Items.")
+      .setDesc("Used for movie and TV searches, and metadata in the Motion Arts library.")
       .addText((text) => {
         text.inputEl.type = "password";
         text

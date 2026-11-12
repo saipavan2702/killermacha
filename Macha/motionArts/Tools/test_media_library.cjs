@@ -254,3 +254,46 @@ test('editing library progress preserves custom properties and existing catalog 
   assert.equal(fm.custom_property, 'Keep me'); assert.equal(fm.description, 'My description');
   assert.deepEqual(fm.studios, ['Studio']); assert.equal(fm.poster, '[[cover.jpg]]');
 });
+
+test('anime search returns mixed results in one unfiltered request', async () => {
+  const e = setup();
+  e.network(request => {
+    const body = JSON.parse(request.body);
+    assert.ok(!body.query.includes('isAdult:'));
+    return { status: 200, json: { data: { Page: { media: [
+      { id: 1, title: { english: 'Regular title' } },
+      { id: 2, title: { english: 'Adult title' } },
+    ] } } } };
+  });
+  const results = await e.plugin.searchLibrary('anime', 'Title');
+  assert.deepEqual(plain(results.map(item => item.title)), ['Regular title', 'Adult title']);
+  assert.equal(e.requests.length, 1);
+});
+
+test('movie and TV searches include adult results; IMDb links resolve by identity', async () => {
+  const e = setup();
+  e.plugin.settings.tmdbBearerToken = 'test';
+  e.network(request => {
+    const url = new URL(request.url);
+    assert.equal(request.headers.Authorization, 'Bearer test');
+    if (url.pathname.includes('/find/')) {
+      assert.equal(url.pathname, '/3/find/tt0104014');
+      assert.equal(url.searchParams.get('external_source'), 'imdb_id');
+      return { status: 200, json: { movie_results: [{ id: 9, title: 'All Ladies Do It', release_date: '1992-01-01' }] } };
+    }
+    assert.equal(url.searchParams.get('include_adult'), 'true');
+    return { status: 200, json: { results: [{ id: 1, title: 'Movie', name: 'Show' }] } };
+  });
+  await e.plugin.searchLibrary('movie', 'Movie');
+  await e.plugin.searchLibrary('series', 'Show');
+  const results = await e.plugin.searchLibrary('movie', 'https://www.imdb.com/title/tt0104014/');
+  assert.equal(results[0].year, '1992');
+  assert.equal(e.requests.length, 3);
+});
+
+test('shared provider requests report HTTP failures', async () => {
+  const e = setup();
+  e.plugin.settings.tmdbBearerToken = 'test';
+  e.network(() => ({ status: 503, json: {} }));
+  await assert.rejects(e.plugin.searchLibrary('movie', 'Movie'), /HTTP 503/);
+});

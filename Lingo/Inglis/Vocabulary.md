@@ -1,7 +1,10 @@
 **Impertinent** - Irrelevant, rude
-sceptic
-dogmatism
-nihilistic/nihilism
+Sceptic
+Dogmatism
+Nihilistic/Nihilism
+Existentialism
+Absurdism
+Machiavellianism
 Hedonism
 Marxism
 Epicureanism
@@ -11,4 +14,4 @@ Pragamtism
 Cynicism
 Solipsism
 Resplendent
-adorneth
+Adorneth

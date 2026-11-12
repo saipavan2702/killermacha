@@ -2,8 +2,8 @@
 media_type: movie
 title: The Other Guys
 industry: Hollywood
-watched: false
-watched_date:
+watched: true
+watched_date: 2026-11-12
 genres:
   - Comedy
   - Action

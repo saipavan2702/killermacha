@@ -4,7 +4,7 @@
 
 ## Add media
 
-Click **New** in the standalone Celluloid Base, use the **Add media to library** ribbon icon, or run **Motion Arts: Add media to library** from the command palette. Choose the type, enter a title, choose online search or manual entry, and click **Continue**. Review the selected result, then click **Add to library**. Cancelling creates no note.
+Click **New** in the standalone Celluloid Base, use the **Add media to library** ribbon icon, or run **Motion Arts: Add media to library** from the command palette. Choose the type, enter a title or IMDb ID/URL, choose online search or manual entry, and click **Continue**. Review the selected result, then click **Add to library**. Cancelling creates no note.
 
 New entries go into `Macha/motionArts/Library`; existing entries in `Items` appear in the same Base. Matching entries open the existing note. The **Media Item** Templater template supports all five types for manual creation.
 

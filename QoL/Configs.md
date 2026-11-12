@@ -18,6 +18,7 @@ https://github.com/SeniorMars/dotfiles/
 [mariocesar/dotfiles](https://github.com/mariocesar/dotfiles/tree/main) 
 https://github.com/FractalCodeRicardo/dev-config
 https://github.com/ChristianLempa/dotfiles
+https://github.com/EbadShelby/dotfiles
 
 ---
 ## Ghostty

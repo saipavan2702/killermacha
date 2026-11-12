@@ -364,7 +364,7 @@ def search_title(
         seen.add(query)
         params = {
             "query": query,
-            "include_adult": "false",
+            "include_adult": "true",
             "language": "en-US",
             "page": 1,
         }
@@ -388,7 +388,7 @@ def search_title(
         for query in seen:
             params = {
                 "query": query,
-                "include_adult": "false",
+                "include_adult": "true",
                 "language": "en-US",
                 "page": 1,
             }
