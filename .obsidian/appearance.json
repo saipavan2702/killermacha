@@ -8,5 +8,6 @@
   "textFontFamily": "",
   "monospaceFontFamily": "JetBrains Mono,JetBrainsMono Nerd Font",
   "enabledCssSnippets": [],
-  "accentColor": ""
+  "accentColor": "",
+  "showRibbon": true
 }

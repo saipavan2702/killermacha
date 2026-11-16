@@ -3,6 +3,8 @@ Map: [[Upskill/ProgramLang/Java/Inversion of Control|Inversion of Control]], [[U
 
 Interview practice: [[Upskill/ProgramLang/Java/Spring Boot Interview Questions|Spring Boot Interview Questions]]
 
+Request handling: [[Upskill/ProgramLang/Java/DispatcherServlet|DispatcherServlet]]
+
 ## Resources
 
 - [Java Spring Microservices course source](https://github.com/chrisblakely01/java-spring-microservices) — multi-service example with API gateway, authentication, billing, patient, and analytics services, plus gRPC and integration-test material.
