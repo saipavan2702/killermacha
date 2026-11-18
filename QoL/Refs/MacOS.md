@@ -7,6 +7,7 @@
 ## Terminal
 
 - [Terminal Notifier](https://gist.github.com/bashbunni/f6b04fc4703903a71ce9f70c58345106)
+- [macOS Terminal](MacOS%20Terminal.md)
 
 ## Apps
 
