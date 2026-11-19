@@ -68,6 +68,29 @@
             "state": {
               "type": "bases",
               "state": {
+                "file": "Macha/motionArts/Celluloid.base",
+                "viewName": "Movies"
+              },
+              "icon": "lucide-layout-grid",
+              "title": "Celluloid"
+            }
+          },
+          {
+            "id": "8af420112714e334",
+            "type": "leaf",
+            "state": {
+              "type": "javfetch",
+              "state": {},
+              "icon": "library",
+              "title": "JAVFetch"
+            }
+          },
+          {
+            "id": "6880c3d724585537",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
                 "file": "Macha/KeepOut/Catalog.base",
                 "viewName": "All entries"
               },
@@ -76,7 +99,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -282,15 +305,19 @@
       "javfetch:Open JAVFetch": false
     }
   },
-  "active": "4a57f5a843d64c1d",
+  "active": "8af420112714e334",
   "lastOpenFiles": [
     "Macha/motionArts/Celluloid.base",
-    "Macha/KeepOut/Catalog.base",
-    "Macha/KeepOut/KeepOut.md",
     "Macha/motionArts/Library Guide.md",
+    "Macha/motionArts/Library/A Few Good Men - Movie.md",
+    "Macha/motionArts/Items/8 Mile.md",
+    "Macha/KeepOut/KeepOut.md",
+    "Macha/KeepOut/Catalog.base",
+    "Macha/Credit Cards.md",
+    "Macha/Watches.md",
+    "Macha/Shelf.md",
     "Macha/motionArts/Templates/Media Item.md",
     "Macha/Keeps.md",
-    "Macha/Media Shelf.md",
     "Macha/Private Shelf/KeepOut.md",
     "Macha/KeepOut/Entries/VEC-791.md",
     "Macha/KeepOut/Entries/START-663.md",
@@ -307,13 +334,9 @@
     "Macha/KeepOut",
     "Macha/Private Shelf/Catalog.base",
     "Macha/Private Shelf/Private Shelf.md",
-    "Macha/Credit Cards.md",
     "Macha/Private Shelf/Entries/JUR-856.md",
     "Macha/Private Shelf/Entries/JUR-786.md",
     "Macha/Private Shelf/Entries/JUL-221.md",
-    "Macha/Private Shelf/Entries/JUL-211.md",
-    "Macha/Private Shelf/Entries/DLDSS-583.md",
-    "Macha/Private Shelf/Entries/DLDSS-575.md",
     "Macha/Private Shelf/Tools/test.cjs",
     "Macha/Private Shelf/Tools",
     "Macha/Private Shelf/Entries",
