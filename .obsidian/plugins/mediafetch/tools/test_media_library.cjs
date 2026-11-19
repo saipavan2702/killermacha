@@ -131,11 +131,18 @@ test('duplicate imported or legacy anime opens the existing note rather than cre
   assert.equal(result.basename, 'Monster - Anime'); assert.equal(result.content, undefined);
 });
 
-test('new media files use Entries and sanitize filenames', async () => {
+test('new media files use Items and sanitize filenames', async () => {
   const env = setup();
   const file = await env.plugin.createLibraryItem({ title: 'Game: one/two?', media_type: 'game', status: 'active', hours_played: 2.5 });
   assert.equal(file.path, 'Macha/motionArts/Items/Game- one-two- - Game.md');
   assert.match(file.content, /started_date/); assert.match(file.content, /## My notes/);
+});
+
+test('leading dots never hide a movie note and its full title is preserved', async () => {
+  const env = setup();
+  const file = await env.plugin.createLibraryItem({ title: '...And Justice for All', media_type: 'movie' });
+  assert.equal(file.path, 'Macha/motionArts/Items/And Justice for All - Movie.md');
+  assert.match(file.content, /\.\.\.And Justice for All/);
 });
 
 test('personal progress is validated; completed anime keeps original watched dates', () => {

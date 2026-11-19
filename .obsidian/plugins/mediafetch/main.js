@@ -922,7 +922,7 @@ module.exports = class MediaFetchPlugin extends Plugin {
     }
     if (!this.app.vault.getAbstractFileByPath(LIBRARY_FOLDER)) await this.app.vault.createFolder(LIBRARY_FOLDER);
     const suffix = metadata.media_type === "series" ? "Series" : LIBRARY_LABELS[metadata.media_type];
-    const title = metadata.title.trim().replace(/[\\/:*?"<>|#\[\]]/g, "-").replace(/\s+/g, " ").replace(/[. ]+$/, "").slice(0, 140) || "Untitled";
+    const title = metadata.title.trim().replace(/[\\/:*?"<>|#\[\]]/g, "-").replace(/\s+/g, " ").replace(/^[. ]+|[. ]+$/g, "").slice(0, 140) || "Untitled";
     const base = `${title} - ${suffix}`;
     let path = `${LIBRARY_FOLDER}/${base}.md`;
     let index = 2;

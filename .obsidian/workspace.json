@@ -53,13 +53,14 @@
             "id": "f02f8626105b49c2",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "Macha/JAV/Catalog.base",
-                "viewName": "All entries"
+                "file": "Macha/JAV/Browse.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "Catalog"
+              "icon": "lucide-file",
+              "title": "Browse"
             }
           }
         ],
@@ -271,10 +272,14 @@
   },
   "active": "f02f8626105b49c2",
   "lastOpenFiles": [
-    "Macha/motionArts/Celluloid.base",
-    "Macha/motionArts/Browse.md",
     "Macha/JAV/Catalog.base",
+    "Macha/motionArts/Browse.md",
     "Macha/JAV/Browse.md",
+    "Macha/motionArts/Celluloid.base",
+    "Macha/motionArts/Items/ELDEN RING - Game.md",
+    "attachments/catalog-cover-placeholder.svg",
+    "Macha/motionArts/Items/Vagabond - Manga.md",
+    "Macha/motionArts/Items/And Justice for All - Movie.md",
     "Macha/motionArts/Templates/Media Item.md",
     "Macha/motionArts/Templates",
     "Templates/Media Item.md",
@@ -296,9 +301,6 @@
     "Macha/motionArts/Items/Palm Springs - Movie.md",
     "Macha/motionArts/Items/Primetime - Movie.md",
     "Macha/motionArts/Items/Before We Go - Movie.md",
-    "Macha/motionArts/Items/Spies in Disguise - Anime Movie.md",
-    "Macha/motionArts/Items/Berserk - Manga.md",
-    "Macha/motionArts/Items/Anatomy of a Murder - Movie.md",
     "Macha/motionArts/Items",
     "Macha/JAV/Items",
     "Macha/JAV",
@@ -315,7 +317,6 @@
     "attachments/dashboard-assets/botanical-vine.png",
     "attachments/dashboard-assets/aesthetic-focus-1.gif",
     "attachments/dashboard-assets/aesthetic-focus-2.gif",
-    "attachments/dashboard-assets/aesthetic-focus-3.gif",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]

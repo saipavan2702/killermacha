@@ -155,18 +155,6 @@ views:
     imageAspectRatio: 1.5
     cardSize: 260
   - type: cards
-    name: Active
-    filters:
-      and:
-        - status == "active"
-    order:
-      - title
-    image: poster
-    imageProperty: poster
-    imageFit: contain
-    imageAspectRatio: 1.5
-    cardSize: 260
-  - type: cards
     name: Favorites
     filters:
       and:

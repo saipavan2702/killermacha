@@ -1,7 +1,11 @@
 filters:
   and:
     - file.inFolder("Macha/JAV/Items")
+formulas:
+  cover_preview: image(if(poster, poster, "attachments/catalog-cover-placeholder.svg"))
 properties:
+  formula.cover_preview:
+    displayName: Cover
   note.female_leads:
     displayName: Female leads
   note.release_date:
@@ -9,6 +13,17 @@ properties:
   note.lookup_status:
     displayName: Match
 views:
+  - type: cards
+    name: Covers
+    order:
+      - file.name
+      - female_leads
+      - status
+    image: formula.cover_preview
+    imageProperty: formula.cover_preview
+    imageFit: contain
+    imageAspectRatio: 1.5
+    cardSize: 260
   - type: table
     name: All entries
     order:
