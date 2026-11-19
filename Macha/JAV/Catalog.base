@@ -1,6 +1,6 @@
 filters:
   and:
-    - file.inFolder("Macha/KeepOut/Entries")
+    - file.inFolder("Macha/JAV/Items")
 properties:
   note.female_leads:
     displayName: Female leads

@@ -131,10 +131,10 @@ test('duplicate imported or legacy anime opens the existing note rather than cre
   assert.equal(result.basename, 'Monster - Anime'); assert.equal(result.content, undefined);
 });
 
-test('new library files avoid the auto-template folder and sanitize filenames', async () => {
+test('new media files use Entries and sanitize filenames', async () => {
   const env = setup();
   const file = await env.plugin.createLibraryItem({ title: 'Game: one/two?', media_type: 'game', status: 'active', hours_played: 2.5 });
-  assert.equal(file.path, 'Macha/motionArts/Library/Game- one-two- - Game.md');
+  assert.equal(file.path, 'Macha/motionArts/Items/Game- one-two- - Game.md');
   assert.match(file.content, /started_date/); assert.match(file.content, /## My notes/);
 });
 
@@ -248,7 +248,7 @@ test('editing library progress preserves custom properties and existing catalog 
   const e = setup({formValues: {status: 'active', episode_current: 3, episode_total: 12, rating: 4, favorite: true}});
   const fm = {media_type: 'anime', title: 'Example', poster: '[[cover.jpg]]', custom_property: 'Keep me', studios: ['Studio'], description: 'My description', episode_current: 1, episode_total: 12};
   const file = e.note('Example', fm);
-  e.records.delete(file.path); file.path = 'Macha/motionArts/Library/Example.md'; e.records.set(file.path, fm);
+  e.records.delete(file.path); file.path = 'Macha/motionArts/Items/Example.md'; e.records.set(file.path, fm);
   await e.plugin.editLibraryProgress(file);
   assert.equal(fm.episode_current, 3); assert.equal(fm.status, 'active');
   assert.equal(fm.custom_property, 'Keep me'); assert.equal(fm.description, 'My description');

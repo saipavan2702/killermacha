@@ -181,7 +181,7 @@ const IMDB_OVERRIDES = {
 
 // Search providers and the search → review → Markdown flow are inspired by Lorebase:
 // https://github.com/Murchi1k/obsidian-lorebase-plugin (MIT). No dependency on Lorebase.
-const LIBRARY_FOLDER = "Macha/motionArts/Library";
+const LIBRARY_FOLDER = "Macha/motionArts/Items";
 const LIBRARY_LABELS = { movie: "Movie", series: "TV show", "anime-movie": "Anime Movie", anime: "Anime", game: "Game" };
 const LIBRARY_TYPES = new Set(Object.keys(LIBRARY_LABELS));
 const LIBRARY_PROGRESS = {
@@ -287,13 +287,13 @@ module.exports = class MediaFetchPlugin extends Plugin {
 
     this.addSettingTab(new MediaFetchSettingTab(this.app, this));
     this.addRibbonIcon("library", "Add media to library", () => this.addLibraryItem());
-    // Route only Celluloid's native New action through our reviewed creation flow.
+    // Route the catalog and its browse page through the reviewed creation flow.
     // The command and ribbon remain available if Obsidian changes its toolbar markup.
     this.registerDomEvent(document, "click", (event) => {
       const button = event.target instanceof Element ? event.target.closest(".bases-toolbar [role='button']") : null;
       if (!button || button.textContent.trim() !== "New") return;
       const leaf = this.app.workspace.getMostRecentLeaf();
-      if (leaf?.view?.file?.path !== "Macha/motionArts/Celluloid.base" || !leaf.view.containerEl.contains(button)) return;
+      if (!["Macha/motionArts/Celluloid.base", "Macha/motionArts/Browse.md"].includes(leaf?.view?.file?.path) || !leaf.view.containerEl.contains(button)) return;
       event.preventDefault();
       event.stopImmediatePropagation();
       this.addLibraryItem();
@@ -301,7 +301,7 @@ module.exports = class MediaFetchPlugin extends Plugin {
     this.addCommand({ id: "library-statistics", name: "Show library statistics", callback: () => this.showLibraryStatistics() });
     this.addCommand({ id: "add-library-item", name: "Add media to library", callback: () => this.addLibraryItem() });
     this.addCommand({ id: "open-media-library", name: "Open media library", callback: async () => {
-      const base = this.app.vault.getAbstractFileByPath("Macha/motionArts/Celluloid.base");
+      const base = this.app.vault.getAbstractFileByPath("Macha/motionArts/Browse.md");
       if (base instanceof TFile) await this.app.workspace.getLeaf(false).openFile(base);
     } });
     this.addCommand({ id: "refresh-library-metadata", name: "Refresh media", callback: () => this.selectMediaToRefresh() });
@@ -353,7 +353,7 @@ module.exports = class MediaFetchPlugin extends Plugin {
   }
 
   isMediaNote(file) {
-    return file instanceof TFile && file.extension === "md" && (file.path.startsWith(MEDIA_FOLDER) || file.path.startsWith(`${LIBRARY_FOLDER}/`));
+    return file instanceof TFile && file.extension === "md" && file.path.startsWith(MEDIA_FOLDER);
   }
 
   scheduleCheck(file, attempt) {

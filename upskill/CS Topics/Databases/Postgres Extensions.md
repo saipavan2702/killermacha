@@ -1,5 +1,5 @@
 Tags: #computer-science #postgresql
-Map: [[upskill/CS Topics/Databases/PostgreSQL|PostgreSQL]], [[upskill/CS Topics/Databases/SQL|SQL]]
+Map: [[Upskill/CS Topics/Databases/PostgreSQL|PostgreSQL]], [[Upskill/CS Topics/Databases/SQL|SQL]]
 
 # Postgres: The Universal Tech Stack Alternative
 

@@ -50,48 +50,12 @@
             }
           },
           {
-            "id": "f57f58118c89648e",
+            "id": "f02f8626105b49c2",
             "type": "leaf",
             "state": {
               "type": "bases",
               "state": {
-                "file": "Macha/KeepOut/Catalog.base",
-                "viewName": "All entries"
-              },
-              "icon": "lucide-table",
-              "title": "Catalog"
-            }
-          },
-          {
-            "id": "4a57f5a843d64c1d",
-            "type": "leaf",
-            "state": {
-              "type": "bases",
-              "state": {
-                "file": "Macha/motionArts/Celluloid.base",
-                "viewName": "Movies"
-              },
-              "icon": "lucide-layout-grid",
-              "title": "Celluloid"
-            }
-          },
-          {
-            "id": "8af420112714e334",
-            "type": "leaf",
-            "state": {
-              "type": "javfetch",
-              "state": {},
-              "icon": "library",
-              "title": "JAVFetch"
-            }
-          },
-          {
-            "id": "6880c3d724585537",
-            "type": "leaf",
-            "state": {
-              "type": "bases",
-              "state": {
-                "file": "Macha/KeepOut/Catalog.base",
+                "file": "Macha/JAV/Catalog.base",
                 "viewName": "All entries"
               },
               "icon": "lucide-table",
@@ -99,7 +63,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -305,43 +269,43 @@
       "javfetch:Open JAVFetch": false
     }
   },
-  "active": "8af420112714e334",
+  "active": "f02f8626105b49c2",
   "lastOpenFiles": [
     "Macha/motionArts/Celluloid.base",
-    "Macha/motionArts/Library Guide.md",
-    "Macha/motionArts/Library/A Few Good Men - Movie.md",
-    "Macha/motionArts/Items/8 Mile.md",
-    "Macha/KeepOut/KeepOut.md",
-    "Macha/KeepOut/Catalog.base",
-    "Macha/Credit Cards.md",
-    "Macha/Watches.md",
-    "Macha/Shelf.md",
+    "Macha/motionArts/Browse.md",
+    "Macha/JAV/Catalog.base",
+    "Macha/JAV/Browse.md",
     "Macha/motionArts/Templates/Media Item.md",
-    "Macha/Keeps.md",
-    "Macha/Private Shelf/KeepOut.md",
-    "Macha/KeepOut/Entries/VEC-791.md",
-    "Macha/KeepOut/Entries/START-663.md",
-    "Macha/KeepOut/Entries/MIMK-294.md",
-    "Macha/KeepOut/Entries/MILK-316.md",
-    "Macha/KeepOut/Entries/JUR-872.md",
-    "Macha/KeepOut/Entries/JUR-856.md",
-    "Macha/KeepOut/Entries/JUR-786.md",
-    "Macha/KeepOut/Entries/JUL-221.md",
-    "Macha/KeepOut/Entries/JUL-211.md",
-    "Macha/KeepOut/Entries/DLDSS-575.md",
-    "Macha/KeepOut/Entries/DLDSS-583.md",
-    "Macha/KeepOut/Entries",
-    "Macha/KeepOut",
+    "Macha/motionArts/Templates",
+    "Templates/Media Item.md",
+    "Macha/motionArts/Items/The Sixth Sense - Movie.md",
+    "Macha/motionArts/Items/Judgment at Nuremberg - Movie.md",
+    "Macha/motionArts/Items/All Ladies Do It - Movie.md",
+    "Macha/motionArts/Items/My Cousin Vinny - Movie.md",
+    "Macha/motionArts/Items/Manichitrathazhu - Movie.md",
+    "Macha/motionArts/Items/Resident Evil - Movie.md",
+    "Macha/motionArts/Items/Dr. Strangelove or- How I Learned to Stop Worrying and Love the Bomb - Movie.md",
+    "Macha/motionArts/Items/Twisted Nerve - Movie.md",
+    "Macha/motionArts/Items/Weapons - Movie.md",
+    "Macha/motionArts/Items/Before the Devil Knows You're Dead - Movie.md",
+    "Macha/motionArts/Items/The Verdict - Movie.md",
+    "Macha/motionArts/Items/The Best of Me - Movie.md",
+    "Macha/motionArts/Items/Tramps - Movie.md",
+    "Macha/motionArts/Items/Bones and All - Movie.md",
+    "Macha/motionArts/Items/Sleepy Hollow - Movie.md",
+    "Macha/motionArts/Items/Palm Springs - Movie.md",
+    "Macha/motionArts/Items/Primetime - Movie.md",
+    "Macha/motionArts/Items/Before We Go - Movie.md",
+    "Macha/motionArts/Items/Spies in Disguise - Anime Movie.md",
+    "Macha/motionArts/Items/Berserk - Manga.md",
+    "Macha/motionArts/Items/Anatomy of a Murder - Movie.md",
+    "Macha/motionArts/Items",
+    "Macha/JAV/Items",
+    "Macha/JAV",
     "Macha/Private Shelf/Catalog.base",
-    "Macha/Private Shelf/Private Shelf.md",
-    "Macha/Private Shelf/Entries/JUR-856.md",
-    "Macha/Private Shelf/Entries/JUR-786.md",
-    "Macha/Private Shelf/Entries/JUL-221.md",
     "Macha/Private Shelf/Tools/test.cjs",
     "Macha/Private Shelf/Tools",
     "Macha/Private Shelf/Entries",
-    "Macha/Private Shelf",
-    "Macha/motionArts/Tools/__pycache__/test_sync_tmdb_posters.cpython-315.pyc",
     "attachments/Exported image 20250529160101-1.png",
     "attachments/Exported image 20250529160058-0.png",
     "attachments/Pasted image 20260601002039.png",

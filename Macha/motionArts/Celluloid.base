@@ -1,8 +1,6 @@
 filters:
   and:
-    - or:
-        - file.inFolder("Macha/motionArts/Items")
-        - file.inFolder("Macha/motionArts/Library")
+    - file.inFolder("Macha/motionArts/Items")
     - or:
         - media_type == "movie"
         - media_type == "series"
