@@ -4,7 +4,7 @@
 
 ## Add media
 
-Click **New** in the standalone Celluloid Base, use the **Add media to library** ribbon icon, or run **Motion Arts: Add media to library** from the command palette. Choose the type, enter a title or IMDb ID/URL, choose online search or manual entry, and click **Continue**. Review the selected result, then click **Add to library**. Cancelling creates no note.
+Click **New** in the standalone Celluloid Base, use the **Add media to library** ribbon icon, or run **MediaFetch: Add media to library** from the command palette. Choose the type, enter a title or IMDb ID/URL, choose online search or manual entry, and click **Continue**. Review the selected result, then click **Add to library**. Cancelling creates no note.
 
 New entries go into `Macha/motionArts/Library`; existing entries in `Items` appear in the same Base. Matching entries open the existing note. The **Media Item** Templater template supports all five types for manual creation.
 
@@ -19,7 +19,7 @@ Anime and game searches need no new key. Use manual entry for games outside Stea
 
 ## Track and edit
 
-Run **Motion Arts: Edit library progress and rating** from a media note. Statuses are planned, active, completed, paused, and dropped. Active appears as Watching or Playing. Rating is 0–5, with 0 meaning unrated. Progress totals of 0 mean unknown. The editor also supports favorites and related `[[note links]]`.
+Run **MediaFetch: Edit library progress and rating** from a media note. Statuses are planned, active, completed, paused, and dropped. Active appears as Watching or Playing. Rating is 0–5, with 0 meaning unrated. Progress totals of 0 mean unknown. The editor also supports favorites and related `[[note links]]`.
 
 Starting sets a missing start date; completion sets a missing completion date. Existing dates are retained. For tracked screen media, status controls the legacy watched checkbox: use status once tracking is enabled. Cards display only covers and titles; use the **Manage** table for details.
 

@@ -1,0 +1,8 @@
+## What to Watch
+
+- [Nothing to Watch](https://nothing-to-watch.port80.ch/) — Find something to watch.
+- [OTT Weekend](https://ottweekend.com/)
+
+## Audio Projects
+
+- [Open Omega](https://github.com/DMS3tv/Open-Omega) — Open headphone design files, build notes, and parts for a passive dynamic headphone project.

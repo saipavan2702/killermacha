@@ -276,7 +276,7 @@ function splitTitleYear(value) {
   return match ? { title: match[1].trim(), year: match[2] } : { title, year: "" };
 }
 
-module.exports = class MotionArtsPlugin extends Plugin {
+module.exports = class MediaFetchPlugin extends Plugin {
   async onload() {
     await this.loadSettings();
     this.pending = new Map();
@@ -285,7 +285,7 @@ module.exports = class MotionArtsPlugin extends Plugin {
     this.genreCache = new Map();
     this.missingTokenNoticeShown = false;
 
-    this.addSettingTab(new MotionArtsSettingTab(this.app, this));
+    this.addSettingTab(new MediaFetchSettingTab(this.app, this));
     this.addRibbonIcon("library", "Add media to library", () => this.addLibraryItem());
     // Route only Celluloid's native New action through our reviewed creation flow.
     // The command and ribbon remain available if Obsidian changes its toolbar markup.
@@ -390,8 +390,8 @@ module.exports = class MotionArtsPlugin extends Plugin {
       await this.setWatchedDateIfNeeded(file, frontmatter);
       await this.syncTmdbIfNeeded(file, frontmatter, false);
     } catch (error) {
-      console.error("Motion Arts automation:", error);
-      new Notice(`Motion Arts: ${error.message || error}`);
+      console.error("MediaFetch automation:", error);
+      new Notice(`MediaFetch: ${error.message || error}`);
     }
   }
 
@@ -414,16 +414,16 @@ module.exports = class MotionArtsPlugin extends Plugin {
   async syncCurrentMedia(file) {
     const frontmatter = this.app.metadataCache.getFileCache(file)?.frontmatter;
     if (!frontmatter) {
-      new Notice("Motion Arts: note metadata is not ready yet.");
+      new Notice("MediaFetch: note metadata is not ready yet.");
       return;
     }
 
     try {
       const updated = await this.syncTmdbIfNeeded(file, frontmatter, true);
-      new Notice(updated ? "Motion Arts: TMDB sync complete." : "Motion Arts: nothing to sync.");
+      new Notice(updated ? "MediaFetch: TMDB sync complete." : "MediaFetch: nothing to sync.");
     } catch (error) {
       console.error(error);
-      new Notice(`Motion Arts: TMDB sync failed. ${error.message || error}`);
+      new Notice(`MediaFetch: TMDB sync failed. ${error.message || error}`);
     }
   }
 
@@ -792,7 +792,7 @@ module.exports = class MotionArtsPlugin extends Plugin {
       if (!input.title.trim()) throw new Error("Enter a title.");
       let metadata = { title: input.title.trim(), media_type: kind };
       if (input.mode === "search") {
-        new Notice("Motion Arts: searching…");
+        new Notice("MediaFetch: searching…");
         const results = await this.searchLibrary(kind, input.title.trim());
         if (!results.length) throw new Error("No matches. Try another title or use Enter manually.");
         const picked = await chooseLibrary(this.app, "Choose the correct title", results.map((item) => ({
@@ -808,8 +808,8 @@ module.exports = class MotionArtsPlugin extends Plugin {
       this.validateLibrary(fields);
       await this.createLibraryItem(fields);
     } catch (error) {
-      console.error("Motion Arts library:", error);
-      new Notice(`Motion Arts: ${error.message || error}`);
+      console.error("MediaFetch library:", error);
+      new Notice(`MediaFetch: ${error.message || error}`);
     } finally {
       this.addingLibraryItem = false;
     }
@@ -915,7 +915,7 @@ module.exports = class MotionArtsPlugin extends Plugin {
         );
       });
       if (existing) {
-        new Notice("Motion Arts: this entry is already in your library.");
+        new Notice("MediaFetch: this entry is already in your library.");
         await this.app.workspace.getLeaf(false).openFile(existing);
         return existing;
       }
@@ -945,7 +945,7 @@ module.exports = class MotionArtsPlugin extends Plugin {
         Object.assign(fm, values);
         this.updateLibraryDates(fm);
       });
-    } catch (error) { new Notice(`Motion Arts: ${error.message || error}`); }
+    } catch (error) { new Notice(`MediaFetch: ${error.message || error}`); }
   }
 
   async selectMediaToRefresh() {
@@ -977,8 +977,8 @@ module.exports = class MotionArtsPlugin extends Plugin {
           messages.push(changed ? "TMDB metadata refreshed" : "No TMDB changes; check the token or title if details are missing");
         } else messages.push("Link a provider to refresh catalog details");
       } catch (error) { messages.push(`Metadata unavailable: ${error.message || error}`); }
-      new Notice(`Motion Arts: ${messages.join(". ")}.`);
-    } catch (error) { new Notice(`Motion Arts: ${error.message || error}`); }
+      new Notice(`MediaFetch: ${messages.join(". ")}.`);
+    } catch (error) { new Notice(`MediaFetch: ${error.message || error}`); }
     finally { this.mediaRefreshBusy = false; }
   }
 
@@ -996,8 +996,8 @@ module.exports = class MotionArtsPlugin extends Plugin {
       const confirmed = await libraryForm(this.app, "Link this provider? Personal values and covers are kept.", [], () => {}, details);
       if (!confirmed) return;
       await this.applyLibraryMetadata(file, details, true);
-      new Notice("Motion Arts: provider linked; existing values kept.");
-    } catch (error) { new Notice(`Motion Arts: linking failed. ${error.message || error}`); }
+      new Notice("MediaFetch: provider linked; existing values kept.");
+    } catch (error) { new Notice(`MediaFetch: linking failed. ${error.message || error}`); }
   }
 
   async applyLibraryMetadata(file, updated, link = false) {
@@ -1042,7 +1042,7 @@ module.exports = class MotionArtsPlugin extends Plugin {
     query = String(query || "").trim();
     if (!query) return [];
     if (["movie", "series", "anime-movie"].includes(kind)) {
-      if (!this.settings.tmdbBearerToken) throw new Error("Add your TMDB token in Motion Arts settings or use manual entry.");
+      if (!this.settings.tmdbBearerToken) throw new Error("Add your TMDB token in MediaFetch settings or use manual entry.");
       const type = kind === "series" ? "tv" : "movie";
       const imdbId = query.match(/^(?:https?:\/\/)?(?:www\.|m\.)?imdb\.com\/title\/(tt\d+)(?:[/?#]|$)/i)?.[1]
         || query.match(/^(tt\d+)$/i)?.[1];
@@ -1073,7 +1073,7 @@ module.exports = class MotionArtsPlugin extends Plugin {
         poster: item.coverImage?.large || "", media_type: kind, metadata_provider: "anilist", metadata_id: String(item.id),
       }));
     } catch (error) {
-      new Notice("Motion Arts: AniList unavailable; trying MyAnimeList via Jikan.");
+      new Notice("MediaFetch: AniList unavailable; trying MyAnimeList via Jikan.");
       const data = await this.libraryRequest(`https://api.jikan.moe/v4/${kind}?q=${encodeURIComponent(query)}&limit=12&sfw=false`);
       return (data.data || []).map((item) => ({
         title: item.title_english || item.title, year: item.year || "", format: item.type,
@@ -1147,11 +1147,11 @@ module.exports = class MotionArtsPlugin extends Plugin {
       return;
     }
     this.missingTokenNoticeShown = true;
-    new Notice("Motion Arts: add your TMDB bearer token in plugin settings.");
+    new Notice("MediaFetch: add your TMDB bearer token in plugin settings.");
   }
 };
 
-class MotionArtsSettingTab extends PluginSettingTab {
+class MediaFetchSettingTab extends PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
     this.plugin = plugin;
@@ -1163,7 +1163,7 @@ class MotionArtsSettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("Auto-sync TMDB")
-      .setDesc("Automatically fills poster, genres, industry, year, directors, and top cast for motionArts notes.")
+      .setDesc("Automatically fills poster, genres, industry, year, directors, and top cast for MediaFetch notes.")
       .addToggle((toggle) => {
         toggle.setValue(this.plugin.settings.autoSyncTmdb).onChange(async (value) => {
           this.plugin.settings.autoSyncTmdb = value;
@@ -1173,7 +1173,7 @@ class MotionArtsSettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("TMDB API Read Access Token")
-      .setDesc("Used for movie and TV searches, and metadata in the Motion Arts library.")
+      .setDesc("Used for movie and TV searches, and metadata in the MediaFetch library.")
       .addText((text) => {
         text.inputEl.type = "password";
         text

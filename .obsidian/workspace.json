@@ -50,21 +50,33 @@
             }
           },
           {
-            "id": "0296e65dea7b42e6",
+            "id": "f57f58118c89648e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "Upskill/ProgramLang/Java/DispatcherServlet.md",
-                "mode": "source",
-                "source": false
+                "file": "Macha/KeepOut/Catalog.base",
+                "viewName": "All entries"
               },
-              "icon": "lucide-file",
-              "title": "DispatcherServlet"
+              "icon": "lucide-table",
+              "title": "Catalog"
+            }
+          },
+          {
+            "id": "4a57f5a843d64c1d",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "Macha/KeepOut/Catalog.base",
+                "viewName": "All entries"
+              },
+              "icon": "lucide-table",
+              "title": "Catalog"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -263,46 +275,50 @@
       "obsidian-excalidraw-plugin:New drawing": false,
       "notebook-navigator:Notebook Navigator": false,
       "templater-obsidian:Templater": false,
-      "mmacha-auto:Add media to library": false
+      "mmacha-auto:Add media to library": false,
+      "private-shelf:Open Private Shelf": false,
+      "private-shelf:Open JAVFetch": false,
+      "mediafetch:Add media to library": false,
+      "javfetch:Open JAVFetch": false
     }
   },
-  "active": "0296e65dea7b42e6",
+  "active": "4a57f5a843d64c1d",
   "lastOpenFiles": [
-    "Macha/motionArts/Library/Weapons - Movie.md",
     "Macha/motionArts/Celluloid.base",
-    "Macha/motionArts/Library/The Rebound - Movie.md",
-    "Macha/motionArts/Library/The Emperor's New Groove - Anime Movie.md",
-    "Upskill/ProgramLang/Java/DispatcherServlet.md",
-    "Macha/motionArts/Library/The Best of Me - Movie.md",
-    "Orcl/Weekly Report.md",
-    "Macha/motionArts/Library/Hit Man - Movie.md",
-    "Upskill/SysDes/LLD/Design Patterns/Structural.md",
-    "Lingo/Inglis/Vocabulary.md",
-    "Macha/motionArts/Library/Resident Evil - Movie.md",
-    "Macha/motionArts/Library/Portrait of a Lady on Fire - Movie.md",
-    "Macha/motionArts/Library/Killer Heat - Movie.md",
-    "Macha/motionArts/Items/One Battle After Another.md",
-    "Macha/motionArts/Items/The Other Guys.md",
+    "Macha/KeepOut/Catalog.base",
+    "Macha/KeepOut/KeepOut.md",
+    "Macha/motionArts/Library Guide.md",
+    "Macha/motionArts/Templates/Media Item.md",
+    "Macha/Keeps.md",
+    "Macha/Media Shelf.md",
+    "Macha/Private Shelf/KeepOut.md",
+    "Macha/KeepOut/Entries/VEC-791.md",
+    "Macha/KeepOut/Entries/START-663.md",
+    "Macha/KeepOut/Entries/MIMK-294.md",
+    "Macha/KeepOut/Entries/MILK-316.md",
+    "Macha/KeepOut/Entries/JUR-872.md",
+    "Macha/KeepOut/Entries/JUR-856.md",
+    "Macha/KeepOut/Entries/JUR-786.md",
+    "Macha/KeepOut/Entries/JUL-221.md",
+    "Macha/KeepOut/Entries/JUL-211.md",
+    "Macha/KeepOut/Entries/DLDSS-575.md",
+    "Macha/KeepOut/Entries/DLDSS-583.md",
+    "Macha/KeepOut/Entries",
+    "Macha/KeepOut",
+    "Macha/Private Shelf/Catalog.base",
+    "Macha/Private Shelf/Private Shelf.md",
+    "Macha/Credit Cards.md",
+    "Macha/Private Shelf/Entries/JUR-856.md",
+    "Macha/Private Shelf/Entries/JUR-786.md",
+    "Macha/Private Shelf/Entries/JUL-221.md",
+    "Macha/Private Shelf/Entries/JUL-211.md",
+    "Macha/Private Shelf/Entries/DLDSS-583.md",
+    "Macha/Private Shelf/Entries/DLDSS-575.md",
+    "Macha/Private Shelf/Tools/test.cjs",
+    "Macha/Private Shelf/Tools",
+    "Macha/Private Shelf/Entries",
+    "Macha/Private Shelf",
     "Macha/motionArts/Tools/__pycache__/test_sync_tmdb_posters.cpython-315.pyc",
-    "Macha/motionArts/Tools/__pycache__/sync_tmdb_posters.cpython-315.pyc",
-    "Macha/motionArts/Tools/__pycache__",
-    "Macha/motionArts/Items/8 Mile.md",
-    "Macha/motionArts/Items/8½.md",
-    "Macha/motionArts/Library/All Ladies Do It - Movie.md",
-    "Macha/motionArts/Library/L.A. Confidential - Movie.md",
-    "Upskill/SysDes/LLD/Design Patterns/Behavioral.md",
-    "Upskill/SysDes/LLD/Design Patterns/Architectural.md",
-    "Upskill/SysDes/LLD/Design Patterns/Creational.md",
-    "Upskill/SysDes/System Design Process.md",
-    "Macha/motionArts/Library/Manichitrathazhu - Movie.md",
-    "Macha/motionArts/Library/Nayakan - Movie.md",
-    "Macha/motionArts/Library/Palm Springs - Movie.md",
-    "Macha/motionArts/Tools/fixtures/kodansha-chapters.json",
-    "Macha/motionArts/Tools/fixtures",
-    "Macha/motionArts/Tools/test_media_library.cjs",
-    "Macha/motionArts/Library",
-    "new-post-video-template-clipper.json",
-    "new-book-template-clipper.json",
     "attachments/Exported image 20250529160101-1.png",
     "attachments/Exported image 20250529160058-0.png",
     "attachments/Pasted image 20260601002039.png",

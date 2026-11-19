@@ -20,4 +20,3 @@ favorite: false
 directors: []
 ---
 
-Connections: [[Macha/Media Shelf|Media Shelf]]

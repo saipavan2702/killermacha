@@ -751,7 +751,7 @@ input[type="checkbox"]:checked {
   box-shadow: none !important;
 }
 
-/* Integrated visual extras: graph, Mermaid, and Motion Arts cards. */
+/* Integrated visual extras: graph, Mermaid, and MediaFetch cards. */
 /* Graph view colors */
 .theme-dark {
   --km-graph-node: #88c4aa;
@@ -1096,7 +1096,7 @@ body.theme-dark .mermaid svg {
   }
 }
 
-/* Motion Arts poster cards */
+/* MediaFetch poster cards */
 /* mmacha movie plugin theme: restrained poster cards for Celluloid Bases views. */
 .bases-view {
   --bases-cards-container-background: transparent;

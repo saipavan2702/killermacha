@@ -1,0 +1,62 @@
+filters:
+  and:
+    - file.inFolder("Macha/KeepOut/Entries")
+properties:
+  note.female_leads:
+    displayName: Female leads
+  note.release_date:
+    displayName: Released
+  note.lookup_status:
+    displayName: Match
+views:
+  - type: table
+    name: All entries
+    order:
+      - file.name
+      - female_leads
+      - status
+      - favorite
+      - release_date
+      - studio
+      - lookup_status
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Favorites
+    filters:
+      and:
+        - favorite == true
+    order:
+      - file.name
+      - female_leads
+      - status
+  - type: table
+    name: By female lead
+    groupBy:
+      property: female_leads
+      direction: ASC
+    order:
+      - file.name
+      - female_leads
+      - status
+      - favorite
+  - type: table
+    name: Planned
+    filters:
+      and:
+        - status == "Planned"
+    order:
+      - file.name
+      - female_leads
+      - release_date
+      - favorite
+  - type: table
+    name: Watched
+    filters:
+      and:
+        - status == "Watched"
+    order:
+      - file.name
+      - female_leads
+      - favorite

@@ -20,4 +20,3 @@ favorite: false
 cast: []
 ---
 
-Connections: [[Macha/Media Shelf|Media Shelf]]

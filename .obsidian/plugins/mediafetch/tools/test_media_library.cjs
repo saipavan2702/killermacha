@@ -3,8 +3,8 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
-const vaultRoot = path.resolve(__dirname, '../../..');
-const source = fs.readFileSync(path.join(vaultRoot, '.obsidian/plugins/mmacha-auto/main.js'), 'utf8');
+const vaultRoot = path.resolve(__dirname, '../../../..');
+const source = fs.readFileSync(path.join(vaultRoot, '.obsidian/plugins/mediafetch/main.js'), 'utf8');
 
 function setup(options = {}) {
   const notices = [], requests = [], modals = [], files = [], records = new Map();

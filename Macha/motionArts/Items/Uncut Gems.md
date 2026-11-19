@@ -23,4 +23,3 @@ tags:
 favorite: false
 ---
 
-Connections: [[Macha/Media Shelf|Media Shelf]]

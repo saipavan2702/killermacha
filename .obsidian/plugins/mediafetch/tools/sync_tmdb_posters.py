@@ -21,9 +21,9 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 ITEMS_DIR = ROOT / "Macha" / "motionArts" / "Items"
-PLUGIN_DATA = ROOT / ".obsidian" / "plugins" / "mmacha-auto" / "data.json"
+PLUGIN_DATA = ROOT / ".obsidian" / "plugins" / "mediafetch" / "data.json"
 API_BASE = "https://api.themoviedb.org/3"
 IMAGE_BASE = "https://image.tmdb.org/t/p/w500"
 

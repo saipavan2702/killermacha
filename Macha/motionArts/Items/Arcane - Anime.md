@@ -17,4 +17,3 @@ industry: Anime
 favorite: false
 ---
 
-Connections: [[Macha/Media Shelf|Media Shelf]]
