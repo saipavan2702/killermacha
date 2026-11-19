@@ -9,6 +9,7 @@ studio: DAHLIA
 provider: r18dev
 content_id: 1dldss00583
 lookup_status: Content ID matched
+poster: https://pics.dmm.co.jp/digital/video/1dldss00583/1dldss00583pl.jpg
 ---
 ## Notes
 

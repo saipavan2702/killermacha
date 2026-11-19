@@ -1,4 +1,4 @@
-const {Plugin,ItemView,Modal,Setting,Notice,requestUrl,TFile,MarkdownRenderChild}=require('obsidian');
+const {Plugin,ItemView,Modal,SuggestModal,Setting,Notice,requestUrl,TFile,MarkdownRenderChild}=require('obsidian');
 const ROOT='Macha/JAV', ENTRIES=ROOT+'/Items', VIEW='javfetch';
 const NAMES={1103090:'Mika Azuma',1111141:'Hibine Haru',1101003:'Naho Sumi',1104166:'Tsukasa Hibiki',22574:'Meguri'};
 function normalize(value){const s=String(value).trim().toUpperCase().replace(/\s+/g,'');const m=s.match(/^([A-Z]{2,12})-?(\d{2,7})$/);if(!m)throw Error('Enter a code such as JUL-211.');return m[1]+'-'+m[2];}
@@ -17,6 +17,17 @@ class ShelfView extends ItemView{
 }
 module.exports=class JAVFetchPlugin extends Plugin{
  async onload(){this.registerView(VIEW,l=>new ShelfView(l,this));
+ // Use code lookup for New in this catalog and its embedded browse table.
+ this.registerDomEvent(document,'click',event=>{
+  const button=event.target instanceof Element?event.target.closest(".bases-toolbar [role='button']"):null;
+  if(!button||button.textContent.trim()!=='New')return;
+  const leaf=this.app.workspace.getMostRecentLeaf();
+  if(![ROOT+'/Catalog.base',ROOT+'/Browse.md'].includes(leaf?.view?.file?.path)||!leaf.view.containerEl.contains(button))return;
+  event.preventDefault();
+  event.stopImmediatePropagation();
+  new Lookup(this).open();
+ },true);
+
 this.registerMarkdownCodeBlockProcessor('javfetch', (source, el, ctx) => {
  const plugin=this;
  class Browse extends MarkdownRenderChild {
@@ -29,7 +40,7 @@ this.registerMarkdownCodeBlockProcessor('javfetch', (source, el, ctx) => {
   }
  }
  ctx.addChild(new Browse(el));
-});this.addRibbonIcon('library','Open JAVFetch',()=>this.open());this.addCommand({id:'open',name:'Open catalog',callback:()=>this.open()});this.addCommand({id:'add',name:'Add code',callback:()=>new Lookup(this).open()});this.addCommand({id:'refresh',name:'Refresh current entry metadata',checkCallback:checking=>{const f=this.app.workspace.getActiveFile();if(!f||!f.path.startsWith(ENTRIES+'/'))return false;if(!checking)this.refresh(f);return true;}});this.cache=new Map();}
+});this.addRibbonIcon('library','Open JAVFetch',()=>this.open());this.addCommand({id:'open',name:'Open catalog',callback:()=>this.open()});this.addCommand({id:'add',name:'Add code',callback:()=>new Lookup(this).open()});this.addCommand({id:'refresh',name:'Refresh current entry metadata',checkCallback:checking=>{const f=this.app.workspace.getActiveFile();if(!f||!(f.path.startsWith(ENTRIES+'/')||[ROOT+'/Catalog.base',ROOT+'/Browse.md'].includes(f.path)))return false;if(!checking){if(f.path.startsWith(ENTRIES+'/'))this.refresh(f);else this.pickRefresh();}return true;}});this.addCommand({id:'refresh-all',name:'Refresh all catalog metadata',callback:()=>this.refreshAll()});this.cache=new Map();}
  async open(){const file=this.app.vault.getAbstractFileByPath(ROOT+'/Browse.md');if(file){const leaf=this.app.workspace.getLeaf(false);await leaf.openFile(file);await leaf.setViewState({type:'markdown',state:{file:file.path,mode:'preview'}});}}
  entries(){return this.app.vault.getMarkdownFiles().filter(f=>f.path.startsWith(ENTRIES+'/')).map(file=>{const f=this.app.metadataCache.getFileCache(file)?.frontmatter||{};return {file,code:f.code||file.basename,leads:Array.isArray(f.female_leads)?f.female_leads:[],status:f.status||'Planned',favorite:!!f.favorite,date:String(f.release_date||''),studio:f.studio||'',lookup:f.lookup_status||''};}).sort((a,b)=>a.code.localeCompare(b.code,undefined,{numeric:true}));}
  async json(url) {
@@ -46,10 +57,32 @@ this.registerMarkdownCodeBlockProcessor('javfetch', (source, el, ctx) => {
   }
  }
 
- async lookup(raw){const code=normalize(raw);if(this.cache.has(code))return this.cache.get(code);let ids=candidates(code),last;try{const d=await this.json('https://r18.dev/videos/vod/movies/detail/-/dvd_id='+code.replace('-','').toLowerCase()+'/json');if(typeof d.content_id==='string'&&/^[a-z0-9_]+$/.test(d.content_id)){const compact=d.content_id.replace(/^h_\d+|^\d+/,'');const m=compact.match(/^([a-z]+)0*(\d+)$/);const [s,n]=code.split('-');if(m&&m[1].toUpperCase()===s&&Number(m[2])===Number(n))ids=[...new Set([...ids,d.content_id])];}}catch(e){last=e;}for(const cid of ids){try{const d=await this.json('https://r18.dev/videos/vod/movies/detail/-/combined='+cid+'/json');if(!matches(d,code,cid))continue;const leads=(d.actresses||[]).map(a=>NAMES[a.id]||a.name_romaji||'').filter(Boolean);if(!leads.length)throw Error('No English female-lead names returned.');const result={cid,leads:[...new Set(leads)],date:d.release_date||'',studio:d.maker_name_en||'',lookup:d.dvd_id?'Code verified':'Content ID matched'};this.cache.set(code,result);return result;}catch(e){last=e;}await new Promise(r=>setTimeout(r,700));}throw last||Error('No matching metadata found.');}
+ async lookup(raw){const code=normalize(raw);if(this.cache.has(code))return this.cache.get(code);let ids=candidates(code),last;try{const d=await this.json('https://r18.dev/videos/vod/movies/detail/-/dvd_id='+code.replace('-','').toLowerCase()+'/json');if(typeof d.content_id==='string'&&/^[a-z0-9_]+$/.test(d.content_id)){const compact=d.content_id.replace(/^h_\d+|^\d+/,'');const m=compact.match(/^([a-z]+)0*(\d+)$/);const [s,n]=code.split('-');if(m&&m[1].toUpperCase()===s&&Number(m[2])===Number(n))ids=[...new Set([...ids,d.content_id])];}}catch(e){last=e;}for(const cid of ids){try{const d=await this.json('https://r18.dev/videos/vod/movies/detail/-/combined='+cid+'/json');if(!matches(d,code,cid))continue;const leads=(d.actresses||[]).map(a=>NAMES[a.id]||a.name_romaji||'').filter(Boolean);if(!leads.length)throw Error('No English female-lead names returned.');const result={cid,leads:[...new Set(leads)],date:d.release_date||'',studio:d.maker_name_en||'',poster:d.jacket_full_url||d.jacket_thumb_url||'',lookup:d.dvd_id?'Code verified':'Content ID matched'};this.cache.set(code,result);return result;}catch(e){last=e;}await new Promise(r=>setTimeout(r,700));}throw last||Error('No matching metadata found.');}
  async folder(path){if(!this.app.vault.getAbstractFileByPath(path)){const parent=path.slice(0,path.lastIndexOf('/'));if(parent)await this.folder(parent);await this.app.vault.createFolder(path);}}
- async save(raw,d,leads){const code=normalize(raw);await this.folder(ENTRIES);const path=ENTRIES+'/'+code+'.md';if(this.app.vault.getAbstractFileByPath(path))return;const f=await this.app.vault.create(path,'## Notes\n\n');await this.edit(f,fm=>{Object.assign(fm,{code,female_leads:leads,status:'Planned',favorite:false,release_date:d.date,studio:d.studio,provider:'r18dev',content_id:d.cid,lookup_status:d.lookup});});}
+ async save(raw,d,leads){const code=normalize(raw);await this.folder(ENTRIES);const path=ENTRIES+'/'+code+'.md';if(this.app.vault.getAbstractFileByPath(path))return;const f=await this.app.vault.create(path,'## Notes\n\n');await this.edit(f,fm=>{Object.assign(fm,{code,female_leads:leads,status:'Planned',favorite:false,release_date:d.date,studio:d.studio,provider:'r18dev',content_id:d.cid,poster:d.poster||'',lookup_status:d.lookup});});}
  async edit(file,fn){await this.app.fileManager.processFrontMatter(file,fn);}
- async refresh(file){try{const code=normalize(file.basename);this.cache.delete(code);const d=await this.lookup(code);await this.edit(file,f=>{f.release_date=d.date||f.release_date;f.studio=d.studio||f.studio;f.content_id=d.cid;f.lookup_status=d.lookup;if(!Array.isArray(f.female_leads)||!f.female_leads.length)f.female_leads=d.leads;});new Notice('Metadata refreshed. Your names, status and notes were preserved.');}catch(e){new Notice(e.message);}}
+ pickRefresh(){
+  const plugin=this;
+  class RefreshPicker extends SuggestModal{
+   getSuggestions(query){return plugin.entries().filter(e=>(e.code+' '+e.leads.join(' ')).toLowerCase().includes(query.toLowerCase()));}
+   renderSuggestion(entry,el){el.setText(entry.code+' · '+entry.leads.join(' / '));}
+   onChooseSuggestion(entry){void plugin.refresh(entry.file);}
+  }
+  const picker=new RefreshPicker(this.app);
+  picker.setPlaceholder('Choose an entry to refresh');
+  picker.open();
+ }
+ async refreshAll(){
+  if(this.refreshingAll){new Notice('Catalog refresh is already running.');return;}
+  this.refreshingAll=true;
+  let updated=0,failed=0;
+  try{
+   const entries=this.entries();
+   new Notice('Refreshing '+entries.length+' catalog entries…');
+   for(const entry of entries){if(await this.refresh(entry.file,true))updated++;else failed++;}
+   new Notice('Catalog refresh: '+updated+' updated, '+failed+' failed.',10000);
+  }finally{this.refreshingAll=false;}
+ }
+ async refresh(file,quiet=false){try{const code=normalize(file.basename);this.cache.delete(code);const d=await this.lookup(code);await this.edit(file,f=>{f.release_date=d.date||f.release_date;f.studio=d.studio||f.studio;f.content_id=d.cid;f.poster=d.poster||f.poster;f.lookup_status=d.lookup;if(!Array.isArray(f.female_leads)||!f.female_leads.length)f.female_leads=d.leads;});if(!quiet)new Notice('Metadata refreshed. Your names, status and notes were preserved.');return true;}catch(e){new Notice(file.basename+': '+e.message);return false;}}
 };
 module.exports.testing={normalize,candidates,matches};

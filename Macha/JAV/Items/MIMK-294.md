@@ -9,6 +9,7 @@ studio: MOODYZ
 provider: r18dev
 content_id: mimk00294
 lookup_status: Content ID matched
+poster: https://pics.dmm.co.jp/digital/video/mimk00294/mimk00294pl.jpg
 ---
 ## Notes
 

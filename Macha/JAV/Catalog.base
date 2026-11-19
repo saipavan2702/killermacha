@@ -2,7 +2,7 @@ filters:
   and:
     - file.inFolder("Macha/JAV/Items")
 formulas:
-  cover_preview: image(if(poster, poster, "attachments/catalog-cover-placeholder.svg"))
+  cover_preview: if(poster, poster, "attachments/catalog-cover-placeholder.svg")
 properties:
   formula.cover_preview:
     displayName: Cover

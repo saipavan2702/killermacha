@@ -9,6 +9,7 @@ studio: SOD Create
 provider: r18dev
 content_id: 1start00663
 lookup_status: Content ID matched
+poster: https://pics.dmm.co.jp/digital/video/1start00663/1start00663pl.jpg
 ---
 ## Notes
 

@@ -10,6 +10,7 @@ studio: MILK
 provider: r18dev
 content_id: h_1240milk00316
 lookup_status: Content ID matched
+poster: https://pics.dmm.co.jp/digital/video/h_1240milk00316/h_1240milk00316pl.jpg
 ---
 ## Notes
 

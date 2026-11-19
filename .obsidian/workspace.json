@@ -34,37 +34,9 @@
               "icon": "lucide-file",
               "title": "Architectural"
             }
-          },
-          {
-            "id": "d89f7b81d2eacb5f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Upskill/SysDes/LLD/Design Patterns/Structural.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Structural"
-            }
-          },
-          {
-            "id": "f02f8626105b49c2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Macha/JAV/Browse.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Browse"
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -263,18 +235,20 @@
       "obsidian-excalidraw-plugin:New drawing": false,
       "notebook-navigator:Notebook Navigator": false,
       "templater-obsidian:Templater": false,
-      "mmacha-auto:Add media to library": false,
-      "private-shelf:Open Private Shelf": false,
-      "private-shelf:Open JAVFetch": false,
       "mediafetch:Add media to library": false,
       "javfetch:Open JAVFetch": false
     }
   },
-  "active": "f02f8626105b49c2",
+  "active": "a4857eb274b28a4c",
   "lastOpenFiles": [
     "Macha/JAV/Catalog.base",
-    "Macha/motionArts/Browse.md",
     "Macha/JAV/Browse.md",
+    "Macha/JAV/Items/SONE-614.md",
+    "Macha/JAV/Items/Untitled.md",
+    "Macha/JAV/Items/DLDSS-575.md",
+    "Upskill/SysDes/LLD/Design Patterns/Structural.md",
+    "Upskill/SysDes/LLD/Design Patterns/Architectural.md",
+    "Macha/motionArts/Browse.md",
     "Macha/motionArts/Celluloid.base",
     "Macha/motionArts/Items/ELDEN RING - Game.md",
     "attachments/catalog-cover-placeholder.svg",
@@ -296,11 +270,6 @@
     "Macha/motionArts/Items/The Verdict - Movie.md",
     "Macha/motionArts/Items/The Best of Me - Movie.md",
     "Macha/motionArts/Items/Tramps - Movie.md",
-    "Macha/motionArts/Items/Bones and All - Movie.md",
-    "Macha/motionArts/Items/Sleepy Hollow - Movie.md",
-    "Macha/motionArts/Items/Palm Springs - Movie.md",
-    "Macha/motionArts/Items/Primetime - Movie.md",
-    "Macha/motionArts/Items/Before We Go - Movie.md",
     "Macha/motionArts/Items",
     "Macha/JAV/Items",
     "Macha/JAV",
