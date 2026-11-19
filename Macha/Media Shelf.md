@@ -1,7 +1,8 @@
-
-## Watchlist
+## What to Watch
 
 - [Nothing to Watch](https://nothing-to-watch.port80.ch/) — Find something to watch.
+- [OTT Weekend](https://ottweekend.com/)
+- https://watch.plex.tv/
 
 ## Audio Projects
 

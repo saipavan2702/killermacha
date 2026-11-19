@@ -17,4 +17,4 @@ favorite: false
 directors: []
 ---
 
-Connections: [[Macha/Media Links|Media Links]]
+Connections: [[Macha/Media Shelf|Media Shelf]]
