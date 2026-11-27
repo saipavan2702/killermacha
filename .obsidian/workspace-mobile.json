@@ -170,6 +170,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "javfetch:Open JAVFetch": false,
       "mediafetch:Add media to library": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -186,8 +187,20 @@
   },
   "active": "140149819ba54c43",
   "lastOpenFiles": [
-    "Macha/motionArts/Items/Spies in Disguise - Anime Movie.md",
+    "Macha/JAV/Catalog.base",
     "Macha/motionArts/Celluloid.base",
+    "QoL/Refs/MacOS Terminal.md",
+    "Macha/Shelf.md",
+    "Macha/motionArts/Items/Wolf - Movie.md",
+    "Macha/motionArts/Items/Witness for the Prosecution - Movie.md",
+    "Macha/motionArts/Items/While You Were Sleeping - Movie.md",
+    "Macha/motionArts/Items/Weapons - Movie.md",
+    "Macha/motionArts/Items/Watching the Detectives - Movie.md",
+    "Macha/motionArts/Items/Vampire Hunter D- Bloodlust - Anime Movie.md",
+    "Macha/motionArts/Items/V for Vendetta - Movie.md",
+    "Macha/motionArts/Items/Underworld - Movie.md",
+    "Macha/motionArts/Items/Twisted Nerve - Movie.md",
+    "Macha/motionArts/Items/Spies in Disguise - Anime Movie.md",
     "Lingo/Eśpanol/Sentences.md",
     "upskill/SysDes/System Design Process.md",
     "Macha/watches.md",
@@ -201,18 +214,6 @@
     "mmacha/motionArts/Items/MEGALOBOX - Anime.md",
     "mmacha/motionArts/Items/Red Beard.md",
     "mmacha/motionArts/Items/Mulholland Drive.md",
-    "mmacha/motionArts/Items/Up - Anime Movie.md",
-    "mmacha/motionArts/Items/The Irishman.md",
-    "mmacha/motionArts/Items/Wicked minds.md",
-    "mmacha/motionArts/Items/The Boys - Series.md",
-    "mmacha/motionArts/Items/K - Anime.md",
-    "mmacha/motionArts/Items/Nura - Rise of the Yokai Clan - Anime.md",
-    "mmacha/motionArts/Items/Summer Time Rendering - Anime.md",
-    "mmacha/motionArts/Items/Warrior.md",
-    "mmacha/motionArts/Items/Monsters, Inc. - Anime Movie.md",
-    "mmacha/motionArts/Items/ACCA - 13-Territory Inspection Dept. - Anime.md",
-    "mmacha/motionArts/Items/The Internship.md",
-    "mmacha/motionArts/Items/The Da Vinci Code.md",
-    "mmacha/motionArts/Items/The Proposal.md"
+    "mmacha/motionArts/Items/Up - Anime Movie.md"
   ]
 }
