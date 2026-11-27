@@ -133,6 +133,7 @@ views:
     filters:
       and:
         - watched == false
+        - media_type == "movie"
     order:
       - title
     limit: 400

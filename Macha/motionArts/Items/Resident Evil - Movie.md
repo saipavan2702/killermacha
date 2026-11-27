@@ -2,8 +2,8 @@
 media_type: movie
 title: Resident Evil
 industry: Hollywood
-watched: false
-watched_date:
+watched: true
+watched_date: 2026-11-20
 genres:
   - Horror
   - Science Fiction
