@@ -18,6 +18,8 @@ function setup(options = {}) {
   }
   class SuggestModal extends Modal { setPlaceholder() {} }
   const module = { exports: {} };
+  const templatePath = 'Macha/AStars/Templates/AStar.md';
+  const template = new TFile(templatePath);
   const context = {
     testFormValues: options.formValues, module, console, URL, URLSearchParams, Map, Set, Date, queueMicrotask, window: { setTimeout, clearTimeout },
     require: (name) => {
@@ -31,7 +33,7 @@ function setup(options = {}) {
     },
   };
   let handler = () => { throw new Error('Unexpected network call'); };
-  vm.runInNewContext(`${source}\nmodule.exports.testHooks = { chooseLibrary }; if (testFormValues) libraryForm = async () => testFormValues;`, context);
+  vm.runInNewContext(`${source}\nmodule.exports.testHooks = { chooseLibrary }; if (testFormValues) libraryForm = async (...args) => typeof testFormValues === "function" ? testFormValues(...args) : testFormValues;`, context);
   const plugin = new module.exports();
   plugin.today = () => '2026-10-23';
   plugin.settings = { tmdbBearerToken: '', autoSyncTmdb: true };
@@ -40,12 +42,19 @@ function setup(options = {}) {
     metadataCache: { getFileCache: (file) => ({ frontmatter: records.get(file.path) }) },
     vault: {
       getMarkdownFiles: () => files,
-      getAbstractFileByPath: (p) => files.find((file) => file.path === p),
+      getAbstractFileByPath: (p) => p === templatePath ? template : files.find((file) => file.path === p),
+      cachedRead: async (file) => fs.readFileSync(path.join(vaultRoot, file.path), 'utf8'),
       createFolder: async () => {},
-      create: async (p, content) => { const file = new TFile(p); file.content = content; files.push(file); return file; },
+      create: async (p, content) => {
+        const file = new TFile(p);
+        file.content = content;
+        files.push(file);
+        records.set(file.path, JSON.parse(content.split('\n')[1]));
+        return file;
+      },
     },
     fileManager: { processFrontMatter: async (file, update) => update(records.get(file.path)) },
-    workspace: { getLeaf: () => ({ openFile: async () => {} }) },
+    workspace: { getActiveFile: () => null, getLeaf: () => ({ openFile: async () => {} }) },
   };
   function note(name, metadata) {
     const file = new TFile(`Macha/motionArts/Items/${name}.md`); files.push(file); records.set(file.path, metadata); return file;
@@ -53,6 +62,53 @@ function setup(options = {}) {
   return { plugin, note, records, requests, notices, modals, hooks: module.exports.testHooks, network: (fn) => { handler = fn; } };
 }
 const plain = (value) => JSON.parse(JSON.stringify(value));
+
+test('adding an actress saves her card properties and reuses a matching note', async () => {
+  const formValues = { name: '  Example   Name  ', portrait: ' [[portrait.jpg]] ', favorite: true };
+  const env = setup({ formValues });
+  await env.plugin.addActress();
+  const [file] = env.plugin.app.vault.getMarkdownFiles();
+  assert.equal(file.path, 'Macha/AStars/Items/Example Name.md');
+  assert.deepEqual(JSON.parse(file.content.split('\n')[1]), { poster: '[[portrait.jpg]]', favorite: true });
+  assert.ok(file.content.includes('![[Macha/AStars/AStars.base#Portrait]]'));
+  formValues.name = 'example name';
+  await env.plugin.addActress();
+  assert.equal(env.plugin.app.vault.getMarkdownFiles().length, 1);
+  assert.match(env.notices.at(-1), /already in the base/);
+  assert.equal(env.requests.length, 0);
+});
+
+test('AStars resolves IMDb person IDs and fills a blank poster on an existing card', async () => {
+  let input = { name: 'Example Name', portrait: '', favorite: true };
+  const env = setup({
+    formValues: (_app, title, fields, _validate, preview) => {
+      if (title === 'Find an actress' || !input.mode) return input;
+      assert.equal(preview.poster, 'https://image.tmdb.org/t/p/w185/profile.jpg');
+      return Object.fromEntries(fields.map(field => [field.key, field.value]));
+    },
+  });
+  await env.plugin.addActress();
+  input = { name: 'https://www.imdb.com/name/nm1234567/', mode: 'search' };
+  env.plugin.settings.tmdbBearerToken = 'token';
+  env.network(request => {
+    const url = new URL(request.url);
+    assert.equal(url.pathname, '/3/find/nm1234567');
+    assert.equal(url.searchParams.get('external_source'), 'imdb_id');
+    return { status: 200, json: { person_results: [{ id: 12, name: 'Example Name', profile_path: '/profile.jpg' }] } };
+  });
+  const pending = env.plugin.addActress();
+  await new Promise(resolve => setImmediate(resolve));
+  const picker = env.modals.at(-1);
+  picker.onChooseSuggestion(picker.getSuggestions('Example')[0]);
+  await pending;
+  const [file] = env.plugin.app.vault.getMarkdownFiles();
+  assert.equal(env.plugin.app.vault.getMarkdownFiles().length, 1);
+  assert.deepEqual(env.records.get(file.path), {
+    poster: 'https://image.tmdb.org/t/p/w185/profile.jpg',
+    favorite: true,
+    portrait_source: 'https://www.themoviedb.org/person/12',
+  });
+});
 
 test('suggestion remains selected when Obsidian closes the modal before the selection callback', async () => {
   const env = setup();

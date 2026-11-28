@@ -182,6 +182,11 @@ const IMDB_OVERRIDES = {
 // Search providers and the search → review → Markdown flow are inspired by Lorebase:
 // https://github.com/Murchi1k/obsidian-lorebase-plugin (MIT). No dependency on Lorebase.
 const LIBRARY_FOLDER = "Macha/motionArts/Items";
+const ASTARS_ROOT = "Macha/AStars";
+const ASTARS_BASE = ASTARS_ROOT + "/AStars.base";
+const ASTARS_BROWSE = ASTARS_ROOT + "/Browse.md";
+const ASTARS_ITEMS = ASTARS_ROOT + "/Items";
+const PORTRAIT_IMAGE_BASE = "https://image.tmdb.org/t/p/w185";
 const LIBRARY_LABELS = { movie: "Movie", series: "TV show", "anime-movie": "Anime Movie", anime: "Anime", game: "Game" };
 const LIBRARY_TYPES = new Set(Object.keys(LIBRARY_LABELS));
 const LIBRARY_PROGRESS = {
@@ -293,13 +298,21 @@ module.exports = class MediaFetchPlugin extends Plugin {
       const button = event.target instanceof Element ? event.target.closest(".bases-toolbar [role='button']") : null;
       if (!button || button.textContent.trim() !== "New") return;
       const leaf = this.app.workspace.getMostRecentLeaf();
-      if (!["Macha/motionArts/Celluloid.base", "Macha/motionArts/Browse.md"].includes(leaf?.view?.file?.path) || !leaf.view.containerEl.contains(button)) return;
+      const path = leaf?.view?.file?.path;
+      const isAStars = path === ASTARS_BASE || path === ASTARS_BROWSE;
+      if (!(isAStars || ["Macha/motionArts/Celluloid.base", "Macha/motionArts/Browse.md"].includes(path)) || !leaf.view.containerEl.contains(button)) return;
       event.preventDefault();
       event.stopImmediatePropagation();
-      this.addLibraryItem();
+      if (isAStars) this.addActress();
+      else this.addLibraryItem();
     }, true);
     this.addCommand({ id: "library-statistics", name: "Show library statistics", callback: () => this.showLibraryStatistics() });
     this.addCommand({ id: "add-library-item", name: "Add media to library", callback: () => this.addLibraryItem() });
+    this.addCommand({ id: "add-actress", name: "Add actress", callback: () => this.addActress() });
+    this.addCommand({ id: "open-astars", name: "Open AStars", callback: async () => {
+      const browse = this.app.vault.getAbstractFileByPath(ASTARS_BROWSE);
+      if (browse instanceof TFile) await this.app.workspace.getLeaf(false).openFile(browse);
+    } });
     this.addCommand({ id: "open-media-library", name: "Open media library", callback: async () => {
       const base = this.app.vault.getAbstractFileByPath("Macha/motionArts/Browse.md");
       if (base instanceof TFile) await this.app.workspace.getLeaf(false).openFile(base);
@@ -778,13 +791,117 @@ module.exports = class MediaFetchPlugin extends Plugin {
     modal.open();
   }
 
+  async addActress() {
+    if (this.addingActress) return;
+    this.addingActress = true;
+    try {
+      const current = this.app.workspace.getActiveFile();
+      const currentName = current?.path.startsWith(ASTARS_ITEMS + "/") ? current.basename : "";
+      const input = await libraryForm(this.app, "Find an actress", [
+        { key: "name", label: "Name or IMDb person ID", value: currentName, placeholder: "Name, nm ID, or IMDb profile URL" },
+      ], ({ name }) => {
+        if (!name.trim()) throw new Error("Enter a name or IMDb person ID.");
+      }, {}, { searchActions: true, description: "Find a profile on TMDB and review the portrait before saving." });
+      if (!input) return;
+
+      const query = input.name.trim();
+      const imdbId = query.match(/^(?:(?:https?:\/\/)?(?:www\.|m\.)?imdb\.com\/name\/)?(nm\d+)(?:[/?#].*)?$/i)?.[1].toLowerCase();
+      let profile;
+      if (input.mode === "search") {
+        try {
+          const results = await this.searchActress(query, imdbId);
+          if (results.length) {
+            profile = await chooseLibrary(this.app, "Choose the matching profile", results.map(person => ({
+              title: [person.name, person.knownFor, person.portrait ? "" : "No portrait"].filter(Boolean).join(" · "),
+              value: person,
+            })));
+            if (!profile) return;
+          } else {
+            new Notice("MediaFetch: no matching profile. You can add a portrait manually.");
+          }
+        } catch (error) {
+          new Notice("MediaFetch: " + (error.message || error));
+        }
+      }
+      const vault = this.app.vault;
+      const findCard = (name) => {
+        const path = (ASTARS_ITEMS + "/" + name + ".md").normalize("NFC").toLowerCase();
+        return vault.getMarkdownFiles().find(file => file.path.normalize("NFC").toLowerCase() === path);
+      };
+      const name = profile?.name || (imdbId ? "" : query);
+      const existingInput = profile && !imdbId ? findCard(query) : null;
+      const values = await libraryForm(this.app, "Add actress", [
+        { key: "name", label: "Name", value: existingInput?.basename || name },
+        { key: "portrait", label: "Portrait (optional)", value: profile?.portrait || "", placeholder: "Image URL or [[attachment]]" },
+        { key: "favorite", label: "Favorite", value: false, toggle: true },
+      ], ({ name, portrait }) => {
+        name = name.trim();
+        if (!name) throw new Error("Enter a name.");
+        if (name.startsWith(".") || name.length > 120 || /[\\/:*?"<>|#\[\]\r\n]/.test(name)) {
+          throw new Error("Enter a name that can be used as an Obsidian note title.");
+        }
+        if (!validLibraryCover(portrait.trim())) throw new Error("Enter an image URL or an Obsidian attachment link.");
+      }, { poster: profile?.portrait, title: profile?.name }, { submitLabel: "Save card" });
+      if (!values) return;
+
+      const fileName = values.name.trim().replace(/\s+/g, " ").normalize("NFC");
+      const path = ASTARS_ITEMS + "/" + fileName + ".md";
+      const portrait = values.portrait.trim();
+      const source = portrait && portrait === profile?.portrait ? profile.source : "";
+      const existing = findCard(fileName) || (profile && vault.getMarkdownFiles().find(file =>
+        file.path.startsWith(ASTARS_ITEMS + "/") &&
+        this.app.metadataCache.getFileCache(file)?.frontmatter?.portrait_source === profile.source
+      ));
+      if (existing) {
+        let addedPortrait = false;
+        if (portrait) {
+          await this.app.fileManager.processFrontMatter(existing, fm => {
+            if (fm.poster) return;
+            fm.poster = portrait;
+            if (source) fm.portrait_source = source;
+            addedPortrait = true;
+          });
+        }
+        new Notice(addedPortrait ? "MediaFetch: portrait added to existing card." : "MediaFetch: this actress is already in the base.");
+        await this.app.workspace.getLeaf(false).openFile(existing);
+        return;
+      }
+      const template = vault.getAbstractFileByPath(ASTARS_ROOT + "/Templates/AStar.md");
+      if (!(template instanceof TFile)) throw new Error("The AStars note template is missing.");
+      const body = (await vault.cachedRead(template)).replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, "").trimStart();
+      if (!vault.getAbstractFileByPath(ASTARS_ITEMS)) await vault.createFolder(ASTARS_ITEMS);
+      const frontmatter = stringifyYaml({ poster: portrait || null, favorite: values.favorite, ...(source ? { portrait_source: source } : {}) }).trim();
+      const file = await vault.create(path, "---\n" + frontmatter + "\n---\n\n" + body);
+      await this.app.workspace.getLeaf(false).openFile(file);
+    } catch (error) {
+      new Notice("MediaFetch: " + (error.message || error));
+    } finally {
+      this.addingActress = false;
+    }
+  }
+
+  async searchActress(query, imdbId) {
+    if (!this.settings.tmdbBearerToken) throw new Error("Add your TMDB token in MediaFetch settings or use manual entry.");
+    const data = imdbId
+      ? await this.apiGet("/find/" + imdbId, { external_source: "imdb_id" })
+      : await this.apiGet("/search/person", { query, include_adult: "true", language: "en-US" });
+    const people = data[imdbId ? "person_results" : "results"] || [];
+    return people.filter(person => person.name && Number.isInteger(person.id)).slice(0, 12).map(person => ({
+      name: person.name,
+      knownFor: (person.known_for || []).map(item => item.title || item.name).filter(Boolean).slice(0, 2).join(", ") || person.known_for_department,
+      portrait: person.profile_path ? PORTRAIT_IMAGE_BASE + person.profile_path : "",
+      source: "https://www.themoviedb.org/person/" + person.id,
+    }));
+  }
+
   async addLibraryItem() {
     if (this.addingLibraryItem) return;
     this.addingLibraryItem = true;
     try {
       const kind = await chooseLibrary(this.app, "What would you like to add?",
-        Object.entries(LIBRARY_LABELS).map(([value, title]) => ({ title, value })));
+        [...Object.entries(LIBRARY_LABELS), ["actress", "Actress (AStars)"]].map(([value, title]) => ({ title, value })));
       if (!kind) return;
+      if (kind === "actress") return await this.addActress();
       const input = await libraryForm(this.app, `Add ${LIBRARY_LABELS[kind].toLowerCase()}`, [
         { key: "title", label: "Title", value: "", placeholder: "Enter a title or IMDb ID / URL to find…" },
       ], (values) => { if (!values.title.trim()) throw new Error("Enter a title to continue."); }, {}, { searchActions: true, description: "Find the title and cover online, or add your own entry." });

@@ -1,0 +1,47 @@
+filters:
+  and:
+    - file.inFolder("Macha/AStars/Items")
+    - file.ext == "md"
+formulas:
+  portrait_preview: if(poster, poster, "attachments/catalog-cover-placeholder.svg")
+properties:
+  file.name:
+    displayName: Name
+  note.poster:
+    displayName: Portrait
+  note.favorite:
+    displayName: Favorite
+views:
+  - type: cards
+    name: Cards
+    order:
+      - file.name
+    sort:
+      - property: file.name
+        direction: ASC
+    image: formula.portrait_preview
+    imageProperty: formula.portrait_preview
+    imageFit: contain
+    imageAspectRatio: 1
+    cardSize: 200
+  - type: table
+    name: Manage
+    order:
+      - file.name
+      - poster
+      - favorite
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: cards
+    name: Portrait
+    filters:
+      and:
+        - file.path == this.file.path
+    order:
+      - file.name
+    image: formula.portrait_preview
+    imageProperty: formula.portrait_preview
+    imageFit: contain
+    imageAspectRatio: 1
+    cardSize: 250
